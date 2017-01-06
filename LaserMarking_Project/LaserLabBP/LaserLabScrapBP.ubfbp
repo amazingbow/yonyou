@@ -1,6 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Component id="e955cd41-c129-4d61-825e-b94b9fc76993" name="LaserLabScrapBP" displayName="LaserLabScrapBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.XMQX.LaserLabBP">
   <Namespace id="a85f7dad-b1d0-465f-a7b1-8770c4d078ae" name="UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabScrapBP" displayName="UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabScrapBP" description="" help="">
-    <Diagram id="00000000-0000-0000-0000-000000000000" name="LaserLabScrapBP" displayName="LaserLabScrapBP" />
+    <PropertyType id="d0e9fb24-a696-40de-bd40-2e753c76712c" name="GetScrapLBInfoDto" displayName="报废操作获取LB信息DTO" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="02ba1e7d-bb17-49a7-8361-6dbb6a678dc5" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="e9495dbd-4fa4-4e8b-852d-ac4191df01e7" name="BN" displayName="批次号" description="" help="报废操作获取LB信息DTO.Misc.批次号" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="5af0c901-7e88-4a6d-8a91-5cc69a212dba" name="Type" displayName="型号" description="" help="报废操作获取LB信息DTO.Misc.型号" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="abd96de7-d090-4779-a9ce-e21a3f7b5782" name="Date" displayName="日期" description="" help="报废操作获取LB信息DTO.Misc.日期" dataTypeID="c9e6bc50-2e39-4f27-9519-da0c7859d37e" isKey="False" defaultValue="" length="10" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="033d6d9a-79bf-446b-bee8-1ec4a5371660" name="Time" displayName="时间" description="" help="报废操作获取LB信息DTO.Misc.时间" dataTypeID="f7c9a04f-07f9-41de-8e6b-2bc882d4821f" isKey="False" defaultValue="" length="8" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="514e62e7-cffa-4c22-9f01-ea5fa16c3082" name="CP" displayName="状态" description="" help="报废操作获取LB信息DTO.Misc.状态" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="4" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <Operation id="0ab1275f-a58f-4dfc-8a33-4b5a03678f53" name="LaserLabScrapBP" displayName="镭射标报废BP" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="947db677-338f-4d2d-9964-8cee00e95ff6" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="2899cf09-da3f-4b8b-aac1-990e509a0dcc" name="LB" displayName="LB编码" description="" help="镭射标报废BP.Misc.LB编码" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="0fda5efe-f033-49d8-bd74-c7cc21d9775f" name="ScrapDT" displayName="报废时间" description="" help="镭射标报废BP.Misc.报废时间" dataTypeID="3834a958-120f-4ac9-8d60-1a7be6d3f12f" isKey="False" defaultValue="" length="19" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="d4df585a-ead3-4819-a31f-592c549c1dfd" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Operation id="308de6c2-5fad-481b-9db9-0344df5c245b" name="ScarpGetLBInfoBP" displayName="获得LB信息操作" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="d0e9fb24-a696-40de-bd40-2e753c76712c" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="a76bdb82-7730-42e7-bc87-3847b236fa0c" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="3af034ba-b145-4890-b231-12f180fd0fd6" name="LB" displayName="LB编码" description="" help="获得LB信息操作.Misc.LB编码" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="1d1559b0-11bc-41c8-a9b1-7d8c075a4d2d" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="00000000-0000-0000-0000-000000000000" name="LaserLabScrapBP" displayName="LaserLabScrapBP">
+      <Class Editable="True" ID="3dd5b3d2-7d34-4a64-a1a6-ba1e1ace2705" Type="Operation" ADID="0ab1275f-a58f-4dfc-8a33-4b5a03678f53">
+        <Location X="160" Y="57" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="dace673a-103b-4c4c-8a7d-0c6aa4f94470" Type="PropertyType" ADID="d0e9fb24-a696-40de-bd40-2e753c76712c">
+        <Location X="354" Y="58" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="9017862f-e65e-4ae2-9ddf-f67b812de6ef" Type="Operation" ADID="308de6c2-5fad-481b-9db9-0344df5c245b">
+        <Location X="130" Y="224" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
   </Namespace>
 </Component>
