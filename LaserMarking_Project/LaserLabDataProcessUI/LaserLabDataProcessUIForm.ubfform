@@ -1,10 +1,10 @@
-<View ID="437debdb-5117-4865-a8ed-d3a2403914e7" AllowPersonalization="True" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="16" GridColumnSpace="24" GridLeftMargin="10" GridRightMargin="10" GridRowCount="20" GridRowSpace="10" GridTopMargin="10" Height="624" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="LaserLabDataProcessUIForm" Namespace="LaserLabDataProcessUIModel" TabStop="False" TemplateCode="BlankTemplate" TemplateType="SystemTemplate" UIModelID="0be095e0-34d0-447e-9f14-d2b46448f427" URI="LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart" ViewID="4983" Width="1144" X="8" Y="8">
+<View ID="437debdb-5117-4865-a8ed-d3a2403914e7" AllowPersonalization="True" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="16" GridColumnSpace="24" GridLeftMargin="10" GridRightMargin="10" GridRowCount="20" GridRowSpace="10" GridTopMargin="10" Height="624" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="LaserLabDataProcessUIForm" Namespace="LaserLabDataProcessUIModel" TabStop="False" TemplateCode="BlankTemplate" TemplateType="SystemTemplate" UIModelID="0be095e0-34d0-447e-9f14-d2b46448f427" URI="LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart" ViewID="4983" Width="1144" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="80" />
-    <Column Fixed="False" Name="Column2" Type="Spacing" Width="20" />
-    <Column Fixed="False" Name="Column1" Width="120" />
-    <Column Fixed="False" Name="Column2" Type="Spacing" Width="20" />
-    <Column Fixed="False" Name="Column3" Type="Title" Width="120" />
+    <Column Fixed="False" Name="Column2" Type="Spacing" Width="98" />
+    <Column Fixed="False" Name="Column1" Width="22" />
+    <Column Fixed="False" Name="Column2" Type="Spacing" Width="124" />
+    <Column Fixed="False" Name="Column3" Type="Title" Width="36" />
     <Column Fixed="False" Name="Column2" Type="Spacing" Width="94" />
     <Column Fixed="False" Name="Column4" Width="30" />
     <Column Fixed="False" Name="Column5" Type="Spacing" Width="30" />
@@ -43,44 +43,20 @@
   <InParameters />
   <Line ID="cbd23799-b204-4555-99db-e3d62f6182ea" DisplayName="批量处理" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="7" GridX="0" GridY="0" Height="26" Name="Line0" TabIndex="0" TabStop="True" Width="484" X="10" Y="10" />
   <Line ID="7997e7bc-1933-4d2c-b7b8-b169b891853a" DisplayName="手动调整" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="8" GridX="8" GridY="0" Height="26" Name="Line1" TabIndex="1" TabStop="True" Width="610" X="524" Y="10" />
-  <RadioBoxList ID="17106d81-f9af-4a4e-b5df-7221a3f199a7" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" Name="RadioBoxList1" TabIndex="2" TabStop="True" Width="80" X="10" Y="76">
-    <ListItems />
+  <RadioBoxList ID="17106d81-f9af-4a4e-b5df-7221a3f199a7" GridHeight="5" GridWidth="2" GridX="0" GridY="2" Height="140" Name="RadioBoxList1" RepeatDirection="Vertical" TabIndex="2" TabStop="True" Width="178" X="10" Y="76">
+    <ListItems>
+      <ListItem ID="d158154b-32c9-41f5-8926-cd8865d371f9" DisplayName="金油数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemJY" />
+      <ListItem ID="a08c92f2-6e6b-4d56-b09d-6ef68fdb9220" DisplayName="包装数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemBZ" />
+      <ListItem ID="d8894e3a-751f-4ce8-9b31-f35f9ec08f9d" DisplayName="出货数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemCH" />
+      <ListItem ID="2e0763a7-1edd-42d7-b401-7609cb475195" DisplayName="报废数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemBF" />
+    </ListItems>
   </RadioBoxList>
-  <RadioBoxList ID="13d966ae-bb1f-4f8a-95cc-fc06c6194a7d" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" Name="RadioBoxList2" TabIndex="3" TabStop="True" Width="80" X="10" Y="136">
-    <ListItems />
-  </RadioBoxList>
-  <RadioBoxList ID="bab76fa2-bbf8-4f62-a0bc-b227ad6f0a57" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" Name="RadioBoxList3" TabIndex="4" TabStop="True" Width="80" X="10" Y="196">
-    <ListItems />
-  </RadioBoxList>
-  <RadioBoxList ID="3f213188-ac1d-4528-97fd-e4a20e90c95a" GridHeight="1" GridWidth="1" GridX="0" GridY="8" Height="20" Name="RadioBoxList4" TabIndex="5" TabStop="True" Width="80" X="10" Y="256">
-    <ListItems />
-  </RadioBoxList>
-  <Label ID="2136f3c6-9aa2-4d82-b7c0-2b5ed44b8756" DisplayName="金油数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" Name="Label0" TabIndex="6" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="120" X="110" Y="76">
-    <Events />
-    <RelationControls />
-    <Events />
-  </Label>
-  <Label ID="88224d89-005c-40d5-906c-706bd3039f51" DisplayName="包装数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="True" Name="Label1" TabIndex="7" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="120" X="110" Y="136">
-    <Events />
-    <RelationControls />
-    <Events />
-  </Label>
-  <Label ID="b921b2e3-4aca-4b51-950a-4886e648703c" DisplayName="出货数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="6" Height="20" IsNull="True" Name="Label2" TabIndex="8" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="120" X="110" Y="196">
-    <Events />
-    <RelationControls />
-    <Events />
-  </Label>
-  <Label ID="dc6db51d-3fd8-46d7-abfd-844439767b5c" DisplayName="报废数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="8" Height="20" IsNull="True" Name="Label3" TabIndex="9" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="120" X="110" Y="256">
-    <Events />
-    <RelationControls />
-    <Events />
-  </Label>
-  <Button ID="9a13a730-8749-4298-a337-269c55b2cfbe" AccessKey="" DisplayName="检查文件" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" Name="BtnCheckFile" TabIndex="10" TabStop="True" Width="120" X="250" Y="136">
+  <Button ID="9a13a730-8749-4298-a337-269c55b2cfbe" AccessKey="" DisplayName="检查文件" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="3" GridY="3" Height="20" Name="BtnCheckFile" TabIndex="10" TabStop="True" Width="124" X="210" Y="106">
     <Events>
       <Event ActionName="BtnCheckFileAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
     </Events>
   </Button>
-  <Button ID="23c0325b-562b-4e33-b050-cbc157e99a8f" AccessKey="" DisplayName="转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="4" GridY="6" Height="20" Name="BtnChange" TabIndex="11" TabStop="True" Width="120" X="250" Y="196">
+  <Button ID="23c0325b-562b-4e33-b050-cbc157e99a8f" AccessKey="" DisplayName="转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="3" GridY="5" Height="20" Name="BtnChange" TabIndex="11" TabStop="True" Width="124" X="210" Y="166">
     <Events>
       <Event ActionName="BtnChangeAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
     </Events>
