@@ -4,16 +4,16 @@ echo iisreset
 
 echo beging copy componet dll to portal and appserver
 
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.dll  C:\yonyou\U9V50\Portal\ApplicationLib
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.pdb  C:\yonyou\U9V50\Portal\ApplicationLib
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
 
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.dll  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.pdb  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.dll  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
-copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.pdb  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\Entity\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
 
 
