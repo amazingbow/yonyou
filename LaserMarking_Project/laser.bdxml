@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AppPackage id="d486cb0f-89ea-4c3b-b2fe-e9b93259dfd4" code="AppPackCode01" name="应用组装包" shortName="" displayName="应用组装包" description="" version="">
+<AppPackage id="5d924fd5-2531-4685-bcdd-1ef56ca32e72" code="AppPackCode01" name="应用组装包" shortName="" displayName="应用组装包" description="" version="">
     <Apps>
         <App id="3110" code="01" shortName="CBO" name="基础设置" uri="">
             <Pages />
@@ -18,12 +18,7 @@
                 <UIComponents />
                 <WorkflowComponents />
                 <ReportComponents />
-                <PrePlacedMenu>
-                    <Menu id="67429312-6345-47f0-85bf-31e02bc87c94" code="67429312-6345-47f0-85bf-31e02bc87c94" name="客户化开发" shortName="new menu" displayName="客户化开发" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
-                        <Menu id="ea6c3ead-601f-48bc-b6ce-0e7ea7ef2aa3" code="ea6c3ead-601f-48bc-b6ce-0e7ea7ef2aa3" name="物料准备" shortName="new menu" displayName="物料准备" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserMarkingMasterPlanUI.laserMarkingMasterPlanURI" pageParameter="" sequence="0" kind="Task" theApp="" />
-                        <Menu id="30ff0ba1-c8a9-4f5c-a99d-ed259e8a7ce5" code="30ff0ba1-c8a9-4f5c-a99d-ed259e8a7ce5" name="镭射标报废" shortName="new menu" displayName="镭射标报废" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserMarkingScrapUI.LaserMarkingScrapURI" pageParameter="" sequence="1" kind="Task" theApp="" />
-                    </Menu>
-                </PrePlacedMenu>
+                <PrePlacedMenu />
             </App>
         </App>
         <App id="3001" code="02" shortName="FI" name="财务" uri="">
@@ -237,36 +232,66 @@
             </App>
             <App id="3017" code="0505" shortName="INV" name="库存管理" uri="">
                 <Pages>
-                    <Page id="f5c51cb1-bb53-4703-ae44-3bf3c69d6792" code="f5c51cb1-bb53-4703-ae44-3bf3c69d6792" name="编码录入" shortName="" displayName="编码录入" description="" title="编码录入" uri="UFIDA.U9.Cust.XMQX.LaserMarkingMasterPlanUI.laserMarkingMasterPlanURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                    <Page id="e38f3139-4c14-4153-98a2-c41599b835d5" code="e38f3139-4c14-4153-98a2-c41599b835d5" name="编码录入" shortName="" displayName="编码录入" description="" title="编码录入" uri="UFIDA.U9.Cust.XMQX.LaserLabAddUI.LaserLabAddUIModel.LaserLabAddUIFromWebPart" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
                         <Columns>
-                            <Column id="5315ae8c-4dea-48f4-ae25-35ce959015fb" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                            <Column id="0a9c690b-876b-4ca1-9080-5fc5284d9ed3" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
                                 <Parts>
-                                    <Part>af24c26c-f00b-4143-a1c6-d6c7912b91ec</Part>
+                                    <Part>02d2088e-dbe9-4069-8216-cf11fc236076</Part>
                                 </Parts>
                             </Column>
                         </Columns>
                         <Parts>
-                            <Part id="af24c26c-f00b-4143-a1c6-d6c7912b91ec" code="af24c26c-f00b-4143-a1c6-d6c7912b91ec" name="编码录入" shortName="编码录入" displayName="编码录入" description="编码录入" title="编码录入" bindedFormID="565d2f21-1a37-4ec5-bf65-1747a0d1e953" bindedFormName="LaserMarkingMasterPlanUIFromWebPart" height="480" width="800" />
+                            <Part id="02d2088e-dbe9-4069-8216-cf11fc236076" code="02d2088e-dbe9-4069-8216-cf11fc236076" name="编码录入" shortName="编码录入" displayName="编码录入" description="编码录入" title="编码录入" bindedFormID="91c2cd56-7e24-4b0c-9737-54f6a11a8637" bindedFormName="LaserLabAddUIFromWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="a486d605-f24f-4588-a5b1-ee0296ec4dfb" code="a486d605-f24f-4588-a5b1-ee0296ec4dfb" name="批号修改" shortName="" displayName="批号修改" description="" title="批号修改" uri="UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="a897d233-ffe7-4ce8-8883-46126cbe7d1c" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>81d0ec3e-0dda-4ee7-91f0-5dcc80d5c06b</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="81d0ec3e-0dda-4ee7-91f0-5dcc80d5c06b" code="81d0ec3e-0dda-4ee7-91f0-5dcc80d5c06b" name="批号修改" shortName="批号修改" displayName="批号修改" description="批号修改" title="批号修改" bindedFormID="841b7324-cdff-4913-8d16-a4ef94771d4e" bindedFormName="LaserLabBNChangeUIFromWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="fd090163-9d8b-4bf1-b551-93354fcd7d9a" code="fd090163-9d8b-4bf1-b551-93354fcd7d9a" name="数据转换" shortName="" displayName="数据转换" description="" title="数据转换" uri="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="454c2c0d-0dfa-469b-a4c1-7f3573d10e70" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>073d44fb-d072-42ad-9323-c4b941897243</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="073d44fb-d072-42ad-9323-c4b941897243" code="073d44fb-d072-42ad-9323-c4b941897243" name="数据转换" shortName="数据转换" displayName="数据转换" description="数据转换" title="数据转换" bindedFormID="437debdb-5117-4865-a8ed-d3a2403914e7" bindedFormName="LaserLabDataProcessUIFormWebPart" height="624" width="1144" />
                         </Parts>
                         <PartRelations />
                         <Parameters />
                     </Page>
                 </Pages>
-                <BEComponents>
-                    <BEComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserLabBE.dll" assemblyID="c49e96e8-ebf0-49ed-85cf-465c79decd69" />
-                </BEComponents>
+                <BEComponents />
                 <BPComponents>
-                    <BPComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserMarkingBP.dll" assemblyID="53a21af9-e4d4-484e-9946-3e08d06ac825" />
+                    <BPComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserLabBP.dll" assemblyID="53a21af9-e4d4-484e-9946-3e08d06ac825" />
                 </BPComponents>
                 <ServiceComponents />
                 <UIComponents>
-                    <UIComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserMarkingMasterPlanUI.WebPart.dll" assemblyID="9aa4ddc3-8bcc-4db1-9450-765329cb824e" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserLabAddUI.WebPart.dll" assemblyID="9aa4ddc3-8bcc-4db1-9450-765329cb824e" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.WebPart.dll" assemblyID="34e239f4-cd60-4a8a-8b5e-29d7b0daac9a" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart.dll" assemblyID="71a1b36d-ddc9-4f4c-bccd-650ad1af9526" />
                 </UIComponents>
                 <WorkflowComponents />
                 <ReportComponents />
                 <PrePlacedMenu>
-                    <Menu id="6d0df33e-5468-413f-8315-21d0a07bacc5" code="6d0df33e-5468-413f-8315-21d0a07bacc5" name="LB管理" shortName="new menu" displayName="LB管理" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
-                        <Menu id="c35d5389-8ada-4fd5-a52a-65593599c0a6" code="c35d5389-8ada-4fd5-a52a-65593599c0a6" name="编码录入" shortName="new menu" displayName="编码录入" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserMarkingMasterPlanUI.laserMarkingMasterPlanURI" pageParameter="" sequence="0" kind="Task" theApp="" />
+                    <Menu id="c9b9dd05-0306-4f06-b22c-d6e542fa8285" code="c9b9dd05-0306-4f06-b22c-d6e542fa8285" name="LB管理" shortName="new menu" displayName="LB管理" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
+                        <Menu id="02d853d7-c36d-4f18-9a34-cee601d466f8" code="02d853d7-c36d-4f18-9a34-cee601d466f8" name="编码录入" shortName="new menu" displayName="编码录入" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserLabAddUI.LaserLabAddUIModel.LaserLabAddUIFromWebPart" pageParameter="" sequence="0" kind="Task" theApp="" />
+                        <Menu id="731679a3-7a66-45f3-ab83-a771be271186" code="731679a3-7a66-45f3-ab83-a771be271186" name="批号修改" shortName="new menu" displayName="批号修改" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart" pageParameter="" sequence="1" kind="Task" theApp="" />
+                        <Menu id="2c42357c-dd72-4ba1-93f4-0d4b91d0cefd" code="2c42357c-dd72-4ba1-93f4-0d4b91d0cefd" name="数据转换" shortName="new menu" displayName="数据转换" description="new menu" image="" isDialog="False" pageURI="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart" pageParameter="" sequence="2" kind="Task" theApp="3017" />
                     </Menu>
                 </PrePlacedMenu>
             </App>
