@@ -68,10 +68,6 @@ namespace LaserLabDataProcessUIModel
             {
                 msg = "没有文件可以转换！";
             }
-            if (true)
-            {
-                
-            }
             UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('" + msg + "');", true);
             BtnCheckFile_Click_DefaultImpl(sender, e);
         }
