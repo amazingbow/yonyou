@@ -31,7 +31,15 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-	<Import Project="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart.target" />  
-
+  <ItemGroup>
+    <Reference Include="System.configuration" />
+    <Reference Include="UFIDA.U9.Cust.XMQX.LaserLabBE">
+      <HintPath>..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.XMQX.LaserLabBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy">
+      <HintPath>..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.XMQX.LaserLabBE.Deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart.target" />
 </Project>
