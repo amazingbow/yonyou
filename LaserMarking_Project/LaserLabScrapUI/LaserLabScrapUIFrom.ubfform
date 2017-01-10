@@ -103,15 +103,6 @@
           <Events />
           <RelationControls />
         </TextBox>
-        <Label ID="2bd7b6c5-0010-4666-a155-b81053c7e06b" Enabled="True" GridHeight="1" GridWidth="1" GridX="9" GridY="5" Height="25" IsNull="True" IsSequence="False" Name="lblLB345" RelationControl="LB345" TabIndex="11" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="604" Y="152">
-          <Events />
-          <RelationControls />
-          <Events />
-        </Label>
-        <TextBox ID="67469af9-4c9c-4714-a195-bde2e9846026" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="11" GridY="5" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="LB345" RelationControl="lblLB345" TabIndex="12" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="LB" UIViewID="LaserLabSoloScrapView" Visible="True" Width="100" X="714" Y="152">
-          <Events />
-          <RelationControls />
-        </TextBox>
         <Button ID="9436cef9-9889-4653-802e-2737cd1ec2b1" AccessKey="" DisplayName="确定" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="11" GridY="12" Height="30" Name="BtnOk" TabIndex="15" TabStop="True" Width="100" X="714" Y="382">
           <Events>
             <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
@@ -148,15 +139,42 @@
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
           <CurrencyType Name="CurrencyType1" />
         </NumberControl>
-        <Label ID="1bf44039-911c-4061-95d4-a19ed9fd2019" Enabled="True" GridHeight="1" GridWidth="1" GridX="9" GridY="7" Height="25" IsNull="True" IsSequence="False" Name="lblScarpDT343" RelationControl="ScarpDT343" TabIndex="21" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="604" Y="217">
-          <Events />
-          <RelationControls />
-          <Events />
-        </Label>
-        <DatePicker ID="50d3de2d-2cea-4257-a050-3521852acbb9" DisplayFormat="17" Enabled="True" GridHeight="1" GridWidth="1" GridX="11" GridY="7" Height="25" IsNull="False" IsProperty="False" IsSequence="False" Name="ScarpDT343" RelationControl="lblScarpDT343" TabIndex="22" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ScarpDT" UIViewID="LaserLabSoloScrapView" Visible="True" Width="100" X="714" Y="217">
-          <Events />
-          <RelationControls />
-        </DatePicker>
+        <Card ID="8a667612-8db9-4bf9-9f9c-406fd37d6f70" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="6" GridColumnSpace="0" GridHeight="11" GridLeftMargin="0" GridRightMargin="0" GridRowCount="6" GridRowSpace="10" GridTopMargin="0" GridWidth="9" GridX="7" GridY="1" Height="345" Name="Card1" TabStop="False" Width="510" X="464" Y="27">
+          <Columns>
+            <Column Fixed="True" Name="Column0" Type="Title" Width="5" />
+            <Column Fixed="True" Name="Column1" Type="Value" Width="200" />
+            <Column Fixed="True" Name="Column2" Width="100" />
+            <Column Fixed="True" Name="Column3" Type="Value" Width="10" />
+            <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+            <Column Fixed="True" Name="Column5" Width="95" />
+          </Columns>
+          <Rows>
+            <Row Fixed="True" Height="1" Name="Row0" />
+            <Row Fixed="True" Height="140" Name="Row1" />
+            <Row Fixed="True" Height="25" Name="Row2" />
+            <Row Fixed="True" Height="20" Name="Row3" />
+            <Row Fixed="True" Height="25" Name="Row4" />
+            <Row Fixed="True" Height="20" Name="Row5" />
+          </Rows>
+          <Label ID="c0aa36d6-8723-4f45-9411-f4872f2d15b3" DisplayName="LB编码：" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="25" IsNull="True" Name="Label1" RelationControl="TextBox1" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="100" X="205" Y="161">
+            <Events />
+            <RelationControls />
+            <Events />
+          </Label>
+          <TextBox ID="30677512-2a0d-468c-9974-da03a69b4fb8" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="25" IsNull="True" MultiLine="False" Name="TextBox1" RelationControl="Label1" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="100" X="315" Y="161">
+            <Events />
+            <RelationControls />
+          </TextBox>
+          <Label ID="ba2c11d8-4af0-4dfb-ba76-b823810b3026" DisplayName="报废时间：" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="25" IsNull="True" Name="Label2" RelationControl="DatePicker2" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="100" X="205" Y="226">
+            <Events />
+            <RelationControls />
+            <Events />
+          </Label>
+          <DatePicker ID="acdaa90b-d2f7-4cf2-b6f9-b89546b8dcd2" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="25" IsNull="True" Name="DatePicker2" RelationControl="Label2" TabIndex="3" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="100" X="315" Y="226">
+            <Events />
+            <RelationControls />
+          </DatePicker>
+        </Card>
       </TabPage>
       <TabPage ID="dfd85e7a-e81d-4042-b44c-fc8c468c54bb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="批量报废" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="3" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="10" Height="468" Name="TabPage1" TabStop="False" Width="982" X="0" Y="0">
         <Columns>
@@ -181,7 +199,7 @@
           <Row Fixed="False" Height="436" Name="Row1" />
           <Row Fixed="True" Height="1" Name="Row2" />
         </Rows>
-        <DataGrid ID="0930b577-29db-4968-abfb-eacfe8925990" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="1" GridY="1" HasSum="False" Height="436" Name="DataGrid0" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="960" X="11" Y="16">
+        <DataGrid ID="0930b577-29db-4968-abfb-eacfe8925990" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="browse" Enabled="True" GridHeight="1" GridWidth="1" GridX="1" GridY="1" HasSum="False" Height="436" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="0" TabStop="True" Width="960" X="11" Y="16">
           <Events />
           <Header ID="f2660977-db44-465b-a673-37f4af953cb7" Name="Header0">
             <HeaderRow ID="b4ad251a-17cb-4d99-bec0-026b6a0c5d5a" Name="DefaultRow">
