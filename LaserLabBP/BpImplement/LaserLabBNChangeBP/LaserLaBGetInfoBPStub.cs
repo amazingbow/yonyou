@@ -71,17 +71,17 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
 				if (result == null)
 					return null ;
 		
-				List<UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTOData> listEntityList = new List<UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTOData>();
+				List<UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTOData> list = new List<UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTOData>();
 				foreach (UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTO obj in result)
 				{
 					if (obj == null)
 						continue;
 
 					UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LabBNInfoDTOData resultdata = obj.ToEntityData();
-					listEntityList.Add(resultdata);
+					list.Add(resultdata);
 				}
-				DoSerializeKey(listEntityList, "UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LaserLaBGetInfoBP");
-				return listEntityList;
+				DoSerializeKey(list, "UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.LaserLaBGetInfoBP");
+				return list;
 
 	        }
 			catch (System.Exception e)

@@ -36,6 +36,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -58,6 +59,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 	     							SysVersion= 0; 			     			
 	     			
 	     							Cp= -1; 			     			
+	     			
 	     			
 	     			
 	     			
@@ -418,10 +420,29 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 			}
 		}
 		
+
+				/// <summary>
+		/// 扫描日期
+		/// 镭射标表.Misc.扫描日期
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.DateTime m_scanDate ;
+		public System.DateTime ScanDate
+		{
+			get	
+			{	
+				return m_scanDate  ;
+			}
+			set	
+			{	
+				m_scanDate = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																	
+																		
 		#endregion 		
 	}	
 

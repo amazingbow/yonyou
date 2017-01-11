@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 		/// <returns>Instance</returns>
 		public  static LaserLab Create() {
 			LaserLab entity = (LaserLab)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																						 
+																																																									 
 			return entity;
 		}
 
@@ -634,6 +634,28 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 扫描日期 (该属性可为空,且无默认值)
+			/// 镭射标表.Misc.扫描日期
+			/// </summary>
+			/// <value></value>
+			public  System.DateTime ScanDate
+			{
+				get
+				{
+					object obj = base.GetValue("ScanDate");
+					if (obj == null)
+						return System.DateTime.MinValue;
+					else
+					       return (System.DateTime)obj;
+				}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1070,6 +1092,31 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 
 
 
+		
+			/// <summary>
+		/// 扫描日期 (该属性可为空,且无默认值)
+		/// 镭射标表.Misc.扫描日期
+		/// </summary>
+		/// <value></value>
+			public  System.DateTime ScanDate
+		{
+			get
+			{
+				System.DateTime value  = (System.DateTime)base.GetValue("ScanDate");
+				return value.Date ;
+				}
+				set
+			{
+				
+				
+				base.SetValue("ScanDate", value.Date);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1179,6 +1226,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 		/// </summary>
 		[Obsolete("")]
 		public string Res_ScarpDT　{ get { return EntityRes.GetResource("ScarpDT");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ScanDate")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_ScanDate　{ get { return EntityRes.GetResource("ScanDate");　}　}
 		#endregion 
 
 
@@ -1280,6 +1332,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 			/// 属性: 报废时间 的名称
 			/// </summary>
 			public static string ScarpDT　{ get { return "ScarpDT";　}　}
+				
+			/// <summary>
+			/// 属性: 扫描日期 的名称
+			/// </summary>
+			public static string ScanDate　{ get { return "ScanDate";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1287,7 +1344,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																		
+																																				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1344,6 +1401,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 			this.exdMultiLangAttrs.Add("PackDT","PackDT");
 			this.exdMultiLangAttrs.Add("ShipDT","ShipDT");
 			this.exdMultiLangAttrs.Add("ScarpDT","ScarpDT");
+			this.exdMultiLangAttrs.Add("ScanDate","ScanDate");
         }
 	#endregion 
 
@@ -1360,7 +1418,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 			switch(propstr)
 			{
 			
-																																																			
+																																																						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1381,6 +1439,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 		private void DeSerializeKey(LaserLabData data)
 		{
 		
+			
+
 			
 
 			
@@ -1488,6 +1548,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 								this.SetTypeValue("ShipDT",data.ShipDT);
 		
 								this.SetTypeValue("ScarpDT",data.ScarpDT);
+		
+								this.SetTypeValue("ScanDate",data.ScanDate);
 		
 			#endregion 
 
@@ -1633,6 +1695,13 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 					data.ScarpDT=(System.DateTime)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("ScanDate");
+				if (obj != null)
+					data.ScanDate=(System.DateTime)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1659,6 +1728,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
         private bool SelfEntityValidator()
         {
         
+
 
 
 

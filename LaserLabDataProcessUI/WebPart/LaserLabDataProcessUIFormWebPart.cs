@@ -45,7 +45,7 @@ using System.Collections.Specialized;
  ***********************************************************************************************/
 namespace LaserLabDataProcessUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI","LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart", "UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart", "437debdb-5117-4865-a8ed-d3a2403914e7","WebPart", "True", 848, 480)] 
+	[FormRegister("UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI","LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart", "UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart", "437debdb-5117-4865-a8ed-d3a2403914e7","WebPart", "True", 760, 560)] 
 	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI', 'LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart', 'UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.WebPart', '437debdb-5117-4865-a8ed-d3a2403914e7')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=437debdb-5117-4865-a8ed-d3a2403914e7" title="LaserLabDataProcessUIForm"/>
     public partial class LaserLabDataProcessUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
@@ -235,10 +235,10 @@ namespace LaserLabDataProcessUIModel
         #region view Create Contorls
         private void CreateFormChildControls()
         {
-            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"LaserLabDataProcessUIForm",true,848,480);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 8, 12, 0, 12, 10, 10, 10, 10);
+            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"LaserLabDataProcessUIForm",true,760,560);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 10, 14, 0, 14, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _panel,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 12,new GridColumnDef[]{new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(310,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 14,new GridColumnDef[]{new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -249,14 +249,14 @@ namespace LaserLabDataProcessUIModel
 
 
 
-				this.Line0 = UIControlBuilder.BuilderUFLine(_panel, "Line0", 490, "Horizontal", "True", 490, 26, 0, 0, 7, 1, "100","cbd23799-b204-4555-99db-e3d62f6182ea","cbd23799-b204-4555-99db-e3d62f6182ea");
+				this.Line0 = UIControlBuilder.BuilderUFLine(_panel, "Line0", 500, "Horizontal", "True", 500, 26, 0, 0, 8, 1, "100","cbd23799-b204-4555-99db-e3d62f6182ea","cbd23799-b204-4555-99db-e3d62f6182ea");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.Line0, "0");		
 
 
-				this.Line1 = UIControlBuilder.BuilderUFLine(_panel, "Line1", 490, "Horizontal", "True", 490, 20, 0, 5, 7, 1, "100","7997e7bc-1933-4d2c-b7b8-b169b891853a","7997e7bc-1933-4d2c-b7b8-b169b891853a");
+				this.Line1 = UIControlBuilder.BuilderUFLine(_panel, "Line1", 500, "Horizontal", "True", 500, 25, 0, 5, 8, 1, "100","7997e7bc-1933-4d2c-b7b8-b169b891853a","7997e7bc-1933-4d2c-b7b8-b169b891853a");
 	
 
 		
@@ -284,21 +284,21 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.BtnChange, "11");		
 
 
-				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 120, 25, 5, 6, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
+				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 120, 25, 3, 11, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnJYForceChange, "22");		
 
 
-				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 120, 25, 5, 8, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
+				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 120, 25, 5, 11, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnBZForceChange, "23");		
 
 
-				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 120, 25, 5, 10, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
+				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 120, 20, 3, 12, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
 	
 
 		
@@ -414,17 +414,17 @@ namespace LaserLabDataProcessUIModel
 	        private void _BuilderControl_RadioBoxList1(IUFContainer container)
         {
             IUFRadioBoxList _UFListControl = UIControlBuilder.BuildRadioBoxList(container,"RadioBoxList1",true,true,"2",0,0,UFSoft.UBF.UI.ControlModel.LineOrientation.Vertical);
-			CommonBuilder.GridLayoutPropBuilder(container, _UFListControl, 100, 136, 1, 1, 1, 4, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFListControl, 100, 142, 1, 1, 1, 4, "100");
             this.RadioBoxList1 = _UFListControl;
             ///foreach CheckBoxList和RadioBoxList下的所有子项
             ListItem listItem = null ;
-            listItem = UIControlBuilder.BuildListItem(container,"", true,false,"d158154b-32c9-41f5-8926-cd8865d371f9","d158154b-32c9-41f5-8926-cd8865d371f9");
+            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"ab0b3e9b-d99f-4f02-866b-edc632a7e00c","ab0b3e9b-d99f-4f02-866b-edc632a7e00c");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"", true,false,"a08c92f2-6e6b-4d56-b09d-6ef68fdb9220","a08c92f2-6e6b-4d56-b09d-6ef68fdb9220");
+            listItem = UIControlBuilder.BuildListItem(container,"2", true,false,"21d8263b-cce6-4636-b596-a9ea98e9e078","21d8263b-cce6-4636-b596-a9ea98e9e078");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"", true,false,"d8894e3a-751f-4ce8-9b31-f35f9ec08f9d","d8894e3a-751f-4ce8-9b31-f35f9ec08f9d");
+            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"fe152f17-aef8-4287-8d74-f3f806e8843e","fe152f17-aef8-4287-8d74-f3f806e8843e");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"", true,false,"2e0763a7-1edd-42d7-b401-7609cb475195","2e0763a7-1edd-42d7-b401-7609cb475195");
+            listItem = UIControlBuilder.BuildListItem(container,"4", true,false,"58f4edb2-7a89-4538-aabe-1488818870bd","58f4edb2-7a89-4538-aabe-1488818870bd");
             _UFListControl.Items.Add(listItem);
         }
 

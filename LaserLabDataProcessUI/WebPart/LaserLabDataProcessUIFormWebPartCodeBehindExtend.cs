@@ -25,8 +25,8 @@ using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using System.IO;
 using UFIDA.U9.UI.PDHelper;
 using System.Web;
-using UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab;
 using System.Configuration;
+using UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy;
 
 
 
@@ -39,33 +39,32 @@ namespace LaserLabDataProcessUIModel
     public partial class LaserLabDataProcessUIFormWebPart
     {
         #region Custome eventBind
-        private const string JYTXT = "STOCK1.txt";
-        private const string BZTXT = "STOCK2.txt";
-        private const string CHTXT = "STOCK3.txt";
-        private const string BFTXT = "SCRAP.txt";
-        private string _ProcessFilePath;
-        private string _ErrorFilePath;
+        private string JYTXT = ConfigurationManager.AppSettings["ProcessFilePath"] + "STOCK1.txt";
+        private string BZTXT = ConfigurationManager.AppSettings["ProcessFilePath"] + "STOCK2.txt";
+        private string CHTXT = ConfigurationManager.AppSettings["ProcessFilePath"] + "STOCK3.txt";
+        private string BFTXT = ConfigurationManager.AppSettings["ProcessFilePath"] + "SCRAP.txt";
+        private string _ErrorFilePath = ConfigurationManager.AppSettings["ErrorFilePath"];
         //BtnCheckFile_Click...
         private void BtnCheckFile_Click_Extend(object sender, EventArgs e)
         {
             //config.Text
             StringBuilder sb = new StringBuilder();
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            if (File.Exists(_ProcessFilePath + JYTXT))
+            if (File.Exists(JYTXT))
             {
-                sb.AppendLine("有金油数据可以转换！");
+                sb.Append("有金油数据可以转换！");
             }
-            if (File.Exists(_ProcessFilePath + BZTXT))
+            if (File.Exists(BZTXT))
             {
-                sb.AppendLine("有包装数据可以转换！");
+                sb.Append("有包装数据可以转换！");
             }
-            if (File.Exists(_ProcessFilePath + CHTXT))
+            if (File.Exists(CHTXT))
             {
-                sb.AppendLine("有出货数据可以转换！");
+                sb.Append("有出货数据可以转换！");
             }
-            if (File.Exists(_ProcessFilePath + BFTXT))
+            if (File.Exists(BFTXT))
             {
-                sb.AppendLine("有报废数据可以转换！");
+                sb.Append("有报废数据可以转换！");
             }
             string msg = sb.ToString();
             if (string.IsNullOrEmpty(msg))
@@ -80,78 +79,24 @@ namespace LaserLabDataProcessUIModel
         private void BtnChange_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            switch (this.RadioBoxList1.SelectedIndex)
+            LbDataProcessBPProxy proxy = new LbDataProcessBPProxy();
+            proxy.ProcessType = this.RadioBoxList1.SelectedIndex;
+            var result = proxy.Do();
+            string resultMsg = string.Empty;
+            if (result == 0)
             {
-                case 0:
-                    GoldenOilProcess(_ProcessFilePath + JYTXT);
-                    break;
-                case 1:
-                    PackingProcess(_ProcessFilePath + BZTXT);
-                    break;
-                case 2:
-                    ShipmentProcess(_ProcessFilePath + CHTXT);
-                    break;
-                case 3:
-                    ScrapProcess(_ProcessFilePath + BFTXT);
-                    break;
-                default:
-                    break;
+                resultMsg = "部分数据转换失败，请查看LaserLabProcessError文件夹下错误文件，然后手动处理";
             }
+            else if (result == 1)
+            {
+                resultMsg = "数据转换全部成功！";
+            }
+            else
+            {
+                resultMsg = "文件不存在！";
+            }
+            UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('" + resultMsg + "');", true);
             BtnChange_Click_DefaultImpl(sender, e);
-        }
-
-        private void ScrapProcess(string path)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ShipmentProcess(string path)
-        {
-            StreamReader sr = new StreamReader(path, Encoding.Default);
-            string errFileName = _ErrorFilePath + DateTime.Now.ToString("yyyy-MM-dd") + ".txt";
-            String line;
-            bool flag = false;
-            StreamWriter sw = null;
-            while ((line = sr.ReadLine()) != null)
-            {
-                //LaserLab
-                line = line.Trim();
-                if (line.Length > 20)
-                {
-                    string batch = line.Substring(0, 5);
-                    string tempstr = line.Substring(6).Trim();
-
-                    string tempTime = tempstr.Substring(tempstr.Length - 15).Trim();
-                    string time = tempTime.Substring(0, 8);
-                    string laserLab = tempstr.Replace(tempTime, "").Trim();
-                    LaserLab lab = LaserLab.Finder.Find("BN='" + batch + "' and LB='" + laserLab + "'");
-                    if (lab == null)
-                    {
-                        flag = true;
-                        if (File.Exists(errFileName) == false)//如果不存在就创建file文件夹
-                        {
-                            File.Create(errFileName);//创建该文件
-                        }
-                        sw = new StreamWriter(errFileName);
-                        sw.WriteLine(line, Encoding.Default);
-                    }
-                }
-            }
-            if (sw != null)
-            {
-                sw.Close();
-            }
-            sr.Close();
-        }
-
-        private void PackingProcess(string path)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void GoldenOilProcess(string path)
-        {
-            throw new NotImplementedException();
         }
         //BtnJYForceChange_Click...
         private void BtnJYForceChange_Click_Extend(object sender, EventArgs e)
@@ -194,8 +139,6 @@ namespace LaserLabDataProcessUIModel
         #region 自己扩展 Extended Event handler
         public void AfterOnLoad()
         {
-            _ProcessFilePath = ConfigurationManager.AppSettings["ProcessFilePath"];
-            _ErrorFilePath = ConfigurationManager.AppSettings["ErrorFilePath"];
         }
 
         public void AfterCreateChildControls()
@@ -211,7 +154,9 @@ namespace LaserLabDataProcessUIModel
 
         public void BeforeUIModelBinding()
         {
-
+            //this.RadioBoxList1.AutoPostBack = true;
+            this.RadioBoxList1.SelectedIndex = 0;
+            //this.RadioBoxList1.
         }
 
         public void AfterUIModelBinding()
