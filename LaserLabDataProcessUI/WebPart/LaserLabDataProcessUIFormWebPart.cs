@@ -92,16 +92,24 @@ namespace LaserLabDataProcessUIModel
         IUFButton BtnJYForceChange;
         IUFButton BtnBZForceChange;
         IUFButton BtnCHForceChange;
-        IUFLabel lblLaserLabCode1081;
-        IUFFldTextBox LaserLabCode1081;
-        IUFLabel lblBatchNo2007;
-        IUFFldTextBox BatchNo2007;
-        IUFLabel lblType1667;
-        IUFFldTextBox Type1667;
-        IUFLabel lblFlowNumStart1064;
-        IUFFldTextBox FlowNumStart1064;
-        IUFLabel lblFlowNumEnd1073;
-        IUFFldTextBox FlowNumEnd1073;
+        IUFGroupBox GroupBox0;
+        IUFGroupBox GroupBox1;
+        IUFGroupBox GroupBox2;
+        IUFGroupBox GroupBox3;
+        IUFGroupBox GroupBox4;
+        IUFTabControl TabControl0;
+        IUFTabPage TabPage0;
+        IUFLabel lblLaserLabCode1531;
+        IUFFldTextBox LaserLabCode1531;
+        IUFTabPage TabPage1;
+        IUFLabel lblBatchNo2223;
+        IUFFldTextBox BatchNo2223;
+        IUFLabel lblType1904;
+        IUFFldTextBox Type1904;
+        IUFLabel lblFlowNumStart1208;
+        IUFFldTextBox FlowNumStart1208;
+        IUFLabel lblFlowNumEnd1337;
+        IUFFldTextBox FlowNumEnd1337;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -142,7 +150,7 @@ namespace LaserLabDataProcessUIModel
 			this.BtnCHForceChange.Click += new EventHandler(BtnCHForceChange_Click);		
 						
 
-	
+		
             AfterEventBind();
         }
         #endregion            
@@ -237,8 +245,8 @@ namespace LaserLabDataProcessUIModel
         {
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"LaserLabDataProcessUIForm",true,760,560);
             CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 10, 14, 0, 14, 10, 10, 10, 10);
-			InitViewBindingContainer(this, _panel,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 14,new GridColumnDef[]{new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_panel, 14,new GridColumnDef[]{new GridColumnDef(14,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(171,bool.Parse("True")),new GridColumnDef(85,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(26,bool.Parse("False")),new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -249,14 +257,14 @@ namespace LaserLabDataProcessUIModel
 
 
 
-				this.Line0 = UIControlBuilder.BuilderUFLine(_panel, "Line0", 500, "Horizontal", "True", 500, 26, 0, 0, 8, 1, "100","cbd23799-b204-4555-99db-e3d62f6182ea","cbd23799-b204-4555-99db-e3d62f6182ea");
+				this.Line0 = UIControlBuilder.BuilderUFLine(_panel, "Line0", 515, "Horizontal", "True", 515, 26, 0, 0, 8, 1, "100","cbd23799-b204-4555-99db-e3d62f6182ea","cbd23799-b204-4555-99db-e3d62f6182ea");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.Line0, "0");		
 
 
-				this.Line1 = UIControlBuilder.BuilderUFLine(_panel, "Line1", 500, "Horizontal", "True", 500, 25, 0, 5, 8, 1, "100","7997e7bc-1933-4d2c-b7b8-b169b891853a","7997e7bc-1933-4d2c-b7b8-b169b891853a");
+				this.Line1 = UIControlBuilder.BuilderUFLine(_panel, "Line1", 515, "Horizontal", "True", 515, 25, 0, 5, 8, 1, "100","7997e7bc-1933-4d2c-b7b8-b169b891853a","7997e7bc-1933-4d2c-b7b8-b169b891853a");
 	
 
 		
@@ -270,133 +278,85 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.RadioBoxList1, "2");		
 
 
-				this.BtnCheckFile = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCheckFile", true, true, 120, 25, 3, 2, 1, 1, "100","", this.Model.ElementID,"BtnCheckFileAction",false,"9a13a730-8749-4298-a337-269c55b2cfbe","","9a13a730-8749-4298-a337-269c55b2cfbe");
+				this.BtnCheckFile = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCheckFile", true, true, 100, 25, 3, 2, 1, 1, "100","", this.Model.ElementID,"BtnCheckFileAction",false,"9a13a730-8749-4298-a337-269c55b2cfbe","","9a13a730-8749-4298-a337-269c55b2cfbe");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnCheckFile, "10");		
 
 
-				this.BtnChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnChange", true, true, 120, 25, 3, 3, 1, 1, "100","", this.Model.ElementID,"BtnChangeAction",false,"23c0325b-562b-4e33-b050-cbc157e99a8f","","23c0325b-562b-4e33-b050-cbc157e99a8f");
+				this.BtnChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnChange", true, true, 100, 25, 3, 3, 1, 1, "100","", this.Model.ElementID,"BtnChangeAction",false,"23c0325b-562b-4e33-b050-cbc157e99a8f","","23c0325b-562b-4e33-b050-cbc157e99a8f");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnChange, "11");		
 
 
-				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 120, 25, 3, 11, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
+				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 100, 25, 1, 10, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnJYForceChange, "22");		
 
 
-				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 120, 25, 5, 11, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
+				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 100, 25, 3, 10, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnBZForceChange, "23");		
 
 
-				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 120, 20, 3, 12, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
+				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 100, 25, 5, 10, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnCHForceChange, "24");		
 
 
-				this.lblLaserLabCode1081 = UIControlBuilder.BuilderUFLabel(_panel, "lblLaserLabCode1081", "", "True", "True", "Left", 100, 25, 1, 6, 1, 1, "100","7ee1fcbc-2665-44d6-9297-321ce22c7992","0e3a4a38-b081-4e32-8588-5a4c9a98fc17");
-
-
-								
+	
+			_BuilderControl_GroupBox0(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblLaserLabCode1081, "25");		
+			UIControlBuilder.BuilderUFControl(this.GroupBox0, "0");		
 
 
-				this.LaserLabCode1081 = UIControlBuilder.BuilderTextBox(_panel, "LaserLabCode1081", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 3, 6, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblLaserLabCode1081","","50","7ee1fcbc-2665-44d6-9297-321ce22c7992","db3c1e91-16f5-413b-a631-95dcfd037eaa");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.LaserLabCode1081, "False", "LaserLabCode", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldLaserLabCode, "LaserLabDataProcessView");
-
+	
+			_BuilderControl_GroupBox1(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.LaserLabCode1081, "26");		
-		 
-
-				this.lblBatchNo2007 = UIControlBuilder.BuilderUFLabel(_panel, "lblBatchNo2007", "", "True", "True", "Left", 100, 25, 1, 7, 1, 1, "100","e701dbd4-2f99-4f61-9551-3196e52a81c7","a9a31b33-a1b4-43d6-8926-e79a3f9cd837");
+			UIControlBuilder.BuilderUFControl(this.GroupBox1, "0");		
 
 
-								
+	
+			_BuilderControl_GroupBox2(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblBatchNo2007, "27");		
+			UIControlBuilder.BuilderUFControl(this.GroupBox2, "0");		
 
 
-				this.BatchNo2007 = UIControlBuilder.BuilderTextBox(_panel, "BatchNo2007", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 3, 7, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblBatchNo2007","","50","e701dbd4-2f99-4f61-9551-3196e52a81c7","cad8cbff-559d-48a7-971e-5bfab226f7a6");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.BatchNo2007, "False", "BatchNo", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldBatchNo, "LaserLabDataProcessView");
-
+	
+			_BuilderControl_GroupBox3(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.BatchNo2007, "28");		
-		 
-
-				this.lblType1667 = UIControlBuilder.BuilderUFLabel(_panel, "lblType1667", "", "True", "True", "Left", 100, 25, 1, 8, 1, 1, "100","6120c860-1760-4d74-867b-2541d6ce54ac","2ddd4ed5-58c7-439d-8c04-88a61380a997");
+			UIControlBuilder.BuilderUFControl(this.GroupBox3, "0");		
 
 
-								
+	
+			_BuilderControl_GroupBox4(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblType1667, "29");		
+			UIControlBuilder.BuilderUFControl(this.GroupBox4, "0");		
 
 
-				this.Type1667 = UIControlBuilder.BuilderTextBox(_panel, "Type1667", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 3, 8, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblType1667","","50","6120c860-1760-4d74-867b-2541d6ce54ac","5c0853c6-85b8-47f5-aa44-5a95ab76de2a");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Type1667, "False", "Type", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldType, "LaserLabDataProcessView");
-
+	
+			_BuilderControl_TabControl0(_panel);
 
 		
-			UIControlBuilder.BuilderUFControl(this.Type1667, "30");		
-		 
-
-				this.lblFlowNumStart1064 = UIControlBuilder.BuilderUFLabel(_panel, "lblFlowNumStart1064", "", "True", "True", "Left", 100, 25, 1, 9, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","a35b9f7b-cbb3-4d47-88c6-b1048cabccf7");
+			UIControlBuilder.BuilderUFControl(this.TabControl0, "35");		
 
 
-								
 
-		
-			UIControlBuilder.BuilderUFControl(this.lblFlowNumStart1064, "31");		
-
-
-				this.FlowNumStart1064 = UIControlBuilder.BuilderTextBox(_panel, "FlowNumStart1064", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 3, 9, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumStart1064","","50","e199c6c0-a2a1-4f03-916c-b707772fc7c8","db368f97-f65f-4afa-a753-42469856e692");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumStart1064, "False", "FlowNumStart", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumStart, "LaserLabDataProcessView");
-
-
-		
-			UIControlBuilder.BuilderUFControl(this.FlowNumStart1064, "32");		
-		 
-
-				this.lblFlowNumEnd1073 = UIControlBuilder.BuilderUFLabel(_panel, "lblFlowNumEnd1073", "", "True", "True", "Left", 100, 25, 1, 10, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","4ecee330-0406-4ca7-b657-b4fa90c3d675");
-
-
-								
-
-		
-			UIControlBuilder.BuilderUFControl(this.lblFlowNumEnd1073, "33");		
-
-
-				this.FlowNumEnd1073 = UIControlBuilder.BuilderTextBox(_panel, "FlowNumEnd1073", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 3, 10, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumEnd1073","","50","7bebb355-dd80-4f99-8a5a-97dd061e38d3","bf67e919-58ce-4ee4-beb2-d10a2a965d0d");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumEnd1073, "False", "FlowNumEnd", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumEnd, "LaserLabDataProcessView");
-
-
-		
-			UIControlBuilder.BuilderUFControl(this.FlowNumEnd1073, "34");		
-		 
-
-
-																		
+														
      
 			
 			
@@ -418,15 +378,252 @@ namespace LaserLabDataProcessUIModel
             this.RadioBoxList1 = _UFListControl;
             ///foreach CheckBoxList和RadioBoxList下的所有子项
             ListItem listItem = null ;
-            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"ab0b3e9b-d99f-4f02-866b-edc632a7e00c","ab0b3e9b-d99f-4f02-866b-edc632a7e00c");
+            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"9d75e1a6-6406-4d6f-9997-34f7996715b1","9d75e1a6-6406-4d6f-9997-34f7996715b1");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"2", true,false,"21d8263b-cce6-4636-b596-a9ea98e9e078","21d8263b-cce6-4636-b596-a9ea98e9e078");
+            listItem = UIControlBuilder.BuildListItem(container,"2", true,false,"557a57da-c3d3-4ad9-a65c-995c54d544f0","557a57da-c3d3-4ad9-a65c-995c54d544f0");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"fe152f17-aef8-4287-8d74-f3f806e8843e","fe152f17-aef8-4287-8d74-f3f806e8843e");
+            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"cd3b3e82-d241-4839-874f-30539647a4a3","cd3b3e82-d241-4839-874f-30539647a4a3");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"4", true,false,"58f4edb2-7a89-4538-aabe-1488818870bd","58f4edb2-7a89-4538-aabe-1488818870bd");
+            listItem = UIControlBuilder.BuildListItem(container,"4", true,false,"5be6b57b-a297-42bf-a8cd-550a7f9f56ac","5be6b57b-a297-42bf-a8cd-550a7f9f56ac");
             _UFListControl.Items.Add(listItem);
         }
+	        private IUFGroupBox _BuilderControl_GroupBox0(IUFContainer container)
+        {
+            IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox0",true, true, "0",TextAlign.Left,"","20a95ee0-c648-4286-83ca-47bac990cf92");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+            ///foreach GroupBox下的所有控件，增加到此容器
+
+
+
+
+
+
+
+
+            this.GroupBox0 = _UFGroupBox;
+            return _UFGroupBox;
+        }
+
+	        private IUFGroupBox _BuilderControl_GroupBox1(IUFContainer container)
+        {
+            IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox1",true, true, "0",TextAlign.Left,"","9b534dfa-c4e3-43ad-8e85-030a6d88355a");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+            ///foreach GroupBox下的所有控件，增加到此容器
+
+
+
+
+
+
+
+
+            this.GroupBox1 = _UFGroupBox;
+            return _UFGroupBox;
+        }
+
+	        private IUFGroupBox _BuilderControl_GroupBox2(IUFContainer container)
+        {
+            IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox2",true, true, "0",TextAlign.Left,"","cc9b4712-1e40-4126-897c-999943ea9911");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+            ///foreach GroupBox下的所有控件，增加到此容器
+
+
+
+
+
+
+
+
+            this.GroupBox2 = _UFGroupBox;
+            return _UFGroupBox;
+        }
+
+	        private IUFGroupBox _BuilderControl_GroupBox3(IUFContainer container)
+        {
+            IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox3",true, true, "0",TextAlign.Left,"","291c318c-c615-44c1-b095-0f14b2a54053");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+            ///foreach GroupBox下的所有控件，增加到此容器
+
+
+
+
+
+
+
+
+            this.GroupBox3 = _UFGroupBox;
+            return _UFGroupBox;
+        }
+
+	        private IUFGroupBox _BuilderControl_GroupBox4(IUFContainer container)
+        {
+            IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox4",true, true, "0",TextAlign.Left,"","05ce8b01-d08f-4e1c-b420-267f72ba07a1");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+            ///foreach GroupBox下的所有控件，增加到此容器
+
+
+
+
+
+
+
+
+            this.GroupBox4 = _UFGroupBox;
+            return _UFGroupBox;
+        }
+
+	         private void _BuilderControl_TabControl0(IUFContainer container)
+        {
+            IUFTabControl _UFTabControl = UIControlBuilder.BuildTabControl(container,"TabControl0",true, true, "35",EventResponseType.Client,515, 105, 0, 6, 8, 3, "100");
+            ///foreach UFTabbedPane下的所有控件，增加到此容器
+            _UFTabControl.TabPages.Add(_BuilderControl_TabPage0(_UFTabControl));
+            _UFTabControl.TabPages.Add(_BuilderControl_TabPage1(_UFTabControl));
+            this.TabControl0 = _UFTabControl;
+        }
+
+	        private IUFTabPage _BuilderControl_TabPage0(IUFTabControl container)
+        {
+            IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage0",true, true, "0","bea4aa14-2ecb-40c8-8e6a-aa5ee18eed40","bea4aa14-2ecb-40c8-8e6a-aa5ee18eed40");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 4, 1, 0, 5, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFTabPage,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(25,bool.Parse("False")),});
+            ///foreach UFTab下的所有控件，增加到此容器
+
+
+
+
+
+				this.lblLaserLabCode1531 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblLaserLabCode1531", "", "True", "True", "Left", 60, 25, 0, 0, 1, 1, "100","7ee1fcbc-2665-44d6-9297-321ce22c7992","80477b6f-a8b4-4c53-91cf-5e626819c9fe");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblLaserLabCode1531, "0");		
+
+
+				this.LaserLabCode1531 = UIControlBuilder.BuilderTextBox(_UFTabPage, "LaserLabCode1531", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 2, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblLaserLabCode1531","","50","7ee1fcbc-2665-44d6-9297-321ce22c7992","427b254e-8dfe-4f13-9cbe-43d80967105a");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.LaserLabCode1531, "False", "LaserLabCode", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldLaserLabCode, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.LaserLabCode1531, "1");		
+		 
+
+
+		
+
+            this.TabPage0 = _UFTabPage;
+            return _UFTabPage;
+        }
+
+	        private IUFTabPage _BuilderControl_TabPage1(IUFTabControl container)
+        {
+            IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage1",true, true, "0","e39bbe12-dbb4-4a45-8e68-3446dadcb163","e39bbe12-dbb4-4a45-8e68-3446dadcb163");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 8, 2, 0, 5, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _UFTabPage,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),});
+            ///foreach UFTab下的所有控件，增加到此容器
+
+
+
+
+
+				this.lblBatchNo2223 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblBatchNo2223", "", "True", "True", "Left", 60, 25, 0, 0, 1, 1, "100","e701dbd4-2f99-4f61-9551-3196e52a81c7","e26823f7-2a8e-4206-9c3b-02dec3e2b657");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblBatchNo2223, "0");		
+
+
+				this.BatchNo2223 = UIControlBuilder.BuilderTextBox(_UFTabPage, "BatchNo2223", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 2, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblBatchNo2223","","50","e701dbd4-2f99-4f61-9551-3196e52a81c7","2ce095b6-218d-4193-9da3-97e6248cdc06");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.BatchNo2223, "False", "BatchNo", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldBatchNo, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.BatchNo2223, "1");		
+		 
+
+				this.lblType1904 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblType1904", "", "True", "True", "Left", 60, 25, 4, 0, 1, 1, "100","6120c860-1760-4d74-867b-2541d6ce54ac","cfd66b49-8009-4922-839d-bf6b6ac267bc");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblType1904, "2");		
+
+
+				this.Type1904 = UIControlBuilder.BuilderTextBox(_UFTabPage, "Type1904", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 6, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblType1904","","50","6120c860-1760-4d74-867b-2541d6ce54ac","0787967f-09be-457e-8b17-451910d250fa");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Type1904, "False", "Type", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldType, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.Type1904, "3");		
+		 
+
+				this.lblFlowNumStart1208 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumStart1208", "", "True", "True", "Left", 60, 25, 0, 1, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","afe20fe0-8e15-44ca-85fa-001c221beaee");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblFlowNumStart1208, "4");		
+
+
+				this.FlowNumStart1208 = UIControlBuilder.BuilderTextBox(_UFTabPage, "FlowNumStart1208", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 2, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumStart1208","","50","e199c6c0-a2a1-4f03-916c-b707772fc7c8","3322ccab-57a4-4fd2-a4ed-214d9dcfc55e");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumStart1208, "False", "FlowNumStart", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumStart, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.FlowNumStart1208, "5");		
+		 
+
+				this.lblFlowNumEnd1337 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumEnd1337", "", "True", "True", "Left", 60, 25, 4, 1, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","d51cb569-0500-47c1-bd0a-17414ccff594");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblFlowNumEnd1337, "6");		
+
+
+				this.FlowNumEnd1337 = UIControlBuilder.BuilderTextBox(_UFTabPage, "FlowNumEnd1337", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 6, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumEnd1337","","50","7bebb355-dd80-4f99-8a5a-97dd061e38d3","c3ed2cc1-3c85-49e6-9637-c172c749f08a");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumEnd1337, "False", "FlowNumEnd", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumEnd, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.FlowNumEnd1337, "7");		
+		 
+
+
+								
+
+            this.TabPage1 = _UFTabPage;
+            return _UFTabPage;
+        }
+
 
 
 
