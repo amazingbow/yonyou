@@ -20,8 +20,8 @@
       <Row Fixed="False" Height="498" Name="Row2" />
       <Row Fixed="True" Height="1" Name="Row3" />
     </Rows>
-    <TabControl ID="3ce55761-8cd0-4424-9580-e5217475f10e" GridHeight="1" GridWidth="1" GridX="1" GridY="1" Height="498" Name="TabControl2" TabIndex="0" TabStop="True" Width="990" X="1" Y="1">
-      <TabPage ID="0865b139-18bc-4a1a-978a-78d7c247e1d0" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="单个报废" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="16" GridColumnSpace="0" GridLeftMargin="8" GridRightMargin="8" GridRowCount="15" GridRowSpace="10" GridTopMargin="10" Height="468" Name="TabPage0" TabStop="False" Width="982" X="0" Y="0">
+    <TabControl ID="3ce55761-8cd0-4424-9580-e5217475f10e" EventResponseType="Server" GridHeight="1" GridWidth="1" GridX="1" GridY="1" Height="498" Name="TabControl2" TabIndex="1" TabStop="True" Width="990" X="1" Y="1">
+      <TabPage ID="0865b139-18bc-4a1a-978a-78d7c247e1d0" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="单个报废" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="16" GridColumnSpace="0" GridLeftMargin="8" GridRightMargin="8" GridRowCount="15" GridRowSpace="10" GridTopMargin="10" Height="468" Name="TabPage0" TabIndex="1" TabStop="False" Width="982" X="0" Y="0">
         <Columns>
           <Column Fixed="False" Name="Column0" Type="Value" Width="1" />
           <Column Fixed="True" Name="Column1" Type="Value" Width="100" />
@@ -176,7 +176,7 @@
           </DatePicker>
         </Card>
       </TabPage>
-      <TabPage ID="dfd85e7a-e81d-4042-b44c-fc8c468c54bb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="批量报废" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="3" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="10" Height="468" Name="TabPage1" TabStop="False" Width="982" X="0" Y="0">
+      <TabPage ID="dfd85e7a-e81d-4042-b44c-fc8c468c54bb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="批量报废" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="3" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="10" Height="468" Name="TabPage1" TabIndex="2" TabStop="False" Width="982" X="0" Y="0">
         <Columns>
           <Column Fixed="False" Name="Column0" Type="Title" Width="1" />
           <Column Fixed="True" Name="Column1" Width="960" />
@@ -184,11 +184,11 @@
         </Columns>
         <Rows>
           <Row Fixed="True" Height="1" Name="Row0" />
-          <Row Fixed="False" Height="407" Name="Row1" />
-          <Row Fixed="True" Height="30" Name="Row2" />
+          <Row Fixed="False" Height="436" Name="Row1" />
+          <Row Fixed="True" Height="1" Name="Row2" />
         </Rows>
       </TabPage>
-      <TabPage ID="d005d408-2791-4664-a0da-ed5cea5f9e22" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="报废信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="3" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="10" Height="468" Name="TabPage2" TabStop="False" Width="982" X="0" Y="0">
+      <TabPage ID="d005d408-2791-4664-a0da-ed5cea5f9e22" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="报废信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="3" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="10" Height="468" Name="TabPage2" TabIndex="3" TabStop="False" Width="982" X="0" Y="0">
         <Columns>
           <Column Fixed="True" Name="Column0" Type="Title" Width="1" />
           <Column Fixed="False" Name="Column1" Width="960" />
@@ -246,7 +246,9 @@
           </Columns>
         </DataGrid>
       </TabPage>
-      <Events />
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="SelectedIndexChanged" Parameter="" Template="" />
+      </Events>
     </TabControl>
   </Card>
   <Events />
