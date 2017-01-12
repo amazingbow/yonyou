@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd);
+		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel);
     }
 	[Serializable]    
     public class SingleChangeBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy.ISingleChangeBP
@@ -49,6 +49,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 						private System.String type ;
 						private System.Int32 flowStart ;
 						private System.Int32 flowEnd ;
+						private System.Int32 changeModel ;
 			
 	#endregion	
 		
@@ -149,6 +150,25 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 				this.flowEnd = value;	
 			}
 		}		
+						
+
+		/// <summary>
+		/// 改变方式 (该属性可为空,但有默认值)
+		/// 单个转换BP.Misc.改变方式
+		/// </summary>
+		/// <value>System.Int32</value>
+		public System.Int32 ChangeModel
+		{
+			get	
+			{	
+				return this.changeModel;
+			}
+
+			set	
+			{	
+				this.changeModel = value;	
+			}
+		}		
 			
 	#endregion	
 
@@ -176,7 +196,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
             ISingleChangeBP channel = oChannel as ISingleChangeBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd);
+				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd, changeModel);
 	    }
             return  false;
         }
@@ -193,7 +213,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-																									
+																														
 		}
 		#endregion 
 

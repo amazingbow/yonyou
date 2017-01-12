@@ -106,10 +106,10 @@ namespace LaserLabDataProcessUIModel
         IUFFldTextBox BatchNo2223;
         IUFLabel lblType1904;
         IUFFldTextBox Type1904;
-        IUFLabel lblFlowNumStart1208;
-        IUFFldTextBox FlowNumStart1208;
-        IUFLabel lblFlowNumEnd1337;
-        IUFFldTextBox FlowNumEnd1337;
+        IUFLabel lblFlowNumStart1487;
+        IUFFldNumberControl FlowNumStart1487;
+        IUFLabel lblFlowNumEnd1705;
+        IUFFldNumberControl FlowNumEnd1705;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -390,10 +390,10 @@ namespace LaserLabDataProcessUIModel
 	        private IUFGroupBox _BuilderControl_GroupBox0(IUFContainer container)
         {
             IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox0",true, true, "0",TextAlign.Left,"","20a95ee0-c648-4286-83ca-47bac990cf92");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 14, 26, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach GroupBox下的所有控件，增加到此容器
 
 
@@ -410,10 +410,10 @@ namespace LaserLabDataProcessUIModel
 	        private IUFGroupBox _BuilderControl_GroupBox1(IUFContainer container)
         {
             IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox1",true, true, "0",TextAlign.Left,"","9b534dfa-c4e3-43ad-8e85-030a6d88355a");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 14, 26, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach GroupBox下的所有控件，增加到此容器
 
 
@@ -430,10 +430,10 @@ namespace LaserLabDataProcessUIModel
 	        private IUFGroupBox _BuilderControl_GroupBox2(IUFContainer container)
         {
             IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox2",true, true, "0",TextAlign.Left,"","cc9b4712-1e40-4126-897c-999943ea9911");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 14, 26, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach GroupBox下的所有控件，增加到此容器
 
 
@@ -450,10 +450,10 @@ namespace LaserLabDataProcessUIModel
 	        private IUFGroupBox _BuilderControl_GroupBox3(IUFContainer container)
         {
             IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox3",true, true, "0",TextAlign.Left,"","291c318c-c615-44c1-b095-0f14b2a54053");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 14, 26, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach GroupBox下的所有控件，增加到此容器
 
 
@@ -470,10 +470,10 @@ namespace LaserLabDataProcessUIModel
 	        private IUFGroupBox _BuilderControl_GroupBox4(IUFContainer container)
         {
             IUFGroupBox _UFGroupBox =UIControlBuilder.BuildGroupBox(container,"GroupBox4",true, true, "0",TextAlign.Left,"","05ce8b01-d08f-4e1c-b420-267f72ba07a1");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 160, 128, 0, 0, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 10, 10, 10, 10, 10);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGroupBox, 14, 26, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFGroupBox, 11, 4, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFGroupBox,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 10,new GridColumnDef[]{},new GridRowDef[]{});
+			UIControlBuilder.BuildContainerGridLayout(_UFGroupBox, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach GroupBox下的所有控件，增加到此容器
 
 
@@ -581,40 +581,38 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.Type1904, "3");		
 		 
 
-				this.lblFlowNumStart1208 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumStart1208", "", "True", "True", "Left", 60, 25, 0, 1, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","afe20fe0-8e15-44ca-85fa-001c221beaee");
+				this.lblFlowNumStart1487 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumStart1487", "", "True", "True", "Right", 60, 25, 0, 1, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","09fce17e-0338-446d-8295-184b00bdfb8b");
 
 
 								
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblFlowNumStart1208, "4");		
+			UIControlBuilder.BuilderUFControl(this.lblFlowNumStart1487, "4");		
 
 
-				this.FlowNumStart1208 = UIControlBuilder.BuilderTextBox(_UFTabPage, "FlowNumStart1208", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 2, 1, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumStart1208","","50","e199c6c0-a2a1-4f03-916c-b707772fc7c8","3322ccab-57a4-4fd2-a4ed-214d9dcfc55e");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumStart1208, "False", "FlowNumStart", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumStart, "LaserLabDataProcessView");
-
-
+				this.FlowNumStart1487 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "FlowNumStart1487", "True", "True", "True", "Left", 2, 60, 0, 120, 25, 2, 1, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+			,TextAlign.Right,0,true,false,true,"lblFlowNumStart1487","10.0","e199c6c0-a2a1-4f03-916c-b707772fc7c8","5e1ae247-307f-4c3f-afdc-35de9909858c",null,null,null, null);
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumStart1487, "False", "FlowNumStart", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumStart, "LaserLabDataProcessView");
+	
 		
-			UIControlBuilder.BuilderUFControl(this.FlowNumStart1208, "5");		
+			UIControlBuilder.BuilderUFControl(this.FlowNumStart1487, "5");		
 		 
 
-				this.lblFlowNumEnd1337 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumEnd1337", "", "True", "True", "Left", 60, 25, 4, 1, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","d51cb569-0500-47c1-bd0a-17414ccff594");
+				this.lblFlowNumEnd1705 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumEnd1705", "", "True", "True", "Right", 60, 25, 4, 1, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","7fcb51db-e73a-4cfe-879a-92094ad4b18e");
 
 
 								
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblFlowNumEnd1337, "6");		
+			UIControlBuilder.BuilderUFControl(this.lblFlowNumEnd1705, "6");		
 
 
-				this.FlowNumEnd1337 = UIControlBuilder.BuilderTextBox(_UFTabPage, "FlowNumEnd1337", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 25, 6, 1, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblFlowNumEnd1337","","50","7bebb355-dd80-4f99-8a5a-97dd061e38d3","c3ed2cc1-3c85-49e6-9637-c172c749f08a");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumEnd1337, "False", "FlowNumEnd", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumEnd, "LaserLabDataProcessView");
-
-
+				this.FlowNumEnd1705 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "FlowNumEnd1705", "True", "True", "True", "Left", 2, 60, 0, 120, 25, 6, 1, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+			,TextAlign.Right,0,true,false,true,"lblFlowNumEnd1705","10.0","7bebb355-dd80-4f99-8a5a-97dd061e38d3","2e57d4fc-00d8-42c0-840c-6730a9ad1415",null,null,null, null);
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.FlowNumEnd1705, "False", "FlowNumEnd", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldFlowNumEnd, "LaserLabDataProcessView");
+	
 		
-			UIControlBuilder.BuilderUFControl(this.FlowNumEnd1337, "7");		
+			UIControlBuilder.BuilderUFControl(this.FlowNumEnd1705, "7");		
 		 
 
 

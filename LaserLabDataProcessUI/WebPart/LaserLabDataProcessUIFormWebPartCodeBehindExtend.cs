@@ -120,17 +120,49 @@ namespace LaserLabDataProcessUIModel
         private void BtnCHForceChange_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            if (!ValidateFilled())
+            {
+                return;
+            }
             var batchNo = this.Model.LaserLabDataProcessView.FocusedRecord.BatchNo;
             var laserLab = this.Model.LaserLabDataProcessView.FocusedRecord.LaserLabCode;
             var type = this.Model.LaserLabDataProcessView.FocusedRecord.Type;
             var flowStart = this.Model.LaserLabDataProcessView.FocusedRecord.FlowNumStart;
             var flowEnd = this.Model.LaserLabDataProcessView.FocusedRecord.FlowNumEnd;
-            if (this.TabControl0.SelectedIndex == 0)
-            {
-
-            }
+            SingleChangeBPProxy proxy = new SingleChangeBPProxy();
+            proxy.BatchNo = batchNo;
+            proxy.LaserLab = laserLab;
+            proxy.Type = type;
+            proxy.FlowStart = flowStart ?? 0;
+            proxy.FlowEnd = flowEnd ?? 0;
+            proxy.ChangeModel = this.TabControl0.SelectedIndex;
+            proxy.Do();
 
             BtnCHForceChange_Click_DefaultImpl(sender, e);
+        }
+
+        private bool ValidateFilled()
+        {
+            if (this.TabControl0.SelectedIndex == 0)
+            {
+                if (string.IsNullOrEmpty(this.Model.LaserLabDataProcessView.FocusedRecord.BatchNo))
+                {
+                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('请填写镭射标号');", true);
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                var laserLab = this.Model.LaserLabDataProcessView.FocusedRecord.LaserLabCode;
+                var type = this.Model.LaserLabDataProcessView.FocusedRecord.Type;
+                if (string.IsNullOrEmpty(laserLab) && string.IsNullOrEmpty(type))
+                {
+                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('请填写批次号和型号');", true);
+                    return false;
+                }
+                return true;
+            }
         }
 
         #region 自定义数据初始化加载和数据收集

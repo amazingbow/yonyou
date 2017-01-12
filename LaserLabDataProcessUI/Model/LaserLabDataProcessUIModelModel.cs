@@ -165,8 +165,8 @@ namespace LaserLabDataProcessUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"LaserLabCode", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7ee1fcbc-2665-44d6-9297-321ce22c7992");
 			UIModelRuntimeFactory.AddNewUIField(this,"BatchNo", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e701dbd4-2f99-4f61-9551-3196e52a81c7");
 			UIModelRuntimeFactory.AddNewUIField(this,"Type", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6120c860-1760-4d74-867b-2541d6ce54ac");
-			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumStart", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e199c6c0-a2a1-4f03-916c-b707772fc7c8");
-			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumEnd", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7bebb355-dd80-4f99-8a5a-97dd061e38d3");
+			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumStart", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e199c6c0-a2a1-4f03-916c-b707772fc7c8");
+			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumEnd", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7bebb355-dd80-4f99-8a5a-97dd061e38d3");
 
 
 			this.CurrentFilter = new LaserLabDataProcessViewDefaultFilterFilter(this);
@@ -335,12 +335,12 @@ namespace LaserLabDataProcessUIModel
 		}
 		
 		
-		public  String FlowNumStart
+		public  Int32? FlowNumStart
 		{
 			get{
 				//object value = this[this.uiviewLaserLabDataProcessView.FieldFlowNumStart] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewLaserLabDataProcessView.FieldFlowNumStart);
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewLaserLabDataProcessView.FieldFlowNumStart);
 			}
 			set{
 				this[this.uiviewLaserLabDataProcessView.FieldFlowNumStart] = value;
@@ -348,12 +348,12 @@ namespace LaserLabDataProcessUIModel
 		}
 		
 		
-		public  String FlowNumEnd
+		public  Int32? FlowNumEnd
 		{
 			get{
 				//object value = this[this.uiviewLaserLabDataProcessView.FieldFlowNumEnd] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewLaserLabDataProcessView.FieldFlowNumEnd);
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewLaserLabDataProcessView.FieldFlowNumEnd);
 			}
 			set{
 				this[this.uiviewLaserLabDataProcessView.FieldFlowNumEnd] = value;

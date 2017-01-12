@@ -25,6 +25,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		private System.String type;
 		private System.Int32 flowStart;
 		private System.Int32 flowEnd;
+		private System.Int32 changeModel;
 		
 	    #endregion
 		
@@ -113,6 +114,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 			set
 			{
 				flowEnd = value;
+			}
+		}
+		/// <summary>
+		/// 改变方式	
+		/// 单个转换BP.Misc.改变方式
+		/// </summary>
+		/// <value></value>
+		public System.Int32 ChangeModel
+		{
+			get
+			{
+				return this.changeModel;
+			}
+			set
+			{
+				changeModel = value;
 			}
 		}
 	    #endregion
