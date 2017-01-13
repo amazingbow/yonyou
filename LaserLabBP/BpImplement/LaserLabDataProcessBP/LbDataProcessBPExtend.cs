@@ -139,12 +139,42 @@
 
         private int PackingProcess(string path)
         {
-            throw new NotImplementedException();
+            if (!File.Exists(path)) return 2;
+            StreamReader sr = new StreamReader(path, Encoding.Default);
+            String line;
+            using (ISession session = Session.Open())
+            {
+                while ((line = sr.ReadLine()) != null)
+                {
+                    line = line.Trim();
+                    LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
+                    if (lab == null) continue;
+                    lab.Cp = LBEnum.Packing;
+                    lab.ScarpDT = DateTime.Now;
+                }
+                session.Commit();
+            }
+            return 1;
         }
 
         private int GoldenOilProcess(string path)
         {
-            throw new NotImplementedException();
+            if (!File.Exists(path)) return 2;
+            StreamReader sr = new StreamReader(path, Encoding.Default);
+            String line;
+            using (ISession session = Session.Open())
+            {
+                while ((line = sr.ReadLine()) != null)
+                {
+                    line = line.Trim();
+                    LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
+                    if (lab == null) continue;
+                    lab.Cp = LBEnum.GoldOil;
+                    lab.ScarpDT = DateTime.Now;
+                }
+                session.Commit();
+            }
+            return 1;
         }
     }
 

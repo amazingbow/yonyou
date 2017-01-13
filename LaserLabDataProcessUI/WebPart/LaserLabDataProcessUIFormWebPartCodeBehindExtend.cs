@@ -103,7 +103,7 @@ namespace LaserLabDataProcessUIModel
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
-
+            ChangeType(1);
             BtnJYForceChange_Click_DefaultImpl(sender, e);
         }
 
@@ -112,7 +112,7 @@ namespace LaserLabDataProcessUIModel
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
-
+            ChangeType(2);
             BtnBZForceChange_Click_DefaultImpl(sender, e);
         }
 
@@ -120,6 +120,12 @@ namespace LaserLabDataProcessUIModel
         private void BtnCHForceChange_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            ChangeType(3);
+            BtnCHForceChange_Click_DefaultImpl(sender, e);
+        }
+
+        private void ChangeType(int changeCp)
+        {
             if (!ValidateFilled())
             {
                 return;
@@ -136,9 +142,15 @@ namespace LaserLabDataProcessUIModel
             proxy.FlowStart = flowStart ?? 0;
             proxy.FlowEnd = flowEnd ?? 0;
             proxy.ChangeModel = this.TabControl0.SelectedIndex;
-            proxy.Do();
-
-            BtnCHForceChange_Click_DefaultImpl(sender, e);
+            var result = proxy.Do();
+            if (result)
+            {
+                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('转换成功！');", true);
+            }
+            else
+            {
+                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('转换失败！请查询数据库确认是否有数据');", true);
+            }
         }
 
         private bool ValidateFilled()

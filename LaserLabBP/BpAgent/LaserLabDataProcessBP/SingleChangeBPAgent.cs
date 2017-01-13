@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel);
+		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp);
     }
 	[Serializable]    
     public class SingleChangeBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy.ISingleChangeBP
@@ -50,6 +50,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 						private System.Int32 flowStart ;
 						private System.Int32 flowEnd ;
 						private System.Int32 changeModel ;
+						private System.Int32 changeCp ;
 			
 	#endregion	
 		
@@ -169,6 +170,25 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 				this.changeModel = value;	
 			}
 		}		
+						
+
+		/// <summary>
+		/// 改变类型 (该属性可为空,但有默认值)
+		/// 单个转换BP.Misc.改变类型
+		/// </summary>
+		/// <value>System.Int32</value>
+		public System.Int32 ChangeCp
+		{
+			get	
+			{	
+				return this.changeCp;
+			}
+
+			set	
+			{	
+				this.changeCp = value;	
+			}
+		}		
 			
 	#endregion	
 
@@ -196,7 +216,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
             ISingleChangeBP channel = oChannel as ISingleChangeBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd, changeModel);
+				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd, changeModel, changeCp);
 	    }
             return  false;
         }
@@ -213,7 +233,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-																														
+																																			
 		}
 		#endregion 
 

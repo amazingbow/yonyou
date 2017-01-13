@@ -36,8 +36,23 @@
                 LaserLab lab = LaserLab.Finder.Find("LB='" + bpObj.LaserLab + "'");
                 if (lab != null)
                 {
-                    lab.Cp = LBEnum.Shipment;
-                    lab.ShipDT = DateTime.Now;
+                    switch (bpObj.ChangeCp)
+                    {
+                        case 1:
+                            lab.Cp = LBEnum.GoldOil;
+                            lab.GoldOilDT = DateTime.Now;
+                            break;
+                        case 2:
+                            lab.Cp = LBEnum.Packing;
+                            lab.PackDT = DateTime.Now;
+                            break;
+                        case 3:
+                            lab.Cp = LBEnum.Shipment;
+                            lab.ShipDT = DateTime.Now;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             else
@@ -54,14 +69,44 @@
                                 var labCode = int.Parse(item.LB.Substring(1));
                                 if (bpObj.FlowStart <= labCode && bpObj.FlowEnd >= labCode)
                                 {
-                                    item.Cp = LBEnum.Shipment;
-                                    item.ShipDT = DateTime.Now;
+                                    switch (bpObj.ChangeCp)
+                                    {
+                                        case 1:
+                                            item.Cp = LBEnum.GoldOil;
+                                            item.GoldOilDT = DateTime.Now;
+                                            break;
+                                        case 2:
+                                            item.Cp = LBEnum.Packing;
+                                            item.PackDT = DateTime.Now;
+                                            break;
+                                        case 3:
+                                            item.Cp = LBEnum.Shipment;
+                                            item.ShipDT = DateTime.Now;
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                 }
                             }
                             else
                             {
-                                item.Cp = LBEnum.Shipment;
-                                item.ShipDT = DateTime.Now;
+                                switch (bpObj.ChangeCp)
+                                {
+                                    case 1:
+                                        item.Cp = LBEnum.GoldOil;
+                                        item.GoldOilDT = DateTime.Now;
+                                        break;
+                                    case 2:
+                                        item.Cp = LBEnum.Packing;
+                                        item.PackDT = DateTime.Now;
+                                        break;
+                                    case 3:
+                                        item.Cp = LBEnum.Shipment;
+                                        item.ShipDT = DateTime.Now;
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                         }
                     }
