@@ -43,10 +43,10 @@ using System.Collections.Specialized;
  * Form Name:LaserLabBNChangeUIFrom
  * UIFactory Auto Generator
  ***********************************************************************************************/
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI","UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart", "UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.WebPart", "841b7324-cdff-4913-8d16-a4ef94771d4e","WebPart", "True", 992, 504)] 
-	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI', 'UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart', 'UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.WebPart', '841b7324-cdff-4913-8d16-a4ef94771d4e')
+	[FormRegister("UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI","UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart", "UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.WebPart", "841b7324-cdff-4913-8d16-a4ef94771d4e","WebPart", "True", 992, 504)] 
+	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI', 'UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel.LaserLabBNChangeUIFromWebPart', 'UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.WebPart', '841b7324-cdff-4913-8d16-a4ef94771d4e')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=841b7324-cdff-4913-8d16-a4ef94771d4e" title="LaserLabBNChangeUIFrom"/>
     public partial class LaserLabBNChangeUIFromWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
     {
@@ -448,7 +448,7 @@ namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
        
         private void _BuilderControl_DataGrid1(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,true,false,true,true,20,true, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "15");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 620, 310, 7, 3, 11, 9, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.BatchLaserLabBNChangeView, "BatchLaserLabBNChangeView", "", null, 20, "批次号批量修改");

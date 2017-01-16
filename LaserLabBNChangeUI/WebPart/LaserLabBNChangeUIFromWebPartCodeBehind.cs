@@ -29,7 +29,7 @@ using System.Collections.Generic;
  * Form ID: 
  * UIFactory Auto Generator
  ***********************************************************************************************/
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
     public partial class LaserLabBNChangeUIFromWebPart
     {

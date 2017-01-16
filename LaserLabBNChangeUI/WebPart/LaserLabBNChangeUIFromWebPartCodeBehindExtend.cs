@@ -32,7 +32,7 @@ using System.Collections.Generic;
  * Form ID: 
  * UIFactory Auto Generator 
  ***********************************************************************************************/
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
     public partial class LaserLabBNChangeUIFromWebPart
     {
@@ -70,11 +70,13 @@ namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 		private void AllBtnExecute_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            if (string.IsNullOrEmpty(this.TextBox5.Text) && (string.IsNullOrEmpty(this.TextBox4.Text))) return;
             if (string.IsNullOrEmpty(this.TextBox6.Text))
             {
                 throw new Exception("批量修改批次号不能为空，请输入修改的批次号！");
             }
             IUIRecordCollection selectRecordCollection = this.Model.BatchLaserLabBNChangeView.SelectRecords;
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.           
             if (selectRecordCollection.Count < 1) return;
             StringBuilder strbulder = new StringBuilder();
             StringBuilder strLB = new StringBuilder();
@@ -93,7 +95,8 @@ namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
             if (true)
             {
                 UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('选中LB" + strLBend + "批号修改为" + strend + "');", true);
-            }		
+            }
+            this.Action.NavigateAction.Refresh(this.DataGrid1, false);
 			AllBtnExecute_Click_DefaultImpl(sender,e);
 		}
 
@@ -114,7 +117,7 @@ namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
         #region 自己扩展 Extended Event handler 
 		public void AfterOnLoad()
 		{
-            this.Model.ClearErrorMessage();	
+            this.Model.ClearErrorMessage();
 
 		}
 

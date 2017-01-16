@@ -756,7 +756,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
        
         private void _BuilderControl_DataGrid9(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid9", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, true,true,true,true,true,20,true, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid9", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "18");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 255, 285, 11, 5, 6, 10, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.AllLaserLabAddView, "AllLaserLabAddView", "", null, 20, "编码录入-批量录入模型");
