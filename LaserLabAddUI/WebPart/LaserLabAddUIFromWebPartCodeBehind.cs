@@ -24,7 +24,6 @@ using UFSoft.UBF.UI.ControlModel;
 using UFSoft.UBF.UI.Engine.Builder;
 using UFSoft.UBF.UI;
 using System.Collections.Generic;
-using UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy;
 
 /***********************************************************************************************
  * Form ID: 
@@ -62,7 +61,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-        
+
 		
 			
         }
@@ -93,7 +92,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-            
+
 		
 			
         }
@@ -124,7 +123,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-          
 
 		
 			
@@ -156,7 +154,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-           
+
 		
 			
         }
@@ -187,7 +185,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-         
 
 		
 			
@@ -219,7 +216,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-            
 
 		
 			
@@ -251,7 +247,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-          
+
 		
 			
         }
@@ -282,7 +278,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//通用事件模版定义的相应操作内容.	
 
 			//throw new NotImplementedException() ;
-          
+
 		
 			
         }

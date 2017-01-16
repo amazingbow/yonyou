@@ -12,7 +12,7 @@ using UFSoft.UBF.UI.Engine;
 using UFSoft.UBF.UI.Engine.Builder ;
 #endregion
 
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
 
 
