@@ -23,6 +23,7 @@ using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy;
+using System.Collections.Generic;
 
 
 
@@ -56,16 +57,18 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
             {
                 throw new Exception("型号不能为空！");
             }
+            List<string> LB = new List<string>();
+            LB.Add(this.Model.SoloLaserLabAddView.FocusedRecord.LB);
             LaserLabAddBPProxy proxy = new LaserLabAddBPProxy();
             proxy.BN = this.Model.SoloLaserLabAddView.FocusedRecord.BN;
-            proxy.LB = this.Model.SoloLaserLabAddView.FocusedRecord.LB;
+            proxy.LBList = LB;
             proxy.Customer = this.Model.SoloLaserLabAddView.FocusedRecord.Customer;
             proxy.MasterDT = this.Model.SoloLaserLabAddView.FocusedRecord.CreatedOn;
             proxy.Type = this.Model.SoloLaserLabAddView.FocusedRecord.Type;
             str = proxy.Do();
             if (!string.IsNullOrEmpty(str.ToString()))
             {
-                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('批次号：" + str + "，数据已保存！');", true);
+                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('"+str+"');", true);
             }
             BtnSave_Click_DefaultImpl(sender, e);
 		}	
@@ -139,26 +142,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             if (this.Model.AllLaserLabAddView.Records.Count < 1) return;
             IUIRecordCollection Record = this.Model.AllLaserLabAddView.Records;
-            StringBuilder str = new StringBuilder();
+            List<string> Lb = new List<string>();
+            if (this.Model.AllLaserLabAddView.FocusedRecord == null) return;
+            LaserLabAddBPProxy proxy = new LaserLabAddBPProxy();
+            proxy.BN = this.TextBox1.Text;
+            proxy.Type = this.TextBox2.Text;
+            proxy.Customer = this.TextBox3.Text;
             foreach (var Rec in Record)
-            {
-
-                if (this.Model.AllLaserLabAddView.FocusedRecord == null) return;
-                LaserLabAddBPProxy proxy = new LaserLabAddBPProxy();
-                proxy.BN = Rec["BN"].ToString();
-                proxy.LB = Rec["LB"].ToString();
-                proxy.Customer = Rec["Customer"].ToString();
-                proxy.MasterDT = DateTime.Parse(Rec["CreatedOn"].ToString());
-                proxy.Type = Rec["Type"].ToString();
-                var stri = proxy.Do();
-                str.Append(stri);
-
-
-
+            { 
+                Lb.Add(Rec["LB"].ToString());
             }
+            proxy.LBList = Lb;
+            proxy.MasterDT = System.DateTime.Now;
+            var str =proxy.Do();
             if (!string.IsNullOrEmpty(str.ToString()))
             {
-                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('批次号：" + str + "，数据已保存！');", true);
+                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('"+str+"');", true);
             }
             
 			BtnAllSave_Click_DefaultImpl(sender,e);
@@ -239,13 +238,13 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
             if (string.IsNullOrEmpty(this.NumberControl2.Text)) return;
             //截止号
             if (string.IsNullOrEmpty(this.NumberControl3.Text)) return;
-            if (int.Parse(this.NumberControl1.Text) <= this.TextBox5.Text.Length)
+            if (decimal.Parse(this.NumberControl1.Text) <= this.TextBox5.Text.Length)
                 throw new Exception("镭射标长度必须大于开始字母长度");
             var lenth = int.Parse(this.NumberControl1.Text);
-            var star = int.Parse(this.NumberControl2.Text);
-            var end = int.Parse(this.NumberControl3.Text);
+            var star = decimal.Parse(this.NumberControl2.Text);
+            var end = decimal.Parse(this.NumberControl3.Text);
             #region 批量生成镭射标
-            for (int i = star; i <= end; i++)
+            for (var i = star; i <= end; i++)
             {
                 var Grouprecord = this.Model.AllLaserLabCreateView.AddNewUIRecord();
                 StringBuilder LB = new StringBuilder();

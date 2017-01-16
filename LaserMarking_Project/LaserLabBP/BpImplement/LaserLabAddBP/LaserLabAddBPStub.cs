@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        System.String Do(IContext context ,out IList<MessageBase> outMessages ,System.String bN, System.String lB, System.String type, System.DateTime masterDT, System.String customer);
+        System.String Do(IContext context ,out IList<MessageBase> outMessages ,List<System.String> lBList, System.String bN, System.String type, System.String customer, System.DateTime masterDT);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,15 +46,15 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
         #region ILaserLabAddBP Members
 
         //[OperationBehavior]
-        public System.String Do(IContext context ,out IList<MessageBase> outMessages, System.String bN, System.String lB, System.String type, System.DateTime masterDT, System.String customer)
+        public System.String Do(IContext context ,out IList<MessageBase> outMessages, List<System.String> lBList, System.String bN, System.String type, System.String customer, System.DateTime masterDT)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, bN, lB, type, masterDT, customer);
+			return DoEx(commonData, lBList, bN, type, customer, masterDT);
         }
         
         //[OperationBehavior]
-        public System.String DoEx(ICommonDataContract commonData, System.String bN, System.String lB, System.String type, System.DateTime masterDT, System.String customer)
+        public System.String DoEx(ICommonDataContract commonData, List<System.String> lBList, System.String bN, System.String type, System.String customer, System.DateTime masterDT)
         {
 			this.CommonData = commonData ;
             try
@@ -62,11 +62,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
                 BeforeInvoke("UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.LaserLabAddBP");                
                 LaserLabAddBP objectRef = new LaserLabAddBP();
 					
+				objectRef.LBList = lBList;
 				objectRef.BN = bN;
-				objectRef.LB = lB;
 				objectRef.Type = type;
-				objectRef.MasterDT = masterDT;
 				objectRef.Customer = customer;
+				objectRef.MasterDT = masterDT;
 
 				//处理返回类型.
 				System.String result = objectRef.Do();
