@@ -7,6 +7,7 @@
     using UFSoft.UBF.Util.Context;
     using UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab;
     using UFSoft.UBF.Business;
+    using System.Text.RegularExpressions;
 
     /// <summary>
     /// SingleChangeBP partial 
@@ -66,7 +67,8 @@
                         {
                             if (bpObj.FlowStart > 0)
                             {
-                                var labCode = int.Parse(item.LB.Substring(1));
+                                Match m = Regex.Match(item.LB, @"\d+");
+                                int labCode = m.Success ? int.Parse(m.Value) : 0;
                                 if (bpObj.FlowStart <= labCode && bpObj.FlowEnd >= labCode)
                                 {
                                     switch (bpObj.ChangeCp)

@@ -82,6 +82,7 @@
                 }
                 session.Commit();
             }
+            ModifyFileName(path, LBEnum.Scrap);
             return 1;
         }
 
@@ -130,13 +131,13 @@
             }
             sw.Close();
             sr.Close();
+            ModifyFileName(path, LBEnum.Shipment);
             if (!flag)//如果没有错误的就删掉
             {
                 File.Delete(errFileName);
             }
             return flag ? 0 : 1;
         }
-
         private int PackingProcess(string path)
         {
             if (!File.Exists(path)) return 2;
@@ -154,9 +155,9 @@
                 }
                 session.Commit();
             }
+            ModifyFileName(path, LBEnum.Packing);
             return 1;
         }
-
         private int GoldenOilProcess(string path)
         {
             if (!File.Exists(path)) return 2;
@@ -174,7 +175,50 @@
                 }
                 session.Commit();
             }
+            ModifyFileName(path, LBEnum.GoldOil);
             return 1;
+        }
+        private void ModifyFileName(string path, LBEnum lBEnum)
+        {
+            var directory = DateTime.Now.ToString("yyyyMM");
+            var fileName = DateTime.Now.ToString("yyyyMMddHHmm") + ".txt";
+            switch (lBEnum.Value)
+            {
+                case 1:
+                        var jyDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/金油/" + directory;
+                        if (!Directory.Exists(jyDirectory))
+                    {
+                        Directory.CreateDirectory(jyDirectory);
+                    }
+                        File.Move(path, jyDirectory + "/" + fileName);
+                    break;
+                case 2:
+                        var bzDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/包装/" + directory;
+                        if (!Directory.Exists(bzDirectory))
+                    {
+                        Directory.CreateDirectory(bzDirectory);
+                    }
+                        File.Move(path, bzDirectory + "/" + fileName);
+                    break;
+                case 3:
+                    var chDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/出货/" + directory;
+                    if (!Directory.Exists(chDirectory))
+                    {
+                        Directory.CreateDirectory(chDirectory);
+                    }
+                    File.Move(path, chDirectory + "/" + fileName);
+                    break;
+                case 4:
+                       var bfDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/报废/" + directory;
+                       if (!Directory.Exists(bfDirectory))
+                    {
+                        Directory.CreateDirectory(bfDirectory);
+                    }
+                       File.Move(path, bfDirectory + "/" + fileName);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
