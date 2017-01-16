@@ -44,7 +44,18 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
             this.Model.SoloLaserLabAddView.ClearErrorMessage();		
 			
             var str = "";
-            if (this.Model.SoloLaserLabAddView.FocusedRecord == null) return;
+            if (string.IsNullOrEmpty(this.Model.SoloLaserLabAddView.FocusedRecord.BN))
+            {
+                throw new Exception("批次号不能为空！"); 
+            }
+            if (string.IsNullOrEmpty(this.Model.SoloLaserLabAddView.FocusedRecord.LB))
+            {
+                throw new Exception("LB编码不能为空！"); 
+            }
+            if (string.IsNullOrEmpty(this.Model.SoloLaserLabAddView.FocusedRecord.Type))
+            {
+                throw new Exception("型号不能为空！");
+            }
             LaserLabAddBPProxy proxy = new LaserLabAddBPProxy();
             proxy.BN = this.Model.SoloLaserLabAddView.FocusedRecord.BN;
             proxy.LB = this.Model.SoloLaserLabAddView.FocusedRecord.LB;
@@ -134,11 +145,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 
                 if (this.Model.AllLaserLabAddView.FocusedRecord == null) return;
                 LaserLabAddBPProxy proxy = new LaserLabAddBPProxy();
-                proxy.BN = this.Model.AllLaserLabAddView.FocusedRecord.BN;
-                proxy.LB = this.Model.AllLaserLabAddView.FocusedRecord.LB;
-                proxy.Customer = this.Model.AllLaserLabAddView.FocusedRecord.Customer;
-                proxy.MasterDT = this.Model.AllLaserLabAddView.FocusedRecord.CreatedOn;
-                proxy.Type = this.Model.AllLaserLabAddView.FocusedRecord.Type;
+                proxy.BN = Rec["BN"].ToString();
+                proxy.LB = Rec["LB"].ToString();
+                proxy.Customer = Rec["Customer"].ToString();
+                proxy.MasterDT = DateTime.Parse(Rec["CreatedOn"].ToString());
+                proxy.Type = Rec["Type"].ToString();
                 var stri = proxy.Do();
                 str.Append(stri);
 
@@ -158,7 +169,14 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
-            Clear();
+            this.TextBox1.Text = null;
+            this.TextBox2.Text = null;
+            this.TextBox3.Text = null;
+            this.TextBox5.Text = null;
+            this.NumberControl2.Text = null;
+            this.NumberControl1.Text = null;
+            this.NumberControl3.Text = null;
+            this.Model.AllLaserLabAddView.Clear();
 			BtnAllClear_Click_DefaultImpl(sender,e);
 		}	
 		 
