@@ -20,11 +20,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 	public partial class LaserLabAddBP
 	{
 	    #region Fields
+		private List<System.String> lBList;
 		private System.String bN;
-		private System.String lB;
 		private System.String type;
-		private System.DateTime masterDT;
 		private System.String customer;
+		private System.DateTime masterDT;
 		
 	    #endregion
 		
@@ -35,6 +35,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 	    #endregion
 
 	    #region member		
+		/// <summary>
+		/// LB集合	
+		/// 镭射标添加.Misc.LB集合
+		/// </summary>
+		/// <value></value>
+		public List<System.String> LBList
+		{
+			get
+			{
+				return this.lBList;
+			}
+			set
+			{
+				lBList = value;
+			}
+		}
 		/// <summary>
 		/// 批次号	
 		/// 镭射标添加.Misc.批次号
@@ -49,22 +65,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 			set
 			{
 				bN = value;
-			}
-		}
-		/// <summary>
-		/// 镭射标	
-		/// 镭射标添加.Misc.镭射标
-		/// </summary>
-		/// <value></value>
-		public System.String LB
-		{
-			get
-			{
-				return this.lB;
-			}
-			set
-			{
-				lB = value;
 			}
 		}
 		/// <summary>
@@ -84,22 +84,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 			}
 		}
 		/// <summary>
-		/// 物料时间	
-		/// 镭射标添加.Misc.物料时间
-		/// </summary>
-		/// <value></value>
-		public System.DateTime MasterDT
-		{
-			get
-			{
-				return this.masterDT;
-			}
-			set
-			{
-				masterDT = value;
-			}
-		}
-		/// <summary>
 		/// 客户	
 		/// 镭射标添加.Misc.客户
 		/// </summary>
@@ -113,6 +97,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP
 			set
 			{
 				customer = value;
+			}
+		}
+		/// <summary>
+		/// 物料时间	
+		/// 镭射标添加.Misc.物料时间
+		/// </summary>
+		/// <value></value>
+		public System.DateTime MasterDT
+		{
+			get
+			{
+				return this.masterDT;
+			}
+			set
+			{
+				masterDT = value;
 			}
 		}
 	    #endregion
