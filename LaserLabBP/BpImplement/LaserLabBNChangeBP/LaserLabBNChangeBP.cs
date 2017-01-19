@@ -20,7 +20,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
 	public partial class LaserLabBNChangeBP
 	{
 	    #region Fields
-		private System.String lB;
+		private List<System.String> lB;
 		private System.String bN;
 		private System.String amendBN;
 		
@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
 		/// LB批号修改.Misc.镭射标
 		/// </summary>
 		/// <value></value>
-		public System.String LB
+		public List<System.String> LB
 		{
 			get
 			{

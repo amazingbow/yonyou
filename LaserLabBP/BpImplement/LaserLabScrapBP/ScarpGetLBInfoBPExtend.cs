@@ -1,10 +1,12 @@
 ﻿namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabScrapBP
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Text; 
-	using UFSoft.UBF.AopFrame;	
-	using UFSoft.UBF.Util.Context;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab;
+    using UFSoft.UBF.AopFrame;
+    using UFSoft.UBF.PL;
+    using UFSoft.UBF.Util.Context;
 
 	/// <summary>
 	/// ScarpGetLBInfoBP partial 
@@ -29,13 +31,18 @@
 		public override object Do(object obj)
 		{						
 			ScarpGetLBInfoBP bpObj = (ScarpGetLBInfoBP)obj;
-			
-			//get business operation context is as follows
-			//IContext context = ContextManager.Context	
-			
-			//auto generating code end,underside is user custom code
-			//and if you Implement replace this Exception Code...
-			throw new NotImplementedException();
+            GetScrapLBInfoDto labBNInfo = new GetScrapLBInfoDto();
+            LaserLab laserLab = LaserLab.Finder.Find("LB=@LB",new OqlParam[]{new OqlParam(bpObj.LB)});
+            if (laserLab!= null)
+            {                   
+                    labBNInfo.BN = laserLab.BN;
+                    labBNInfo.Type = laserLab.Type;
+                    labBNInfo.CP = laserLab.Cp.Name;
+                    labBNInfo.Date = DateTime.Parse(laserLab.CreatedOn.Date.ToString("yyyy-MM-dd"));
+                    labBNInfo.Time = DateTime.Parse(laserLab.CreatedOn.ToString());
+                    labBNInfo.LB = laserLab.LB;
+            }
+            return labBNInfo;
 		}		
 	}
 

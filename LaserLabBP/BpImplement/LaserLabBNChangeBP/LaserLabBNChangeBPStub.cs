@@ -23,7 +23,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
     public interface ILaserLabBNChangeBP
     {
 	[OperationContract()]
-        System.String Do(UFSoft.UBF.Service.ISVContext context ,System.String lB, System.String bN, System.String amendBN);
+        System.String Do(UFSoft.UBF.Service.ISVContext context ,List<System.String> lB, System.String bN, System.String amendBN);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
         #region ILaserLabBNChangeBP Members
 
         //[OperationBehavior]
-        public System.String Do(UFSoft.UBF.Service.ISVContext context , System.String lB, System.String bN, System.String amendBN)
+        public System.String Do(UFSoft.UBF.Service.ISVContext context , List<System.String> lB, System.String bN, System.String amendBN)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context);
@@ -41,7 +41,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP
         }
         
         //[OperationBehavior]
-        public System.String DoEx(ICommonDataContract commonData, System.String lB, System.String bN, System.String amendBN)
+        public System.String DoEx(ICommonDataContract commonData, List<System.String> lB, System.String bN, System.String amendBN)
         {
 			this.CommonData = commonData ;
             try

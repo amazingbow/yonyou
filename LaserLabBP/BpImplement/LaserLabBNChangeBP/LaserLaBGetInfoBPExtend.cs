@@ -51,7 +51,7 @@
                     LabBNInfoDTO labBNInfo = new LabBNInfoDTO();
                     labBNInfo.BN = laserLab.BN;
                     labBNInfo.LB = laserLab.LB;
-                    labBNInfo.CP = laserLab.Cp.Name;
+                    labBNInfo.CP = laserLab.Cp.Res_Name;
                     labBNInfo.MasterDT = laserLab.MasterDT;
                     labBNInfoDto.Add(labBNInfo);
                 }

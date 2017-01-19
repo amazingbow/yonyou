@@ -33,23 +33,36 @@
         {
             LaserLabBNChangeBP bpObj = (LaserLabBNChangeBP)obj;
             var str = "";
-            LaserLab LaserLab = LaserLab.Finder.Find("LB=@LB and BN=@BN", new OqlParam[2] { new OqlParam(bpObj.LB), new OqlParam(bpObj.BN) });
-            if (LaserLab != null)
+            int ChangeCount = 0;
+            using (ISession session = Session.Open())
             {
-                if (LaserLab.ID != 0L)
+                foreach (var LaserLB in bpObj.LB)
                 {
-                    using (ISession session = Session.Open())
+                    ChangeCount += 1;
+                    StringBuilder SqlBulder = new StringBuilder();
+                    SqlBulder.Append("1=1");                  
+                    SqlBulder.Append("and LB='" + LaserLB + "'");
+                    if (!string.IsNullOrEmpty(bpObj.BN))
                     {
-                        LaserLab.BN = bpObj.AmendBN;
-                        session.Commit();
+                        SqlBulder.Append("and BN='" + bpObj.BN + "'");
+                    } 
+                    LaserLab LaserLab = LaserLab.Finder.Find(SqlBulder.ToString(), null);
+                    if (LaserLab != null)
+                    {
+                        if (LaserLab.ID != 0L)
+                        {
+                            LaserLab.BN = bpObj.AmendBN;
+                        }
                     }
-                    str = LaserLab.BN;
                 }
+                session.Commit();            
             }
-            else
-            {
-                str = "Flase";                
-            }
+
+                if (ChangeCount != 0)
+                {
+                    str = "已成功修改" + ChangeCount + "条批次号";
+                }
+
 
             return str;
         }
