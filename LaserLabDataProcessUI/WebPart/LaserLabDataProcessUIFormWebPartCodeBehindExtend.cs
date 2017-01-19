@@ -85,15 +85,19 @@ namespace LaserLabDataProcessUIModel
             string resultMsg = string.Empty;
             if (result == 0)
             {
-                resultMsg = "部分数据转换失败，请查看LaserLabProcessError文件夹下错误文件，然后手动处理";
+                resultMsg = "数据转换失败，请查看LaserLabProcessError文件夹下以Error结尾的文件，然后手动处理";
             }
             else if (result == 1)
             {
                 resultMsg = "数据转换全部成功！";
             }
-            else
+            else if (result == 2)
             {
                 resultMsg = "文件不存在！";
+            }
+            else
+            {
+                resultMsg = "有非法数据出现，请查看LaserLabProcessError文件夹下以Fatal结尾的文件";
             }
             UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('" + resultMsg + "');", true);
             BtnChange_Click_DefaultImpl(sender, e);

@@ -77,6 +77,7 @@
                     line = line.Trim();
                     LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
                     if (lab == null) continue;
+                    if (lab.Cp == LBEnum.Shipment) continue;
                     lab.Cp = LBEnum.Scrap;
                     lab.ScarpDT = DateTime.Now;
                 }
@@ -91,7 +92,9 @@
         {
             if (!File.Exists(path)) return 2;
             StreamReader sr = new StreamReader(path, Encoding.Default);
-            string errFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + ".txt";
+            string errFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "Error.txt";
+            string fatalFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "Fatal.txt";
+            int count = 0;
             String line;
             bool flag = false;
             if (File.Exists(errFileName) == false)//如果不存在就创建file文件夹
@@ -99,17 +102,23 @@
                 FileStream fileStream = File.Create(errFileName);//创建该文件
                 fileStream.Close();
             }
+            if (File.Exists(fatalFileName) == false)//如果不存在就创建file文件夹
+            {
+                FileStream fileStream = File.Create(fatalFileName);//创建该文件
+                fileStream.Close();
+            }
             StreamWriter sw = new StreamWriter(errFileName);
+            StreamWriter swFatal = new StreamWriter(fatalFileName);
             using (ISession session = Session.Open())
             {
                 while ((line = sr.ReadLine()) != null)
                 {
                     line = line.Trim();
-                    var strList = line.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
+                    var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                     if (strList.Length > 1)
                     {
                         string batch = strList[0].Trim();
-                        string tempstr =  strList[1].Trim();
+                        string tempstr = strList[1].Trim();
 
                         string tempTime = tempstr.Substring(tempstr.Length - 15).Trim();
                         string time = tempTime.Substring(0, 8);
@@ -122,11 +131,17 @@
                         }
                         else
                         {
+                            if (lab.Cp == LBEnum.Scrap) continue;
                             lab.ScanDate = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
                             lab.Cp = LBEnum.Shipment;
                             lab.ShipBN = batch;
                             lab.ShipDT = DateTime.Now;
                         }
+                    }
+                    else
+                    {
+                        count++;
+                        swFatal.WriteLine(line, Encoding.Default);
                     }
                 }
                 session.Commit();
@@ -137,6 +152,14 @@
             if (!flag)//如果没有错误的就删掉
             {
                 File.Delete(errFileName);
+            }
+            if (count == 0)
+            {
+                File.Delete(fatalFileName);
+            }
+            else
+            {
+                return 3;
             }
             return flag ? 0 : 1;
         }
@@ -152,6 +175,7 @@
                     line = line.Trim();
                     LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
                     if (lab == null) continue;
+                    if (lab.Cp == LBEnum.Scrap || lab.Cp == LBEnum.Shipment) continue;
                     lab.Cp = LBEnum.Packing;
                     lab.ScarpDT = DateTime.Now;
                 }
@@ -173,6 +197,7 @@
                     line = line.Trim();
                     LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
                     if (lab == null) continue;
+                    if (lab.Cp == LBEnum.Scrap || lab.Cp == LBEnum.Shipment) continue;
                     lab.Cp = LBEnum.GoldOil;
                     lab.ScarpDT = DateTime.Now;
                 }

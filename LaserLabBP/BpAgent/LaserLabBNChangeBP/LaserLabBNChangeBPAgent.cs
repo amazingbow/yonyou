@@ -25,13 +25,13 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.Proxy
     public interface ILaserLabBNChangeBP
     {
 		[OperationContract()]
-		System.String Do(UFSoft.UBF.Service.ISVContext context ,System.String lB, System.String bN, System.String amendBN);
+		System.String Do(UFSoft.UBF.Service.ISVContext context ,List<System.String> lB, System.String bN, System.String amendBN);
     }
 	[Serializable]    
     public class LaserLabBNChangeBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.Proxy.ILaserLabBNChangeBP
     {
 	#region Fields	
-				private System.String lB ;
+				private List<System.String> lB ;
 						private System.String bN ;
 						private System.String amendBN ;
 			
@@ -45,8 +45,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabBNChangeBP.Proxy
 		/// 镭射标 (该属性可为空,且无默认值)
 		/// LB批号修改.Misc.镭射标
 		/// </summary>
-		/// <value>System.String</value>
-		public System.String LB
+		/// <value></value>
+		public List<System.String> LB
 		{
 			get	
 			{	
