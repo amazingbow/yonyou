@@ -32,6 +32,8 @@
         public override object Do(object obj)
         {
             LaserLabAddBP bpObj = (LaserLabAddBP)obj;
+            int Right = 0;
+            int Error = 0;
             var str = "";
             using (ISession session = Session.Open())
             {
@@ -45,21 +47,20 @@
                         Laser.LB = LB;
                         Laser.MasterDT = bpObj.MasterDT;
                         Laser.Type = bpObj.Type;
+                        Laser.Customer = bpObj.Customer;
                         Laser.Cp = LBEnum.Master;
+                        Right += 1;
 
                     }
                     else
                     {
-                        str = "LB编号：" + LB + "在数据库中已存在！";
+                        Error += 1;
                     }
-
+                    
                 }
                 session.Commit();
             }
-            if (str == "")
-            {
-                str = "保存成功！";
-            }
+            str = +Right + "条数据，保存成功。" + Error + "条数据保存失败。";
             return str;
         }
     }
