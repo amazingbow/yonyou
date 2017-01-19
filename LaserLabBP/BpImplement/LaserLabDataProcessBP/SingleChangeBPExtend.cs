@@ -32,33 +32,33 @@
         public override object Do(object obj)
         {
             SingleChangeBP bpObj = (SingleChangeBP)obj;
-            if (bpObj.ChangeModel == 0)
+            using (ISession session = Session.Open())
             {
-                LaserLab lab = LaserLab.Finder.Find("LB='" + bpObj.LaserLab + "'");
-                if (lab != null)
+                if (bpObj.ChangeModel == 0)
                 {
-                    switch (bpObj.ChangeCp)
+                    LaserLab lab = LaserLab.Finder.Find("LB='" + bpObj.LaserLab + "'");
+                    if (lab != null)
                     {
-                        case 1:
-                            lab.Cp = LBEnum.GoldOil;
-                            lab.GoldOilDT = DateTime.Now;
-                            break;
-                        case 2:
-                            lab.Cp = LBEnum.Packing;
-                            lab.PackDT = DateTime.Now;
-                            break;
-                        case 3:
-                            lab.Cp = LBEnum.Shipment;
-                            lab.ShipDT = DateTime.Now;
-                            break;
-                        default:
-                            break;
+                        switch (bpObj.ChangeCp)
+                        {
+                            case 1:
+                                lab.Cp = LBEnum.GoldOil;
+                                lab.GoldOilDT = DateTime.Now;
+                                break;
+                            case 2:
+                                lab.Cp = LBEnum.Packing;
+                                lab.PackDT = DateTime.Now;
+                                break;
+                            case 3:
+                                lab.Cp = LBEnum.Shipment;
+                                lab.ShipDT = DateTime.Now;
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 }
-            }
-            else
-            {
-                using (ISession session = Session.Open())
+                else
                 {
                     var labList = LaserLab.Finder.FindAll("BN='" + bpObj.BatchNo + "' and Type='" + bpObj.Type + "'");
                     if (labList.Count > 0)
@@ -112,10 +112,10 @@
                             }
                         }
                     }
-                    session.Commit();
                 }
+                session.Commit();
             }
-            return false;
+            return true;
         }
     }
 

@@ -38,23 +38,42 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		System.String Do(IContext context, out IList<MessageBase> outMessages ,System.String bN, System.String lB, System.String type, System.DateTime masterDT, System.String customer);
+		System.String Do(IContext context, out IList<MessageBase> outMessages ,List<System.String> lBList, System.String bN, System.String type, System.String customer, System.DateTime masterDT);
     }
 	[Serializable]    
     public class LaserLabAddBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy.ILaserLabAddBP
     {
 	#region Fields	
-				private System.String bN ;
-						private System.String lB ;
+				private List<System.String> lBList ;
+						private System.String bN ;
 						private System.String type ;
-						private System.DateTime masterDT ;
 						private System.String customer ;
+						private System.DateTime masterDT ;
 			
 	#endregion	
 		
 	#region Properties
 	
 				
+
+		/// <summary>
+		/// LB集合 (该属性可为空,且无默认值)
+		/// 镭射标添加.Misc.LB集合
+		/// </summary>
+		/// <value></value>
+		public List<System.String> LBList
+		{
+			get	
+			{	
+				return this.lBList;
+			}
+
+			set	
+			{	
+				this.lBList = value;	
+			}
+		}		
+						
 
 		/// <summary>
 		/// 批次号 (该属性可为空,且无默认值)
@@ -71,25 +90,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy
 			set	
 			{	
 				this.bN = value;	
-			}
-		}		
-						
-
-		/// <summary>
-		/// 镭射标 (该属性可为空,且无默认值)
-		/// 镭射标添加.Misc.镭射标
-		/// </summary>
-		/// <value>System.String</value>
-		public System.String LB
-		{
-			get	
-			{	
-				return this.lB;
-			}
-
-			set	
-			{	
-				this.lB = value;	
 			}
 		}		
 						
@@ -114,25 +114,6 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy
 						
 
 		/// <summary>
-		/// 物料时间 (该属性可为空,且无默认值)
-		/// 镭射标添加.Misc.物料时间
-		/// </summary>
-		/// <value>System.DateTime</value>
-		public System.DateTime MasterDT
-		{
-			get	
-			{	
-				return this.masterDT;
-			}
-
-			set	
-			{	
-				this.masterDT = value;	
-			}
-		}		
-						
-
-		/// <summary>
 		/// 客户 (该属性可为空,且无默认值)
 		/// 镭射标添加.Misc.客户
 		/// </summary>
@@ -147,6 +128,25 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy
 			set	
 			{	
 				this.customer = value;	
+			}
+		}		
+						
+
+		/// <summary>
+		/// 物料时间 (该属性可为空,且无默认值)
+		/// 镭射标添加.Misc.物料时间
+		/// </summary>
+		/// <value>System.DateTime</value>
+		public System.DateTime MasterDT
+		{
+			get	
+			{	
+				return this.masterDT;
+			}
+
+			set	
+			{	
+				this.masterDT = value;	
 			}
 		}		
 			
@@ -176,7 +176,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabAddBP.Proxy
             ILaserLabAddBP channel = oChannel as ILaserLabAddBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, bN, lB, type, masterDT, customer);
+				return channel.Do(context, out returnMsgs, lBList, bN, type, customer, masterDT);
 	    }
             return  null;
         }

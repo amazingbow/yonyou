@@ -19,10 +19,6 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 	
  
 		
-		[assembly: UBFComponent("ac267998-7480-4c1e-926f-f1cfee8753a2", "LaserLabQry", "LaserLabQryBP")]
-	
- 
-		
 		[assembly: UBFComponent("e955cd41-c129-4d61-825e-b94b9fc76993", "UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabScrapBP", "LaserLabScrapBP")]
 	
 

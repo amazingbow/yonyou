@@ -82,6 +82,7 @@
                 }
                 session.Commit();
             }
+            sr.Close();
             ModifyFileName(path, LBEnum.Scrap);
             return 1;
         }
@@ -104,10 +105,11 @@
                 while ((line = sr.ReadLine()) != null)
                 {
                     line = line.Trim();
-                    if (line.Length > 20)
+                    var strList = line.Split(new char[]{' '}, StringSplitOptions.RemoveEmptyEntries);
+                    if (strList.Length > 1)
                     {
-                        string batch = line.Substring(0, 5);
-                        string tempstr = line.Substring(6).Trim();
+                        string batch = strList[0].Trim();
+                        string tempstr =  strList[1].Trim();
 
                         string tempTime = tempstr.Substring(tempstr.Length - 15).Trim();
                         string time = tempTime.Substring(0, 8);
@@ -120,7 +122,7 @@
                         }
                         else
                         {
-                            lab.ScanDate = DateTime.Parse(time);
+                            lab.ScanDate = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
                             lab.Cp = LBEnum.Shipment;
                             lab.ShipBN = batch;
                             lab.ShipDT = DateTime.Now;
@@ -155,6 +157,7 @@
                 }
                 session.Commit();
             }
+            sr.Close();
             ModifyFileName(path, LBEnum.Packing);
             return 1;
         }
@@ -175,6 +178,7 @@
                 }
                 session.Commit();
             }
+            sr.Close();
             ModifyFileName(path, LBEnum.GoldOil);
             return 1;
         }
@@ -185,20 +189,20 @@
             switch (lBEnum.Value)
             {
                 case 1:
-                        var jyDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/金油/" + directory;
-                        if (!Directory.Exists(jyDirectory))
+                    var jyDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/金油/" + directory;
+                    if (!Directory.Exists(jyDirectory))
                     {
                         Directory.CreateDirectory(jyDirectory);
                     }
-                        File.Move(path, jyDirectory + "/" + fileName);
+                    File.Move(path, jyDirectory + "/" + fileName);
                     break;
                 case 2:
-                        var bzDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/包装/" + directory;
-                        if (!Directory.Exists(bzDirectory))
+                    var bzDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/包装/" + directory;
+                    if (!Directory.Exists(bzDirectory))
                     {
                         Directory.CreateDirectory(bzDirectory);
                     }
-                        File.Move(path, bzDirectory + "/" + fileName);
+                    File.Move(path, bzDirectory + "/" + fileName);
                     break;
                 case 3:
                     var chDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/出货/" + directory;
@@ -209,12 +213,12 @@
                     File.Move(path, chDirectory + "/" + fileName);
                     break;
                 case 4:
-                       var bfDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/报废/" + directory;
-                       if (!Directory.Exists(bfDirectory))
+                    var bfDirectory = ConfigurationManager.AppSettings["ProcessFilePath"] + "/报废/" + directory;
+                    if (!Directory.Exists(bfDirectory))
                     {
                         Directory.CreateDirectory(bfDirectory);
                     }
-                       File.Move(path, bfDirectory + "/" + fileName);
+                    File.Move(path, bfDirectory + "/" + fileName);
                     break;
                 default:
                     break;

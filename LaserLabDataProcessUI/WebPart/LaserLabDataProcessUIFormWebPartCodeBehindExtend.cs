@@ -142,6 +142,7 @@ namespace LaserLabDataProcessUIModel
             proxy.FlowStart = flowStart ?? 0;
             proxy.FlowEnd = flowEnd ?? 0;
             proxy.ChangeModel = this.TabControl0.SelectedIndex;
+            proxy.ChangeCp = changeCp;
             var result = proxy.Do();
             if (result)
             {
@@ -157,7 +158,7 @@ namespace LaserLabDataProcessUIModel
         {
             if (this.TabControl0.SelectedIndex == 0)
             {
-                if (string.IsNullOrEmpty(this.Model.LaserLabDataProcessView.FocusedRecord.BatchNo))
+                if (string.IsNullOrEmpty(this.Model.LaserLabDataProcessView.FocusedRecord.LaserLabCode))
                 {
                     UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('请填写镭射标号');", true);
                     return false;
@@ -166,9 +167,9 @@ namespace LaserLabDataProcessUIModel
             }
             else
             {
-                var laserLab = this.Model.LaserLabDataProcessView.FocusedRecord.LaserLabCode;
+                var batchNo = this.Model.LaserLabDataProcessView.FocusedRecord.BatchNo;
                 var type = this.Model.LaserLabDataProcessView.FocusedRecord.Type;
-                if (string.IsNullOrEmpty(laserLab) && string.IsNullOrEmpty(type))
+                if (string.IsNullOrEmpty(batchNo))
                 {
                     UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('请填写批次号和型号');", true);
                     return false;
