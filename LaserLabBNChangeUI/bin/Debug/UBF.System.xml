@@ -1,0 +1,3574 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UBF.System</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Util.Cache.CacheFactory">
+            <summary>
+            CacheFactory 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.CacheFactory.DecorateCacheCounters(UFSoft.UBF.Util.Cache.Core.Cache)">
+            <summary>
+            装饰Cache计数器．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.CacheManager">
+            <summary>
+            CacheManager 全局Cache管理器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.CacheManager.GetEntityCache(System.String)">
+            <summary>
+            用于持久化层创建Cache实例，该Cache实例不会被CacheManager管理
+            </summary>
+            <param name="cacheName">cache名</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.CacheManager.EnterpriseCachePool">
+            <summary>
+            Cache企业缓存池．用于应用不用企业不同Cache.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.CachePurifier">
+            <summary>
+            CachePurifier 缓存清理器.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.CacheType">
+            <summary>
+            CacheKey常量
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Core.Cache">
+            <summary>
+            Cache 实现
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.ICache">
+            <summary>
+            ICache 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Contains(System.Object)">
+            <summary>
+            判断指定key的对象是否被缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Add(System.Object,System.Object)">
+            <summary>
+            向Cache中添加项
+            </summary>
+            <param name="key">被Cache对象的Key</param>
+            <param name="value">被Cache的对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Add(System.Object,System.Object,System.TimeSpan)">
+            <summary>
+            向Cache中添加项
+            </summary>
+            <param name="key">被Cache对象的Key</param>
+            <param name="value">被Cache的对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Add(System.Object,System.Object,UFSoft.UBF.Util.Cache.Framework.CacheItemPriority)">
+            <summary>
+            向Cache中添加项
+            </summary>
+            <param name="key">被Cache对象的Key</param>
+            <param name="value">被Cache的对象</param>
+            <param name="priority">指定项目的淘汰优先权</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Remove(System.Object)">
+            <summary>
+            从Cache中删除指定的对象
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Refresh">
+            <summary>
+            刷新Cache以进行强制淘汰
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.Flush">
+            <summary>
+            清除所有的Cache内容
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICache.SetTranscationable(System.Object)">
+            <summary>
+            设置可事务处理缓存对象
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="E:UFSoft.UBF.Util.Cache.ICache.CacheItemRemoved">
+            <summary>
+            当Cache项被删除时发出该事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.Item(System.Object)">
+            <summary>
+            用指定的Key取得或添加Cache项
+            </summary>
+            <param name="key">被Cache对象的Key</param>
+            <returns>被Cache的对象</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.StorageStrategy">
+            <summary>
+            取得或设置Cache的存储策略
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.Storage">
+            <summary>
+            取得存储器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.ScavengingStrategy">
+            <summary>
+            取得或设置Cache的淘汰策略
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.Capacity">
+            <summary>
+            取得或设置Cache的容量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.EliminationRate">
+            <summary>
+            取得或设置Cache的淘汰率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.HitRate">
+            <summary>
+            取得Cache的命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.Name">
+            <summary>
+            取得Cache实例的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICache.Size">
+            <summary>
+            取得Cache的对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.Cache.Capacity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Core.CacheConfiguration">
+            <summary>
+            Cache　配置类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheConfiguration.NeedRestart">
+            <summary>
+            更改Cache后，是否要重启.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Core.CacheItem">
+            <summary>
+            This class represents a cache item. A cache item has a value and 
+            metadata which can be set or got using this class.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.ITranscationID">
+            <summary>
+            事务ID接口,获取对象所属事务号.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Core.CacheItem.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheItem.Key">
+            <summary>
+            Gets or Sets the item key.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheItem.Value">
+            <summary>
+            Gets or Sets the item value.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheItem.Hits">
+            <summary>
+            Get the item hits.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheItem.Priority">
+            <summary>
+            Gets or Sets the item priority.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Core.CacheItem.IPriority">
+            <summary>
+            CacheItemPriority接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheEventArgs">
+            <summary>
+            This class is derived from EventArgs and is used to wrap
+            the cache item key for passing it to event handler.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.CacheEventArgs.#ctor(System.Object)">
+            <summary>
+            Constructor to create the CacheEventArgs object.
+            </summary>
+            <param name="key">
+            Key to uniquely identify a value
+            </param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Framework.CacheEventArgs.Key">
+            <summary>
+            Property to return the key value.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheItemRemoveCause">
+            <summary>
+            Specifies the causes by which an item was removed from the cache.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICachePeformanceReportor.SetIncrementCountersToAccess(System.Diagnostics.PerformanceCounter[])">
+            <summary>
+            访问Cache，从Cache中取
+            </summary>
+            <param name="counters"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICachePeformanceReportor.SetIncrementCountersToCount(System.Diagnostics.PerformanceCounter[])">
+            <summary>
+            Cache中对象数量
+            </summary>
+            <param name="counters"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.ItemDependencyChangeEventHandler">
+            <summary>
+            Represents the method that will handle the dependency change event.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheItemRemovedCallback">
+            <summary>
+            Represents the method that will be invoked when a item is removed. 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.AddDataHandler">
+            <summary>
+            Represents the method that will handle the addition of item metadata.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.FlushHandler">
+            <summary>
+            Represents the method that will handle the flushing of all the items.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheEventHandle">
+            <summary>
+            Cache变动事件处理器
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheItemNotifyHandle">
+            <summary>
+            当CacheStorage中的项目异动事件处理器
+            </summary>
+            <param name="item">Cache存储项目</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.ICacheItemExpiration">
+            <summary>
+            允许用户实现特定的到期策略
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.ICacheItemExpiration.HasExpired">
+            <summary>
+            Specifies if item has expired or not.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.ICacheItemExpiration.Notify">
+            <summary>
+            Notifies that the item was recently used.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.ICacheItemExpiration.Key(System.Object)">
+            <summary>
+            This method sets the external dependency key.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.ICacheItemPriority">
+            <summary>
+            缓存对象等级接口，实现此接口，可以在缓存清理中作其清理策略的补充。
+            如：实体entity实现此接口后，可以用实体本身的状态来代替实现该接口。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Framework.ICacheItemPriority.Priority">
+            <summary>
+            返回自己处理的CacheItemPriority逻辑。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.CacheItemPriority">
+            <summary>
+            Specifies the item priority levels.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.ICacheStorage">
+            <summary>
+            Allows end users to implement their own cache management storage. All 
+            storage providers must implement this interface.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICacheStorage.Add(UFSoft.UBF.Util.Cache.ICacheItem)">
+            <summary>
+            Adds an element with the specified key and value into the storage.
+            </summary>
+            <param name="item">cache item</param>
+            <returns>如果增加新项则返回true，如果存在相同项目则仅替换项目的值并返回false</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICacheStorage.Flush">
+            <summary>
+            Removes all elements from the storage.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICacheStorage.GetData(System.Object)">
+            <summary>
+            Gets the element with the specified key.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICacheStorage.Contains(System.Object)">
+            <summary>
+            判断指定key的对象是否存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.ICacheStorage.Remove(System.Object)">
+            <summary>
+            Removes the element with the specified key.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.ICacheStorage.Size">
+            <summary>
+            Gets the number of elements actually contained in the storage.
+            </summary>		
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm">
+            <summary>
+            Allows end users to implement their own scavenging algorithm.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Init(UFSoft.UBF.Util.Cache.ICache,UFSoft.UBF.Util.Cache.ICacheStorage,System.Int32,System.Int32)">
+            <summary>
+            Inits the scavenging algorithm with cache-capacity and elimination rate.
+            </summary>
+            <param name="capacity">cache capacity</param>
+            <param name="eliminationRate">elimination rate</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Touch(UFSoft.UBF.Util.Cache.ICacheItem)">
+            <summary>
+            Notifies that the element with the specified key was recently used.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Execute">
+            <summary>
+            Executes the algorithm.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Add(UFSoft.UBF.Util.Cache.ICacheItem)">
+            <summary>
+            Adds a new element to the item algorithm list. This list is used 
+            when the algorithm is executed.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Remove(UFSoft.UBF.Util.Cache.ICacheItem)">
+            <summary>
+            Removes the element with the specified key from the item 
+            algorithm list.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.Flush">
+            <summary>
+            Removes all elements from the item algorithm list.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Cache.Framework.IScavengingAlgorithm.EliminationRate">
+            <summary>
+            Get or Set elimination rate.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.TypeDescriptor">
+            <summary>
+            TypeDescriptor 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.ScavengingStrategy">
+            <summary>
+            ScavengingStrategy
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Scavenging.EliminationBasket">
+            <summary>
+            LRU淘汰算法的淘汰筐
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Scavenging.EMLAScavenging">
+            <summary>
+            最少访问次数优先淘汰策略
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Scavenging.FIFOBasketScavenging">
+            <summary>
+            使用淘汰框的先进先出淘汰算法
+            －－多线程时仅对框锁定，适用高并发情况的淘汰算法。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Scavenging.LRUScavenging">
+            <summary>
+            最近最少使用Cache淘汰机制
+            －－最近使用后移，优先使用CacheItem中的缓存对象级别淘汰。
+            －－存储策略优先使用链表。
+            --增加不可移除对象接口，对不可移除的对象不进行淘汰．
+            --当Storage空间不足．增加相应的eliminationBasketCapacity量的大小．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Scavenging.NullScavenging">
+            <summary>
+            NullScavenging 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.StorageStrategy">
+            <summary>
+            StorageStrategy 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Storage.AbstractStorage">
+            <summary>
+            AbstractStorage 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Cache.Storage.HashStorage">
+            <summary>
+            HashStorage
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.ConfigurationManager">
+            <summary>
+            ConfigurationManager 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.ConfigurationManager.GetConfiguration(System.String)">
+            <summary>
+            获取配置信息（有缓存，默认不重新加载文件）
+            </summary>
+            <param name="name">名称</param>
+            <returns>返回配置对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.ConfigurationManager.GetConfiguration(System.String,System.Boolean)">
+            <summary>
+            获取配置信息
+            </summary>
+            <param name="name">名称</param>
+            <param name="loadnew">是否重新加载文件</param>
+            <returns>返回配置对象</returns>
+        </member>
+        <member name="E:UFSoft.UBF.Util.Configuration.ConfigurationManager.Changed">
+            <summary>
+             Configuration配置文件变化响应事件.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.Environment">
+            <summary>
+            环境配置文件-各种杂项.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.Cache">
+            <summary>
+            缓存配置文件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.WCFBindings">
+            <summary>
+            WCF Bindings
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.UBFService">
+            <summary>
+             UFSoft.UBF.Service
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.UBFEngineHosting">
+            <summary>
+            UBFEngineHosting的配置.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.AOPExtend">
+            <summary>
+            AOP扩展的配置.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.BPSVExtend">
+            <summary>
+            BPSVExtend扩展的配置.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.Expression">
+            <summary>
+            表达式扩展的配置.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Configuration.ConfigurationType.MDConfig">
+            <summary>
+            元数据相关的配置.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.HeuristicLocator">
+            <summary>
+            HeuristicLocator 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Framework.IConfigurationLocator">
+            <summary>
+            IConfigurationLocator 配置源定位
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.MasterConfiguration">
+            <summary>
+            MasterConfiguration 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.MasterLocator">
+            <summary>
+            MasterLocator: Singleton Pattern
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.RegistryConfiguration">
+            <summary>
+            RegistryConfiguration 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.RegistryConfigurationFactory">
+            <summary>
+            RegistryConfigurationFactory 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.XmlConfiguration">
+            <summary>
+            XmlConfiguration -本类型不可使用Logger.原因已经被Logger使用．否则导致初始化依赖问题．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.IConfiguration">
+            <summary>
+            IConfiguration 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.IConfiguration.GetSubConfigurationList(System.String)">
+            <summary>
+            褰撳墠閰嶇疆鑺傜偣涓嬫墍鏈夌殑璺緞鍚嶄负name鐨勯厤缃妭鐐归泦鍚?
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.IConfiguration.GetSubConfiguration(System.String)">
+            <summary>
+            杩斿洖褰撳墠閰嶇疆鑺傜偣涓嬬涓€涓矾寰勫悕涓簄ame鐨勯厤缃妭鐐?
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.IConfiguration.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.XmlDocument">
+            <summary>
+            鍙栧緱璇ラ厤缃枃浠剁殑Xml鏂囨。瀵硅薄
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.Item(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.SubConfigurations">
+            <summary>
+            褰撳墠閰嶇疆鑺傜偣涓嬫墍鏈夌殑閰嶇疆鑺傜偣闆嗗悎
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.Name">
+            <summary>
+            褰撳墠閰嶇疆鑺傜偣鍚?
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.Text">
+            <summary>
+            配置节的内容文档
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Configuration.IConfiguration.FilePath">
+            <summary>
+            Configuration的文件位置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Core.XmlConfigurationFactory">
+            <summary>
+            XmlConfigurationFactory 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Framework.IConfigurationFactory">
+            <summary>
+            IConfigurationFactory 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.Core.XmlConfigurationFactory.Instance">
+            <summary>
+            Singlton pattern, eager inilization
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.Core.XmlConfigurationFactory.CreateConfiguration(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Environment">
+            <summary>
+            管理平台和环境信息。不能被继承。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IEnvTokens">
+            <summary>
+            环境变量标记声明接口。获得环境变量的标记和内容集合。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IEnvTokens.Tokens">
+            <summary>
+            取得环境变量标记和内容的集合
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Environment.UBFLogFileName">
+            <summary>
+            Log配置文件-LOG4NET支持的配置文件。-LOG走特有方式,原因LOG与config相互依赖.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.CurrentEnvironment">
+            <summary>
+            取得当前的环境
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.Path">
+            <summary>
+            取得当前环境的路径集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.UBFBin">
+            <summary>
+            取得当前环境中关于UBF bin目录的路径信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.UBFStudio">
+            <summary>
+            取得当前环境中关于UBF studio目录的路径信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.UBFResources">
+            <summary>
+            取得当前环境中关于UBF resources目录的路径信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.AppPath">
+            <summary>
+            取得当前环境中关于App目录的路径信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.DeployConfigFile">
+            <summary>
+            取得当前环境中关于部署配置文件的路径信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Environment.ProbePath">
+            <summary>
+            取得当前环境中程序集的私有搜索路径信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.ConfigurationException">
+            <summary>
+            ConfigurationException 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.IConfigurationList">
+            <summary>
+            IConfigurationList 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Framework.IConfigurationSource">
+            <summary>
+            IConfigurationSource 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Framework.IDataProtection">
+            <summary>
+            IDataProtection 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.Framework.IDataProtection.Encrypt(System.Byte[])">
+            <summary>
+            Encrypts a raw of bytes that represents a plain text
+            </summary>
+            <param name="plainText">plain text</param>
+            <returns>a cipher value</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.Framework.IDataProtection.Decrypt(System.Byte[])">
+            <summary>
+            Decrypts a cipher value
+            </summary>
+            <param name="cipherText">cipher text</param>
+            <returns>a raw of bytes that represents a plain text</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Configuration.Framework.IDataProtection.ComputeHash(System.Byte[])">
+            <summary>
+            Computes a hash
+            </summary>
+            <param name="plainText">plain text</param>
+            <returns>hash data</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ApplicationContext">
+            <summary>
+            应用程序Context．全局进程唯一．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.IContext">
+            <summary>
+            涓婁笅鏂囨帴鍙?
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Context.IContext.Add(System.String,System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.Context.IContext.Remove(System.String)">
+            <summary>
+            浠庝笂涓嬫枃涓垹闄ゅ搴斿悕绉扮殑灞炴€с€?
+            </summary>
+            <param name="name">灞炴€у悕</param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.IContext.Item(System.String)">
+            <summary>
+            Item绱㈠紩锛岃幏鍙栨垨璁剧疆灞炴€у悕瀵瑰簲鐨勫睘鎬у€笺€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.SystemWritablePolicy">
+            <summary>
+            允许修改当前线程上下文中任何信息的策略器。
+            当创建该策略对象时，自动将该策略加入到上下文的策略管理器中，对象销毁时自动移除该策略
+            </summary>
+            <example>using( SystemWritablePolicy p = new SystemWritablePolicy() )
+            {
+                //ToDO modify context
+            }
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ContextKeyDefine">
+            <summary>
+            上下文键值的定义
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.ENTERPRISE_ID">
+            <summary>
+            企业的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.ENTERPRISE_NAME">
+            <summary>
+            企业的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.CONTEXT_EFFECTIVECOUNT">
+            <summary>
+            系统当前支持的语言数量
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.MULTI_LAN">
+            <summary>
+            系统当前支持的语言种类——语言文化编码列表
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.CULTURE">
+            <summary>
+            当前语言文化编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.DEFAULT_CULTURE">
+            <summary>
+            默认语言文化编码
+            </summary>
+        </member>
+        <!-- 对于成员“F:UFSoft.UBF.Util.Context.ContextKeyDefine.SUPPORT_CULTURENAME_LIST”忽略有格式错误的 XML 注释 -->
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.USER_ID">
+            <summary>
+            当前用户的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.USER_NAME">
+            <summary>
+            当前用户的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.USER_CODE">
+            <summary>
+            当前用户的编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.ORG_ID">
+            <summary>
+            当前组织的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.ORG_CODE">
+            <summary>
+            当前组织的编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.ORG_NAME">
+            <summary>
+            当前组织的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.USERCLIENTIP">
+            <summary>
+            登录用户的客户端IP地址
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.DATETIME">
+            <summary>
+            当前登录的时间
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.LOGINORG_ID">
+            <summary>
+            登录组织的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.LOGINORG_Code">
+            <summary>
+            登录组织的编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.LOGINORG_Name">
+            <summary>
+            登录组织的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OldORG_ID">
+            <summary>
+            源组织的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OldORG_CODE">
+            <summary>
+            源组织的编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OldORG_NAME">
+            <summary>
+            源组织的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OPERATINGORG_ID">
+            <summary>
+            操作组织的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OPERATINGORG_Code">
+            <summary>
+            操作组织的编码
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.OPERATINGORG_Name">
+            <summary>
+            操作组织的名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.PORTAL_ID">
+            <summary>
+            Portal的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.CUSTOMER_ID">
+            <summary>
+            客户门户的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.SUPPLIER_ID">
+            <summary>
+            供应商门户的ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextKeyDefine.SQL2008DBResourceWorkLoadGroup">
+            <summary>
+            数据库优化的查询分组
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ContextType">
+            <summary>
+            浼氳瘽绫诲瀷
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ContextManager">
+            <summary>
+            Context管理类
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Context.ContextManager.GetContext(UFSoft.UBF.Util.Context.ContextType)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.Context.ContextManager.TransferContext(UFSoft.UBF.Util.Context.IContext)">
+            <summary>
+            进行Context转换.从参数中Context转入到当前Context中．
+            </summary>
+            <param name="srcCtx"></param>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.ContextManager.Logger">
+            <summary>
+            Context Logger 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.ContextManager.Context">
+            <summary>
+            鑾峰彇涓婁笅鏂?
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.ContextManager.ContextType">
+            <summary>
+            鑾峰彇鎴栬缃笂涓嬫枃绫诲瀷銆?
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.ContextManager.CultureName">
+            <summary>
+            鑾峰彇鎴栬缃尯鍩熷悕绉扮紪鐮侊紝濡倆h-CN銆乪n-US銆?
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.ContextManager.CultureID">
+            <summary>
+            2010.3.8 Yangli 暂时先加入这个方法。待和UBF.System.dll负责人商议后再改进Context在Box问题上的实现
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.PlatformContext.DateTime">
+            <summary>
+            获取或设置登录日期。获取的登录时间不包括时分秒信息。
+            这是平台早期API。如果希望获取登录日期使用新的API，LoginDate；如果希望获取登录时间使用LoginDateTime。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.PlatformContext.LoginDate">
+            <summary>
+            获取登录日期
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.PlatformContext.LoginDateTime">
+            <summary>
+            获取或设置登录时间
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.SessionContext">
+            <summary>
+            HttpSessionContext实现
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Context.SessionContext.Logger">
+            <summary>
+            Context Logger 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ThreadContext">
+            <summary>
+            线程唯一的缓存实现.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Context.ThreadContext.ThreadContextAccessAdapter">
+            <summary>
+            序列化时伪装为ThreadContext对象本身被序列化。
+            因此类型的名称必须是ThreadContext，而成员的数量与名称也必须与ThreadContext的可序列化字段的数量和名称一致。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Context.ThreadContext.ThreadContextAccessAdapter.AddChecker(UFSoft.UBF.Util.Context.IContextWriteAudit)">
+            <summary>
+            增加Context的写检查策略
+            </summary>
+            <param name="c">Context的写检查策略</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Context.ThreadContext.ThreadContextAccessAdapter.RemoveChecker">
+            <summary>
+            移除Context的写检查策略
+            </summary>
+            <returns>Context的写检查策略</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Context.ThreadContext.ThreadContextAccessAdapter.nameValueHas">
+            <summary>
+            将ThreadContext中存储信息的hash表对象直接序列化。以伪装为ThreadContext对象本身被序列化。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Counters.Counter">
+            <summary>
+            高精度计数器.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.IAppender">
+            <summary>
+            IAppender接口
+            错误处理的实现插件需要实现该接口，错误处理引擎将要调用该接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IAppender.Do(UFSoft.UBF.ErrorMessage)">
+            <summary>
+            异步输出错误
+            </summary>
+            <param name="errorMessage">错误信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IAppender.Do(UFSoft.UBF.ErrorMessage,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            交互式输出错误
+            </summary>
+            <param name="errorMessage">错误信息对象</param>
+            <param name="allowResult">可以接受的错误处理结果的组合</param>
+            <returns>错误处理的结果</returns>
+        </member>
+        <member name="F:UFSoft.UBF.Util.ErrorService.Appender.ErrorNotify.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Appender.ErrorNotify.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Appender.ErrorNotify.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Appender.OutputAppender">
+            <summary>
+            错误服务提供的缺省错误处理器
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Util.ErrorService.Appender.OutputQueue.OnAdd">
+            <summary>
+            当增加元素时发出该事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Util.ErrorService.Appender.OutputQueue.OnClear">
+            <summary>
+            当被清空时发出该事件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.AssemblyAuthorAttribute">
+            <summary>
+            指定组件的作者
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.AssemblyAuthorAttribute.Author">
+            <summary>
+            取得或设置作者
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.IErrorProcess">
+            <summary>
+            错误处理器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IErrorProcess.Output(System.Object,UFSoft.UBF.ErrorLevel,System.Reflection.Assembly)">
+            <summary>
+            异步输出错误对象。
+            </summary>
+            <param name="error">错误对象</param>
+            <param name="l">指定错误级别</param>
+            <param name="assembly">指定错误发出的程序集</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IErrorProcess.Dialog(System.Object,UFSoft.UBF.ErrorLevel,System.Reflection.Assembly,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            同步输出错误对象，并等待用户的反馈
+            </summary>
+            <param name="error">错误对象</param>
+            <param name="l">指定错误级别</param>
+            <param name="assembly">指定错误发出的程序集</param>
+            <param name="allowResult">允许的处理意见</param>
+            <returns>用户反馈的处理意见</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.ErrorService.IErrorProcess.Logger">
+            <summary>
+            取得或设置该错误处理器的logger对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.ErrorService">
+            <summary>
+            错误处理服务接口类。提供客户代码的错误输出功能。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.ErrorService.GetProcessor(log4net.ILog)">
+            <summary>
+            取得错误处理器对象。
+            </summary>
+            <param name="logger">logger对象</param>
+            <returns>错误处理器对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.ErrorService.Output(System.Object,UFSoft.UBF.ErrorLevel)">
+            <summary>
+            异步输出错误。使用默认错误级别——Error。
+            </summary>
+            <param name="error">错误对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.ErrorService.Dialog(System.Object,UFSoft.UBF.ErrorLevel,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            交互式输出错误。使用默认错误级别——Error。
+            </summary>
+            <param name="error">错误对象</param>
+            <param name="allowResult">可以接受的错误处理结果的组合</param>
+            <returns>错误处理的结果</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.ErrorService.ErrorService.Repository">
+            <summary>
+            取得错误处理服务的注册库管理对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.IDialog">
+            <summary>
+            交互式错误输出接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IDialog.Debug(System.Object,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            输出调试信息
+            </summary>
+            <param name="message">信息对象</param>
+            <param name="allowResult">允许的处理结果</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IDialog.Info(System.Object,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            输出提示信息
+            </summary>
+            <param name="message">信息对象</param>
+            <param name="allowResult">允许的处理结果</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IDialog.Warn(System.Object,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            输出警告信息
+            </summary>
+            <param name="message">信息对象</param>
+            <param name="allowResult">允许的处理结果</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IDialog.Error(System.Object,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            输出错误信息
+            </summary>
+            <param name="message">信息对象</param>
+            <param name="allowResult">允许的处理结果</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IDialog.Fatal(System.Object,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            输出严重错误信息
+            </summary>
+            <param name="message">信息对象</param>
+            <param name="allowResult">允许的处理结果</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.IOutput">
+            <summary>
+            错误同步输出接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IOutput.Debug(System.Object)">
+            <summary>
+            输出调试信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IOutput.Info(System.Object)">
+            <summary>
+            输出提示信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IOutput.Warn(System.Object)">
+            <summary>
+            输出警告信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IOutput.Error(System.Object)">
+            <summary>
+            输出错误信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.IOutput.Fatal(System.Object)">
+            <summary>
+            输出严重错误信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.RegisterUtil">
+            <summary>
+            注册工具类。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ErrorService.RenderResource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.abort">
+            <summary>
+              查找类似 终止(&amp;A) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.cancel">
+            <summary>
+              查找类似 取消(&amp;C) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Debug">
+            <summary>
+              查找类似 调试 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Error">
+            <summary>
+              查找类似 错误 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Fatal">
+            <summary>
+              查找类似 停止 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.FormatMessageException">
+            <summary>
+              查找类似 错误信息格式化串失败。\n错误信息格式化串：&lt;${FormatString}&gt; 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.ignore">
+            <summary>
+              查找类似 忽略(&amp;I) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Info">
+            <summary>
+              查找类似 信息 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.no">
+            <summary>
+              查找类似 否(&amp;N) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.ok">
+            <summary>
+              查找类似 确定(&amp;O) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.RenderException">
+            <summary>
+              查找类似 Render处理发生错误。\n正在处理的&lt;${ErrorType}&gt;错误无法处理将被中断。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.retry">
+            <summary>
+              查找类似 重试(&amp;R) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.Warn">
+            <summary>
+              查找类似 警告 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorService.RenderResource.yes">
+            <summary>
+              查找类似 是(&amp;Y) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.RepositoryService">
+            <summary>
+            错误处理系统的注册服务接口。
+            提供appender的注册管理能力，包括注册、反注册和注册项目的查询。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.RepositoryService.loadConfigFile">
+            <summary>
+            加载错误服务的配置文件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.ErrorService.RepositoryService.AppenderRepository">
+            <summary>
+            取得Appender注册服务
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.ErrorService.RepositoryService.RenderRepository">
+            <summary>
+            取得Render注册服务
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.AppenderLoader">
+            <summary>
+            appender注册加载类。负责解析注册文件，加载注册文件中定义的appender。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Repository.AppenderLoader.Load(System.Xml.XmlNode)">
+            <summary>
+            通过appender的注册项描述注册一个appender。
+            </summary>
+            <param name="root">appender的注册项描述的xml节点对象。</param>
+            <exception cref="T:System.ArgumentNullException"/>
+            <exception cref="T:UFSoft.UBF.Util.ErrorService.Repository.ArgumentValueException"/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.AppenderRepository">
+            <summary>
+            appender的注册管理器实现类。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.IRepository">
+            <summary>
+            IRepository 注册库接口。所有的注册管理器需要实现该接口，以提供注册、反注册和查询服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Repository.IRepository.Register(System.String,System.Type)">
+            <summary>
+            注册appender或render。
+            </summary>
+            <param name="regName">注册名</param>
+            <param name="regItem">appender或render的类型对象</param>
+            <exception cref="T:System.ArgumentNullException"/>
+            <exception cref="T:System.NotImplementedException"/>
+            <exception cref="T:UFSoft.UBF.Util.ErrorService.Repository.ArgumentValueException"/>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Repository.IRepository.Unregister(System.String)">
+            <summary>
+            注销已经注册的项目
+            </summary>
+            <param name="regName">注册名</param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.ArgumentValueException">
+            <summary>
+            参数值异常。
+            当参数值不是方法可以接受的值时抛出该异常。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.RegisterUtilRunner">
+            <summary>
+            注册工具运行器。负责加载并运行注册工具。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Repository.RegisterUtilRunner.RunningRegisterUtil(System.Xml.XmlNode)">
+            <summary>
+            运行注册工具
+            </summary>
+            <param name="el">注册工具声明项</param>
+            <exception cref="T:System.ArgumentNullException"/>
+            <exception cref="T:UFSoft.UBF.Util.ErrorService.Repository.ArgumentValueException"/>
+            <exception cref="T:UFSoft.UBF.Util.ErrorService.Repository.RegisterUtilTypeException"/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.RegisterUtilTypeException">
+            <summary>
+            声明的注册工具类型异常。
+            当声明的注册工具类型没有从<code>RegisterUtil</code>类继承时抛出该异常。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.RenderLoader">
+            <summary>
+            render注册加载类。负责解析注册文件，加载注册文件中定义的render。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ErrorService.Repository.RenderLoader.Load(System.Xml.XmlNode)">
+            <summary>
+            通过render的注册项描述注册一个render。
+            </summary>
+            <param name="root">render的注册项描述的xml节点对象。</param>
+            <exception cref="T:System.ArgumentNullException"/>
+            <exception cref="T:UFSoft.UBF.Util.ErrorService.Repository.ArgumentValueException"/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.ErrorService.Repository.RenderRepository">
+            <summary>
+            render的注册管理实现类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.ApplicationExceptionBase">
+            <summary>
+            应用异常基类。所有的应用异常从此类派生。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ExceptionBase">
+            <summary>
+            可以包含多个内部异常的异常基类.
+            支持在序列化前依据异常类型的错误信息格式化属性（TextFormatterAttribute）产生文本信息。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IMessageBinding">
+            <summary>
+            MVC框架使用的信息绑定协议接口.携带错误或提示信息的对象需要实现此接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.IMessageBinding.SetEntityIDToEmpty">
+            <summary>
+            设置EntityID成为空值。注意在EntityID上设置0或者-1，系统不会假设它们代表空值。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.EntityFullName">
+            <summary>
+            取得或设置实体的类型全名称。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.AttributeName">
+            <summary>
+            取得或设置实体属性的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.EntityMetadataID">
+            <summary>
+            实体元数据的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.AttributeMetadataID">
+            <summary>
+            实体属性的元数据ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.OrginalEntityFullName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.EntityID">
+            <summary>
+            用于指定需要绑定到Grid行上的实体对象的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.IsEmptyEntityID">
+            <summary>
+            判断EntityID是否是空值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageBinding.Level">
+            <summary>
+            信息的严重级别
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IMessageObject">
+            <summary>
+            信息对象接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageObject.Message">
+            <summary>
+            取得信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IMessageObject.InnerObjects">
+            <summary>
+            取得子信息对象集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ITextFormattable">
+            <summary>
+            希望支持UBF文本格式化机制的对象需要实现该接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.ITextFormattable.ProcessTextFormatter">
+            <summary>
+            调用格式化器产生文本信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ITextFormattable.Formatter">
+            <summary>
+            取得或设置UBF文本格式化器及其派生类
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.ExceptionBase.formatter">
+            <summary>
+            该类的格式化器
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.ExceptionBase.formated">
+            <summary>
+            指名localMessage是否是经由TextFormatter产生。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.ExceptionBase.GetOrgName(System.String@)">
+            <summary>
+            跨组织调用时加上组织名前缀
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.ExceptionBase.AppendMessage(System.String)">
+            <summary>
+            Only used by Send/Copy
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.ExceptionBase.OnSerializing(System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            在对象序列化前调用该方法。如果没有信息则产生TextFormatterAttribute指定的信息。
+            继承类可以重写该方法。
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:UFSoft.UBF.ExceptionBase.InnerException">
+            <summary>
+            取得内部异常
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ExceptionBase.ErrorObject">
+            <summary>
+            取得错误信息对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ExceptionBase.InnerExceptions">
+            <summary>
+            内部异常列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ExceptionBase.Formatter">
+            <summary>
+            取得或设置类型的格式化器。
+            如果设置过格式化器，则获取该类型的TextFormatterAttribute特征指定的格式化器。
+            如果既没有设置过也没有指定TextFormatterAttribute特征，则返回null。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ExceptionBase.Message">
+            <summary>
+            已重载。如果Message为空值，则返回TextFormatter指定的信息。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ExceptionBase.ExceptionBaseRender">
+            <summary>
+            为MutilExceptionBase对象产生错误信息对象。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ExceptionRender">
+            <summary>
+            用于为Exception的派生类产生错误信息对象。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IRender">
+            <summary>
+            IRender接口
+            错误信息生成器需要实现该接口，根据指定的对象生成错误信息对象。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.IRender.Do(System.Object)">
+            <summary>
+            执行错误信息对象生成工作。
+            </summary>
+            <param name="error">错误对象</param>
+            <returns>错误信息对象。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.ExceptionRender.MakeMesssage(System.Exception)">
+            <summary>
+            生成错误信息。如果没有提供格式化串则返回错误对象的<code>ToString()</code>值。
+            </summary>
+            <param name="renderParameter">错误信息格式化串对象</param>
+            <param name="error">错误对象</param>
+            <returns>错误信息对象</returns>
+            <exception cref="!:ArgumentNumberException"/>
+            <exception cref="!:NoFindResourceFileException"/>
+            <exception cref="!:InvalidResourceRootNameException"/>
+        </member>
+        <member name="T:UFSoft.UBF.Exceptions.MessageBase">
+            <summary>
+            信息对象基类。要求所有的派生类都必须使用基类的Namespace和Name声明其数据契约。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Exceptions.MessageBase.formatter">
+            <summary>
+            该类的格式化器
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Exceptions.MessageBase.formated">
+            <summary>
+            指名localMessage是否是经由TextFormatter产生。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.AssemblyHelper">
+            <summary>
+            AssemblyHelper 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AssemblyTextFormatter">
+            <summary>
+            基于资源文件的格式化器实现策略
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.TextFormatter">
+            <summary>
+            格式化类.使用指定的格式化串的资源协议和参数列表对指定的对象进行信息格式化
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.#ctor">
+            <summary>
+            构造默认的信息格式化器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.#ctor(System.String)">
+            <summary>
+            使用指定的资源ID构造信息格式化器
+            </summary>
+            <param name="rid">资源ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.FormatObject(System.Object)">
+            <summary>
+            为指定的对象产生信息
+            </summary>
+            <param name="obj">需要产生信息的对象</param>
+            <returns>对象的信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.FormatObject(System.Object,System.String)">
+            <summary>
+            为指定的对象产生信息
+            </summary>
+            <param name="obj">需要产生信息的对象</param>
+            <returns>对象的信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.GetFormatter(System.Object)">
+            <summary>
+            取得指定对象的信息格式化器
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.Formatting(System.Object)">
+            <summary>
+            为指定的对象产生格式化信息。
+            </summary>
+            <param name="obj">用于产生格式化信息的对象</param>
+            <returns>格式化信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.TextFormatter.Formatting(System.Object,System.String)">
+            <summary>
+            为指定的对象产生格式化信息。
+            </summary>
+            <param name="obj">用于产生格式化信息的对象</param>
+            <returns>格式化信息</returns>
+        </member>
+        <member name="P:UFSoft.UBF.TextFormatter.ResourceID">
+            <summary>
+            取得或设置资源ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.TextFormatter.ResourcePath.Path">
+            <summary>
+            资源ID路径部分
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.TextFormatter.ResourcePath.ResourceID">
+            <summary>
+            资源ID的最后的ID部分
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.TextFormatter.ResourcePath.FullPath">
+            <summary>
+            资源ID的全路径
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AssemblyTextFormatter.#ctor">
+            <summary>
+            构造默认的信息格式化器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AssemblyTextFormatter.#ctor(System.String)">
+            <summary>
+            使用指定的资源ID构造信息格式化器
+            </summary>
+            <param name="rid">资源ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.AssemblyTextFormatter.#ctor(System.String,System.Reflection.Assembly)">
+            <summary>
+            使用指定的资源ID构造信息格式化器，同时指定资源所在的程序集
+            </summary>
+            <param name="rid">资源ID</param>
+            <param name="resourceAssembly">资源所在的程序</param>
+        </member>
+        <member name="P:UFSoft.UBF.AssemblyTextFormatter.ResourceAssembly">
+            <summary>
+            取得或设置资源所在的程序集
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ErrorCategoryAttribute">
+            <summary>
+            指定错误信息的分类信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorCategoryAttribute.Category">
+            <summary>
+            取得或设置错误分类信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ErrorDescriptor">
+            <summary>
+            错误描述类。被ErrorMessage使用，用于描述错误的基本信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorDescriptor.ErrorID">
+            <summary>
+            取得或设置错误的唯一识别符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorDescriptor.TimeStamp">
+            <summary>
+            取得错误信息生成的时间。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorDescriptor.Level">
+            <summary>
+            取得或设置错误级别
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorDescriptor.Category">
+            <summary>
+            取得或设置错误分类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorDescriptor.Owner">
+            <summary>
+            取得或设置错误的发起者
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ErrorLevel">
+            <summary>
+            错误级别
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.ErrorMessage">
+            <summary>
+            错误信息对象。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.ErrorType">
+            <summary>
+            取得错误对象类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.ErrorID">
+            <summary>
+            取得错误的唯一识别符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.Message">
+            <summary>
+            取得或设置错误信息。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.TimeStamp">
+            <summary>
+            取得错误信息生成的时间。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.InnerMessages">
+            <summary>
+            取得导致该错误的错误信息对象列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.InnerMessage">
+            <summary>
+            取得或设置导致该错误的错误信息对象。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.Level">
+            <summary>
+            取得或设置错误级别
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.Category">
+            <summary>
+            取得或设置错误分类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.Owner">
+            <summary>
+            取得或设置错误的发起者
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.ErrorMessage.ErrorObject">
+            <summary>
+            取得错误对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.FormatMessageException">
+            <summary>
+            错误信息格式化失败时抛出该异常。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.FormatMessageException.FormatString">
+            <summary>
+            错误信息格式化串
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Exceptions.MessageTransport">
+            <summary>
+            UBF 提供的基于线程的信息对象管理器。当穿越进程边界时，UBF负责序列化并传递到另一端。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Exceptions.MessageTransport.SetMessages(System.Collections.Generic.IList{UFSoft.UBF.Exceptions.MessageBase})">
+            <summary>
+            仅用于UBF内部使用。开发人员不要使用该方法
+            </summary>
+            <param name="messages"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Exceptions.MessageTransport.ClearMessages">
+            <summary>
+             仅用于UBF内部使用。开发人员不要使用该方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.MessageTransport.Messages">
+            <summary>
+            取得当前线程的信息对象列表
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.BaseApplicationException">
+            <summary>
+            ApplicationException
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.BaseException">
+            <summary>
+            BaseException
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.PlatformException">
+            <summary>
+            PlatformException
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.RenderAttribute">
+            <summary>
+            标记使用的Render类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.RenderAttribute.#ctor(System.Type)">
+            <summary>
+            指定Render的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.RenderAttribute.Render">
+            <summary>
+            取得Render
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Exceptions.ResourceDescriptor">
+            <summary>
+            ResourceDescriptor 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Exceptions.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.Resources.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.Resources.PropertyValidateException">
+            <summary>
+              查找类似 ${PropertyName}未通过校验。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.Resources.SaveEntityException">
+            <summary>
+              查找类似 保存${EntityName}时发生错误，无法保存。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Exceptions.Resources.SaveUIMException">
+            <summary>
+              查找类似 保存${FormName}单据时发生错误，无法保存。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.TextFormatterAttribute">
+            <summary>
+             指定类型的信息格式化器，同时指定格式化资源ID和参数列表。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.TextFormatterAttribute.ResourceID">
+            <summary>
+            资源标识符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.TextFormatterAttribute.Formatter">
+            <summary>
+            取得或设置格式化工具对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.TextRender">
+            <summary>
+            缺省的非异常类型对象错误信息生成器。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.TextRender.MakeMesssage(System.Object)">
+            <summary>
+            生成错误信息。如果没有提供格式化串则返回错误对象的<code>ToString()</code>值。
+            </summary>
+            <param name="renderParameter">错误信息格式化串对象</param>
+            <param name="error">错误对象</param>
+            <returns>错误信息对象</returns>
+            <exception cref="!:ArgumentNumberException"/>
+            <exception cref="!:NoFindResourceFileException"/>
+            <exception cref="!:InvalidResourceRootNameException"/>
+        </member>
+        <member name="T:UFSoft.UBF.UnknownException">
+            <summary>
+            除了从ExceptionBase继承的UBF和U9异常之外的所有异常都会被造型为该异常
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IDBConnect">
+            <summary>
+            数据库连接串接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.IDBConnect.GetConnectString(System.String)">
+            <summary>
+            取得数据库连接串
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.DatabaseTypeEnum">
+            <summary>
+            2010-3-4  Yangli 增加数据库类型枚举
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.IDBResourceWorkLoadGroup">
+            <summary>
+            获取Resource WorkLoad Group
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.IDBResourceWorkLoadGroup.GetRWGroupName(System.String,System.String,System.String)">
+            <summary>
+            获取Resource WorkLoad Group
+            </summary>
+            <param name="entID"></param>
+            <param name="formID"></param>
+            <param name="controlID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.Lock(`0,UFSoft.UBF.LockMode,System.String)">
+            <summary>
+            用指定的模式锁定目标对象。
+            当目标对象没有被加锁时，无论加读锁还是写锁都会成功。当目标对象已经存在读锁则读锁定能成功，而写锁定失败。
+            当目标对象存在写锁时，除非已经存在的锁的所有人锁定会成功，其他人锁定皆失败。
+            对于同一所有者重复锁定行为。如果申请者已经拥有写锁，则无论申请的是读锁定还是写锁定，都将被视为写锁定申请，结果是申请成功并增加锁定计数。
+            如果申请者已经拥有读锁，读锁定时锁定成功并增加锁计数。写锁定时，若锁定成功，则锁将升级到写锁并增加锁计数。同时内部记录锁升级时的计数，在解锁阶段可以将写锁降级至读锁。
+            </summary>
+            <param name="target">锁定对象。通常是一个锁标识对象，以此间接地代表一个需要锁定的具体数据对象。</param>
+            <param name="mode">锁定模式</param>
+            <param name="owner">所有人</param>
+            <returns>如果锁定成功返回该锁的钥匙；否则返回null。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.Unlock(UFSoft.UBF.Lock.Key{`0})">
+            <summary>
+            用指定的钥匙解除一次锁定，导致锁计数减1。
+            如果锁曾经从读锁升级到写锁，则当解锁后的锁计数低于升级时的锁计数时，引起锁降级到读锁。
+            在多次重复锁定的情况下，锁将持续有效直到锁计数降到0。
+            </summary>
+            <param name="key">钥匙。描述了锁的目标对象和所有人</param>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.UnlockAll(UFSoft.UBF.Lock.Key{`0})">
+            <summary>
+            用指定的钥匙解除锁定。清除锁上的所有计数，锁将失效。
+            </summary>
+            <param name="key">钥匙。描述了锁的目标对象和所有人</param>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.ClearAllLocks(System.String)">
+            <summary>
+            解除指定所有人的所有对象锁
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.QueryLockOwners(`0)">
+            <summary>
+            查询指定目标对象的所有锁定人
+            </summary>
+            <param name="target">目标对象</param>
+            <returns>在指定目标对象上所有锁的列表</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.ILockManager`1.QueryLocks(System.String)">
+            <summary>
+            查询指定所有人设定的所有锁
+            </summary>
+            <param name="owner">所有人</param>
+            <returns>拥有的锁的列表</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.IUnlockAssistant">
+            <summary>
+            解锁助手接口。该接口的实现者可以接受钥匙和解锁方法的委托作为任务。受托任务的执行时机和策略由接口实现者决定。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockAssistant.Excute">
+            <summary>
+            执行受托的所有解锁任务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockAssistant.AddTask(UFSoft.UBF.Lock.IUnlockTask)">
+            <summary>
+            增加解锁任务
+            </summary>
+            <param name="task">解锁任务</param>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockAssistant.FindByKey(System.Object)">
+            <summary>
+            依据指定的钥匙找到受托的解锁任务
+            </summary>
+            <param name="key">钥匙</param>
+            <returns>解锁任务。没有返回null。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockAssistant.Remove(UFSoft.UBF.Lock.IUnlockTask)">
+            <summary>
+            删除指定的解锁任务
+            </summary>
+            <param name="task">解锁任务</param>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockAssistant.RemoveByKey(System.Object)">
+            <summary>
+            依据指定的钥匙找到解锁任务并从受托列表中删除，同时返回被删除的解锁任务。
+            </summary>
+            <param name="key">钥匙</param>
+            <returns>解锁任务。没有返回null。</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.IUnlockAssistant.Enable">
+            <summary>
+            取得或设置是否启用解锁助手
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.IUnlockAssistant.Count">
+            <summary>
+            取得当前受托的解锁任务数量
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.IUnlockTask">
+            <summary>
+            定义解锁任务的方法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.IUnlockTask.Excute">
+            <summary>
+            执行解锁任务
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.IUnlockTask.Key">
+            <summary>
+            取得解锁任务中的钥匙
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.Key`1">
+            <summary>
+            锁的钥匙对象。钥匙由被锁定的目标和锁的持有人信息组成，用于解锁和解锁代理。
+            </summary>
+            <typeparam name="T">锁的目标对象类型</typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.Key`1.#ctor(`0,System.String,System.String)">
+            <summary>
+            使用目标对象和所有人创建钥匙
+            </summary>
+            <param name="target">被锁定的目标对象</param>
+            <param name="owner">所有人</param>
+            <param name="lockManagerKey">锁管理的策略标识</param>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Key`1.Target">
+            <summary>
+            取得钥匙的目标对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Key`1.Owner">
+            <summary>
+            取得所有人
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Key`1.LockManager">
+            <summary>
+            取得锁管理的策略标识
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Key`1.Invalid">
+            <summary>
+            取得该Key是否已经做过解锁的标志。如果做过将不能再使用该Key作解锁。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Key`1.Unlocked">
+            <summary>
+            设置该Key是否已经做过解锁的标志
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.Lock`1">
+            <summary>
+            锁泛型抽象对象。描述锁的信息，包括锁标识、锁的所有者、锁的模式，其中锁的标识类型由锁管理的具体实现者确定。
+            </summary>
+            <typeparam name="T">目标对象类型</typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.Lock`1.#ctor(`0,UFSoft.UBF.LockMode,System.String)">
+            <summary>
+            使用目标对象和所有人以及锁定模式创建锁
+            </summary>
+            <param name="target">目标对象</param>
+            <param name="mode">锁定模式</param>
+            <param name="owner">所有人</param>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Lock`1.Target">
+            <summary>
+            取得锁的目标对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Lock`1.Owner">
+            <summary>
+            取得锁的所有人
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Lock.Lock`1.Mode">
+            <summary>
+            取得锁的模式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.LockMode">
+            <summary>
+            锁定模式。定义加锁的目的。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.LockMode.Read">
+            <summary>
+            读锁定。为保护读取的数据而加锁，允许其他人读取数据但禁止变更数据包括删除。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.LockMode.Write">
+            <summary>
+            写锁定。为变更数据而加锁，禁止任何其他人加锁。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.ObjectLockManager">
+            <summary>
+            应用程序域内加锁管理．－－没有提供．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.UnlockAssistant">
+            <summary>
+            解锁助手.
+            </summary>
+            
+        </member>
+        <member name="T:UFSoft.UBF.Lock.UnlockBehavior`1">
+            <summary>
+            范型解锁行为委托
+            </summary>
+            <typeparam name="T">被锁定的目标的类型</typeparam>
+            <param name="key">用于解锁的钥匙</param>
+        </member>
+        <member name="T:UFSoft.UBF.Lock.UnlockTask`1">
+            <summary>
+            范型解锁任务实现
+            </summary>
+            <typeparam name="T">被锁定的目标的类型</typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Lock.UnlockTask`1.ToString">
+            <summary>
+            用于LOG输出具体内容。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.ILogger">
+            <summary>
+            ILogger 日志接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Debug(System.Object)">
+            <summary>
+            输出调试信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Info(System.Object)">
+            <summary>
+            输出提示信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Warn(System.Object)">
+            <summary>
+            输出警告信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Error(System.Object)">
+            <summary>
+            输出错误信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Fatal(System.Object)">
+            <summary>
+            输出严重错误信息
+            </summary>
+            <param name="message">信息对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Debug(System.String,System.Object[])">
+            <summary>
+            输出调试信息
+            </summary>
+            <param name="msgFormat">信息格式化串</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Info(System.String,System.Object[])">
+            <summary>
+            输出提示信息
+            </summary>
+            <param name="msgFormat">信息格式化串</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Warn(System.String,System.Object[])">
+            <summary>
+            输出警告信息
+            </summary>
+            <param name="msgFormat">信息格式化串</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Error(System.String,System.Object[])">
+            <summary>
+            输出错误信息
+            </summary>
+            <param name="msgFormat">信息格式化串</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILogger.Fatal(System.String,System.Object[])">
+            <summary>
+            输出严重错误信息
+            </summary>
+            <param name="msgFormat">信息格式化串</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsDebugEnabled">
+            <summary>
+            取得是否允许Debug级信息输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsInfoEnabled">
+            <summary>
+            取得是否允许Info级信息输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsWarnEnabled">
+            <summary>
+            取得是否允许Warn级信息输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsErrorEnabled">
+            <summary>
+            取得是否允许Error级信息输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsFatalEnabled">
+            <summary>
+            取得是否允许Fatal级信息输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.ILogger.IsAllowOutput">
+            <summary>
+            取得是否允许输出.--取决于扩展配置.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.Log4net.ToneLogger4netAdapter">
+            <summary>
+            LOG增强的运行期使用，可运行期动态配置输出情况，不传递Appdomain的数据.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.LoggerType">
+            <summary>
+            LOG常量...
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Service_Storage">
+            <summary>
+            存储容器.-UFIDA.UBF负责清理.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Service_Serialize">
+            <summary>
+            跨组织调用时序列化．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Performance_SessionInvoke">
+            <summary>
+            性能调用方面.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Authority_Check">
+            <summary>
+            bp,sv权限检查.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Authority_CahceClear">
+            <summary>
+            权限缓存清理.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Transaction_Scope">
+            <summary>
+            TranscationScope 显示对开发的事务接口．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.ServiceProvider">
+            <summary>
+            服务提供对象
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Event_Init">
+            <summary>
+            初始化..
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Connection">
+            <summary>
+            数据库连接.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_Opration">
+            <summary>
+            新增/修改/删除 实体对象操作，其中实体类型为0,实体ID为1
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_Event">
+            <summary>
+            实体的本身的　效验/valid/新增前/新增后/修改前/修改后/删除前/删除后事件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_Load">
+            <summary>
+            实体从changeset中加载/实体加载从局部缓存加载/实体加载从全局缓存加载/实体从数据库加载 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_StatusChange">
+            <summary>
+            状态变化-IsNeedPersice -Status -NeedVilidate.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_ValueChange">
+            <summary>
+            变化的值新值为0，旧值为
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Session">
+            <summary>
+            Session操作相关.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Session_CommitEntity">
+            <summary>
+            当前提交的实体个数为，分别是.是否参与持久化的标志为 实体的状态为 实体的乐观锁的版本是
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Session_CommitValues">
+            <summary>
+            提交实体的Values与OldValues
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.PL_Entity_AssoExcption">
+            <summary>
+            实体级联为true的对象的关联线名字为0，ID为，规则为，当前操作为
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.DataAccess">
+            <summary>
+            数据库SQL操作.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Approval">
+            <summary>
+            应用审批流
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.Approval_Event">
+            <summary>
+            审批流事件.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Log.LoggerType.EntityDataTransaction">
+            <summary>
+            实体数据事务服务
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Log.PerformanceLog.ILogContextProvider">
+            <summary>
+             PerformaceLog内容提供器.
+             负责增加Log内容附加输出当前调试信息．．．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Log.PerformanceLog.ILogContextProvider.Name">
+            <summary>
+            提供器的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Log.PerformanceLog.ILogContextProvider.Context">
+            <summary>
+            提供器的内容．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Log.PerformanceLog.ProviderConfiguration">
+            <summary>
+            没有实现可配置.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.AbstractFactory">
+            <summary>
+            AbstractFactory 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.ILoggerFactory">
+            <summary>
+            ILoggerFactory Logger工厂接口。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILoggerFactory.GetLogger(System.String)">
+            <summary>
+            通过指定的名称取得logger对象。
+            </summary>
+            <param name="name">logger对象名称</param>
+            <returns>logger对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.ILoggerFactory.GetLogger(System.Type)">
+            <summary>
+            通过指定的类型取得logger对象。
+            </summary>
+            <param name="type">类型对象</param>
+            <returns>logger对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.Log4net.Log4netFactory">
+            <summary>
+            Log4netFactory logger工厂实现类。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.LoggerManager">
+            <summary>
+            LoggerManager  获取Logger对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters">
+            <summary>
+            UBF Session性能级计数器，计数对象． 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionUIBPSVInvoke">
+            <summary>
+            Session中UI 调用BP加SV的调用次数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionSVInvoke">
+            <summary>
+            Session中　SV调用次数计数器　用线程来做是有问题的.(目前单机版本跑的线程和实际应用服务器版本不一样)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionBPInvoke">
+            <summary>
+            Session中 BP调用次数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionEntityCache2">
+            <summary>
+            Session中 二级缓存实体计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionSQLRunSelect">
+            <summary>
+            Session级查询SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionSQLRunSelectResultRow">
+            <summary>
+            Session级查询SQL返回结果行计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionSQLRunUpdate">
+            <summary>
+            Session级更新SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionSQLRunUpdateRowAffected">
+            <summary>
+            Session级更新SQL影响行数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionEntityCreate">
+            <summary>
+            Session级实体创建计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionEntityCreateObj">
+            <summary>
+            创建的实体对象集合.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SessionEntityLazyLoadDBCount">
+            <summary>
+            懒加载时数据库访问加载次数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SVSQLRunSelect">
+            <summary>
+            服务调用级查询SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SVSQLRunSelectResultRow">
+            <summary>
+            服务调用级查询SQL返回行数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SVSQLRunUpdate">
+            <summary>
+            服务调用级更新SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SVSQLRunUpdateRowAffected">
+            <summary>
+            服务调用级更新SQL影响行数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.SVEntityCreate">
+            <summary>
+            服务调用级实体创建计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPSQLRunSelect">
+            <summary>
+            BP调用级查询SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPSQLRunSelectStack">
+            <summary>
+            BP调用级查询SQL计数器栈
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPSQLRunSelectResultRow">
+            <summary>
+            BP调用级查询SQL返回行数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPSQLRunUpdate">
+            <summary>
+            服务调用级更新SQL计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPSQLRunUpdateRowAffected">
+            <summary>
+            服务调用级更新SQL影响行数计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Log.Performance.SessionPerformanceCounters.BPEntityCreate">
+            <summary>
+            BP级调用级实体创建计数器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.Performance.ISessionCounter.Increment">
+            <summary>
+            增加一个基数点
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.Performance.ISessionCounter.Increment(System.Int32)">
+            <summary>
+            增加指定个基数点
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.Performance.ISessionCounter.Decrement">
+            <summary>
+            减少一个基数点
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.Performance.ISessionCounter.Decrement(System.Int32)">
+            <summary>
+            减少指定个基数点
+            </summary>
+            <param name="num"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Log.Performance.ISessionCounter.Clear">
+            <summary>
+            清除计数，从头开始．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UICallBPSVTooMany">
+            <summary>
+            UI调用次数BP,SV过多 -实际为远程调用次数.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UIStateAddErrorObj">
+            <summary>
+            UIState中添加了错误的对象（如UIControl）,导致内存溢出.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UIModelNoFilter">
+            <summary>
+            UIModel加载无条件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UIModelTooManyRecords">
+            <summary>
+             UIModel记录数过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UISizeTooLarge">
+            <summary>
+            页面尺寸过大 - 没做
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UIStayTooLong">
+            <summary>
+            页面长期驻留内存 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.LazyLoadBETooMany">
+            <summary>
+             懒加载次数过多 -Session级
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.UpdateBETooMany">
+            <summary>
+            操作BE对象过多-Session级
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.FindAllLoadBETooMany">
+            <summary>
+             FindAll加载BE对象过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.EntitySessionCacheContainsBETooMany">
+            <summary>
+            Entity一级Session Cache中BE对象过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.EntityServiceCacheContainsBETooMany">
+            <summary>
+            Entity二级SV Cache中BE对象过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecBPTooLong">
+            <summary>
+            BP执行时间过长 　-改完基类后加．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.CallBPImpTooMany">
+            <summary>
+            调用BP实现的次数太多-后台
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSVTooLong">
+            <summary>
+            SV执行时间过长　－改完基类后加．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.CallSVTooMany">
+            <summary>
+             调用服务次数太多.-后台
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.OQLTooLarge">
+            <summary>
+            OQL语句过长
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.OQLHasTooManyParams">
+            <summary>
+            OQL语句参数过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.SQLTooLarge">
+            <summary>
+             SQL语句过长
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.SQLHasTooManyParams">
+            <summary>
+            SQL的参数过多
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSQLTooLong">
+             <summary>
+            SQL语句执行时间过长
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSQLResultTooMany">
+            <summary>
+            SQL执行返回的结果数过多．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSQLResultColumnTooMany">
+            <summary>
+            SQL执行列数过多．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSQLTooManyInBP">
+            <summary>
+             SQL语句执行次数过多-BP+SV
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.AlertType.ExecSQLTooMany">
+            <summary>
+             SQL语句执行次数过多-Session(一次操作)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Monitors.UBFObjectInstanceCounters">
+            <summary>
+            对象驻留超时计数器.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Monitors.UBFPerformanceCounters.GetEnterpriseInstance(System.String)">
+            <summary>
+            跟据企业编码获取对应的企业计数器.
+            </summary>
+            <param name="enterpriseCode"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.Monitors.UBFPerformanceCounters.threadCacheEntity">
+            
+            关于缓存：Get中进行命中计数，同时Contains也作为一次Cache的Get，否则外部一用Cotains判断就会造成100%命中.
+            Cache 代码 Line130 .
+            Add 和 Remove 作为缓存中对象计数，同时Flush()要作清理，同样要Remove。 
+            
+            
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.Current">
+            <summary>
+            当前企业的性能计数器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.CanBeCounter">
+            <summary>
+            能否进行计数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheEntity">
+            <summary>
+            实体对象数量 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheEntityHitRate">
+            <summary>
+            命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheEntityHitCount">
+            <summary>
+            命中率-基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheObject">
+            <summary>
+            其它对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheObjectHitRate">
+            <summary>
+            其它对象命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadCacheObjectHitCount">
+            <summary>
+            其它对象命中率-基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ServiceCacheEntity">
+            <summary>
+            实体对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ServiceCacheEntityHitRate">
+            <summary>
+            命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ServiceCacheEntityHitCount">
+            <summary>
+            命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityCreateNum">
+            <summary>
+            新增对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityDeleteNum">
+            <summary>
+            删除对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityModifiedNum">
+            <summary>
+            修改对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityQueryNum">
+            <summary>
+            查询对象数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityLazyLoadNum">
+            <summary>
+            懒加载总数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityLazyLoadHitRate">
+            <summary>
+            懒加载命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.EntityLazyLoadHitCount">
+            <summary>
+            懒加载命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.WorkThreadNum">
+            <summary>
+            线程总数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ThreadIdleNum">
+            <summary>
+            线程空闲数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNum">
+            <summary>
+            当前悲观锁数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNumLoad">
+            <summary>
+            当前悲观读锁数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNumWrite">
+            <summary>
+            当前悲观写锁数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNumRequried">
+            <summary>
+            加锁请求次数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNumRequriedSuccess">
+            <summary>
+            加锁请求次数/成功/
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PessimizeLockNumRequriedFail">
+            <summary>
+            加锁请求次数/失败/
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OptimisticLockNum">
+            <summary>
+            乐观并发冲突数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLCacheNum">
+            <summary>
+            OQL缓存数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLCacheHitRate">
+            <summary>
+            OQL缓存命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLCacheHitCount">
+            <summary>
+            OQL缓存命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLRequriedNum">
+            <summary>
+            OQL请求次数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLRebuildNum">
+            <summary>
+            OQL重编译次数               --不知道啥。。。???
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.OQLBigSizeNum">
+            <summary>
+            超过一定尺寸大小（可自定义）的OQL数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.TransactionNum">
+            <summary>
+            事务数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.TransactionFailRate">
+            <summary>
+            事务失败率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.TransactionFailCount">
+            <summary>
+            事务失败率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.MetadataCache">
+            <summary>
+            缓存数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.MetadataCacheHitRate">
+            <summary>
+            缓存命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.MetadataCacheHitCount">
+            <summary>
+            缓存命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SVInvoke">
+            <summary>
+            服务调用次数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SVInvokeTimeCount">
+            <summary>
+            服务调用时间统计值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SecurityCache">
+            <summary>
+            权限缓存数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SecurityCacheHitRate">
+            <summary>
+            权限缓存命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SecurityCacheHitCount">
+            <summary>
+            权限缓存命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.SecurityRequiedNum">
+            <summary>
+            权限请求次数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.InlineUsers">
+            <summary>
+            在线用户数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.HttpRequiedNum">
+            <summary>
+            HTTP请求次数。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ResourceCache">
+            <summary>
+            资源缓存数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ResourceCacheHitRate">
+            <summary>
+            资源命中率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.ResourceCacheHitCount">
+            <summary>
+            资源命中率－基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.UIStateNum">
+            <summary>
+            UIState数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.JobWaitNum">
+            <summary>
+            平均任务排队数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.BusinessExceptionNum">
+            <summary>
+            业务异常抛出数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Monitors.UBFPerformanceCounters.PageNum">
+            <summary>
+            当前有多少Page
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AlertResource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.CallBPImpTooMany">
+            <summary>
+              查找类似 调用BP实现的次数太多-后台 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.CallSVTooMany">
+            <summary>
+              查找类似 调用服务次数太多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.EntityServiceCacheContainsBETooMany">
+            <summary>
+              查找类似 Entity二级SV Cache中BE对象过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.EntitySessionCacheContainsBETooMany">
+            <summary>
+              查找类似 Entity一级Session Cache中BE对象过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecBPTooLong">
+            <summary>
+              查找类似 BP执行时间过长 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSQLResultColumnTooMany">
+            <summary>
+              查找类似 SQL执行的列数过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSQLResultTooMany">
+            <summary>
+              查找类似 SQL执行的返回结果过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSQLTooLong">
+            <summary>
+              查找类似 SQL语句执行时间过长 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSQLTooMany">
+            <summary>
+              查找类似 SQL语句执行次数过多-Session(一次操作) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSQLTooManyInBP">
+            <summary>
+              查找类似 SQL语句执行次数过多-BP+SV 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.ExecSVTooLong">
+            <summary>
+              查找类似 SV执行时间过长　 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.FindAllLoadBETooMany">
+            <summary>
+              查找类似 FindAll加载BE对象过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.LazyLoadBETooMany">
+            <summary>
+              查找类似 懒加载次数过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.OQLTooLarge">
+            <summary>
+              查找类似 OQL语句过长. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.SQLTooLarge">
+            <summary>
+              查找类似 SQL语句过长 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.UICallBPSVTooMany">
+            <summary>
+              查找类似 UI调用次数BP,SV过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.UIModelTooManyRecords">
+            <summary>
+              查找类似 UIModel记录数过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.UISizeTooLarge">
+            <summary>
+              查找类似 页面尺寸过大 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.UIStayTooLong">
+            <summary>
+              查找类似 页面驻留内存时间过长:该对象类型为:{0} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AlertResource.UpdateBETooMany">
+            <summary>
+              查找类似 操作BE对象过多 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Services.Session.OperatorContext">
+            <summary>
+            BP级操作Context
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.OperatorContext.ConcreateCache">
+            <summary>
+            创建一个新的Cache。
+            </summary>
+            <exception cref="T:System.Exception">当已经存在一个有效的Cache时抛出</exception>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.OperatorContext.SetCache(UFSoft.UBF.Util.Cache.ICache)">
+            <summary>
+            将指定的Cache设置为当前Cache。但只能设置一次，如果已经创建了新的Cache或设置过有效的Cache，则再次设置时会抛出异常
+            </summary>
+            <param name="cache">cache对象</param>
+            <exception cref="T:System.Exception">当已经存在一个有效的cache时抛出</exception>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.OperatorContext.Storage">
+            <summary>
+            BP操作级别上的存储对象.可以存储BP级别的对象.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.OperatorContext.Cache">
+            <summary>
+            当前BP的Cache。一当BP调用返回则该Cache被释放。仅用作实体持久化引擎使用，以存储加载的实体。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.OperatorContext.ServiceContext">
+            <summary>
+            获取当前服务级Context环境，如果初始第一个为BP，则ServiceContext为其本身.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Services.Session.OperatorStack">
+            <summary>
+            BP,SV调用槽.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Services.Session.ClearServiceThread">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Services.Session.ServiceSession">
+            <summary>
+            服务的会话管理。管理服务会话期间的Cache和调用栈以及其他应用托管的数据。具有线程唯一性。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.ServiceSession.InitinalSession(UFSoft.UBF.Services.Session.ClearServiceThread)">
+            <summary>
+            初始化服务Session。创建服务调用栈和服务Session级缓存。
+            如果已经被初始化则跳过初始化工作。
+            </summary>
+            <remarks>初始化服务Session。创建服务调用栈和服务Session级缓存。</remarks>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.ServiceSession.EnterOperator(System.Object)">
+            <summary>
+            通知进入服务或业务操作
+            </summary>
+            <param name="bp">服务或业务操作对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.ServiceSession.ExitOperator(System.Object)">
+            <summary>
+            通知离开服务或业务操作
+            </summary>
+            <param name="bp">服务或业务操作对象</param>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.Cache">
+            <summary>
+            取得线程级Cache对象
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Services.Session.ServiceSession.ThreadExit">
+            <summary>
+            线程离开UBF的控制边界事件。设置或移出响应该事件的委托方法。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.CurrentTransactionID">
+            <summary>
+            当前的数据库事务ID．-为LocalID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.ThreadStorage">
+            <summary>
+            取得线程级的存储管理对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.Context">
+            <summary>
+            取得线程级操作BP的Context对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.ServiceContext">
+            <summary>
+            取得当前线程级服务操作上下文Context .如果初始第一个为BP，则其为BP本身.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSession.SessionID">
+            <summary>
+            取得服务Session的ID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.ServiceSessionImpl.Release">
+            <summary>
+            释放线程级的管理对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Services.Session.ServiceSessionImpl.ReleaseSessionCache">
+            <summary>
+            释放线程级Cache对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSessionImpl.Cache">
+            <summary>
+            取得线程级Cache对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSessionImpl.ThreadStorage">
+            <summary>
+            取得线程级存储对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSessionImpl.ThreadExitDelegates">
+            <summary>
+            保证取得清理线程委托的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSessionImpl.SessionID">
+            <summary>
+            取得当前Session的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Services.Session.ServiceSessionImpl.OperatorStack">
+            <summary>
+            取得线程级的服务调用栈
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Services.Session.ThreadStaticStorage">
+            <summary>
+            ServiceSession线程级存储容器，由UBF负责创建清理.
+            应用开发人员不能直接使用线程静态对象，使用该对象来存储线程级对象.
+            无法创建该类实例．只可通过 ServiceSession.ThreadStorage来访问.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.UBFAssemblyArrtibute">
+            <summary>
+            UBF关于assembly的附加描述元数据。用于描述该组件是通过UBF模型生成的组件，以及对应的模型项目的Guid。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Comparator">
+            <summary>
+             对两个对象进行Equals比较,先进行为空判断。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DeepCloneHelper">
+            <summary>
+            深度Clone赋值类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DeepCloneHelper.DeepClone(System.Object)">
+            <summary>
+             返回参数的深度Clone对象.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DirectoryHelper">
+            <summary>
+            DirectoryHelper 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.GetBaseDirectory">
+            <summary>
+            return the directory of current AppDomain, end with "\"
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.EnsureDirectorySuffix(System.String)">
+            <summary>
+            Ensure the 'baseDir' has a "\" suffix.
+            </summary>
+            <param name="baseDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.ProbeAssemblyFilePath(System.Type,System.String)">
+            <summary>
+            Return the 
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.ProbeFilePath(System.String,System.String@)">
+            This method will first check if fileName is absolute path, then merge a
+            fullpath based on the relative directory/filename indicated by fileName, 
+            the AppDomain base directory, finnaly the calling assembly's codebase.
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.ProbeFilePath(System.String,System.Boolean)">
+            <summary>
+            This method will first check if fileName is absolute path, then merge a
+            fullpath based on the relative directory/filename indicated by fileName, 
+            the AppDomain base directory, finnaly the calling assembly's codebase.
+            </summary>
+            <param name="fileName"></param>
+            <param name="throwOnNotFound"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.GetRelativeDirectory(System.String,System.String)">
+            <summary>
+            Convert targetDir to relative directory path against baseDir.
+            if baseDir is under the different disk with targetDir, baseDir will be 
+            returned.
+            for example, baseDir is the library reference path, and targetDir is the
+            project file path.
+            </summary>
+            <param name="baseDir"></param>
+            <param name="targetDir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DirectoryHelper.GetAbsoluteDirectory(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dir"></param>
+            <returns>if dir is null or empty, return the current appdomain base 
+            directory, if dir is absolute path, simply return it, else if dir is 
+            relateive path, combine it with appdomain base directory.</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.FileFinder">
+            <summary>
+            FileFinder 文件查找赋值类
+            </summary>	
+        </member>
+        <member name="M:UFSoft.UBF.Util.FileFinder.FindFile(System.String,System.String)">
+            <summary>
+            提供可以使用通配符赋进行的表达式文件查找。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.NamingManager">
+            <summary>
+            将名字映射到下一个序号。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ObjectLoader.Load(System.Type,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="type">reserved for future usage</param>
+            <param name="path"></param>
+            <param name="configFile"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.PathAnalyse">
+            <summary>
+             路径分析工具类
+             2005-7-4 Writed by Qihw .
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAnalyse.IsSameRoot(System.String,System.String)">
+            <summary>
+             返回A,B路径是不是相同根目录路径
+            </summary>
+            <param name="pathA"></param>
+            <param name="pathB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAnalyse.GetRelativePathBaseRPath(System.String,System.String,System.String)">
+            <summary>
+             根据当前路径，相对路径A，相对路径B,得出相对于A的B的相对路径
+            </summary>
+            <param name="currentPath">当前绝对路径</param>
+            <param name="pathRef">相对路径A</param>
+            <param name="path">相对路径B</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAnalyse.GetAbsolutePathFromRPath(System.String,System.String)">
+            <summary>
+             跟据当前的路径和相对路径得出其绝对路径。如果参数是绝对路径，直接返回。
+            </summary>
+            <param name="currentPath"></param>
+            <param name="absolutePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAnalyse.GetRelativePathFromAPath(System.String,System.String)">
+            <summary>
+             跟据当前的绝对路径和绝对路径得出其相对路径。
+            </summary>
+            <param name="currentPath">当前绝对路径</param>
+            <param name="absolutePath">要计算的绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.PathAssistant">
+            <summary>
+             代码生成器的 path 辅助类
+             2005-7-5 Writed by Qihw.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAssistant.#ctor(System.String,System.String)">
+            <summary>
+             构造函数
+            </summary>
+            <param name="basePath">基础目录</param>
+            <param name="covertPath">当前处理的目录</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.PathAssistant.GetPath(System.String,System.String,System.String)">
+            <summary>
+             获取 经过逻辑处理的路径(根据基础路径和目标路径对要处理的路径进行处理)
+            </summary>
+             处理逻辑
+             如果 目标路径在同一根目录下，处理目录也是同根，输出相对目标的相对路径。处理目录非同根，输出绝对路径。
+             如果 目标路径不在同一根目录下，此时处理目录与目标目录同根，输出相对目标的相对路径，否则，输出绝对路径。
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.PathAssistant.IsPathRooted">
+            <summary>
+            是否绝对路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.PathAssistant.IsSameRoot">
+            <summary>
+            基础目录和处理目录是否相同的根(盘)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.PathAssistant.RelativePath">
+            <summary>
+            尝试获取相对路径。 -- 可不提供。原因在于该方法可能会返回异常。--提供，不返回异常。
+             </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.PathAssistant.AbsolutePath">
+            <summary>
+            获取绝对路径。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.PathDumper">
+            <summary>
+            PathDumper 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.PathUtil">
+            <summary>
+            分析并识别文件路径中的环境标记，并用环境标记值替换。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.PathUtil.ParsePath(System.String,System.Collections.Generic.ICollection{UFSoft.UBF.IEnvTokens})">
+            <summary>
+            处理路径，将其中的环境变量占位标志用指定的标记集合中的相应值替换。
+            </summary>
+            <param name="path"></param>
+            <param name="tokens"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ReflectionHelper.CreateInstance(System.String,System.String,System.Object[])">
+            <summary>
+            从指定的程序集，根据类型名创建对象实例
+            </summary>
+            <param name="typeName">类型名</param>
+            <param name="assemblyName">程序集名</param>
+            <param name="args">构造函数参数，可选</param>
+            <returns>对象实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ReflectionHelper.CreateInstance(System.String,System.Object[])">
+            <summary>
+            根据类型全名创建对象实例
+            </summary>
+            <param name="typeFullName">类型全名</param>
+            <param name="args">构造函数参数，可选</param>
+            <returns>对象实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ReflectionHelper.CreateInstance(System.Type,System.Object[])">
+            <summary>
+            根据类型创建对象实例
+            </summary>
+            <param name="type">类型</param>
+            <param name="args">构造函数参数，可选</param>
+            <returns>对象实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.ReflectionHelper.GetType(System.String)">
+            <summary>
+            根据类型全名获取类型对象
+            </summary>
+            <param name="typeFullName">类型全名</param>
+            <returns>类型对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SerializerHelper.FromSerializeString``1(System.String)">
+            <summary>
+            将字符串反序列化成相应的T范型对象（使用Indigo的反序列化器）
+            </summary>
+            <typeparam name="T">EntityData或DTOData的类型</typeparam>
+            <param name="str">反序列化的字符串</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SerializerHelper.SerializeToString``1(``0)">
+            <summary>
+             将T对象序列化成相应的string（使用Indigo的序列化器）
+            </summary>
+            <typeparam name="T">要序列化的类型．</typeparam>
+            <param name="obj">要序列化的对象</param>
+            <returns>序列化后的串</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Topology.Vertex">
+            <summary>
+            TopologicalSorter 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.TypeLoader">
+            <summary>
+            TypeLoader is not thread-safe.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Configuration.Util.XmlConfigurationHelper">
+            <summary>
+            XmlConfigurationHelper 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UVersion">
+            <summary>
+            标识UFIDA产品名和版本号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UVersion.Version">
+            <summary>
+            完整格式版本信息。格式：
+            产品名 v主板本号.次版本号.构造号    或
+            产品名 v主板本号.次版本号.构造号.修订号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UVersion.ShortVersion">
+            <summary>
+            短格式版本信息。格式：产品名 v主板本号.次版本号
+            </summary>
+        </member>
+    </members>
+</doc>

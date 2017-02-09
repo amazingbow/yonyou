@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.BS.Job.RequestClient</name>
+    </assembly>
+    <members>
+        <member name="M:UFIDA.U9.BS.Job.RequestClient.PatternRunOnce.PatternID(System.DateTime,System.Boolean)">
+            <summary>
+            获取调度方案,当createNew=true
+            的时候，BeginTime才有意义，
+            否则，查找一个符合要求的调度方案返回，不创建新的调度方案，
+            因为AAI形式的请求，调度方案没有意义，没必要创建新的纪录。
+            </summary>
+            <param name="BeginTime"></param>
+            <param name="createNew">是否创建新的调度方案</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestClient.PatternRunOnce.PatternInstant">
+            <summary>
+            立即执行的方案，使用该方案的请求会在提交后立即执行，并且只执行一次就设置为完成状态。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestClient.RemoveRequest.Remove(System.Int64)">
+            <summary>
+            删除指定的请求
+            </summary>
+            <param name="requestID">请求ID</param>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.Submit">
+            <summary>
+            单个请求提交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.BatchSubmit">
+            <summary>
+            批量顺序提交
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.InstantJob">
+            <summary>
+            是否立即执行，如果为true，表示该请求将
+            放入立即执行队列，根据优先级和先后顺序执行，不使用调度方案来控制该请求的执行。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.RetryCount">
+            <summary>
+            只有在InstantJob为true的时候，才有意义。重复次数
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.AppType">
+            <summary>
+            应用类型，在InstanceJob为true的时候有意义。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.IsErrReStart">
+            <summary>
+            是否失败需要重启动
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.ErrReStartTimeSpan">
+            <summary>
+            失败重启时间间隔(分钟)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.ErrReStartCount">
+            <summary>
+            失败重启次数（超过3次不再处理）
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.IsSuccessCanNotReStart">
+            <summary>
+            是否执行成功不能重新执行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.IsSendMsg">
+            <summary>
+            是否执行后发消息
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.RequestClient.RequestSubmit.IsQErrGoOn">
+            <summary>
+            是否队列错误继续, 默认 不继续
+            </summary>
+        </member>
+    </members>
+</doc>
