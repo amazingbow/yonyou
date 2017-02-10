@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// <returns>Instance</returns>
 		public  static HxRelationshipBE Create() {
 			HxRelationshipBE entity = (HxRelationshipBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																		 
+																																																																					 
 			return entity;
 		}
 
@@ -695,6 +695,26 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 状态 (该属性可为空,但有默认值)
+			/// 合兴关系对照表.Misc.状态
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum RefStatus
+			{
+				get
+				{
+
+					UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.GetFromValue(base.GetValue("RefStatus"));
+					return value;
+				}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1227,6 +1247,34 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 
 
+		
+			/// <summary>
+		/// 状态 (该属性可为空,但有默认值)
+		/// 合兴关系对照表.Misc.状态
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum RefStatus
+		{
+			get
+			{
+
+				UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.GetFromValue(base.GetValue("RefStatus"));
+				return value;
+			}
+				set
+			{
+				
+				if (value == null)
+					base.SetValue("RefStatus",UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Empty.Value);
+				else
+					base.SetValue("RefStatus",value.Value);
+					 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1356,6 +1404,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_Memo　{ get { return EntityRes.GetResource("Memo");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RefStatus")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_RefStatus　{ get { return EntityRes.GetResource("RefStatus");　}　}
 		#endregion 
 
 
@@ -1477,6 +1530,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			/// 属性: 备注 的名称
 			/// </summary>
 			public static string Memo　{ get { return "Memo";　}　}
+				
+			/// <summary>
+			/// 属性: 状态 的名称
+			/// </summary>
+			public static string RefStatus　{ get { return "RefStatus";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1484,7 +1542,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																										
+																																												
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1545,6 +1603,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			this.exdMultiLangAttrs.Add("U9Name","U9Name");
 			this.exdMultiLangAttrs.Add("U9EntityId","U9EntityId");
 			this.exdMultiLangAttrs.Add("Memo","Memo");
+			this.exdMultiLangAttrs.Add("RefStatus","RefStatus");
         }
 	#endregion 
 
@@ -1561,7 +1620,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			switch(propstr)
 			{
 			
-																																																															
+																																																																		
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1711,6 +1770,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			#region 组件内属性
 	
 					this.SetTypeValue("RefType",data.RefType);
+	     
+
+					this.SetTypeValue("RefStatus",data.RefStatus);
 	     
 
 			#endregion 
@@ -1888,6 +1950,12 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 					data.RefType=System.Int32.Parse(obj.ToString());
 			}
 	
+			{
+				object obj =this.GetValue("RefStatus");
+				if (obj != null)
+					data.RefStatus=System.Int32.Parse(obj.ToString());
+			}
+	
 
 			#endregion 
 			return data ;
@@ -1904,6 +1972,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         private bool SelfEntityValidator()
         {
         
+
 
 
 

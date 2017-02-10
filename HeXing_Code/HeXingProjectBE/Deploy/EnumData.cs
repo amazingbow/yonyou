@@ -59,3 +59,35 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	}
 }
 
+namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
+{
+	/// <summary>
+	/// 枚举值: 对照表状态枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum RefStatusEnumData
+	{
+		/// <summary>
+		/// 初始状态
+		/// </summary>
+		Oraginal = 1,
+		/// <summary>
+		/// 审核
+		/// </summary>
+		Approval = 2,
+		/// <summary>
+		/// 使用中
+		/// </summary>
+		Used = 3,
+		/// <summary>
+		/// 废弃
+		/// </summary>
+		Scrap = 0,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+

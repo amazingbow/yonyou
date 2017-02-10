@@ -40,6 +40,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -72,7 +73,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	     			
 	     			
 	     							U9EntityId= 0; 			     			
-
+	     							RefStatus= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -114,6 +115,24 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			set	
 			{	
 				m_refType = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 状态
+		/// 合兴关系对照表.Misc.状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_refStatus;
+		public System.Int32 RefStatus
+		{
+			get	
+			{	
+				return m_refStatus ;
+			}
+			set	
+			{	
+				m_refStatus = value ;
 			}
 		}		
 
@@ -504,7 +523,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		#endregion	
 
 		#region Multi_Fields
-																					
+																						
 		#endregion 		
 	}	
 

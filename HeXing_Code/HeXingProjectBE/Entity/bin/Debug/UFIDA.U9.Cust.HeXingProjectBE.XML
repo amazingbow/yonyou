@@ -254,6 +254,13 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.U9VoucherID">
+            <summary>
+            U9凭证ID (该属性可为空,但有默认值)
+            SAP与U9凭证对接中间表头.Misc.U9凭证ID
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.HeXingSAPU9GLVoucherLine">
             <summary>
             SAP与U9凭证对接中间表行 (该属性可为空,且无默认值)
@@ -374,6 +381,11 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.Res_DescFlexField">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DescFlexField")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.Res_U9VoucherID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("U9VoucherID")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.EntityKey">
@@ -572,6 +584,14 @@
              OrginalData属性。只可读。
             实体扩展字段 (该属性可为空,且无默认值)
             SAP与U9凭证对接中间表头.Misc.实体扩展字段
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.EntityOriginal.U9VoucherID">
+            <summary>
+             OrginalData属性。只可读。
+            U9凭证ID (该属性可为空,但有默认值)
+            SAP与U9凭证对接中间表头.Misc.U9凭证ID
             </summary>
             <value></value>
         </member>
@@ -1115,6 +1135,11 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.EntityRes.DescFlexField_CombineName">
             <summary>
             属性类型属性展开:DescFlexField.CombineName的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.EntityRes.U9VoucherID">
+            <summary>
+            属性: U9凭证ID 的名称
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherLine">
@@ -2816,6 +2841,13 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.RefStatus">
+            <summary>
+            状态 (该属性可为空,但有默认值)
+            合兴关系对照表.Misc.状态
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_EntityName">
             <summary>
             Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
@@ -2929,6 +2961,11 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_Memo">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Memo")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_RefStatus">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RefStatus")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityKey">
@@ -3138,6 +3175,14 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityOriginal.RefStatus">
+            <summary>
+             OrginalData属性。只可读。
+            状态 (该属性可为空,但有默认值)
+            合兴关系对照表.Misc.状态
+            </summary>
+            <value></value>
+        </member>
         <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.GetResource(System.String)">
             <summary>
             获取显示名称资源方法
@@ -3256,6 +3301,11 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.Memo">
             <summary>
             属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.RefStatus">
+            <summary>
+            属性: 状态 的名称
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum">
@@ -3415,6 +3465,101 @@
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum">
+            <summary>
+            可扩展枚举: 对照表状态枚举 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get RefStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.GetFromValue(System.Object)">
+            <summary>
+            Get RefStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.GetFromName(System.String)">
+            <summary>
+            Get RefStatusEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Oraginal">
+            <summary>
+            枚举值: 初始状态  Value:1  
+            对照表状态枚举.Misc.初始状态
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Approval">
+            <summary>
+            枚举值: 审核  Value:2  
+            对照表状态枚举.Misc.审核
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Used">
+            <summary>
+            枚举值: 使用中  Value:3  
+            对照表状态枚举.Misc.使用中
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Scrap">
+            <summary>
+            枚举值: 废弃  Value:0  
+            对照表状态枚举.Misc.废弃
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Values">
+            <summary>
+            Get RefStatusEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_TypeName">
+            <summary>
+            对照表状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_TypeNameS">
+            <summary>
+            对照表状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_Oraginal">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_Approval">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_Used">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.Res_Scrap">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum.EnumRes.Enum_FullName">
             <summary>
             枚举全名: FullName 
             </summary>
