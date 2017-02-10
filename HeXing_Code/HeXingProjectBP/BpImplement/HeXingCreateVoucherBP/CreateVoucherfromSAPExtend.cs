@@ -1,10 +1,11 @@
 ﻿namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Text; 
-	using UFSoft.UBF.AopFrame;	
-	using UFSoft.UBF.Util.Context;
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Text;
+    using UFSoft.UBF.AopFrame;
+    using UFSoft.UBF.Util.Context;
 
 	/// <summary>
 	/// CreateVoucherfromSAP partial 
