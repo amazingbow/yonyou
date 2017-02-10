@@ -1,0 +1,2786 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.MD.Runtime</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.MD.Cache.AssociationCacheAccessor.LoadCache">
+            <summary>
+            加载所有领域模型元数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.AssociationCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.AssociationCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取领域模型元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DictionaryCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DictionaryCacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DictionaryCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取Dictionary元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取Project元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ServiceGroupCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ServiceGroupCacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ServiceGroupCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取领SG元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IDataTransfer.DataFromRowToObject(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.EntityIndexDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.EntityIndexDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IndexAttributeDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IndexAttributeDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.MethodDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.MethodDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ParameterDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ParameterDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DictionaryDAO">
+            <summary>
+            字典数据访问类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.BaseDAO">
+            <summary>
+            数据访问基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.BaseDAO.OpenConnection">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.BaseDAO.CloseConnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.BaseDAO.BeginTransaction">
+            <summary>
+            开始事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.BaseDAO.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.BaseDAO.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.GetDictionaryByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询字典
+            </summary>
+            <param name="id">dictionary id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.GetDictionaryByName(System.String)">
+            <summary>
+            根据name查询字典
+            </summary>
+            <param name="id">dictionary id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.GetDictionaryByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询字典
+            </summary>
+            <param name="selectionRow">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.Insert(UFSoft.UBF.MD.IDictionary)">
+            <summary>
+            插入新字典
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.Delete(UFSoft.UBF.MD.Key)">
+            <summary>
+            删除字典
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.Delete(UFSoft.UBF.MD.IDictionary)">
+            <summary>
+            删除字典
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryDAO.Update(UFSoft.UBF.MD.IDictionary)">
+            <summary>
+            更新字典
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemByGuid(System.Guid)">
+            <summary>
+            根据id查询DictionaryItem
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据id查询DictionaryItem
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemByName(System.String)">
+            <summary>
+            根据name查询单个DictionaryItem
+            </summary>
+            <param name="name">Application name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询单个字典项
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemsByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询多个DictionaryItem
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.GetDictionaryItemsByTypeID(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据字典类型ID获取所有的字典项
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.Insert(UFSoft.UBF.MD.IDictionaryItem)">
+            <summary>
+            把DictionaryItem写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.Update(UFSoft.UBF.MD.IDictionaryItem)">
+            <summary>
+            保存DictionaryItem
+            </summary>
+            <param name="application"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.DeleteByGuid(System.Guid)">
+            <summary>
+            根据GUID删除DictionaryItem
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID删除DictionaryItem
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.DeleteByTypeID(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据字典类型编号删除字典项
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryItemDAO.DeleteByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件删除字典项
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DictionaryTypeDAO">
+            <summary>
+            实体元数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetDictionaryTypeByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据Key获取字典分类
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetDictionaryTypeByName(System.String)">
+            <summary>
+            根据名称查询DictionaryType
+            </summary>
+            <param name="name">名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetDictionaryTypeByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询字典分类
+            </summary>
+            <param name="selectionRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetDictionaryTypesByDictionaryID(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据字典查询所有的字典分类
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetChildDictionaryTypes(UFSoft.UBF.MD.Key)">
+            <summary>
+            查询DictionaryType的直接子分类
+            </summary>
+            <param name="parentDictionaryTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.GetDictionaryTypesByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            查询条件查询字典分类
+            </summary>
+            <param name="conditionRow">查询条件</param>
+            <returns>字典分类集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.Insert(UFSoft.UBF.MD.IDictionaryType)">
+            <summary>
+            把字典类型（包括字典项）写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.Update(UFSoft.UBF.MD.IDictionaryType)">
+            <summary>
+            更新
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DictionaryTypeDAO.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            删除字典类型，及其字典项
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetImports(UFSoft.UBF.MD.IProject)">
+            <summary>
+            返回Project所拥有的Import
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetProjectByGuid(System.Guid)">
+            <summary>
+            根据id查询Project
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetProjectByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询Project
+            </summary>
+            <param name="key">Project key</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetProjectByName(System.String)">
+            <summary>
+            根据name查询单个Project
+            </summary>
+            <param name="name">Project name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetProjectByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询一个Project
+            </summary>
+            <param name="conditionRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.GetProjects(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            返回服务组所拥有的项目的集合。
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.Insert(UFSoft.UBF.MD.IProject)">
+            <summary>
+            把project写入数据库
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.Update(UFSoft.UBF.MD.IProject)">
+            <summary>
+            保存Project
+            </summary>
+            <param name="project"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.DeleteByGuid(System.Guid)">
+            <summary>
+            根据GUID删除Project
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID删除Project
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDAO.SetServiceGroup(UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Key)">
+            <summary>
+            设置Project所属的服务组
+            </summary>
+            <param name="projectID"></param>
+            <param name="serviceGroupID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ProjectDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ReferenceDAO4DB.GetReferencesByEntity(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块下的所有模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ReferenceDAO4DB.GetDefaultReference(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块下的所有模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.GetServiceGroupByGuid(System.Guid)">
+            <summary>
+            根据id查询ServiceGroup
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.GetServiceGroupByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询ServiceGroup
+            </summary>
+            <param name="key">ServiceGroup key</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.GetServiceGroupByName(System.String)">
+            <summary>
+            根据name查询单个ServiceGroup
+            </summary>
+            <param name="id">serviceGroup id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.GetServiceGroupByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询一个SG
+            </summary>
+            <param name="conditionRow">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.GetAllServiceGroups">
+            <summary>
+            查询所有的ServiceGroup
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.Insert(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            把ServiceGroup写入数据库
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.Update(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            修改数据库中ServiceGroup的信息
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.DeleteByGuid(System.Guid)">
+            <summary>
+            根据GUID从数据库中删除ServiceGroup
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ServiceGroupDAO.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据Key从数据库中删除ServiceGroup
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取组件元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCacheAccessor2.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCacheAccessor2.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取组件元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCacheAccessor2.GetComponentByProjectID(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取组件
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DBModelCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DBModelCacheAccessor.LoadCache">
+            <summary>
+            加载所有领域模型元数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DBModelCacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DBModelCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取领域模型元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DomainModelCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DomainModelCacheAccessor.LoadCache">
+            <summary>
+            加载所有领域模型元数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.DomainModelCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取领域模型元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Cache.ORMapCacheAccessor.FindObjectByKey(System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Cache.TemplateCacheAccessor.FindObjectByKey(System.Object)">
+            <summary>
+            从数据库中获取模版数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.GetAssociationByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询组件
+            </summary>
+            <param name="id">component id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.GetAssociationByGuid(System.Guid)">
+            <summary>
+            根据主键查询关联的元数据信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.GetAssociationByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询单个组件
+            </summary>
+            <param name="_keyRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.GetAssociationsByParent(System.Int64)">
+            <summary>
+            根据类型主键查询关联的元数据信息
+            </summary>
+            <param name="typeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.GetAssociationsByChild(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据类型主键查询被组合的元数据信息
+            </summary>
+            <param name="typeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDAO.Insert(UFSoft.UBF.MD.EntityModel.IAssociation)">
+            <summary>
+            把表元数据(包括列)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ComponentDAO">
+            <summary>
+            组件数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询组件
+            </summary>
+            <param name="id">component id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentByName(System.String)">
+            <summary>
+            根据name查询单个组件
+            </summary>
+            <param name="id">component id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询单个组件
+            </summary>
+            <param name="selectionRow">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentsByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据主键查询组件
+            </summary>
+            <param name="id">component id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentsByModule(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据模块ID加载组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetComponentsBySG(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据模块ID加载组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetAllBEComponents">
+            <summary>
+            根据模块ID加载组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetAllBPComponents">
+            <summary>
+            根据模块ID加载组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.GetAllSVComponents">
+            <summary>
+            根据模块ID加载组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.Insert(UFSoft.UBF.MD.EntityModel.IBEComponent)">
+            <summary>
+            插入新组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.Publish(UFSoft.UBF.MD.EntityModel.IBEComponent)">
+            <summary>
+            插入新组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.Delete(UFSoft.UBF.MD.Key)">
+            <summary>
+            删除组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.RemoveComponentOld(UFSoft.UBF.MD.Key)">
+            <summary>
+            把元数据组件从数据库中卸载
+            </summary>
+            <param name="componentKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.RemoveComponent(UFSoft.UBF.MD.Key)">
+            <summary>
+            把元数据组件从数据库中卸载
+            </summary>
+            <param name="componentKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.Update(UFSoft.UBF.MD.EntityModel.IBEComponent)">
+            <summary>
+            更新组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDAO.BuildNamespace(UFSoft.UBF.MD.EntityModel.IBEComponent,System.Collections.IList)">
+            <summary>
+            构造名空间
+            </summary>
+            <param name="comp"></param>
+            <param name="classes"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DatabaseDAO.GetAllDatabases">
+            <summary>
+            根据主键查询表的元数据信息
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DatabaseDAO.GetDatabaseByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询表的元数据信息
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DatabaseDAO.Insert(UFSoft.UBF.MD.DBModel.IDatabase)">
+            <summary>
+            把表元数据(包括列)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AssociationDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AttributeDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.AttributeDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ComponentDataTransfer">
+            <summary>
+            业务模型组件数据转换类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ColumnDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ColumnDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DatabaseDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DatabaseDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.ServiceImp.DefaultBEService">
+            <summary>
+            业务模型元数据服务实现
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Create(System.Type)">
+            <summary>
+            创建元数据对象
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.GetRootModule">
+            <summary>
+            获取完整模块树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.GetRootModule2">
+            <summary>
+            获取完整模块树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.GetModule(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块树
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.GetChildModules(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块树
+            </summary>
+            <param name="moduleKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Reload(UFSoft.UBF.MD.IModule@)">
+            <summary>
+            重新加载元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Save(UFSoft.UBF.MD.IModule)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Delete(UFSoft.UBF.MD.IModule)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.BaseService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IEntityMetaDataService">
+            <summary>
+            实体元数据服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IMetaDataService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IMetaDataService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEntity(System.Guid)">
+            <summary>
+            根据Guid获取实体元数据
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEntity(System.String)">
+            <summary>
+            根据全名获取实体元数据
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEntity(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据Key获取实体元数据
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetChildEntities(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取实体元数据的子实体集合
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEnumType(System.Guid)">
+            <summary>
+            获取枚举元数据
+            </summary>
+            <param name="enumID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEnumType(System.String)">
+            <summary>
+            根据全名获取枚举元数据
+            </summary>
+            <param name="enumName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetEnumType(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取枚举元数据
+            </summary>
+            <param name="mdkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPropertyType(System.Guid)">
+            <summary>
+            获取值对象元数据
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPropertyType(System.String)">
+            <summary>
+            根据全名获取值对象元数据
+            </summary>
+            <param name="propertyID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPropertyType(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取值对象元数据
+            </summary>
+            <param name="mdkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPrimitiveType(System.Guid)">
+            <summary>
+            获取简单类型元数据
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPrimitiveType(System.String)">
+            <summary>
+            根据全名获取简单类型元数据
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPrimitiveType(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取简单类型元数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetValidator(System.Guid)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetValidator(System.String)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetValidator(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAssociationsByEntity(UFSoft.UBF.MD.EntityModel.IComplexType)">
+            <summary>
+            获取实体关联信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAssociationsByChildEntity(UFSoft.UBF.MD.EntityModel.IComplexType)">
+            <summary>
+            根据被组合实体获取关联信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAssociationByAttribute(UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            根据属性获取关联
+            </summary>
+            <param name="attr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetPrimitiveTypes">
+            <summary>
+            获取的简单类型对象集合
+            </summary>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentByGuid(System.Guid)">
+            <summary>
+            根据Guid获取组件
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentByName(System.String)">
+            <summary>
+            根据ID获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据组件Key获取组件
+            </summary>
+            <param name="ComponentKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentByProjectKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据项目Key获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponetsByModule(UFSoft.UBF.MD.IModule)">
+            <summary>
+            根据Module获取组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentsBySG(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            获取sg包含的所有组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetComponentsBySG(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取sg包含的所有组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAllBEComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAllBPComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.GetAllSVComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.Reload(UFSoft.UBF.MD.EntityModel.IBEComponent@)">
+            <summary>
+            重新加载组件元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IEntityMetaDataService.Reload(UFSoft.UBF.MD.EntityModel.IType@)">
+            <summary>
+            重新加载元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetInstance">
+            <summary>
+            获取元数据服务实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEntity(System.Guid)">
+            <summary>
+            根据ID获取实体元数据
+            </summary>
+            <param name="entityID">实体ID</param>
+            <returns>实体元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEnumType(System.Guid)">
+            <summary>
+            获取枚举元数据
+            </summary>
+            <param name="enumID">枚举ID</param>
+            <returns>枚举类型元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPropertyType(System.Guid)">
+            <summary>
+            获取值对象元数据
+            </summary>
+            <param name="propertyID"></param>
+            <returns>值类型</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPrimitiveType(System.Guid)">
+            <summary>
+            获取简单类型元数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetStereotype(System.Guid)">
+            <summary>
+            根据ID获取版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetValidator(System.Guid)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEntity(System.String)">
+            <summary>
+            根据全名获取实体元数据
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEnumType(System.String)">
+            <summary>
+            根据全名获取枚举元数据
+            </summary>
+            <param name="fullName">枚举全名</param>
+            <returns>枚举类型元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPropertyType(System.String)">
+            <summary>
+            根据全名获取值对象元数据
+            </summary>
+            <param name="propertyID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPrimitiveType(System.String)">
+            <summary>
+            根据全名获取简单类型元数据
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetValidator(System.String)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEntity(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据全名获取实体元数据
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetEnumType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据全名获取枚举元数据
+            </summary>
+            <param name="fullName">枚举全名</param>
+            <returns>枚举类型元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPropertyType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据全名获取值对象元数据
+            </summary>
+            <param name="propertyID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPrimitiveType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据全名获取简单类型元数据
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetValidator(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取检验元数据
+            </summary>
+            <returns>检验元数据</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetType(System.Guid)">
+            <summary>
+            根据guid获取类型元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetType(System.String)">
+            <summary>
+            根据全名获取类型元信息
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据Key获取类型元信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAssociationsByEntity(UFSoft.UBF.MD.EntityModel.IComplexType)">
+            <summary>
+            获取实体关联信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAssociationsByChildEntity(UFSoft.UBF.MD.EntityModel.IComplexType)">
+            <summary>
+            根据被组合实体获取关联信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAssociationByAttribute(UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            根据属性获取关联
+            </summary>
+            <param name="attr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetChildEntities(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取实体元数据的子实体集合
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetPrimitiveTypes">
+            <summary>
+            获取的简单类型对象集合
+            </summary>
+            <returns>简单类型集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetValidatorsByModule(UFSoft.UBF.MD.IModule)">
+            <summary>
+            获取所有检验元数据
+            </summary>
+            <returns>检验元数据集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetStereotypesByModule(UFSoft.UBF.MD.IModule)">
+            <summary>
+            获取所有版型
+            </summary>
+            <returns>版型集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentByGuid(System.Guid)">
+            <summary>
+            根据组件ID获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentByName(System.String)">
+            <summary>
+            根据组件ID获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据组件Key获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentByProjectKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据项目Key获取组件
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponetsByModule(UFSoft.UBF.MD.IModule)">
+            <summary>
+            根据Module获取组件
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentsBySG(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            获取sg包含的所有组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetComponentsBySG(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取sg包含的所有组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAllBEComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAllBPComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetAllSVComponents">
+            <summary>
+            获取所有BE组件
+            </summary>
+            <param name="sg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.GetService(System.String)">
+            <summary>
+            根据全名获取服务元数据
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Save(UFSoft.UBF.MD.IComponent)">
+            <summary>
+            保存组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Delete(UFSoft.UBF.MD.IComponent)">
+            <summary>
+            删除组件
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Save(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Reload(UFSoft.UBF.MD.EntityModel.IBEComponent@)">
+            <summary>
+            Reload组件
+            </summary>
+            <param name="beComponent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.Reload(UFSoft.UBF.MD.EntityModel.IType@)">
+            <summary>
+            Reload类型元数据
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.HaveSameComponentName(System.String)">
+            <summary>
+            检查是否有重名类
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.CreateTempAssociation(UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            创建默认关联
+            </summary>
+            <param name="attr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultBEService.BeforeSave(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存之前的处理
+            1、设置实体的IsModifyControl属性
+            2、设置实体的HasImpressibleAttribute属性
+            3、设置实体的IsInCache属性
+            </summary>
+            <param name="metaObj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IDictionaryService.GetDictionaryByID(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取字典
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IDictionaryService.GetDictionaryByName(System.String)">
+            <summary>
+            根据名称获取字典
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IDictionaryService.Reload(UFSoft.UBF.MD.IDictionary)">
+            <summary>
+            重新加载字典
+            </summary>
+            <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IDictionaryService.GetDictionaryItemsByType(UFSoft.UBF.MD.IDictionaryType)">
+            <summary>
+            根据字典分类编号获取所有的字典项
+            </summary>
+            <param name="dictionary"></param>
+            <param name="dictionaryTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.GetDictionaryByID(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取字典
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.GetDictionaryByName(System.String)">
+            <summary>
+            根据名称获取字典
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.Reload(UFSoft.UBF.MD.IDictionary)">
+            <summary>
+            重新装载字典
+            </summary>
+            <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.GetDictionaryItemsByType(UFSoft.UBF.MD.IDictionaryType)">
+            <summary>
+            根据字典分类的编号来获取相应的字典项集合
+            </summary>
+            <param name="dictionary"></param>
+            <param name="dictionaryTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存字典
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDictionaryService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除字典
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.GetProjectByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据项目标号装载项目
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.GetProjectsBySG(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            根据服务组获取所有的项目
+            </summary>
+            <param name="serviceGroup">服务组</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.SetServiceGroup(UFSoft.UBF.MD.IProject,UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            设置项目所属的SG。
+            </summary>
+            <param name="project">项目</param>
+            <param name="serviceGroup">服务组</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.DeleteByServiceGroup(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            删除服务组的所有项目
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据编号删除项目
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IProjectService.Insert(UFSoft.UBF.MD.IElement)">
+            <summary>
+            插入元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IServiceGroupService.GetServiceGroupByName(System.String)">
+            <summary>
+            根据名称获取ServiceGroup
+            </summary>
+            <param name="SGName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IServiceGroupService.GetServiceGroupByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取ServiceGroup
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IServiceGroupService.Reload(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            重新加载组件元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceGroupService.GetServiceGroupByName(System.String)">
+            <summary>
+            根据名称获取ServiceGroup
+            </summary>
+            <param name="SGName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceGroupService.GetServiceGroupByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取ServiceGroup
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceGroupService.Reload(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            重新装载ServiceGroup的数据
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceGroupService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存（新建或者修改）ServiceGroup
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceGroupService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除ServiceGroup
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IUIMetaDataService">
+            <summary>
+            UI元数据服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultUIMetadataService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultUIMetadataService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultUIMetadataService.GetDefaultReferenceKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取默认参照ID
+            </summary>
+            <param name="entityKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.GetApplicationByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取Application
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.GetRootApplication">
+            <summary>
+            获取所有根应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.GetServiceGroups(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            获取指定应用的所有服务组
+            </summary>
+            <param name="application"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.Reload(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            重新加载组件元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.Reload">
+            <summary>
+            重新加载所有应用
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.DeleteAll">
+            <summary>
+            删除所有应用元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.IApplicationService.PublishApplicationTree(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            发布应用树
+            </summary>
+            <param name="rootApplication">树的根</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.Runtime.MDSFactory">
+            <summary>
+            元数据服务工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Runtime.MDSFactory.GetService(System.Type)">
+            <summary>
+            获取元数据服务
+            </summary>
+            <example>IEntityMetaDataService service=(IEntityMetaDataService)MDSFactory.GetService(typeof(IEntityMetaDataService))</example>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.ITemplateService">
+            <summary>
+             通用模版服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ITemplateService.GetTemplatesByType(System.String)">
+            <summary>
+            获取模块下某种类型的所有模版
+            </summary>
+            <param name="moduleID"></param>
+            <param name="type">MDConstant.Template</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ITemplateService.GetTemplate(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据类型和ID获取模版
+            </summary>
+            <param name="id"></param>
+            <param name="type">模版类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ITemplateService.Save(UFSoft.UBF.MD.Template.ITemplate)">
+            <summary>
+            保存模版
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ITemplateService.Delete(UFSoft.UBF.MD.Template.ITemplate)">
+            <summary>
+            删除模版
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ORMapDataTransfer">
+            <summary>
+            OR映射数据转换类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDataTransfer.RowToEntityMap(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到IEntityMap
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDataTransfer.RowToAttributeMap(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到IAttributeMap
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDataTransfer.RowToORMap(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到IAttributeMap
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationColumnDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationColumnDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ClassDAO">
+            <summary>
+            实体元数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypeByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据Key获取类型
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypeByFullName(System.String)">
+            <summary>
+            根据全名查询Type
+            </summary>
+            <param name="fullName">类型全名</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypeByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询单个类型
+            </summary>
+            <param name="selectionRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypesByFlag(System.Int32)">
+            <summary>
+            根据类型查询Type
+            </summary>
+            <param name="Flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypesByComponent(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据模块查询Entity
+            </summary>
+            <param name="componentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypesByModule(UFSoft.UBF.MD.Key,System.Int32)">
+            <summary>
+            根据模块查询Entity
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetChildTypes(UFSoft.UBF.MD.Key)">
+            <summary>
+            查询Entity的直接子Entity
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.GetTypesByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            查询条件查询类型
+            </summary>
+            <param name="conditionRow">查询条件</param>
+            <returns>类型元信息集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.Insert(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            把实体(包括属性)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.Publish(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            把实体(包括属性)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.SortAttributeCollection(UFSoft.UBF.MD.EntityModel.IAttributeCollection)">
+            <summary>
+            把属性集合中的属性按照GroupName + Sequence进行排序
+            1、GroupName按字母排序，忽略大小写
+            2、同分组内按照Sequence（整型）排序
+            最大复杂度O(n!)
+            </summary>
+            <param name="attrs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.CompareGroupName(System.String,System.String)">
+            <summary>
+            比较分组名称，排列顺序：key -> sys -> misc -> 其他
+            </summary>
+            <param name="oldStr"></param>
+            <param name="newStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.Update3(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            把实体(包括属性)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.Update(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            更新
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.Update2(UFSoft.UBF.MD.EntityModel.IType)">
+            <summary>
+            更新
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDAO.DeleteByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            删除实体,表信息及映射信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ClassDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetModuleByGuid(System.Guid)">
+            <summary>
+            根据id查询Module
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetModuleByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询Module
+            </summary>
+            <param name="key">module key</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetRootModule">
+            <summary>
+            获取根节点，不加载子节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetModuleByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询一个Module
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetModulesByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件查询一个Module
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.GetChildModules(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询所有子模块
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDAO.Insert(UFSoft.UBF.MD.IModule)">
+            <summary>
+            把模块写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ModuleDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDAO.GetMapByEntityKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据实体查询实体映射信息
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDAO.Insert(UFSoft.UBF.MD.ORMapping.IEntityMap)">
+            <summary>
+            把OR映射写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDAO.Publish(UFSoft.UBF.MD.ORMapping.IEntityMap)">
+            <summary>
+            把OR映射写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ORMapDAO.Update(UFSoft.UBF.MD.ORMapping.IEntityMap)">
+            <summary>
+            更新OR映射
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDAO.GetRelationsByParentTable(UFSoft.UBF.MD.Key)">
+            <summary>
+            查询表的关联元数据信息
+            </summary>
+            <param name="tableId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDAO.GetRelationsByChildTable(UFSoft.UBF.MD.Key)">
+            <summary>
+            查询表的关联元数据信息
+            </summary>
+            <param name="tableId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDAO.Deletes(System.Int64,System.Int64)">
+            <summary>
+            删除外键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.RelationDAO.DeletesByChildTable(UFSoft.UBF.MD.Key)">
+            <summary>
+            删除外键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDAO.GetTableByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询表的元数据信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDAO.GetTableByName(System.String)">
+            <summary>
+            根据名称查询表的元数据信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDAO.GetTableByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据主键查询表的元数据信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDAO.GetTablesByModule(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据模块查询从属表集合的元数据信息
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDAO.Insert(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            把表元数据(包括列)写入数据库
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TableDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IReferenceMetadataService">
+            <summary>
+            参照模版服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.GetAllTemplates">
+            <summary>
+            获取模块包含的参照模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.GetEntityReferences(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取针对实体设计的参照
+            </summary>
+            <param name="entityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.GetTemplate(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取参照模版
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.GetDefaultReferenceKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取默认参照ID
+            </summary>
+            <param name="entityKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.GetDefaultReferenceKey(System.String)">
+            <summary>
+            根据类全名获取默认参照ID
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.Save(UFSoft.UBF.MD.Template.IReferenceTemplate)">
+            <summary>
+            保存模版
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IReferenceMetadataService.Delete(UFSoft.UBF.MD.Template.IReferenceTemplate)">
+            <summary>
+            删除模版
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceModelService.GetService(System.String)">
+            <summary>
+            根据全名获取服务元数据
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IDBMetaDataService">
+            <summary>
+            关系数据库元数据服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetTablesByModule(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块中所有表元数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetTable(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取表元信息
+            </summary>
+            <param name="id">Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetTable(System.String)">
+            <summary>
+            获取表元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetDatabase(System.String)">
+            <summary>
+            根据数据库名获取数据库元信息
+            </summary>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetAllDatabases">
+            <summary>
+            获取所有数据库元信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetRelations(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            获取父表的关系信息
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetRelations(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取父表的关系信息
+            </summary>
+            <param name="tableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetRelationsByChild(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            获取子表的关系信息
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.GetRelationsByChild(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取子表的关系信息
+            </summary>
+            <param name="tableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.Save(UFSoft.UBF.MD.DBModel.IDBComponent)">
+            <summary>
+            保存数据库组件
+            </summary>
+            <param name="dbc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.Remove(UFSoft.UBF.MD.DBModel.IDBComponent)">
+            <summary>
+            删除数据库组件
+            </summary>
+            <param name="dbc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.Save(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            保存表
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBMetaDataService.Remove(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            删除表
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetTablesByModule(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块中所有表元数据
+            </summary>
+            <param name="moduleId">模块ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetTable(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取表元数据
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetTable(System.String)">
+            <summary>
+            获取表元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetDatabase(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取数据库元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetDatabase(System.String)">
+            <summary>
+            根据数据库名获取数据库元信息
+            </summary>
+            <param name="dbName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetAllDatabases">
+            <summary>
+            获取所有数据库元信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetRelations(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            获取表的关系信息
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetRelations(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取父表的关系信息
+            </summary>
+            <param name="tableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetRelationsByChild(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            获取子表的关系信息
+            </summary>
+            <param name="tableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.GetRelationsByChild(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取子表的关系信息
+            </summary>
+            <param name="tableID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.Reload(UFSoft.UBF.MD.DBModel.ITable@)">
+            <summary>
+            重新加载元数据对象
+            </summary>
+            <param name="mdObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultDBModelService.HaveSameTableName(System.String)">
+            <summary>
+            检查是否有重名表
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.ServiceImp.DefaultORMapService">
+            <summary>
+            OR映射元数据服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IORMappingService.GetORMapsByEntity(UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            获取实体与表的映射信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IORMappingService.GetORMapsByEntity(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取实体与表的映射信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IORMappingService.GetRelationsFromTwoClass(System.String,System.String,System.String)">
+            <summary>
+            获取两个类之间表关联
+            </summary>
+            <param name="fromClassName"></param>
+            <param name="fromAttributeName"></param>
+            <param name="toClassName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultORMapService.GetORMapsByEntity(UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            获取实体与表的映射信息
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultORMapService.GetORMapsByEntity(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据实体ID获取映射信息
+            </summary>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultORMapService.GetRelationsFromTwoClass(System.String,System.String,System.String)">
+            <summary>
+            获取映射的数据表关系信息
+            </summary>
+            <param name="fromClassName"></param>
+            <param name="fromAttributeName"></param>
+            <param name="toClassName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultORMapService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存映射元数据对象
+            </summary>
+            <param name="entityMap">IEntityMap</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultORMapService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除
+            </summary>
+            <param name="metaObj">IElement</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetInstance">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetAllTemplates">
+            <summary>
+            获取模块包含的参照模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetEntityReferences(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取模块包含的参照模版
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetDefaultReferenceKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取默认参照ID
+            </summary>
+            <param name="entityKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetDefaultReferenceKey(System.String)">
+            <summary>
+            获取默认参照ID
+            </summary>
+            <param name="entityKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultReferenceTemplateService.GetTemplate(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取参照模版
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.ServiceImp.DefaultServiceModelService">
+            <summary>
+            服务元数据接口实现
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceModelService.GetService(System.String)">
+            <summary>
+            根据全名获取服务元数据
+            </summary>
+            <param name="fullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceModelService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultServiceModelService.Delete(UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultTemplateService.GetTemplatesByType(System.String)">
+            <summary>
+            获取模块下某种类型的所有模版
+            </summary>
+            <param name="moduleID"></param>
+            <param name="type">MDConstant.Template</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultTemplateService.GetTemplate(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取模版
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultTemplateService.Save(UFSoft.UBF.MD.Template.ITemplate)">
+            <summary>
+            保存元数据对象
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ServiceImp.DefaultTemplateService.Delete(UFSoft.UBF.MD.Template.ITemplate)">
+            <summary>
+            删除元数据对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.TemplateDAO">
+            <summary>
+            模版数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetTemplateByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据主键查询UI模版
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetTemplateByName(System.String,System.String)">
+            <summary>
+            根据name查询模版
+            </summary>
+            <param name="templateID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetTemplatesByModule(UFSoft.UBF.MD.Key,System.String)">
+            <summary>
+            获取模块下的所有模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetTemplatesByType(System.String)">
+            <summary>
+            获取模块下的所有模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetAllTemplates(System.String)">
+            <summary>
+            获取所有模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.TemplateDAO.GetTemplatesByCondition(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            根据条件获取模版
+            </summary>
+            <param name="typeFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.DatabaseHelper.GetDBConnection">
+            <summary>
+            获取数据库连接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.RuntimeReferenceLoad.GetComponent(UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.RuntimeReferenceLoad.GetComponent(System.String,UFSoft.UBF.MD.EnumDatasourceKind)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.RuntimeReferenceLoad.GetTypeInfo(UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取类型元信息
+            </summary>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.RuntimeReferenceLoad.GetReference(System.Type,UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取引用类型
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

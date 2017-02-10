@@ -1,0 +1,256 @@
+<View ID="437debdb-5117-4865-a8ed-d3a2403914e7" AllowPersonalization="True" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="10" GridColumnSpace="24" GridLeftMargin="10" GridRightMargin="10" GridRowCount="14" GridRowSpace="14" GridTopMargin="10" Height="560" IsAutoSize="False" IsMainForm="True" LayoutType="GridBag" Name="LaserLabDataProcessUIForm" Namespace="LaserLabDataProcessUIModel" TabStop="False" TemplateCode="BlankTemplate" TemplateType="SystemTemplate" UIModelID="0be095e0-34d0-447e-9f14-d2b46448f427" URI="UFIDA.U9.Cust.XMQX.LaserLabDataProcessUI.LaserLabDataProcessUIModel.LaserLabDataProcessUIFormWebPart" ViewID="4983" Width="760" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="14" />
+    <Column Fixed="False" Name="Column2" Type="Spacing" Width="100" />
+    <Column Fixed="False" Name="Column1" Width="10" />
+    <Column Fixed="False" Name="Column2" Type="Spacing" Width="100" />
+    <Column Fixed="False" Name="Column3" Type="Title" Width="10" />
+    <Column Fixed="False" Name="Column2" Type="Spacing" Width="100" />
+    <Column Fixed="True" Name="Column4" Width="10" />
+    <Column Fixed="True" Name="Column5" Width="171" />
+    <Column Fixed="True" Name="Column6" Width="85" />
+    <Column Fixed="True" Name="Column7" Width="100" />
+  </Columns>
+  <Rows>
+    <Row Fixed="False" Height="26" Name="Row0" />
+    <Row Fixed="False" Height="25" Name="Row1" />
+    <Row Fixed="False" Height="25" Name="Row2" />
+    <Row Fixed="False" Height="25" Name="Row3" />
+    <Row Fixed="False" Height="25" Name="Row4" />
+    <Row Fixed="False" Height="25" Name="Row5" />
+    <Row Fixed="False" Height="26" Name="Row6" />
+    <Row Fixed="False" Height="26" Name="Row7" />
+    <Row Fixed="False" Height="25" Name="Row8" />
+    <Row Fixed="False" Height="25" Name="Row9" />
+    <Row Fixed="False" Height="25" Name="Row10" />
+    <Row Fixed="False" Height="25" Name="Row11" />
+    <Row Fixed="False" Height="20" Name="Row12" />
+    <Row Fixed="False" Height="20" Name="Row13" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Line ID="cbd23799-b204-4555-99db-e3d62f6182ea" DisplayName="批量处理" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="8" GridX="0" GridY="0" Height="26" Name="Line0" TabIndex="0" TabStop="True" Width="515" X="10" Y="10" />
+  <Line ID="7997e7bc-1933-4d2c-b7b8-b169b891853a" DisplayName="手动调整" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="8" GridX="0" GridY="5" Height="25" Name="Line1" TabIndex="1" TabStop="True" Width="515" X="10" Y="206" />
+  <RadioBoxList ID="17106d81-f9af-4a4e-b5df-7221a3f199a7" GridHeight="4" GridWidth="1" GridX="1" GridY="1" Height="142" Name="RadioBoxList1" RepeatColumns="0" RepeatDirection="Vertical" TabIndex="2" TabStop="True" Width="100" X="24" Y="50">
+    <ListItems>
+      <ListItem ID="9d75e1a6-6406-4d6f-9997-34f7996715b1" DisplayName="金油数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemJY" Value="1" />
+      <ListItem ID="557a57da-c3d3-4ad9-a65c-995c54d544f0" DisplayName="包装数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemBZ" Value="2" />
+      <ListItem ID="cd3b3e82-d241-4839-874f-30539647a4a3" DisplayName="出货数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemCH" Value="3" />
+      <ListItem ID="5be6b57b-a297-42bf-a8cd-550a7f9f56ac" DisplayName="报废数据" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="ListItemBF" Value="4" />
+    </ListItems>
+  </RadioBoxList>
+  <Button ID="9a13a730-8749-4298-a337-269c55b2cfbe" AccessKey="" DisplayName="检查文件" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="3" GridY="2" Height="25" Name="BtnCheckFile" TabIndex="10" TabStop="True" Width="100" X="134" Y="89">
+    <Events>
+      <Event ActionName="BtnCheckFileAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+    </Events>
+  </Button>
+  <Button ID="23c0325b-562b-4e33-b050-cbc157e99a8f" AccessKey="" DisplayName="转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="3" GridY="3" Height="25" Name="BtnChange" TabIndex="11" TabStop="True" Width="100" X="134" Y="128">
+    <Events>
+      <Event ActionName="BtnChangeAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+    </Events>
+  </Button>
+  <Button ID="96410ed7-43d5-4048-a664-8411670a0e60" AccessKey="" DisplayName="金油强制转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="1" GridY="10" Height="25" Name="BtnJYForceChange" TabIndex="22" TabStop="True" Width="100" X="24" Y="403">
+    <Events>
+      <Event ActionName="BtnJYForceChangeAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+    </Events>
+  </Button>
+  <Button ID="f5a8d047-c5df-466c-8bd0-cb365765fcdd" AccessKey="" CoverPercent="100" DisplayName="包装强制转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="3" GridY="10" Height="25" Name="BtnBZForceChange" TabIndex="23" TabStop="True" Width="100" X="134" Y="403">
+    <Events>
+      <Event ActionName="BtnBZForceChangeAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+    </Events>
+  </Button>
+  <Button ID="6fdb5be4-87ff-4e7b-9c79-0f61f09e328a" AccessKey="" DisplayName="出货强制转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="5" GridY="10" Height="25" Name="BtnCHForceChange" TabIndex="24" TabStop="True" Width="100" X="244" Y="403">
+    <Events>
+      <Event ActionName="BtnCHForceChangeAction" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+    </Events>
+  </Button>
+  <GroupBox ID="20a95ee0-c648-4286-83ca-47bac990cf92" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="4" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="26" Name="GroupBox0" TabStop="False" Width="14" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+      <Row Fixed="False" Height="20" Name="Row2" />
+      <Row Fixed="False" Height="20" Name="Row3" />
+    </Rows>
+  </GroupBox>
+  <GroupBox ID="9b534dfa-c4e3-43ad-8e85-030a6d88355a" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="4" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="26" Name="GroupBox1" TabStop="False" Width="14" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+      <Row Fixed="False" Height="20" Name="Row2" />
+      <Row Fixed="False" Height="20" Name="Row3" />
+    </Rows>
+  </GroupBox>
+  <GroupBox ID="cc9b4712-1e40-4126-897c-999943ea9911" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="4" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="26" Name="GroupBox2" TabStop="False" Width="14" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+      <Row Fixed="False" Height="20" Name="Row2" />
+      <Row Fixed="False" Height="20" Name="Row3" />
+    </Rows>
+  </GroupBox>
+  <GroupBox ID="291c318c-c615-44c1-b095-0f14b2a54053" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="4" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="26" Name="GroupBox3" TabStop="False" Width="14" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+      <Row Fixed="False" Height="20" Name="Row2" />
+      <Row Fixed="False" Height="20" Name="Row3" />
+    </Rows>
+  </GroupBox>
+  <GroupBox ID="05ce8b01-d08f-4e1c-b420-267f72ba07a1" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="4" GridRowSpace="5" GridTopMargin="10" GridWidth="1" GridX="0" GridY="0" Height="26" Name="GroupBox4" TabStop="False" Width="14" X="10" Y="10">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="100" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column8" Type="Title" Width="100" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="100" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="20" Name="Row0" />
+      <Row Fixed="False" Height="20" Name="Row1" />
+      <Row Fixed="False" Height="20" Name="Row2" />
+      <Row Fixed="False" Height="20" Name="Row3" />
+    </Rows>
+  </GroupBox>
+  <TabControl ID="1d818ee0-8d86-4d9d-b9ea-5fff4230f5b4" GridHeight="3" GridWidth="8" GridX="0" GridY="6" Height="105" Name="TabControl0" TabIndex="35" TabStop="True" Width="515" X="10" Y="245">
+    <TabPage ID="bea4aa14-2ecb-40c8-8e6a-aa5ee18eed40" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="LB编码转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="4" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="10" Height="75" Name="TabPage0" TabStop="False" Width="507" X="0" Y="0">
+      <Columns>
+        <Column Fixed="True" Name="Column0" Type="Title" Width="60" />
+        <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+        <Column Fixed="True" Name="Column2" Width="120" />
+        <Column Fixed="True" Name="Column3" Type="Spacing" Width="100" />
+      </Columns>
+      <Rows>
+        <Row Fixed="False" Height="25" Name="Row0" />
+      </Rows>
+      <Label ID="80477b6f-a8b4-4c53-91cf-5e626819c9fe" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="25" IsNull="True" IsSequence="False" Name="lblLaserLabCode1531" RelationControl="LaserLabCode1531" TabIndex="0" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="60" X="10" Y="10">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <TextBox ID="427b254e-8dfe-4f13-9cbe-43d80967105a" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="LaserLabCode1531" RelationControl="lblLaserLabCode1531" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="LaserLabCode" UIViewID="LaserLabDataProcessView" Visible="True" Width="120" X="80" Y="10">
+        <Events />
+        <RelationControls />
+      </TextBox>
+    </TabPage>
+    <TabPage ID="e39bbe12-dbb4-4a45-8e68-3446dadcb163" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="批量转换" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="8" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="10" Height="75" Name="TabPage1" TabStop="False" Width="507" X="0" Y="0">
+      <Columns>
+        <Column Fixed="True" Name="Column0" Type="Title" Width="60" />
+        <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+        <Column Fixed="True" Name="Column2" Width="120" />
+        <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+        <Column Fixed="True" Name="Column4" Type="Title" Width="60" />
+        <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+        <Column Fixed="True" Name="Column6" Width="120" />
+        <Column Fixed="True" Name="Column7" Width="60" />
+      </Columns>
+      <Rows>
+        <Row Fixed="False" Height="25" Name="Row0" />
+        <Row Fixed="False" Height="25" Name="Row1" />
+      </Rows>
+      <Label ID="e26823f7-2a8e-4206-9c3b-02dec3e2b657" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="25" IsNull="True" IsSequence="False" Name="lblBatchNo2223" RelationControl="BatchNo2223" TabIndex="0" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="60" X="10" Y="10">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <TextBox ID="2ce095b6-218d-4193-9da3-97e6248cdc06" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="BatchNo2223" RelationControl="lblBatchNo2223" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="BatchNo" UIViewID="LaserLabDataProcessView" Visible="True" Width="120" X="80" Y="10">
+        <Events />
+        <RelationControls />
+      </TextBox>
+      <Label ID="cfd66b49-8009-4922-839d-bf6b6ac267bc" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="25" IsNull="True" IsSequence="False" Name="lblType1904" RelationControl="Type1904" TabIndex="2" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="60" X="220" Y="10">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <TextBox ID="0787967f-09be-457e-8b17-451910d250fa" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Type1904" RelationControl="lblType1904" TabIndex="3" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Type" UIViewID="LaserLabDataProcessView" Visible="True" Width="120" X="290" Y="10">
+        <Events />
+        <RelationControls />
+      </TextBox>
+      <Label ID="09fce17e-0338-446d-8295-184b00bdfb8b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="25" IsNull="True" IsSequence="False" Name="lblFlowNumStart1487" RelationControl="FlowNumStart1487" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="60" X="10" Y="40">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <NumberControl ID="5e1ae247-307f-4c3f-afdc-35de9909858c" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="FlowNumStart1487" RelationControl="lblFlowNumStart1487" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="FlowNumStart" UIViewID="LaserLabDataProcessView" Visible="True" Width="120" X="80" Y="40">
+        <Events />
+        <RelationControls />
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+      </NumberControl>
+      <Label ID="7fcb51db-e73a-4cfe-879a-92094ad4b18e" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="25" IsNull="True" IsSequence="False" Name="lblFlowNumEnd1705" RelationControl="FlowNumEnd1705" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="60" X="220" Y="40">
+        <Events />
+        <RelationControls />
+        <Events />
+      </Label>
+      <NumberControl ID="2e57d4fc-00d8-42c0-840c-6730a9ad1415" DisplayFormat="10.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="25" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="FlowNumEnd1705" RelationControl="lblFlowNumEnd1705" TabIndex="7" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="FlowNumEnd" UIViewID="LaserLabDataProcessView" Visible="True" Width="120" X="290" Y="40">
+        <Events />
+        <RelationControls />
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+      </NumberControl>
+    </TabPage>
+    <Events />
+  </TabControl>
+  <Events />
+</View>
