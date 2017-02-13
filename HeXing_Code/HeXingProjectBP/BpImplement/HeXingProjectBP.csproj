@@ -31,7 +31,30 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-<Import Project="HeXingProjectBP.target" />  
-
+  <ItemGroup>
+    <Reference Include="System.configuration" />
+    <Reference Include="UFIDA.U9.Base.BaseBE">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBE.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.HeXingProjectBE">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.HeXingProjectBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.HeXingProjectBE.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.HeXingProjectBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.GL.ISVGLImportSV">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.GL.ISVGLImportSV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.GL.ISVGLImportSV.Agent">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.GL.ISVGLImportSV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.GL.ISVGLImportSV.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.GL.ISVGLImportSV.Deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="HeXingProjectBP.target" />
 </Project>

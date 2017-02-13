@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.BS.Job.JobBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.BS.Job.RequestNotInListException">
+            <summary>
+            异常类型: 所选请求不在任务列表中！操作失败！
+            
+             所选请求不在任务列表中！操作失败！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestNotInListException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 所选请求不在任务列表中！操作失败！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestNotInListException.#ctor">
+            <summary>
+            异常类型: 所选请求不在任务列表中！操作失败！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestNotInListException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 所选请求不在任务列表中！操作失败！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.RequestSubmitException">
+            <summary>
+            异常类型: 请求提交失败！
+            
+             请求提交失败！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestSubmitException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请求提交失败！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestSubmitException.#ctor">
+            <summary>
+            异常类型: 请求提交失败！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RequestSubmitException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请求提交失败！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.JobBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.JobBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.BS.Job.JobBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.FireJobEngineException">
+            <summary>
+            异常类型: 调用任务服务器出错，请检查任务服务器配置！
+            
+             调用任务服务器出错，请检查任务服务器配置！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.FireJobEngineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 调用任务服务器出错，请检查任务服务器配置！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.FireJobEngineException.#ctor">
+            <summary>
+            异常类型: 调用任务服务器出错，请检查任务服务器配置！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.FireJobEngineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 调用任务服务器出错，请检查任务服务器配置！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.ResumeException">
+            <summary>
+            异常类型: 当前请求不在“执行”状态，不能进行挂起操作！
+            
+             当前请求不在“执行”状态，不能进行挂起操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ResumeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前请求不在“执行”状态，不能进行挂起操作！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ResumeException.#ctor">
+            <summary>
+            异常类型: 当前请求不在“执行”状态，不能进行挂起操作！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ResumeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前请求不在“执行”状态，不能进行挂起操作！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.RemotParamDTOData">
+            <summary>
+            远程请求数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RemotParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.RemotParamDTOData.#ctor(System.String,System.String,System.String,System.Int64,System.Byte[],System.Int32,System.Int64,System.String,System.Int32,System.Int32,System.Boolean,System.String,System.Byte[],System.Boolean,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_requestCode">
+            <summary>
+            请求编码
+            远程请求数据传输对象.Misc.请求编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_requestName">
+            <summary>
+            请求名称
+            远程请求数据传输对象.Misc.请求名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_bPFullName">
+            <summary>
+            BP全名称
+            远程请求数据传输对象.Misc.BP全名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_application">
+            <summary>
+            应用
+            远程请求数据传输对象.Misc.应用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_bPAgentObj">
+            <summary>
+            BPAgent对象
+            远程请求数据传输对象.Misc.BPAgent对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_priority">
+            <summary>
+            优先级
+            远程请求数据传输对象.Misc.优先级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_schedulerProject">
+            <summary>
+            调度方案
+            远程请求数据传输对象.Misc.调度方案
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_requestDescription">
+            <summary>
+            请求描述
+            远程请求数据传输对象.Misc.请求描述
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_autoSubmit">
+            <summary>
+            是否自动提交
+            远程请求数据传输对象.Misc.是否自动提交
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_retryCount">
+            <summary>
+            重试次数
+            远程请求数据传输对象.Misc.重试次数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_instantJob">
+            <summary>
+            是否立即执行
+            远程请求数据传输对象.Misc.是否立即执行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_appType">
+            <summary>
+            应用类型
+            远程请求数据传输对象.Misc.应用类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_context">
+            <summary>
+            上下文
+            远程请求数据传输对象.Misc.上下文
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_isErrReStart">
+            <summary>
+            是否失败需要重启动
+            远程请求数据传输对象.Misc.是否失败需要重启动
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_errReStartTimeSpan">
+            <summary>
+            失败重启时间间隔(分钟)
+            远程请求数据传输对象.Misc.失败重启时间间隔(分钟)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_errReStartCount">
+            <summary>
+            失败重启次数（超过3次不再处理）
+            远程请求数据传输对象.Misc.失败重启次数（超过3次不再处理）
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_isSuccessCanNotReStart">
+            <summary>
+            是否执行成功不能重新执行
+            远程请求数据传输对象.Misc.是否执行成功不能重新执行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_memoXML">
+            <summary>
+            备查Xml
+            远程请求数据传输对象.Misc.备查Xml
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_memoStr">
+            <summary>
+            备查信息
+            远程请求数据传输对象.Misc.备查信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_isSendMsg">
+            <summary>
+            是否发消息
+            远程请求数据传输对象.Misc.是否发消息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_isQErrGoOn">
+            <summary>
+            是否队列错误继续
+            远程请求数据传输对象.Misc.是否队列错误继续
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.RemotParamDTOData.m_isQErrAbort">
+            <summary>
+            是否队列错误直接终止
+            远程请求数据传输对象.Misc.是否队列错误直接终止
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.ReExecuteJobException">
+            <summary>
+            异常类型: 重新执行请求失败！请检查服务器配置！
+            
+             重新执行请求失败！请检查服务器配置！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExecuteJobException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 重新执行请求失败！请检查服务器配置！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExecuteJobException.#ctor">
+            <summary>
+            异常类型: 重新执行请求失败！请检查服务器配置！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExecuteJobException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 重新执行请求失败！请检查服务器配置！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.TimeEndModelTimeErrorException">
+            <summary>
+            异常类型: 当前请求中调度方案的结束时间必须大于首次执行时间！
+            
+             当前请求中调度方案的结束时间必须大于首次执行时间！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.TimeEndModelTimeErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前请求中调度方案的结束时间必须大于首次执行时间！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.TimeEndModelTimeErrorException.#ctor">
+            <summary>
+            异常类型: 当前请求中调度方案的结束时间必须大于首次执行时间！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.TimeEndModelTimeErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前请求中调度方案的结束时间必须大于首次执行时间！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.JobNotExistException">
+            <summary>
+            异常类型: 该请求结果对应的任务已经删除！
+            
+             该请求结果对应的任务已经删除！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.JobNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 该请求结果对应的任务已经删除！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.JobNotExistException.#ctor">
+            <summary>
+            异常类型: 该请求结果对应的任务已经删除！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.JobNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 该请求结果对应的任务已经删除！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.StateViewObjectData">
+            <summary>
+            运行态数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.StateViewObjectData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.StateViewObjectData.#ctor(System.String,UFIDA.U9.BS.Job.RequestData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.StateViewObjectData.m_stateName">
+            <summary>
+            名称
+            运行态数据传输对象.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.BS.Job.StateViewObjectData.m_request">
+            <summary>
+            异步请求
+            运行态数据传输对象.Misc.异步请求
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.ReExeJobNullException">
+            <summary>
+            异常类型: 请求已经被删除！
+            
+             请求已经被删除！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExeJobNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请求已经被删除！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExeJobNullException.#ctor">
+            <summary>
+            异常类型: 请求已经被删除！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.ReExeJobNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请求已经被删除！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.BS.Job.InactiveException">
+            <summary>
+            异常类型: 当前请求不在“挂起”状态，不能进行激活操作！
+            
+             当前请求不在“挂起”状态，不能进行激活操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.InactiveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前请求不在“挂起”状态，不能进行激活操作！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.InactiveException.#ctor">
+            <summary>
+            异常类型: 当前请求不在“挂起”状态，不能进行激活操作！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.BS.Job.InactiveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前请求不在“挂起”状态，不能进行激活操作！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+    </members>
+</doc>
