@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp);
+		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo);
     }
 	[Serializable]    
     public class SingleChangeBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy.ISingleChangeBP
@@ -51,6 +51,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 						private System.Int32 flowEnd ;
 						private System.Int32 changeModel ;
 						private System.Int32 changeCp ;
+						private System.String shipBatchNo ;
 			
 	#endregion	
 		
@@ -189,6 +190,25 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 				this.changeCp = value;	
 			}
 		}		
+						
+
+		/// <summary>
+		/// 出货批次号 (该属性可为空,且无默认值)
+		/// 单个转换BP.Misc.出货批次号
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String ShipBatchNo
+		{
+			get	
+			{	
+				return this.shipBatchNo;
+			}
+
+			set	
+			{	
+				this.shipBatchNo = value;	
+			}
+		}		
 			
 	#endregion	
 
@@ -216,7 +236,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
             ISingleChangeBP channel = oChannel as ISingleChangeBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd, changeModel, changeCp);
+				return channel.Do(context, out returnMsgs, laserLab, batchNo, type, flowStart, flowEnd, changeModel, changeCp, shipBatchNo);
 	    }
             return  false;
         }
@@ -233,7 +253,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-																																			
+																																								
 		}
 		#endregion 
 

@@ -110,6 +110,8 @@ namespace LaserLabDataProcessUIModel
         IUFFldNumberControl FlowNumStart1487;
         IUFLabel lblFlowNumEnd1705;
         IUFFldNumberControl FlowNumEnd1705;
+        IUFLabel lblShipBatchNo1764;
+        IUFFldTextBox ShipBatchNo1764;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -150,7 +152,7 @@ namespace LaserLabDataProcessUIModel
 			this.BtnCHForceChange.Click += new EventHandler(BtnCHForceChange_Click);		
 						
 
-		
+			
             AfterEventBind();
         }
         #endregion            
@@ -245,7 +247,7 @@ namespace LaserLabDataProcessUIModel
         {
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"LaserLabDataProcessUIForm",true,760,560);
             CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 10, 14, 0, 14, 10, 10, 10, 10);
-			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
+			InitViewBindingContainer(this, _panel,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
 			UIControlBuilder.BuildContainerGridLayout(_panel, 14,new GridColumnDef[]{new GridColumnDef(14,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(100,bool.Parse("False")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(171,bool.Parse("True")),new GridColumnDef(85,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(26,bool.Parse("False")),new GridRowDef(26,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
@@ -292,21 +294,21 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.BtnChange, "11");		
 
 
-				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 100, 25, 1, 10, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
+				this.BtnJYForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnJYForceChange", true, true, 100, 25, 1, 11, 1, 1, "100","", this.Model.ElementID,"BtnJYForceChangeAction",false,"96410ed7-43d5-4048-a664-8411670a0e60","","96410ed7-43d5-4048-a664-8411670a0e60");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnJYForceChange, "22");		
 
 
-				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 100, 25, 3, 10, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
+				this.BtnBZForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnBZForceChange", true, true, 100, 25, 3, 11, 1, 1, "100","", this.Model.ElementID,"BtnBZForceChangeAction",false,"f5a8d047-c5df-466c-8bd0-cb365765fcdd","","f5a8d047-c5df-466c-8bd0-cb365765fcdd");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnBZForceChange, "23");		
 
 
-				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 100, 25, 5, 10, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
+				this.BtnCHForceChange = UIControlBuilder.BuilderUFButton(_panel, true, "BtnCHForceChange", true, true, 100, 25, 5, 11, 1, 1, "100","", this.Model.ElementID,"BtnCHForceChangeAction",false,"6fdb5be4-87ff-4e7b-9c79-0f61f09e328a","","6fdb5be4-87ff-4e7b-9c79-0f61f09e328a");
 	
 
 		
@@ -355,8 +357,26 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.TabControl0, "35");		
 
 
+				this.lblShipBatchNo1764 = UIControlBuilder.BuilderUFLabel(_panel, "lblShipBatchNo1764", "", "True", "True", "Right", 100, 25, 1, 9, 1, 1, "100","a527a5c4-57ac-4dad-8a8b-4b703b59802e","b392ee40-724b-4c91-af42-4aad111b9bb6");
 
-														
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblShipBatchNo1764, "36");		
+
+
+				this.ShipBatchNo1764 = UIControlBuilder.BuilderTextBox(_panel, "ShipBatchNo1764", "True", "True", "True", "False", "Left", 0, 60, 0, 100, 25, 3, 9, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblShipBatchNo1764","","50","a527a5c4-57ac-4dad-8a8b-4b703b59802e","2a03c431-8fc4-4562-bf49-d4ab6ebd1083");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ShipBatchNo1764, "False", "ShipBatchNo", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldShipBatchNo, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.ShipBatchNo1764, "37");		
+		 
+
+
+																
      
 			
 			
@@ -499,9 +519,9 @@ namespace LaserLabDataProcessUIModel
 	        private IUFTabPage _BuilderControl_TabPage0(IUFTabControl container)
         {
             IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage0",true, true, "0","bea4aa14-2ecb-40c8-8e6a-aa5ee18eed40","bea4aa14-2ecb-40c8-8e6a-aa5ee18eed40");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 4, 1, 0, 5, 10, 10, 10, 10);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 7, 1, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFTabPage,  this.Model.LaserLabDataProcessView, "LaserLabDataProcessView", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(25,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(25,bool.Parse("False")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
@@ -581,7 +601,7 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.Type1904, "3");		
 		 
 
-				this.lblFlowNumStart1487 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumStart1487", "", "True", "True", "Right", 60, 25, 0, 1, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","09fce17e-0338-446d-8295-184b00bdfb8b");
+				this.lblFlowNumStart1487 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumStart1487", "", "True", "True", "Left", 60, 25, 0, 1, 1, 1, "100","e199c6c0-a2a1-4f03-916c-b707772fc7c8","09fce17e-0338-446d-8295-184b00bdfb8b");
 
 
 								
@@ -598,7 +618,7 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.FlowNumStart1487, "5");		
 		 
 
-				this.lblFlowNumEnd1705 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumEnd1705", "", "True", "True", "Right", 60, 25, 4, 1, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","7fcb51db-e73a-4cfe-879a-92094ad4b18e");
+				this.lblFlowNumEnd1705 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblFlowNumEnd1705", "", "True", "True", "Left", 60, 25, 4, 1, 1, 1, "100","7bebb355-dd80-4f99-8a5a-97dd061e38d3","7fcb51db-e73a-4cfe-879a-92094ad4b18e");
 
 
 								

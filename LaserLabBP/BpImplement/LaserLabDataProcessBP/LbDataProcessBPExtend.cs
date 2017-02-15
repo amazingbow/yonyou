@@ -74,12 +74,14 @@
             {
                 while ((line = sr.ReadLine()) != null)
                 {
-                    line = line.Trim();
-                    LaserLab lab = LaserLab.Finder.Find("LB='" + line + "'");
+                    var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var laserCode = strList[1].Trim().Substring(strList[1].Length - 8);
+                    var time = strList[1].Replace(laserCode, "").Trim();
+                    LaserLab lab = LaserLab.Finder.Find("LB='" + laserCode + "'");
                     if (lab == null) continue;
                     if (lab.Cp == LBEnum.Shipment) continue;
                     lab.Cp = LBEnum.Scrap;
-                    lab.ScarpDT = DateTime.Now;
+                    lab.ScarpDT = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
                 }
                 session.Commit();
             }

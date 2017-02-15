@@ -147,6 +147,7 @@ namespace LaserLabDataProcessUIModel
             proxy.FlowEnd = flowEnd ?? 0;
             proxy.ChangeModel = this.TabControl0.SelectedIndex;
             proxy.ChangeCp = changeCp;
+            proxy.ShipBatchNo = this.Model.LaserLabDataProcessView.FocusedRecord.ShipBatchNo;
             var result = proxy.Do();
             if (result)
             {
