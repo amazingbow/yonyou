@@ -27,6 +27,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		private System.Int32 flowEnd;
 		private System.Int32 changeModel;
 		private System.Int32 changeCp;
+		private System.String shipBatchNo;
 		
 	    #endregion
 		
@@ -147,6 +148,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 			set
 			{
 				changeCp = value;
+			}
+		}
+		/// <summary>
+		/// 出货批次号	
+		/// 单个转换BP.Misc.出货批次号
+		/// </summary>
+		/// <value></value>
+		public System.String ShipBatchNo
+		{
+			get
+			{
+				return this.shipBatchNo;
+			}
+			set
+			{
+				shipBatchNo = value;
 			}
 		}
 	    #endregion

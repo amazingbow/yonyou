@@ -144,6 +144,10 @@ namespace LaserLabDataProcessUIModel
 		{
 			get { return this.Fields["FlowNumEnd"]; }
 		}
+		public IUIField FieldShipBatchNo
+		{
+			get { return this.Fields["ShipBatchNo"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -167,6 +171,7 @@ namespace LaserLabDataProcessUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"Type", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6120c860-1760-4d74-867b-2541d6ce54ac");
 			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumStart", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e199c6c0-a2a1-4f03-916c-b707772fc7c8");
 			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumEnd", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7bebb355-dd80-4f99-8a5a-97dd061e38d3");
+			UIModelRuntimeFactory.AddNewUIField(this,"ShipBatchNo", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a527a5c4-57ac-4dad-8a8b-4b703b59802e");
 
 
 			this.CurrentFilter = new LaserLabDataProcessViewDefaultFilterFilter(this);
@@ -357,6 +362,19 @@ namespace LaserLabDataProcessUIModel
 			}
 			set{
 				this[this.uiviewLaserLabDataProcessView.FieldFlowNumEnd] = value;
+			}
+		}
+		
+		
+		public  String ShipBatchNo
+		{
+			get{
+				//object value = this[this.uiviewLaserLabDataProcessView.FieldShipBatchNo] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewLaserLabDataProcessView.FieldShipBatchNo);
+			}
+			set{
+				this[this.uiviewLaserLabDataProcessView.FieldShipBatchNo] = value;
 			}
 		}
 		#endregion

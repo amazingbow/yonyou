@@ -238,7 +238,7 @@ namespace LaserLabDataProcessUIModel
 		}
 
 		#endregion 
-		
+			
         #endregion
         
     }

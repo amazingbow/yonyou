@@ -50,8 +50,16 @@
                                 lab.PackDT = DateTime.Now;
                                 break;
                             case 3:
+                                if (lab.Cp == LBEnum.Scrap)
+                                {
+                                    throw new Exception(lab.LB + "当前镭射表已经报废，不能出货！");
+                                }
                                 lab.Cp = LBEnum.Shipment;
                                 lab.ShipDT = DateTime.Now;
+                                if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
+                                {
+                                    lab.ShipBN = bpObj.ShipBatchNo;
+                                }
                                 break;
                             default:
                                 break;
@@ -78,12 +86,20 @@
                                             item.GoldOilDT = DateTime.Now;
                                             break;
                                         case 2:
+                                            if (item.Cp == LBEnum.Scrap)
+                                            {
+                                                throw new Exception(item.LB + "镭射表已经报废，不能出货！");
+                                            }
                                             item.Cp = LBEnum.Packing;
                                             item.PackDT = DateTime.Now;
                                             break;
                                         case 3:
                                             item.Cp = LBEnum.Shipment;
                                             item.ShipDT = DateTime.Now;
+                                            if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
+                                            {
+                                                item.ShipBN = bpObj.ShipBatchNo;
+                                            }
                                             break;
                                         default:
                                             break;
@@ -103,8 +119,16 @@
                                         item.PackDT = DateTime.Now;
                                         break;
                                     case 3:
+                                        if (item.Cp == LBEnum.Scrap)
+                                        {
+                                            throw new Exception(item.LB + "镭射表已经报废，不能出货！");
+                                        }
                                         item.Cp = LBEnum.Shipment;
                                         item.ShipDT = DateTime.Now;
+                                        if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
+                                        {
+                                            item.ShipBN = bpObj.ShipBatchNo;
+                                        }
                                         break;
                                     default:
                                         break;
