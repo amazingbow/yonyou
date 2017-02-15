@@ -6,5 +6,5 @@ using UFSoft.UBF.MD;
 using UFSoft.UBF.Sys.Resource.Runtime;
 
 
-[assembly: UBFComponent("602181bd-6f79-4eb9-9bbe-f8b0818f2427", "UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel", "LaserLabBNChangeUIModel")]
+[assembly: UBFComponent("602181bd-6f79-4eb9-9bbe-f8b0818f2427", "UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel", "LaserLabBNChangeUIModel")]
 

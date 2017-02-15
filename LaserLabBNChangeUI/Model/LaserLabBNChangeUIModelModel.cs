@@ -8,7 +8,7 @@ using UFSoft.UBF.UI.MD.Runtime.Implement;
 
 #endregion
 
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
 	[Serializable]
 	public partial class LaserLabBNChangeUIModelModel : UIModel

@@ -167,14 +167,14 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 		private void BtnAllClear_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
             this.TextBox1.Text = null;
             this.TextBox2.Text = null;
             this.TextBox3.Text = null;
             this.TextBox5.Text = null;
-            this.NumberControl2.Text = null;
-            this.NumberControl1.Text = null;
-            this.NumberControl3.Text = null;
+            this.NumberControl2.Value = null;
+            this.NumberControl1.Value = null;
+            this.NumberControl3.Value = null;
+            this.Model.AllLaserLabCreateView.Clear();
             this.Model.AllLaserLabAddView.Clear();
 			BtnAllClear_Click_DefaultImpl(sender,e);
 		}	
@@ -187,41 +187,9 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
             this.Model.AllLaserLabAddView.Clear();
 			BtnAllLeft_Click_DefaultImpl(sender,e);
 		}
-
-		
-            
-
-		#region 自定义数据初始化加载和数据收集
-		private void OnLoadData_Extend(object sender)
-		{	
-			OnLoadData_DefaultImpl(sender);
-		}
-		private void OnDataCollect_Extend(object sender)
-		{	
-			OnDataCollect_DefaultImpl(sender);
-		}
-		#endregion  
-
-        #region 自己扩展 Extended Event handler 
-		public void AfterOnLoad()
+        private void BtnCreateLB_Click_Extend(object sender, EventArgs e)
 		{
-            this.Model.ClearErrorMessage();	
-            this.NumberControl3.AutoPostBack = true;
-		}
-
-        public void AfterCreateChildControls()
-        {
-
-
-		
-        }
-        
-        public void AfterEventBind()
-        {
-        }
-        
-		public void BeforeUIModelBinding()
-		{
+			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AllLaserLabCreateView.Clear();
             this.Model.AllLaserLabCreateView.ClearErrorMessage();
             //批次号
@@ -269,6 +237,45 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
                 Grouprecord.Customer = this.TextBox3.Text;
             }
             #endregion
+
+
+            BtnCreateLB_Click_DefaultImpl(sender, e);
+		}
+       
+		
+            
+
+		#region 自定义数据初始化加载和数据收集
+		private void OnLoadData_Extend(object sender)
+		{	
+			OnLoadData_DefaultImpl(sender);
+		}
+		private void OnDataCollect_Extend(object sender)
+		{	
+			OnDataCollect_DefaultImpl(sender);
+		}
+		#endregion  
+
+        #region 自己扩展 Extended Event handler 
+		public void AfterOnLoad()
+		{
+            this.Model.ClearErrorMessage();	
+		}
+
+        public void AfterCreateChildControls()
+        {
+
+
+		
+        }
+        
+        public void AfterEventBind()
+        {
+        }
+        
+		public void BeforeUIModelBinding()
+		{
+            
 		}
 
 		public void AfterUIModelBinding()

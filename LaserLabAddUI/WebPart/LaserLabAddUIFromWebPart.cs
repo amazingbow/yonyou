@@ -124,6 +124,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
         IUFFldNumberControl NumberControl1;
         IUFFldNumberControl NumberControl2;
         IUFFldNumberControl NumberControl3;
+        IUFButton BtnCreateLB;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -171,6 +172,9 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 						
 				//Button控件事件
 			this.BtnAllLeft.Click += new EventHandler(BtnAllLeft_Click);		
+						
+				//Button控件事件
+			this.BtnCreateLB.Click += new EventHandler(BtnCreateLB_Click);		
 						
 
 		
@@ -495,16 +499,16 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 	        private IUFTabPage _BuilderControl_TabPage2(IUFTabControl container)
         {
             IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage2",true, true, "2","c9230f25-ee66-4fbf-a413-69bb95647882","c9230f25-ee66-4fbf-a413-69bb95647882");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 20, 18, 0, 5, 5, 5, 5, 5);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 22, 18, 0, 5, 5, 5, 5, 5);
 			InitViewBindingContainer(this, _UFTabPage,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(40,bool.Parse("False")),new GridColumnDef(40,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(40,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(65,bool.Parse("True")),new GridColumnDef(55,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(70,bool.Parse("True")),new GridColumnDef(50,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(39,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(1,bool.Parse("True")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(10,bool.Parse("False")),new GridRowDef(1,bool.Parse("True")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(17,bool.Parse("False")),new GridColumnDef(45,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(40,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(15,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(15,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(55,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(70,bool.Parse("True")),new GridColumnDef(50,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(60,bool.Parse("True")),new GridColumnDef(17,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(1,bool.Parse("True")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(30,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(10,bool.Parse("False")),new GridRowDef(1,bool.Parse("True")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
 
 
 
-				this.Label1 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label1", "", "True", "True", "Right", 80, 20, 2, 2, 1, 1, "100","8b2cdd50-0a52-4c5c-b4a4-7f4da23b2f4b","8b2cdd50-0a52-4c5c-b4a4-7f4da23b2f4b");
+				this.Label1 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label1", "", "True", "True", "Right", 60, 20, 2, 2, 1, 1, "100","8b2cdd50-0a52-4c5c-b4a4-7f4da23b2f4b","8b2cdd50-0a52-4c5c-b4a4-7f4da23b2f4b");
 
 
 								
@@ -531,7 +535,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.Label2, "2");		
 
 
-				this.TextBox2 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox2", "True", "True", "True", "False", "Left", 0, 60, 0, 60, 20, 9, 2, 1, 1, "False", "100"
+				this.TextBox2 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox2", "True", "True", "True", "False", "Left", 0, 60, 0, 75, 20, 9, 2, 2, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"Label2","","","","e3896280-efde-4e6d-8874-9500d0b3e5d0");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.TextBox2, "False", "", null, null, "");
 
@@ -540,7 +544,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.TextBox2, "3");		
 		 
 
-				this.Label3 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label3", "", "True", "True", "Right", 55, 20, 11, 2, 1, 1, "100","8b7f1eba-f74d-420b-b7de-3583823aa460","8b7f1eba-f74d-420b-b7de-3583823aa460");
+				this.Label3 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label3", "", "True", "True", "Right", 55, 20, 12, 2, 1, 1, "100","8b7f1eba-f74d-420b-b7de-3583823aa460","8b7f1eba-f74d-420b-b7de-3583823aa460");
 
 
 								
@@ -549,7 +553,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.Label3, "4");		
 
 
-				this.TextBox3 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox3", "True", "True", "True", "False", "Left", 0, 60, 0, 70, 20, 13, 2, 1, 1, "False", "100"
+				this.TextBox3 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox3", "True", "True", "True", "False", "Left", 0, 60, 0, 70, 20, 14, 2, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"Label3","","","","deb11d77-5703-4f2b-9dbd-5c18de502a21");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.TextBox3, "False", "", null, null, "");
 
@@ -558,7 +562,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.TextBox3, "5");		
 		 
 
-				this.Label4 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label4", "", "True", "True", "Right", 80, 20, 2, 3, 1, 1, "100","00b7aba7-384f-412e-826e-9e70844f744e","00b7aba7-384f-412e-826e-9e70844f744e");
+				this.Label4 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label4", "", "True", "True", "Right", 80, 20, 16, 2, 1, 1, "100","00b7aba7-384f-412e-826e-9e70844f744e","00b7aba7-384f-412e-826e-9e70844f744e");
 
 
 								
@@ -567,7 +571,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.Label4, "7");		
 
 
-				this.Label5 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label5", "", "True", "True", "Right", 60, 20, 7, 3, 1, 1, "100","e063ae8e-3629-40b1-b413-d2839f1c625d","e063ae8e-3629-40b1-b413-d2839f1c625d");
+				this.Label5 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label5", "", "True", "True", "Right", 60, 20, 2, 3, 1, 1, "100","e063ae8e-3629-40b1-b413-d2839f1c625d","e063ae8e-3629-40b1-b413-d2839f1c625d");
 
 
 								
@@ -576,7 +580,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.Label5, "8");		
 
 
-				this.Label6 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label6", "", "True", "True", "Right", 55, 20, 11, 3, 1, 1, "100","6680ef48-4821-4c0e-aca1-701b9ce51f96","6680ef48-4821-4c0e-aca1-701b9ce51f96");
+				this.Label6 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label6", "", "True", "True", "Right", 60, 20, 7, 3, 1, 1, "100","6680ef48-4821-4c0e-aca1-701b9ce51f96","6680ef48-4821-4c0e-aca1-701b9ce51f96");
 
 
 								
@@ -585,7 +589,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.Label6, "9");		
 
 
-				this.TextBox5 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox5", "True", "True", "True", "False", "Left", 0, 60, 0, 60, 20, 9, 3, 1, 1, "False", "100"
+				this.TextBox5 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox5", "True", "True", "True", "False", "Left", 0, 60, 0, 80, 20, 4, 3, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"Label5","","","","c8eedf46-1650-4001-9fd3-237f398c812e");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.TextBox5, "False", "", null, null, "");
 
@@ -594,7 +598,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.TextBox5, "10");		
 		 
 
-				this.Label7 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label7", "", "True", "True", "Right", 60, 20, 15, 3, 1, 1, "100","4ced92d8-fe5b-4212-b7bd-1d75a7b19115","4ced92d8-fe5b-4212-b7bd-1d75a7b19115");
+				this.Label7 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label7", "", "True", "True", "Right", 55, 20, 12, 3, 1, 1, "100","4ced92d8-fe5b-4212-b7bd-1d75a7b19115","4ced92d8-fe5b-4212-b7bd-1d75a7b19115");
 
 
 								
@@ -638,14 +642,14 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.DataGrid9, "18");		
 
 
-				this.BtnAllSave = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnAllSave", true, true, 60, 30, 18, 10, 1, 1, "100","", this.Model.ElementID,"",false,"4db991fd-bbcd-4425-afcd-910053d141ba","","4db991fd-bbcd-4425-afcd-910053d141ba");
+				this.BtnAllSave = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnAllSave", true, true, 60, 30, 20, 10, 1, 1, "100","", this.Model.ElementID,"",false,"4db991fd-bbcd-4425-afcd-910053d141ba","","4db991fd-bbcd-4425-afcd-910053d141ba");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.BtnAllSave, "19");		
 
 
-				this.BtnAllClear = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnAllClear", true, true, 60, 30, 18, 12, 1, 1, "100","", this.Model.ElementID,"",false,"72611f7b-4c27-4aab-96ea-7e5f2a8058c1","","72611f7b-4c27-4aab-96ea-7e5f2a8058c1");
+				this.BtnAllClear = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnAllClear", true, true, 60, 30, 20, 12, 1, 1, "100","", this.Model.ElementID,"",false,"72611f7b-4c27-4aab-96ea-7e5f2a8058c1","","72611f7b-4c27-4aab-96ea-7e5f2a8058c1");
 	
 
 		
@@ -659,7 +663,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.BtnAllLeft, "21");		
 
 
-				this.NumberControl1 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl1", "True", "True", "True", "Left", 0, 60, 0, 80, 20, 4, 3, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.NumberControl1 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl1", "True", "True", "True", "Left", 0, 60, 0, 60, 20, 18, 2, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Left,0,true,false,true,"Label4","","","0360faeb-00d1-490d-942f-7490f0d0e5da",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.NumberControl1, "False", "", null, null, "");
 	
@@ -667,7 +671,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.NumberControl1, "22");		
 		 
 
-				this.NumberControl2 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl2", "True", "True", "True", "Left", 0, 60, 0, 70, 20, 13, 3, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.NumberControl2 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl2", "True", "True", "True", "Left", 0, 60, 0, 75, 20, 9, 3, 2, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Left,0,true,false,true,"Label6","","","c72f1af5-9210-46da-b0aa-e6a1430cd951",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.NumberControl2, "False", "", null, null, "");
 	
@@ -675,7 +679,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.NumberControl2, "23");		
 		 
 
-				this.NumberControl3 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl3", "True", "True", "True", "Left", 0, 60, 0, 60, 20, 17, 3, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.NumberControl3 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "NumberControl3", "True", "True", "True", "Left", 0, 60, 0, 70, 20, 14, 3, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Left,0,true,false,true,"Label7","","","da744b78-16c8-40a9-9b0e-1c5b3a030f92",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.NumberControl3, "False", "", null, null, "");
 	
@@ -683,8 +687,15 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 			UIControlBuilder.BuilderUFControl(this.NumberControl3, "24");		
 		 
 
+				this.BtnCreateLB = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnCreateLB", true, true, 60, 20, 20, 3, 1, 1, "100","", this.Model.ElementID,"",false,"e1fae196-80cd-4af8-829f-42d09ee118d7","","e1fae196-80cd-4af8-829f-42d09ee118d7");
+	
 
-																						
+		
+			UIControlBuilder.BuilderUFControl(this.BtnCreateLB, "25");		
+
+
+
+																							
 
             this.TabPage2 = _UFTabPage;
             return _UFTabPage;
@@ -699,16 +710,19 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
        
         private void _BuilderControl_DataGrid8(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid8", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, true,true,true,true,true,20,true, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid8", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, true) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "14");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 270, 285, 2, 5, 5, 10, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 355, 285, 1, 5, 7, 10, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.AllLaserLabCreateView, "AllLaserLabCreateView", "", null, 20, "编码录入-批量生成模型");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
-			_UFGrid.AllowSelectAllPage=false;
-			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
-		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
+			_UFGrid.AllowSelectAllPage=true;
+			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=true;
+		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=true;
             this.DataGrid8 = _UFGrid;
             container.Controls.Add(_UFGrid);
+			//Grid所有页全选事件 
+			((UFWebDataGridAdapter)this.DataGrid8).GridSelectAllPageHandler +=
+				new GridSelectAllPageDelegate(UFIDA.U9.UI.PDHelper.PDListHelper.UFGridDataGrid_GridSelectAllPageDelegate);
 
 
 
@@ -756,16 +770,19 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
        
         private void _BuilderControl_DataGrid9(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid9", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid9", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, true) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "18");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 255, 285, 11, 5, 6, 10, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 395, 285, 11, 5, 8, 10, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.AllLaserLabAddView, "AllLaserLabAddView", "", null, 20, "编码录入-批量录入模型");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
-			_UFGrid.AllowSelectAllPage=false;
-			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
-		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
+			_UFGrid.AllowSelectAllPage=true;
+			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=true;
+		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=true;
             this.DataGrid9 = _UFGrid;
             container.Controls.Add(_UFGrid);
+			//Grid所有页全选事件 
+			((UFWebDataGridAdapter)this.DataGrid9).GridSelectAllPageHandler +=
+				new GridSelectAllPageDelegate(UFIDA.U9.UI.PDHelper.PDListHelper.UFGridDataGrid_GridSelectAllPageDelegate);
 
 
 
