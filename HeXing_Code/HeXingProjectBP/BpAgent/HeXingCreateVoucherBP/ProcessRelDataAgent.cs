@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		void Do(IContext context, out IList<MessageBase> outMessages );
+		List<System.String> Do(IContext context, out IList<MessageBase> outMessages );
     }
 	[Serializable]    
     public class ProcessRelDataProxy : OperationProxyBase//, UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy.IProcessRelData
@@ -62,11 +62,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy
 
 		#region Public Method
 		
-        public void Do()
+        public List<System.String> Do()
         {
   			InitKeyList() ;
- 			InvokeAgent<UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy.IProcessRelData>();
-			
+ 			List<System.String> result = (List<System.String>)InvokeAgent<UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy.IProcessRelData>();
+			return GetRealResult(result);
         }
         
 		protected override object InvokeImplement<T>(T oChannel)
@@ -76,12 +76,17 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP.Proxy
             IProcessRelData channel = oChannel as IProcessRelData;
             if (channel != null)
             {
-				channel.Do(context, out returnMsgs);
+				return channel.Do(context, out returnMsgs);
 	    }
             return  null;
         }
 		#endregion
 		
+		//处理由于序列化导致的返回值接口变化，而进行返回值的实际类型转换处理．
+		private List<System.String> GetRealResult(List<System.String> result)
+		{
+								return result ;
+			}
 		#region  Init KeyList 
 		//初始化SKey集合--由于接口不一样.BP.SV都要处理
 		private void InitKeyList()

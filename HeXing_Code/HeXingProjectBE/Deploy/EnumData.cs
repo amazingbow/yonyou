@@ -53,6 +53,18 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		Account = 10,
 		/// <summary>
+		/// 费用类型
+		/// </summary>
+		FeeType = 11,
+		/// <summary>
+		/// 物料组
+		/// </summary>
+		MaterialGroup = 12,
+		/// <summary>
+		/// 资产
+		/// </summary>
+		Asset = 13,
+		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 

@@ -70,15 +70,20 @@
             if (!File.Exists(path)) return 2;
             StreamReader sr = new StreamReader(path, Encoding.Default);
             String line;
+            StringBuilder sb = new StringBuilder();
             using (ISession session = Session.Open())
             {
                 while ((line = sr.ReadLine()) != null)
                 {
                     var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    var laserCode = strList[1].Trim().Substring(strList[1].Length - 8);
-                    var time = strList[1].Replace(laserCode, "").Trim();
+                    var time = strList[1].Trim().Substring(strList[1].Length - 8);
+                    var laserCode = strList[1].Replace(time, "").Trim();
                     LaserLab lab = LaserLab.Finder.Find("LB='" + laserCode + "'");
-                    if (lab == null) continue;
+                    if (lab == null)
+                    {
+                        sb.AppendLine(laserCode + "镭射码不存在");
+                        continue;
+                    }
                     if (lab.Cp == LBEnum.Shipment) continue;
                     lab.Cp = LBEnum.Scrap;
                     lab.ScarpDT = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
@@ -87,6 +92,18 @@
             }
             sr.Close();
             ModifyFileName(path, LBEnum.Scrap);
+            if (sb.Length > 0)
+            {
+                string errFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "ScrapError.txt";
+                if (File.Exists(errFileName) == false)//如果不存在就创建file文件夹
+                {
+                    FileStream fileStream = File.Create(errFileName);//创建该文件
+                    fileStream.Close();
+                    StreamWriter sw = new StreamWriter(errFileName);
+                    sw.Write(sb.ToString());
+                    sw.Close();
+                }
+            }
             return 1;
         }
 
