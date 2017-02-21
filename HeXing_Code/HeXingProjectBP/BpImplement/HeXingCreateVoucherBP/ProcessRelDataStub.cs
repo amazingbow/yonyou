@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        void Do(IContext context ,out IList<MessageBase> outMessages );
+        List<System.String> Do(IContext context ,out IList<MessageBase> outMessages );
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,15 +46,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP
         #region IProcessRelData Members
 
         //[OperationBehavior]
-        public void Do(IContext context ,out IList<MessageBase> outMessages)
+        public List<System.String> Do(IContext context ,out IList<MessageBase> outMessages)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			DoEx(commonData);
+			return DoEx(commonData);
         }
         
         //[OperationBehavior]
-        public void DoEx(ICommonDataContract commonData)
+        public List<System.String> DoEx(ICommonDataContract commonData)
         {
 			this.CommonData = commonData ;
             try
@@ -64,7 +64,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP
 
 
 				//处理返回类型.
-				objectRef.Do(); //没有返回值
+				List<System.String> result = objectRef.Do();
+
+				if (result == null)
+					return null ;
+						return result;
 
 	        }
 			catch (System.Exception e)

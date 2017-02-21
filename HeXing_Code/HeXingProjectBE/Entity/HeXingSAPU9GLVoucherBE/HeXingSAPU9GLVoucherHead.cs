@@ -630,15 +630,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 是否写入U9凭证成功 (该属性可为空,且无默认值)
+			/// 是否写入U9凭证成功 (该属性可为空,但有默认值)
 			/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 			/// </summary>
 			/// <value></value>
-			public  System.String IsU9Successful
+			public  System.Int32 IsU9Successful
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("IsU9Successful");
+					System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
 					return value;
 						}
 			}
@@ -1169,15 +1169,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 		
 			/// <summary>
-		/// 是否写入U9凭证成功 (该属性可为空,且无默认值)
+		/// 是否写入U9凭证成功 (该属性可为空,但有默认值)
 		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 		/// </summary>
 		/// <value></value>
-			public  System.String IsU9Successful
+			public  System.Int32 IsU9Successful
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("IsU9Successful");
+				System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
 				return value;
 				}
 				set
@@ -2465,7 +2465,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			{
 				object obj =this.GetValue("IsU9Successful");
 				if (obj != null)
-					data.IsU9Successful=(System.String)obj;
+					data.IsU9Successful=(System.Int32)obj;
 			}
 	     
 	    

@@ -71,8 +71,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 	     			
 	     			
 	     			
-	     			
-	     			
+	     							IsU9Successful= 0; 			     			
 	     			
 	     							U9VoucherID= 0; 		
 
@@ -457,8 +456,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.String m_isU9Successful ;
-		public System.String IsU9Successful
+		private System.Int32 m_isU9Successful ;
+		public System.Int32 IsU9Successful
 		{
 			get	
 			{	

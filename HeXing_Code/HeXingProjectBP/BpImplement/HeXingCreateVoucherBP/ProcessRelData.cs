@@ -36,11 +36,12 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingCreateVoucherBP
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public List<System.String> Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				List<System.String> result =  (List<System.String>)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

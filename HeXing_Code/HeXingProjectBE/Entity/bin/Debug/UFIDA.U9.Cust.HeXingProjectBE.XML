@@ -235,7 +235,7 @@
         </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.IsU9Successful">
             <summary>
-            是否写入U9凭证成功 (该属性可为空,且无默认值)
+            是否写入U9凭证成功 (该属性可为空,但有默认值)
             SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
             </summary>
             <value></value>
@@ -566,7 +566,7 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.HeXingSAPU9GLVoucherHead.EntityOriginal.IsU9Successful">
             <summary>
              OrginalData属性。只可读。
-            是否写入U9凭证成功 (该属性可为空,且无默认值)
+            是否写入U9凭证成功 (该属性可为空,但有默认值)
             SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
             </summary>
             <value></value>
@@ -3389,6 +3389,24 @@
             对照类型.Misc.科目
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.FeeType">
+            <summary>
+            枚举值: 费用类型  Value:11  
+            对照类型.Misc.费用类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.MaterialGroup">
+            <summary>
+            枚举值: 物料组  Value:12  
+            对照类型.Misc.物料组
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Asset">
+            <summary>
+            枚举值: 资产  Value:13  
+            对照类型.Misc.资产
+            </summary>
+        </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Values">
             <summary>
             Get RelationEnum's All Values.
@@ -3450,6 +3468,21 @@
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_Account">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_FeeType">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_MaterialGroup">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_Asset">
             <summary>
             已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
             </summary>
