@@ -1,0 +1,230 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Include="UBFAssebmlyInfo.cs" >
+      <Inproject>true</Inproject>
+    </Compile>
+	<Compile Include="WebPart\HXRelationRefUIFromWebPart.cs" >
+	    <Inproject>true</Inproject>
+    </Compile>
+	<Compile Include="WebPart\HXRelationRefUIFromWebPartCodeBehind.cs" >
+	    <Inproject>true</Inproject>
+    </Compile>
+	<Compile Include="WebPart\HXRelationRefUIFromWebPartCodeBehindExtend.cs" >
+	    <Inproject>true</Inproject>
+    </Compile>
+	
+	<Compile Include="Model\HXRelationRefUIModelModel.cs" > 
+	    <Inproject>false</Inproject>
+	</Compile>
+	<Compile Include="Model\HXRelationRefUIModelModelExtend.cs" >
+	    <Inproject>true</Inproject>
+	</Compile>
+	
+	<Compile Include="Action\HXRelationRefUIModelAction.cs" >
+	    <Inproject>false</Inproject>
+	</Compile>
+	<Compile Include="Action\HXRelationRefUIModelActionExtend.cs" >
+	    <Inproject>true</Inproject>
+	</Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />  
+    <Reference Include="System.Web" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="UFSoft.UBF.UI.UIFormPersonalization">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.UIFormPersonalization.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.UIFormPersonalization.Library">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.UIFormPersonalization.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Business">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Business.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.PL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.PL.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UBF.System">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UBF.System.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.UI.PDHelper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFIDA.U9.UI.PDHelper.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.Data">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Util.Data.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.Globalization">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Util.Globalization.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.AopFrame">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.AopFrame.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.WebControls.BaseComponent">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.WebControls.BaseComponent.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.Controls.Interface">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.Controls.Interface.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.WebControls.Association">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.WebControls.Association.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="RadTreeView">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\RadTreeView.Net2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.MVC">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.MVC.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.WebControls.UFDataGrid">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.WebControls.UFDataGrid.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Base">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Base.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Entity">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Entity.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Exception">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Exception.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Filter.Exception">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Filter.Exception.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Filter.FilterModel">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Filter.FilterModel.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.Filter.FilterWebControl">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.Filter.FilterWebControl.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Report.UI.ReportView.Web.Controls">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.UI.ReportView.Web.Controls.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+	  <Reference Include="UFSoft.UBF.ExportService">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.ExportService.dll</HintPath>
+		  <Private>False</Private>
+	  </Reference>
+	  
+	  <Reference Include="UFSoft.UBF.Report.UI.ReportView.Common">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Report.UI.ReportView.Common.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.IView" >  
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.IView.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.State" >  
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.State.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.ActionProcess" >  
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.ActionProcess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.FormProcess" >  
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.FormProcess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.MD.Runtime" >  
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.MD.Runtime.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.Engine.Runtime" >
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.Engine.Runtime.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.UI.Portal">
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.Portal.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+	<Reference Include="UFSoft.UBF.UI.Portal.Components">
+		  <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.UI.Portal.Components.dll</HintPath>
+		  <SpecificVersion>False</SpecificVersion>
+		  <Private>False</Private>
+	</Reference>	  
+	<Reference Include="System.Web.Extensions">
+	  <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\System.Web.Extensions.dll</HintPath>
+	  <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+	<Reference Include="UFIDA.UBF.Query.CommonService">
+		  <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFIDA.UBF.Query.CommonService.dll</HintPath>
+		  <SpecificVersion>False</SpecificVersion>
+		  <Private>False</Private>
+	</Reference>
+	  
+    <Reference Include="UFSoft.UBF.Sys.ResourceBP.Agent">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Sys.ResourceBP.Agent.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+	  
+	  
+    
+	
+	  
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+   <PropertyGroup Condition="">
+    <PostBuildEvent>
+    
+	Md $(ProjectDir)\.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.WebPart\\\
+	cd $(ProjectDir)\.\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.WebPart\\\
+	Copy $(TargetDir)\UFIDA.U9.Cust.HeXingProjectUI.WebPart.dll 
+	Copy $(TargetDir)\UFIDA.U9.Cust.HeXingProjectUI.WebPart.pdb 
+    </PostBuildEvent>
+   </PropertyGroup>
+</Project>
