@@ -5,6 +5,7 @@
     using System.Configuration;
     using System.Text;
     using UFIDA.U9.Base;
+    using UFIDA.U9.Base.Currency;
     using UFIDA.U9.Base.UOM;
     using UFIDA.U9.CBO.FI.VoucherCategory;
     using UFIDA.U9.CBO.Pub.Controller;
@@ -64,7 +65,9 @@
                             TargetOrgCode = Context.LoginOrg.Code,//是否要用用户传输的公司和名称？
                             TargetOrgName = Context.LoginOrg.Name
                         };
-
+                        HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='"
+                                  + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
+                        var currency = Currency.FindByCode(shipCurrency.U9Code);
                         item.IsU9Successful = 1;
                     }
                     catch (Exception ex)
@@ -110,15 +113,13 @@
             return dto;
         }
 
-        private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry, HeXingSAPU9GLVoucherHead voucher)
+        private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry, HeXingSAPU9GLVoucherHead voucher,Currency currency)
         {
             ISVImportEntryDTOData VoucherItem = new ISVImportEntryDTOData();
             VoucherItem.Voucher = new ISVImportVoucherDTOData();
-            VoucherItem.Voucher.VoucherID = voucher.VoucherID;
-            VoucherItem.SerialNo = entry.SerialNo;
+            VoucherItem.SerialNo = (int)entry.SerialNo;
             //分录
             VoucherItem.Currency = new CommonArchiveDataDTOData();
-            VoucherItem.EntryID = entry.EntryID;
             //摘要
             VoucherItem.Abstracts = entry.Abstracts;
             #region 科目 VoucherItem.Account.Code = stb.ToString();
@@ -225,26 +226,21 @@
             VoucherItem.Account = new CommonArchiveDataDTOData();
             VoucherItem.Account.Code = stb.ToString();
             #endregion
-            //讲数据库中的segment1 替换成code
-            if (voucher.Segment == entry.Account1)
-            {
-                voucher.Segment = VoucherItem.Account.Code;
-            }
+
             //币种
             VoucherItem.Currency = new CommonArchiveDataDTOData();
 
-            var currency = Currency.FindByCode(entry.CurrencyCode);
+
             if (currency != null)
             {
                 VoucherItem.Currency.ID = currency.ID;
                 VoucherItem.Currency.Code = currency.Code;
                 VoucherItem.Currency.Name = currency.Name;
-                entry.Currency = VoucherItem.Currency.ID;
             }
-            //汇率类型
-            VoucherItem.ExchangeRateTypes = entry.ExchangeRateTypes;
-            //对本币汇率
-            VoucherItem.OCToFCExchangeRate = entry.OCToFCExchangeRate;
+            ////汇率类型
+            //VoucherItem.ExchangeRateTypes = 0;
+            ////对本币汇率
+            //VoucherItem.OCToFCExchangeRate = 1;
             //借方金额(本币)
             VoucherItem.AccountedDr = entry.AccountedDr;
             //贷方金额(本币)
@@ -254,9 +250,9 @@
             //贷方金额(原币)
             VoucherItem.EnteredCr = entry.EnteredCr;
             //借方数量
-            VoucherItem.AmountDr = entry.AmountDr;
-            //贷方数量
-            VoucherItem.AmountCr = entry.AmountCr;
+            //VoucherItem.AmountDr = 0;
+            ////贷方数量
+            //VoucherItem.AmountCr = 0;
             //银行账号
             VoucherItem.BankAccount = new CommonArchiveDataDTOData();
             var bankAccount = BankAccount.FindByCode(entry.BankAccountCode);

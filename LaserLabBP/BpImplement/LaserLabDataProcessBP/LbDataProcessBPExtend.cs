@@ -75,7 +75,7 @@
             {
                 while ((line = sr.ReadLine()) != null)
                 {
-                    var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var strList = line.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     var time = strList[1].Trim().Substring(strList[1].Length - 8);
                     var laserCode = strList[1].Replace(time, "").Trim();
                     LaserLab lab = LaserLab.Finder.Find("LB='" + laserCode + "'");
