@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.DefaultValue.CommonService</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.CtrlCaseBasicInfos.GetCaseBasicInfoByID(System.Guid)">
+            <summary>
+            通过ID获取一个CaseBasicInfo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.CtrlCaseBasicInfos.RemoveCaseBasicInfoByID(System.Int64)">
+            <summary>
+            通过ID删除一个CaseBasicInfo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueCaseBasicInfo.GetControlValue(UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlDefine)">
+            <summary>
+            根据控件定义取得对应的值(自动应用固定值或最后值规则)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueCaseBasicInfo.GetNeedUpdateLastValueDefines">
+            <summary>
+            取得所有非Grid的，需要取最后值的控件定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueCaseBasicInfo.GetGridNeedUpdateLastValueDefines">
+            <summary>
+            取得所有Grid的，需要取最后值的控件定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueManage.GetControlNeedCollectData(System.Web.UI.Control)">
+            <summary>
+            获取指定控件发生change事件时是否需要收集数据
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueManage.SetControlNeedCollectData(System.Web.UI.Control)">
+            <summary>
+            设置指定控件发生change事件时，需要收集数据
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueModel.GetControlDefaultValueCase(UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue)">
+            <summary>
+            根据主控件的值取得对应的默认值基本方案
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueModel.GetControlDefaultValueCase(UFSoft.UBF.UI.UIFormPersonalization.Model.ConditionValues)">
+            <summary>
+            根据主控件的值取得对应的默认值基本方案
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueModel.InitDefaultValue2UIView(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            对UIView设置默认值
+            </summary>
+            <param name="model"></param>                    
+        </member>
+        <member name="M:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueModel.InitDefaultValue2Grid(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            对Grid设置默认值
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.DefaultValue.CommonService.DefaultValueModel.MainControlID">
+            <summary>
+            取得默认值模型的主控件ID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.DefaultValue.CommonService.CaseType">
+            <summary>
+            方案类型
+            </summary>
+        </member>
+    </members>
+</doc>

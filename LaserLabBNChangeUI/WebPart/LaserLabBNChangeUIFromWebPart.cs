@@ -103,6 +103,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
         IUFFldTextBox TextBox6;
         IUFDataGrid DataGrid1;
         IUFButton AllBtnExecute;
+        IUFButton BtnFind;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -132,6 +133,9 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 						
 				//Button控件事件
 			this.AllBtnExecute.Click += new EventHandler(AllBtnExecute_Click);		
+						
+				//Button控件事件
+			this.BtnFind.Click += new EventHandler(BtnFind_Click);		
 						
 
 	
@@ -186,6 +190,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 			if (IsDataBinding) //2006-9-7 可由开发人员控制
 			{
 				BeforeUIModelBinding();
+				//BtnFind对应隐藏域的数据传递。:True
+				UFIDA.U9.UI.PDHelper.CommonReferenceHelper.BindingBtnFindParam(this);
 								if(!Page.IsPostBack)
 				{
 					EnumTypeBinding.BindEnumControls(this);
@@ -400,7 +406,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 			UIControlBuilder.BuilderUFControl(this.TextBox5, "12");		
 		 
 
-				this.Label6 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label6", "", "True", "True", "Right", 100, 25, 15, 2, 1, 1, "100","faddc403-542a-4f41-92c5-e17270d934f7","faddc403-542a-4f41-92c5-e17270d934f7");
+				this.Label6 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label6", "", "True", "True", "Right", 170, 30, 7, 12, 3, 1, "100","faddc403-542a-4f41-92c5-e17270d934f7","faddc403-542a-4f41-92c5-e17270d934f7");
 
 
 								
@@ -409,7 +415,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 			UIControlBuilder.BuilderUFControl(this.Label6, "13");		
 
 
-				this.TextBox6 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox6", "True", "True", "True", "False", "Left", 0, 60, 0, 100, 25, 17, 2, 1, 1, "False", "100"
+				this.TextBox6 = UIControlBuilder.BuilderTextBox(_UFTabPage, "TextBox6", "True", "True", "True", "False", "Left", 0, 60, 0, 110, 30, 10, 12, 2, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"Label6","","","","d2771847-ef17-434b-93ef-1a47bd326c23");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.TextBox6, "False", "", null, null, "");
 
@@ -432,8 +438,15 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 			UIControlBuilder.BuilderUFControl(this.AllBtnExecute, "17");		
 
 
+				this.BtnFind = UIControlBuilder.BuilderUFButton(_UFTabPage, true, "BtnFind", true, true, 100, 25, 17, 2, 1, 1, "100","", this.Model.ElementID,"",false,"01d797ac-c178-46a1-b395-ab2f01da3645","","01d797ac-c178-46a1-b395-ab2f01da3645");
+	
 
-																	
+		
+			UIControlBuilder.BuilderUFControl(this.BtnFind, "18");		
+
+
+
+																		
 
             this.TabPage0 = _UFTabPage;
             return _UFTabPage;
@@ -448,16 +461,19 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
        
         private void _BuilderControl_DataGrid1(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,true, true) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "15");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 620, 310, 7, 3, 11, 9, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.BatchLaserLabBNChangeView, "BatchLaserLabBNChangeView", "", null, 20, "批次号批量修改");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
-			_UFGrid.AllowSelectAllPage=false;
-			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
-		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
+			_UFGrid.AllowSelectAllPage=true;
+			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=true;
+		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=true;
             this.DataGrid1 = _UFGrid;
             container.Controls.Add(_UFGrid);
+			//Grid所有页全选事件 
+			((UFWebDataGridAdapter)this.DataGrid1).GridSelectAllPageHandler +=
+				new GridSelectAllPageDelegate(UFIDA.U9.UI.PDHelper.PDListHelper.UFGridDataGrid_GridSelectAllPageDelegate);
 
 
 

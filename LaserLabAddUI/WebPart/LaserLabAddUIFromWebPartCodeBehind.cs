@@ -282,6 +282,37 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabAddUIModel
 		
 			
         }
+		 
+				//MethodName:BtnCreateLB_Click ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnCreateLB_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnCreateLB_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnCreateLB_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+			//throw new NotImplementedException() ;
+
+		
+			
+        }
 		#region  数据初始化加载和数据收集方法
 		public void OnLoadData(object sender)
 		{	

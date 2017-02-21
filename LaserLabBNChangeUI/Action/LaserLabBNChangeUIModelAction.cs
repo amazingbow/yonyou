@@ -16,7 +16,7 @@ using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.IView; 
 using System.Data;
 
-namespace UFIDA.U9.Cust.XMJL.LaserLabBNChangeUI.LaserLabBNChangeUIModel
+namespace UFIDA.U9.Cust.XMQX.LaserLabBNChangeUI.LaserLabBNChangeUIModel
 {
 	public partial class LaserLabBNChangeUIModelAction : BaseAction
 	{

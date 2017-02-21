@@ -179,7 +179,7 @@
         </member>
         <member name="P:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.LB">
             <summary>
-            镭射标 (该属性可为空,且无默认值)
+            镭射标 (该属性不可为空,且无默认值)
             镭射标表.Misc.镭射标
             </summary>
             <value></value>
@@ -355,6 +355,31 @@
             Strong Class EntityFinder
             </summary>
         </member>
+        <member name="M:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.FindByBusinessKey(System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.FindByBusinessKey(UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.FindByBusinessKeyIndex(UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引UFIDA_U9_Cust_XMQX_LaserLabBE_LaserLab_LaserLab_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            UFIDA_U9_Cust_XMQX_LaserLabBE_LaserLab_LaserLab_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityList">
             <summary>
             EntityList
@@ -454,7 +479,7 @@
         <member name="P:UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab.EntityOriginal.LB">
             <summary>
              OrginalData属性。只可读。
-            镭射标 (该属性可为空,且无默认值)
+            镭射标 (该属性不可为空,且无默认值)
             镭射标表.Misc.镭射标
             </summary>
             <value></value>

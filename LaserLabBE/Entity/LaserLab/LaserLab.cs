@@ -179,7 +179,76 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 
 
 
+			/// <summary>
+			/// 业务主键查询参数类型
+			/// </summary>
+			public class BusinessKeyParameter
+			{
+				private System.String m_LB ;
+				public  System.String LB
+				{
+					get { return m_LB ;}
+					set { m_LB = value ;}
+				}
+			}
+			/// <summary>
+			/// 通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+			/// </summary>
+			public LaserLab FindByBusinessKey(  System.String lB  )
+			{
+				BusinessKeyParameter　parameter = new BusinessKeyParameter() ;
+				
+				parameter.LB = lB ;
+				return this.FindByBusinessKey(parameter) ;
+			}
+			/// <summary>
+			/// 通过实体设置的业务主键进行查询－建议使用.
+			/// </summary>
+			public LaserLab FindByBusinessKey(BusinessKeyParameter parameter)
+			{
+                if (parameter == null)
+                    throw new ArgumentException("parameter");
+                System.Text.StringBuilder sbuilder = new System.Text.StringBuilder(40*1);
+                UFSoft.UBF.PL.OqlParamList paramlist = new UFSoft.UBF.PL.OqlParamList();
+                
+								
+				
+
+				sbuilder.Append("LB = @LB");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("LB",parameter.LB));				
 						
+				return this.Find(sbuilder.ToString(), paramlist.ToArray());
+			}
+			
+			/// <summary>
+			/// UFIDA_U9_Cust_XMQX_LaserLabBE_LaserLab_LaserLab_BusinessKey_Index索引查询参数类型
+			/// </summary>
+			public class BusinessKeyIndexParameter
+			{
+				private System.String m_LB ;
+				public  System.String LB
+				{
+					get { return m_LB ;}
+					set { m_LB = value ;}
+				}
+			}
+			
+			
+			/// <summary>
+			/// 通过索引UFIDA_U9_Cust_XMQX_LaserLabBE_LaserLab_LaserLab_BusinessKey_Index进行查询(参数对象接口)
+			/// </summary>
+			public LaserLab FindByBusinessKeyIndex(BusinessKeyIndexParameter parameter)
+			{
+                if (parameter == null)
+                    throw new ArgumentException("parameter");
+                System.Text.StringBuilder sbuilder = new System.Text.StringBuilder(20*1);
+                UFSoft.UBF.PL.OqlParamList paramlist = new UFSoft.UBF.PL.OqlParamList();
+				
+				sbuilder.Append("LB = @LB");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("LB",parameter.LB));				
+				return this.Find(sbuilder.ToString(), paramlist.ToArray());
+			}
+			
 		}
 
 		//private static EntityFinder _finder  ;
@@ -470,7 +539,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 镭射标 (该属性可为空,且无默认值)
+			/// 镭射标 (该属性不可为空,且无默认值)
 			/// 镭射标表.Misc.镭射标
 			/// </summary>
 			/// <value></value>
@@ -902,7 +971,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 
 		
 			/// <summary>
-		/// 镭射标 (该属性可为空,且无默认值)
+		/// 镭射标 (该属性不可为空,且无默认值)
 		/// 镭射标表.Misc.镭射标
 		/// </summary>
 		/// <value></value>
@@ -1754,6 +1823,13 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab
 		{
 			base.SelfNullableVlidator();
 		
+			if (string.IsNullOrEmpty((string)base.GetValue("LB"))){
+				UFSoft.UBF.Business.AttributeInValidException LB_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.XMQX.LaserLabBE.LaserLab.LaserLab","LB","0dd778bd-55ac-44e5-9116-016282a623b2");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					LB_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(LB_Exception);
+			}
+
 			
 		}
 			    

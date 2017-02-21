@@ -1,0 +1,84 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="UBF.System, Version=1.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+        <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UBF.System.dll</HintPath>
+        <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+   </Reference>
+    <Reference Include="UFSoft.UBF.Util.Data, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Util.Data.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Business, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Business.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+   </Reference>
+    <Reference Include="UFSoft.UBF.PL, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.PL.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.View.Query.dll, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.View.Query.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+<Reference Include="UFSoft.UBF.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Service.dll</HintPath>
+       <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Execution, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Execution.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+       <Private>False</Private>
+    </Reference> 
+    <Reference Include="UFSoft.UBF.AopFrame, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.AopFrame.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+   </Reference> 
+  <Reference Include="UBFEngineHosting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+    <SpecificVersion>False</SpecificVersion>
+    <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UBFEngineHosting.dll</HintPath>
+    <Private>False</Private>
+  </Reference>
+    <Reference Include="nunit.core, Version=2.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\nunit.core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\nunit.framework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Deploy\LaserQryBP.Deploy.csproj">
+      <Project>{75F2BB61-0FFD-402F-B2F9-5CAF0F818FAA}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>LaserQryBP.Deploy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BpImplement\LaserQryBP.csproj">
+      <Project>{9287D990-157F-4D55-8666-049ED3732C82}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>LaserQryBP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BpAgent\LaserQryBP.Agent.csproj">
+      <Project>{9831A3A0-7093-447B-86CD-85EC632492B1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>LaserQryBP.Agent</Name>
+    </ProjectReference>
+
+  </ItemGroup>
+</Project>
