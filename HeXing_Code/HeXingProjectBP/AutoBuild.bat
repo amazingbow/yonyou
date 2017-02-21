@@ -1,16 +1,16 @@
 ﻿
-copy .\BpImplement\bin\Debug\HeXingProjectBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpImplement\bin\Debug\HeXingProjectBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpAgent\bin\Debug\HeXingProjectBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpAgent\bin\Debug\HeXingProjectBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
 
-copy .\BpImplement\bin\Debug\HeXingProjectBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\HeXingProjectBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpAgent\bin\Debug\HeXingProjectBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpAgent\bin\Debug\HeXingProjectBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\HeXingProjectBP.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\HeXingProjectBP.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\HeXingProjectBP.ubfsvc  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.HeXingProjectBP.ubfsvc  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
 
 

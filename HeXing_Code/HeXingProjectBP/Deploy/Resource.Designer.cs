@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeXingProjectBP {
+namespace UFIDA.U9.Cust.HeXingProjectBP {
     using System;
     
     

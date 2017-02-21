@@ -230,7 +230,7 @@
             //    stb.Append("0");
             //}
             VoucherItem.Account = new CommonArchiveDataDTOData();
-            VoucherItem.Account.Code = stb.ToString();
+            //VoucherItem.Account.Code = stb.ToString();
             #endregion
 
             ////汇率类型
@@ -251,45 +251,45 @@
             //VoucherItem.AmountCr = 0;
             //银行账号
             VoucherItem.BankAccount = new CommonArchiveDataDTOData();
-            var bankAccount = BankAccount.FindByCode(entry.BankAccountCode);
-            if (bankAccount != null)
-            {
-                VoucherItem.BankAccount.ID = bankAccount.ID;
-                VoucherItem.BankAccount.Name = bankAccount.Name;
-                VoucherItem.BankAccount.Code = bankAccount.Code;
-            }
+            //var bankAccount = BankAccount.FindByCode(entry.BankAccountCode);
+            //if (bankAccount != null)
+            //{
+            //    VoucherItem.BankAccount.ID = bankAccount.ID;
+            //    VoucherItem.BankAccount.Name = bankAccount.Name;
+            //    VoucherItem.BankAccount.Code = bankAccount.Code;
+            //}
 
-            //收支项目
-            VoucherItem.IncomeExpendItem = new CommonArchiveDataDTOData();
-            var incExpItem = IncExpItem.FindByCode(entry.IncomeExpendItemCode);
-            if (incExpItem != null)
-            {
-                VoucherItem.IncomeExpendItem.ID = incExpItem.ID;
-                VoucherItem.IncomeExpendItem.Code = incExpItem.Code;
-                VoucherItem.IncomeExpendItem.Name = incExpItem.Name;
-            }
-            //任务编号
-            //VoucherItem.TaskCode = new CommonArchiveDataDTOData();
-            //VoucherItem.TaskCode.ID= entry
-            //结算方式
-            VoucherItem.SettlementMethod = new CommonArchiveDataDTOData();
-            var settlementMethod = SettlementMethod.FindByCode(entry.SettlementMethodCode);
-            if (settlementMethod != null)
-            {
-                VoucherItem.SettlementMethod.ID = settlementMethod.ID;
-                VoucherItem.SettlementMethod.Code = settlementMethod.Code;
-                VoucherItem.SettlementMethod.Name = settlementMethod.Name;
-            }
+            ////收支项目
+            //VoucherItem.IncomeExpendItem = new CommonArchiveDataDTOData();
+            //var incExpItem = IncExpItem.FindByCode(entry.IncomeExpendItemCode);
+            //if (incExpItem != null)
+            //{
+            //    VoucherItem.IncomeExpendItem.ID = incExpItem.ID;
+            //    VoucherItem.IncomeExpendItem.Code = incExpItem.Code;
+            //    VoucherItem.IncomeExpendItem.Name = incExpItem.Name;
+            //}
+            ////任务编号
+            ////VoucherItem.TaskCode = new CommonArchiveDataDTOData();
+            ////VoucherItem.TaskCode.ID= entry
+            ////结算方式
+            //VoucherItem.SettlementMethod = new CommonArchiveDataDTOData();
+            //var settlementMethod = SettlementMethod.FindByCode(entry.SettlementMethodCode);
+            //if (settlementMethod != null)
+            //{
+            //    VoucherItem.SettlementMethod.ID = settlementMethod.ID;
+            //    VoucherItem.SettlementMethod.Code = settlementMethod.Code;
+            //    VoucherItem.SettlementMethod.Name = settlementMethod.Name;
+            //}
 
-            //计量单位
-            VoucherItem.UOM = new Base.UOM.UOMData();
-            var uom = UOM.FindByCode(entry.UOMCode);
-            if (uom != null)
-            {
-                VoucherItem.UOM.ID = uom.ID;
-                VoucherItem.UOM.Code = uom.Code;
-                VoucherItem.UOM.Name = uom.Name;
-            }
+            ////计量单位
+            //VoucherItem.UOM = new Base.UOM.UOMData();
+            //var uom = UOM.FindByCode(entry.UOMCode);
+            //if (uom != null)
+            //{
+            //    VoucherItem.UOM.ID = uom.ID;
+            //    VoucherItem.UOM.Code = uom.Code;
+            //    VoucherItem.UOM.Name = uom.Name;
+            //}
             //VoucherItem.EntryMemoBooks = new List<ISVImportEntryMemoBookDTOData>();
             //VoucherItem.Voucher = new ISVImportVoucherDTOData();
             //VoucherItem.Voucher.
