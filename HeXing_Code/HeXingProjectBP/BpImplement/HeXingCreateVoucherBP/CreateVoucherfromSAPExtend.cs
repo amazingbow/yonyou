@@ -7,6 +7,9 @@
     using UFIDA.U9.Base;
     using UFIDA.U9.Base.Currency;
     using UFIDA.U9.Base.UOM;
+    using UFIDA.U9.CBO.FI.BankAccount;
+    using UFIDA.U9.CBO.FI.IncExpItem;
+    using UFIDA.U9.CBO.FI.SettlementMethod;
     using UFIDA.U9.CBO.FI.VoucherCategory;
     using UFIDA.U9.CBO.Pub.Controller;
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE;
@@ -54,6 +57,10 @@
                     item.IsU9Successful = 2;
                     continue;
                 }
+                // UFIDA.U9.ISV.GL.ISVGLImportSV.ISVGLImportSV生成凭证服务不生成现金流量：
+                //1.importVoucherDTO.ImportType = CBO.FI.Enums.VoucherImportTypeEnum.VoucherAll； 
+                //这句必须有，没有的话现金流量项目无法导入。
+                //2.账簿上必须设置现金流量表
                 using (ISession session = Session.Open())
                 {
                     try
@@ -86,7 +93,7 @@
             dto.Entries = new List<ISVImportEntryDTOData>();
             //账簿
             dto.SOB = new CommonArchiveDataDTOData();
-
+            dto.ImportType = CBO.FI.Enums.VoucherImportTypeEnum.VoucherAll.Value;
             //凭证类型
             string category = string.Empty;
             HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='"
@@ -113,13 +120,14 @@
             return dto;
         }
 
-        private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry, HeXingSAPU9GLVoucherHead voucher,Currency currency)
+        private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry, HeXingSAPU9GLVoucherHead voucher, Currency currency)
         {
             ISVImportEntryDTOData VoucherItem = new ISVImportEntryDTOData();
             VoucherItem.Voucher = new ISVImportVoucherDTOData();
             VoucherItem.SerialNo = (int)entry.SerialNo;
             //币种
             VoucherItem.Currency = new CommonArchiveDataDTOData();
+            //不输入币种的话 会报 未将对象实例引用到对象上
             if (currency != null)
             {
                 VoucherItem.Currency.ID = currency.ID;
@@ -128,7 +136,79 @@
             }
             //摘要
             VoucherItem.Abstracts = entry.Abstracts;
-            #region 科目 VoucherItem.Account.Code = stb.ToString();
+            ////汇率类型  如果是本位币，可不输
+            //VoucherItem.ExchangeRateTypes = 0;
+            ////对本币汇率  如果是本位币，可不输
+            //VoucherItem.OCToFCExchangeRate = 1;
+            //借方金额(本币)
+            VoucherItem.AccountedDr = entry.AccountedDr;
+            //贷方金额(本币)
+            VoucherItem.AccountedCr = entry.AccountedCr;
+            //借方金额(原币)
+            VoucherItem.EnteredDr = entry.EnteredDr;
+            //贷方金额(原币)
+            VoucherItem.EnteredCr = entry.EnteredCr;
+            //借方数量
+            //VoucherItem.AmountDr = 0;
+            ////贷方数量
+            //VoucherItem.AmountCr = 0;
+            //银行账号  银行类科目必输
+            VoucherItem.BankAccount = new CommonArchiveDataDTOData();
+            var bankAccount = BankAccount.FindByCode(entry.BankAccount);
+            if (bankAccount != null)
+            {
+                VoucherItem.BankAccount.ID = bankAccount.ID;
+                VoucherItem.BankAccount.Name = bankAccount.Name;
+                VoucherItem.BankAccount.Code = bankAccount.Code;
+            }
+            //收支项目 银行、现金类的科目必输，维护对应的现金流量项目
+            HxRelationshipBE cashFlowRef = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='"
+                            + entry.CashFlowCode + "' and SapName='" + entry.CashFlowDescription + "'");
+            VoucherItem.IncomeExpendItem = new CommonArchiveDataDTOData();
+            var incExpItem = IncExpItem.FindByCode(cashFlowRef.U9Code);
+            if (incExpItem != null)
+            {
+                VoucherItem.IncomeExpendItem.ID = incExpItem.ID;
+                VoucherItem.IncomeExpendItem.Code = incExpItem.Code;
+                VoucherItem.IncomeExpendItem.Name = incExpItem.Name;
+            }
+            //任务编号
+            ////VoucherItem.TaskCode = new CommonArchiveDataDTOData();
+            ////VoucherItem.TaskCode.ID= entry
+            //结算方式  --银行、现金类的科目必须要录入结算方式
+            //银行类的科目：业务属性为“银行业务”的结算方式
+            //现金类的科目：业务属性为“现金业务”的结算方式
+            VoucherItem.SettlementMethod = new CommonArchiveDataDTOData();
+            var settlementCode = "";
+            if (entry.AccountCode.StartsWith("1001") || entry.AccountDescription.Contains("库存现金"))
+            {
+                settlementCode = "";
+            }
+            else
+            {
+
+            }
+            var settlementMethod = SettlementMethod.FindByCode(settlementCode);
+            if (settlementMethod != null)
+            {
+                VoucherItem.SettlementMethod.ID = settlementMethod.ID;
+                VoucherItem.SettlementMethod.Code = settlementMethod.Code;
+                VoucherItem.SettlementMethod.Name = settlementMethod.Name;
+            }
+            ////计量单位
+            //VoucherItem.UOM = new Base.UOM.UOMData();
+            //var uom = UOM.FindByCode(entry.UOMCode);
+            //if (uom != null)
+            //{
+            //    VoucherItem.UOM.ID = uom.ID;
+            //    VoucherItem.UOM.Code = uom.Code;
+            //    VoucherItem.UOM.Name = uom.Name;
+            //}
+            //VoucherItem.EntryMemoBooks = new List<ISVImportEntryMemoBookDTOData>();
+            //VoucherItem.Voucher = new ISVImportVoucherDTOData();
+            //VoucherItem.Voucher.
+            //VoucherItem.VoucherEntry = new ISVImportEntryDTOData();
+            #region 科目
             //StringBuilder stb = new StringBuilder();
             ////标准科目
             //if (!string.IsNullOrEmpty(entry.Account1))
@@ -233,67 +313,6 @@
             //VoucherItem.Account.Code = stb.ToString();
             #endregion
 
-            ////汇率类型
-            //VoucherItem.ExchangeRateTypes = 0;
-            ////对本币汇率
-            //VoucherItem.OCToFCExchangeRate = 1;
-            //借方金额(本币)
-            VoucherItem.AccountedDr = entry.AccountedDr;
-            //贷方金额(本币)
-            VoucherItem.AccountedCr = entry.AccountedCr;
-            //借方金额(原币)
-            VoucherItem.EnteredDr = entry.EnteredDr;
-            //贷方金额(原币)
-            VoucherItem.EnteredCr = entry.EnteredCr;
-            //借方数量
-            //VoucherItem.AmountDr = 0;
-            ////贷方数量
-            //VoucherItem.AmountCr = 0;
-            //银行账号
-            VoucherItem.BankAccount = new CommonArchiveDataDTOData();
-            //var bankAccount = BankAccount.FindByCode(entry.BankAccountCode);
-            //if (bankAccount != null)
-            //{
-            //    VoucherItem.BankAccount.ID = bankAccount.ID;
-            //    VoucherItem.BankAccount.Name = bankAccount.Name;
-            //    VoucherItem.BankAccount.Code = bankAccount.Code;
-            //}
-
-            ////收支项目
-            //VoucherItem.IncomeExpendItem = new CommonArchiveDataDTOData();
-            //var incExpItem = IncExpItem.FindByCode(entry.IncomeExpendItemCode);
-            //if (incExpItem != null)
-            //{
-            //    VoucherItem.IncomeExpendItem.ID = incExpItem.ID;
-            //    VoucherItem.IncomeExpendItem.Code = incExpItem.Code;
-            //    VoucherItem.IncomeExpendItem.Name = incExpItem.Name;
-            //}
-            ////任务编号
-            ////VoucherItem.TaskCode = new CommonArchiveDataDTOData();
-            ////VoucherItem.TaskCode.ID= entry
-            ////结算方式
-            //VoucherItem.SettlementMethod = new CommonArchiveDataDTOData();
-            //var settlementMethod = SettlementMethod.FindByCode(entry.SettlementMethodCode);
-            //if (settlementMethod != null)
-            //{
-            //    VoucherItem.SettlementMethod.ID = settlementMethod.ID;
-            //    VoucherItem.SettlementMethod.Code = settlementMethod.Code;
-            //    VoucherItem.SettlementMethod.Name = settlementMethod.Name;
-            //}
-
-            ////计量单位
-            //VoucherItem.UOM = new Base.UOM.UOMData();
-            //var uom = UOM.FindByCode(entry.UOMCode);
-            //if (uom != null)
-            //{
-            //    VoucherItem.UOM.ID = uom.ID;
-            //    VoucherItem.UOM.Code = uom.Code;
-            //    VoucherItem.UOM.Name = uom.Name;
-            //}
-            //VoucherItem.EntryMemoBooks = new List<ISVImportEntryMemoBookDTOData>();
-            //VoucherItem.Voucher = new ISVImportVoucherDTOData();
-            //VoucherItem.Voucher.
-            //VoucherItem.VoucherEntry = new ISVImportEntryDTOData();
             #region 实体扩展字段集合
             VoucherItem.Description = new Base.FlexField.DescFlexField.DescFlexSegmentsData();
             VoucherItem.Description.PrivateDescSeg1 = entry.DescFlexField.PrivateDescSeg1;

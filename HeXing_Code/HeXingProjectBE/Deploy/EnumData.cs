@@ -53,18 +53,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		Account = 10,
 		/// <summary>
-		/// 费用类型
-		/// </summary>
-		FeeType = 11,
-		/// <summary>
-		/// 物料组
-		/// </summary>
-		MaterialGroup = 12,
-		/// <summary>
-		/// 资产
-		/// </summary>
-		Asset = 13,
-		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 
@@ -96,6 +84,30 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// 废弃
 		/// </summary>
 		Scrap = 0,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
+namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
+{
+	/// <summary>
+	/// 枚举值: 栏目 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum ColumnEmunData
+	{
+		/// <summary>
+		/// 编码
+		/// </summary>
+		LCode = 0,
+		/// <summary>
+		/// 名称
+		/// </summary>
+		LName = 1,
 		/// <summary>
 		/// 空值(-1)
 		/// </summary>
