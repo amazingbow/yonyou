@@ -43,42 +43,56 @@
                 foreach (var item in glVoucherLst)
                 {
                     var notRefFlag = false;
-                    HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.CompanyCode + "' and SapName='" + item.CompanyName + "'");
-                    if (shipOrg == null)
+                    if (!string.IsNullOrEmpty(item.CompanyCode) && string.IsNullOrEmpty(item.CompanyName))
                     {
-                        var relationship = HxRelationshipBE.Create();
-                        relationship.RefType = RelationEnum.Org;
-                        relationship.SapCode = item.CompanyCode;
-                        relationship.SapName = item.CompanyName;
-                        relationship.RefStatus = RefStatusEnum.Oraginal;
-                        notRefFlag = true;
+                        HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.CompanyCode + "' and SapName='"
+                      + item.CompanyName + "'");
+                        if (shipOrg == null)
+                        {
+                            var relationship = HxRelationshipBE.Create();
+                            relationship.RefType = RelationEnum.Org;
+                            relationship.SapCode = item.CompanyCode;
+                            relationship.SapName = item.CompanyName;
+                            relationship.RefStatus = RefStatusEnum.Oraginal;
+                            notRefFlag = true;
+                        }
                     }
-                    HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='"
-                        + item.VoucherCategoryCode + "' and SapName='" + item.VoucherCategoryDescription + "'");
-                    if (shipCategory == null)
+                    if (!string.IsNullOrEmpty(item.VoucherCategoryCode) && string.IsNullOrEmpty(item.VoucherCategoryDescription))
                     {
-                        var relationship = HxRelationshipBE.Create();
-                        relationship.RefType = RelationEnum.VoucherCategory;
-                        relationship.SapCode = item.VoucherCategoryCode;
-                        relationship.SapName = item.VoucherCategoryDescription;
-                        relationship.RefStatus = RefStatusEnum.Oraginal;
-                        notRefFlag = true;
+                        HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='"
+                            + item.VoucherCategoryCode + "' and SapName='" + item.VoucherCategoryDescription + "'");
+                        if (shipCategory == null)
+                        {
+                            var relationship = HxRelationshipBE.Create();
+                            relationship.RefType = RelationEnum.VoucherCategory;
+                            relationship.SapCode = item.VoucherCategoryCode;
+                            relationship.SapName = item.VoucherCategoryDescription;
+                            relationship.RefStatus = RefStatusEnum.Oraginal;
+                            notRefFlag = true;
+                        }
                     }
-                    HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='"
-                        + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
-                    if (shipCurrency == null)
+                    if (!string.IsNullOrEmpty(item.CurrencyCode) && string.IsNullOrEmpty(item.CurrencyDescription))
                     {
-                        var relationship = HxRelationshipBE.Create();
-                        relationship.RefType = RelationEnum.Currency;
-                        relationship.SapCode = item.CurrencyCode;
-                        relationship.SapName = item.CurrencyDescription;
-                        relationship.RefStatus = RefStatusEnum.Oraginal;
-                        notRefFlag = true;
+                        HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='"
+                            + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
+                        if (shipCurrency == null)
+                        {
+                            var relationship = HxRelationshipBE.Create();
+                            relationship.RefType = RelationEnum.Currency;
+                            relationship.SapCode = item.CurrencyCode;
+                            relationship.SapName = item.CurrencyDescription;
+                            relationship.RefStatus = RefStatusEnum.Oraginal;
+                            notRefFlag = true;
+                        }
                     }
+
                     foreach (var line in item.HeXingSAPU9GLVoucherLine)
                     {
-                        HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefType=10 and SapCode='"
-                            + line.AccountCode + "' and SapName='" + line.AccountDescription + "'");
+                        HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("(RefStatus!=0 or RefStatus!=1) and RefType=10 and SapCode='"
+                        + line.CashFlowCode + "' and SapName='" + line.CashFlowDescription + "' and SapMasterCode='"
+                        + line.MaterialGroupCode + "' and SapMasterName='" + line.MaterialGroupDescription + "' and SapAssetsCode='"
+                        + line.AssetsCode + "' and SapAssetsName='" + line.AssetsDescription + "' and SapFeeCode='"
+                        + line.FeeTypeEnumCode + "' and SapFeeName='" + line.FeeTypeEnumDescription + "'");
                         if (shipAccount == null)
                         {
                             var relationship = HxRelationshipBE.Create();
@@ -88,61 +102,78 @@
                             relationship.RefStatus = RefStatusEnum.Oraginal;
                             notRefFlag = true;
                         }
-                        HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='"
-                            + line.CashFlowCode + "' and SapName='" + line.CashFlowDescription + "'");
-                        if (shipCashFlowCode == null)
+                        if (!string.IsNullOrEmpty(line.CashFlowCode) && string.IsNullOrEmpty(line.CashFlowDescription))
                         {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Cash;
-                            relationship.SapCode = line.CashFlowCode;
-                            relationship.SapName = line.CashFlowDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
+                            HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='"
+                           + line.CashFlowCode + "' and SapName='" + line.CashFlowDescription + "'");
+                            if (shipCashFlowCode == null)
+                            {
+                                var relationship = HxRelationshipBE.Create();
+                                relationship.RefType = RelationEnum.Cash;
+                                relationship.SapCode = line.CashFlowCode;
+                                relationship.SapName = line.CashFlowDescription;
+                                relationship.RefStatus = RefStatusEnum.Oraginal;
+                                notRefFlag = true;
+                            }
                         }
-                        //HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='"
-                        //   + line.FeeTypeEnumCode + "' and SapName='" + line.FeeTypeEnumDescription + "'");
-                        //if (shipFeeType == null)
-                        //{
-                        //    var relationship = HxRelationshipBE.Create();
-                        //    relationship.RefType = RelationEnum.FeeType;
-                        //    relationship.SapCode = line.FeeTypeEnumCode;
-                        //    relationship.SapName = line.FeeTypeEnumDescription;
-                        //    relationship.RefStatus = RefStatusEnum.Oraginal;
-                        //    notRefFlag = true;
-                        //}
-                        HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='"
-                         + line.CustomerCode + "' and SapName='" + line.CustomerDescription + "'");
-                        if (shipCust == null)
+                        if (!string.IsNullOrEmpty(line.FeeTypeEnumCode) && string.IsNullOrEmpty(line.FeeTypeEnumDescription))
                         {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Customer;
-                            relationship.SapCode = line.CustomerCode;
-                            relationship.SapName = line.CustomerDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
+                            HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='"
+                               + line.FeeTypeEnumCode + "' and SapName='" + line.FeeTypeEnumDescription + "'");
+                            if (shipFeeType == null)
+                            {
+                                var relationship = HxRelationshipBE.Create();
+                                relationship.RefType = RelationEnum.FeeType;
+                                relationship.SapCode = line.FeeTypeEnumCode;
+                                relationship.SapName = line.FeeTypeEnumDescription;
+                                relationship.RefStatus = RefStatusEnum.Oraginal;
+                                notRefFlag = true;
+                            }
                         }
-                        HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='"
-                         + line.SupplierCode + "' and SapName='" + line.SupplierDescription + "'");
-                        if (shipSupplier == null)
+                    
+                        if (!string.IsNullOrEmpty(line.CustomerCode) && string.IsNullOrEmpty(line.CustomerDescription))
                         {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Supplier;
-                            relationship.SapCode = line.SupplierCode;
-                            relationship.SapName = line.SupplierDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
+                            HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='"
+                                + line.CustomerCode + "' and SapName='" + line.CustomerDescription + "'");
+                            if (shipCust == null)
+                            {
+                                var relationship = HxRelationshipBE.Create();
+                                relationship.RefType = RelationEnum.Customer;
+                                relationship.SapCode = line.CustomerCode;
+                                relationship.SapName = line.CustomerDescription;
+                                relationship.RefStatus = RefStatusEnum.Oraginal;
+                                notRefFlag = true;
+                            }
                         }
-                        HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='"
-                        + line.DepartmentCode + "' and SapName='" + line.DepartmentName + "'");
-                        if (shipDepartment == null)
+                        if (!string.IsNullOrEmpty(line.SupplierCode) && string.IsNullOrEmpty(line.SupplierDescription))
                         {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Dept;
-                            relationship.SapCode = line.DepartmentCode;
-                            relationship.SapName = line.DepartmentName;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
+                            HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='"
+                             + line.SupplierCode + "' and SapName='" + line.SupplierDescription + "'");
+                            if (shipSupplier == null)
+                            {
+                                var relationship = HxRelationshipBE.Create();
+                                relationship.RefType = RelationEnum.Supplier;
+                                relationship.SapCode = line.SupplierCode;
+                                relationship.SapName = line.SupplierDescription;
+                                relationship.RefStatus = RefStatusEnum.Oraginal;
+                                notRefFlag = true;
+                            }
                         }
+                        if (!string.IsNullOrEmpty(line.DepartmentCode) && string.IsNullOrEmpty(line.DepartmentName))
+                        {
+                            HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='"
+                                + line.DepartmentCode + "' and SapName='" + line.DepartmentName + "'");
+                            if (shipDepartment == null)
+                            {
+                                var relationship = HxRelationshipBE.Create();
+                                relationship.RefType = RelationEnum.Dept;
+                                relationship.SapCode = line.DepartmentCode;
+                                relationship.SapName = line.DepartmentName;
+                                relationship.RefStatus = RefStatusEnum.Oraginal;
+                                notRefFlag = true;
+                            }
+                        }
+                       
                         //HxRelationshipBE shipMeterial = HxRelationshipBE.Finder.Find("RefType=12 and SapCode='"
                         //    + line.DepartmentCode + "' and SapName='" + line.DepartmentName + "'");
                         //if (shipMeterial == null)
