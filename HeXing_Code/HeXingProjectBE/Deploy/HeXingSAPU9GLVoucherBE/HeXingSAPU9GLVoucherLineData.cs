@@ -286,8 +286,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表行.Misc.行号
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.Int64 m_serialNo ;
-		public System.Int64 SerialNo
+		private System.Int32 m_serialNo ;
+		public System.Int32 SerialNo
 		{
 			get	
 			{	

@@ -533,11 +533,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// SAP与U9凭证对接中间表头.Misc.记账期间
 			/// </summary>
 			/// <value></value>
-			public  System.Int64 PostedPeriod
+			public  System.Int32 PostedPeriod
 			{
 				get
 				{
-					System.Int64 value  = (System.Int64)base.GetValue("PostedPeriod");
+					System.Int32 value  = (System.Int32)base.GetValue("PostedPeriod");
 					return value;
 						}
 			}
@@ -634,13 +634,14 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 			/// </summary>
 			/// <value></value>
-			public  System.Int32 IsU9Successful
+			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag IsU9Successful
 			{
 				get
 				{
-					System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
+
+					UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.GetFromValue(base.GetValue("IsU9Successful"));
 					return value;
-						}
+				}
 			}
 		
 
@@ -1052,11 +1053,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表头.Misc.记账期间
 		/// </summary>
 		/// <value></value>
-			public  System.Int64 PostedPeriod
+			public  System.Int32 PostedPeriod
 		{
 			get
 			{
-				System.Int64 value  = (System.Int64)base.GetValue("PostedPeriod");
+				System.Int32 value  = (System.Int32)base.GetValue("PostedPeriod");
 				return value;
 				}
 				set
@@ -1173,18 +1174,22 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 		/// </summary>
 		/// <value></value>
-			public  System.Int32 IsU9Successful
+			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag IsU9Successful
 		{
 			get
 			{
-				System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
+
+				UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.GetFromValue(base.GetValue("IsU9Successful"));
 				return value;
-				}
+			}
 				set
 			{
 				
-								base.SetValue("IsU9Successful", value);
-						 
+				if (value == null)
+					base.SetValue("IsU9Successful",UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.Empty.Value);
+				else
+					base.SetValue("IsU9Successful",value.Value);
+					 
 			}
 		}
 	
@@ -2193,8 +2198,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			
 
 			
-
-			
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -2274,8 +2277,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		
 								this.SetTypeValue("CompleteU9Date",data.CompleteU9Date);
 		
-								this.SetTypeValue("IsU9Successful",data.IsU9Successful);
-		
 								this.SetTypeValue("U9ErrorResult",data.U9ErrorResult);
 		
 								this.DescFlexField.FromEntityData(data.DescFlexField);
@@ -2315,6 +2316,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 						this.HeXingSAPU9GLVoucherLine.Add(child);
 				}
 			}
+	     
+
+					this.SetTypeValue("IsU9Successful",data.IsU9Successful);
 	     
 
 			#endregion 
@@ -2430,7 +2434,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			{
 				object obj =this.GetValue("PostedPeriod");
 				if (obj != null)
-					data.PostedPeriod=(System.Int64)obj;
+					data.PostedPeriod=(System.Int32)obj;
 			}
 	     
 	    
@@ -2459,13 +2463,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 				object obj =this.GetValue("CompleteU9Date");
 				if (obj != null)
 					data.CompleteU9Date=(System.DateTime)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("IsU9Successful");
-				if (obj != null)
-					data.IsU9Successful=(System.Int32)obj;
 			}
 	     
 	    
@@ -2504,6 +2501,12 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 				}
 				data.HeXingSAPU9GLVoucherLine = listHeXingSAPU9GLVoucherLine;
 			}	
+			{
+				object obj =this.GetValue("IsU9Successful");
+				if (obj != null)
+					data.IsU9Successful=System.Int32.Parse(obj.ToString());
+			}
+	
 
 			#endregion 
 			return data ;

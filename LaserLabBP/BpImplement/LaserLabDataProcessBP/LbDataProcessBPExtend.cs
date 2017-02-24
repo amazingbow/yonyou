@@ -111,14 +111,14 @@
         {
             if (!File.Exists(path)) return 2;
             StreamReader sr = new StreamReader(path, Encoding.Default);
-            string errFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "Error.txt";
-            string fatalFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "Fatal.txt";
+            string notFoundFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "NotFound.txt";
+            string fatalFileName = _ErrorFilePath + DateTime.Now.ToString("yyyyMMddHHmm") + "Error.txt";
             int count = 0;
             String line;
             bool flag = false;
-            if (File.Exists(errFileName) == false)//如果不存在就创建file文件夹
+            if (File.Exists(notFoundFileName) == false)//如果不存在就创建file文件夹
             {
-                FileStream fileStream = File.Create(errFileName);//创建该文件
+                FileStream fileStream = File.Create(notFoundFileName);//创建该文件
                 fileStream.Close();
             }
             if (File.Exists(fatalFileName) == false)//如果不存在就创建file文件夹
@@ -126,51 +126,62 @@
                 FileStream fileStream = File.Create(fatalFileName);//创建该文件
                 fileStream.Close();
             }
-            StreamWriter sw = new StreamWriter(errFileName);
+            StreamWriter swNotFound = new StreamWriter(notFoundFileName);
             StreamWriter swFatal = new StreamWriter(fatalFileName);
             using (ISession session = Session.Open())
             {
                 while ((line = sr.ReadLine()) != null)
                 {
-                    line = line.Trim();
-                    var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    if (strList.Length > 1)
+                    try
                     {
-                        string batch = strList[0].Trim();
-                        string tempstr = strList[1].Trim();
-
-                        string tempTime = tempstr.Substring(tempstr.Length - 15).Trim();
-                        string time = tempTime.Substring(0, 8);
-                        string laserLab = tempstr.Replace(tempTime, "").Trim();
-                        LaserLab lab = LaserLab.Finder.Find("LB='" + laserLab + "'");
-                        if (lab == null)
+                        line = line.Trim();
+                        var strList = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                        if (strList.Length == 2)
                         {
-                            flag = true;
-                            sw.WriteLine(line, Encoding.Default);
+                            string batch = strList[0].Trim();
+                            string tempstr = strList[1].Trim();
+
+                            string tempTime = tempstr.Substring(tempstr.Length - 15).Trim();
+                            string time = tempTime.Substring(0, 8);
+                            string laserLab = tempstr.Replace(tempTime, "").Trim();
+                            LaserLab lab = LaserLab.Finder.Find("LB='" + laserLab + "'");
+                            if (lab == null)
+                            {
+                                flag = true;
+                                swNotFound.WriteLine(line, Encoding.Default);
+                            }
+                            else
+                            {
+                                if (lab.Cp == LBEnum.Scrap) continue;
+                                lab.ScanDate = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
+                                lab.Cp = LBEnum.Shipment;
+                                lab.ShipBN = batch;
+                                lab.ShipDT = DateTime.Now;
+                            }
                         }
                         else
                         {
-                            if (lab.Cp == LBEnum.Scrap) continue;
-                            lab.ScanDate = DateTime.ParseExact(time, "yyyyMMdd", null, System.Globalization.DateTimeStyles.AllowWhiteSpaces);
-                            lab.Cp = LBEnum.Shipment;
-                            lab.ShipBN = batch;
-                            lab.ShipDT = DateTime.Now;
+                            count++;
+                            swFatal.WriteLine(line, Encoding.Default);
                         }
                     }
-                    else
+                    catch (Exception)
                     {
                         count++;
                         swFatal.WriteLine(line, Encoding.Default);
+                        continue;
                     }
+                    session.Commit();
                 }
-                session.Commit();
             }
-            sw.Close();
+
+            swNotFound.Close();
             sr.Close();
+            swFatal.Close();
             ModifyFileName(path, LBEnum.Shipment);
             if (!flag)//如果没有错误的就删掉
             {
-                File.Delete(errFileName);
+                File.Delete(notFoundFileName);
             }
             if (count == 0)
             {

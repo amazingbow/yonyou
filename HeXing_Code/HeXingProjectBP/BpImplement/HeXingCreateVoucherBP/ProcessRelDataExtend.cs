@@ -89,7 +89,7 @@
                     foreach (var line in item.HeXingSAPU9GLVoucherLine)
                     {
                         HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("(RefStatus!=0 or RefStatus!=1) and RefType=10 and SapCode='"
-                        + line.CashFlowCode + "' and SapName='" + line.CashFlowDescription + "' and SapMasterCode='"
+                        + line.AccountCode + "' and SapName='" + line.AccountDescription + "' and SapMasterCode='"
                         + line.MaterialGroupCode + "' and SapMasterName='" + line.MaterialGroupDescription + "' and SapAssetsCode='"
                         + line.AssetsCode + "' and SapAssetsName='" + line.AssetsDescription + "' and SapFeeCode='"
                         + line.FeeTypeEnumCode + "' and SapFeeName='" + line.FeeTypeEnumDescription + "'");
@@ -100,6 +100,12 @@
                             relationship.SapCode = line.AccountCode;
                             relationship.SapName = line.AccountDescription;
                             relationship.RefStatus = RefStatusEnum.Oraginal;
+                            relationship.SapMasterCode = line.MaterialGroupCode;
+                            relationship.SapMasterName = line.MaterialGroupDescription;
+                            relationship.SapAssetsCode = line.AssetsCode;
+                            relationship.SapAssetsName = line.AssetsDescription;
+                            relationship.SapFeeCode = line.FeeTypeEnumCode;
+                            relationship.SapFeeName = line.FeeTypeEnumDescription;
                             notRefFlag = true;
                         }
                         if (!string.IsNullOrEmpty(line.CashFlowCode) && string.IsNullOrEmpty(line.CashFlowDescription))

@@ -451,11 +451,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// SAP与U9凭证对接中间表行.Misc.行号
 			/// </summary>
 			/// <value></value>
-			public  System.Int64 SerialNo
+			public  System.Int32 SerialNo
 			{
 				get
 				{
-					System.Int64 value  = (System.Int64)base.GetValue("SerialNo");
+					System.Int32 value  = (System.Int32)base.GetValue("SerialNo");
 					return value;
 						}
 			}
@@ -1198,11 +1198,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表行.Misc.行号
 		/// </summary>
 		/// <value></value>
-			public  System.Int64 SerialNo
+			public  System.Int32 SerialNo
 		{
 			get
 			{
-				System.Int64 value  = (System.Int64)base.GetValue("SerialNo");
+				System.Int32 value  = (System.Int32)base.GetValue("SerialNo");
 				return value;
 				}
 				set
@@ -3118,7 +3118,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			{
 				object obj =this.GetValue("SerialNo");
 				if (obj != null)
-					data.SerialNo=(System.Int64)obj;
+					data.SerialNo=(System.Int32)obj;
 			}
 	     
 	    
