@@ -38,179 +38,265 @@
                 throw new Exception("没有需要做关系对照的数据！");
             }
             List<string> returnVoucher = new List<string>();
+            Dictionary<int, Dictionary<string, string>> codeNamePair = new Dictionary<int, Dictionary<string, string>>();
+            codeNamePair.Add(1, new Dictionary<string, string>());//币种
+            codeNamePair.Add(2, new Dictionary<string, string>());//客户
+            codeNamePair.Add(3, new Dictionary<string, string>());//供应商
+            codeNamePair.Add(4, new Dictionary<string, string>());//部门
+            codeNamePair.Add(5, new Dictionary<string, string>());//员工
+            codeNamePair.Add(6, new Dictionary<string, string>());//现金流
+            codeNamePair.Add(7, new Dictionary<string, string>());//组织
+            codeNamePair.Add(8, new Dictionary<string, string>());//凭证类型
+            codeNamePair.Add(9, new Dictionary<string, string>()); //项目
+            codeNamePair.Add(10, new Dictionary<string, string>());//科目
+            codeNamePair.Add(11, new Dictionary<string, string>());//费用项目
+            #region 构造要存储的数据
+            foreach (var item in glVoucherLst)
+            {
+                if (!string.IsNullOrEmpty(item.CurrencyCode))
+                {
+                    if (!codeNamePair[1].ContainsKey(item.CurrencyCode))//币种
+                    {
+                        codeNamePair[1].Add(item.CurrencyCode, item.CurrencyDescription + "@" + item.SAPVoucherDisplayCode);
+                    }
+                }
+                if (!string.IsNullOrEmpty(item.CompanyCode))
+                {
+                    if (!codeNamePair[7].ContainsKey(item.CompanyCode))//组织
+                    {
+                        codeNamePair[7].Add(item.CompanyCode, item.CompanyName + "@" + item.SAPVoucherDisplayCode);
+                    }
+                }
+                if (!string.IsNullOrEmpty(item.VoucherCategoryCode))
+                {
+                    if (!codeNamePair[8].ContainsKey(item.VoucherCategoryCode))//凭证类型
+                    {
+                        codeNamePair[8].Add(item.VoucherCategoryCode, item.VoucherCategoryDescription + "@" + item.SAPVoucherDisplayCode);
+                    }
+                }
+                foreach (var line in item.HeXingSAPU9GLVoucherLine)
+                {
+                    if (!string.IsNullOrEmpty(line.CustomerCode))
+                    {
+                        if (!codeNamePair[2].ContainsKey(line.CustomerCode))//客户
+                        {
+                            codeNamePair[2].Add(line.CustomerCode, line.CustomerDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(line.SupplierCode))
+                    {
+                        if (!codeNamePair[3].ContainsKey(line.SupplierCode))//供应商
+                        {
+                            codeNamePair[3].Add(line.SupplierCode, line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(line.DepartmentCode))
+                    {
+                        if (!codeNamePair[4].ContainsKey(line.DepartmentCode))//部门
+                        {
+                            codeNamePair[4].Add(line.DepartmentCode, line.DepartmentName + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(line.EmployeeCode))
+                    {
+                        if (!codeNamePair[5].ContainsKey(line.EmployeeCode))//员工
+                        {
+                            codeNamePair[5].Add(line.EmployeeCode, line.EmployeeName + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(line.CashFlowCode))
+                    {
+                        if (!codeNamePair[6].ContainsKey(line.CashFlowCode))//现金流
+                        {
+                            codeNamePair[6].Add(line.CashFlowCode, line.CashFlowDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(line.AssetsCode))
+                    {
+                        if (!codeNamePair[9].ContainsKey(line.AssetsCode))//项目==资产编码
+                        {
+                            codeNamePair[9].Add(line.AssetsCode, line.AssetsDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                    var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
+                    if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                    {
+                        codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
+                            + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                    }
+                    if (!string.IsNullOrEmpty(line.FeeTypeEnumCode))
+                    {
+                        if (!codeNamePair[11].ContainsKey(line.FeeTypeEnumCode))//费用项目
+                        {
+                            codeNamePair[11].Add(line.FeeTypeEnumCode, line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+                }
+            }
+            #endregion
             using (ISession session = Session.Open())
             {
-                foreach (var item in glVoucherLst)
+                foreach (var item in codeNamePair[1]) //币种
                 {
-                    var notRefFlag = false;
-                    if (!string.IsNullOrEmpty(item.CompanyCode) && string.IsNullOrEmpty(item.CompanyName))
+                    HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='" + item.Key + "'"); //"' and SapName='" + item.Value 
+                    if (shipCurrency == null)
                     {
-                        HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.CompanyCode + "' and SapName='"
-                      + item.CompanyName + "'");
-                        if (shipOrg == null)
-                        {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Org;
-                            relationship.SapCode = item.CompanyCode;
-                            relationship.SapName = item.CompanyName;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
-                        }
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Currency;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "币种没有维护对照关系");
                     }
-                    if (!string.IsNullOrEmpty(item.VoucherCategoryCode) && string.IsNullOrEmpty(item.VoucherCategoryDescription))
+                }
+                foreach (var item in codeNamePair[2]) //客户
+                {
+                    HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='" + item.Key + "'");
+                    if (shipCust == null)
                     {
-                        HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='"
-                            + item.VoucherCategoryCode + "' and SapName='" + item.VoucherCategoryDescription + "'");
-                        if (shipCategory == null)
-                        {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.VoucherCategory;
-                            relationship.SapCode = item.VoucherCategoryCode;
-                            relationship.SapName = item.VoucherCategoryDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
-                        }
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Customer;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "客户没有维护对照关系");
                     }
-                    if (!string.IsNullOrEmpty(item.CurrencyCode) && string.IsNullOrEmpty(item.CurrencyDescription))
+                }
+                foreach (var item in codeNamePair[3])//供应商
+                {
+                    HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='" + item.Key + "'");
+                    if (shipSupplier == null)
                     {
-                        HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='"
-                            + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
-                        if (shipCurrency == null)
-                        {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Currency;
-                            relationship.SapCode = item.CurrencyCode;
-                            relationship.SapName = item.CurrencyDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            notRefFlag = true;
-                        }
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Supplier;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "供应商没有维护对照关系");
                     }
-
-                    foreach (var line in item.HeXingSAPU9GLVoucherLine)
+                }
+                foreach (var item in codeNamePair[4])//部门
+                {
+                    HxRelationshipBE shipDept = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='" + item.Key + "'");
+                    if (shipDept == null)
                     {
-                        HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("(RefStatus!=0 or RefStatus!=1) and RefType=10 and SapCode='"
-                        + line.AccountCode + "' and SapName='" + line.AccountDescription + "' and SapMasterCode='"
-                        + line.MaterialGroupCode + "' and SapMasterName='" + line.MaterialGroupDescription + "' and SapAssetsCode='"
-                        + line.AssetsCode + "' and SapAssetsName='" + line.AssetsDescription + "' and SapFeeCode='"
-                        + line.FeeTypeEnumCode + "' and SapFeeName='" + line.FeeTypeEnumDescription + "'");
-                        if (shipAccount == null)
-                        {
-                            var relationship = HxRelationshipBE.Create();
-                            relationship.RefType = RelationEnum.Account;
-                            relationship.SapCode = line.AccountCode;
-                            relationship.SapName = line.AccountDescription;
-                            relationship.RefStatus = RefStatusEnum.Oraginal;
-                            relationship.SapMasterCode = line.MaterialGroupCode;
-                            relationship.SapMasterName = line.MaterialGroupDescription;
-                            relationship.SapAssetsCode = line.AssetsCode;
-                            relationship.SapAssetsName = line.AssetsDescription;
-                            relationship.SapFeeCode = line.FeeTypeEnumCode;
-                            relationship.SapFeeName = line.FeeTypeEnumDescription;
-                            notRefFlag = true;
-                        }
-                        if (!string.IsNullOrEmpty(line.CashFlowCode) && string.IsNullOrEmpty(line.CashFlowDescription))
-                        {
-                            HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='"
-                           + line.CashFlowCode + "' and SapName='" + line.CashFlowDescription + "'");
-                            if (shipCashFlowCode == null)
-                            {
-                                var relationship = HxRelationshipBE.Create();
-                                relationship.RefType = RelationEnum.Cash;
-                                relationship.SapCode = line.CashFlowCode;
-                                relationship.SapName = line.CashFlowDescription;
-                                relationship.RefStatus = RefStatusEnum.Oraginal;
-                                notRefFlag = true;
-                            }
-                        }
-                        if (!string.IsNullOrEmpty(line.FeeTypeEnumCode) && string.IsNullOrEmpty(line.FeeTypeEnumDescription))
-                        {
-                            HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='"
-                               + line.FeeTypeEnumCode + "' and SapName='" + line.FeeTypeEnumDescription + "'");
-                            if (shipFeeType == null)
-                            {
-                                var relationship = HxRelationshipBE.Create();
-                                relationship.RefType = RelationEnum.FeeType;
-                                relationship.SapCode = line.FeeTypeEnumCode;
-                                relationship.SapName = line.FeeTypeEnumDescription;
-                                relationship.RefStatus = RefStatusEnum.Oraginal;
-                                notRefFlag = true;
-                            }
-                        }
-                    
-                        if (!string.IsNullOrEmpty(line.CustomerCode) && string.IsNullOrEmpty(line.CustomerDescription))
-                        {
-                            HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='"
-                                + line.CustomerCode + "' and SapName='" + line.CustomerDescription + "'");
-                            if (shipCust == null)
-                            {
-                                var relationship = HxRelationshipBE.Create();
-                                relationship.RefType = RelationEnum.Customer;
-                                relationship.SapCode = line.CustomerCode;
-                                relationship.SapName = line.CustomerDescription;
-                                relationship.RefStatus = RefStatusEnum.Oraginal;
-                                notRefFlag = true;
-                            }
-                        }
-                        if (!string.IsNullOrEmpty(line.SupplierCode) && string.IsNullOrEmpty(line.SupplierDescription))
-                        {
-                            HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='"
-                             + line.SupplierCode + "' and SapName='" + line.SupplierDescription + "'");
-                            if (shipSupplier == null)
-                            {
-                                var relationship = HxRelationshipBE.Create();
-                                relationship.RefType = RelationEnum.Supplier;
-                                relationship.SapCode = line.SupplierCode;
-                                relationship.SapName = line.SupplierDescription;
-                                relationship.RefStatus = RefStatusEnum.Oraginal;
-                                notRefFlag = true;
-                            }
-                        }
-                        if (!string.IsNullOrEmpty(line.DepartmentCode) && string.IsNullOrEmpty(line.DepartmentName))
-                        {
-                            HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='"
-                                + line.DepartmentCode + "' and SapName='" + line.DepartmentName + "'");
-                            if (shipDepartment == null)
-                            {
-                                var relationship = HxRelationshipBE.Create();
-                                relationship.RefType = RelationEnum.Dept;
-                                relationship.SapCode = line.DepartmentCode;
-                                relationship.SapName = line.DepartmentName;
-                                relationship.RefStatus = RefStatusEnum.Oraginal;
-                                notRefFlag = true;
-                            }
-                        }
-                       
-                        //HxRelationshipBE shipMeterial = HxRelationshipBE.Finder.Find("RefType=12 and SapCode='"
-                        //    + line.DepartmentCode + "' and SapName='" + line.DepartmentName + "'");
-                        //if (shipMeterial == null)
-                        //{
-                        //    var relationship = HxRelationshipBE.Create();
-                        //    relationship.RefType = RelationEnum.MaterialGroup;
-                        //    relationship.SapCode = line.MaterialGroupCode;
-                        //    relationship.SapName = line.MaterialGroupDescription;
-                        //    relationship.RefStatus = RefStatusEnum.Oraginal;
-                        //    notRefFlag = true;
-                        //}
-                        //HxRelationshipBE shipAsset = HxRelationshipBE.Finder.Find("RefType=13 and SapCode='"
-                        //    + line.AssetsCode + "' and SapName='" + line.AssetsDescription + "'");
-                        //if (shipMeterial == null)
-                        //{
-                        //    var relationship = HxRelationshipBE.Create();
-                        //    relationship.RefType = RelationEnum.Asset;
-                        //    relationship.SapCode = line.AssetsCode;
-                        //    relationship.SapName = line.AssetsDescription;
-                        //    relationship.RefStatus = RefStatusEnum.Oraginal;
-                        //    notRefFlag = true;
-                        //}
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Dept;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "部门没有维护对照关系");
                     }
-                    if (notRefFlag)
+                }
+                foreach (var item in codeNamePair[5]) //员工
+                {
+                    HxRelationshipBE shipEmp = HxRelationshipBE.Finder.Find("RefType=5 and SapCode='" + item.Key + "'");
+                    if (shipEmp == null)
                     {
-                        returnVoucher.Add(item.SAPVoucherDisplayCode);
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Staff;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "员工没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[6]) //现金流
+                {
+                    HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='" + item.Key + "'");
+                    if (shipCashFlowCode == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Cash;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "现金流项目没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[7])  //组织
+                {
+                    HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.Key + "'");
+                    if (shipOrg == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Org;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "组织没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[8]) //凭证类型
+                {
+                    HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='" + item.Key + "'");
+                    if (shipCategory == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.VoucherCategory;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "凭证类型没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[9]) //项目
+                {
+                    HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=9 and SapCode='" + item.Key + "'");
+                    if (shipDepartment == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Project;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "资产所对应的U9项目没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[10])//科目
+                {
+                    //var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
+                    //codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
+                    //       + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                    var tempArray = item.Key.Split(';');
+                    var AccountCode = tempArray[0];
+                    var MaterialGroupCode = tempArray[1];
+                    var AssetsCode = tempArray[2];
+                    var FeeTypeEnumCode = tempArray[3];
+                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefType=10 and SapCode='" + AccountCode + "'" + "' and SapMasterCode='"
+                        + MaterialGroupCode + "'" + "' and SapAssetsCode='" + AssetsCode + "'" + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
+                    if (shipAccount == null)
+                    {
+                        var valueArray = item.Value.Split('@')[0].Split(';');
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Account;
+                        relationship.SapCode = AccountCode;
+                        relationship.SapName = valueArray[0];
+                        relationship.SapMasterCode = MaterialGroupCode;
+                        relationship.SapMasterName = valueArray[1];
+                        relationship.SapAssetsCode = AssetsCode;
+                        relationship.SapAssetsName = valueArray[2];
+                        relationship.SapFeeCode = FeeTypeEnumCode;
+                        relationship.SapFeeName = valueArray[3];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
+                    }
+                }
+                foreach (var item in codeNamePair[11]) //费用项目
+                {
+                    HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='" + item.Key + "'");
+                    if (shipFeeType == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.FeeType;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "费用项目没有维护对照关系");
                     }
                 }
                 session.Commit();
             }
-
             return returnVoucher;
         }
     }

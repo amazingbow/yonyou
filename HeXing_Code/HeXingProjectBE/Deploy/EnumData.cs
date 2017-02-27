@@ -77,6 +77,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		Account = 10,
 		/// <summary>
+		/// 费用项目
+		/// </summary>
+		FeeType = 11,
+		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 
