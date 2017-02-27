@@ -136,7 +136,8 @@
             #endregion
             using (ISession session = Session.Open())
             {
-                foreach (var item in codeNamePair[1]) //币种
+                #region  币种
+                foreach (var item in codeNamePair[1])
                 {
                     HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='" + item.Key + "'"); //"' and SapName='" + item.Value 
                     if (shipCurrency == null)
@@ -149,7 +150,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "币种没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[2]) //客户
+                #endregion
+                #region 客户
+                foreach (var item in codeNamePair[2])
                 {
                     HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='" + item.Key + "'");
                     if (shipCust == null)
@@ -162,7 +165,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "客户没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[3])//供应商
+                #endregion
+                #region 供应商
+                foreach (var item in codeNamePair[3])
                 {
                     HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='" + item.Key + "'");
                     if (shipSupplier == null)
@@ -175,7 +180,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "供应商没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[4])//部门
+                #endregion
+                #region//部门
+                foreach (var item in codeNamePair[4])
                 {
                     HxRelationshipBE shipDept = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='" + item.Key + "'");
                     if (shipDept == null)
@@ -188,7 +195,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "部门没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[5]) //员工
+                #endregion
+                #region //员工
+                foreach (var item in codeNamePair[5])
                 {
                     HxRelationshipBE shipEmp = HxRelationshipBE.Finder.Find("RefType=5 and SapCode='" + item.Key + "'");
                     if (shipEmp == null)
@@ -201,7 +210,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "员工没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[6]) //现金流
+                #endregion
+                #region//现金流
+                foreach (var item in codeNamePair[6])
                 {
                     HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='" + item.Key + "'");
                     if (shipCashFlowCode == null)
@@ -214,7 +225,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "现金流项目没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[7])  //组织
+                #endregion
+                #region //组织
+                foreach (var item in codeNamePair[7])
                 {
                     HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.Key + "'");
                     if (shipOrg == null)
@@ -227,7 +240,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "组织没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[8]) //凭证类型
+                #endregion
+                #region//凭证类型
+                foreach (var item in codeNamePair[8])
                 {
                     HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='" + item.Key + "'");
                     if (shipCategory == null)
@@ -240,7 +255,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "凭证类型没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[9]) //项目
+                #endregion
+                #region //项目
+                foreach (var item in codeNamePair[9])
                 {
                     HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=9 and SapCode='" + item.Key + "'");
                     if (shipDepartment == null)
@@ -253,7 +270,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "资产所对应的U9项目没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[10])//科目
+                #endregion
+                #region//科目
+                foreach (var item in codeNamePair[10])
                 {
                     //var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
                     //codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
@@ -282,7 +301,9 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
                     }
                 }
-                foreach (var item in codeNamePair[11]) //费用项目
+                #endregion
+                #region //费用项目
+                foreach (var item in codeNamePair[11])
                 {
                     HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='" + item.Key + "'");
                     if (shipFeeType == null)
@@ -295,6 +316,7 @@
                         returnVoucher.Add(item.Value.Split('@')[1] + "费用项目没有维护对照关系");
                     }
                 }
+                #endregion
                 session.Commit();
             }
             return returnVoucher;
