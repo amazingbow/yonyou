@@ -139,7 +139,7 @@
                 #region  币种
                 foreach (var item in codeNamePair[1])
                 {
-                    HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefType=1 and SapCode='" + item.Key + "'"); //"' and SapName='" + item.Value 
+                    HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=1 and SapCode='" + item.Key + "'"); //"' and SapName='" + item.Value 
                     if (shipCurrency == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -154,7 +154,7 @@
                 #region 客户
                 foreach (var item in codeNamePair[2])
                 {
-                    HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefType=2 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=2 and SapCode='" + item.Key + "'");
                     if (shipCust == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -169,7 +169,7 @@
                 #region 供应商
                 foreach (var item in codeNamePair[3])
                 {
-                    HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefType=3 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=3 and SapCode='" + item.Key + "'");
                     if (shipSupplier == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -184,7 +184,7 @@
                 #region//部门
                 foreach (var item in codeNamePair[4])
                 {
-                    HxRelationshipBE shipDept = HxRelationshipBE.Finder.Find("RefType=4 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipDept = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=4 and SapCode='" + item.Key + "'");
                     if (shipDept == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -199,7 +199,7 @@
                 #region //员工
                 foreach (var item in codeNamePair[5])
                 {
-                    HxRelationshipBE shipEmp = HxRelationshipBE.Finder.Find("RefType=5 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipEmp = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=5 and SapCode='" + item.Key + "'");
                     if (shipEmp == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -214,7 +214,7 @@
                 #region//现金流
                 foreach (var item in codeNamePair[6])
                 {
-                    HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefType=6 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipCashFlowCode = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=6 and SapCode='" + item.Key + "'");
                     if (shipCashFlowCode == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -229,7 +229,7 @@
                 #region //组织
                 foreach (var item in codeNamePair[7])
                 {
-                    HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefType=7 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=7 and SapCode='" + item.Key + "'");
                     if (shipOrg == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -244,7 +244,7 @@
                 #region//凭证类型
                 foreach (var item in codeNamePair[8])
                 {
-                    HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefType=8 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=8 and SapCode='" + item.Key + "'");
                     if (shipCategory == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -259,7 +259,7 @@
                 #region //项目
                 foreach (var item in codeNamePair[9])
                 {
-                    HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefType=9 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=9 and SapCode='" + item.Key + "'");
                     if (shipDepartment == null)
                     {
                         var relationship = HxRelationshipBE.Create();
@@ -282,7 +282,7 @@
                     var MaterialGroupCode = tempArray[1];
                     var AssetsCode = tempArray[2];
                     var FeeTypeEnumCode = tempArray[3];
-                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefType=10 and SapCode='" + AccountCode + "'" + "' and SapMasterCode='"
+                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode + "'" + "' and SapMasterCode='"
                         + MaterialGroupCode + "'" + "' and SapAssetsCode='" + AssetsCode + "'" + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
                     if (shipAccount == null)
                     {
@@ -305,7 +305,7 @@
                 #region //费用项目
                 foreach (var item in codeNamePair[11])
                 {
-                    HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefType=11 and SapCode='" + item.Key + "'");
+                    HxRelationshipBE shipFeeType = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=11 and SapCode='" + item.Key + "'");
                     if (shipFeeType == null)
                     {
                         var relationship = HxRelationshipBE.Create();
