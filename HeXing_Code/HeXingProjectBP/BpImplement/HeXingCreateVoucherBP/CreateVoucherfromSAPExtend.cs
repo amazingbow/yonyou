@@ -52,12 +52,17 @@
             foreach (var item in glVoucherLst)
             {
                 if (item.HeXingSAPU9GLVoucherLine.Count == 0) continue;
-                if (returnData.Contains(item.SAPVoucherDisplayCode))
+                item.U9ErrorResult = item.SAPVoucherDisplayCode;
+                foreach (var res in returnData)
                 {
-                    item.U9ErrorResult = item.SAPVoucherDisplayCode + "有关系对照没有维护，请到关系对照表中维护！";
-                    item.IsU9Successful = 2;
-                    continue;
+                    if (res.Contains(item.SAPVoucherDisplayCode))
+                    {
+                        item.U9ErrorResult += res.Replace(item.SAPVoucherDisplayCode, ",");
+                        item.IsU9Successful = 2;
+                        continue;
+                    }
                 }
+                item.U9ErrorResult = "";
                 // UFIDA.U9.ISV.GL.ISVGLImportSV.ISVGLImportSV生成凭证服务不生成现金流量：
                 //1.importVoucherDTO.ImportType = CBO.FI.Enums.VoucherImportTypeEnum.VoucherAll； 
                 //这句必须有，没有的话现金流量项目无法导入。
