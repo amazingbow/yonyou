@@ -34,8 +34,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
             innerEnums.Add(1,oraginal) ;
             approval = new RefStatusEnum(2,"Approval") ;
             innerEnums.Add(2,approval) ;
-            used = new RefStatusEnum(3,"Used") ;
-            innerEnums.Add(3,used) ;
             scrap = new RefStatusEnum(0,"Scrap") ;
             innerEnums.Add(0,scrap) ;
             empty = new RefStatusEnum(-1,"") ;
@@ -82,8 +80,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         				return this.Res_Oraginal; 
         			case "Approval":
         				return this.Res_Approval; 
-        			case "Used":
-        				return this.Res_Used; 
         			case "Scrap":
         				return this.Res_Scrap; 
         			default :
@@ -116,18 +112,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
             get
             {
                 return  approval ;
-            }
-        }
-        private static RefStatusEnum used ;
-        /// <summary>
-        /// 枚举值: 使用中  Value:3  
-        /// 对照表状态枚举.Misc.使用中
-        /// </summary>
-        public static RefStatusEnum Used
-        {
-            get
-            {
-                return  used ;
             }
         }
         private static RefStatusEnum scrap ;
@@ -226,11 +210,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
         [Obsolete("")]
 		public string Res_Approval　{ get {return EnumRes.GetResource("Approval");}　}
-		/// <summary>
-		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
-		/// </summary>
-        [Obsolete("")]
-		public string Res_Used　{ get {return EnumRes.GetResource("Used");}　}
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>

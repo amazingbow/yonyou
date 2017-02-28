@@ -3,30 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
 
-namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
-{
-	/// <summary>
-	/// 枚举值: SAP导入凭证标志 
-	/// 
-	/// </summary>
-	//枚举可以考虑加基类，目前不改也没影响。
-	public enum SapImportFlagData
-	{
-		/// <summary>
-		/// 成功
-		/// </summary>
-		Successful = 1,
-		/// <summary>
-		/// 失败
-		/// </summary>
-		Failed = 2,
-		/// <summary>
-		/// 空值(-1)
-		/// </summary>
-		Empty  = -1 
-	}
-}
-
 namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 {
 	/// <summary>
@@ -77,7 +53,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		Account = 10,
 		/// <summary>
-		/// 费用项目
+		/// 费用类型
 		/// </summary>
 		FeeType = 11,
 		/// <summary>
@@ -104,10 +80,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// 审核
 		/// </summary>
 		Approval = 2,
-		/// <summary>
-		/// 使用中
-		/// </summary>
-		Used = 3,
 		/// <summary>
 		/// 废弃
 		/// </summary>

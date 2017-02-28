@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
                         
                         
                         
-                        
+                                        knownTypes.Add(typeof(UFIDA.U9.Base.Currency.CurrencyData));
                         
                         
             
@@ -72,7 +72,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	     			
 	     			
 	     			
-	     							U9EntityId= 0; 			     			
+	     							     			
 	     							RefStatus= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -101,8 +101,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		
 		#region Properties Inner Component
 	        					/// <summary>
-		/// 关照类型
-		/// 合兴关系对照表.Misc.关照类型
+		/// 对照类型
+		/// 合兴关系对照表.Misc.对照类型
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.Int32 m_refType;
@@ -408,8 +408,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		
 
 				/// <summary>
-		/// 费用编码
-		/// 合兴关系对照表.Misc.费用编码
+		/// 费用类型编码
+		/// 合兴关系对照表.Misc.费用类型编码
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.String m_sapFeeCode ;
@@ -427,8 +427,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		
 
 				/// <summary>
-		/// 费用名称
-		/// 合兴关系对照表.Misc.费用名称
+		/// 费用类型名称
+		/// 合兴关系对照表.Misc.费用类型名称
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.String m_sapFeeName ;
@@ -483,21 +483,49 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		}
 		
 
-				/// <summary>
+		
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_u9EntityId_SKey ;
+		/// <summary>
+		/// U9实体ID 序列化Key属性。（传递跨组织序列列字段）
+		/// 合兴关系对照表.Misc.U9实体ID
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey U9EntityId_SKey
+		{
+			get 
+			{
+				return m_u9EntityId_SKey ;					
+			}
+			set
+			{
+				 m_u9EntityId_SKey = value ;	
+			}
+		}
+		/// <summary>
 		/// U9实体ID
 		/// 合兴关系对照表.Misc.U9实体ID
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.Int64 m_u9EntityId ;
 		public System.Int64 U9EntityId
 		{
 			get	
 			{	
-				return m_u9EntityId  ;
+				if (U9EntityId_SKey == null)
+					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
+				else
+					return U9EntityId_SKey.ID ;
 			}
 			set	
 			{	
-				m_u9EntityId = value ;	
+				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
+					U9EntityId_SKey = null ;
+				else
+				{
+					if (U9EntityId_SKey == null )
+						U9EntityId_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.Base.Currency.Currency") ;
+					else
+						U9EntityId_SKey.ID = value ;
+				}
 			}
 		}
 		

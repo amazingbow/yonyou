@@ -634,14 +634,13 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 			/// </summary>
 			/// <value></value>
-			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag IsU9Successful
+			public  System.Int32 IsU9Successful
 			{
 				get
 				{
-
-					UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.GetFromValue(base.GetValue("IsU9Successful"));
+					System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
 					return value;
-				}
+						}
 			}
 		
 
@@ -1174,22 +1173,18 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
 		/// </summary>
 		/// <value></value>
-			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag IsU9Successful
+			public  System.Int32 IsU9Successful
 		{
 			get
 			{
-
-				UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag value  = UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.GetFromValue(base.GetValue("IsU9Successful"));
+				System.Int32 value  = (System.Int32)base.GetValue("IsU9Successful");
 				return value;
-			}
+				}
 				set
 			{
 				
-				if (value == null)
-					base.SetValue("IsU9Successful",UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.SapImportFlag.Empty.Value);
-				else
-					base.SetValue("IsU9Successful",value.Value);
-					 
+								base.SetValue("IsU9Successful", value);
+						 
 			}
 		}
 	
@@ -2198,6 +2193,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			
 
 			
+
+			
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -2277,6 +2274,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		
 								this.SetTypeValue("CompleteU9Date",data.CompleteU9Date);
 		
+								this.SetTypeValue("IsU9Successful",data.IsU9Successful);
+		
 								this.SetTypeValue("U9ErrorResult",data.U9ErrorResult);
 		
 								this.DescFlexField.FromEntityData(data.DescFlexField);
@@ -2316,9 +2315,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 						this.HeXingSAPU9GLVoucherLine.Add(child);
 				}
 			}
-	     
-
-					this.SetTypeValue("IsU9Successful",data.IsU9Successful);
 	     
 
 			#endregion 
@@ -2467,6 +2463,13 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 	     
 	    
 			{
+				object obj =this.GetValue("IsU9Successful");
+				if (obj != null)
+					data.IsU9Successful=(System.Int32)obj;
+			}
+	     
+	    
+			{
 				object obj =this.GetValue("U9ErrorResult");
 				if (obj != null)
 					data.U9ErrorResult=(System.String)obj;
@@ -2501,12 +2504,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 				}
 				data.HeXingSAPU9GLVoucherLine = listHeXingSAPU9GLVoucherLine;
 			}	
-			{
-				object obj =this.GetValue("IsU9Successful");
-				if (obj != null)
-					data.IsU9Successful=System.Int32.Parse(obj.ToString());
-			}
-	
 
 			#endregion 
 			return data ;

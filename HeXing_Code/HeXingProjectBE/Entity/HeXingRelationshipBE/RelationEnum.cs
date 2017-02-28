@@ -244,8 +244,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         }
         private static RelationEnum feeType ;
         /// <summary>
-        /// 枚举值: 费用项目  Value:11  
-        /// 对照类型.Misc.费用项目
+        /// 枚举值: 费用类型  Value:11  
+        /// 对照类型.Misc.费用类型
         /// </summary>
         public static RelationEnum FeeType
         {

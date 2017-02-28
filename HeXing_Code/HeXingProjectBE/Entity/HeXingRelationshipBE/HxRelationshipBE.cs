@@ -412,8 +412,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 关照类型 (该属性可为空,但有默认值)
-			/// 合兴关系对照表.Misc.关照类型
+			/// 对照类型 (该属性可为空,但有默认值)
+			/// 合兴关系对照表.Misc.对照类型
 			/// </summary>
 			/// <value></value>
 			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum RefType
@@ -584,8 +584,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 费用编码 (该属性可为空,且无默认值)
-			/// 合兴关系对照表.Misc.费用编码
+			/// 费用类型编码 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.费用类型编码
 			/// </summary>
 			/// <value></value>
 			public  System.String SapFeeCode
@@ -603,8 +603,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 费用名称 (该属性可为空,且无默认值)
-			/// 合兴关系对照表.Misc.费用名称
+			/// 费用类型名称 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.费用类型名称
 			/// </summary>
 			/// <value></value>
 			public  System.String SapFeeName
@@ -664,17 +664,39 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			/// 合兴关系对照表.Misc.U9实体ID
 			/// </summary>
 			/// <value></value>
-			public  System.Int64 U9EntityId
+			public  UFIDA.U9.Base.Currency.Currency U9EntityId
 			{
 				get
 				{
-					System.Int64 value  = (System.Int64)base.GetValue("U9EntityId");
-					return value;
-						}
+					if (U9EntityIdKey == null)
+						return null ;
+					UFIDA.U9.Base.Currency.Currency value =  (UFIDA.U9.Base.Currency.Currency)U9EntityIdKey.GetEntity();
+					return value ;
+				}
 			}
 		
 
 
+   		private UFIDA.U9.Base.Currency.Currency.EntityKey m_U9EntityIdKey ;
+		/// <summary>
+		/// EntityKey 属性
+		/// U9实体ID 的Key (该属性可为空,但有默认值)
+		/// 合兴关系对照表.Misc.U9实体ID
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Base.Currency.Currency.EntityKey U9EntityIdKey
+		{
+			get 
+			{
+				object obj = base.GetValue("U9EntityId") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_U9EntityIdKey==null || m_U9EntityIdKey.ID != key )
+					m_U9EntityIdKey = new UFIDA.U9.Base.Currency.Currency.EntityKey(key); 
+				return m_U9EntityIdKey ;
+			}
+		}
 
 				
 			/// <summary>
@@ -885,8 +907,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		
 			/// <summary>
-		/// 关照类型 (该属性可为空,但有默认值)
-		/// 合兴关系对照表.Misc.关照类型
+		/// 对照类型 (该属性可为空,但有默认值)
+		/// 合兴关系对照表.Misc.对照类型
 		/// </summary>
 		/// <value></value>
 			public  UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum RefType
@@ -1105,8 +1127,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		
 			/// <summary>
-		/// 费用编码 (该属性可为空,且无默认值)
-		/// 合兴关系对照表.Misc.费用编码
+		/// 费用类型编码 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.费用类型编码
 		/// </summary>
 		/// <value></value>
 			public  System.String SapFeeCode
@@ -1129,8 +1151,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		
 			/// <summary>
-		/// 费用名称 (该属性可为空,且无默认值)
-		/// 合兴关系对照表.Misc.费用名称
+		/// 费用类型名称 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.费用类型名称
 		/// </summary>
 		/// <value></value>
 			public  System.String SapFeeName
@@ -1205,23 +1227,63 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// 合兴关系对照表.Misc.U9实体ID
 		/// </summary>
 		/// <value></value>
-			public  System.Int64 U9EntityId
+			public  UFIDA.U9.Base.Currency.Currency U9EntityId
 		{
 			get
 			{
-				System.Int64 value  = (System.Int64)base.GetValue("U9EntityId");
-				return value;
+				object  obj = this.GetRelation("U9EntityId");
+				if (obj == null)
+				{
+					return null ;
 				}
+				else
+				{
+					UFIDA.U9.Base.Currency.Currency value  = (UFIDA.U9.Base.Currency.Currency)obj;
+					return value;
+				 }
+			}
 				set
 			{
 				
-								base.SetValue("U9EntityId", value);
-						 
+				this.SetRelation("U9EntityId", value);
+					 
 			}
 		}
 	
 
 
+   		private UFIDA.U9.Base.Currency.Currency.EntityKey m_U9EntityIdKey ;
+		/// <summary>
+		/// U9实体ID 的Key (该属性可为空,但有默认值)
+		/// 合兴关系对照表.Misc.U9实体ID
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Base.Currency.Currency.EntityKey U9EntityIdKey
+		{
+			get 
+			{
+				object obj = base.GetValue("U9EntityId") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_U9EntityIdKey==null || m_U9EntityIdKey.ID != key )
+					m_U9EntityIdKey = new UFIDA.U9.Base.Currency.Currency.EntityKey(key); 
+				return m_U9EntityIdKey ;
+			}
+			set
+			{	
+				if (U9EntityIdKey==value)
+					return ;
+				this.SetRelation("U9EntityId", null);
+				m_U9EntityIdKey = value ;
+				if (value != null) 
+				{
+					base.SetValue("U9EntityId",value.ID);
+				}
+				else
+					base.SetValue("U9EntityId",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
 
 		
 			/// <summary>
@@ -1457,7 +1519,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			public static string SysVersion　{ get { return "SysVersion";　}　}
 				
 			/// <summary>
-			/// 属性: 关照类型 的名称
+			/// 属性: 对照类型 的名称
 			/// </summary>
 			public static string RefType　{ get { return "RefType";　}　}
 				
@@ -1502,12 +1564,12 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			public static string SapAssetsName　{ get { return "SapAssetsName";　}　}
 				
 			/// <summary>
-			/// 属性: 费用编码 的名称
+			/// 属性: 费用类型编码 的名称
 			/// </summary>
 			public static string SapFeeCode　{ get { return "SapFeeCode";　}　}
 				
 			/// <summary>
-			/// 属性: 费用名称 的名称
+			/// 属性: 费用类型名称 的名称
 			/// </summary>
 			public static string SapFeeName　{ get { return "SapFeeName";　}　}
 				
@@ -1677,7 +1739,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 			
 
-			
+			if (data.U9EntityId == -1 && data.U9EntityId_SKey!=null)
+				data.U9EntityId = data.U9EntityId_SKey.GetEntity().ID ;
+	
 
 			
 	
