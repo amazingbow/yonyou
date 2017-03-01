@@ -66,6 +66,51 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			
         }
 		 
+			
+				
+
+		//MethodName:DataGrid_GridRowDbClicked ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void DataGrid_GridRowDbClicked(object sender, GridDBClickEventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					try
+			{				
+				DataGrid_GridRowDbClicked_Extend(sender,e) ;			
+			}
+			catch(Exception ex)
+			{
+				if (UFSoft.UBF.Exceptions.ExceptionHelper.IsUnknownException(ex, true)) {
+                    throw;
+                }
+                IUIModel model = this.Model;
+				this.Model.ErrorMessage.SetErrorMessage(ref model,ex);
+			}
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void DataGrid_GridRowDbClicked_DefaultImpl(object sender, GridDBClickEventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
 				//MethodName:BtnClose_Click ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
@@ -171,20 +216,20 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		}
 
 		#endregion 
-		
-        #region Grid控件DataGrid0的分页事件	
-        void UFGridDataGrid0_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
+			
+        #region Grid控件DataGrid的分页事件	
+        void UFGridDataGrid_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
         {
             //Grid的首页、下页、上页、末页处理逻辑
-			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridMakePage",this.Action,this.DataGrid0,e);
+			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridMakePage",this.Action,this.DataGrid,e);
         }
         #endregion
 
-        #region Grid控件DataGrid0的客户化筛选事件	
-        void UFGridDataGrid0_GridCustomFilterHandler(Object sender, GridCustomFilterArgs  e)
+        #region Grid控件DataGrid的客户化筛选事件	
+        void UFGridDataGrid_GridCustomFilterHandler(Object sender, GridCustomFilterArgs  e)
         {
             //Grid的客户化筛选，首条、上一条、下一条、末条处理逻辑
-			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridCustomFilter",this.Action,this.DataGrid0,e);
+			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridCustomFilter",this.Action,this.DataGrid,e);
         }
         #endregion
 

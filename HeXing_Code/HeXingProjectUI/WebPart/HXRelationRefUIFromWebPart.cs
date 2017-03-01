@@ -94,7 +94,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         IUFLabel lblRelType89;
         IUFFldDropDownList RelType89;
         IUFButton BtnFind;
-        IUFDataGrid DataGrid0;
+        IUFDataGrid DataGrid;
         IUFLabel lblRelColumn152;
         IUFFldDropDownList RelColumn152;
         IUFLabel lblRelText82;
@@ -102,6 +102,12 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         IUFCard Card1;
         IUFButton BtnClose;
         IUFButton BtnOk;
+        IUFLabel lblRefCode0;
+        IUFFldTextBox RefCode0;
+        IUFLabel lblRefName0;
+        IUFFldTextBox RefName0;
+        IUFLabel lblRefID0;
+        IUFFldNumberControl RefID0;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -129,6 +135,11 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 				//Button控件事件
 			this.BtnFind.Click += new EventHandler(BtnFind_Click);		
 						
+				//Grid控件事件
+			
+			((UFWebDataGridAdapter)this.DataGrid).RowDoubleClick += new GridRowDBClickedDelegate(DataGrid_GridRowDbClicked);
+			//((UFWebDataGridAdapter)this.DataGrid).DBClickAutoPostBack = true;
+						
 				//Button控件事件
 			this.BtnClose.Click += new EventHandler(BtnClose_Click);		
 						
@@ -136,11 +147,11 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			this.BtnOk.Click += new EventHandler(BtnOk_Click);		
 						
 
-		
+			
 			//Grid控件的分页事件				
-			((UFWebDataGridAdapter)this.DataGrid0).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid0_GridMakePageEventHandler);
+			((UFWebDataGridAdapter)this.DataGrid).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid_GridMakePageEventHandler);
              //Grid控件的客户化筛选，定位事件
-            ((UFWebDataGridAdapter)this.DataGrid0).GridCustomFilterHandler += new GridCustomFilterDelegate(UFGridDataGrid0_GridCustomFilterHandler);
+            ((UFWebDataGridAdapter)this.DataGrid).GridCustomFilterHandler += new GridCustomFilterDelegate(UFGridDataGrid_GridCustomFilterHandler);
 
             AfterEventBind();
         }
@@ -237,9 +248,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         private void CreateFormChildControls()
         {
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"HXRelationRefUIFrom",true,632,376);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 2, 0, 10, 10, 10, 10, 10);
-			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(610,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(320,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),});
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 8, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _panel,  this.Model.HXRelationRefShowView, "HXRelationRefShowView", "", null, 1, "HXRelationRefShowView");
+			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(610,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(320,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -264,8 +275,61 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIControlBuilder.BuilderUFControl(this.Card1, "2");		
 
 
+				this.lblRefCode0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefCode0", "", "True", "True", "Right", 610, 20, 0, 2, 1, 1, "100","672ec275-b9dd-495e-a5a7-57c258977cbf","625f07ea-7ba8-4b83-860d-0161e1ddc004");
+
+
+								
 
 		
+			UIControlBuilder.BuilderUFControl(this.lblRefCode0, "3");		
+
+
+				this.RefCode0 = UIControlBuilder.BuilderTextBox(_panel, "RefCode0", "True", "True", "True", "False", "Left", 0, 60, 0, 610, 20, 0, 3, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblRefCode0","","50","672ec275-b9dd-495e-a5a7-57c258977cbf","5fabfa7c-d524-47da-b409-73467e66823c");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefCode0, "False", "RefCode", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefCode, "HXRelationRefShowView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.RefCode0, "4");		
+		 
+
+				this.lblRefName0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefName0", "", "True", "True", "Right", 610, 20, 0, 4, 1, 1, "100","35332702-30aa-4a7c-9f06-c2c5afd06282","08f15afb-610c-42b4-be77-f8a98c06caef");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblRefName0, "5");		
+
+
+				this.RefName0 = UIControlBuilder.BuilderTextBox(_panel, "RefName0", "True", "True", "True", "False", "Left", 0, 60, 0, 610, 20, 0, 5, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblRefName0","","50","35332702-30aa-4a7c-9f06-c2c5afd06282","221e73fa-0fe0-4feb-a12c-a6e4922a73c6");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefName0, "False", "RefName", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefName, "HXRelationRefShowView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.RefName0, "6");		
+		 
+
+				this.lblRefID0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefID0", "", "True", "True", "Right", 610, 20, 0, 6, 1, 1, "100","f558de5a-12f3-46c7-a894-99ee018253d3","d1312502-f750-4a0b-91aa-cf69a46216c9");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblRefID0, "7");		
+
+
+				this.RefID0 = UIControlBuilder.BuilderNumberControl(_panel, "RefID0", "True", "True", "True", "Left", 7, 60, 0, 610, 20, 0, 7, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+			,TextAlign.Right,0,true,false,true,"lblRefID0","19.0","f558de5a-12f3-46c7-a894-99ee018253d3","70dcc542-276d-4e88-9bdd-34f203a72bee",null,null,null, null);
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefID0, "False", "RefID", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefID, "HXRelationRefShowView");
+	
+		
+			UIControlBuilder.BuilderUFControl(this.RefID0, "8");		
+		 
+
+
+								
      
 			
 			
@@ -339,7 +403,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIControlBuilder.BuilderUFControl(this.lblOrg161, "4");		
 
 
-				this.Org161 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"Org161",true,true, true,90, 20, 2, 0, 1, 1, "100","5",false,false,true,"lblOrg161","9e3add61-7c7f-430a-9345-cb03b1c8a99d","7228e39e-9e79-4d44-90e5-048433afa67c");
+				this.Org161 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"Org161",true,true, true,200, 20, 2, 0, 3, 1, "100","5",false,false,true,"lblOrg161","9e3add61-7c7f-430a-9345-cb03b1c8a99d","7228e39e-9e79-4d44-90e5-048433afa67c");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Org161, "False", "Org", this.Model.HXRelationRefFindView, this.Model.HXRelationRefFindView.FieldOrg, "HXRelationRefFindView");
 			UIControlBuilder.SetReferenceControlRefInfo(this.Org161,"19b6ef3c-a0a9-4851-9566-a16e9a5578a7", 580,408, "Name","Code","ID", this.Model.HXRelationRefFindView.FieldOrg_Code,this.Model.HXRelationRefFindView.FieldOrg_Name);
             //foreach Reference's input filter parameter
@@ -360,7 +424,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIControlBuilder.BuilderUFControl(this.lblRelType89, "6");		
 
 
-		        this.RelType89 = UIControlBuilder.BuilderDropDownList(_UFCard, "RelType89", "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum", true,  true, true, "Left", 2, 60, 0, 90, 20, 2, 1, 1, 1, "100",true,false,"lblRelType89","77608aa2-3049-46f8-8b44-c923c66aee6d","c20ac936-0309-4074-a3de-c9e40ac348c3");
+		        this.RelType89 = UIControlBuilder.BuilderDropDownList(_UFCard, "RelType89", "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum", true,  true, true, "Left", 2, 60, 0, 110, 20, 2, 1, 2, 1, "100",true,false,"lblRelType89","77608aa2-3049-46f8-8b44-c923c66aee6d","c20ac936-0309-4074-a3de-c9e40ac348c3");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RelType89, "False", "RelType", this.Model.HXRelationRefFindView, this.Model.HXRelationRefFindView.FieldRelType, "HXRelationRefFindView");
 			EnumTypeList.Add("UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum");
 			EnumControlsMap.Add(this.RelType89, _UFCard);
@@ -378,10 +442,10 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 
 
 	
-			_BuilderControl_DataGrid0(_UFCard);
+			_BuilderControl_DataGrid(_UFCard);
 
 		
-			UIControlBuilder.BuilderUFControl(this.DataGrid0, "16");		
+			UIControlBuilder.BuilderUFControl(this.DataGrid, "16");		
 
 
 				this.lblRelColumn152 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblRelColumn152", "", "True", "True", "Right", 90, 20, 0, 2, 1, 1, "100","3ed12cd2-090a-4caa-b5e1-fb0e72cd695d","fcd37657-876a-4f58-9f27-a7ff436d9bb0");
@@ -393,7 +457,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIControlBuilder.BuilderUFControl(this.lblRelColumn152, "17");		
 
 
-		        this.RelColumn152 = UIControlBuilder.BuilderDropDownList(_UFCard, "RelColumn152", "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun", true,  true, true, "Left", 2, 60, 0, 90, 20, 2, 2, 1, 1, "100",true,false,"lblRelColumn152","3ed12cd2-090a-4caa-b5e1-fb0e72cd695d","27572714-7e6e-4db5-896a-bd2de73fc0c1");
+		        this.RelColumn152 = UIControlBuilder.BuilderDropDownList(_UFCard, "RelColumn152", "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun", true,  true, true, "Left", 2, 60, 0, 110, 20, 2, 2, 2, 1, "100",true,false,"lblRelColumn152","3ed12cd2-090a-4caa-b5e1-fb0e72cd695d","27572714-7e6e-4db5-896a-bd2de73fc0c1");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RelColumn152, "False", "RelColumn", this.Model.HXRelationRefFindView, this.Model.HXRelationRefFindView.FieldRelColumn, "HXRelationRefFindView");
 			EnumTypeList.Add("UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun");
 			EnumControlsMap.Add(this.RelColumn152, _UFCard);
@@ -442,9 +506,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 
 
        
-        private void _BuilderControl_DataGrid0(IUFContainer container)
+        private void _BuilderControl_DataGrid(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, true,true,true,true,true,20,false, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, false, false,false,false,false,true,20,false, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "16");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 594, 245, 0, 3, 11, 10, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.HXRelationRefShowView, "HXRelationRefShowView", "", null, 20, "HXRelationRefShowView");
@@ -452,7 +516,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			_UFGrid.AllowSelectAllPage=false;
 			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
 		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
-            this.DataGrid0 = _UFGrid;
+            this.DataGrid = _UFGrid;
             container.Controls.Add(_UFGrid);
 
 
@@ -470,14 +534,19 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefCode0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefCode"]/*RefCode*/,"RefCode", false, true, true, false, false, true, 0, 100, "50",true, false,"","672ec275-b9dd-495e-a5a7-57c258977cbf","672ec275-b9dd-495e-a5a7-57c258977cbf","b6724882-4166-4f6b-839f-5158035b91d4");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefCode0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefCode"]/*RefCode*/,"RefCode", false, true, false, false, false, true, 0, 200, "50",true, false,"","672ec275-b9dd-495e-a5a7-57c258977cbf","672ec275-b9dd-495e-a5a7-57c258977cbf","b6724882-4166-4f6b-839f-5158035b91d4");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefName0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefName"]/*RefName*/,"RefName", false, true, true, false, false, true, 0, 100, "50",true, false,"","35332702-30aa-4a7c-9f06-c2c5afd06282","35332702-30aa-4a7c-9f06-c2c5afd06282","a853515c-1c51-4f24-bb3d-f85129b59bcc");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefName0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefName"]/*RefName*/,"RefName", false, true, false, false, false, true, 0, 300, "50",true, false,"","35332702-30aa-4a7c-9f06-c2c5afd06282","35332702-30aa-4a7c-9f06-c2c5afd06282","a853515c-1c51-4f24-bb3d-f85129b59bcc");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefID1","NumberColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefID"]/*RefID*/,"RefID", false, false, true, false, false, true, 7, 100, "19.0",true, false,"","f558de5a-12f3-46c7-a894-99ee018253d3","f558de5a-12f3-46c7-a894-99ee018253d3","4ec7c04c-ce92-4f09-965c-58acf53ee524");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
 	  
 		 
         }

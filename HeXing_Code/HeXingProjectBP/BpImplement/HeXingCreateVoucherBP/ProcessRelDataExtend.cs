@@ -282,7 +282,7 @@
                     var MaterialGroupCode = tempArray[1];
                     var AssetsCode = tempArray[2];
                     var FeeTypeEnumCode = tempArray[3];
-                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode +  "' and SapMasterCode='"
+                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode + "' and SapMasterCode='"
                         + MaterialGroupCode + "' and SapAssetsCode='" + AssetsCode + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
                     if (shipAccount == null)
                     {

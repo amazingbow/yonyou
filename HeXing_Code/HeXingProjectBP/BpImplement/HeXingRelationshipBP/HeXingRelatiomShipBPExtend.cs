@@ -45,6 +45,7 @@
                                 foreach (var Currency in CurrencyList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Currency.ID;
                                     Relatiom.FCode = Currency.Code;
                                     Relatiom.FName = Currency.Name;
                                     RelatiomList.Add(Relatiom);
@@ -58,6 +59,7 @@
                                 foreach (var Customer in CustomerList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Customer.ID;
                                     Relatiom.FCode = Customer.Code;
                                     Relatiom.FName = Customer.Name;
                                     RelatiomList.Add(Relatiom);
@@ -71,6 +73,7 @@
                                 foreach (var Supplier in SupplierList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Supplier.ID;
                                     Relatiom.FCode = Supplier.Code;
                                     Relatiom.FName = Supplier.Name;
                                     RelatiomList.Add(Relatiom);
@@ -84,6 +87,7 @@
                                 foreach (var Department in DepartmentList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Department.ID;
                                     Relatiom.FCode = Department.Code;
                                     Relatiom.FName = Department.Name;
                                     RelatiomList.Add(Relatiom);
@@ -97,6 +101,7 @@
                                 foreach (var Operator in OperatorList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Operator.ID;
                                     Relatiom.FCode = Operator.Code;
                                     Relatiom.FName = Operator.Name;
                                     RelatiomList.Add(Relatiom);
@@ -104,12 +109,13 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%")});
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemMainList.Count > 0)
                             {
                                 foreach (var CashFlowItemMain in CashFlowItemMainList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = CashFlowItemMain.ID;
                                     Relatiom.FCode = CashFlowItemMain.Code;
                                     Relatiom.FName = CashFlowItemMain.Name;
                                     RelatiomList.Add(Relatiom);
@@ -117,12 +123,13 @@
                             }
                             break;
                         case "组织":
-                            UFIDA.U9.Base.Organization.Organization.EntityList OrganizationList = UFIDA.U9.Base.Organization.Organization.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%")});
+                            UFIDA.U9.Base.Organization.Organization.EntityList OrganizationList = UFIDA.U9.Base.Organization.Organization.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (OrganizationList.Count > 0)
                             {
                                 foreach (var Organization in OrganizationList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Organization.ID;
                                     Relatiom.FCode = Organization.Code;
                                     Relatiom.FName = Organization.Name;
                                     RelatiomList.Add(Relatiom);
@@ -136,6 +143,7 @@
                                 foreach (var VoucherCategory in VoucherCategoryList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = VoucherCategory.ID;
                                     Relatiom.FCode = VoucherCategory.Code;
                                     Relatiom.FName = VoucherCategory.Name;
                                     RelatiomList.Add(Relatiom);
@@ -149,21 +157,37 @@
                                 foreach (var Project in ProjectList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
                                     Relatiom.FName = Project.Name;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
                             break;
-                            case "科目":
-                            UFIDA.U9.CBO.FI.Account.Account.EntityList AccountList = UFIDA.U9.CBO.FI.Account.Account.Finder.FindAll("Code like @Code and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
+                        case "科目":
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
                                     Relatiom.FName = Account.Name;
+                                    RelatiomList.Add(Relatiom);
+                                }
+                            }
+                            break;
+                        case "费用类型":
+                            UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem.EntityList ExpenseItemList = UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (ExpenseItemList.Count > 0)
+                            {
+                                foreach (var ExpenseItem in ExpenseItemList)
+                                {
+                                    RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = ExpenseItem.ID;
+                                    Relatiom.FCode = ExpenseItem.Code;
+                                    Relatiom.FName = ExpenseItem.Name;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -180,6 +204,7 @@
                                 foreach (var Currency in CurrencyList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Currency.ID;
                                     Relatiom.FCode = Currency.Code;
                                     Relatiom.FName = Currency.Name;
                                     RelatiomList.Add(Relatiom);
@@ -193,6 +218,7 @@
                                 foreach (var Customer in CustomerList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Customer.ID;
                                     Relatiom.FCode = Customer.Code;
                                     Relatiom.FName = Customer.Name;
                                     RelatiomList.Add(Relatiom);
@@ -206,6 +232,7 @@
                                 foreach (var Supplier in SupplierList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Supplier.ID;
                                     Relatiom.FCode = Supplier.Code;
                                     Relatiom.FName = Supplier.Name;
                                     RelatiomList.Add(Relatiom);
@@ -219,6 +246,7 @@
                                 foreach (var Department in DepartmentList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Department.ID;
                                     Relatiom.FCode = Department.Code;
                                     Relatiom.FName = Department.Name;
                                     RelatiomList.Add(Relatiom);
@@ -232,6 +260,7 @@
                                 foreach (var Operator in OperatorList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Operator.ID;
                                     Relatiom.FCode = Operator.Code;
                                     Relatiom.FName = Operator.Name;
                                     RelatiomList.Add(Relatiom);
@@ -239,12 +268,13 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%")});
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemMainList.Count > 0)
                             {
                                 foreach (var CashFlowItemMain in CashFlowItemMainList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = CashFlowItemMain.ID;
                                     Relatiom.FCode = CashFlowItemMain.Code;
                                     Relatiom.FName = CashFlowItemMain.Name;
                                     RelatiomList.Add(Relatiom);
@@ -252,12 +282,13 @@
                             }
                             break;
                         case "组织":
-                            UFIDA.U9.Base.Organization.Organization.EntityList OrganizationList = UFIDA.U9.Base.Organization.Organization.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%")});
+                            UFIDA.U9.Base.Organization.Organization.EntityList OrganizationList = UFIDA.U9.Base.Organization.Organization.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (OrganizationList.Count > 0)
                             {
                                 foreach (var Organization in OrganizationList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Organization.ID;
                                     Relatiom.FCode = Organization.Code;
                                     Relatiom.FName = Organization.Name;
                                     RelatiomList.Add(Relatiom);
@@ -271,6 +302,7 @@
                                 foreach (var VoucherCategory in VoucherCategoryList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = VoucherCategory.ID;
                                     Relatiom.FCode = VoucherCategory.Code;
                                     Relatiom.FName = VoucherCategory.Name;
                                     RelatiomList.Add(Relatiom);
@@ -284,21 +316,37 @@
                                 foreach (var Project in ProjectList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
                                     Relatiom.FName = Project.Name;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
                             break;
-                            case "科目":
-                            UFIDA.U9.CBO.FI.Account.Account.EntityList AccountList = UFIDA.U9.CBO.FI.Account.Account.Finder.FindAll("Name like @Name and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
+                        case "科目":
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
                                     Relatiom.FName = Account.Name;
+                                    RelatiomList.Add(Relatiom);
+                                }
+                            }
+                            break;
+                        case "费用类型":
+                            UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem.EntityList ExpenseItemList = UFIDA.U9.CBO.FI.ExpenseItem.ExpenseItem.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (ExpenseItemList.Count > 0)
+                            {
+                                foreach (var ExpenseItem in ExpenseItemList)
+                                {
+                                    RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = ExpenseItem.ID;
+                                    Relatiom.FCode = ExpenseItem.Code;
+                                    Relatiom.FName = ExpenseItem.Name;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
