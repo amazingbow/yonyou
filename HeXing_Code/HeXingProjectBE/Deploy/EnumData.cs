@@ -3,6 +3,34 @@ using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
 
+namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
+{
+	/// <summary>
+	/// 枚举值: 导入标志枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum ImportFlagEnumData
+	{
+		/// <summary>
+		/// 数据未处理
+		/// </summary>
+		NotProcess = 0,
+		/// <summary>
+		/// 导入成功
+		/// </summary>
+		ImportSuccess = 1,
+		/// <summary>
+		/// 导入失败
+		/// </summary>
+		ImportFailed = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
 namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 {
 	/// <summary>
@@ -80,10 +108,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// 审核
 		/// </summary>
 		Approval = 2,
-		/// <summary>
-		/// 使用中
-		/// </summary>
-		Used = 3,
 		/// <summary>
 		/// 废弃
 		/// </summary>

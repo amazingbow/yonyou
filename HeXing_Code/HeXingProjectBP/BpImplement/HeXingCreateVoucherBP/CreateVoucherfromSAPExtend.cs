@@ -60,10 +60,10 @@
                     if (res.Contains(item.SAPVoucherDisplayCode))
                     {
                         item.U9ErrorResult += res.Replace(item.SAPVoucherDisplayCode, ",");
-                        item.IsU9Successful = 2;
+                        item.IsU9Successful = ImportFlagEnum.ImportFailed;
                     }
                 }
-                if (item.IsU9Successful == 2)
+                if (item.IsU9Successful ==  ImportFlagEnum.ImportFailed)
                 {
                     continue;
                 }
@@ -132,12 +132,12 @@
                         }
                         item.U9VoucherID = result[0].VoucherID;
                         item.CompleteU9Date = DateTime.Now;
-                        item.IsU9Successful = 1;
+                        item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                     }
                     catch (Exception ex)
                     {
                         item.U9ErrorResult = ex.Message;
-                        item.IsU9Successful = 2;
+                        item.IsU9Successful = ImportFlagEnum.ImportFailed;
                     }
                     session.Commit();
                 }

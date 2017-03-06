@@ -123,6 +123,24 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			}
 		}		
 
+			        					/// <summary>
+		/// 是否写入U9凭证成功
+		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_isU9Successful;
+		public System.Int32 IsU9Successful
+		{
+			get	
+			{	
+				return m_isU9Successful ;
+			}
+			set	
+			{	
+				m_isU9Successful = value ;
+			}
+		}		
+
 			
 		#endregion	
 
@@ -447,25 +465,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			set	
 			{	
 				m_completeU9Date = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 是否写入U9凭证成功
-		/// SAP与U9凭证对接中间表头.Misc.是否写入U9凭证成功
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int32 m_isU9Successful ;
-		public System.Int32 IsU9Successful
-		{
-			get	
-			{	
-				return m_isU9Successful  ;
-			}
-			set	
-			{	
-				m_isU9Successful = value ;	
 			}
 		}
 		

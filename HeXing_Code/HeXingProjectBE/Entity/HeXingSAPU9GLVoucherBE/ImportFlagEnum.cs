@@ -2,48 +2,48 @@
 using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
-namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
+namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 {
     /// <summary>
-    /// 可扩展枚举: 对照表状态枚举 
+    /// 可扩展枚举: 导入标志枚举 
     /// 
     /// </summary>
     //枚举可以考虑加基类，目前不改也没影响。
-    public sealed class RefStatusEnum
+    public sealed class ImportFlagEnum
     {
 
-        //private static readonly ExtendableEnum innerExtendableEnum = new ExtendableEnum("UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum");
+        //private static readonly ExtendableEnum innerExtendableEnum = new ExtendableEnum("UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.ImportFlagEnum");
         #region ctor & cctor 
-        static RefStatusEnum()
+        static ImportFlagEnum()
         {
             InitData();
         }
-        private RefStatusEnum(int eValue)
+        private ImportFlagEnum(int eValue)
         {
             this.currentValue = eValue;
         }
-        private RefStatusEnum(int eValue,string name)
+        private ImportFlagEnum(int eValue,string name)
         {
             this.currentValue = eValue;
 			this.name = name ;
         }
         private static void InitData()
         {
-            innerEnums = new System.Collections.Generic.Dictionary<System.Int32,RefStatusEnum>();
-            oraginal = new RefStatusEnum(1,"Oraginal") ;
-            innerEnums.Add(1,oraginal) ;
-            approval = new RefStatusEnum(2,"Approval") ;
-            innerEnums.Add(2,approval) ;
-            scrap = new RefStatusEnum(0,"Scrap") ;
-            innerEnums.Add(0,scrap) ;
-            empty = new RefStatusEnum(-1,"") ;
+            innerEnums = new System.Collections.Generic.Dictionary<System.Int32,ImportFlagEnum>();
+            notProcess = new ImportFlagEnum(0,"NotProcess") ;
+            innerEnums.Add(0,notProcess) ;
+            importSuccess = new ImportFlagEnum(1,"ImportSuccess") ;
+            innerEnums.Add(1,importSuccess) ;
+            importFailed = new ImportFlagEnum(2,"ImportFailed") ;
+            innerEnums.Add(2,importFailed) ;
+            empty = new ImportFlagEnum(-1,"") ;
 			innerEnums.Add(-1,empty) ;
         }
         #endregion
 
         #region  Empty Value
-        private static RefStatusEnum empty;
-        public static RefStatusEnum Empty
+        private static ImportFlagEnum empty;
+        public static ImportFlagEnum Empty
         {
             get
             {
@@ -76,12 +76,12 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         	{
         		switch ( this.Name )
         		{
-        			case "Oraginal":
-        				return this.Res_Oraginal; 
-        			case "Approval":
-        				return this.Res_Approval; 
-        			case "Scrap":
-        				return this.Res_Scrap; 
+        			case "NotProcess":
+        				return this.Res_NotProcess; 
+        			case "ImportSuccess":
+        				return this.Res_ImportSuccess; 
+        			case "ImportFailed":
+        				return this.Res_ImportFailed; 
         			default :
         			    return String.Empty;
         		}
@@ -90,50 +90,50 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         #endregion 
 
         #region public static enum member
-        private static RefStatusEnum oraginal ;
+        private static ImportFlagEnum notProcess ;
         /// <summary>
-        /// 枚举值: 初始状态  Value:1  
-        /// 对照表状态枚举.Misc.初始状态
+        /// 枚举值: 数据未处理  Value:0  
+        /// 导入标志枚举.Misc.数据未处理
         /// </summary>
-        public static RefStatusEnum Oraginal
+        public static ImportFlagEnum NotProcess
         {
             get
             {
-                return  oraginal ;
+                return  notProcess ;
             }
         }
-        private static RefStatusEnum approval ;
+        private static ImportFlagEnum importSuccess ;
         /// <summary>
-        /// 枚举值: 审核  Value:2  
-        /// 对照表状态枚举.Misc.审核
+        /// 枚举值: 导入成功  Value:1  
+        /// 导入标志枚举.Misc.导入成功
         /// </summary>
-        public static RefStatusEnum Approval
+        public static ImportFlagEnum ImportSuccess
         {
             get
             {
-                return  approval ;
+                return  importSuccess ;
             }
         }
-        private static RefStatusEnum scrap ;
+        private static ImportFlagEnum importFailed ;
         /// <summary>
-        /// 枚举值: 废弃  Value:0  
-        /// 对照表状态枚举.Misc.废弃
+        /// 枚举值: 导入失败  Value:2  
+        /// 导入标志枚举.Misc.导入失败
         /// </summary>
-        public static RefStatusEnum Scrap
+        public static ImportFlagEnum ImportFailed
         {
             get
             {
-                return  scrap ;
+                return  importFailed ;
             }
         }
         #endregion
 
         #region public Static Property & Method 
-        private static System.Collections.Generic.IDictionary<System.Int32, RefStatusEnum> innerEnums;
+        private static System.Collections.Generic.IDictionary<System.Int32, ImportFlagEnum> innerEnums;
         /// <summary>
-        /// Get RefStatusEnum's All Values.
+        /// Get ImportFlagEnum's All Values.
         /// </summary>
-        public static System.Collections.Generic.ICollection<RefStatusEnum> Values
+        public static System.Collections.Generic.ICollection<ImportFlagEnum> Values
         {
             get
             {
@@ -143,9 +143,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	
         private static object lockobj = new object();
         /// <summary>
-        /// Get RefStatusEnum By Value 
+        /// Get ImportFlagEnum By Value 
         /// </summary>
-        public static RefStatusEnum GetFromValue(System.Int32 value)
+        public static ImportFlagEnum GetFromValue(System.Int32 value)
         {
             //仅返回空的方法不是太好,在用的时候,枚举值可能就会设置一个枚举项中没有的,或者枚举值被删除.?
             if (!innerEnums.ContainsKey(value))
@@ -154,7 +154,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
                 {
                     if (!innerEnums.ContainsKey(value))
                     {
-						RefStatusEnum newValue = new RefStatusEnum(value, "");
+						ImportFlagEnum newValue = new ImportFlagEnum(value, "");
 						innerEnums.Add(value,newValue);
 						return newValue ;
 					}
@@ -163,23 +163,23 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
             return innerEnums[value]; 
         }
 		/// <summary>
-        /// Get RefStatusEnum By Value 
+        /// Get ImportFlagEnum By Value 
         /// </summary>
-        public static RefStatusEnum GetFromValue(object value)
+        public static ImportFlagEnum GetFromValue(object value)
         {
 			if (value == null)
-				return RefStatusEnum.Empty ;
+				return ImportFlagEnum.Empty ;
 			System.Int32 resultValue = 0 ;
 			if (!System.Int32.TryParse(value.ToString(),out resultValue))
 				throw new ArgumentException(string.Format("枚举数据异常，该枚举数据值'{0}'为非整型数据",value));
 			return GetFromValue(resultValue) ;
         }
         /// <summary>
-        /// Get RefStatusEnum By Name 
+        /// Get ImportFlagEnum By Name 
         /// </summary>
-        public static RefStatusEnum GetFromName(string name)
+        public static ImportFlagEnum GetFromName(string name)
         {
-            foreach (RefStatusEnum obj in innerEnums.Values)
+            foreach (ImportFlagEnum obj in innerEnums.Values)
             {
                 if (obj.Name == name)
                     return obj;
@@ -192,29 +192,29 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		#region ModelResource
 		/// <summary>
-		/// 对照表状态枚举的显示名称资源
+		/// 导入标志枚举的显示名称资源
 		/// </summary>
 		public string Res_TypeName {	get {return Res_TypeNameS ;}	}
 		/// <summary>
-		/// 对照表状态枚举的显示名称资源
+		/// 导入标志枚举的显示名称资源
 		/// </summary>
-		public static string Res_TypeNameS {	get {return EnumRes.GetResource("UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum")  ;} }
+		public static string Res_TypeNameS {	get {return EnumRes.GetResource("UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.ImportFlagEnum")  ;} }
 
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>
         [Obsolete("")]
-		public string Res_Oraginal　{ get {return EnumRes.GetResource("Oraginal");}　}
+		public string Res_NotProcess　{ get {return EnumRes.GetResource("NotProcess");}　}
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>
         [Obsolete("")]
-		public string Res_Approval　{ get {return EnumRes.GetResource("Approval");}　}
+		public string Res_ImportSuccess　{ get {return EnumRes.GetResource("ImportSuccess");}　}
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>
         [Obsolete("")]
-		public string Res_Scrap　{ get {return EnumRes.GetResource("Scrap");}　}
+		public string Res_ImportFailed　{ get {return EnumRes.GetResource("ImportFailed");}　}
 		#endregion 
 		
 		#region EnumRes
@@ -223,7 +223,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			/// <summary>
 			/// 枚举全名: FullName 
 			/// </summary>
-			public static string Enum_FullName { get { return "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum";　}　}
+			public static string Enum_FullName { get { return "UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE.ImportFlagEnum";　}　}
 
 			/// <summary>
 			///  获取资源接口,直接传了枚举对象.Name 就可.
