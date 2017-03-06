@@ -26,6 +26,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		{
 		
 		
+					FID = 0; 
 
 		}
 
@@ -66,10 +67,27 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 				base.SetValue("FName",value);
 			}
 		}
+				/// <summary>
+		/// ID (该属性可为空,但有默认值)
+		/// 对照信息DTO.Misc.ID
+		/// </summary>
+		/// <value>System.Int64</value>
+		public System.Int64 FID
+		{
+			get	
+			{	
+				return (System.Int64)base.GetValue("FID",typeof(System.Int64));
+			}
+
+			 set	
+			{
+				base.SetValue("FID",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-		
+			
 		#endregion 
 
 		#region ModelResource
@@ -85,6 +103,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		/// 名称的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_FName　{ get { return "";　}　}
+		/// <summary>
+		/// ID的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_FID　{ get { return "";　}　}
 		#endregion 
 
 
@@ -97,6 +119,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		private void DeSerializeKey(RelatiomShipBPDtoData data)
 		{
 		
+
 
 
 		}
@@ -122,6 +145,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			this.FCode = data.FCode;
 
 			this.FName = data.FName;
+
+			this.FID = data.FID;
 
 		}
 
@@ -153,6 +178,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			data.FCode = this.FCode;
 
 			data.FName = this.FName;
+
+			data.FID = this.FID;
 
 			return data ;
 		}

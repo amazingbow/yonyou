@@ -471,6 +471,10 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		{
 			get { return this.Fields["RefName"]; }
 		}
+		public IUIField FieldRefID
+		{
+			get { return this.Fields["RefID"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -491,6 +495,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), false,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","1378b0b0-1fc8-45be-a3ce-fd250b148b80");
 			UIModelRuntimeFactory.AddNewUIField(this,"RefCode", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","672ec275-b9dd-495e-a5a7-57c258977cbf");
 			UIModelRuntimeFactory.AddNewUIField(this,"RefName", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","35332702-30aa-4a7c-9f06-c2c5afd06282");
+			UIModelRuntimeFactory.AddNewUIField(this,"RefID", typeof(Int64), true,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","f558de5a-12f3-46c7-a894-99ee018253d3");
 
 
 			this.CurrentFilter = new HXRelationRefShowViewDefaultFilterFilter(this);
@@ -642,6 +647,19 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			}
 			set{
 				this[this.uiviewHXRelationRefShowView.FieldRefName] = value;
+			}
+		}
+		
+		
+		public  Int64? RefID
+		{
+			get{
+				//object value = this[this.uiviewHXRelationRefShowView.FieldRefID] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewHXRelationRefShowView.FieldRefID);
+			}
+			set{
+				this[this.uiviewHXRelationRefShowView.FieldRefID] = value;
 			}
 		}
 		#endregion

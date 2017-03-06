@@ -81,6 +81,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		Approval = 2,
 		/// <summary>
+		/// 使用中
+		/// </summary>
+		Used = 3,
+		/// <summary>
 		/// 废弃
 		/// </summary>
 		Scrap = 0,

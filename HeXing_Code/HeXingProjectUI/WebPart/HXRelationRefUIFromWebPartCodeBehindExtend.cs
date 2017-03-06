@@ -46,7 +46,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.HXRelationRefShowView.Clear();
-            //this.Model.ClearErrorMessage();
+            this.Model.ClearErrorMessage();
             if (string.IsNullOrEmpty(this.Org161.Text))
             {
                 throw new Exception("组织机构不能为空！");
@@ -70,8 +70,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
                 HXRelationRefShowViewRecord ShowRecord = this.Model.HXRelationRefShowView.AddNewUIRecord();
                 ShowRecord.RefCode = record.FCode;
                 ShowRecord.RefName = record.FName;
+                ShowRecord.RefID = record.FID;
             }
-            AtlasHelper.RegisterStartupScript((Control)base.Action.CurrentPart.TopLevelContainer, base.Action.CurrentPart.GetType(), "ReferenceReturn","", false);
+            //AtlasHelper.RegisterStartupScript((Control)base.Action.CurrentPart.TopLevelContainer, base.Action.CurrentPart.GetType(), "ReferenceReturn","", false);
 			BtnFind_Click_DefaultImpl(sender,e);
             //CommandFactory.DoCommand("ReferenceConfirmClick", this.Action, sender, e);
 		}	
@@ -88,14 +89,21 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 				//BtnOk_Click...
 		private void BtnOk_Click_Extend(object sender, EventArgs  e)
 		{
-            //CommandFactory.DoCommand("ReferenceGridRowDbClicked", this.Action, sender, e);
+            CommandFactory.DoCommand("ReferenceConfirmClick", this.Action, sender, e);
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            this.CurrentSessionState["Code"] = this.Model.HXRelationRefShowView.FocusedRecord.RefCode;
-            this.CurrentSessionState["Name"] = this.Model.HXRelationRefShowView.FocusedRecord.RefName;
-            this.CloseDialog(true);
+            //this.CloseDialog(true);
             
 			BtnOk_Click_DefaultImpl(sender,e);
 		}
+
+        private void DataGrid_GridRowDbClicked_Extend(object sender, GridDBClickEventArgs e)
+        {
+            CommandFactory.DoCommand("ReferenceGridRowDbClicked", this.Action, sender, e);
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            //this.CloseDialog(true);
+
+            DataGrid_GridRowDbClicked_DefaultImpl(sender, e);
+        }
 
 		
             

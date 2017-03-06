@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.SFC.SFCBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.SFC.SFCBP.OpInfoDTOData">
+            <summary>
+            工艺信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.#ctor(System.Int64,System.Int64,System.Decimal,System.Int64,System.String,System.Int64,System.Int64,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Boolean,System.Boolean,System.Boolean,System.Int64,System.Collections.Generic.List{System.Int64},System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_outputUOMRatio2PU">
+            <summary>
+            产出到生产单位转换率
+            工艺信息DTO.Misc.产出到生产单位转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_oPNumber">
+            <summary>
+            工序号
+            工艺信息DTO.Misc.工序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_planStartDate">
+            <summary>
+            计划开始时间
+            工艺信息DTO.Misc.计划开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_planCompleteDate">
+            <summary>
+            计划完工时间
+            工艺信息DTO.Misc.计划完工时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_planProductQty">
+            <summary>
+            计划投产数量
+            工艺信息DTO.Misc.计划投产数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_taskQty">
+            <summary>
+            任务数量
+            工艺信息DTO.Misc.任务数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_isAutoTranfer">
+            <summary>
+            是否自动转移
+            工艺信息DTO.Misc.是否自动转移
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_isFirstOp">
+            <summary>
+            是否首序
+            工艺信息DTO.Misc.是否首序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_isLastOp">
+            <summary>
+            是否末序
+            工艺信息DTO.Misc.是否末序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.m_sFCTaskReportList">
+            <summary>
+            处理汇报单集合
+            工艺信息DTO.Misc.处理汇报单集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.MO_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.MO">
+            <summary>
+            生产订单
+            工艺信息DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.OutputUOM_SKey">
+            <summary>
+            产出单位 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.产出单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.OutputUOM">
+            <summary>
+            产出单位
+            工艺信息DTO.Misc.产出单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.StdOp_SKey">
+            <summary>
+            作业 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.作业
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.StdOp">
+            <summary>
+            作业
+            工艺信息DTO.Misc.作业
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.OPOrg_SKey">
+            <summary>
+            执行组织 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.执行组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.OPOrg">
+            <summary>
+            执行组织
+            工艺信息DTO.Misc.执行组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.WorkCenter_SKey">
+            <summary>
+            工作中心 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.WorkCenter">
+            <summary>
+            工作中心
+            工艺信息DTO.Misc.工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.MOOperation_SKey">
+            <summary>
+            订单工序 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.订单工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.MOOperation">
+            <summary>
+            订单工序
+            工艺信息DTO.Misc.订单工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.SFCTaskReportList_SKey">
+            <summary>
+            处理汇报单集合 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            工艺信息DTO.Misc.处理汇报单集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.DesOperation_SKey">
+            <summary>
+            目的工序 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.目的工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.DesOperation">
+            <summary>
+            目的工序
+            工艺信息DTO.Misc.目的工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.CompleteWh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.CompleteWh">
+            <summary>
+            存储地点
+            工艺信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.CompleteBin_SKey">
+            <summary>
+            库位 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.库位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.CompleteBin">
+            <summary>
+            库位
+            工艺信息DTO.Misc.库位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.FirstReworkMOOP_SKey">
+            <summary>
+            返工首序 序列化Key属性。（传递跨组织序列列字段）
+            工艺信息DTO.Misc.返工首序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.OpInfoDTOData.FirstReworkMOOP">
+            <summary>
+            返工首序
+            工艺信息DTO.Misc.返工首序
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData">
+            <summary>
+            汇报单单据类型信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.#ctor(System.Int64,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_docTypeID">
+            <summary>
+            单据类型ID
+            汇报单单据类型信息.Misc.单据类型ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_docTypeCode">
+            <summary>
+            单据类型编码
+            汇报单单据类型信息.Misc.单据类型编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_docTypeName">
+            <summary>
+            单据类型名称
+            汇报单单据类型信息.Misc.单据类型名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_taskType">
+            <summary>
+            任务类型
+            汇报单单据类型信息.Misc.任务类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_docHeaderSequenceStyle">
+            <summary>
+            编码方式
+            汇报单单据类型信息.Misc.编码方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_isDocNoEditable">
+            <summary>
+            自动编码是否可改
+            汇报单单据类型信息.Misc.自动编码是否可改
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCTasksReportDocTypeDTOData.m_businessType">
+            <summary>
+            业务类型
+            汇报单单据类型信息.Misc.业务类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData">
+            <summary>
+            快速汇报信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.#ctor(System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Int64,System.Int32,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_completeQty">
+            <summary>
+            完工数量
+            快速汇报信息DTO.Misc.完工数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_eligibleQty">
+            <summary>
+            合格数量
+            快速汇报信息DTO.Misc.合格数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_reworkQty">
+            <summary>
+            返工数量
+            快速汇报信息DTO.Misc.返工数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_scrapQty">
+            <summary>
+            报废数量
+            快速汇报信息DTO.Misc.报废数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_businessDate">
+            <summary>
+            业务日期
+            快速汇报信息DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_reworkReason">
+            <summary>
+            返工原因
+            快速汇报信息DTO.Misc.返工原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.m_scrapReason">
+            <summary>
+            报废原因
+            快速汇报信息DTO.Misc.报废原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.SFCTask_SKey">
+            <summary>
+            车间任务 序列化Key属性。（传递跨组织序列列字段）
+            快速汇报信息DTO.Misc.车间任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.SFCTask">
+            <summary>
+            车间任务
+            快速汇报信息DTO.Misc.车间任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.ReworkOperation_SKey">
+            <summary>
+            返工工序 序列化Key属性。（传递跨组织序列列字段）
+            快速汇报信息DTO.Misc.返工工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.ReworkOperation">
+            <summary>
+            返工工序
+            快速汇报信息DTO.Misc.返工工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.Equipment_SKey">
+            <summary>
+            设备 序列化Key属性。（传递跨组织序列列字段）
+            快速汇报信息DTO.Misc.设备
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.Equipment">
+            <summary>
+            设备
+            快速汇报信息DTO.Misc.设备
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.ShiftGroup_SKey">
+            <summary>
+            班组 序列化Key属性。（传递跨组织序列列字段）
+            快速汇报信息DTO.Misc.班组
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.FastReportInfoDTOData.ShiftGroup">
+            <summary>
+            班组
+            快速汇报信息DTO.Misc.班组
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.SFCBatchOperationDTOData">
+            <summary>
+            车间批量操作返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.SFCBatchOperationDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.SFCBatchOperationDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCBatchOperationDTOData.m_sFCDoc">
+            <summary>
+            车间单据实体
+            车间批量操作返回DTO.Misc.车间单据实体
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.SFCBatchOperationDTOData.m_errMessage">
+            <summary>
+            错误信息
+            车间批量操作返回DTO.Misc.错误信息
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData">
+            <summary>
+            汇报单及数量对应信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData.#ctor(System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData.m_processQty">
+            <summary>
+            处理数量
+            汇报单及数量对应信息DTO.Misc.处理数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData.SFCTaskReport_SKey">
+            <summary>
+            任务汇报单 序列化Key属性。（传递跨组织序列列字段）
+            汇报单及数量对应信息DTO.Misc.任务汇报单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SFC.SFCBP.RpeportAndQtyInfoDTOData.SFCTaskReport">
+            <summary>
+            任务汇报单
+            汇报单及数量对应信息DTO.Misc.任务汇报单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData">
+            <summary>
+            人员子表信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.#ctor(UFIDA.U9.SFC.SFCTask.SFCTaskData,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.DateTime,System.Int32,UFIDA.U9.SFC.SFCTasksReport.SFCTasksReportData,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_sFCTask">
+            <summary>
+            任务单
+            人员子表信息DTO.Misc.任务单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_mOID">
+            <summary>
+            生产订单ID
+            人员子表信息DTO.Misc.生产订单ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_mOOperationID">
+            <summary>
+            工序ID
+            人员子表信息DTO.Misc.工序ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_taskQty">
+            <summary>
+            任务数量
+            人员子表信息DTO.Misc.任务数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_shiftGroupID">
+            <summary>
+            班组ID
+            人员子表信息DTO.Misc.班组ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_personID">
+            <summary>
+            人员ID
+            人员子表信息DTO.Misc.人员ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_planPrepareHours">
+            <summary>
+            计划准备工时
+            人员子表信息DTO.Misc.计划准备工时
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_planProcessHours">
+            <summary>
+            计划加工工时
+            人员子表信息DTO.Misc.计划加工工时
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_planStartDate">
+            <summary>
+            计划开始时间
+            人员子表信息DTO.Misc.计划开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_planEndDate">
+            <summary>
+            计划结束时间
+            人员子表信息DTO.Misc.计划结束时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_timeUOMID">
+            <summary>
+            时间单位ID
+            人员子表信息DTO.Misc.时间单位ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_compeletQty">
+            <summary>
+            完工数量
+            人员子表信息DTO.Misc.完工数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_actualPrepareHours">
+            <summary>
+            实际准备工时
+            人员子表信息DTO.Misc.实际准备工时
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_actualProcessHours">
+            <summary>
+            实际加工工时
+            人员子表信息DTO.Misc.实际加工工时
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_actualStartTime">
+            <summary>
+            实际开始时间
+            人员子表信息DTO.Misc.实际开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_actualEndTime">
+            <summary>
+            实际结束时间
+            人员子表信息DTO.Misc.实际结束时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_status">
+            <summary>
+            状态
+            人员子表信息DTO.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_sFCTasksReport">
+            <summary>
+            汇报单
+            人员子表信息DTO.Misc.汇报单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_mODocNo">
+            <summary>
+            生产订单号
+            人员子表信息DTO.Misc.生产订单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_mOOperationNum">
+            <summary>
+            工序号
+            人员子表信息DTO.Misc.工序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_shiftGroupCode">
+            <summary>
+            班组编码
+            人员子表信息DTO.Misc.班组编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_shiftGroupName">
+            <summary>
+            班组名称
+            人员子表信息DTO.Misc.班组名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_personName">
+            <summary>
+            人员名称
+            人员子表信息DTO.Misc.人员名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_timeUOMCode">
+            <summary>
+            时间单位编码
+            人员子表信息DTO.Misc.时间单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SFC.SFCBP.PersonTblInfoDTOData.m_timeUOMName">
+            <summary>
+            时间单位名称
+            人员子表信息DTO.Misc.时间单位名称
+            </summary>
+        </member>
+    </members>
+</doc>

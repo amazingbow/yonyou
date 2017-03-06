@@ -1,10 +1,16 @@
-<View ID="27891913-4675-447f-b75e-edb4ef82b85c" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="10" Height="376" LayoutType="GridBag" Name="HXRelationRefUIFrom" Namespace="UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel" TabStop="False" TemplateCode="UI_ModalFormThreeColumns" TemplateType="CustomTemplate" UIModelID="0a0d41fe-f90d-4466-b8dc-252f08265c7d" URI="UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel.HXRelationRefUIFromWebPart" ViewID="4983" Width="632" X="8" Y="8">
+<View ID="27891913-4675-447f-b75e-edb4ef82b85c" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="U9实体信息" DisplayNameIndex="0" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="1" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="8" GridRowSpace="10" GridTopMargin="10" GroupDisplayName="Misc" Height="376" LayoutType="GridBag" Name="HXRelationRefUIFrom" Namespace="UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel" TabStop="False" TemplateCode="UI_ModalFormThreeColumns" TemplateType="CustomTemplate" UIModelID="0a0d41fe-f90d-4466-b8dc-252f08265c7d" URI="UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel.HXRelationRefUIFromWebPart" ViewID="4983" Width="632" X="10" Y="10">
   <Columns>
     <Column Fixed="True" Name="Column0" Type="Title" Width="610" />
   </Columns>
   <Rows>
     <Row Fixed="True" Height="320" Name="Row0" />
     <Row Fixed="True" Height="25" Name="Row1" />
+    <Row Fixed="False" Height="20" Name="Row2" />
+    <Row Fixed="False" Height="20" Name="Row3" />
+    <Row Fixed="False" Height="20" Name="Row4" />
+    <Row Fixed="False" Height="20" Name="Row5" />
+    <Row Fixed="False" Height="20" Name="Row6" />
+    <Row Fixed="False" Height="20" Name="Row7" />
   </Rows>
   <Providers />
   <InParameters />
@@ -45,10 +51,10 @@
     <NumberControl ID="75026691-9e4e-46fe-9062-60c70bb3b408" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID62" RelationControl="lblID62" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="HXRelationRefFindView" Visible="False" Width="90" X="95" Y="0">
       <Events />
       <RelationControls />
-      <PrecisionBind />
-      <RoundRuleBind />
-      <ValueOfRoundByValueBind />
-      <CurrencyType />
+      <PrecisionBind Name="PrecisionBind0" />
+      <RoundRuleBind Name="RoundRuleBind0" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+      <CurrencyType Name="CurrencyType0" />
     </NumberControl>
     <Label ID="fb9a01b6-0710-481a-9607-67fc2646e635" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion62" RelationControl="SysVersion62" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="90" X="0" Y="25">
       <Events />
@@ -58,17 +64,17 @@
     <NumberControl ID="84f5b261-fada-436f-b719-45feaf1fba76" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion62" RelationControl="lblSysVersion62" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="HXRelationRefFindView" Visible="False" Width="90" X="95" Y="25">
       <Events />
       <RelationControls />
-      <PrecisionBind />
-      <RoundRuleBind />
-      <ValueOfRoundByValueBind />
-      <CurrencyType />
+      <PrecisionBind Name="PrecisionBind1" />
+      <RoundRuleBind Name="RoundRuleBind1" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+      <CurrencyType Name="CurrencyType1" />
     </NumberControl>
     <Label ID="e7fcf702-af8b-4e7e-bbf5-fdb1c0a3098c" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblOrg161" RelationControl="Org161" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <Reference ID="7228e39e-9e79-4d44-90e5-048433afa67c" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Org_Code" CodeFieldUIViewID="HXRelationRefFindView" DisplayFormat="19.0" Enabled="True" EntityName="ID" ForMultOrg="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Org161" NameAttributeName="Name" NameFieldUIFieldID="Org_Name" NameFieldUIViewID="HXRelationRefFindView" PkeyField="ID" RefType="19b6ef3c-a0a9-4851-9566-a16e9a5578a7" RelationControl="lblOrg161" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Org" UIViewID="HXRelationRefFindView" Visible="True" Width="90" WindowHeight="408" WindowWidth="580" X="95" Y="0">
+    <Reference ID="7228e39e-9e79-4d44-90e5-048433afa67c" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Org_Code" CodeFieldUIViewID="HXRelationRefFindView" DisplayFormat="19.0" Enabled="True" EntityName="ID" ForMultOrg="True" GridHeight="1" GridWidth="3" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="Org161" NameAttributeName="Name" NameFieldUIFieldID="Org_Name" NameFieldUIViewID="HXRelationRefFindView" PkeyField="ID" RefType="19b6ef3c-a0a9-4851-9566-a16e9a5578a7" RelationControl="lblOrg161" TabIndex="5" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="Org" UIViewID="HXRelationRefFindView" Visible="True" Width="200" WindowHeight="408" WindowWidth="580" X="95" Y="0">
       <Events />
       <RelationControls />
       <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
@@ -85,7 +91,7 @@
       <RelationControls />
       <Events />
     </Label>
-    <DropDownList ID="c20ac936-0309-4074-a3de-c9e40ac348c3" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum" EnumID="55ff3b7f-5e3f-4ce9-ba25-42baf7bb7e0d" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RelType89" RelationControl="lblRelType89" TabIndex="7" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RelType" UIViewID="HXRelationRefFindView" Visible="True" Width="90" X="95" Y="25">
+    <DropDownList ID="c20ac936-0309-4074-a3de-c9e40ac348c3" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum" EnumID="55ff3b7f-5e3f-4ce9-ba25-42baf7bb7e0d" GridHeight="1" GridWidth="2" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RelType89" RelationControl="lblRelType89" TabIndex="7" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RelType" UIViewID="HXRelationRefFindView" Visible="True" Width="110" X="95" Y="25">
       <Events />
       <RelationControls />
     </DropDownList>
@@ -94,38 +100,48 @@
         <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
       </Events>
     </Button>
-    <DataGrid ID="2ebf1d8d-a884-4904-ab5d-b4968a8f281a" EditStatus="edit" Enabled="True" GridHeight="10" GridWidth="11" GridX="0" GridY="3" HasSum="False" Height="245" Name="DataGrid0" PageSize="20" Paging="True" TabIndex="16" TabStop="True" Width="594" X="0" Y="75">
-      <Events />
+    <DataGrid ID="2ebf1d8d-a884-4904-ab5d-b4968a8f281a" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="browse" Enabled="True" GridHeight="10" GridWidth="11" GridX="0" GridY="3" HasSum="False" Height="245" Name="DataGrid" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="16" TabStop="True" Width="594" X="0" Y="75">
+      <Events>
+        <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="GridRowDbClicked" Parameter="" Template="" />
+      </Events>
       <Header ID="8c1d2b08-8c04-4811-9e1a-97155ec3d5fc" Name="Header0">
         <HeaderRow ID="8c177d6f-f1c8-4660-852f-dfec71aff3de" Name="DefaultRow">
           <HeaderCell ID="4fef881f-0584-4027-b9db-d3b8d8794001" ColSpan="1" Name="HeaderCell1" OwnerColName="ID63" RowSpan="1" />
           <HeaderCell ID="197b2de2-b303-4cca-85f2-7e4dc3c2af4c" ColSpan="1" Name="HeaderCell2" OwnerColName="SysVersion63" RowSpan="1" />
           <HeaderCell ID="b7c6de4f-3a6b-4194-a193-7def9d2e8d5d" ColSpan="1" Name="HeaderCell3" OwnerColName="RefCode0" RowSpan="1" />
           <HeaderCell ID="d4da31da-a9f7-4d48-9585-0c09d7e5ac00" ColSpan="1" Name="HeaderCell4" OwnerColName="RefName0" RowSpan="1" />
+          <HeaderCell ID="c2742a50-c72c-471c-ba8f-eefd359a9d8b" ColSpan="1" Name="HeaderCell5" OwnerColName="RefID1" RowSpan="1" />
         </HeaderRow>
       </Header>
       <UIFilterBar Name="LocateBar" />
       <Columns>
         <NumberColumn ID="5deab13b-81e0-48e4-a840-2bca96510a15" DefaultValue="" DisplayFormat="" Enabled="True" Help="Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID63" NPos="1" Point="0" UIFieldID="ID" UIViewID="HXRelationRefShowView" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="06c55086-3d3f-4fb5-9aa2-a51d2037fb06" DefaultValue="" DisplayFormat="" Enabled="True" Help="Sys.SysVersion" IsNull="False" IsProperty="False" IsSequence="False" Name="SysVersion63" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="HXRelationRefShowView" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind3" />
+          <RoundRuleBind Name="RoundRuleBind3" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+          <CurrencyType Name="CurrencyType3" />
           <Events />
         </NumberColumn>
-        <TextBoxColumn ID="b6724882-4166-4f6b-839f-5158035b91d4" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="RefCode0" NPos="3" Point="0" TextAlign="Left" UIFieldID="RefCode" UIViewID="HXRelationRefShowView" Visible="True">
+        <TextBoxColumn ID="b6724882-4166-4f6b-839f-5158035b91d4" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="RefCode0" NPos="3" Point="0" TextAlign="Left" UIFieldID="RefCode" UIViewID="HXRelationRefShowView" Visible="True" Width="200">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="a853515c-1c51-4f24-bb3d-f85129b59bcc" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="RefName0" NPos="4" Point="0" TextAlign="Left" UIFieldID="RefName" UIViewID="HXRelationRefShowView" Visible="True">
+        <TextBoxColumn ID="a853515c-1c51-4f24-bb3d-f85129b59bcc" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="RefName0" NPos="4" Point="0" TextAlign="Left" UIFieldID="RefName" UIViewID="HXRelationRefShowView" Visible="True" Width="300">
           <Events />
         </TextBoxColumn>
+        <NumberColumn ID="4ec7c04c-ce92-4f09-965c-58acf53ee524" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="Misc.RefID" IsNull="True" IsProperty="False" IsSequence="False" Name="RefID1" NPos="5" Point="0" UIFieldID="RefID" UIViewID="HXRelationRefShowView" Visible="False">
+          <PrecisionBind Name="PrecisionBind4" />
+          <RoundRuleBind Name="RoundRuleBind4" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+          <CurrencyType Name="CurrencyType4" />
+          <Events />
+        </NumberColumn>
       </Columns>
     </DataGrid>
     <Label ID="fcd37657-876a-4f58-9f27-a7ff436d9bb0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblRelColumn152" RelationControl="RelColumn152" TabIndex="17" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="50">
@@ -133,7 +149,7 @@
       <RelationControls />
       <Events />
     </Label>
-    <DropDownList ID="27572714-7e6e-4db5-896a-bd2de73fc0c1" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun" EnumID="bc0f2aaf-7175-45df-a1f9-87fcf42f2bfd" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RelColumn152" RelationControl="lblRelColumn152" TabIndex="18" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RelColumn" UIViewID="HXRelationRefFindView" Visible="True" Width="90" X="95" Y="50">
+    <DropDownList ID="27572714-7e6e-4db5-896a-bd2de73fc0c1" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun" EnumID="bc0f2aaf-7175-45df-a1f9-87fcf42f2bfd" GridHeight="1" GridWidth="2" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="RelColumn152" RelationControl="lblRelColumn152" TabIndex="18" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="RelColumn" UIViewID="HXRelationRefFindView" Visible="True" Width="110" X="95" Y="50">
       <Events />
       <RelationControls />
     </DropDownList>
@@ -175,5 +191,36 @@
       </Events>
     </Button>
   </Card>
+  <Label ID="625f07ea-7ba8-4b83-860d-0161e1ddc004" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblRefCode0" RelationControl="RefCode0" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="610" X="10" Y="375">
+    <Events />
+    <RelationControls />
+    <Events />
+  </Label>
+  <TextBox ID="5fabfa7c-d524-47da-b409-73467e66823c" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="3" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RefCode0" RelationControl="lblRefCode0" TabIndex="4" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="RefCode" UIViewID="HXRelationRefShowView" Visible="True" Width="610" X="10" Y="405">
+    <Events />
+    <RelationControls />
+  </TextBox>
+  <Label ID="08f15afb-610c-42b4-be77-f8a98c06caef" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblRefName0" RelationControl="RefName0" TabIndex="5" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="610" X="10" Y="435">
+    <Events />
+    <RelationControls />
+    <Events />
+  </Label>
+  <TextBox ID="221e73fa-0fe0-4feb-a12c-a6e4922a73c6" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RefName0" RelationControl="lblRefName0" TabIndex="6" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="RefName" UIViewID="HXRelationRefShowView" Visible="True" Width="610" X="10" Y="465">
+    <Events />
+    <RelationControls />
+  </TextBox>
+  <Label ID="d1312502-f750-4a0b-91aa-cf69a46216c9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblRefID0" RelationControl="RefID0" TabIndex="7" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="610" X="10" Y="495">
+    <Events />
+    <RelationControls />
+    <Events />
+  </Label>
+  <NumberControl ID="70dcc542-276d-4e88-9bdd-34f203a72bee" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="7" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="RefID0" RelationControl="lblRefID0" TabIndex="8" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="RefID" UIViewID="HXRelationRefShowView" Visible="True" Width="610" X="10" Y="525">
+    <Events />
+    <RelationControls />
+    <PrecisionBind Name="PrecisionBind5" />
+    <RoundRuleBind Name="RoundRuleBind5" />
+    <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+    <CurrencyType Name="CurrencyType5" />
+  </NumberControl>
   <Events />
 </View>
