@@ -6,6 +6,8 @@
     using System.Text;
     using UFIDA.U9.Base;
     using UFIDA.U9.Base.Currency;
+    using UFIDA.U9.Base.Organization;
+    using UFIDA.U9.Base.SOB;
     using UFIDA.U9.Base.UOM;
     using UFIDA.U9.CBO.FI.BankAccount;
     using UFIDA.U9.CBO.FI.IncExpItem;
@@ -59,8 +61,11 @@
                     {
                         item.U9ErrorResult += res.Replace(item.SAPVoucherDisplayCode, ",");
                         item.IsU9Successful = 2;
-                        continue;
                     }
+                }
+                if (item.IsU9Successful == 2)
+                {
+                    continue;
                 }
                 item.U9ErrorResult = "";
                 // UFIDA.U9.ISV.GL.ISVGLImportSV.ISVGLImportSV生成凭证服务不生成现金流量：
@@ -96,6 +101,22 @@
                         refBe.HxRelationshipID = shipCurrency.ID;
                         refList.Add(refBe);
                         ISVImportVoucherDTOData dto = ConstructVoucher(item, refList);
+                        dto.SOB = new CommonArchiveDataDTOData();
+                        #region   根据组织查询主账簿
+                        Organization org = Organization.FindByCode(shipOrg.U9Code);
+                        if (org == null)
+                        {
+                            throw new Exception(shipOrg.SapCode + "维护的U9组织代码" + shipOrg.U9Code + "错误，请检查");
+                        }
+                        SetofBooks sob = SetofBooks.Finder.Find("SOBType=0 and Org=" + org.ID);
+                        if (sob == null)
+                        {
+                            throw new Exception(shipOrg.SapCode + "维护的U9组织代码" + shipOrg.U9Code + "没有维护主账簿，请检查");
+                        }
+                        dto.SOB.ID = sob.ID;
+                        dto.SOB.Code = sob.Code;
+                        dto.SOB.Name = sob.Name;
+                        #endregion
                         foreach (var entry in item.HeXingSAPU9GLVoucherLine)
                         {
                             ISVImportEntryDTOData voucherItem = ConstructEntry(entry, item, currency, refList);
@@ -128,8 +149,6 @@
         {
             ISVImportVoucherDTOData dto = new ISVImportVoucherDTOData();
             dto.Entries = new List<ISVImportEntryDTOData>();
-            //账簿
-            dto.SOB = new CommonArchiveDataDTOData();
             dto.ImportType = CBO.FI.Enums.VoucherImportTypeEnum.VoucherAll.Value;
             //凭证类型
             string category = string.Empty;
@@ -229,11 +248,11 @@
             var settlementCode = "";
             if (entry.AccountCode.StartsWith("1001") && entry.AccountDescription.Contains("库存现金"))
             {
-                settlementCode = "01";//现金业务
+                settlementCode = "001";//现金业务
             }
-            else if (entry.AccountCode.StartsWith("1001") && entry.AccountDescription.Contains("银行"))
+            else if (entry.AccountCode.StartsWith("1002") && entry.AccountDescription.Contains("银行"))
             {
-                settlementCode = "02";//银行业务
+                settlementCode = "002";//银行业务
             }
             var settlementMethod = SettlementMethod.FindByCode(settlementCode);
             if (settlementMethod != null)
