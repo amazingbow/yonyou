@@ -109,15 +109,15 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
-                            if (CashFlowItemMainList.Count > 0)
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (CashFlowItemList.Count > 0)
                             {
-                                foreach (var CashFlowItemMain in CashFlowItemMainList)
+                                foreach (var CashFlowItem in CashFlowItemList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
-                                    Relatiom.FID = CashFlowItemMain.ID;
-                                    Relatiom.FCode = CashFlowItemMain.Code;
-                                    Relatiom.FName = CashFlowItemMain.Name;
+                                    Relatiom.FID = CashFlowItem.ID;
+                                    Relatiom.FCode = CashFlowItem.Code;
+                                    Relatiom.FName = CashFlowItem.UseName;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -165,7 +165,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Code like @Code and IsSystem=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
@@ -268,15 +268,15 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.EntityList CashFlowItemMainList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItemMain.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
-                            if (CashFlowItemMainList.Count > 0)
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("UseName like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (CashFlowItemList.Count > 0)
                             {
-                                foreach (var CashFlowItemMain in CashFlowItemMainList)
+                                foreach (var CashFlowItem in CashFlowItemList)
                                 {
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
-                                    Relatiom.FID = CashFlowItemMain.ID;
-                                    Relatiom.FCode = CashFlowItemMain.Code;
-                                    Relatiom.FName = CashFlowItemMain.Name;
+                                    Relatiom.FID = CashFlowItem.ID;
+                                    Relatiom.FCode = CashFlowItem.Code;
+                                    Relatiom.FName = CashFlowItem.UseName;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -324,7 +324,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name and IsSystem=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)

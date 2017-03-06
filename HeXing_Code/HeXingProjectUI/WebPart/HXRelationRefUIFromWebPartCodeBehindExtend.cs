@@ -27,6 +27,7 @@ using UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP;
 using System.Collections.Generic;
 using UFIDA.U9.UI.Commands;
 using UFSoft.UBF.UI;
+using System.Web;
 
 
 
@@ -131,7 +132,14 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
                 this.Model.HXRelationRefFindView.FocusedRecord.Org_Code = UFIDA.U9.UI.PDHelper.PDContext.Current.OrgRef.CodeColumn;
                 this.Model.HXRelationRefFindView.FocusedRecord.Org_Name = UFIDA.U9.UI.PDHelper.PDContext.Current.OrgRef.NameColumn;
             }
-            
+
+            string strRawUrl = this.Page.RawUrl;
+            string strRefType = HttpContext.Current.Request.QueryString["RefType"];
+            if (string.IsNullOrEmpty(strRefType) == false)
+            {
+                this.Model.HXRelationRefFindView.FocusedRecord.RelType = Convert.ToInt32(strRefType);
+            }
+
 		}
 
         public void AfterCreateChildControls()

@@ -86,8 +86,8 @@
                         ISVGLImportSVProxy proxy = new ISVGLImportSVProxy
                         {
                             ImportVoucherDTOs = new List<ISVImportVoucherDTOData>(),
-                            TargetOrgCode = shipOrg.U9Code,//是否要用用户传输的公司和名称？
-                            TargetOrgName = shipOrg.U9Name
+                            TargetOrgCode = Context.LoginOrg.Code,//是否要用用户传输的公司和名称？
+                            TargetOrgName = Context.LoginOrg.Name
                         };
                         HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=1 and SapCode='"
                                   + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");

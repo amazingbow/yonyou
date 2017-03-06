@@ -602,6 +602,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
 									
 			((IUFFldReferenceColumn)column).AddReferenceInParameter("DateTime2", "DateTime", "Context");
+
+
+            ((IUFFldReferenceColumn)column).AddReferenceInParameter("RefType", "RefType", "DataGrid1");
 								
 						
             //foreach Reference's output set data
