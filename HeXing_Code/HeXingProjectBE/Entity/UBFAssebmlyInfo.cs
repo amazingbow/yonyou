@@ -13,4 +13,8 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 		
 		[assembly: UBFComponent("56c885c9-79bc-43a9-839f-cd193af492be", "UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE", "HeXingRelationshipBE")]
 	
+ 
+		
+		[assembly: UBFComponent("eef2e609-6246-427d-8888-04761a916852", "UFIDA.U9.Cust.HeXingProjectBE.RefVoucherInfoBE", "RefVoucherInfoBE")]
+	
 

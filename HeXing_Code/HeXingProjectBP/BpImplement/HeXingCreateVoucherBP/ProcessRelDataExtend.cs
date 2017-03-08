@@ -32,12 +32,13 @@
         public override object Do(object obj)
         {
             ProcessRelData bpObj = (ProcessRelData)obj;
+            List<string> returnVoucher = new List<string>();
             var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("IsU9Successful=0");//0 代表数据没有执行过，1代表成功导入U9，2代表导入U9失败
             if (glVoucherLst.Count == 0)
             {
-                throw new Exception("没有需要做关系对照的数据！");
+                return returnVoucher;
             }
-            List<string> returnVoucher = new List<string>();
+          
             Dictionary<int, Dictionary<string, string>> codeNamePair = new Dictionary<int, Dictionary<string, string>>();
             codeNamePair.Add(1, new Dictionary<string, string>());//币种
             codeNamePair.Add(2, new Dictionary<string, string>());//客户

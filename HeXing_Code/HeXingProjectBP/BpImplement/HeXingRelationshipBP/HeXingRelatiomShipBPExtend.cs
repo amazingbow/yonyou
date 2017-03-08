@@ -109,7 +109,7 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("Code like @Code and IsSystemPre=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemList.Count > 0)
                             {
                                 foreach (var CashFlowItem in CashFlowItemList)
@@ -268,7 +268,7 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("UseName like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("UseName like @Name and IsSystemPre=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemList.Count > 0)
                             {
                                 foreach (var CashFlowItem in CashFlowItemList)

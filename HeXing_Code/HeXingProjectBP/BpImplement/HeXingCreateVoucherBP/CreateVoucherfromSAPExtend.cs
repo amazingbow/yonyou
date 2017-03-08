@@ -17,6 +17,7 @@
     using UFIDA.U9.CBO.Pub.Controller;
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE;
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE;
+    using UFIDA.U9.Cust.HeXingProjectBE.RefVoucherInfoBE;
     using UFIDA.U9.ISV.GL.ISVGLImportSV;
     using UFIDA.U9.ISV.GL.ISVGLImportSV.Proxy;
     using UFSoft.UBF.AopFrame;
@@ -47,14 +48,16 @@
         public override object Do(object obj)
         {
             CreateVoucherfromSAP bpObj = (CreateVoucherfromSAP)obj;
-            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("IsU9Successful=0");
+            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("IsU9Successful=0 or IsU9Successful=2");
             if (glVoucherLst.Count == 0) return null;//表中没有要处理的数据。
             ProcessRelData processData = new ProcessRelData();
             List<string> returnData = processData.Do();
+            
             foreach (var item in glVoucherLst)
             {
                 if (item.HeXingSAPU9GLVoucherLine.Count == 0) continue;
                 item.U9ErrorResult = item.SAPVoucherDisplayCode;
+                item.IsU9Successful = ImportFlagEnum.NotProcess;
                 foreach (var res in returnData)
                 {
                     if (res.Contains(item.SAPVoucherDisplayCode))
@@ -161,7 +164,7 @@
             RefVoucherInfoBE refBe = RefVoucherInfoBE.Create();
             refBe.HxRelationshipID = shipCategory.ID;
             refList.Add(refBe);
-            var voucherCategory = VoucherCategory.Finder.Find("Code=" + shipCategory.U9Code);
+            var voucherCategory = VoucherCategory.Finder.Find("Code='" + shipCategory.U9Code+"'");
 
             dto.VoucherCategory = new CommonArchiveDataDTOData();
             if (voucherCategory != null)
