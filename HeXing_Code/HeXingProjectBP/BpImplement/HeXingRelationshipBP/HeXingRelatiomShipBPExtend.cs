@@ -151,7 +151,7 @@
                             }
                             break;
                         case "项目":
-                            UFIDA.U9.CBO.SCM.ProjectTask.Project.EntityList ProjectList = UFIDA.U9.CBO.SCM.ProjectTask.Project.Finder.FindAll("Code like @Code and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
+                            UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityList ProjectList = UFIDA.U9.Base.FlexField.ValueSet.DefineValue.Finder.FindAll("Code like @Code and Effective.IsEffective=1 and ValueSetDef.Code='2012'", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (ProjectList.Count > 0)
                             {
                                 foreach (var Project in ProjectList)
@@ -159,7 +159,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
-                                    Relatiom.FName = Project.Name;
+                                    Relatiom.FName = Project.TreeDisplayName;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -310,7 +310,7 @@
                             }
                             break;
                         case "项目":
-                            UFIDA.U9.CBO.SCM.ProjectTask.Project.EntityList ProjectList = UFIDA.U9.CBO.SCM.ProjectTask.Project.Finder.FindAll("Name like @Name and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
+                            UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityList ProjectList = UFIDA.U9.Base.FlexField.ValueSet.DefineValue.Finder.FindAll("TreeDisplayName like @Name and Effective.IsEffective=1 and ValueSetDef.Code='2012'", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (ProjectList.Count > 0)
                             {
                                 foreach (var Project in ProjectList)
@@ -318,7 +318,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
-                                    Relatiom.FName = Project.Name;
+                                    Relatiom.FName = Project.TreeDisplayName;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
