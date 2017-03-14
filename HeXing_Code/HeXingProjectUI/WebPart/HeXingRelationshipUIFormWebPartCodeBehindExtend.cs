@@ -133,14 +133,21 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
             if (this.Model.HxRelationshipBE.FocusedRecord != null)
             {
-                if (this.Model.HxRelationshipBE.FocusedRecord.RefStatus == 1)
+                if (string.IsNullOrEmpty(this.Model.HxRelationshipBE.FocusedRecord.U9Code))
                 {
-                    this.Model.HxRelationshipBE.FocusedRecord.RefStatus = 2;
-                    BtnSave_Click_DefaultImpl(sender, e);
+                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('当前记录没有维护对应的U9信息，不能做审核！');", true);
                 }
                 else
                 {
-                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('当前记录不是初始状态，不能做审核！');", true);
+                    if (this.Model.HxRelationshipBE.FocusedRecord.RefStatus == 1)
+                    {
+                        this.Model.HxRelationshipBE.FocusedRecord.RefStatus = 2;
+                        BtnSave_Click_DefaultImpl(sender, e);
+                    }
+                    else
+                    {
+                        UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('当前记录不是初始状态，不能做审核！');", true);
+                    }
                 }
             }
 		

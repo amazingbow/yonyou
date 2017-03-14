@@ -120,7 +120,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
         public HeXingRelationshipUIFormWebPart()
         {
             FormID = "08a95d41-2b13-4475-a92e-2bedf77981b6";
-            IsAutoSize = bool.Parse("False");
+            IsAutoSize = bool.Parse("True");
         }
         #endregion
 
