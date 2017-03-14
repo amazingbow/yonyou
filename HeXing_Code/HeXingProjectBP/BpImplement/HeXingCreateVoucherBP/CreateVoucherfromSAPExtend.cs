@@ -52,7 +52,7 @@
             if (glVoucherLst.Count == 0) return null;//表中没有要处理的数据。
             ProcessRelData processData = new ProcessRelData();
             List<string> returnData = processData.Do();
-            
+
             foreach (var item in glVoucherLst)
             {
                 if (item.HeXingSAPU9GLVoucherLine.Count == 0) continue;
@@ -66,7 +66,7 @@
                         item.IsU9Successful = ImportFlagEnum.ImportFailed;
                     }
                 }
-                if (item.IsU9Successful ==  ImportFlagEnum.ImportFailed)
+                if (item.IsU9Successful == ImportFlagEnum.ImportFailed)
                 {
                     continue;
                 }
@@ -141,6 +141,7 @@
                     {
                         item.U9ErrorResult = ex.Message;
                         item.IsU9Successful = ImportFlagEnum.ImportFailed;
+                        item.CompleteU9Date = DateTime.Now;
                     }
                     session.Commit();
                 }
@@ -164,7 +165,7 @@
             RefVoucherInfoBE refBe = RefVoucherInfoBE.Create();
             refBe.HxRelationshipID = shipCategory.ID;
             refList.Add(refBe);
-            var voucherCategory = VoucherCategory.Finder.Find("Code='" + shipCategory.U9Code+"'");
+            var voucherCategory = VoucherCategory.Finder.Find("Code='" + shipCategory.U9Code + "'");
 
             dto.VoucherCategory = new CommonArchiveDataDTOData();
             if (voucherCategory != null)
@@ -288,10 +289,10 @@
             StringBuilder stb = new StringBuilder();
             //1标准科目
             HxRelationshipBE account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='"
-                           + entry.CashFlowCode + "' and SapName='" + entry.CashFlowDescription + "' and SapMasterCode='"
-                           + entry.MaterialGroupCode + "' and SapMasterName='" + entry.MaterialGroupDescription + "' and SapAssetsCode='"
-                           + entry.AssetsCode + "' and SapAssetsName='" + entry.AssetsDescription + "' and SapFeeCode='"
-                           + entry.FeeTypeEnumCode + "' and SapFeeName='" + entry.FeeTypeEnumDescription + "'");
+                           + entry.AccountCode + "' and SapMasterCode='"+ entry.MaterialGroupCode + "' and SapAssetsCode='"
+                           + entry.AssetsCode + "' and SapFeeCode='"+ entry.FeeTypeEnumCode + "'");
+            //HxRelationshipBE account = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode + "' and SapMasterCode='"
+            //             + MaterialGroupCode + "' and SapAssetsCode='" + AssetsCode + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
             if (account == null)
             {
                 throw new Exception("科目没有传值，或关系对照表没有维护且审核");
