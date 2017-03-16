@@ -55,7 +55,12 @@
                                     throw new Exception(lab.LB + "当前镭射表已经报废，不能出货！");
                                 }
                                 lab.Cp = LBEnum.Shipment;
+                                //如果时间不填写，就默认当前时间
                                 lab.ShipDT = DateTime.Now;
+                                if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
+                                {
+                                    lab.ShipDT = bpObj.ShipDateTime;
+                                }
                                 if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
                                 {
                                     lab.ShipBN = bpObj.ShipBatchNo;
@@ -95,7 +100,12 @@
                                             break;
                                         case 3:
                                             item.Cp = LBEnum.Shipment;
+                                            //如果时间不填写，就默认当前时间
                                             item.ShipDT = DateTime.Now;
+                                            if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
+                                            {
+                                                item.ShipDT = bpObj.ShipDateTime;
+                                            }
                                             if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
                                             {
                                                 item.ShipBN = bpObj.ShipBatchNo;
@@ -124,7 +134,12 @@
                                             throw new Exception(item.LB + "镭射表已经报废，不能出货！");
                                         }
                                         item.Cp = LBEnum.Shipment;
+                                        //如果时间不填写，就默认当前时间
                                         item.ShipDT = DateTime.Now;
+                                        if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
+                                        {
+                                            item.ShipDT = bpObj.ShipDateTime;
+                                        }
                                         if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
                                         {
                                             item.ShipBN = bpObj.ShipBatchNo;

@@ -148,6 +148,7 @@ namespace LaserLabDataProcessUIModel
             proxy.ChangeModel = this.TabControl0.SelectedIndex;
             proxy.ChangeCp = changeCp;
             proxy.ShipBatchNo = this.Model.LaserLabDataProcessView.FocusedRecord.ShipBatchNo;
+            proxy.ShipDateTime = this.Model.LaserLabDataProcessView.FocusedRecord.ShipTime ?? DateTime.Now;  //如果时间不填写，就默认当前时间
             var result = proxy.Do();
             if (result)
             {

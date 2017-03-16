@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        System.Boolean Do(IContext context ,out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo);
+        System.Boolean Do(IContext context ,out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,22 +46,22 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
         #region ISingleChangeBP Members
 
         //[OperationBehavior]
-        public System.Boolean Do(IContext context ,out IList<MessageBase> outMessages, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo)
+        public System.Boolean Do(IContext context ,out IList<MessageBase> outMessages, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, laserLab, batchNo, type, flowStart, flowEnd, changeModel, changeCp, shipBatchNo);
+			return DoEx(commonData, laserLab, batchNo, type, flowStart, flowEnd, changeModel, changeCp, shipBatchNo, shipDateTime);
         }
         
         //[OperationBehavior]
-        public System.Boolean DoEx(ICommonDataContract commonData, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo)
+        public System.Boolean DoEx(ICommonDataContract commonData, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.SingleChangeBP");                
                 SingleChangeBP objectRef = new SingleChangeBP();
-								
+									
 				objectRef.LaserLab = laserLab;
 				objectRef.BatchNo = batchNo;
 				objectRef.Type = type;
@@ -70,6 +70,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 				objectRef.ChangeModel = changeModel;
 				objectRef.ChangeCp = changeCp;
 				objectRef.ShipBatchNo = shipBatchNo;
+				objectRef.ShipDateTime = shipDateTime;
 
 				//处理返回类型.
 				System.Boolean result = objectRef.Do();
