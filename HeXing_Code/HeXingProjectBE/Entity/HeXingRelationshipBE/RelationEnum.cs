@@ -52,6 +52,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
             innerEnums.Add(10,account) ;
             feeType = new RelationEnum(11,"FeeType") ;
             innerEnums.Add(11,feeType) ;
+            bank = new RelationEnum(12,"Bank") ;
+            innerEnums.Add(12,bank) ;
             empty = new RelationEnum(-1,"") ;
 			innerEnums.Add(-1,empty) ;
         }
@@ -114,6 +116,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         				return this.Res_Account; 
         			case "FeeType":
         				return this.Res_FeeType; 
+        			case "Bank":
+        				return this.Res_Bank; 
         			default :
         			    return String.Empty;
         		}
@@ -254,6 +258,18 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
                 return  feeType ;
             }
         }
+        private static RelationEnum bank ;
+        /// <summary>
+        /// 枚举值: 银行  Value:12  
+        /// 对照类型.Misc.银行
+        /// </summary>
+        public static RelationEnum Bank
+        {
+            get
+            {
+                return  bank ;
+            }
+        }
         #endregion
 
         #region public Static Property & Method 
@@ -383,6 +399,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
         [Obsolete("")]
 		public string Res_FeeType　{ get {return EnumRes.GetResource("FeeType");}　}
+		/// <summary>
+		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+		/// </summary>
+        [Obsolete("")]
+		public string Res_Bank　{ get {return EnumRes.GetResource("Bank");}　}
 		#endregion 
 		
 		#region EnumRes

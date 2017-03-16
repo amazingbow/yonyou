@@ -122,7 +122,7 @@
                         #endregion
                         foreach (var entry in item.HeXingSAPU9GLVoucherLine)
                         {
-                            ISVImportEntryDTOData voucherItem = ConstructEntry(entry, item, currency, refList);
+                            ISVImportEntryDTOData voucherItem = ConstructEntry(entry, item, currency, refList, shipOrg, sob);
                             dto.Entries.Add(voucherItem);
                         }
                         proxy.ImportVoucherDTOs.Add(dto);
@@ -181,13 +181,13 @@
             //制单日期
             dto.CreateDate = voucher.PostDate;
             //记账期间
-            dto.PostedPeriod = voucher.PostedPeriod.ToString();
+            dto.PostedPeriod = voucher.PostedPeriod.ToString().Insert(4, "-");
             //附单据数
             dto.AttachmentCount = 0;
             return dto;
         }
         private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry,
-            HeXingSAPU9GLVoucherHead voucher, Currency currency, List<RefVoucherInfoBE> refList)
+            HeXingSAPU9GLVoucherHead voucher, Currency currency, List<RefVoucherInfoBE> refList, HxRelationshipBE shipOrg, SetofBooks sob)
         {
             ISVImportEntryDTOData VoucherItem = new ISVImportEntryDTOData();
             VoucherItem.Voucher = new ISVImportVoucherDTOData();
@@ -287,144 +287,210 @@
 
             #region 1. 标准科目 2.组织    3.客户    4.供应商   5.银行    6.银行账号  7.部门    8.员工    9.费用项目  10.工程项目
             StringBuilder stb = new StringBuilder();
-            //1标准科目
+            #region 1. 标准科目
             HxRelationshipBE account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='"
-                           + entry.AccountCode + "' and SapMasterCode='"+ entry.MaterialGroupCode + "' and SapAssetsCode='"
-                           + entry.AssetsCode + "' and SapFeeCode='"+ entry.FeeTypeEnumCode + "'");
-            //HxRelationshipBE account = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode + "' and SapMasterCode='"
-            //             + MaterialGroupCode + "' and SapAssetsCode='" + AssetsCode + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
+                           + entry.AccountCode + "' and SapMasterCode='" + entry.MaterialGroupCode + "' and SapAssetsCode='"
+                           + entry.AssetsCode + "' and SapFeeCode='" + entry.FeeTypeEnumCode + "'");
             if (account == null)
             {
                 throw new Exception("科目没有传值，或关系对照表没有维护且审核");
             }
-            NaturalAccount na = NaturalAccount.FindByCode(account.U9Code);
             RefVoucherInfoBE ref1 = RefVoucherInfoBE.Create();
             ref1.HxRelationshipID = account.ID;
             refList.Add(ref1);
-            stb.Append(na.Code + SYMBOL);
-            //2组织
-            HxRelationshipBE shipOrg = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=7 and SapCode='" + voucher.CompanyCode + "' and SapName='"
-                + voucher.CompanyName + "'");
-            RefVoucherInfoBE ref2 = RefVoucherInfoBE.Create();
-            ref2.HxRelationshipID = shipOrg.ID;
-            refList.Add(ref2);
-            if (shipOrg != null)
+            stb.Append(account.U9Code + SYMBOL);
+            #endregion
+            NaturalAccount na = NaturalAccount.FindByCode(account.U9Code);
+            NaturalAccountSOBProperty np = NaturalAccountSOBProperty.Finder.Find("SOB=" + sob.ID + " and NaturalAccount=" + na.ID);
+            if (np.NaturalAccountSOBSegmentUseRoles.Count == 0)
             {
+                throw new Exception(entry.AccountCode + "所对应的账簿科目没有维护辅助核算段规则");
+            }
+            #region 2. 组织
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment2)//如果段2是必填的
+            {
+                RefVoucherInfoBE ref2 = RefVoucherInfoBE.Create();
+                ref2.HxRelationshipID = shipOrg.ID;
+                refList.Add(ref2);
                 stb.Append(shipOrg.U9Code + SYMBOL);
             }
             else
             {
                 stb.Append("0" + SYMBOL);
             }
-            //3客户
-            HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
+            #endregion
+            #region 3. 客户
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment3)
+            {
+                HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
+                    + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+
+                if (shipCust != null)
+                {
+                    stb.Append(shipCust.U9Code + SYMBOL);
+                    RefVoucherInfoBE ref3 = RefVoucherInfoBE.Create();
+                    ref3.HxRelationshipID = shipCust.ID;
+                    refList.Add(ref3);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "客户段是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 4. 供应商
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment4)
+            {
+                HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=3 and SapCode='"
+                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                if (shipSupplier != null)
+                {
+                    stb.Append(shipSupplier.U9Code + SYMBOL);
+                    RefVoucherInfoBE ref4 = RefVoucherInfoBE.Create();
+                    ref4.HxRelationshipID = shipSupplier.ID;
+                    refList.Add(ref4);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "供应商是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 5. 银行
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment5)
+            {
+                HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=12 and SapCode='" + entry.Banks + "'");
+                if (shipBank != null)
+                {
+                    stb.Append(shipBank.U9Code + SYMBOL);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "银行是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+
+            #endregion
+            #region 6. 银行账号
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment6)
+            {
+                if (!string.IsNullOrEmpty(entry.BankAccount))
+                {
+                    stb.Append(entry.BankAccount + SYMBOL);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "银行账号是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 7. 部门
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment7)
+            {
+                HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=4 and SapCode='"
+                        + entry.DepartmentCode + "' and SapCompCode='" + voucher.CompanyCode + "'");
+                if (shipDepartment != null)
+                {
+                    stb.Append(shipDepartment.U9Code + SYMBOL);
+                    RefVoucherInfoBE ref7 = RefVoucherInfoBE.Create();
+                    ref7.HxRelationshipID = shipDepartment.ID;
+                    refList.Add(ref7);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "部门是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 8. 员工
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment8)
+            {
+                HxRelationshipBE shipWork = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=5 and SapCode='"
+                        + entry.EmployeeCode + "' and SapName='" + entry.EmployeeName + "'");
+
+                if (shipWork != null)
+                {
+                    stb.Append(shipWork.U9Code + SYMBOL);
+                    RefVoucherInfoBE ref8 = RefVoucherInfoBE.Create();
+                    ref8.HxRelationshipID = shipWork.ID;
+                    refList.Add(ref8);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "员工是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 9. 费用项目
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment9)
+            {
+                HxRelationshipBE shipFee = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=11 and SapCode='"
+                             + entry.FeeTypeEnumCode + "' and SapName='" + entry.FeeTypeEnumDescription + "'");
+                if (shipFee != null)
+                {
+                    stb.Append(shipFee.U9Code + SYMBOL);
+                    RefVoucherInfoBE ref9 = RefVoucherInfoBE.Create();
+                    ref9.HxRelationshipID = shipFee.ID;
+                    refList.Add(ref9);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "费用项目是必输的，但是并没有传值或维护对应关系");
+                }
+            }
+            else
+            {
+                stb.Append("0" + SYMBOL);
+            }
+            #endregion
+            #region 10. 工程项目
+            if (np.NaturalAccountSOBSegmentUseRoles[0].Segment10)
+            {
+                HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=9 and SapCode='"
                       + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
-
-            if (shipCust != null)
-            {
-                stb.Append(shipCust.U9Code + SYMBOL);
-                RefVoucherInfoBE ref3 = RefVoucherInfoBE.Create();
-                ref3.HxRelationshipID = shipCust.ID;
-                refList.Add(ref3);
+                if (shipProjec != null)
+                {
+                    stb.Append(shipProjec.U9Code);
+                    RefVoucherInfoBE ref10 = RefVoucherInfoBE.Create();
+                    ref10.HxRelationshipID = shipProjec.ID;
+                    refList.Add(ref10);
+                }
+                else
+                {
+                    throw new Exception(entry.AccountCode + "工程项目是必输的，但是并没有传值或维护对应关系");
+                }
             }
             else
             {
-                stb.Append("0" + SYMBOL);
-            }
-            //4供应商
-            HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=3 and SapCode='"
-                         + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
-
-            if (shipSupplier != null)
-            {
-                stb.Append(shipSupplier.U9Code + SYMBOL);
-                RefVoucherInfoBE ref4 = RefVoucherInfoBE.Create();
-                ref4.HxRelationshipID = shipSupplier.ID;
-                refList.Add(ref4);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //5银行
-            if (!string.IsNullOrEmpty(entry.Banks))
-            {
-                stb.Append(entry.Banks + SYMBOL);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //6银行账号
-            if (!string.IsNullOrEmpty(entry.BankAccount))
-            {
-                stb.Append(entry.BankAccount + SYMBOL);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //7部门
-            HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=4 and SapCode='"
-                          + entry.DepartmentCode + "' and SapName='" + entry.DepartmentName + "'");
-            if (shipDepartment != null)
-            {
-                stb.Append(shipDepartment.U9Code + SYMBOL);
-                RefVoucherInfoBE ref7 = RefVoucherInfoBE.Create();
-                ref7.HxRelationshipID = shipDepartment.ID;
-                refList.Add(ref7);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //8员工
-            HxRelationshipBE shipWork = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=5 and SapCode='"
-                         + entry.EmployeeCode + "' and SapName='" + entry.EmployeeName + "'");
-
-            if (shipWork != null)
-            {
-                stb.Append(shipWork.U9Code + SYMBOL);
-                RefVoucherInfoBE ref8 = RefVoucherInfoBE.Create();
-                ref8.HxRelationshipID = shipWork.ID;
-                refList.Add(ref8);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //9.费用项目
-            HxRelationshipBE shipFee = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=11 and SapCode='"
-                         + entry.FeeTypeEnumCode + "' and SapName='" + entry.FeeTypeEnumDescription + "'");
-
-            if (shipFee != null)
-            {
-                stb.Append(shipFee.U9Code + SYMBOL);
-                RefVoucherInfoBE ref9 = RefVoucherInfoBE.Create();
-                ref9.HxRelationshipID = shipFee.ID;
-                refList.Add(ref9);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
-            }
-            //10.工程项目
-            HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=9 and SapCode='"
-                         + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
-
-            if (shipProjec != null)
-            {
-                stb.Append(shipProjec.U9Code + SYMBOL);
-                RefVoucherInfoBE ref10 = RefVoucherInfoBE.Create();
-                ref10.HxRelationshipID = shipProjec.ID;
-                refList.Add(ref10);
-            }
-            else
-            {
-                stb.Append("0" + SYMBOL);
+                stb.Append("0");
             }
             VoucherItem.Account = new CommonArchiveDataDTOData();
             VoucherItem.Account.Code = stb.ToString();
+            #endregion
             #endregion
 
             #region 实体扩展字段集合
