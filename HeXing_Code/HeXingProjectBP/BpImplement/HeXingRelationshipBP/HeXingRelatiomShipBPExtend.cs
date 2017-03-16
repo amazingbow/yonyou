@@ -192,6 +192,20 @@
                                 }
                             }
                             break;
+                        case "银行":
+                            UFIDA.U9.CBO.FI.BankAccount.Bank.EntityList BankList = UFIDA.U9.CBO.FI.BankAccount.Bank.Finder.FindAll("Code like @Code", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (BankList.Count > 0)
+                            {
+                                foreach (var Bank in BankList)
+                                {
+                                    RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Bank.ID;
+                                    Relatiom.FCode = Bank.Code;
+                                    Relatiom.FName = Bank.Name;
+                                    RelatiomList.Add(Relatiom);
+                                }
+                            }
+                            break;
                     }
                     break;
                 case "名称":
@@ -347,6 +361,20 @@
                                     Relatiom.FID = ExpenseItem.ID;
                                     Relatiom.FCode = ExpenseItem.Code;
                                     Relatiom.FName = ExpenseItem.Name;
+                                    RelatiomList.Add(Relatiom);
+                                }
+                            }
+                            break;
+                        case "银行":
+                            UFIDA.U9.CBO.FI.BankAccount.Bank.EntityList BankList = UFIDA.U9.CBO.FI.BankAccount.Bank.Finder.FindAll("Name like @Name", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            if (BankList.Count > 0)
+                            {
+                                foreach (var Bank in BankList)
+                                {
+                                    RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
+                                    Relatiom.FID = Bank.ID;
+                                    Relatiom.FCode = Bank.Code;
+                                    Relatiom.FName = Bank.Name;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }

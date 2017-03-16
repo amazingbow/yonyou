@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using UFIDA.U9.UI.Commands;
 using UFSoft.UBF.UI;
 using System.Web;
+using UFSoft.UBF.Util.DataAccess;
 
 
 
@@ -126,6 +127,29 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         #region 自己扩展 Extended Event handler 
 		public void AfterOnLoad()
 		{
+            string strSapCompCode = HttpContext.Current.Request.QueryString["SapCompCode"];
+            if (string.IsNullOrEmpty(strSapCompCode) == false)
+            {
+                DataParamList lst1 = new DataParamList();
+                lst1.Add(DataParamFactory.CreateInput("@SapCompCode", strSapCompCode, System.Data.DbType.String));
+                System.Data.DataSet ds1 = new System.Data.DataSet();
+
+                DataAccessor.RunSQL(DataAccessor.GetConn(), "select top 1 A1.ID as OrgID,A1.Code as OrgCode,A2.Name as OrgName from Base_Organization A1 left join Base_Organization_Trl A2 on A1.ID=A2.ID where A1.Code=(select top 1 A.U9Code from Cust_HeXing_HxRelationshipBE A where A.RefType=7 and A.RefStatus!=0 and A.SapCode=@SapCompCode)", lst1, out ds1);
+
+                if (ds1 != null && ds1.Tables.Count > 0)
+                {
+                    if (ds1.Tables[0].Rows.Count > 0)
+                    {
+                        if (Convert.ToInt64(ds1.Tables[0].Rows[0]["OrgID"].ToString()) > 0L)
+                        {
+                            this.Model.HXRelationRefFindView.FocusedRecord.Org = Convert.ToInt64(ds1.Tables[0].Rows[0]["OrgID"].ToString());
+                            this.Model.HXRelationRefFindView.FocusedRecord.Org_Code = ds1.Tables[0].Rows[0]["OrgCode"].ToString();
+                            this.Model.HXRelationRefFindView.FocusedRecord.Org_Name = ds1.Tables[0].Rows[0]["OrgName"].ToString();
+                        }
+                    }
+                }
+            }
+
             if (this.Model.HXRelationRefFindView.FocusedRecord.Org == -1L || this.Model.HXRelationRefFindView.FocusedRecord.Org == null)
             {
                 this.Model.HXRelationRefFindView.FocusedRecord.Org = long.Parse(UFIDA.U9.UI.PDHelper.PDContext.Current.OrgID);
@@ -133,7 +157,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
                 this.Model.HXRelationRefFindView.FocusedRecord.Org_Name = UFIDA.U9.UI.PDHelper.PDContext.Current.OrgRef.NameColumn;
             }
 
-            string strRawUrl = this.Page.RawUrl;
+            //string strRawUrl = this.Page.RawUrl;
             string strRefType = HttpContext.Current.Request.QueryString["RefType"];
             if (string.IsNullOrEmpty(strRefType) == false)
             {
