@@ -14,7 +14,7 @@ copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.XMQX.LaserLabBP.ubfsvc  D:\yonyou\U9V
 
 
 
-echo 请手工将该bat文件打开，将下面这段内容与C:\yonyou\U9V50\Portal\RestServices\web.config进行合并。
+echo 请手工将该bat文件打开，将下面这段内容与D:\yonyou\U9V50\Portal\RestServices\web.config进行合并。
 
 
 pause

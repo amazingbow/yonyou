@@ -112,6 +112,8 @@ namespace LaserLabDataProcessUIModel
         IUFFldNumberControl FlowNumEnd1705;
         IUFLabel lblShipBatchNo1764;
         IUFFldTextBox ShipBatchNo1764;
+        IUFLabel lblShipTime384;
+        IUFFldDatePicker ShipTime384;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -357,7 +359,7 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.TabControl0, "35");		
 
 
-				this.lblShipBatchNo1764 = UIControlBuilder.BuilderUFLabel(_panel, "lblShipBatchNo1764", "", "True", "True", "Right", 100, 25, 1, 9, 1, 1, "100","a527a5c4-57ac-4dad-8a8b-4b703b59802e","b392ee40-724b-4c91-af42-4aad111b9bb6");
+				this.lblShipBatchNo1764 = UIControlBuilder.BuilderUFLabel(_panel, "lblShipBatchNo1764", "", "True", "True", "Left", 100, 25, 1, 9, 1, 1, "100","a527a5c4-57ac-4dad-8a8b-4b703b59802e","b392ee40-724b-4c91-af42-4aad111b9bb6");
 
 
 								
@@ -375,8 +377,25 @@ namespace LaserLabDataProcessUIModel
 			UIControlBuilder.BuilderUFControl(this.ShipBatchNo1764, "37");		
 		 
 
+				this.lblShipTime384 = UIControlBuilder.BuilderUFLabel(_panel, "lblShipTime384", "", "True", "True", "Left", 100, 25, 5, 9, 1, 1, "100","8f1975c0-d881-408c-bc05-339eca6e9df4","d8cd5cef-a322-4e2a-a9d7-107e430b8af8");
 
-																
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblShipTime384, "38");		
+
+
+				this.ShipTime384 = UIControlBuilder.BuilderDatePicker(_panel, "ShipTime384", true, true, true, "DateTime","Left", 5, 60, 0, 171, 25, 7, 9, 1, 1, "100",true,false,"lblShipTime384","8f1975c0-d881-408c-bc05-339eca6e9df4","b6b91849-3fd3-4c77-baec-d017a589e6c4");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ShipTime384, "False", "ShipTime", this.Model.LaserLabDataProcessView, this.Model.LaserLabDataProcessView.FieldShipTime, "LaserLabDataProcessView");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.ShipTime384, "39");		
+		 
+
+
+																		
      
 			
 			

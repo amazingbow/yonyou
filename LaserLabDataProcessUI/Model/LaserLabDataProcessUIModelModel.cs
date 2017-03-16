@@ -148,6 +148,10 @@ namespace LaserLabDataProcessUIModel
 		{
 			get { return this.Fields["ShipBatchNo"]; }
 		}
+		public IUIField FieldShipTime
+		{
+			get { return this.Fields["ShipTime"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -172,6 +176,7 @@ namespace LaserLabDataProcessUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumStart", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e199c6c0-a2a1-4f03-916c-b707772fc7c8");
 			UIModelRuntimeFactory.AddNewUIField(this,"FlowNumEnd", typeof(Int32), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7bebb355-dd80-4f99-8a5a-97dd061e38d3");
 			UIModelRuntimeFactory.AddNewUIField(this,"ShipBatchNo", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a527a5c4-57ac-4dad-8a8b-4b703b59802e");
+			UIModelRuntimeFactory.AddNewUIField(this,"ShipTime", typeof(DateTime), true,"","System.DateTime", "", false,false, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","8f1975c0-d881-408c-bc05-339eca6e9df4");
 
 
 			this.CurrentFilter = new LaserLabDataProcessViewDefaultFilterFilter(this);
@@ -375,6 +380,19 @@ namespace LaserLabDataProcessUIModel
 			}
 			set{
 				this[this.uiviewLaserLabDataProcessView.FieldShipBatchNo] = value;
+			}
+		}
+		
+		
+		public  DateTime? ShipTime
+		{
+			get{
+				//object value = this[this.uiviewLaserLabDataProcessView.FieldShipTime] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewLaserLabDataProcessView.FieldShipTime);
+			}
+			set{
+				this[this.uiviewLaserLabDataProcessView.FieldShipTime] = value;
 			}
 		}
 		#endregion
