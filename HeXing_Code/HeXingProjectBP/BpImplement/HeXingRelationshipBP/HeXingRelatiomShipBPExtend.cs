@@ -165,7 +165,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Code like @Code and IsSystem=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Code like @Code and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
@@ -338,7 +338,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name and IsSystem=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
