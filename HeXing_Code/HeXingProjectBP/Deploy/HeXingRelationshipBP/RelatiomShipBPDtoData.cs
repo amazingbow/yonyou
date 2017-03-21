@@ -21,7 +21,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-                                       
+                                                                 
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -37,7 +37,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		
 		
 					FID= 0; 
+				
 		
+
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
 		}
@@ -54,18 +56,20 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			if (dict[this] != null)
 				return ;
 			dict[this] = this;
-	        	        	        
+	        	        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public RelatiomShipBPDtoData(  System.String fCode  , System.String fName  , System.Int64 fID  )
+		public RelatiomShipBPDtoData(  System.String fCode  , System.String fName  , System.Int64 fID  , System.String accountProperty  , System.String balanceDirection  )
 		{
 			initData();
 			this.FCode = fCode;
 			this.FName = fName;
 			this.FID = fID;
+			this.AccountProperty = accountProperty;
+			this.BalanceDirection = balanceDirection;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -133,10 +137,50 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			}
 		}
 			
+		
+
+		/// <summary>
+		/// 科目属性
+		/// 对照信息DTO.Misc.科目属性
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_accountProperty ;
+		public System.String AccountProperty
+		{
+			get	
+			{	
+				return m_accountProperty ;
+			}
+			set	
+			{	
+				m_accountProperty = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 余额方向
+		/// 对照信息DTO.Misc.余额方向
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_balanceDirection ;
+		public System.String BalanceDirection
+		{
+			get	
+			{	
+				return m_balanceDirection ;
+			}
+			set	
+			{	
+				m_balanceDirection = value ;	
+			}
+		}
+			
 		#endregion	
 
 		#region Multi_Fields
-						
+										
 		#endregion 
 	} 	
 }

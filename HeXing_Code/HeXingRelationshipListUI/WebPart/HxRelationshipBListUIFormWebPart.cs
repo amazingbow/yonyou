@@ -109,7 +109,7 @@ namespace UFIDA.U9.Cust.HeXingRelationshipListUI.HxRelationshipBListUIModel
         public HxRelationshipBListUIFormWebPart()
         {
             FormID = "26612d60-22f3-49cd-8043-b4984c4c0f14";
-            IsAutoSize = bool.Parse("False");
+            IsAutoSize = bool.Parse("True");
         }
         #endregion
 

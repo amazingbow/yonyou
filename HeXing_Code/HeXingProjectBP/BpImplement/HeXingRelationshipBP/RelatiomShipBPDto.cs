@@ -27,6 +27,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		
 		
 					FID = 0; 
+		
+		
 
 		}
 
@@ -84,10 +86,44 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 				base.SetValue("FID",value);
 			}
 		}
+				/// <summary>
+		/// 科目属性 (该属性可为空,且无默认值)
+		/// 对照信息DTO.Misc.科目属性
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String AccountProperty
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("AccountProperty",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("AccountProperty",value);
+			}
+		}
+				/// <summary>
+		/// 余额方向 (该属性可为空,且无默认值)
+		/// 对照信息DTO.Misc.余额方向
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String BalanceDirection
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("BalanceDirection",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("BalanceDirection",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-			
+					
 		#endregion 
 
 		#region ModelResource
@@ -107,6 +143,14 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		/// ID的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_FID　{ get { return "";　}　}
+		/// <summary>
+		/// 科目属性的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_AccountProperty　{ get { return "";　}　}
+		/// <summary>
+		/// 余额方向的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_BalanceDirection　{ get { return "";　}　}
 		#endregion 
 
 
@@ -119,6 +163,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 		private void DeSerializeKey(RelatiomShipBPDtoData data)
 		{
 		
+
+
 
 
 
@@ -147,6 +193,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			this.FName = data.FName;
 
 			this.FID = data.FID;
+
+			this.AccountProperty = data.AccountProperty;
+
+			this.BalanceDirection = data.BalanceDirection;
 
 		}
 
@@ -180,6 +230,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBP.HeXingRelationshipBP
 			data.FName = this.FName;
 
 			data.FID = this.FID;
+
+			data.AccountProperty = this.AccountProperty;
+
+			data.BalanceDirection = this.BalanceDirection;
 
 			return data ;
 		}

@@ -111,6 +111,8 @@
           <HeaderCell ID="b7c6de4f-3a6b-4194-a193-7def9d2e8d5d" ColSpan="1" Name="HeaderCell3" OwnerColName="RefCode0" RowSpan="1" />
           <HeaderCell ID="d4da31da-a9f7-4d48-9585-0c09d7e5ac00" ColSpan="1" Name="HeaderCell4" OwnerColName="RefName0" RowSpan="1" />
           <HeaderCell ID="c2742a50-c72c-471c-ba8f-eefd359a9d8b" ColSpan="1" Name="HeaderCell5" OwnerColName="RefID1" RowSpan="1" />
+          <HeaderCell ID="bf1079e9-7283-4e6e-b720-ea278f6bcbb4" ColSpan="1" Name="HeaderCell6" OwnerColName="AccountProperty0" RowSpan="1" />
+          <HeaderCell ID="6734964f-fbdb-4b78-b868-69c687827bb7" ColSpan="1" Name="HeaderCell7" OwnerColName="BalanceDirection0" RowSpan="1" />
         </HeaderRow>
       </Header>
       <UIFilterBar Name="LocateBar" />
@@ -129,10 +131,10 @@
           <CurrencyType Name="CurrencyType3" />
           <Events />
         </NumberColumn>
-        <TextBoxColumn ID="b6724882-4166-4f6b-839f-5158035b91d4" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="RefCode0" NPos="3" Point="0" TextAlign="Left" UIFieldID="RefCode" UIViewID="HXRelationRefShowView" Visible="True" Width="200">
+        <TextBoxColumn ID="b6724882-4166-4f6b-839f-5158035b91d4" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="RefCode0" NPos="3" Point="0" TextAlign="Left" UIFieldID="RefCode" UIViewID="HXRelationRefShowView" Visible="True" Width="100">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="a853515c-1c51-4f24-bb3d-f85129b59bcc" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="RefName0" NPos="4" Point="0" TextAlign="Left" UIFieldID="RefName" UIViewID="HXRelationRefShowView" Visible="True" Width="300">
+        <TextBoxColumn ID="a853515c-1c51-4f24-bb3d-f85129b59bcc" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="RefName0" NPos="4" Point="0" TextAlign="Left" UIFieldID="RefName" UIViewID="HXRelationRefShowView" Visible="True" Width="200">
           <Events />
         </TextBoxColumn>
         <NumberColumn ID="4ec7c04c-ce92-4f09-965c-58acf53ee524" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="Misc.RefID" IsNull="True" IsProperty="False" IsSequence="False" Name="RefID1" NPos="5" Point="0" UIFieldID="RefID" UIViewID="HXRelationRefShowView" Visible="False">
@@ -142,6 +144,12 @@
           <CurrencyType Name="CurrencyType4" />
           <Events />
         </NumberColumn>
+        <TextBoxColumn ID="c7516f2e-265e-4e8d-9c16-9a5e4d62a438" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.科目属性" IsNull="True" IsProperty="False" IsSequence="False" Name="AccountProperty0" NPos="6" Point="0" TextAlign="Left" UIFieldID="AccountProperty" UIViewID="HXRelationRefShowView" Visible="False" Width="150">
+          <Events />
+        </TextBoxColumn>
+        <TextBoxColumn ID="1dde0dc3-32e0-4803-9ac9-ac03bffab4bd" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.余额方向" IsNull="True" IsProperty="False" IsSequence="False" Name="BalanceDirection0" NPos="7" Point="0" TextAlign="Left" UIFieldID="BalanceDirection" UIViewID="HXRelationRefShowView" Visible="False">
+          <Events />
+        </TextBoxColumn>
       </Columns>
     </DataGrid>
     <Label ID="fcd37657-876a-4f58-9f27-a7ff436d9bb0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblRelColumn152" RelationControl="RelColumn152" TabIndex="17" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="90" X="0" Y="50">

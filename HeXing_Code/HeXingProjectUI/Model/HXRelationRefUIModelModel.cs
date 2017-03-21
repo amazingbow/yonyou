@@ -475,6 +475,14 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		{
 			get { return this.Fields["RefID"]; }
 		}
+		public IUIField FieldAccountProperty
+		{
+			get { return this.Fields["AccountProperty"]; }
+		}
+		public IUIField FieldBalanceDirection
+		{
+			get { return this.Fields["BalanceDirection"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -496,6 +504,8 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"RefCode", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","672ec275-b9dd-495e-a5a7-57c258977cbf");
 			UIModelRuntimeFactory.AddNewUIField(this,"RefName", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","35332702-30aa-4a7c-9f06-c2c5afd06282");
 			UIModelRuntimeFactory.AddNewUIField(this,"RefID", typeof(Int64), true,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","f558de5a-12f3-46c7-a894-99ee018253d3");
+			UIModelRuntimeFactory.AddNewUIField(this,"AccountProperty", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1da1d862-674d-442f-8a00-eb35956e4aad");
+			UIModelRuntimeFactory.AddNewUIField(this,"BalanceDirection", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ea691431-4834-4111-8820-df5483022521");
 
 
 			this.CurrentFilter = new HXRelationRefShowViewDefaultFilterFilter(this);
@@ -660,6 +670,32 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			}
 			set{
 				this[this.uiviewHXRelationRefShowView.FieldRefID] = value;
+			}
+		}
+		
+		
+		public  String AccountProperty
+		{
+			get{
+				//object value = this[this.uiviewHXRelationRefShowView.FieldAccountProperty] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewHXRelationRefShowView.FieldAccountProperty);
+			}
+			set{
+				this[this.uiviewHXRelationRefShowView.FieldAccountProperty] = value;
+			}
+		}
+		
+		
+		public  String BalanceDirection
+		{
+			get{
+				//object value = this[this.uiviewHXRelationRefShowView.FieldBalanceDirection] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewHXRelationRefShowView.FieldBalanceDirection);
+			}
+			set{
+				this[this.uiviewHXRelationRefShowView.FieldBalanceDirection] = value;
 			}
 		}
 		#endregion

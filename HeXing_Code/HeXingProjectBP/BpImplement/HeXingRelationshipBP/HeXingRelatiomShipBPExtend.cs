@@ -48,6 +48,8 @@
                                     Relatiom.FID = Currency.ID;
                                     Relatiom.FCode = Currency.Code;
                                     Relatiom.FName = Currency.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -62,6 +64,8 @@
                                     Relatiom.FID = Customer.ID;
                                     Relatiom.FCode = Customer.Code;
                                     Relatiom.FName = Customer.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -76,6 +80,8 @@
                                     Relatiom.FID = Supplier.ID;
                                     Relatiom.FCode = Supplier.Code;
                                     Relatiom.FName = Supplier.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -90,6 +96,8 @@
                                     Relatiom.FID = Department.ID;
                                     Relatiom.FCode = Department.Code;
                                     Relatiom.FName = Department.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -104,6 +112,8 @@
                                     Relatiom.FID = Operator.ID;
                                     Relatiom.FCode = Operator.Code;
                                     Relatiom.FName = Operator.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -118,6 +128,8 @@
                                     Relatiom.FID = CashFlowItem.ID;
                                     Relatiom.FCode = CashFlowItem.Code;
                                     Relatiom.FName = CashFlowItem.UseName;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -132,6 +144,8 @@
                                     Relatiom.FID = Organization.ID;
                                     Relatiom.FCode = Organization.Code;
                                     Relatiom.FName = Organization.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -146,6 +160,8 @@
                                     Relatiom.FID = VoucherCategory.ID;
                                     Relatiom.FCode = VoucherCategory.Code;
                                     Relatiom.FName = VoucherCategory.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -160,6 +176,8 @@
                                     Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
                                     Relatiom.FName = Project.TreeDisplayName;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -174,6 +192,21 @@
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
                                     Relatiom.FName = Account.Name;
+                                    Relatiom.AccountProperty = Account.AccountProperty.Name;
+                                    string strBalanceDirection = "";
+                                    if (Account.BalanceDirection.Value == 0)
+                                    {
+                                        strBalanceDirection = "借方余额";
+                                    }
+                                    else if (Account.BalanceDirection.Value == 1)
+                                    {
+                                        strBalanceDirection = "贷方余额";
+                                    }
+                                    else if (Account.BalanceDirection.Value == 2)
+                                    {
+                                        strBalanceDirection = "双向";
+                                    }
+                                    Relatiom.BalanceDirection = strBalanceDirection;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -188,6 +221,8 @@
                                     Relatiom.FID = ExpenseItem.ID;
                                     Relatiom.FCode = ExpenseItem.Code;
                                     Relatiom.FName = ExpenseItem.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -202,6 +237,8 @@
                                     Relatiom.FID = Bank.ID;
                                     Relatiom.FCode = Bank.Code;
                                     Relatiom.FName = Bank.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -221,6 +258,8 @@
                                     Relatiom.FID = Currency.ID;
                                     Relatiom.FCode = Currency.Code;
                                     Relatiom.FName = Currency.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -235,6 +274,8 @@
                                     Relatiom.FID = Customer.ID;
                                     Relatiom.FCode = Customer.Code;
                                     Relatiom.FName = Customer.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -249,6 +290,8 @@
                                     Relatiom.FID = Supplier.ID;
                                     Relatiom.FCode = Supplier.Code;
                                     Relatiom.FName = Supplier.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -263,6 +306,8 @@
                                     Relatiom.FID = Department.ID;
                                     Relatiom.FCode = Department.Code;
                                     Relatiom.FName = Department.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -277,6 +322,8 @@
                                     Relatiom.FID = Operator.ID;
                                     Relatiom.FCode = Operator.Code;
                                     Relatiom.FName = Operator.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -291,6 +338,8 @@
                                     Relatiom.FID = CashFlowItem.ID;
                                     Relatiom.FCode = CashFlowItem.Code;
                                     Relatiom.FName = CashFlowItem.UseName;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -305,6 +354,8 @@
                                     Relatiom.FID = Organization.ID;
                                     Relatiom.FCode = Organization.Code;
                                     Relatiom.FName = Organization.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -319,6 +370,8 @@
                                     Relatiom.FID = VoucherCategory.ID;
                                     Relatiom.FCode = VoucherCategory.Code;
                                     Relatiom.FName = VoucherCategory.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -333,6 +386,8 @@
                                     Relatiom.FID = Project.ID;
                                     Relatiom.FCode = Project.Code;
                                     Relatiom.FName = Project.TreeDisplayName;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -347,6 +402,21 @@
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
                                     Relatiom.FName = Account.Name;
+                                    Relatiom.AccountProperty = Account.AccountProperty.Name;
+                                    string strBalanceDirection = "";
+                                    if (Account.BalanceDirection.Value == 0)
+                                    {
+                                        strBalanceDirection = "借方余额";
+                                    }
+                                    else if (Account.BalanceDirection.Value == 1)
+                                    {
+                                        strBalanceDirection = "贷方余额";
+                                    }
+                                    else if (Account.BalanceDirection.Value == 2)
+                                    {
+                                        strBalanceDirection = "双向";
+                                    }
+                                    Relatiom.BalanceDirection = strBalanceDirection;
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -361,6 +431,8 @@
                                     Relatiom.FID = ExpenseItem.ID;
                                     Relatiom.FCode = ExpenseItem.Code;
                                     Relatiom.FName = ExpenseItem.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }
@@ -375,6 +447,8 @@
                                     Relatiom.FID = Bank.ID;
                                     Relatiom.FCode = Bank.Code;
                                     Relatiom.FName = Bank.Name;
+                                    Relatiom.AccountProperty = "";
+                                    Relatiom.BalanceDirection = "";
                                     RelatiomList.Add(Relatiom);
                                 }
                             }

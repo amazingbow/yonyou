@@ -534,12 +534,12 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefCode0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefCode"]/*RefCode*/,"RefCode", false, true, false, false, false, true, 0, 200, "50",true, false,"","672ec275-b9dd-495e-a5a7-57c258977cbf","672ec275-b9dd-495e-a5a7-57c258977cbf","b6724882-4166-4f6b-839f-5158035b91d4");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefCode0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefCode"]/*RefCode*/,"RefCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","672ec275-b9dd-495e-a5a7-57c258977cbf","672ec275-b9dd-495e-a5a7-57c258977cbf","b6724882-4166-4f6b-839f-5158035b91d4");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefName0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefName"]/*RefName*/,"RefName", false, true, false, false, false, true, 0, 300, "50",true, false,"","35332702-30aa-4a7c-9f06-c2c5afd06282","35332702-30aa-4a7c-9f06-c2c5afd06282","a853515c-1c51-4f24-bb3d-f85129b59bcc");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefName0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefName"]/*RefName*/,"RefName", false, true, false, false, false, true, 0, 200, "50",true, false,"","35332702-30aa-4a7c-9f06-c2c5afd06282","35332702-30aa-4a7c-9f06-c2c5afd06282","a853515c-1c51-4f24-bb3d-f85129b59bcc");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
@@ -547,6 +547,16 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RefID1","NumberColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["RefID"]/*RefID*/,"RefID", false, false, true, false, false, true, 7, 100, "19.0",true, false,"","f558de5a-12f3-46c7-a894-99ee018253d3","f558de5a-12f3-46c7-a894-99ee018253d3","4ec7c04c-ce92-4f09-965c-58acf53ee524");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AccountProperty0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["AccountProperty"]/*AccountProperty*/,"AccountProperty", false, false, true, false, false, true, 0, 150, "50",true, false,"","1da1d862-674d-442f-8a00-eb35956e4aad","1da1d862-674d-442f-8a00-eb35956e4aad","c7516f2e-265e-4e8d-9c16-9a5e4d62a438");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"BalanceDirection0","TextBoxColumnModel", "", 0,this.Model.HXRelationRefShowView.Fields["BalanceDirection"]/*BalanceDirection*/,"BalanceDirection", false, false, true, false, false, true, 0, 100, "50",true, false,"","ea691431-4834-4111-8820-df5483022521","ea691431-4834-4111-8820-df5483022521","1dde0dc3-32e0-4803-9ac9-ac03bffab4bd");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 
         }

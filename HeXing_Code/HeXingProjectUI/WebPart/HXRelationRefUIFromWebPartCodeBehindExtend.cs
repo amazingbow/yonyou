@@ -61,6 +61,16 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
             {
                 throw new Exception("栏目不能为空！");
             }
+            if (this.RelType89.Text == "科目")
+            {
+                this.DataGrid.Columns["AccountProperty"].Visible = true;
+                this.DataGrid.Columns["BalanceDirection"].Visible = true;
+            }
+            else
+            {
+                this.DataGrid.Columns["AccountProperty"].Visible = false;
+                this.DataGrid.Columns["BalanceDirection"].Visible = false;
+            }
             HeXingRelatiomShipBPProxy proxy = new HeXingRelatiomShipBPProxy();
             proxy.HOrg = this.Org161.Key;
             proxy.HRefType = this.RelType89.Text;
@@ -73,6 +83,8 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
                 ShowRecord.RefCode = record.FCode;
                 ShowRecord.RefName = record.FName;
                 ShowRecord.RefID = record.FID;
+                ShowRecord.AccountProperty = record.AccountProperty;
+                ShowRecord.BalanceDirection = record.BalanceDirection;
             }
             //AtlasHelper.RegisterStartupScript((Control)base.Action.CurrentPart.TopLevelContainer, base.Action.CurrentPart.GetType(), "ReferenceReturn","", false);
 			BtnFind_Click_DefaultImpl(sender,e);
@@ -162,6 +174,16 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
             if (string.IsNullOrEmpty(strRefType) == false)
             {
                 this.Model.HXRelationRefFindView.FocusedRecord.RelType = Convert.ToInt32(strRefType);
+                if (Convert.ToInt32(strRefType) == 10)
+                {
+                    this.DataGrid.Columns["AccountProperty"].Visible = true;
+                    this.DataGrid.Columns["BalanceDirection"].Visible = true;
+                }
+                else
+                {
+                    this.DataGrid.Columns["AccountProperty"].Visible = false;
+                    this.DataGrid.Columns["BalanceDirection"].Visible = false;
+                }
             }
 
 		}
