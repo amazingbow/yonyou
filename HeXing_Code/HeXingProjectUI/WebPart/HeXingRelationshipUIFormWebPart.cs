@@ -590,8 +590,8 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 	  
 		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"U9EntityId0","ReferenceColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["U9EntityId"]/*U9EntityId*/,"U9EntityId", false, true, true, false, false, true, 7, 100, "19.0",true, false,"0","174540d5-3df7-4d36-8a83-04c33fbecddb","174540d5-3df7-4d36-8a83-04c33fbecddb","3b660753-2f07-4b5b-8a7b-2dd31c80bfbb");
-			GridControlBuilder.GridReferenceColumnBuilder((IUFFldReferenceColumn)column, ColumnTextAlign.Right, "ID", "Code", "Name", this.Model.HxRelationshipBE.FieldU9Code/*U9Code*/, this.Model.HxRelationshipBE.FieldU9Name/*U9Name*/, "27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0"
-			,false,true,580,408);
+            GridControlBuilder.GridReferenceColumnBuilder((IUFFldReferenceColumn)column, ColumnTextAlign.Right, "RefID", "RefCode", "RefName", this.Model.HxRelationshipBE.FieldU9Code/*U9Code*/, this.Model.HxRelationshipBE.FieldU9Name/*U9Name*/, "27891913-4675-447f-b75e-edb4ef82b85c"
+            , false, true, 632, 376);
             ((IUFFldReferenceColumn)column).CtrlId = "3b660753-2f07-4b5b-8a7b-2dd31c80bfbb";
  			((IUFFldReferenceColumn)column).IsMultiOrg  = false ;
            //foreach Reference's input filter parameter
@@ -602,6 +602,12 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
 									
 			((IUFFldReferenceColumn)column).AddReferenceInParameter("DateTime2", "DateTime", "Context");
+
+
+            ((IUFFldReferenceColumn)column).AddReferenceInParameter("RefType", "RefType", "DataGrid1");
+
+
+            ((IUFFldReferenceColumn)column).AddReferenceInParameter("SapCompCode", "SapCompCode", "DataGrid1");
 								
 						
             //foreach Reference's output set data
