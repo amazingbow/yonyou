@@ -10,6 +10,7 @@
     using UFIDA.U9.Base.SOB;
     using UFIDA.U9.Base.UOM;
     using UFIDA.U9.CBO.FI.BankAccount;
+    using UFIDA.U9.CBO.FI.CashFlow;
     using UFIDA.U9.CBO.FI.IncExpItem;
     using UFIDA.U9.CBO.FI.NaturalAccount;
     using UFIDA.U9.CBO.FI.SettlementMethod;
@@ -18,11 +19,14 @@
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE;
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE;
     using UFIDA.U9.Cust.HeXingProjectBE.RefVoucherInfoBE;
+    using UFIDA.U9.GL.CashFlow;
+    using UFIDA.U9.GL.Voucher;
     using UFIDA.U9.GL.Voucher.Proxy;
     using UFIDA.U9.ISV.GL.ISVGLImportSV;
     using UFIDA.U9.ISV.GL.ISVGLImportSV.Proxy;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Business;
+    using UFSoft.UBF.PL;
     using UFSoft.UBF.Util.Context;
 
     /// <summary>
@@ -56,6 +60,7 @@
 
             foreach (var item in glVoucherLst)
             {
+                string docNo = string.Empty;
                 if (item.HeXingSAPU9GLVoucherLine.Count == 0) continue;
                 item.U9ErrorResult = item.SAPVoucherDisplayCode;
                 item.IsU9Successful = ImportFlagEnum.NotProcess;
@@ -130,6 +135,7 @@
                         proxy.ImportVoucherDTOs.Add(dto);
                         List<ISVReturnVoucherDTOData> result = proxy.Do();
                         if (result == null || result.Count == 0) throw new Exception(item.SAPVoucherDisplayCode + "：生成凭证失败");
+                        docNo = result[0].DocNo;
                         foreach (var refInfo in refList)
                         {
                             refInfo.VoucherID = result[0].VoucherID;
@@ -140,19 +146,11 @@
                         item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         try
                         {
-                            VoucherApprovedProxy voucherApproveProxy = new VoucherApprovedProxy();
-                            voucherApproveProxy.Voucher = new List<long>();
-                            voucherApproveProxy.Voucher.Add(item.U9VoucherID);
-                            UFIDA.U9.GL.VoucherRelData.UIVoucherBPDTOData data = voucherApproveProxy.Do();
-                            if (!data.ReturnFlags)
-                            {
-                                item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + result[0].DocNo + "失败信息：" + data.FailReason;
-                            }
-                            item.U9ErrorResult = "导入成功，审核成功！U9凭证号：" + result[0].DocNo;
+                            GenerateCFVoucherItem(item.U9VoucherID, item);//生成现金流量项目
                         }
                         catch (Exception ex)
                         {
-                            item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + result[0].DocNo + "失败信息：" + ex.Message;
+                            item.U9ErrorResult = "生成现金流量项目失败" + ex.Message;
                         }
                     }
                     catch (Exception ex)
@@ -170,8 +168,70 @@
                     }
                     session.Commit();
                 }
+                if (string.IsNullOrEmpty(docNo)) return null;
+                using (ISession session = Session.Open())
+                {
+                    try
+                    {
+                        VoucherSubmitProxy submitProxy = new VoucherSubmitProxy();
+                        submitProxy.Voucher = new List<long>();
+                        submitProxy.Voucher.Add(item.U9VoucherID);
+                        submitProxy.Do();
+                        VoucherApprovedProxy voucherApproveProxy = new VoucherApprovedProxy();
+                        voucherApproveProxy.Voucher = new List<long>();
+                        voucherApproveProxy.Voucher.Add(item.U9VoucherID);
+                        UFIDA.U9.GL.VoucherRelData.UIVoucherBPDTOData data = voucherApproveProxy.Do();
+                        if (!data.ReturnFlags)
+                        {
+                            item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + docNo + "失败信息：" + data.FailReason;
+                        }
+                        item.U9ErrorResult = "导入成功，审核成功！U9凭证号：" + docNo;
+                    }
+                    catch (Exception ex)
+                    {
+                        item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + docNo + "失败信息：" + ex.Message;
+                    }
+                    session.Commit();
+                }
             }
             return null;
+        }
+
+        private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item)
+        {
+            Voucher successVoucher = Voucher.Finder.FindByID(voucherID);
+            for (int i = 0; i < successVoucher.Entries.Count; i++)
+            {
+                //银行、现金类的科目维护对应的现金流量项目
+                if (!item.HeXingSAPU9GLVoucherLine[i].AccountCode.StartsWith("1001")
+                    && !item.HeXingSAPU9GLVoucherLine[i].AccountCode.StartsWith("1002")) continue;
+
+                HxRelationshipBE cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='"
+                    + item.HeXingSAPU9GLVoucherLine[i].CashFlowCode + "'");
+                CashFlowItem cashFlowItem = CashFlowItem.Finder.Find("Code = @Code and IsSystemPre=0", new OqlParam[] { new OqlParam(cashFlowRef.U9Code) });
+                CFVoucherItem cfVoucherItem = CFVoucherItem.Create();
+                cfVoucherItem.VoucherEntry = successVoucher.Entries[i];
+                cfVoucherItem.Voucher = successVoucher;
+                cfVoucherItem.SOB = successVoucher.SOB;
+                cfVoucherItem.Org = successVoucher.Org;
+                cfVoucherItem.CashFlowItem = cashFlowItem;
+                if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
+                {
+                    cfVoucherItem.DrAccount = successVoucher.Entries[i].Account;
+                    cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedDr;//本币金额
+                    cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredDr;//原币金额
+                }
+                else
+                {
+                    cfVoucherItem.CrAccount = successVoucher.Entries[i].Account;
+                    cfVoucherItem.LCMoney = -successVoucher.Entries[i].AccountedCr;//本币金额
+                    cfVoucherItem.OCMoney = -successVoucher.Entries[i].EnteredCr;//原币金额
+                }
+                cfVoucherItem.Currency = successVoucher.Entries[i].Currency;
+                cfVoucherItem.OCToFCExchangeRate = successVoucher.Entries[i].OCToFCExchangeRate;//汇率
+                cfVoucherItem.SerialNumber = 10;
+                successVoucher.Entries[i].CashFlowName = cashFlowItem.UseName;
+            }
         }
 
         private ISVImportVoucherDTOData ConstructVoucher(HeXingSAPU9GLVoucherHead voucher, List<RefVoucherInfoBE> refList, SetofBooks sob)
@@ -244,32 +304,6 @@
             //VoucherItem.AmountDr = 0;
             ////贷方数量
             //VoucherItem.AmountCr = 0;
-            //银行账号  银行类科目必输
-            VoucherItem.BankAccount = new CommonArchiveDataDTOData();
-            var bankAccount = BankAccount.FindByCode(entry.BankAccount);
-            if (bankAccount != null)
-            {
-                VoucherItem.BankAccount.ID = bankAccount.ID;
-                VoucherItem.BankAccount.Name = bankAccount.Name;
-                VoucherItem.BankAccount.Code = bankAccount.Code;
-            }
-            //收支项目 银行、现金类的科目必输，维护对应的现金流量项目
-            HxRelationshipBE cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='"
-                            + entry.CashFlowCode + "' and SapName='" + entry.CashFlowDescription + "'");
-            if (cashFlowRef != null)
-            {
-                RefVoucherInfoBE ref0 = RefVoucherInfoBE.Create();
-                ref0.HxRelationshipID = cashFlowRef.ID;
-                refList.Add(ref0);
-                VoucherItem.IncomeExpendItem = new CommonArchiveDataDTOData();
-                var incExpItem = IncExpItem.FindByCode(cashFlowRef.U9Code);
-                if (incExpItem != null)
-                {
-                    VoucherItem.IncomeExpendItem.ID = incExpItem.ID;
-                    VoucherItem.IncomeExpendItem.Code = incExpItem.Code;
-                    VoucherItem.IncomeExpendItem.Name = incExpItem.Name;
-                }
-            }
             //结算方式  --银行、现金类的科目必须要录入结算方式
             //银行类的科目：业务属性为“银行业务”的结算方式
             //现金类的科目：业务属性为“现金业务”的结算方式
@@ -392,6 +426,24 @@
             VoucherItem.Description.PubDescSeg49 = entry.DescFlexField.PubDescSeg49;
             VoucherItem.Description.PubDescSeg50 = entry.DescFlexField.PubDescSeg50;
             #endregion
+            VoucherItem.BankAccount = new CommonArchiveDataDTOData();
+            #region 银行账号  银行类科目必输
+            BankAccount bankAccount = null;
+            if (!string.IsNullOrEmpty(entry.BankAccount))
+            {
+                bankAccount = BankAccount.Finder.Find("Org=" + sob.Org.ID + " and Code='" + entry.BankAccount + "'");
+                if (bankAccount != null)
+                {
+                    VoucherItem.BankAccount.ID = bankAccount.ID;
+                    VoucherItem.BankAccount.Name = bankAccount.Name;
+                    VoucherItem.BankAccount.Code = bankAccount.Code;
+                }
+                else
+                {
+                    throw new Exception("在组织" + voucher.CompanyName + "下，没有维护银行账号：" + entry.BankAccount);
+                }
+            }
+            #endregion
             VoucherItem.Account = new CommonArchiveDataDTOData();
             #region 1. 标准科目 2.组织    3.客户    4.供应商   5.银行    6.银行账号  7.部门    8.员工    9.费用项目  10.工程项目
             StringBuilder stb = new StringBuilder();
@@ -480,14 +532,14 @@
             #region 5. 银行
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment5)
             {
-                HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=12 and SapCode='" + entry.Banks + "'");
-                if (shipBank != null)
+                //HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=12 and SapCode='" + entry.Banks + "'");
+                if (bankAccount != null && bankAccount.Bank != null)
                 {
-                    stb.Append(shipBank.U9Code + SYMBOL);
+                    stb.Append(bankAccount.Bank.Code + SYMBOL);
                 }
                 else
                 {
-                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "银行是必输的，但是并没有传值或维护对应关系");
+                    throw new Exception("U9系统中银行账号：" + entry.BankAccount + "对应的所属银行为空，请检查U9基础数据！");
                 }
             }
             else

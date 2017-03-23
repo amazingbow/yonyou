@@ -39,115 +39,44 @@
                     LaserLab lab = LaserLab.Finder.Find("LB='" + bpObj.LaserLab + "'");
                     if (lab != null)
                     {
-                        switch (bpObj.ChangeCp)
-                        {
-                            case 1:
-                                lab.Cp = LBEnum.GoldOil;
-                                lab.GoldOilDT = DateTime.Now;
-                                break;
-                            case 2:
-                                lab.Cp = LBEnum.Packing;
-                                lab.PackDT = DateTime.Now;
-                                break;
-                            case 3:
-                                if (lab.Cp == LBEnum.Scrap)
-                                {
-                                    throw new Exception(lab.LB + "当前镭射表已经报废，不能出货！");
-                                }
-                                lab.Cp = LBEnum.Shipment;
-                                //如果时间不填写，就默认当前时间
-                                lab.ShipDT = DateTime.Now;
-                                if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
-                                {
-                                    lab.ShipDT = bpObj.ShipDateTime;
-                                }
-                                if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
-                                {
-                                    lab.ShipBN = bpObj.ShipBatchNo;
-                                }
-                                break;
-                            default:
-                                break;
-                        }
+                        ProcessData(bpObj, lab);
                     }
                 }
                 else
                 {
-                    var labList = LaserLab.Finder.FindAll("BN='" + bpObj.BatchNo + "' and Type='" + bpObj.Type + "'");
+                    LaserLab.EntityList labList;
+                    if (!string.IsNullOrEmpty(bpObj.Type))
+                    {
+                        labList = LaserLab.Finder.FindAll("BN='" + bpObj.BatchNo + "' and Type='" + bpObj.Type + "'");
+                    }
+                    else
+                    {
+                        labList = LaserLab.Finder.FindAll("BN='" + bpObj.BatchNo + "'");
+                    }
                     if (labList.Count > 0)
                     {
                         foreach (var item in labList)
                         {
-                            if (bpObj.FlowStart > 0)
+                            if (!string.IsNullOrEmpty(bpObj.FlowStart))
                             {
                                 Match m = Regex.Match(item.LB, @"\d+");
                                 int labCode = m.Success ? int.Parse(m.Value) : 0;
-                                if (bpObj.FlowStart <= labCode && bpObj.FlowEnd >= labCode)
+                                var haveFirst = bpObj.FlowStart.Substring(1) == item.LB.Substring(1) && bpObj.FlowEnd.Substring(1) == item.LB.Substring(1);
+                                int start, end = 0;
+                                int.TryParse(bpObj.FlowStart.Remove(0), out start);
+                                int.TryParse(bpObj.FlowEnd.Remove(0), out end);
+                                if (start == 0)
                                 {
-                                    switch (bpObj.ChangeCp)
-                                    {
-                                        case 1:
-                                            item.Cp = LBEnum.GoldOil;
-                                            item.GoldOilDT = DateTime.Now;
-                                            break;
-                                        case 2:
-                                            if (item.Cp == LBEnum.Scrap)
-                                            {
-                                                throw new Exception(item.LB + "镭射表已经报废，不能出货！");
-                                            }
-                                            item.Cp = LBEnum.Packing;
-                                            item.PackDT = DateTime.Now;
-                                            break;
-                                        case 3:
-                                            item.Cp = LBEnum.Shipment;
-                                            //如果时间不填写，就默认当前时间
-                                            item.ShipDT = DateTime.Now;
-                                            if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
-                                            {
-                                                item.ShipDT = bpObj.ShipDateTime;
-                                            }
-                                            if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
-                                            {
-                                                item.ShipBN = bpObj.ShipBatchNo;
-                                            }
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                                    throw new Exception("流水码输入错误");
+                                }
+                                if (haveFirst && labCode >= start && end >= labCode)
+                                {
+                                    ProcessData(bpObj, item);
                                 }
                             }
                             else
                             {
-                                switch (bpObj.ChangeCp)
-                                {
-                                    case 1:
-                                        item.Cp = LBEnum.GoldOil;
-                                        item.GoldOilDT = DateTime.Now;
-                                        break;
-                                    case 2:
-                                        item.Cp = LBEnum.Packing;
-                                        item.PackDT = DateTime.Now;
-                                        break;
-                                    case 3:
-                                        if (item.Cp == LBEnum.Scrap)
-                                        {
-                                            throw new Exception(item.LB + "镭射表已经报废，不能出货！");
-                                        }
-                                        item.Cp = LBEnum.Shipment;
-                                        //如果时间不填写，就默认当前时间
-                                        item.ShipDT = DateTime.Now;
-                                        if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
-                                        {
-                                            item.ShipDT = bpObj.ShipDateTime;
-                                        }
-                                        if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
-                                        {
-                                            item.ShipBN = bpObj.ShipBatchNo;
-                                        }
-                                        break;
-                                    default:
-                                        break;
-                                }
+                                ProcessData(bpObj, item);
                             }
                         }
                     }
@@ -155,6 +84,40 @@
                 session.Commit();
             }
             return true;
+        }
+
+        private void ProcessData(SingleChangeBP bpObj, LaserLab lab)
+        {
+            switch (bpObj.ChangeCp)
+            {
+                case 1:
+                    lab.Cp = LBEnum.GoldOil;
+                    lab.GoldOilDT = DateTime.Now;
+                    break;
+                case 2:
+                    lab.Cp = LBEnum.Packing;
+                    lab.PackDT = DateTime.Now;
+                    break;
+                case 3:
+                    if (lab.Cp == LBEnum.Scrap)
+                    {
+                        throw new Exception(lab.LB + "当前镭射表已经报废，不能出货！");
+                    }
+                    lab.Cp = LBEnum.Shipment;
+                    //如果时间不填写，就默认当前时间
+                    lab.ShipDT = DateTime.Now;
+                    if (bpObj.ShipDateTime != DateTime.MinValue && bpObj.ShipDateTime != null)
+                    {
+                        lab.ShipDT = bpObj.ShipDateTime;
+                    }
+                    if (!string.IsNullOrEmpty(bpObj.ShipBatchNo))
+                    {
+                        lab.ShipBN = bpObj.ShipBatchNo;
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

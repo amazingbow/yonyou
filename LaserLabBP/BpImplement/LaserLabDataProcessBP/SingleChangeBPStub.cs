@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        System.Boolean Do(IContext context ,out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime);
+        System.Boolean Do(IContext context ,out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.String flowStart, System.String flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,7 +46,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
         #region ISingleChangeBP Members
 
         //[OperationBehavior]
-        public System.Boolean Do(IContext context ,out IList<MessageBase> outMessages, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
+        public System.Boolean Do(IContext context ,out IList<MessageBase> outMessages, System.String laserLab, System.String batchNo, System.String type, System.String flowStart, System.String flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
@@ -54,7 +54,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
         }
         
         //[OperationBehavior]
-        public System.Boolean DoEx(ICommonDataContract commonData, System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
+        public System.Boolean DoEx(ICommonDataContract commonData, System.String laserLab, System.String batchNo, System.String type, System.String flowStart, System.String flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime)
         {
 			this.CommonData = commonData ;
             try

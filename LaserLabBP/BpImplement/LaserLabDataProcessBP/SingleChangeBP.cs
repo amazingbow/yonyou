@@ -23,8 +23,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		private System.String laserLab;
 		private System.String batchNo;
 		private System.String type;
-		private System.Int32 flowStart;
-		private System.Int32 flowEnd;
+		private System.String flowStart;
+		private System.String flowEnd;
 		private System.Int32 changeModel;
 		private System.Int32 changeCp;
 		private System.String shipBatchNo;
@@ -92,7 +92,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		/// 单个转换BP.Misc.流水起码
 		/// </summary>
 		/// <value></value>
-		public System.Int32 FlowStart
+		public System.String FlowStart
 		{
 			get
 			{
@@ -108,7 +108,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP
 		/// 单个转换BP.Misc.流水止码
 		/// </summary>
 		/// <value></value>
-		public System.Int32 FlowEnd
+		public System.String FlowEnd
 		{
 			get
 			{

@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.Int32 flowStart, System.Int32 flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime);
+		System.Boolean Do(IContext context, out IList<MessageBase> outMessages ,System.String laserLab, System.String batchNo, System.String type, System.String flowStart, System.String flowEnd, System.Int32 changeModel, System.Int32 changeCp, System.String shipBatchNo, System.DateTime shipDateTime);
     }
 	[Serializable]    
     public class SingleChangeBPProxy : OperationProxyBase//, UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy.ISingleChangeBP
@@ -47,8 +47,8 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 				private System.String laserLab ;
 						private System.String batchNo ;
 						private System.String type ;
-						private System.Int32 flowStart ;
-						private System.Int32 flowEnd ;
+						private System.String flowStart ;
+						private System.String flowEnd ;
 						private System.Int32 changeModel ;
 						private System.Int32 changeCp ;
 						private System.String shipBatchNo ;
@@ -118,11 +118,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 						
 
 		/// <summary>
-		/// 流水起码 (该属性可为空,但有默认值)
+		/// 流水起码 (该属性可为空,且无默认值)
 		/// 单个转换BP.Misc.流水起码
 		/// </summary>
-		/// <value>System.Int32</value>
-		public System.Int32 FlowStart
+		/// <value>System.String</value>
+		public System.String FlowStart
 		{
 			get	
 			{	
@@ -137,11 +137,11 @@ namespace UFIDA.U9.Cust.XMQX.LaserLabBP.LaserLabDataProcessBP.Proxy
 						
 
 		/// <summary>
-		/// 流水止码 (该属性可为空,但有默认值)
+		/// 流水止码 (该属性可为空,且无默认值)
 		/// 单个转换BP.Misc.流水止码
 		/// </summary>
-		/// <value>System.Int32</value>
-		public System.Int32 FlowEnd
+		/// <value>System.String</value>
+		public System.String FlowEnd
 		{
 			get	
 			{	

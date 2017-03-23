@@ -51,7 +51,7 @@
             codeNamePair.Add(9, new Dictionary<string, string>()); //项目
             codeNamePair.Add(10, new Dictionary<string, string>());//科目
             codeNamePair.Add(11, new Dictionary<string, string>());//费用项目
-            codeNamePair.Add(12, new Dictionary<string, string>());//银行
+            //codeNamePair.Add(12, new Dictionary<string, string>());//银行
             #region 构造要存储的数据
             foreach (var item in glVoucherLst)
             {
@@ -134,13 +134,13 @@
                             codeNamePair[11].Add(line.FeeTypeEnumCode, line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
-                    if (!string.IsNullOrEmpty(line.Banks))
-                    {
-                        if (!codeNamePair[12].ContainsKey(line.Banks))//银行
-                        {
-                            codeNamePair[12].Add(line.Banks, line.Banks + "@" + item.SAPVoucherDisplayCode);
-                        }
-                    }
+                    //if (!string.IsNullOrEmpty(line.Banks))
+                    //{
+                    //    if (!codeNamePair[12].ContainsKey(line.Banks))//银行
+                    //    {
+                    //        codeNamePair[12].Add(line.Banks, line.Banks + "@" + item.SAPVoucherDisplayCode);
+                    //    }
+                    //}
                 }
             }
             #endregion
@@ -335,19 +335,19 @@
                 }
                 #endregion
                 #region //银行
-                foreach (var item in codeNamePair[12])
-                {
-                    HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=12 and SapCode='" + item.Key + "'");
-                    if (shipBank == null)
-                    {
-                        var relationship = HxRelationshipBE.Create();
-                        relationship.RefType = RelationEnum.Bank;
-                        relationship.SapCode = item.Key;
-                        relationship.SapName = item.Value.Split('@')[0];
-                        relationship.RefStatus = RefStatusEnum.Oraginal;
-                        returnVoucher.Add(item.Value.Split('@')[1] + "银行没有维护对照关系");
-                    }
-                }
+                //foreach (var item in codeNamePair[12])
+                //{
+                //    HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=12 and SapCode='" + item.Key + "'");
+                //    if (shipBank == null)
+                //    {
+                //        var relationship = HxRelationshipBE.Create();
+                //        relationship.RefType = RelationEnum.Bank;
+                //        relationship.SapCode = item.Key;
+                //        relationship.SapName = item.Value.Split('@')[0];
+                //        relationship.RefStatus = RefStatusEnum.Oraginal;
+                //        returnVoucher.Add(item.Value.Split('@')[1] + "银行没有维护对照关系");
+                //    }
+                //}
                 #endregion
                 session.Commit();
             }

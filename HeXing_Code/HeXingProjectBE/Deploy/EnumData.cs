@@ -85,10 +85,6 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		FeeType = 11,
 		/// <summary>
-		/// 银行
-		/// </summary>
-		Bank = 12,
-		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 
