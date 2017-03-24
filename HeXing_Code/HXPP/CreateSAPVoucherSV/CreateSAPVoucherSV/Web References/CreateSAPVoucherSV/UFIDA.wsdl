@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.UFIDA.org" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.UFIDA.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.UFIDA.org/Imports">
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd8" namespace="http://www.UFIDA.org" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd1" namespace="UFSoft.UBF.Exceptions" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd9" namespace="http://www.UFIDA.org/EntityData" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.PL.Engine" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd11" namespace="UFSoft.UBF.Util.Data" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_InputMessage">
+    <wsdl:part name="parameters" element="tns:Do" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q1:ServiceExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceLostExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q2:ServiceLostException" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" name="detail" element="q3:ServiceException" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ExceptionBaseFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/UFSoft.UBF" name="detail" element="q4:ExceptionBase" />
+  </wsdl:message>
+  <wsdl:message name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/System" name="detail" element="q5:Exception" />
+  </wsdl:message>
+  <wsdl:portType name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV">
+    <wsdl:operation name="Do">
+      <wsdl:input wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/Do" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoResponse" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoServiceExceptionDetailFault" name="ServiceExceptionDetailFault" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceExceptionDetailFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoServiceLostExceptionFault" name="ServiceLostExceptionFault" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceLostExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoServiceExceptionFault" name="ServiceExceptionFault" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ServiceExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoExceptionBaseFault" name="ExceptionBaseFault" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ExceptionBaseFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://www.UFIDA.org/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV/DoExceptionFault" name="ExceptionFault" message="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV_Do_ExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

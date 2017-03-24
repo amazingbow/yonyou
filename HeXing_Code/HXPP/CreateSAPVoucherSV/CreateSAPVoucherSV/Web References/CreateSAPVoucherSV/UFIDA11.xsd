@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://www.UFIDA.org/EntityData" elementFormDefault="qualified" targetNamespace="http://www.UFIDA.org/EntityData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.PL.Engine" />
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" nillable="true" type="tns:ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" />
+  <xs:complexType name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UFSoft.UBF.Business.DataTransObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="m_companyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_companyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_currencyCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_currencyDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_postDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="m_postedPeriod" type="xs:int" />
+          <xs:element minOccurs="0" name="m_sAPU9GLVoucherLineDTOS" nillable="true" type="tns:ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" />
+          <xs:element minOccurs="0" name="m_sAPVoucherDisplayCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_voucherCategoryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_voucherCategoryDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" />
+  <xs:complexType name="UFSoft.UBF.Business.DataTransObjectBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UFSoft.UBF.PL.Engine" minOccurs="0" name="sysState" type="q1:ObjectState" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="UFSoft.UBF.Business.DataTransObjectBase" nillable="true" type="tns:UFSoft.UBF.Business.DataTransObjectBase" />
+  <xs:complexType name="ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" nillable="true" type="tns:ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" />
+  <xs:complexType name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UFSoft.UBF.Business.DataTransObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="m_abstracts" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_accountCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_accountDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_accountedCr" type="xs:decimal" />
+          <xs:element minOccurs="0" name="m_accountedDr" type="xs:decimal" />
+          <xs:element minOccurs="0" name="m_assetsCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_assetsDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_bankAccount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_banks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_cashFlowCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_cashFlowDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_customerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_customerDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_departmentCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_departmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_employeeCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_employeeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_enteredCr" type="xs:decimal" />
+          <xs:element minOccurs="0" name="m_enteredDr" type="xs:decimal" />
+          <xs:element minOccurs="0" name="m_feeTypeEnumCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_feeTypeEnumDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_materialGroupCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_materialGroupDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_sAPU9GLVoucherDTO" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData" />
+          <xs:element minOccurs="0" name="m_serialNo" type="xs:int" />
+          <xs:element minOccurs="0" name="m_supplierCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_supplierDescription" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData" />
+  <xs:complexType name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:UFSoft.UBF.Business.DataTransObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="m_isSuccess" type="xs:boolean" />
+          <xs:element minOccurs="0" name="m_message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="m_resultObj" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData" nillable="true" type="tns:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData" />
+</xs:schema>

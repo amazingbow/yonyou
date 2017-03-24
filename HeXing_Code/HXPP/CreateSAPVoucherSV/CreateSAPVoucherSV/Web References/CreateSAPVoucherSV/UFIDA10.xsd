@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF" />
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+  <xs:complexType name="ServiceExceptionDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" base="q1:ExceptionDetail">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UFSoft.UBF" minOccurs="0" name="Exception" nillable="true" type="q2:ExceptionBase" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceExceptionDetail" nillable="true" type="tns:ServiceExceptionDetail" />
+  <xs:complexType name="ServiceLostException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UFSoft.UBF" base="q3:ExceptionBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceLostException" nillable="true" type="tns:ServiceLostException" />
+  <xs:complexType name="ServiceException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/UFSoft.UBF" base="q4:ExceptionBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ServiceException" nillable="true" type="tns:ServiceException" />
+</xs:schema>

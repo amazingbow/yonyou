@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF" />
+  <xs:complexType name="AttrsContainerException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessException" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttrsContainerException" nillable="true" type="tns:AttrsContainerException" />
+  <xs:complexType name="BusinessException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UFSoft.UBF" base="q1:ExceptionBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessException" nillable="true" type="tns:BusinessException" />
+  <xs:complexType name="AttributeInValidException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessException" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeInValidException" nillable="true" type="tns:AttributeInValidException" />
+  <xs:complexType name="EntityNotExistException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BusinessException" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityNotExistException" nillable="true" type="tns:EntityNotExistException" />
+</xs:schema>

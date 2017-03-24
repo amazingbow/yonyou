@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UFSoft.UBF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ExceptionBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:Exception" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExceptionBase" nillable="true" type="tns:ExceptionBase" />
+  <xs:simpleType name="ExceptionBase.FormatState">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedInt" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Formatting" />
+      <xs:enumeration value="Formatted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExceptionBase.FormatState" nillable="true" type="tns:ExceptionBase.FormatState" />
+  <xs:complexType name="ErrorMessage">
+    <xs:sequence>
+      <xs:element name="errDescriptor" nillable="true" type="tns:ErrorDescriptor" />
+      <xs:element name="errorType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="innerMessages" nillable="true" type="tns:ArrayOfErrorMessage" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorMessage" nillable="true" type="tns:ErrorMessage" />
+  <xs:complexType name="ErrorDescriptor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element name="errorid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="level" type="tns:ErrorLevel" />
+      <xs:element minOccurs="0" name="owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timeStamp" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDescriptor" nillable="true" type="tns:ErrorDescriptor" />
+  <xs:simpleType name="ErrorLevel">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="short" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Debug" />
+      <xs:enumeration value="Info" />
+      <xs:enumeration value="Warn" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Fatal" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ErrorLevel" nillable="true" type="tns:ErrorLevel" />
+  <xs:complexType name="ArrayOfErrorMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorMessage" nillable="true" type="tns:ErrorMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorMessage" nillable="true" type="tns:ArrayOfErrorMessage" />
+  <xs:complexType name="UnknownException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExceptionBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UnknownException" nillable="true" type="tns:UnknownException" />
+</xs:schema>

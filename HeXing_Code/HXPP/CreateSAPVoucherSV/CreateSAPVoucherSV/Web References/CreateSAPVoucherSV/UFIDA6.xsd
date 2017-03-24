@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="UFSoft.UBF.Exceptions" elementFormDefault="qualified" targetNamespace="UFSoft.UBF.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" />
+  <xs:complexType name="MessageBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attributeMetadataID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="entityFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="entityID" type="xs:long" />
+      <xs:element minOccurs="0" name="entityMetadataID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="errorLevel" type="xs:short" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" minOccurs="0" name="formated" type="q1:MessageBase.FormatState" />
+      <xs:element minOccurs="0" name="innerMessages" nillable="true" type="tns:ArrayOfMessageBase" />
+      <xs:element minOccurs="0" name="isValidEntityID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="localMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orginalEntityFullName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageBase" nillable="true" type="tns:MessageBase" />
+  <xs:complexType name="ArrayOfMessageBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageBase" nillable="true" type="tns:MessageBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageBase" nillable="true" type="tns:ArrayOfMessageBase" />
+</xs:schema>
