@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="MessageBase.FormatState">
+    <xs:annotation>
+      <xs:appinfo>
+        <ActualType Name="unsignedInt" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Formatting" />
+      <xs:enumeration value="Formatted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageBase.FormatState" nillable="true" type="tns:MessageBase.FormatState" />
+</xs:schema>
