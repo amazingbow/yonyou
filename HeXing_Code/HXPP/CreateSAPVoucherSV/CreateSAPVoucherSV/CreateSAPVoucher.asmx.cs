@@ -19,21 +19,28 @@ namespace CreateSAPVoucherSV
     {
 
         [WebMethod]
-        public CommonResult Create(List<SAPU9GLVoucher> SAPU9GLVoucherS)
+        public List<CommonResult> Create(List<SAPU9GLVoucher> SAPU9GLVoucherS)
         {
-            CommonResult commonResult = new CommonResult();
+            List<CommonResult> returnResult = new List<CommonResult>();
+         
             CreateSAPVoucherSV.CreateSVStub sv = new CreateSAPVoucherSV.CreateSVStub();
             object context = CreateContextObj();
             MessageBase[] returnMsg;
             UFIDAU9CustHXPPSVCreateSAPVoucherSVSAPU9GLVoucherDTOData[] dtos = CreateSAPVoucherInfoList(SAPU9GLVoucherS);
-            UFIDAU9CustHXPPSVCreateSAPVoucherSVCommonResultDTOData returnVal;
-            returnVal = sv.Do(context, dtos, out returnMsg);
-
-            commonResult.IsSuccess = returnVal.m_isSuccess;
-            commonResult.Message = returnVal.m_message;
-            commonResult.ResultObj = returnVal.m_resultObj;
-
-            return commonResult;
+            UFIDAU9CustHXPPSVCreateSAPVoucherSVCommonResultDTOData[] returnValLst;
+            returnValLst = sv.Do(context, dtos, out returnMsg);
+            foreach (var returnVal in returnValLst)
+            {
+                CommonResult commonResult = new CommonResult();
+                commonResult.IsSuccess = returnVal.m_isSuccess;
+                commonResult.Message = returnVal.m_message;
+                commonResult.CompanyCode = returnVal.m_companyCode;
+                commonResult.SAPVoucherDisplayCode = returnVal.m_sAPVoucherDisplayCode;
+                commonResult.PostDate = returnVal.m_postDate;
+                commonResult.MiddleId = returnVal.m_middleId;
+                returnResult.Add(commonResult);
+            }
+            return returnResult;
         }
 
         /// <summary>
@@ -207,6 +214,25 @@ namespace CreateSAPVoucherSV
         }
         public System.Boolean IsSuccess;//是否成功
         public System.String Message;//消息
-        public System.Object ResultObj;//返回对象
+        public System.String CompanyCode
+        {
+            get;
+            set;
+        }
+        public System.String SAPVoucherDisplayCode
+        {
+            get;
+            set;
+        }
+        public System.DateTime PostDate
+        {
+            get;
+            set;
+        }
+        public System.Int64 MiddleId
+        {
+            get;
+            set;
+        }
     }
 }

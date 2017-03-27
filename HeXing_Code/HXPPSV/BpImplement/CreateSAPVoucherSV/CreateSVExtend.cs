@@ -1,52 +1,55 @@
 ﻿namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Text; 
-	using UFSoft.UBF.AopFrame;	
-	using UFSoft.UBF.Util.Context;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using UFSoft.UBF.AopFrame;
+    using UFSoft.UBF.Util.Context;
     using UFSoft.UBF.Business;
     using UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE;
 
-	/// <summary>
-	/// CreateSV partial 
-	/// </summary>	
-	public partial class CreateSV 
-	{	
-		internal BaseStrategy Select()
-		{
-			return new CreateSVImpementStrategy();	
-		}		
-	}
-	
-	#region  implement strategy	
-	/// <summary>
-	/// Impement Implement
-	/// 
-	/// </summary>	
-	internal partial class CreateSVImpementStrategy : BaseStrategy
-	{
-		public CreateSVImpementStrategy() { }
+    /// <summary>
+    /// CreateSV partial 
+    /// </summary>	
+    public partial class CreateSV
+    {
+        internal BaseStrategy Select()
+        {
+            return new CreateSVImpementStrategy();
+        }
+    }
 
-		public override object Do(object obj)
-		{						
-			CreateSV bpObj = (CreateSV)obj;
+    #region  implement strategy
+    /// <summary>
+    /// Impement Implement
+    /// 
+    /// </summary>	
+    internal partial class CreateSVImpementStrategy : BaseStrategy
+    {
+        public CreateSVImpementStrategy() { }
 
-            CommonResultDTO commonResultDTO = new CommonResultDTO();
-            commonResultDTO.IsSuccess = false;
-            commonResultDTO.Message = "";
-
+        public override object Do(object obj)
+        {
+            CreateSV bpObj = (CreateSV)obj;
             List<SAPU9GLVoucherDTO> sAPU9GLVoucherDTOList = bpObj.SAPU9GLVoucherDTOS;
+            List<CommonResultDTO> returnResult = new List<CommonResultDTO>();
 
             if (sAPU9GLVoucherDTOList.Count == 0)
             {
+                CommonResultDTO commonResultDTO = new CommonResultDTO();
+                commonResultDTO.IsSuccess = false;
+                commonResultDTO.Message = "";
                 commonResultDTO.IsSuccess = false;
                 commonResultDTO.Message = "没有信息导入";
-                return commonResultDTO;
+                returnResult.Add(commonResultDTO);
+                return returnResult;
             }
 
             foreach (SAPU9GLVoucherDTO dto in sAPU9GLVoucherDTOList)
             {
+                CommonResultDTO commonResultDTO = new CommonResultDTO();
+                commonResultDTO.IsSuccess = false;
+                commonResultDTO.Message = "";
                 try
                 {
                     if (string.IsNullOrEmpty(dto.CompanyCode))
@@ -128,33 +131,33 @@
                             docline.AssetsDescription = dtoline.AssetsDescription;//资产描述
 
                         }
-
                         session.Commit();
+                        commonResultDTO.IsSuccess = true;
+                        commonResultDTO.Message = doc.CompanyName + "," + dto.SAPVoucherDisplayCode + "对应中间表ID：" + doc.ID;
+                        commonResultDTO.CompanyCode = dto.CompanyName;
+                        commonResultDTO.SAPVoucherDisplayCode = dto.SAPVoucherDisplayCode;
+                        commonResultDTO.PostDate = dto.PostDate;
+                        commonResultDTO.MiddleId = doc.ID;
+
+                        returnResult.Add(commonResultDTO);
                     }
                 }
                 catch (Exception ex)
                 {
-                    commonResultDTO.Message = commonResultDTO.Message + dto.SAPVoucherDisplayCode + ex.Message + "；";
+                    commonResultDTO.Message = dto.SAPVoucherDisplayCode + ex.Message;
+                    commonResultDTO.CompanyCode = dto.CompanyName;
+                    commonResultDTO.SAPVoucherDisplayCode = dto.SAPVoucherDisplayCode;
+                    commonResultDTO.PostDate = dto.PostDate;
+                    commonResultDTO.MiddleId = 0;
+                    returnResult.Add(commonResultDTO);
                     continue;
                 }
-
             }
+            return returnResult;
+        }
+    }
 
-            if (commonResultDTO.Message == "")
-            {
-                commonResultDTO.IsSuccess = true;
-            }
-            else
-            {
-                commonResultDTO.IsSuccess = false;
-            }
+    #endregion
 
-            return commonResultDTO;
 
-        }	
-	}
-
-	#endregion
-	
-	
 }

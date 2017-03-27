@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfKeyValueOfanyTypeanyType">
-    <xs:annotation>
-      <xs:appinfo>
-        <IsDictionary xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsDictionary>
-      </xs:appinfo>
-    </xs:annotation>
+<xs:schema xmlns:tns="UFSoft.UBF.Util.Data" elementFormDefault="qualified" targetNamespace="UFSoft.UBF.Util.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://beyond-pc/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:complexType name="MultiLangDataDict">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfanyTypeanyType">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="Key" nillable="true" type="xs:anyType" />
-            <xs:element name="Value" nillable="true" type="xs:anyType" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+      <xs:element minOccurs="0" name="_langs" nillable="true" type="tns:ArrayOfMultiLangData" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfKeyValueOfanyTypeanyType" nillable="true" type="tns:ArrayOfKeyValueOfanyTypeanyType" />
+  <xs:element name="MultiLangDataDict" nillable="true" type="tns:MultiLangDataDict" />
+  <xs:complexType name="ArrayOfMultiLangData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MultiLangData" nillable="true" type="tns:MultiLangData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMultiLangData" nillable="true" type="tns:ArrayOfMultiLangData" />
+  <xs:complexType name="MultiLangData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LangType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LangValue" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="State" type="q1:DataRowState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MultiLangData" nillable="true" type="tns:MultiLangData" />
 </xs:schema>

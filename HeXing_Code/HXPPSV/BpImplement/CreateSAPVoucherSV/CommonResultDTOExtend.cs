@@ -22,7 +22,6 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV {
 		{
 			this.IsSuccess = isSuccess;
 			this.Message = message;
-			this.ResultObj = resultObj;
 		}
 		#endregion	
 

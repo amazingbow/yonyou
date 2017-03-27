@@ -21,7 +21,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-                                       
+                                                                              
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -37,7 +37,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 					IsSuccess=false; 
 		
 		
-
+		
+		
+					MiddleId= 0; 
+		
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
 		}
@@ -54,18 +57,21 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			if (dict[this] != null)
 				return ;
 			dict[this] = this;
-	        	        	        
+	        	        	        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public CommonResultDTOData(  System.Boolean isSuccess  , System.String message  , System.Object resultObj  )
+		public CommonResultDTOData(  System.Boolean isSuccess  , System.String message  , System.String companyCode  , System.String sAPVoucherDisplayCode  , System.DateTime postDate  , System.Int64 middleId  )
 		{
 			initData();
 			this.IsSuccess = isSuccess;
 			this.Message = message;
-			this.ResultObj = resultObj;
+			this.CompanyCode = companyCode;
+			this.SAPVoucherDisplayCode = sAPVoucherDisplayCode;
+			this.PostDate = postDate;
+			this.MiddleId = middleId;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -116,27 +122,87 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		
 
 		/// <summary>
-		/// 返回对象
-		/// 通用返回结果对象.Misc.返回对象
+		/// 公司名称
+		/// 通用返回结果对象.Misc.公司名称
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.Object m_resultObj ;
-		public System.Object ResultObj
+		private System.String m_companyCode ;
+		public System.String CompanyCode
 		{
 			get	
 			{	
-				return m_resultObj ;
+				return m_companyCode ;
 			}
 			set	
 			{	
-				m_resultObj = value ;	
+				m_companyCode = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// SAP凭证号
+		/// 通用返回结果对象.Misc.SAP凭证号
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sAPVoucherDisplayCode ;
+		public System.String SAPVoucherDisplayCode
+		{
+			get	
+			{	
+				return m_sAPVoucherDisplayCode ;
+			}
+			set	
+			{	
+				m_sAPVoucherDisplayCode = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 记账日期
+		/// 通用返回结果对象.Misc.记账日期
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.DateTime m_postDate ;
+		public System.DateTime PostDate
+		{
+			get	
+			{	
+				return m_postDate ;
+			}
+			set	
+			{	
+				m_postDate = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 中间表ID
+		/// 通用返回结果对象.Misc.中间表ID
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int64 m_middleId ;
+		public System.Int64 MiddleId
+		{
+			get	
+			{	
+				return m_middleId ;
+			}
+			set	
+			{	
+				m_middleId = value ;	
 			}
 		}
 			
 		#endregion	
 
 		#region Multi_Fields
-						
+												
 		#endregion 
 	} 	
 }

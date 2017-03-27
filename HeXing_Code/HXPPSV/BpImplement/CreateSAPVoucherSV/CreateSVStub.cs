@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do(IContext context ,out IList<MessageBase> outMessages ,List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS);
+        List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do(IContext context ,out IList<MessageBase> outMessages ,List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,7 +46,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
         #region ICreateSV Members
 
         //[OperationBehavior]
-        public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do(IContext context ,out IList<MessageBase> outMessages, List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS)
+        public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do(IContext context ,out IList<MessageBase> outMessages, List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
@@ -54,7 +54,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
         }
         
         //[OperationBehavior]
-        public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData DoEx(ICommonDataContract commonData, List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS)
+        public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> DoEx(ICommonDataContract commonData, List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS)
         {
 			this.CommonData = commonData ;
             try
@@ -81,13 +81,22 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 				}
 
 				//处理返回类型.
-				UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO result = objectRef.Do();
+				List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO> result = objectRef.Do();
 
 				if (result == null)
 					return null ;
-						UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData resultdata = result.ToEntityData();
-				DoSerializeKey(resultdata, "UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CreateSV");
-				return resultdata;
+		
+				List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> list = new List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData>();
+				foreach (UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO obj in result)
+				{
+					if (obj == null)
+						continue;
+
+					UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData resultdata = obj.ToEntityData();
+					list.Add(resultdata);
+				}
+				DoSerializeKey(list, "UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CreateSV");
+				return list;
 
 	        }
 			catch (System.Exception e)

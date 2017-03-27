@@ -53,10 +53,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Required)]
 		[Logger]
 		[Authorize]
-		public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO Do()
+		public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO> Do()
 		{	
 		    BaseStrategy selector = Select();	
-				UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO result =  (UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO)selector.Execute(this);	
+				List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO> result =  (List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTO>)selector.Execute(this);	
 		    
 			return result ; 
 		}			

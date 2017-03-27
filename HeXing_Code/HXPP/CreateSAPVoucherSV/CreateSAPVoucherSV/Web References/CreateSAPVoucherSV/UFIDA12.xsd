@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://www.UFIDA.org" elementFormDefault="qualified" targetNamespace="http://www.UFIDA.org" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd9" namespace="http://www.UFIDA.org/EntityData" />
-  <xs:import schemaLocation="http://2013-20151104zx/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd1" namespace="UFSoft.UBF.Exceptions" />
+  <xs:import schemaLocation="http://beyond-pc/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd9" namespace="http://www.UFIDA.org/EntityData" />
+  <xs:import schemaLocation="http://beyond-pc/U9/CustServices/UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV.svc?xsd=xsd1" namespace="UFSoft.UBF.Exceptions" />
   <xs:element name="Do">
     <xs:complexType>
       <xs:sequence>
@@ -13,7 +13,7 @@
   <xs:element name="DoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://www.UFIDA.org/EntityData" minOccurs="0" name="DoResult" nillable="true" type="q2:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData" />
+        <xs:element xmlns:q2="http://www.UFIDA.org/EntityData" minOccurs="0" name="DoResult" nillable="true" type="q2:ArrayOfUFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData" />
         <xs:element xmlns:q3="UFSoft.UBF.Exceptions" minOccurs="0" name="outMessages" nillable="true" type="q3:ArrayOfMessageBase" />
       </xs:sequence>
     </xs:complexType>

@@ -38,7 +38,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do(IContext context, out IList<MessageBase> outMessages ,List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS);
+		List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do(IContext context, out IList<MessageBase> outMessages ,List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData> sAPU9GLVoucherDTOS);
     }
 	[Serializable]    
     public class CreateSVProxy : ServiceProxyBase//, UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV
@@ -80,29 +80,29 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy
         #endregion
         
         #region 跨site调用
-        public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do(string targetSite)
+        public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do(string targetSite)
         {
   			InitKeyList() ;
-			UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData result = (UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData)InvokeBySite<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>(targetSite);
+			List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> result = (List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData>)InvokeBySite<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>(targetSite);
 			return GetRealResult(result);
         }
         #endregion end跨site调用
 
 		#region 跨组织调用
-        public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do(long targetOrgId)
+        public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do(long targetOrgId)
         {
   			InitKeyList() ;
-			UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData result = (UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData)InvokeByOrg<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>(targetOrgId);
+			List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> result = (List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData>)InvokeByOrg<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>(targetOrgId);
 			return GetRealResult(result);
         }
 		#endregion end跨组织调用
 
 		#region Public Method
 		
-        public UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData Do()
+        public List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> Do()
         {
   			InitKeyList() ;
- 			UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData result = (UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData)InvokeAgent<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>();
+ 			List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> result = (List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData>)InvokeAgent<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy.ICreateSV>();
 			return GetRealResult(result);
         }
         
@@ -120,11 +120,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.Proxy
 		#endregion
 		
 		//处理由于序列化导致的返回值接口变化，而进行返回值的实际类型转换处理．
-		private UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData GetRealResult(UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData result)
+		private List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> GetRealResult(List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData> result)
 		{
-
-				return result ;
-		}
+								return result ;
+			}
 		#region  Init KeyList 
 		//初始化SKey集合--由于接口不一样.BP.SV都要处理
 		private void InitKeyList()

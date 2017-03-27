@@ -27,6 +27,9 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 					IsSuccess = false; 
 		
 		
+		
+		
+					MiddleId = 0; 
 
 		}
 
@@ -68,26 +71,77 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			}
 		}
 				/// <summary>
-		/// 返回对象 (该属性可为空,且无默认值)
-		/// 通用返回结果对象.Misc.返回对象
+		/// 公司名称 (该属性可为空,且无默认值)
+		/// 通用返回结果对象.Misc.公司名称
 		/// </summary>
-		/// <value>System.Object</value>
-		public System.Object ResultObj
+		/// <value>System.String</value>
+		public System.String CompanyCode
 		{
 			get	
 			{	
-				return (System.Object)base.GetValue("ResultObj",typeof(System.Object));
+				return (System.String)base.GetValue("CompanyCode",typeof(System.String));
 			}
 
 			 set	
 			{
-				base.SetValue("ResultObj",value);
+				base.SetValue("CompanyCode",value);
+			}
+		}
+				/// <summary>
+		/// SAP凭证号 (该属性可为空,且无默认值)
+		/// 通用返回结果对象.Misc.SAP凭证号
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String SAPVoucherDisplayCode
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("SAPVoucherDisplayCode",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("SAPVoucherDisplayCode",value);
+			}
+		}
+				/// <summary>
+		/// 记账日期 (该属性可为空,且无默认值)
+		/// 通用返回结果对象.Misc.记账日期
+		/// </summary>
+		/// <value>System.DateTime</value>
+		public System.DateTime PostDate
+		{
+			get	
+			{	
+				return (System.DateTime)base.GetValue("PostDate",typeof(System.DateTime));
+			}
+
+			 set	
+			{
+				base.SetValue("PostDate",value);
+			}
+		}
+				/// <summary>
+		/// 中间表ID (该属性可为空,但有默认值)
+		/// 通用返回结果对象.Misc.中间表ID
+		/// </summary>
+		/// <value>System.Int64</value>
+		public System.Int64 MiddleId
+		{
+			get	
+			{	
+				return (System.Int64)base.GetValue("MiddleId",typeof(System.Int64));
+			}
+
+			 set	
+			{
+				base.SetValue("MiddleId",value);
 			}
 		}
 		
 		#endregion	
 		#region Multi_Fields
-			
+						
 		#endregion 
 
 		#region ModelResource
@@ -104,9 +158,21 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		/// </summary>
 		public string Res_Message　{ get { return "";　}　}
 		/// <summary>
-		/// 返回对象的显示名称资源 -- 已经废弃，不使用.
+		/// 公司名称的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
-		public string Res_ResultObj　{ get { return "";　}　}
+		public string Res_CompanyCode　{ get { return "";　}　}
+		/// <summary>
+		/// SAP凭证号的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_SAPVoucherDisplayCode　{ get { return "";　}　}
+		/// <summary>
+		/// 记账日期的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_PostDate　{ get { return "";　}　}
+		/// <summary>
+		/// 中间表ID的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_MiddleId　{ get { return "";　}　}
 		#endregion 
 
 
@@ -119,6 +185,9 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		private void DeSerializeKey(CommonResultDTOData data)
 		{
 		
+
+
+
 
 
 
@@ -146,7 +215,13 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 
 			this.Message = data.Message;
 
-			this.ResultObj = data.ResultObj;
+			this.CompanyCode = data.CompanyCode;
+
+			this.SAPVoucherDisplayCode = data.SAPVoucherDisplayCode;
+
+			this.PostDate = data.PostDate;
+
+			this.MiddleId = data.MiddleId;
 
 		}
 
@@ -179,7 +254,13 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 
 			data.Message = this.Message;
 
-			data.ResultObj = this.ResultObj;
+			data.CompanyCode = this.CompanyCode;
+
+			data.SAPVoucherDisplayCode = this.SAPVoucherDisplayCode;
+
+			data.PostDate = this.PostDate;
+
+			data.MiddleId = this.MiddleId;
 
 			return data ;
 		}
