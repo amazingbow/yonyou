@@ -22,6 +22,7 @@
     using UFIDA.U9.GL.CashFlow;
     using UFIDA.U9.GL.Voucher;
     using UFIDA.U9.GL.Voucher.Proxy;
+    using UFIDA.U9.GL.VoucherRelData;
     using UFIDA.U9.ISV.GL.ISVGLImportSV;
     using UFIDA.U9.ISV.GL.ISVGLImportSV.Proxy;
     using UFSoft.UBF.AopFrame;
@@ -150,7 +151,12 @@
                         }
                         catch (Exception ex)
                         {
-                            item.U9ErrorResult = "生成现金流量项目失败" + ex.Message;
+                            item.U9ErrorResult = "导入失败！生成现金流量项目失败" + ex.Message;
+                            item.IsU9Successful = ImportFlagEnum.ImportFailed; ;
+                            VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
+                            deleteProxy.Voucher = new List<long>();
+                            deleteProxy.Voucher.Add(item.U9VoucherID);
+                            deleteProxy.Do();
                         }
                     }
                     catch (Exception ex)
@@ -168,7 +174,7 @@
                     }
                     session.Commit();
                 }
-                if (string.IsNullOrEmpty(docNo)) return null;
+                if (string.IsNullOrEmpty(docNo)) continue;
                 using (ISession session = Session.Open())
                 {
                     try
@@ -176,20 +182,25 @@
                         VoucherSubmitProxy submitProxy = new VoucherSubmitProxy();
                         submitProxy.Voucher = new List<long>();
                         submitProxy.Voucher.Add(item.U9VoucherID);
-                        submitProxy.Do();
+                        submitProxy.Do();//提交
                         VoucherApprovedProxy voucherApproveProxy = new VoucherApprovedProxy();
                         voucherApproveProxy.Voucher = new List<long>();
                         voucherApproveProxy.Voucher.Add(item.U9VoucherID);
-                        UFIDA.U9.GL.VoucherRelData.UIVoucherBPDTOData data = voucherApproveProxy.Do();
-                        if (!data.ReturnFlags)
-                        {
-                            item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + docNo + "失败信息：" + data.FailReason;
-                        }
-                        item.U9ErrorResult = "导入成功，审核成功！U9凭证号：" + docNo;
+                        UIVoucherBPDTOData approve = voucherApproveProxy.Do();//审核                   
+                        VoucherPostProxy voucherPostProxy = new VoucherPostProxy();
+                        voucherPostProxy.Vouchers = new List<long>();
+                        voucherPostProxy.Vouchers.Add(item.U9VoucherID);
+                        UIVoucherBPDTOData post = voucherPostProxy.Do();//记账     
+                        item.U9ErrorResult = "导入成功！记账成功！";
                     }
                     catch (Exception ex)
                     {
-                        item.U9ErrorResult = "导入成功，但是审核失败！U9凭证号：" + docNo + "失败信息：" + ex.Message;
+                        item.U9ErrorResult = "导入失败！失败信息：" + ex.Message;
+                        item.IsU9Successful = ImportFlagEnum.ImportFailed;
+                        VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
+                        deleteProxy.Voucher = new List<long>();
+                        deleteProxy.Voucher.Add(item.U9VoucherID);
+                        deleteProxy.Do();
                     }
                     session.Commit();
                 }
