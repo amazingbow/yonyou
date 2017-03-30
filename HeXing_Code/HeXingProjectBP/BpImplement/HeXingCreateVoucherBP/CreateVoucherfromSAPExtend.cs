@@ -147,7 +147,11 @@
                         item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         try
                         {
-                            GenerateCFVoucherItem(item.U9VoucherID, item);//生成现金流量项目
+                            using (ISession innerSession = Session.Open())
+                            {
+                                GenerateCFVoucherItem(item.U9VoucherID, item);//生成现金流量项目
+                                innerSession.Commit();
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -214,8 +218,8 @@
             for (int i = 0; i < successVoucher.Entries.Count; i++)
             {
                 //银行、现金类的科目维护对应的现金流量项目
-                if (!item.HeXingSAPU9GLVoucherLine[i].AccountCode.StartsWith("1001")
-                    && !item.HeXingSAPU9GLVoucherLine[i].AccountCode.StartsWith("1002")) continue;
+                if (!successVoucher.Entries[i].Account.Code.StartsWith("1001")
+                    && !successVoucher.Entries[i].Account.Code.StartsWith("1002")) continue;
 
                 HxRelationshipBE cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='"
                     + item.HeXingSAPU9GLVoucherLine[i].CashFlowCode + "'");
@@ -459,9 +463,19 @@
             #region 1. 标准科目 2.组织    3.客户    4.供应商   5.银行    6.银行账号  7.部门    8.员工    9.费用项目  10.工程项目
             StringBuilder stb = new StringBuilder();
             #region 1. 标准科目
-            HxRelationshipBE account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='"
+            HxRelationshipBE account;
+            if (entry.AccountCode == "4001010000")
+            {
+                account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='" + entry.AccountCode
+                            + "' and CustomerCode='" + entry.CustomerCode + "'");
+            }
+            else
+            {
+                account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='"
                            + entry.AccountCode + "' and SapMasterCode='" + entry.MaterialGroupCode + "' and SapAssetsCode='"
                            + entry.AssetsCode + "' and SapFeeCode='" + entry.FeeTypeEnumCode + "'");
+            }
+            
             if (account == null)
             {
                 throw new Exception("科目没有传值，或关系对照表没有维护且审核");
@@ -495,12 +509,21 @@
                 stb.Append("0" + SYMBOL);
             }
             #endregion
-            #region 3. 客户
+            #region 3. 客户  应付股利U9按客户核算，SAP按供应商核算 2232020000
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment3)
             {
-                HxRelationshipBE shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
-                    + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
-
+                HxRelationshipBE shipCust;
+                if (entry.AccountCode == "2232020000")
+                {
+                    //如果是应付股利则通过 供应商来查找到客户
+                    shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=13 and SapCode='"
+                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                }
+                else
+                {
+                    shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
+                   + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+                }
                 if (shipCust != null)
                 {
                     stb.Append(shipCust.U9Code + SYMBOL);
@@ -510,7 +533,8 @@
                 }
                 else
                 {
-                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "客户段是必输的，但是并没有传值或维护对应关系");
+                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode 
+                        + "客户段（应付股利供应商）是必输的，但是并没有传值或维护对应关系");
                 }
             }
             else
@@ -543,21 +567,35 @@
             #region 5. 银行
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment5)
             {
-                //HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=12 and SapCode='" + entry.Banks + "'");
-                if (bankAccount != null && bankAccount.Bank != null)
+
+                if (np.NaturalAccountSOBSegmentUseRoles[0].Segment6)//银行账号也是必输项，就通过银行账号来取
                 {
-                    stb.Append(bankAccount.Bank.Code + SYMBOL);
+                    if (bankAccount != null && bankAccount.Bank != null)
+                    {
+                        stb.Append(bankAccount.Bank.Code + SYMBOL);
+                    }
+                    else
+                    {
+                        throw new Exception("U9系统中银行账号：" + entry.BankAccount + "对应的所属银行为空，请检查U9基础数据！");
+                    }
                 }
                 else
                 {
-                    throw new Exception("U9系统中银行账号：" + entry.BankAccount + "对应的所属银行为空，请检查U9基础数据！");
+                    HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=12 and SapCode='" + entry.Banks + "'");
+                    if (shipBank != null)
+                    {
+                        stb.Append(shipBank.U9Code + SYMBOL);
+                    }
+                    else
+                    {
+                        throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的银行是必输的，但是并没有传值或维护对应关系");
+                    }
                 }
             }
             else
             {
                 stb.Append("0" + SYMBOL);
             }
-
             #endregion
             #region 6. 银行账号
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment6)

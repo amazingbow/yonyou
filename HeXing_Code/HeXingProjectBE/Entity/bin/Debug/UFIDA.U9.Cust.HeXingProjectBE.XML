@@ -2939,6 +2939,20 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.CustomerCode">
+            <summary>
+            客户代码 (该属性可为空,且无默认值)
+            合兴关系对照表.Misc.客户代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.CustomerName">
+            <summary>
+            客户名称 (该属性可为空,且无默认值)
+            合兴关系对照表.Misc.客户名称
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_EntityName">
             <summary>
             Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
@@ -3057,6 +3071,16 @@
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_RefStatus">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RefStatus")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_CustomerCode">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerCode")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.Res_CustomerName">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerName")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityKey">
@@ -3282,6 +3306,22 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityOriginal.CustomerCode">
+            <summary>
+             OrginalData属性。只可读。
+            客户代码 (该属性可为空,且无默认值)
+            合兴关系对照表.Misc.客户代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityOriginal.CustomerName">
+            <summary>
+             OrginalData属性。只可读。
+            客户名称 (该属性可为空,且无默认值)
+            合兴关系对照表.Misc.客户名称
+            </summary>
+            <value></value>
+        </member>
         <member name="M:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.GetResource(System.String)">
             <summary>
             获取显示名称资源方法
@@ -3407,6 +3447,16 @@
             属性: 状态 的名称
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.CustomerCode">
+            <summary>
+            属性: 客户代码 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.HxRelationshipBE.EntityRes.CustomerName">
+            <summary>
+            属性: 客户名称 的名称
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum">
             <summary>
             可扩展枚举: 对照类型 
@@ -3494,6 +3544,18 @@
             对照类型.Misc.费用类型
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Bank">
+            <summary>
+            枚举值: 银行  Value:12  
+            对照类型.Misc.银行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.SupplierCust">
+            <summary>
+            枚举值: 供应商对客户  Value:13  
+            对照类型.Misc.供应商对客户
+            </summary>
+        </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Values">
             <summary>
             Get RelationEnum's All Values.
@@ -3560,6 +3622,16 @@
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_FeeType">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_Bank">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum.Res_SupplierCust">
             <summary>
             已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
             </summary>

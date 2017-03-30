@@ -129,28 +129,25 @@
                             docline.MaterialGroupDescription = dtoline.MaterialGroupDescription;//物料组描述
                             docline.AssetsCode = dtoline.AssetsCode;//资产编号
                             docline.AssetsDescription = dtoline.AssetsDescription;//资产描述
-
                         }
                         session.Commit();
                         commonResultDTO.IsSuccess = true;
                         commonResultDTO.Message = doc.CompanyName + "," + dto.SAPVoucherDisplayCode + "对应中间表ID：" + doc.ID;
-                        commonResultDTO.CompanyCode = dto.CompanyName;
+                        commonResultDTO.CompanyCode = dto.CompanyCode;
                         commonResultDTO.SAPVoucherDisplayCode = dto.SAPVoucherDisplayCode;
                         commonResultDTO.PostDate = dto.PostDate;
                         commonResultDTO.MiddleId = doc.ID;
-
                         returnResult.Add(commonResultDTO);
                     }
                 }
                 catch (Exception ex)
                 {
                     commonResultDTO.Message = dto.SAPVoucherDisplayCode + ex.Message;
-                    commonResultDTO.CompanyCode = dto.CompanyName;
+                    commonResultDTO.CompanyCode = dto.CompanyCode;
                     commonResultDTO.SAPVoucherDisplayCode = dto.SAPVoucherDisplayCode;
                     commonResultDTO.PostDate = dto.PostDate;
                     commonResultDTO.MiddleId = 0;
                     returnResult.Add(commonResultDTO);
-                    continue;
                 }
             }
             return returnResult;

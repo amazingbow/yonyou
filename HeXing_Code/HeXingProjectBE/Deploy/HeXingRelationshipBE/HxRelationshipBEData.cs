@@ -41,6 +41,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
                                         knownTypes.Add(typeof(UFIDA.U9.Base.Currency.CurrencyData));
                         
                         
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -73,7 +75,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	     			
 	     			
 	     							     			
-	     							RefStatus= 0; 		
+	     							RefStatus= 0; 			     			
+	     			
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -548,10 +552,48 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 客户代码
+		/// 合兴关系对照表.Misc.客户代码
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_customerCode ;
+		public System.String CustomerCode
+		{
+			get	
+			{	
+				return m_customerCode  ;
+			}
+			set	
+			{	
+				m_customerCode = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 客户名称
+		/// 合兴关系对照表.Misc.客户名称
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_customerName ;
+		public System.String CustomerName
+		{
+			get	
+			{	
+				return m_customerName  ;
+			}
+			set	
+			{	
+				m_customerName = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																						
+																								
 		#endregion 		
 	}	
 

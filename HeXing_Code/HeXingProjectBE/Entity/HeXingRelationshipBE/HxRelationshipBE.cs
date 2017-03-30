@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// <returns>Instance</returns>
 		public  static HxRelationshipBE Create() {
 			HxRelationshipBE entity = (HxRelationshipBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																					 
+																																																																											 
 			return entity;
 		}
 
@@ -737,6 +737,44 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 客户代码 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.客户代码
+			/// </summary>
+			/// <value></value>
+			public  System.String CustomerCode
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("CustomerCode");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 客户名称 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.客户名称
+			/// </summary>
+			/// <value></value>
+			public  System.String CustomerName
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("CustomerName");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1337,6 +1375,54 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 
 
+		
+			/// <summary>
+		/// 客户代码 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.客户代码
+		/// </summary>
+		/// <value></value>
+			public  System.String CustomerCode
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("CustomerCode");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("CustomerCode", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 客户名称 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.客户名称
+		/// </summary>
+		/// <value></value>
+			public  System.String CustomerName
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("CustomerName");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("CustomerName", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1471,6 +1557,16 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_RefStatus　{ get { return EntityRes.GetResource("RefStatus");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerCode")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_CustomerCode　{ get { return EntityRes.GetResource("CustomerCode");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerName")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_CustomerName　{ get { return EntityRes.GetResource("CustomerName");　}　}
 		#endregion 
 
 
@@ -1597,6 +1693,16 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			/// 属性: 状态 的名称
 			/// </summary>
 			public static string RefStatus　{ get { return "RefStatus";　}　}
+				
+			/// <summary>
+			/// 属性: 客户代码 的名称
+			/// </summary>
+			public static string CustomerCode　{ get { return "CustomerCode";　}　}
+				
+			/// <summary>
+			/// 属性: 客户名称 的名称
+			/// </summary>
+			public static string CustomerName　{ get { return "CustomerName";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1604,7 +1710,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																												
+																																																
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1666,6 +1772,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			this.exdMultiLangAttrs.Add("U9EntityId","U9EntityId");
 			this.exdMultiLangAttrs.Add("Memo","Memo");
 			this.exdMultiLangAttrs.Add("RefStatus","RefStatus");
+			this.exdMultiLangAttrs.Add("CustomerCode","CustomerCode");
+			this.exdMultiLangAttrs.Add("CustomerName","CustomerName");
         }
 	#endregion 
 
@@ -1682,7 +1790,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			switch(propstr)
 			{
 			
-																																																																		
+																																																																								
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1742,6 +1850,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			if (data.U9EntityId == -1 && data.U9EntityId_SKey!=null)
 				data.U9EntityId = data.U9EntityId_SKey.GetEntity().ID ;
 	
+
+			
+
+			
 
 			
 	
@@ -1828,6 +1940,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 								this.SetTypeValue("U9EntityId",data.U9EntityId);
 		
 								this.SetTypeValue("Memo",data.Memo);
+		
+								this.SetTypeValue("CustomerCode",data.CustomerCode);
+		
+								this.SetTypeValue("CustomerName",data.CustomerName);
 		
 			#endregion 
 
@@ -2004,6 +2120,20 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 					data.Memo=(System.String)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("CustomerCode");
+				if (obj != null)
+					data.CustomerCode=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("CustomerName");
+				if (obj != null)
+					data.CustomerName=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2036,6 +2166,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
         private bool SelfEntityValidator()
         {
         
+
+
 
 
 

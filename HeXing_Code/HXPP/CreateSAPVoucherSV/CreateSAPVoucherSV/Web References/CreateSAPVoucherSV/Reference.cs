@@ -27,12 +27,12 @@ namespace CreateSAPVoucherSV.CreateSAPVoucherSV {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.ICreateSV", Namespace="http://tempuri.org/")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UFSoftUBFBusinessDataTransObjectBase))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExceptionDetail))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MultiLangDataDict))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThreadContext))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlatformContext))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ApplicationContext))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MultiLangDataDict))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UFSoftUBFBusinessDataTransObjectBase))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Exception[]))]
     public partial class CreateSVStub : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
@@ -129,833 +129,6 @@ namespace CreateSAPVoucherSV.CreateSAPVoucherSV {
                 return true;
             }
             return false;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Exceptions")]
-    public partial class MessageBase {
-        
-        private string attributeMetadataIDField;
-        
-        private string attributeNameField;
-        
-        private string entityFullNameField;
-        
-        private long entityIDField;
-        
-        private bool entityIDFieldSpecified;
-        
-        private string entityMetadataIDField;
-        
-        private short errorLevelField;
-        
-        private bool errorLevelFieldSpecified;
-        
-        private MessageBaseFormatState formatedField;
-        
-        private bool formatedFieldSpecified;
-        
-        private MessageBase[] innerMessagesField;
-        
-        private bool isValidEntityIDField;
-        
-        private bool isValidEntityIDFieldSpecified;
-        
-        private string localMessageField;
-        
-        private string orginalEntityFullNameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string attributeMetadataID {
-            get {
-                return this.attributeMetadataIDField;
-            }
-            set {
-                this.attributeMetadataIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string attributeName {
-            get {
-                return this.attributeNameField;
-            }
-            set {
-                this.attributeNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string entityFullName {
-            get {
-                return this.entityFullNameField;
-            }
-            set {
-                this.entityFullNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long entityID {
-            get {
-                return this.entityIDField;
-            }
-            set {
-                this.entityIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool entityIDSpecified {
-            get {
-                return this.entityIDFieldSpecified;
-            }
-            set {
-                this.entityIDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string entityMetadataID {
-            get {
-                return this.entityMetadataIDField;
-            }
-            set {
-                this.entityMetadataIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public short errorLevel {
-            get {
-                return this.errorLevelField;
-            }
-            set {
-                this.errorLevelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool errorLevelSpecified {
-            get {
-                return this.errorLevelFieldSpecified;
-            }
-            set {
-                this.errorLevelFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MessageBaseFormatState formated {
-            get {
-                return this.formatedField;
-            }
-            set {
-                this.formatedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool formatedSpecified {
-            get {
-                return this.formatedFieldSpecified;
-            }
-            set {
-                this.formatedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public MessageBase[] innerMessages {
-            get {
-                return this.innerMessagesField;
-            }
-            set {
-                this.innerMessagesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool isValidEntityID {
-            get {
-                return this.isValidEntityIDField;
-            }
-            set {
-                this.isValidEntityIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool isValidEntityIDSpecified {
-            get {
-                return this.isValidEntityIDFieldSpecified;
-            }
-            set {
-                this.isValidEntityIDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string localMessage {
-            get {
-                return this.localMessageField;
-            }
-            set {
-                this.localMessageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string orginalEntityFullName {
-            get {
-                return this.orginalEntityFullNameField;
-            }
-            set {
-                this.orginalEntityFullNameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MessageBase.FormatState", Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions")]
-    public enum MessageBaseFormatState {
-        
-        /// <remarks/>
-        None,
-        
-        /// <remarks/>
-        Formatting,
-        
-        /// <remarks/>
-        Formatted,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
-    public partial class ErrorDescriptor {
-        
-        private string categoryField;
-        
-        private string erroridField;
-        
-        private ErrorLevel levelField;
-        
-        private bool levelFieldSpecified;
-        
-        private string ownerField;
-        
-        private System.DateTime timeStampField;
-        
-        private bool timeStampFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string category {
-            get {
-                return this.categoryField;
-            }
-            set {
-                this.categoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string errorid {
-            get {
-                return this.erroridField;
-            }
-            set {
-                this.erroridField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ErrorLevel level {
-            get {
-                return this.levelField;
-            }
-            set {
-                this.levelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool levelSpecified {
-            get {
-                return this.levelFieldSpecified;
-            }
-            set {
-                this.levelFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string owner {
-            get {
-                return this.ownerField;
-            }
-            set {
-                this.ownerField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime timeStamp {
-            get {
-                return this.timeStampField;
-            }
-            set {
-                this.timeStampField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool timeStampSpecified {
-            get {
-                return this.timeStampFieldSpecified;
-            }
-            set {
-                this.timeStampFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
-    public enum ErrorLevel {
-        
-        /// <remarks/>
-        Debug,
-        
-        /// <remarks/>
-        Info,
-        
-        /// <remarks/>
-        Warn,
-        
-        /// <remarks/>
-        Error,
-        
-        /// <remarks/>
-        Fatal,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
-    public partial class ErrorMessage {
-        
-        private ErrorDescriptor errDescriptorField;
-        
-        private string errorTypeField;
-        
-        private ErrorMessage[] innerMessagesField;
-        
-        private string messageField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public ErrorDescriptor errDescriptor {
-            get {
-                return this.errDescriptorField;
-            }
-            set {
-                this.errDescriptorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string errorType {
-            get {
-                return this.errorTypeField;
-            }
-            set {
-                this.errorTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public ErrorMessage[] innerMessages {
-            get {
-                return this.innerMessagesField;
-            }
-            set {
-                this.innerMessagesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceExceptionDetail))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
-    public partial class ExceptionDetail {
-        
-        private string helpLinkField;
-        
-        private ExceptionDetail innerExceptionField;
-        
-        private string messageField;
-        
-        private string stackTraceField;
-        
-        private string typeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string HelpLink {
-            get {
-                return this.helpLinkField;
-            }
-            set {
-                this.helpLinkField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public ExceptionDetail InnerException {
-            get {
-                return this.innerExceptionField;
-            }
-            set {
-                this.innerExceptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string StackTrace {
-            get {
-                return this.stackTraceField;
-            }
-            set {
-                this.stackTraceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
-    public partial class ServiceExceptionDetail : ExceptionDetail {
-        
-        private ExceptionBase exceptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public ExceptionBase Exception {
-            get {
-                return this.exceptionField;
-            }
-            set {
-                this.exceptionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnknownException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceLostException))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
-    public partial class ExceptionBase : Exception {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExceptionBase))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnknownException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceLostException))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
-    public partial class Exception {
-        
-        private System.Xml.XmlElement[] anyField;
-        
-        private System.Xml.XmlQualifiedName factoryTypeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute()]
-        public System.Xml.XmlElement[] Any {
-            get {
-                return this.anyField;
-            }
-            set {
-                this.anyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://schemas.microsoft.com/2003/10/Serialization/")]
-        public System.Xml.XmlQualifiedName FactoryType {
-            get {
-                return this.factoryTypeField;
-            }
-            set {
-                this.factoryTypeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
-    public partial class UnknownException : ExceptionBase {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
-    public partial class BusinessException : ExceptionBase {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
-    public partial class EntityNotExistException : BusinessException {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
-    public partial class AttributeInValidException : BusinessException {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
-    public partial class AttrsContainerException : BusinessException {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
-    public partial class ServiceException : ExceptionBase {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
-    public partial class ServiceLostException : ExceptionBase {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
-    public partial class ThreadContext {
-        
-        private ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHasField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfanyTypeanyType", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
-        public ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHas {
-            get {
-                return this.nameValueHasField;
-            }
-            set {
-                this.nameValueHasField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
-    public partial class ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType {
-        
-        private object keyField;
-        
-        private object valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public object Key {
-            get {
-                return this.keyField;
-            }
-            set {
-                this.keyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public object Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
-    public partial class PlatformContext {
-        
-        private object ctxField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public object ctx {
-            get {
-                return this.ctxField;
-            }
-            set {
-                this.ctxField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
-    public partial class ApplicationContext {
-        
-        private ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHasField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfanyTypeanyType", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
-        public ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHas {
-            get {
-                return this.nameValueHasField;
-            }
-            set {
-                this.nameValueHasField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Util.Data")]
-    public partial class MultiLangData {
-        
-        private string langTypeField;
-        
-        private string langValueField;
-        
-        private DataRowState stateField;
-        
-        private bool stateFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string LangType {
-            get {
-                return this.langTypeField;
-            }
-            set {
-                this.langTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string LangValue {
-            get {
-                return this.langValueField;
-            }
-            set {
-                this.langValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DataRowState State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool StateSpecified {
-            get {
-                return this.stateFieldSpecified;
-            }
-            set {
-                this.stateFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.FlagsAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
-    public enum DataRowState {
-        
-        /// <remarks/>
-        Detached = 1,
-        
-        /// <remarks/>
-        Unchanged = 2,
-        
-        /// <remarks/>
-        Added = 4,
-        
-        /// <remarks/>
-        Deleted = 8,
-        
-        /// <remarks/>
-        Modified = 16,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Util.Data")]
-    public partial class MultiLangDataDict {
-        
-        private MultiLangData[] _langsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public MultiLangData[] _langs {
-            get {
-                return this._langsField;
-            }
-            set {
-                this._langsField = value;
-            }
         }
     }
     
@@ -1755,6 +928,833 @@ namespace CreateSAPVoucherSV.CreateSAPVoucherSV {
             }
             set {
                 this.m_voucherCategoryDescriptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceExceptionDetail))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel")]
+    public partial class ExceptionDetail {
+        
+        private string helpLinkField;
+        
+        private ExceptionDetail innerExceptionField;
+        
+        private string messageField;
+        
+        private string stackTraceField;
+        
+        private string typeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string HelpLink {
+            get {
+                return this.helpLinkField;
+            }
+            set {
+                this.helpLinkField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public ExceptionDetail InnerException {
+            get {
+                return this.innerExceptionField;
+            }
+            set {
+                this.innerExceptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string StackTrace {
+            get {
+                return this.stackTraceField;
+            }
+            set {
+                this.stackTraceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
+    public partial class ServiceExceptionDetail : ExceptionDetail {
+        
+        private ExceptionBase exceptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public ExceptionBase Exception {
+            get {
+                return this.exceptionField;
+            }
+            set {
+                this.exceptionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceLostException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnknownException))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
+    public partial class ExceptionBase : Exception {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExceptionBase))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ServiceLostException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UnknownException))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
+    public partial class Exception {
+        
+        private System.Xml.XmlElement[] anyField;
+        
+        private System.Xml.XmlQualifiedName factoryTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlElement[] Any {
+            get {
+                return this.anyField;
+            }
+            set {
+                this.anyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://schemas.microsoft.com/2003/10/Serialization/")]
+        public System.Xml.XmlQualifiedName FactoryType {
+            get {
+                return this.factoryTypeField;
+            }
+            set {
+                this.factoryTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
+    public partial class ServiceException : ExceptionBase {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Service")]
+    public partial class ServiceLostException : ExceptionBase {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EntityNotExistException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeInValidException))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttrsContainerException))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
+    public partial class BusinessException : ExceptionBase {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
+    public partial class EntityNotExistException : BusinessException {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
+    public partial class AttributeInValidException : BusinessException {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Business")]
+    public partial class AttrsContainerException : BusinessException {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
+    public partial class UnknownException : ExceptionBase {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Exceptions")]
+    public partial class MessageBase {
+        
+        private string attributeMetadataIDField;
+        
+        private string attributeNameField;
+        
+        private string entityFullNameField;
+        
+        private long entityIDField;
+        
+        private bool entityIDFieldSpecified;
+        
+        private string entityMetadataIDField;
+        
+        private short errorLevelField;
+        
+        private bool errorLevelFieldSpecified;
+        
+        private MessageBaseFormatState formatedField;
+        
+        private bool formatedFieldSpecified;
+        
+        private MessageBase[] innerMessagesField;
+        
+        private bool isValidEntityIDField;
+        
+        private bool isValidEntityIDFieldSpecified;
+        
+        private string localMessageField;
+        
+        private string orginalEntityFullNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string attributeMetadataID {
+            get {
+                return this.attributeMetadataIDField;
+            }
+            set {
+                this.attributeMetadataIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string attributeName {
+            get {
+                return this.attributeNameField;
+            }
+            set {
+                this.attributeNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string entityFullName {
+            get {
+                return this.entityFullNameField;
+            }
+            set {
+                this.entityFullNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long entityID {
+            get {
+                return this.entityIDField;
+            }
+            set {
+                this.entityIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool entityIDSpecified {
+            get {
+                return this.entityIDFieldSpecified;
+            }
+            set {
+                this.entityIDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string entityMetadataID {
+            get {
+                return this.entityMetadataIDField;
+            }
+            set {
+                this.entityMetadataIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short errorLevel {
+            get {
+                return this.errorLevelField;
+            }
+            set {
+                this.errorLevelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool errorLevelSpecified {
+            get {
+                return this.errorLevelFieldSpecified;
+            }
+            set {
+                this.errorLevelFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MessageBaseFormatState formated {
+            get {
+                return this.formatedField;
+            }
+            set {
+                this.formatedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool formatedSpecified {
+            get {
+                return this.formatedFieldSpecified;
+            }
+            set {
+                this.formatedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public MessageBase[] innerMessages {
+            get {
+                return this.innerMessagesField;
+            }
+            set {
+                this.innerMessagesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool isValidEntityID {
+            get {
+                return this.isValidEntityIDField;
+            }
+            set {
+                this.isValidEntityIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool isValidEntityIDSpecified {
+            get {
+                return this.isValidEntityIDFieldSpecified;
+            }
+            set {
+                this.isValidEntityIDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string localMessage {
+            get {
+                return this.localMessageField;
+            }
+            set {
+                this.localMessageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string orginalEntityFullName {
+            get {
+                return this.orginalEntityFullNameField;
+            }
+            set {
+                this.orginalEntityFullNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MessageBase.FormatState", Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Exceptions")]
+    public enum MessageBaseFormatState {
+        
+        /// <remarks/>
+        None,
+        
+        /// <remarks/>
+        Formatting,
+        
+        /// <remarks/>
+        Formatted,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
+    public partial class ErrorDescriptor {
+        
+        private string categoryField;
+        
+        private string erroridField;
+        
+        private ErrorLevel levelField;
+        
+        private bool levelFieldSpecified;
+        
+        private string ownerField;
+        
+        private System.DateTime timeStampField;
+        
+        private bool timeStampFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                this.categoryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string errorid {
+            get {
+                return this.erroridField;
+            }
+            set {
+                this.erroridField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ErrorLevel level {
+            get {
+                return this.levelField;
+            }
+            set {
+                this.levelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool levelSpecified {
+            get {
+                return this.levelFieldSpecified;
+            }
+            set {
+                this.levelFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string owner {
+            get {
+                return this.ownerField;
+            }
+            set {
+                this.ownerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime timeStamp {
+            get {
+                return this.timeStampField;
+            }
+            set {
+                this.timeStampField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool timeStampSpecified {
+            get {
+                return this.timeStampFieldSpecified;
+            }
+            set {
+                this.timeStampFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
+    public enum ErrorLevel {
+        
+        /// <remarks/>
+        Debug,
+        
+        /// <remarks/>
+        Info,
+        
+        /// <remarks/>
+        Warn,
+        
+        /// <remarks/>
+        Error,
+        
+        /// <remarks/>
+        Fatal,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF")]
+    public partial class ErrorMessage {
+        
+        private ErrorDescriptor errDescriptorField;
+        
+        private string errorTypeField;
+        
+        private ErrorMessage[] innerMessagesField;
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public ErrorDescriptor errDescriptor {
+            get {
+                return this.errDescriptorField;
+            }
+            set {
+                this.errDescriptorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string errorType {
+            get {
+                return this.errorTypeField;
+            }
+            set {
+                this.errorTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public ErrorMessage[] innerMessages {
+            get {
+                return this.innerMessagesField;
+            }
+            set {
+                this.innerMessagesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Util.Data")]
+    public partial class MultiLangData {
+        
+        private string langTypeField;
+        
+        private string langValueField;
+        
+        private DataRowState stateField;
+        
+        private bool stateFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string LangType {
+            get {
+                return this.langTypeField;
+            }
+            set {
+                this.langTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string LangValue {
+            get {
+                return this.langValueField;
+            }
+            set {
+                this.langValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DataRowState State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StateSpecified {
+            get {
+                return this.stateFieldSpecified;
+            }
+            set {
+                this.stateFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.FlagsAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.Data")]
+    public enum DataRowState {
+        
+        /// <remarks/>
+        Detached = 1,
+        
+        /// <remarks/>
+        Unchanged = 2,
+        
+        /// <remarks/>
+        Added = 4,
+        
+        /// <remarks/>
+        Deleted = 8,
+        
+        /// <remarks/>
+        Modified = 16,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="UFSoft.UBF.Util.Data")]
+    public partial class MultiLangDataDict {
+        
+        private MultiLangData[] _langsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public MultiLangData[] _langs {
+            get {
+                return this._langsField;
+            }
+            set {
+                this._langsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
+    public partial class ThreadContext {
+        
+        private ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHasField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfanyTypeanyType", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
+        public ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHas {
+            get {
+                return this.nameValueHasField;
+            }
+            set {
+                this.nameValueHasField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+    public partial class ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType {
+        
+        private object keyField;
+        
+        private object valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public object Key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public object Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
+    public partial class PlatformContext {
+        
+        private object ctxField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public object ctx {
+            get {
+                return this.ctxField;
+            }
+            set {
+                this.ctxField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/UFSoft.UBF.Util.Context")]
+    public partial class ApplicationContext {
+        
+        private ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHasField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("KeyValueOfanyTypeanyType", Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays", IsNullable=false)]
+        public ArrayOfKeyValueOfanyTypeanyTypeKeyValueOfanyTypeanyType[] nameValueHas {
+            get {
+                return this.nameValueHasField;
+            }
+            set {
+                this.nameValueHasField = value;
             }
         }
     }

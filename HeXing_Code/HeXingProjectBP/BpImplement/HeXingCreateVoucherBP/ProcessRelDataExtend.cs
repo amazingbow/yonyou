@@ -51,7 +51,8 @@
             codeNamePair.Add(9, new Dictionary<string, string>()); //项目
             codeNamePair.Add(10, new Dictionary<string, string>());//科目
             codeNamePair.Add(11, new Dictionary<string, string>());//费用项目
-            //codeNamePair.Add(12, new Dictionary<string, string>());//银行
+            codeNamePair.Add(12, new Dictionary<string, string>());//银行
+            codeNamePair.Add(13, new Dictionary<string, string>());//特殊：供应商对照到客户
             #region 构造要存储的数据
             foreach (var item in glVoucherLst)
             {
@@ -85,11 +86,24 @@
                             codeNamePair[2].Add(line.CustomerCode, line.CustomerDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
+                    //应付股利U9按客户核算，SAP按供应商核算
+                    //需要将凭证对应的供应商，参照到U9客户，对照类型为"供应商对客户"，以便与之前的对照关系区别开来
+                    //SAP应付股利：应付股利-发起人股 2232020000
                     if (!string.IsNullOrEmpty(line.SupplierCode))
                     {
-                        if (!codeNamePair[3].ContainsKey(line.SupplierCode))//供应商
+                        if (line.AccountCode == "2232020000")
                         {
-                            codeNamePair[3].Add(line.SupplierCode, line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                            if (!codeNamePair[13].ContainsKey(line.SupplierCode))//供应商对客户
+                            {
+                                codeNamePair[13].Add(line.SupplierCode, line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                            }
+                        }
+                        else
+                        {
+                            if (!codeNamePair[3].ContainsKey(line.SupplierCode))//供应商
+                            {
+                                codeNamePair[3].Add(line.SupplierCode, line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                            }
                         }
                     }
                     if (!string.IsNullOrEmpty(line.DepartmentCode))
@@ -121,12 +135,28 @@
                             codeNamePair[9].Add(line.AssetsCode, line.AssetsDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
-                    var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
-                    if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                    //实收资本U9将客户直接放在二级科目，SAP为客户核算；处理方案如下：
+                    //①SAP与U9档案基础维护，针对实收资本的SAP科目(SAP科目编码为4001010000)，在维护对找关系时，还需要加上一个客户编码、客户名称列，
+                    //以便用户选择U9的实收资本科目。
+                    //②在生成U9凭证时，还需要考虑这个维度的关系，以便转换成U9的实收资本科目。
+                    if (line.AccountCode == "4001010000")
                     {
-                        codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
-                            + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                        var accountCode = line.AccountCode + ";" + line.CustomerCode;
+                        if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                        {
+                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.CustomerDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
                     }
+                    else
+                    {
+                        var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
+                        if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                        {
+                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
+                                + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
+
                     if (!string.IsNullOrEmpty(line.FeeTypeEnumCode))
                     {
                         if (!codeNamePair[11].ContainsKey(line.FeeTypeEnumCode))//费用项目
@@ -134,13 +164,13 @@
                             codeNamePair[11].Add(line.FeeTypeEnumCode, line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
-                    //if (!string.IsNullOrEmpty(line.Banks))
-                    //{
-                    //    if (!codeNamePair[12].ContainsKey(line.Banks))//银行
-                    //    {
-                    //        codeNamePair[12].Add(line.Banks, line.Banks + "@" + item.SAPVoucherDisplayCode);
-                    //    }
-                    //}
+                    if (!string.IsNullOrEmpty(line.Banks))
+                    {
+                        if (!codeNamePair[12].ContainsKey(line.Banks))//银行
+                        {
+                            codeNamePair[12].Add(line.Banks, line.Banks + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
                 }
             }
             #endregion
@@ -296,26 +326,47 @@
                     //       + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
                     var tempArray = item.Key.Split(';');
                     var AccountCode = tempArray[0];
-                    var MaterialGroupCode = tempArray[1];
-                    var AssetsCode = tempArray[2];
-                    var FeeTypeEnumCode = tempArray[3];
-                    HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode + "' and SapMasterCode='"
-                        + MaterialGroupCode + "' and SapAssetsCode='" + AssetsCode + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
-                    if (shipAccount == null)
+                    if (AccountCode == "4001010000")
                     {
-                        var valueArray = item.Value.Split('@')[0].Split(';');
-                        var relationship = HxRelationshipBE.Create();
-                        relationship.RefType = RelationEnum.Account;
-                        relationship.SapCode = AccountCode;
-                        relationship.SapName = valueArray[0];
-                        relationship.SapMasterCode = MaterialGroupCode;
-                        relationship.SapMasterName = valueArray[1];
-                        relationship.SapAssetsCode = AssetsCode;
-                        relationship.SapAssetsName = valueArray[2];
-                        relationship.SapFeeCode = FeeTypeEnumCode;
-                        relationship.SapFeeName = valueArray[3];
-                        relationship.RefStatus = RefStatusEnum.Oraginal;
-                        returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
+                        var CustomerCode = tempArray[1];
+                        HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode
+                            + "' and CustomerCode='" + CustomerCode + "'");
+                        if (shipAccount == null)
+                        {
+                            var valueArray = item.Value.Split('@')[0].Split(';');
+                            var relationship = HxRelationshipBE.Create();
+                            relationship.RefType = RelationEnum.Account;
+                            relationship.SapCode = AccountCode;
+                            relationship.SapName = valueArray[0];
+                            relationship.CustomerCode = CustomerCode;
+                            relationship.CustomerName = valueArray[1];
+                            relationship.RefStatus = RefStatusEnum.Oraginal;
+                            returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
+                        }
+                    }
+                    else
+                    {
+                        var MaterialGroupCode = tempArray[1];
+                        var AssetsCode = tempArray[2];
+                        var FeeTypeEnumCode = tempArray[3];
+                        HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode +
+                            "' and SapMasterCode='" + MaterialGroupCode + "' and SapAssetsCode='" + AssetsCode + "' and SapFeeCode='" + FeeTypeEnumCode + "'");
+                        if (shipAccount == null)
+                        {
+                            var valueArray = item.Value.Split('@')[0].Split(';');
+                            var relationship = HxRelationshipBE.Create();
+                            relationship.RefType = RelationEnum.Account;
+                            relationship.SapCode = AccountCode;
+                            relationship.SapName = valueArray[0];
+                            relationship.SapMasterCode = MaterialGroupCode;
+                            relationship.SapMasterName = valueArray[1];
+                            relationship.SapAssetsCode = AssetsCode;
+                            relationship.SapAssetsName = valueArray[2];
+                            relationship.SapFeeCode = FeeTypeEnumCode;
+                            relationship.SapFeeName = valueArray[3];
+                            relationship.RefStatus = RefStatusEnum.Oraginal;
+                            returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
+                        }
                     }
                 }
                 #endregion
@@ -335,19 +386,34 @@
                 }
                 #endregion
                 #region //银行
-                //foreach (var item in codeNamePair[12])
-                //{
-                //    HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=12 and SapCode='" + item.Key + "'");
-                //    if (shipBank == null)
-                //    {
-                //        var relationship = HxRelationshipBE.Create();
-                //        relationship.RefType = RelationEnum.Bank;
-                //        relationship.SapCode = item.Key;
-                //        relationship.SapName = item.Value.Split('@')[0];
-                //        relationship.RefStatus = RefStatusEnum.Oraginal;
-                //        returnVoucher.Add(item.Value.Split('@')[1] + "银行没有维护对照关系");
-                //    }
-                //}
+                foreach (var item in codeNamePair[12])
+                {
+                    HxRelationshipBE shipBank = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=12 and SapCode='" + item.Key + "'");
+                    if (shipBank == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.Bank;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "银行没有维护对照关系");
+                    }
+                }
+                #endregion
+                #region 供应商对客户
+                foreach (var item in codeNamePair[13])
+                {
+                    HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=13 and SapCode='" + item.Key + "'");
+                    if (shipSupplier == null)
+                    {
+                        var relationship = HxRelationshipBE.Create();
+                        relationship.RefType = RelationEnum.SupplierCust;
+                        relationship.SapCode = item.Key;
+                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.RefStatus = RefStatusEnum.Oraginal;
+                        returnVoucher.Add(item.Value.Split('@')[1] + "供应商对客户没有维护对照关系");
+                    }
+                }
                 #endregion
                 session.Commit();
             }

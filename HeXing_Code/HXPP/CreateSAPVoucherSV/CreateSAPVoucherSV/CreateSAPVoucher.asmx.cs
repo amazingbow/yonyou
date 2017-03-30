@@ -22,7 +22,7 @@ namespace CreateSAPVoucherSV
         public List<CommonResult> Create(List<SAPU9GLVoucher> SAPU9GLVoucherS)
         {
             List<CommonResult> returnResult = new List<CommonResult>();
-         
+
             CreateSAPVoucherSV.CreateSVStub sv = new CreateSAPVoucherSV.CreateSVStub();
             object context = CreateContextObj();
             MessageBase[] returnMsg;
@@ -36,7 +36,12 @@ namespace CreateSAPVoucherSV
                 commonResult.Message = returnVal.m_message;
                 commonResult.CompanyCode = returnVal.m_companyCode;
                 commonResult.SAPVoucherDisplayCode = returnVal.m_sAPVoucherDisplayCode;
-                commonResult.PostDate = returnVal.m_postDate;
+                commonResult.PostDate = "";
+                if (returnVal.m_postDate != null)
+                {
+                    commonResult.PostDate = returnVal.m_postDate.ToString("yyyy-MM-dd");
+                }
+               
                 commonResult.MiddleId = returnVal.m_middleId;
                 returnResult.Add(commonResult);
             }
@@ -224,7 +229,7 @@ namespace CreateSAPVoucherSV
             get;
             set;
         }
-        public System.DateTime PostDate
+        public System.String PostDate
         {
             get;
             set;
