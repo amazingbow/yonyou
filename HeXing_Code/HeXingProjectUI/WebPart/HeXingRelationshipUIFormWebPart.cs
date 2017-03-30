@@ -549,6 +549,16 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerCode0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["CustomerCode"]/*CustomerCode*/,"CustomerCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","c8e119b1-0cfb-445e-8387-16d76e8b62af","c8e119b1-0cfb-445e-8387-16d76e8b62af","afc58899-ba10-473c-9cbb-f9c8f1dc2769");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerName0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["CustomerName"]/*CustomerName*/,"CustomerName", false, true, false, false, false, true, 0, 100, "50",true, false,"","9a496b18-ee3d-47a6-942c-70bd7599d3cf","9a496b18-ee3d-47a6-942c-70bd7599d3cf","c7e967de-4488-4a60-92f2-35f687c4bde7");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SapMasterCode0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["SapMasterCode"]/*SapMasterCode*/,"SapMasterCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","d6162569-7196-4605-9c02-099ed5dbd1c3","d6162569-7196-4605-9c02-099ed5dbd1c3","175e62e2-f903-4146-ac80-8461b2975510");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
