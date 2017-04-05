@@ -104,10 +104,6 @@ namespace HeXingRelationshipFindRef
 		{
 			get { return this.Fields["ID"]; }
 		}
-		public IUIField FieldCreatedOn
-		{
-			get { return this.Fields["CreatedOn"]; }
-		}
 		public IUIField FieldRefType
 		{
 			get { return this.Fields["RefType"]; }
@@ -127,6 +123,14 @@ namespace HeXingRelationshipFindRef
 		public IUIField FieldSapCompName
 		{
 			get { return this.Fields["SapCompName"]; }
+		}
+		public IUIField FieldCustomerCode
+		{
+			get { return this.Fields["CustomerCode"]; }
+		}
+		public IUIField FieldCustomerName
+		{
+			get { return this.Fields["CustomerName"]; }
 		}
 		public IUIField FieldSapMasterCode
 		{
@@ -160,6 +164,10 @@ namespace HeXingRelationshipFindRef
 		{
 			get { return this.Fields["U9Name"]; }
 		}
+		public IUIField FieldMemo
+		{
+			get { return this.Fields["Memo"]; }
+		}
 		public IUIField FieldRefStatus
 		{
 			get { return this.Fields["RefStatus"]; }
@@ -176,22 +184,24 @@ namespace HeXingRelationshipFindRef
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","eda13f1f-690f-405d-8ea5-43acbcdabb0f");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","4fa4a25f-f9f7-4ac1-a30b-fadd03387143");
-			UIModelRuntimeFactory.AddNewUIField(this,"RefType", typeof(Int32), true,"","UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum", "RefType", true,true, false, "",false,(UIFieldType)2,"55ff3b7f-5e3f-4ce9-ba25-42baf7bb7e0d","4f12f488-583a-44a3-816b-95cfddabfba3");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapCode", typeof(String), true,"","System.String", "SapCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","682bc6bb-aec3-4c5b-89fb-5c05b56c9204");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapName", typeof(String), true,"","System.String", "SapName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","46186b1e-0245-4f17-abc0-81499d52525d");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapCompCode", typeof(String), true,"","System.String", "SapCompCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","de48b916-2c0f-420f-aba5-65c521929ea3");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapCompName", typeof(String), true,"","System.String", "SapCompName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3e0c05e4-3d26-4568-916e-743b4dd57b2c");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapMasterCode", typeof(String), true,"","System.String", "SapMasterCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af5a2caf-4a57-44dc-92fd-b174b0f893f4");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapMasterName", typeof(String), true,"","System.String", "SapMasterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7282596a-266e-4b98-be1b-41e846d96dc7");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapAssetsCode", typeof(String), true,"","System.String", "SapAssetsCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5233a63f-d776-4f8a-8fba-9f40a98ad2a9");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapAssetsName", typeof(String), true,"","System.String", "SapAssetsName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","946c2772-b463-41b4-b233-be0cfb6ff7ea");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapFeeCode", typeof(String), true,"","System.String", "SapFeeCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b52a8d1d-d164-41dc-8284-0911159c6e29");
-			UIModelRuntimeFactory.AddNewUIField(this,"SapFeeName", typeof(String), true,"","System.String", "SapFeeName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b944b6a6-7b07-450f-9b7f-545a42176b4a");
-			UIModelRuntimeFactory.AddNewUIField(this,"U9Code", typeof(String), true,"","System.String", "U9Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","10d9196d-2d9d-4dc5-ac77-549d11c35e6b");
-			UIModelRuntimeFactory.AddNewUIField(this,"U9Name", typeof(String), true,"","System.String", "U9Name", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c18d96d3-b490-4bf2-b0c1-c45d67ef9f1f");
-			UIModelRuntimeFactory.AddNewUIField(this,"RefStatus", typeof(Int32), true,"","UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum", "RefStatus", true,true, false, "",false,(UIFieldType)2,"69d1e287-de63-4ed1-a7f7-bffc57c93de9","994a7d4f-cc8b-44d6-9417-2759746fc3b2");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","2abff610-d21c-409e-8ce9-44bae92b88a2");
+			UIModelRuntimeFactory.AddNewUIField(this,"RefType", typeof(Int32), true,"","UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum", "RefType", true,true, false, "",false,(UIFieldType)2,"55ff3b7f-5e3f-4ce9-ba25-42baf7bb7e0d","56abb7ba-b8ba-48b2-b202-cc1e99650eef");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapCode", typeof(String), true,"","System.String", "SapCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c504b793-da72-4c3f-b96a-a6a2bc2fff5f");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapName", typeof(String), true,"","System.String", "SapName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6ae0cebd-c03e-4100-9f50-ce9e2e092531");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapCompCode", typeof(String), true,"","System.String", "SapCompCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","44c5b583-e5d8-479a-b0e6-ac489a63a8e8");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapCompName", typeof(String), true,"","System.String", "SapCompName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","21dcfee6-6e77-499a-a4b6-d37d209dd789");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustomerCode", typeof(String), true,"","System.String", "CustomerCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","576feac1-2d7f-4d3d-a5ba-8fe4f5bf7d3e");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustomerName", typeof(String), true,"","System.String", "CustomerName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2ac59e74-676a-4bc9-b711-afce8fddd57d");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapMasterCode", typeof(String), true,"","System.String", "SapMasterCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a3989eb4-be96-4afb-8683-f2cf8229e6c1");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapMasterName", typeof(String), true,"","System.String", "SapMasterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6dd9286f-3ff7-4faf-a438-a2e46da9d13b");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapAssetsCode", typeof(String), true,"","System.String", "SapAssetsCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7dedb7c3-796d-4a2d-a9bc-5a26cb4c5e6a");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapAssetsName", typeof(String), true,"","System.String", "SapAssetsName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ee7e92d9-07cd-4ef4-83b5-6388ed3902c3");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapFeeCode", typeof(String), true,"","System.String", "SapFeeCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","94542de0-291a-44d9-89f1-364987103093");
+			UIModelRuntimeFactory.AddNewUIField(this,"SapFeeName", typeof(String), true,"","System.String", "SapFeeName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c1f50ca6-ec18-4e74-bf3f-1727b9eb4763");
+			UIModelRuntimeFactory.AddNewUIField(this,"U9Code", typeof(String), true,"","System.String", "U9Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c0642ed4-3884-485a-9c98-0ca8da8d3553");
+			UIModelRuntimeFactory.AddNewUIField(this,"U9Name", typeof(String), true,"","System.String", "U9Name", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d160a23c-c265-4a0b-8b44-dfd05c5fca08");
+			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), true,"","System.String", "Memo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","47bce74f-a7fe-497f-a381-df2a88d69876");
+			UIModelRuntimeFactory.AddNewUIField(this,"RefStatus", typeof(Int32), true,"","UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum", "RefStatus", true,true, false, "",false,(UIFieldType)2,"69d1e287-de63-4ed1-a7f7-bffc57c93de9","02840168-4759-4c5c-b24a-a1e1844f47eb");
 
 
 			this.CurrentFilter = new cRefDefaultFilterFilter(this);
@@ -252,19 +262,6 @@ namespace HeXingRelationshipFindRef
 			}
 			set{
 				this[this.uiviewcRef.FieldID] = value;
-			}
-		}
-		
-		
-		public  DateTime? CreatedOn
-		{
-			get{
-				//object value = this[this.uiviewcRef.FieldCreatedOn] ;
-				//return (DateTime?)value;
-				return GetValue<DateTime?>(this.uiviewcRef.FieldCreatedOn);
-			}
-			set{
-				this[this.uiviewcRef.FieldCreatedOn] = value;
 			}
 		}
 		
@@ -330,6 +327,32 @@ namespace HeXingRelationshipFindRef
 			}
 			set{
 				this[this.uiviewcRef.FieldSapCompName] = value;
+			}
+		}
+		
+		
+		public  String CustomerCode
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldCustomerCode] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewcRef.FieldCustomerCode);
+			}
+			set{
+				this[this.uiviewcRef.FieldCustomerCode] = value;
+			}
+		}
+		
+		
+		public  String CustomerName
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldCustomerName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewcRef.FieldCustomerName);
+			}
+			set{
+				this[this.uiviewcRef.FieldCustomerName] = value;
 			}
 		}
 		
@@ -438,6 +461,19 @@ namespace HeXingRelationshipFindRef
 		}
 		
 		
+		public  String Memo
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldMemo] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewcRef.FieldMemo);
+			}
+			set{
+				this[this.uiviewcRef.FieldMemo] = value;
+			}
+		}
+		
+		
 		public  Int32? RefStatus
 		{
 			get{
@@ -457,7 +493,7 @@ namespace HeXingRelationshipFindRef
 	{
 		#region Constructor
 		public cRefDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@" order by ID desc,RefType asc,SapCode asc")
+			: base("DefaultFilter",view,@"",@" order by ID asc,RefType asc,SapCode asc")
 		{
 			InitClass();
 		}

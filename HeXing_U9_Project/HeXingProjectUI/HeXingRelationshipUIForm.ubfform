@@ -138,6 +138,8 @@
           <HeaderCell ID="ee1b1565-6a00-47ef-911e-39dadf621be9" ColSpan="1" Name="HeaderCell4" OwnerColName="SapName0" RowSpan="1" />
           <HeaderCell ID="de4354a1-3cdb-4c41-b4af-8e1ad275a0bd" ColSpan="1" Name="HeaderCell5" OwnerColName="SapCompCode0" RowSpan="1" />
           <HeaderCell ID="3e61d7e6-718e-4ee5-be62-3c87dcc918f5" ColSpan="1" Name="HeaderCell6" OwnerColName="SapCompName0" RowSpan="1" />
+          <HeaderCell ID="8089fd26-8b24-45a7-926e-9caca1d86533" ColSpan="1" DisplayName="客户代码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell24" OwnerColName="CustomerCode0" RowSpan="1" />
+          <HeaderCell ID="7600aa9a-be7b-4050-806c-b8b1780ae62d" ColSpan="1" DisplayName="客户名称" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell25" OwnerColName="CustomerName0" RowSpan="1" />
           <HeaderCell ID="e0d653d7-bd58-4b3c-83ec-fa1587d4bd84" ColSpan="1" Name="HeaderCell7" OwnerColName="SapMasterCode0" RowSpan="1" />
           <HeaderCell ID="1b5179d0-e9dc-494b-826d-a240d042d430" ColSpan="1" Name="HeaderCell8" OwnerColName="SapMasterName0" RowSpan="1" />
           <HeaderCell ID="bf20a57b-2cc3-49db-816d-863c9e37888e" ColSpan="1" Name="HeaderCell9" OwnerColName="SapAssetsCode0" RowSpan="1" />
@@ -185,31 +187,37 @@
         <TextBoxColumn ID="8c62b99e-3077-4df7-ad62-14c59706ffc5" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.SAP公司名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapCompName0" NPos="8" Point="0" TextAlign="Left" UIFieldID="SapCompName" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="175e62e2-f903-4146-ac80-8461b2975510" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.物料组编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapMasterCode0" NPos="9" Point="0" TextAlign="Left" UIFieldID="SapMasterCode" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="afc58899-ba10-473c-9cbb-f9c8f1dc2769" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.客户代码" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomerCode0" NPos="9" Point="0" TextAlign="Left" UIFieldID="CustomerCode" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="8a9f6d54-5b6f-494a-b29e-326f3faa859f" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.物料组名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapMasterName0" NPos="10" Point="0" TextAlign="Left" UIFieldID="SapMasterName" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="c7e967de-4488-4a60-92f2-35f687c4bde7" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.客户名称" IsNull="True" IsProperty="False" IsSequence="False" Name="CustomerName0" NPos="10" Point="0" TextAlign="Left" UIFieldID="CustomerName" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="c7686d29-ba52-4de9-92b5-0d9f00fdb68d" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.资产编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapAssetsCode0" NPos="11" Point="0" TextAlign="Left" UIFieldID="SapAssetsCode" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="175e62e2-f903-4146-ac80-8461b2975510" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.物料组编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapMasterCode0" NPos="11" Point="0" TextAlign="Left" UIFieldID="SapMasterCode" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="89214fcb-83bd-47c9-9c85-abb87044531f" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.资产名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapAssetsName0" NPos="12" Point="0" TextAlign="Left" UIFieldID="SapAssetsName" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="8a9f6d54-5b6f-494a-b29e-326f3faa859f" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.物料组名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapMasterName0" NPos="12" Point="0" TextAlign="Left" UIFieldID="SapMasterName" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="e8ea86f3-ea61-4715-9803-10a53fe61264" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.费用类型编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapFeeCode0" NPos="13" Point="0" TextAlign="Left" UIFieldID="SapFeeCode" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="c7686d29-ba52-4de9-92b5-0d9f00fdb68d" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.资产编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapAssetsCode0" NPos="13" Point="0" TextAlign="Left" UIFieldID="SapAssetsCode" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="81fb6060-881a-4f6a-b029-d52acccc9111" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.费用类型名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapFeeName0" NPos="14" Point="0" TextAlign="Left" UIFieldID="SapFeeName" UIViewID="HxRelationshipBE" Visible="True">
+        <TextBoxColumn ID="89214fcb-83bd-47c9-9c85-abb87044531f" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.资产名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapAssetsName0" NPos="14" Point="0" TextAlign="Left" UIFieldID="SapAssetsName" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="87e94385-cd48-4d9a-a3b5-e31654307cfc" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.U9编码" IsNull="True" IsProperty="False" IsSequence="False" Name="U9Code0" NPos="15" Point="0" TextAlign="Left" UIFieldID="U9Code" UIViewID="HxRelationshipBE" Visible="False">
+        <TextBoxColumn ID="e8ea86f3-ea61-4715-9803-10a53fe61264" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.费用类型编码" IsNull="True" IsProperty="False" IsSequence="False" Name="SapFeeCode0" NPos="15" Point="0" TextAlign="Left" UIFieldID="SapFeeCode" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="bff7a14d-6dc2-4e27-a957-19f35108c329" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.U9名称" IsNull="True" IsProperty="False" IsSequence="False" Name="U9Name0" NPos="16" Point="0" TextAlign="Left" UIFieldID="U9Name" UIViewID="HxRelationshipBE" Visible="False">
+        <TextBoxColumn ID="81fb6060-881a-4f6a-b029-d52acccc9111" DefaultValue="" DisplayFormat="50" Enabled="False" Help="合兴关系对照表.Misc.费用类型名称" IsNull="True" IsProperty="False" IsSequence="False" Name="SapFeeName0" NPos="16" Point="0" TextAlign="Left" UIFieldID="SapFeeName" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </TextBoxColumn>
-        <ReferenceColumn ID="3b660753-2f07-4b5b-8a7b-2dd31c80bfbb" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="U9Code" CodeFieldUIViewID="HxRelationshipBE" DefaultValue="0" DisplayFormat="19.0" DisplaySrcType="BindingUIModel" Enabled="True" EntityName="ID" Help="合兴关系对照表.Misc.U9实体ID" IsNull="True" IsProperty="False" IsSequence="False" Name="U9EntityId0" NameAttributeName="Name" NameFieldUIFieldID="U9Name" NameFieldUIViewID="HxRelationshipBE" NPos="17" PkeyField="ID" Point="0" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" TextAlign="Right" UIFieldID="U9EntityId" UIViewID="HxRelationshipBE" Visible="True" WindowHeight="408" WindowWidth="580">
+        <TextBoxColumn ID="87e94385-cd48-4d9a-a3b5-e31654307cfc" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.U9编码" IsNull="True" IsProperty="False" IsSequence="False" Name="U9Code0" NPos="17" Point="0" TextAlign="Left" UIFieldID="U9Code" UIViewID="HxRelationshipBE" Visible="False">
+          <Events />
+        </TextBoxColumn>
+        <TextBoxColumn ID="bff7a14d-6dc2-4e27-a957-19f35108c329" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.U9名称" IsNull="True" IsProperty="False" IsSequence="False" Name="U9Name0" NPos="18" Point="0" TextAlign="Left" UIFieldID="U9Name" UIViewID="HxRelationshipBE" Visible="False">
+          <Events />
+        </TextBoxColumn>
+        <ReferenceColumn ID="3b660753-2f07-4b5b-8a7b-2dd31c80bfbb" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="U9Code" CodeFieldUIViewID="HxRelationshipBE" DefaultValue="0" DisplayFormat="19.0" DisplaySrcType="BindingUIModel" Enabled="True" EntityName="ID" Help="合兴关系对照表.Misc.U9实体ID" IsNull="True" IsProperty="False" IsSequence="False" Name="U9EntityId0" NameAttributeName="Name" NameFieldUIFieldID="U9Name" NameFieldUIViewID="HxRelationshipBE" NPos="19" PkeyField="ID" Point="0" RefType="27f276ae-3cd1-49bc-9e3b-2f3b938bc4d0" TextAlign="Right" UIFieldID="U9EntityId" UIViewID="HxRelationshipBE" Visible="True" WindowHeight="408" WindowWidth="580">
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation0" TargetControlType="ReferenceColumnModel" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation1" TargetControlType="TextBoxColumnModel" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation2" TargetControlType="TextBoxColumnModel" TargetID="" TargetProperty="" />
@@ -230,10 +238,10 @@
           </UIFilterBar>
           <Events />
         </ReferenceColumn>
-        <TextBoxColumn ID="36d7792b-f599-495b-a0ec-43cc7f92fb91" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="18" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="HxRelationshipBE" Visible="False">
+        <TextBoxColumn ID="36d7792b-f599-495b-a0ec-43cc7f92fb91" DefaultValue="" DisplayFormat="50" Enabled="True" Help="合兴关系对照表.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="20" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="HxRelationshipBE" Visible="False">
           <Events />
         </TextBoxColumn>
-        <DropDownListColumn ID="17d8eafc-9f2c-47fd-b758-c09f5e5c43fc" DefaultValue="0" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum" EnumID="69d1e287-de63-4ed1-a7f7-bffc57c93de9" Help="合兴关系对照表.Misc.状态" IsNull="True" IsProperty="False" IsSequence="False" Name="RefStatus0" NPos="19" Point="0" UIFieldID="RefStatus" UIViewID="HxRelationshipBE" Visible="True">
+        <DropDownListColumn ID="17d8eafc-9f2c-47fd-b758-c09f5e5c43fc" DefaultValue="0" DisplayFormat="10.0" Enabled="False" EnumFullName="UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum" EnumID="69d1e287-de63-4ed1-a7f7-bffc57c93de9" Help="合兴关系对照表.Misc.状态" IsNull="True" IsProperty="False" IsSequence="False" Name="RefStatus0" NPos="21" Point="0" UIFieldID="RefStatus" UIViewID="HxRelationshipBE" Visible="True">
           <Events />
         </DropDownListColumn>
       </Columns>
