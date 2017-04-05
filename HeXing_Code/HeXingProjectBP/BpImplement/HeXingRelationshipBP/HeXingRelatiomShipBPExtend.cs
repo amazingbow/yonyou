@@ -55,6 +55,7 @@
                             }
                             break;
                         case "客户":
+                        case "供应商对客户":
                             UFIDA.U9.CBO.SCM.Customer.Customer.EntityList CustomerList = UFIDA.U9.CBO.SCM.Customer.Customer.Finder.FindAll("Code like @Code and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
                             if (CustomerList.Count > 0)
                             {
@@ -265,6 +266,7 @@
                             }
                             break;
                         case "客户":
+                        case "供应商对客户":
                             UFIDA.U9.CBO.SCM.Customer.Customer.EntityList CustomerList = UFIDA.U9.CBO.SCM.Customer.Customer.Finder.FindAll("Name like @Name and Org=@Org", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%"), new OqlParam(bpObj.HOrg) });
                             if (CustomerList.Count > 0)
                             {

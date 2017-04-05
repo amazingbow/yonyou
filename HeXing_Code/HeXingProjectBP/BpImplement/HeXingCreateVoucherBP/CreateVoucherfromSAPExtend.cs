@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Configuration;
+    using System.Data;
     using System.Text;
     using UFIDA.U9.Base;
     using UFIDA.U9.Base.Currency;
@@ -29,6 +30,7 @@
     using UFSoft.UBF.Business;
     using UFSoft.UBF.PL;
     using UFSoft.UBF.Util.Context;
+    using UFSoft.UBF.Util.DataAccess;
 
     /// <summary>
     /// CreateVoucherfromSAP partial 
@@ -53,8 +55,9 @@
 
         public override object Do(object obj)
         {
+            UpdateRepeatData();
             CreateVoucherfromSAP bpObj = (CreateVoucherfromSAP)obj;
-            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("IsU9Successful=0 or IsU9Successful=2");
+            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("(IsU9Successful=0 or IsU9Successful=2) and (IsRepeat=0 or IsRepeat is null)");
             if (glVoucherLst.Count == 0) return null;//表中没有要处理的数据。
             ProcessRelData processData = new ProcessRelData();
             List<string> returnData = processData.Do();
@@ -210,6 +213,21 @@
                 }
             }
             return null;
+        }
+
+        private void UpdateRepeatData()
+        {
+            //该字段默认为false,在产生U9凭证调度时，先运行update脚本，将重复的SAP凭证标识为重复，接着在产生U9凭证时，
+            //过滤掉SAP凭证标识为重复的数据，这样就避免重复产生U9凭证了
+            string sql = @"UPDATE a SET a.IsRepeat = 1
+                            FROM Cust_HeXing_SAPU9GLVoucherHead a INNER join
+                            (SELECT CompanyCode, SAPVoucherDisplayCode, PostedPeriod, MIN(ID) ID
+                                FROM Cust_HeXing_SAPU9GLVoucherHead
+                                GROUP BY CompanyCode, SAPVoucherDisplayCode, PostedPeriod
+                                HAVING COUNT(*) > 1 ) b ON b.CompanyCode = a.CompanyCode and b.SAPVoucherDisplayCode = a.SAPVoucherDisplayCode 
+                            and b.PostedPeriod = a.PostedPeriod and b.ID <> a.ID";
+            DataSet ds;
+            DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out ds);
         }
 
         private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item)

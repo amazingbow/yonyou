@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// <returns>Instance</returns>
 		public  static HeXingSAPU9GLVoucherHead Create() {
 			HeXingSAPU9GLVoucherHead entity = (HeXingSAPU9GLVoucherHead)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																		 
+																																																																					 
 			return entity;
 		}
 
@@ -707,6 +707,25 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 是否重复 (该属性可为空,但有默认值)
+			/// SAP与U9凭证对接中间表头.Misc.是否重复
+			/// </summary>
+			/// <value></value>
+			public  System.Int32 IsRepeat
+			{
+				get
+				{
+					System.Int32 value  = (System.Int32)base.GetValue("IsRepeat");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1356,6 +1375,30 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+		
+			/// <summary>
+		/// 是否重复 (该属性可为空,但有默认值)
+		/// SAP与U9凭证对接中间表头.Misc.是否重复
+		/// </summary>
+		/// <value></value>
+			public  System.Int32 IsRepeat
+		{
+			get
+			{
+				System.Int32 value  = (System.Int32)base.GetValue("IsRepeat");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("IsRepeat", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1509,6 +1552,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_U9VoucherID　{ get { return EntityRes.GetResource("U9VoucherID");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsRepeat")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_IsRepeat　{ get { return EntityRes.GetResource("IsRepeat");　}　}
 		#endregion 
 
 
@@ -1967,6 +2015,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// 属性: U9凭证ID 的名称
 			/// </summary>
 			public static string U9VoucherID　{ get { return "U9VoucherID";　}　}
+				
+			/// <summary>
+			/// 属性: 是否重复 的名称
+			/// </summary>
+			public static string IsRepeat　{ get { return "IsRepeat";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1977,7 +2030,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																										
 				if (attrName.StartsWith("DescFlexField."))
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetPropertyResource(DescFlexField_TypeFullName, attrName);
-				
+						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2119,6 +2172,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg30","DescFlexField_PrivateDescSeg30");
 			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
 			this.exdMultiLangAttrs.Add("U9VoucherID","U9VoucherID");
+			this.exdMultiLangAttrs.Add("IsRepeat","IsRepeat");
         }
 	#endregion 
 
@@ -2138,7 +2192,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																																																	
 																																																																																																																																																																																																																																																						
 
-			
+						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2159,6 +2213,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		private void DeSerializeKey(HeXingSAPU9GLVoucherHeadData data)
 		{
 		
+			
+
 			
 
 			
@@ -2282,6 +2338,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 								this.DescFlexField.FromEntityData(data.DescFlexField);
 		
 								this.SetTypeValue("U9VoucherID",data.U9VoucherID);
+		
+								this.SetTypeValue("IsRepeat",data.IsRepeat);
 		
 			#endregion 
 
@@ -2485,6 +2543,13 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 					data.U9VoucherID=(System.Int64)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("IsRepeat");
+				if (obj != null)
+					data.IsRepeat=(System.Int32)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2547,6 +2612,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			//调用UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments属性类型的内置校验方法.
 			this.DescFlexField.OnValidate() ;
 	
+
 
 			//调用实体自身校验器代码.
             return true; 

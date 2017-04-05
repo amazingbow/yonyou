@@ -41,6 +41,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
                         
                                         knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData));
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -73,7 +74,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 	     			
 	     							IsU9Successful= 0; 			     			
 	     			
-	     							U9VoucherID= 0; 		
+	     							U9VoucherID= 0; 			     							IsRepeat= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -525,10 +526,29 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 是否重复
+		/// SAP与U9凭证对接中间表头.Misc.是否重复
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_isRepeat ;
+		public System.Int32 IsRepeat
+		{
+			get	
+			{	
+				return m_isRepeat  ;
+			}
+			set	
+			{	
+				m_isRepeat = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																						
+																							
 		#endregion 		
 	}	
 

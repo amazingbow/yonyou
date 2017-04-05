@@ -33,7 +33,7 @@
         {
             ProcessRelData bpObj = (ProcessRelData)obj;
             List<string> returnVoucher = new List<string>();
-            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("IsU9Successful=0 or IsU9Successful=2");//0 代表数据没有执行过，1代表成功导入U9，2代表导入U9失败
+            var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("(IsU9Successful=0 or IsU9Successful=2) and  (IsRepeat=0 or IsRepeat is null)");//0 代表数据没有执行过，1代表成功导入U9，2代表导入U9失败
             if (glVoucherLst.Count == 0)
             {
                 return returnVoucher;
