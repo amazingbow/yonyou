@@ -85,9 +85,11 @@
                 //1.importVoucherDTO.ImportType = CBO.FI.Enums.VoucherImportTypeEnum.VoucherAll； 
                 //这句必须有，没有的话现金流量项目无法导入。
                 //2.账簿上必须设置现金流量表
+                bool deleteFlag = false;
                 using (ISession session = Session.Open())
                 {
                     List<RefVoucherInfoBE> refList = new List<RefVoucherInfoBE>();
+
                     try
                     {
                         //item.CompanyCode
@@ -164,6 +166,15 @@
                             deleteProxy.Voucher = new List<long>();
                             deleteProxy.Voucher.Add(item.U9VoucherID);
                             deleteProxy.Do();
+                            deleteFlag = true;
+                            //如果删除凭证的话把对应的对照关系也删掉
+                            if (refList.Count > 0)
+                            {
+                                foreach (var refinfo in refList)
+                                {
+                                    refinfo.Remove();
+                                }
+                            }
                         }
                     }
                     catch (Exception ex)
@@ -181,7 +192,7 @@
                     }
                     session.Commit();
                 }
-                if (string.IsNullOrEmpty(docNo)) continue;
+                if (string.IsNullOrEmpty(docNo) && !deleteFlag) continue;
                 using (ISession session = Session.Open())
                 {
                     try
@@ -208,6 +219,13 @@
                         deleteProxy.Voucher = new List<long>();
                         deleteProxy.Voucher.Add(item.U9VoucherID);
                         deleteProxy.Do();
+                        //如果删除凭证的话把对应的对照关系也删掉
+                        var refList = RefVoucherInfoBE.Finder.FindAll("VoucherID=" + item.U9VoucherID);
+                        item.U9VoucherID = 0;
+                        foreach (var refItem in refList)
+                        {
+                            refItem.Remove();
+                        }
                     }
                     session.Commit();
                 }
@@ -238,9 +256,18 @@
                 //银行、现金类的科目维护对应的现金流量项目
                 if (!successVoucher.Entries[i].Account.Code.StartsWith("1001")
                     && !successVoucher.Entries[i].Account.Code.StartsWith("1002")) continue;
-
-                HxRelationshipBE cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='"
-                    + item.HeXingSAPU9GLVoucherLine[i].CashFlowCode + "'");
+                HxRelationshipBE cashFlowRef = null;
+                foreach (var line in item.HeXingSAPU9GLVoucherLine)
+                {
+                    if (line.DescFlexField.PrivateDescSeg1 == successVoucher.Entries[i].Account.Code)
+                    {
+                        cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='" + line.CashFlowCode + "'");
+                    }
+                }
+                if (cashFlowRef == null)
+                {
+                    throw new Exception("没有传现金流，或者没有维护相应的现金流对照关系并审核！");
+                }
                 CashFlowItem cashFlowItem = CashFlowItem.Finder.Find("Code = @Code and IsSystemPre=0", new OqlParam[] { new OqlParam(cashFlowRef.U9Code) });
                 CFVoucherItem cfVoucherItem = CFVoucherItem.Create();
                 cfVoucherItem.VoucherEntry = successVoucher.Entries[i];
@@ -493,7 +520,7 @@
                            + entry.AccountCode + "' and SapMasterCode='" + entry.MaterialGroupCode + "' and SapAssetsCode='"
                            + entry.AssetsCode + "' and SapFeeCode='" + entry.FeeTypeEnumCode + "'");
             }
-            
+
             if (account == null)
             {
                 throw new Exception("科目没有传值，或关系对照表没有维护且审核");
@@ -512,6 +539,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles.Count == 0)
             {
                 VoucherItem.Account.Code = account.U9Code + "|0|0|0|0|0|0|0|0|0";
+                entry.DescFlexField.PrivateDescSeg1 = VoucherItem.Account.Code;
                 return VoucherItem;
             }
             #region 2. 组织
@@ -551,7 +579,7 @@
                 }
                 else
                 {
-                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode 
+                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode
                         + "客户段（应付股利供应商）是必输的，但是并没有传值或维护对应关系");
                 }
             }
@@ -723,6 +751,7 @@
             #endregion
             #endregion
             VoucherItem.Account.Code = stb.ToString();
+            entry.DescFlexField.PrivateDescSeg1 = stb.ToString();
             return VoucherItem;
         }
     }
