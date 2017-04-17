@@ -2,6 +2,12 @@
 <Component id="b4e426aa-f2ac-4f44-b150-bd0551b00ad5" name="ProductionRelationBP" displayName="ProductionRelationBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.ChuangYeRenBillImportBP">
   <Namespace id="62d2d895-56ba-4dcf-9b09-879287b71001" name="UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP" displayName="UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP" description="" help="">
     <Operation id="b39d9fd8-bdcc-4f42-9c1e-b41b680afb7d" name="ProductionOrderImportProcessBP" displayName="生产订单导入处理" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="bae81aa5-7515-43a0-8cf9-693cb2a675b2" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="5d5d1c5d-03db-4524-9298-2bd66f797fbb" name="RelationId" displayName="相关表ID" description="" help="生产订单导入处理.Misc.相关表ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
       <Implements>
         <Operation id="bad57299-5ede-4a01-9a0a-e11850296dc7" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
@@ -12,6 +18,12 @@
       </Implements>
     </Operation>
     <Operation id="4ffc44ca-c0ae-4269-8add-6b9eb6c7ef2c" name="ProductionOrderDeleteProcessBP" displayName="生产订单删除处理" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="7f8cccc2-e5b5-4f13-9e8c-0b3b7e761e36" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="b4c935c9-163c-4566-9aec-6e83da3fe0ca" name="RelationId" displayName="相关表ID" description="" help="生产订单删除处理.Misc.相关表ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
       <Implements>
         <Operation id="01d8bd53-0b82-40ad-b4ac-067b32ad2554" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
@@ -23,15 +35,15 @@
     </Operation>
     <Diagram id="aa3fc084-1c3c-49c6-92c8-2a728ff8da9e" name="ProductionRelationBP" displayName="ProductionRelationBP">
       <Class Editable="True" ID="e315c19d-1a43-4bcd-a663-cf6ee93fd7e7" Type="Operation" ADID="b39d9fd8-bdcc-4f42-9c1e-b41b680afb7d">
-        <Location X="29" Y="21" />
+        <Location X="29" Y="20" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="72016886-63a6-4fd4-b7cd-92688a4eff06" Type="Operation" ADID="2c16423e-9575-4554-99ef-c8caf31a7f8c">
-        <Location X="192" Y="26" />
+        <Location X="192" Y="24" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="2307b971-c428-457b-826b-88d5204ac7ec" Type="Operation" ADID="4ffc44ca-c0ae-4269-8add-6b9eb6c7ef2c">
-        <Location X="28" Y="98" />
+        <Location X="28" Y="97" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="262e38bc-c875-4dd3-b6e4-687a14aa036d" Type="Operation" ADID="026b5759-1853-4c19-b9c9-4aade5cb434a">

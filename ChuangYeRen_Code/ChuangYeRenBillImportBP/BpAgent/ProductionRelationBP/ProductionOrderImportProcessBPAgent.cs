@@ -38,18 +38,38 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		void Do(IContext context, out IList<MessageBase> outMessages );
+		void Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationId);
     }
 	[Serializable]    
     public class ProductionOrderImportProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IProductionOrderImportProcessBP
     {
 	#region Fields	
-	
+				private System.Int64 relationId ;
+			
 	#endregion	
 		
 	#region Properties
 	
-	
+				
+
+		/// <summary>
+		/// 相关表ID (该属性可为空,但有默认值)
+		/// 生产订单导入处理.Misc.相关表ID
+		/// </summary>
+		/// <value>System.Int64</value>
+		public System.Int64 RelationId
+		{
+			get	
+			{	
+				return this.relationId;
+			}
+
+			set	
+			{	
+				this.relationId = value;	
+			}
+		}		
+			
 	#endregion	
 
 
@@ -76,7 +96,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
             IProductionOrderImportProcessBP channel = oChannel as IProductionOrderImportProcessBP;
             if (channel != null)
             {
-				channel.Do(context, out returnMsgs);
+				channel.Do(context, out returnMsgs, relationId);
 	    }
             return  null;
         }
@@ -87,7 +107,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-
+					
 		}
 		#endregion 
 

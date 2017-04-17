@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        void Do(IContext context ,out IList<MessageBase> outMessages );
+        void Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,22 +46,23 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IProductionOrderDeleteProcessBP Members
 
         //[OperationBehavior]
-        public void Do(IContext context ,out IList<MessageBase> outMessages)
+        public void Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			DoEx(commonData);
+			DoEx(commonData, relationId);
         }
         
         //[OperationBehavior]
-        public void DoEx(ICommonDataContract commonData)
+        public void DoEx(ICommonDataContract commonData, System.Int64 relationId)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.ProductionOrderDeleteProcessBP");                
                 ProductionOrderDeleteProcessBP objectRef = new ProductionOrderDeleteProcessBP();
-
+	
+				objectRef.RelationId = relationId;
 
 				//处理返回类型.
 				objectRef.Do(); //没有返回值
