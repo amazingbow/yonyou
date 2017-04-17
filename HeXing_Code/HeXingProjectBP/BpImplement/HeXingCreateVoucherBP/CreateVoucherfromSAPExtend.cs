@@ -179,7 +179,14 @@
                     }
                     catch (Exception ex)
                     {
-                        item.U9ErrorResult = ex.Message;
+                        if (ex.Message.Contains("不符合值集定义"))
+                        {
+                            item.U9ErrorResult = ex.Message + "(1.标准科目2.组织3.客户4.供应商5.银行6.银行账号7.部门8.员工9.费用项目10.工程项目)";
+                        }
+                        else
+                        {
+                            item.U9ErrorResult = ex.Message;
+                        }
                         item.IsU9Successful = ImportFlagEnum.ImportFailed;
                         item.CompleteU9Date = DateTime.Now;
                         if (refList.Count > 0)
@@ -303,7 +310,7 @@
             //凭证类型
             string category = string.Empty;
             HxRelationshipBE shipCategory = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=8 and SapCode='"
-                      + voucher.VoucherCategoryCode + "' and SapName='" + voucher.VoucherCategoryDescription + "'");
+                      + voucher.VoucherCategoryCode + "'");
             if (shipCategory == null)
             {
                 throw new Exception("凭证类型没有传值，或关系对照没有维护且审核");
@@ -500,7 +507,7 @@
                 }
                 else
                 {
-                    throw new Exception("在组织" + voucher.CompanyName + "下，没有维护银行账号：" + entry.BankAccount);
+                    throw new Exception(entry.AccountCode + "," + entry.AccountDescription + "：在组织" + voucher.CompanyName + "下，没有维护银行账号：" + entry.BankAccount);
                 }
             }
             #endregion
@@ -523,7 +530,7 @@
 
             if (account == null)
             {
-                throw new Exception("科目没有传值，或关系对照表没有维护且审核");
+                throw new Exception(entry.AccountCode + "," + entry.AccountDescription + "：科目没有传值，或关系对照表没有维护且审核");
             }
             RefVoucherInfoBE ref1 = RefVoucherInfoBE.Create();
             ref1.HxRelationshipID = account.ID;
@@ -534,7 +541,7 @@
             NaturalAccountSOBProperty np = NaturalAccountSOBProperty.Finder.Find("SOB=" + sob.ID + " and NaturalAccount=" + na.ID);
             if (np == null)
             {
-                throw new Exception("维护的标准科目所对应的账簿科目为空，请检查是否维护错误");
+                throw new Exception(entry.AccountCode + "," + entry.AccountDescription + "：维护的标准科目所对应的账簿科目为空，请检查是否维护错误");
             }
             if (np.NaturalAccountSOBSegmentUseRoles.Count == 0)
             {
@@ -622,7 +629,7 @@
                     }
                     else
                     {
-                        throw new Exception("U9系统中银行账号：" + entry.BankAccount + "对应的所属银行为空，请检查U9基础数据！");
+                        throw new Exception(entry.AccountCode + "," + entry.AccountDescription + "：U9系统中银行账号：" + entry.BankAccount + "对应的所属银行为空，请检查U9基础数据！");
                     }
                 }
                 else

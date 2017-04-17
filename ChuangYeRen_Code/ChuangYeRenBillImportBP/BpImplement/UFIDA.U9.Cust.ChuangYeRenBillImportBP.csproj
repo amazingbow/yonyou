@@ -31,7 +31,26 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-<Import Project="UFIDA.U9.Cust.ChuangYeRenBillImportBP.target" />  
-
+  <ItemGroup>
+    <Reference Include="InvStockBE">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\InvStockBE.dll</HintPath>
+    </Reference>
+    <Reference Include="InvStockBE.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\InvStockBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="pMakReqOrderBE">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakReqOrderBE.dll</HintPath>
+    </Reference>
+    <Reference Include="pMakReqOrderBE.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakReqOrderBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="PPCSDailyProductChildBE">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\PPCSDailyProductChildBE.dll</HintPath>
+    </Reference>
+    <Reference Include="PPCSDailyProductChildBE.Deploy">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\PPCSDailyProductChildBE.Deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="UFIDA.U9.Cust.ChuangYeRenBillImportBP.target" />
 </Project>
