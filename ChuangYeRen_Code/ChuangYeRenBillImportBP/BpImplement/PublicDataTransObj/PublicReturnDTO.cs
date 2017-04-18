@@ -27,7 +27,7 @@ namespace PublicDataTransObj
 					Flag = false; 
 		
 		
-		
+					DocID = 0; 
 
 		}
 
@@ -86,15 +86,15 @@ namespace PublicDataTransObj
 			}
 		}
 				/// <summary>
-		/// 单据ID (该属性可为空,且无默认值)
+		/// 单据ID (该属性可为空,但有默认值)
 		/// 返回对象.Misc.单据ID
 		/// </summary>
-		/// <value>System.String</value>
-		public System.String DocID
+		/// <value>System.Int64</value>
+		public System.Int64 DocID
 		{
 			get	
 			{	
-				return (System.String)base.GetValue("DocID",typeof(System.String));
+				return (System.Int64)base.GetValue("DocID",typeof(System.Int64));
 			}
 
 			 set	

@@ -53,11 +53,12 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public PublicDataTransObj.PublicReturnDTO Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

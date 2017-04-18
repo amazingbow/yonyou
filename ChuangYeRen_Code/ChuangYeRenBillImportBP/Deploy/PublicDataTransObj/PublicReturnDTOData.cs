@@ -37,8 +37,8 @@ namespace PublicDataTransObj
 					Flag=false; 
 		
 		
+					DocID= 0; 
 		
-
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
 		}
@@ -61,7 +61,7 @@ namespace PublicDataTransObj
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public PublicReturnDTOData(  System.Boolean flag  , System.String message  , System.String docNo  , System.String docID  )
+		public PublicReturnDTOData(  System.Boolean flag  , System.String message  , System.String docNo  , System.Int64 docID  )
 		{
 			initData();
 			this.Flag = flag;
@@ -142,8 +142,8 @@ namespace PublicDataTransObj
 		/// 返回对象.Misc.单据ID
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.String m_docID ;
-		public System.String DocID
+		private System.Int64 m_docID ;
+		public System.Int64 DocID
 		{
 			get	
 			{	
