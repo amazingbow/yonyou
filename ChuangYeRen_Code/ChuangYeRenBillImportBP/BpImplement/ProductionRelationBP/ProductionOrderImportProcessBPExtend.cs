@@ -90,11 +90,11 @@
             moDto.ExpandLevel = 2;
             //moDto.IsCapacityLimit
             //moDto.IsFirmed
-            moDto.ItemMaster = new CBO.Pub.Controller.CommonArchiveDataDTOData
-            {
-                Code = order.ItemID.Code,
-                Name = order.ItemID.Name
-            };
+            //moDto.ItemMaster = new CBO.Pub.Controller.CommonArchiveDataDTOData
+            //{
+            //    Code = order.ItemID.Code,
+            //    Name = order.ItemID.Name
+            //};
             //moDto.ItemVersion
             moDto.MOOperationDTOs = new List<MOOperationDTOData>();
             moDto.MOPickListDTOs = new List<MOPickListDTOData>();

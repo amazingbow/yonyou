@@ -18,7 +18,7 @@ namespace PublicDataTransObj {
 		/// <summary>
 		/// Constructor with Full Argument 
 		/// </summary>
-		public PublicReturnDTO(  System.Boolean flag  , System.String message  , System.String docNo  , System.String docID  )
+		public PublicReturnDTO(  System.Boolean flag  , System.String message  , System.String docNo  , System.Int64 docID  )
 		{
 			this.Flag = flag;
 			this.Message = message;
