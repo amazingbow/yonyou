@@ -106,7 +106,7 @@
                             TargetOrgName = shipOrg.U9Name
                         };
                         HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=1 and SapCode='"
-                                  + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
+                                  + item.CurrencyCode + "'");
                         if (shipCurrency == null)
                         {
                             throw new Exception("币种信息没有传值，或者关系对照没有维护且审核");
@@ -570,12 +570,12 @@
                 {
                     //如果是应付股利则通过 供应商来查找到客户
                     shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=13 and SapCode='"
-                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                    + entry.SupplierCode + "'");
                 }
                 else
                 {
                     shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
-                   + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+                   + entry.CustomerCode + "'");
                 }
                 if (shipCust != null)
                 {
@@ -599,7 +599,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment4)
             {
                 HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=3 and SapCode='"
-                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                    + entry.SupplierCode + "'");
                 if (shipSupplier != null)
                 {
                     stb.Append(shipSupplier.U9Code + SYMBOL);
@@ -671,7 +671,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment7)
             {
                 HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=4 and SapCode='"
-                        + entry.DepartmentCode + "' and SapCompCode='" + voucher.CompanyCode + "'");
+                        + entry.DepartmentCode + "'");
                 if (shipDepartment != null)
                 {
                     stb.Append(shipDepartment.U9Code + SYMBOL);
@@ -693,7 +693,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment8)
             {
                 HxRelationshipBE shipWork = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=5 and SapCode='"
-                        + entry.EmployeeCode + "' and SapName='" + entry.EmployeeName + "'");
+                        + entry.EmployeeCode + "'");
 
                 if (shipWork != null)
                 {
@@ -716,7 +716,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment9)
             {
                 HxRelationshipBE shipFee = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=11 and SapCode='"
-                             + entry.FeeTypeEnumCode + "' and SapName='" + entry.FeeTypeEnumDescription + "'");
+                             + entry.FeeTypeEnumCode+ "'");
                 if (shipFee != null)
                 {
                     stb.Append(shipFee.U9Code + SYMBOL);
@@ -738,7 +738,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment10)
             {
                 HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=9 and SapCode='"
-                      + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+                      + entry.AssetsCode + "'");
                 if (shipProjec != null)
                 {
                     stb.Append(shipProjec.U9Code);
@@ -748,7 +748,7 @@
                 }
                 else
                 {
-                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "工程项目是必输的，但是并没有传值或维护对应关系");
+                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "工程项目(对应的是资产编码字段)是必输的，但是并没有传值或维护对应关系");
                 }
             }
             else

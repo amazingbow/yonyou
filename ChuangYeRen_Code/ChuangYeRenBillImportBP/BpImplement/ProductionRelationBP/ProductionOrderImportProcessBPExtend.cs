@@ -7,7 +7,10 @@
     using System.Collections.Generic;
     using System.Text;
     using UFIDA.U9.Base;
+    using UFIDA.U9.Base.Organization;
+    using UFIDA.U9.CBO.MFG.CO;
     using UFIDA.U9.CBO.Pub.Controller;
+    using UFIDA.U9.CBO.SCM.Warehouse;
     using UFIDA.U9.ISV.MO;
     using UFIDA.U9.ISV.MO.Proxy;
     using UFSoft.UBF.AopFrame;
@@ -93,10 +96,14 @@
                 Name = order.COperator.Name
             }; // 业务员  
             moDto.CompleteDate = order.DeliverDate;
-        
+
             //moDto.CUD//暂时不知道是什么东西
             //moDto.DemandCode = 0;//需求分类
-            //moDto.Department//生产部门
+            moDto.Department = new CommonArchiveDataDTOData
+            {
+                Code = order.Department.Code,
+                Name = order.Department.Name
+            };//生产部门
             moDto.DescFlexField = new UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData();
             moDto.DocNo = order.MakReq;
             moDto.DocType = new CommonArchiveDataDTOData
@@ -120,9 +127,7 @@
             moDto.MRPQty = (decimal)order.Qty;
             moDto.Org = new CommonArchiveDataDTOData
             {
-                ID = Context.LoginOrg.ID,
-                Code = Context.LoginOrg.Code,
-                Name = Context.LoginOrg.Name
+                ID = order.Org
             };
             moDto.OwnerOrg = new CommonArchiveDataDTOData
             {
@@ -132,27 +137,40 @@
             //moDto.ProductLotMaster
             //moDto.ProductLotNo
             moDto.ProductQty = (decimal)order.Qty;
-            //moDto.ProductUOM
+            moDto.ProductUOM = new CommonArchiveDataDTOData
+            {
+                Code = order.ProductUOM.Code,
+                Name = order.ProductUOM.Name,
+            };
             moDto.Project = new CommonArchiveDataDTOData
             {
                 Code = order.SCPOID.Code,//SCPOBE.SCPO
                 Name = order.SCPOID.Name
             };
-            moDto.RoutingAlternate = 0;
-            moDto.RoutingECONo = "";
+            //moDto.RoutingAlternate = 0;
+            //moDto.RoutingECONo = "";
             //moDto.RoutingEffeDate
             //moDto.RoutingVer
             //moDto.SCVBin
-            moDto.SCVWh = new CommonArchiveDataDTOData { };
-            moDto.CostField = new CommonArchiveDataDTOData { };//根据入库仓库带出
-            //moDto.Seiban
-            moDto.SnList = new List<string>();
-            moDto.StartDate = order.ReceiveDate;
-            moDto.Task = new CommonArchiveDataDTOData
+            Organization org = Organization.Finder.FindByID(order.SCVWh.OrgID);
+            Warehouse wh = Warehouse.FindByCode(org, order.SCVWh.Code);
+            moDto.SCVWh = new CommonArchiveDataDTOData
             {
-                Code = "",//SCPOBE.SCPO
-                Name = ""
+                Code = wh.Code,
+                Name = wh.Name,
+                ID = wh.ID
             };
+            CostFieldObject costFieldObject = CostFieldObject.Finder.Find("Warehouse=" + wh.ID);
+            moDto.CostField = new CommonArchiveDataDTOData
+            {
+                Code = costFieldObject.CostField.Code,
+                Name = costFieldObject.CostField.Name,
+                ID = costFieldObject.CostField.ID
+            };//根据入库仓库带出
+            //moDto.Seiban
+            //moDto.SnList = new List<string>();
+            moDto.StartDate = order.ReceiveDate;
+            //moDto.Task 
             return moDto;
         }
     }
