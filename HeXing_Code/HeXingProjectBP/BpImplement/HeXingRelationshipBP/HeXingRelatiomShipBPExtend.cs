@@ -192,7 +192,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
-                                    Relatiom.FName = Account.Name;
+                                    Relatiom.FName = Account.TreeDisplayName;
                                     Relatiom.AccountProperty = Account.AccountProperty.Name;
                                     string strBalanceDirection = "";
                                     if (Account.BalanceDirection.Value == 0)
@@ -395,7 +395,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("TreeDisplayName like @Name and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
@@ -403,7 +403,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
-                                    Relatiom.FName = Account.Name;
+                                    Relatiom.FName = Account.TreeDisplayName;
                                     Relatiom.AccountProperty = Account.AccountProperty.Name;
                                     string strBalanceDirection = "";
                                     if (Account.BalanceDirection.Value == 0)
