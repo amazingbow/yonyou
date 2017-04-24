@@ -36,15 +36,40 @@
             PublicReturnDTO pubResult = new PublicReturnDTO();
             CreatRecedeIssueDocSVProxy proxy = new CreatRecedeIssueDocSVProxy();
             proxy.RecedeItemAndSnDTOList = new List<RecedeItemAndSnDTOData>();
+            proxy.IsAutoIssued = true;
             InvStock invStock = InvStock.Finder.FindByID(bpObj.RelationId);
             if (invStock == null)
             {
+                pubResult.Flag = false;
+                pubResult.Message = "所传ID找不到对应数据！";
+                return pubResult;
+            }
+            foreach (var item in invStock.InvStocks)
+            {
+                RecedeItemAndSnDTOData dto = new RecedeItemAndSnDTOData
+                {
+                    ItemCode = item.ItemID.Code,
+                    ItemName = item.ItemID.Name,
+                    RecedeQty = item.InQty,
+                    WhCode = item.StockID.Code,
+                    WhName = item.StockID.Name,
+                    //SnCode = "",
+                    //NewSnCode = "",
+                    //PickID = 0,
+                    //RecedeReason = 0
+                };
+                proxy.RecedeItemAndSnDTOList.Add(dto);
+            }
+            try
+            {
+                var result = proxy.Do();
 
             }
-            RecedeItemAndSnDTOData dto = new RecedeItemAndSnDTOData
+            catch (Exception ex)
             {
-
-            };
+                pubResult.Message = ex.Message;
+                pubResult.Flag = false;
+            }
             return pubResult;
         }
     }

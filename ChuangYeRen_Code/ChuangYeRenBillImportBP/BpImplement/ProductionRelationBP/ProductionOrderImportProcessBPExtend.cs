@@ -53,6 +53,7 @@
                 if (data.Count == 0) return pub;
                 pub.DocID = data[0].ID;
                 pub.DocNo = data[0].DocNo;
+                
                 ApproveMoProxy approveProxy = new ApproveMoProxy();
                 approveProxy.MOOperateParamDTOs = new List<MOOperateParamDTOData>();
                 MOOperateParamDTOData appData = new MOOperateParamDTOData

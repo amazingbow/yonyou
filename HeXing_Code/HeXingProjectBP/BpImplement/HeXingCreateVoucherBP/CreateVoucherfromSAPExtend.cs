@@ -58,6 +58,7 @@
             UpdateRepeatData();
             CreateVoucherfromSAP bpObj = (CreateVoucherfromSAP)obj;
             var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("(IsU9Successful=0 or IsU9Successful=2) and (IsRepeat=0 or IsRepeat is null)");
+            //var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("ID=1002005179624367");//1002005179624367
             if (glVoucherLst.Count == 0) return null;//表中没有要处理的数据。
             ProcessRelData processData = new ProcessRelData();
             List<string> returnData = processData.Do();
@@ -199,7 +200,7 @@
                     }
                     session.Commit();
                 }
-                if (string.IsNullOrEmpty(docNo) && !deleteFlag) continue;
+                if (string.IsNullOrEmpty(docNo) || deleteFlag) continue;//二者只要有一个满足条件就不进行下一步
                 using (ISession session = Session.Open())
                 {
                     try
@@ -220,18 +221,26 @@
                     }
                     catch (Exception ex)
                     {
-                        item.U9ErrorResult = "导入失败！失败信息：" + ex.Message;
-                        item.IsU9Successful = ImportFlagEnum.ImportFailed;
-                        VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
-                        deleteProxy.Voucher = new List<long>();
-                        deleteProxy.Voucher.Add(item.U9VoucherID);
-                        deleteProxy.Do();
-                        //如果删除凭证的话把对应的对照关系也删掉
-                        var refList = RefVoucherInfoBE.Finder.FindAll("VoucherID=" + item.U9VoucherID);
-                        item.U9VoucherID = 0;
-                        foreach (var refItem in refList)
+                        try
                         {
-                            refItem.Remove();
+                            item.U9ErrorResult = "导入失败！失败信息：" + ex.Message;
+                            item.IsU9Successful = ImportFlagEnum.ImportFailed;
+                            VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
+                            deleteProxy.Voucher = new List<long>();
+                            deleteProxy.Voucher.Add(item.U9VoucherID);
+                            deleteProxy.Do();
+                            //如果删除凭证的话把对应的对照关系也删掉
+                            var refList = RefVoucherInfoBE.Finder.FindAll("VoucherID=" + item.U9VoucherID);
+                            item.U9VoucherID = 0;
+                            foreach (var refItem in refList)
+                            {
+                                refItem.Remove();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            item.U9ErrorResult = "导入成功，但是审核失败，删除凭证的时候出现问题，请手动处理！凭证号：" + docNo;
+                            item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         }
                     }
                     session.Commit();

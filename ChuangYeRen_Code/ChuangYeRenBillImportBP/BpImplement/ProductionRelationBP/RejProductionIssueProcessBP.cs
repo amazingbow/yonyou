@@ -20,7 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 	public partial class RejProductionIssueProcessBP
 	{
 	    #region Fields
-		private System.String relationId;
+		private System.Int64 relationId;
 		
 	    #endregion
 		
@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		/// 生产退料操作.Misc.相关表ID
 		/// </summary>
 		/// <value></value>
-		public System.String RelationId
+		public System.Int64 RelationId
 		{
 			get
 			{
