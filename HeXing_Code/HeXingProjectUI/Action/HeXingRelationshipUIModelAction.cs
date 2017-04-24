@@ -375,6 +375,19 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
  
 
 		}
+		/// <summary>
+		/// Help: 批量审批
+		/// </summary>
+		public void BatchApproveClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.BatchApproveClick_Extend);
+		}
+		private void BatchApproveClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

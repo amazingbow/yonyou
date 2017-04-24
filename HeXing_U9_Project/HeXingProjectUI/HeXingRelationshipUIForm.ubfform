@@ -91,7 +91,7 @@
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Value" Width="80" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
-      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="80" />
       <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
       <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
       <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
@@ -116,6 +116,11 @@
         <Event ActionName="ExecuteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
       </Events>
     </Button>
+    <Button ID="190410f5-8335-4e3d-b121-d1bd72d62c41" AccessKey="" DisplayName="批量审批" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" Name="BtnBatchApprove" TabIndex="1" TabStop="True" Width="80" X="100" Y="3">
+      <Events>
+        <Event ActionName="BatchApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
   </Card>
   <Card ID="d789cd92-5167-4c3c-b371-745d29c0e4a1" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card3" TabIndex="2" TabStop="False" Width="810" X="0" Y="38">
     <Columns>
@@ -126,7 +131,7 @@
       <Row Fixed="True" Height="415" Name="Row0" />
       <Row Fixed="False" Height="1" Name="Row1" />
     </Rows>
-    <DataGrid ID="743034e0-94e3-494c-9ac5-f4d335dd7c14" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="421" Name="DataGrid1" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="1" TabStop="True" Width="790" X="10" Y="0">
+    <DataGrid ID="743034e0-94e3-494c-9ac5-f4d335dd7c14" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AllowSelectAllPage="True" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="421" IsMultiSelect="True" Name="DataGrid1" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="1" TabStop="True" Width="790" X="10" Y="0">
       <Events />
       <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
         <HeaderRow Name="DefaultRow">
