@@ -291,6 +291,7 @@
                 cfVoucherItem.SOB = successVoucher.SOB;
                 cfVoucherItem.Org = successVoucher.Org;
                 cfVoucherItem.CashFlowItem = cashFlowItem;
+                cfVoucherItem.CashFlowItemAttr = cashFlowItem.ItemProperty;
                 if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
                 {
                     cfVoucherItem.DrAccount = successVoucher.Entries[i].Account;
@@ -300,8 +301,8 @@
                 else
                 {
                     cfVoucherItem.CrAccount = successVoucher.Entries[i].Account;
-                    cfVoucherItem.LCMoney = -successVoucher.Entries[i].AccountedCr;//本币金额
-                    cfVoucherItem.OCMoney = -successVoucher.Entries[i].EnteredCr;//原币金额
+                    cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedCr;//本币金额
+                    cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredCr;//原币金额
                 }
                 cfVoucherItem.Currency = successVoucher.Entries[i].Currency;
                 cfVoucherItem.OCToFCExchangeRate = successVoucher.Entries[i].OCToFCExchangeRate;//汇率
@@ -725,7 +726,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment9)
             {
                 HxRelationshipBE shipFee = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=11 and SapCode='"
-                             + entry.FeeTypeEnumCode+ "'");
+                             + entry.FeeTypeEnumCode + "'");
                 if (shipFee != null)
                 {
                     stb.Append(shipFee.U9Code + SYMBOL);
