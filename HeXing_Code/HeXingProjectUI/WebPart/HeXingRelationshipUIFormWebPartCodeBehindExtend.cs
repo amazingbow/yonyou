@@ -500,9 +500,13 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
             //开启个性化
 
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
-		
+
+            
+
         }
+
         
+
         public void AfterEventBind()
         {
         }

@@ -632,6 +632,10 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
 
             ((IUFFldReferenceColumn)column).AddReferenceInParameter("SapCompCode", "SapCompCode", "DataGrid1");
+
+
+            ((IUFFldReferenceColumn)column).ApplyRefRelations();
+            
 								
 						
             //foreach Reference's output set data
