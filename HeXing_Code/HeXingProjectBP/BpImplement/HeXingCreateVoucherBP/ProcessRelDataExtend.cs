@@ -70,6 +70,7 @@
                         codeNamePair[7].Add(item.CompanyCode, item.CompanyName + "@" + item.SAPVoucherDisplayCode);
                     }
                 }
+
                 if (!string.IsNullOrEmpty(item.VoucherCategoryCode))
                 {
                     if (!codeNamePair[8].ContainsKey(item.VoucherCategoryCode))//凭证类型
@@ -79,6 +80,13 @@
                 }
                 foreach (var line in item.HeXingSAPU9GLVoucherLine)
                 {
+                    if (!string.IsNullOrEmpty(line.RelCompCode))
+                    {
+                        if (!codeNamePair[7].ContainsKey(line.RelCompCode))//组织--关系企业
+                        {
+                            codeNamePair[7].Add(line.RelCompCode, line.RelCompName + "@" + item.SAPVoucherDisplayCode);
+                        }
+                    }
                     if (!string.IsNullOrEmpty(line.CustomerCode))
                     {
                         if (!codeNamePair[2].ContainsKey(line.CustomerCode))//客户

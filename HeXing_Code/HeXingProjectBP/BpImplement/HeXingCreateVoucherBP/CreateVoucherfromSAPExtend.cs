@@ -273,16 +273,23 @@
                 if (!successVoucher.Entries[i].Account.Code.StartsWith("1001")
                     && !successVoucher.Entries[i].Account.Code.StartsWith("1002")) continue;
                 HxRelationshipBE cashFlowRef = null;
+                HxRelationshipBE shipOrg = null;
                 foreach (var line in item.HeXingSAPU9GLVoucherLine)
                 {
                     if (line.DescFlexField.PrivateDescSeg1 == successVoucher.Entries[i].Account.Code)
                     {
                         cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='" + line.CashFlowCode + "'");
+                        shipOrg = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=7 and SapCode='" + line.RelCompCode + "'");
                     }
                 }
                 if (cashFlowRef == null)
                 {
                     throw new Exception("没有传现金流，或者没有维护相应的现金流对照关系并审核！");
+                }
+
+                if (shipOrg == null)
+                {
+                    throw new Exception("关系企业信息没有传值，或者关系对照表中没有维护且审核");
                 }
                 CashFlowItem cashFlowItem = CashFlowItem.Finder.Find("Code = @Code and IsSystemPre=0", new OqlParam[] { new OqlParam(cashFlowRef.U9Code) });
                 CFVoucherItem cfVoucherItem = CFVoucherItem.Create();
@@ -290,6 +297,7 @@
                 cfVoucherItem.Voucher = successVoucher;
                 cfVoucherItem.SOB = successVoucher.SOB;
                 cfVoucherItem.Org = successVoucher.Org;
+                cfVoucherItem.RelOrg = Organization.FindByCode(shipOrg.U9Code);
                 cfVoucherItem.CashFlowItem = cashFlowItem;
                 cfVoucherItem.CashFlowItemAttr = cashFlowItem.ItemProperty;
                 if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
