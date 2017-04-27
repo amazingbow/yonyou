@@ -38,13 +38,14 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationId);
+		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationId, System.Int64 productionId);
     }
 	[Serializable]    
     public class RcvProductionIssueProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IRcvProductionIssueProcessBP
     {
 	#region Fields	
 				private System.Int64 relationId ;
+						private System.Int64 productionId ;
 			
 	#endregion	
 		
@@ -67,6 +68,25 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 			set	
 			{	
 				this.relationId = value;	
+			}
+		}		
+						
+
+		/// <summary>
+		/// 生产订单ID (该属性可为空,但有默认值)
+		/// 生产领料操作.Misc.生产订单ID
+		/// </summary>
+		/// <value>System.Int64</value>
+		public System.Int64 ProductionId
+		{
+			get	
+			{	
+				return this.productionId;
+			}
+
+			set	
+			{	
+				this.productionId = value;	
 			}
 		}		
 			
@@ -96,7 +116,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
             IRcvProductionIssueProcessBP channel = oChannel as IRcvProductionIssueProcessBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, relationId);
+				return channel.Do(context, out returnMsgs, relationId, productionId);
 	    }
             return  null;
         }
@@ -113,7 +133,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-					
+										
 		}
 		#endregion 
 

@@ -960,6 +960,44 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 关系企业代码 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表行.Misc.关系企业代码
+			/// </summary>
+			/// <value></value>
+			public  System.String RelCompCode
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("RelCompCode");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 关系企业名称 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表行.Misc.关系企业名称
+			/// </summary>
+			/// <value></value>
+			public  System.String RelCompName
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("RelCompName");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1928,6 +1966,54 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+		
+			/// <summary>
+		/// 关系企业代码 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表行.Misc.关系企业代码
+		/// </summary>
+		/// <value></value>
+			public  System.String RelCompCode
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("RelCompCode");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("RelCompCode", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 关系企业名称 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表行.Misc.关系企业名称
+		/// </summary>
+		/// <value></value>
+			public  System.String RelCompName
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("RelCompName");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("RelCompName", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -2122,6 +2208,16 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_DescFlexField　{ get { return EntityRes.GetResource("DescFlexField");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RelCompCode")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_RelCompCode　{ get { return EntityRes.GetResource("RelCompCode");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RelCompName")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_RelCompName　{ get { return EntityRes.GetResource("RelCompName");　}　}
 		#endregion 
 
 
@@ -2640,6 +2736,16 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// 属性类型属性展开:DescFlexField.CombineName的名称
 			/// </summary>
 			public static string DescFlexField_CombineName { get { return "DescFlexField.CombineName";　}　}
+				
+			/// <summary>
+			/// 属性: 关系企业代码 的名称
+			/// </summary>
+			public static string RelCompCode　{ get { return "RelCompCode";　}　}
+				
+			/// <summary>
+			/// 属性: 关系企业名称 的名称
+			/// </summary>
+			public static string RelCompName　{ get { return "RelCompName";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2650,7 +2756,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																																																				
 				if (attrName.StartsWith("DescFlexField."))
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetPropertyResource(DescFlexField_TypeFullName, attrName);
-		
+						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2805,6 +2911,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg29","DescFlexField_PrivateDescSeg29");
 			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg30","DescFlexField_PrivateDescSeg30");
 			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
+			this.exdMultiLangAttrs.Add("RelCompCode","RelCompCode");
+			this.exdMultiLangAttrs.Add("RelCompName","RelCompName");
         }
 	#endregion 
 
@@ -2824,7 +2932,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																																																																																											
 																																																																																																																																																																																																																																																						
 
-
+						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2845,6 +2953,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		private void DeSerializeKey(HeXingSAPU9GLVoucherLineData data)
 		{
 		
+			
+
+			
+
 			
 
 			
@@ -3020,6 +3132,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 								this.SetTypeValue("AssetsDescription",data.AssetsDescription);
 		
 								this.DescFlexField.FromEntityData(data.DescFlexField);
+		
+								this.SetTypeValue("RelCompCode",data.RelCompCode);
+		
+								this.SetTypeValue("RelCompName",data.RelCompName);
 		
 			#endregion 
 
@@ -3302,6 +3418,20 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 				data.DescFlexField=this.DescFlexField.ToEntityData();
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("RelCompCode");
+				if (obj != null)
+					data.RelCompCode=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("RelCompName");
+				if (obj != null)
+					data.RelCompName=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -3368,6 +3498,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			//调用UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments属性类型的内置校验方法.
 			this.DescFlexField.OnValidate() ;
 	
+
+
 			//调用实体自身校验器代码.
             return true; 
         }

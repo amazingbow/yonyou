@@ -21,6 +21,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 	{
 	    #region Fields
 		private System.Int64 relationId;
+		private System.Int64 productionId;
 		
 	    #endregion
 		
@@ -45,6 +46,22 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 			set
 			{
 				relationId = value;
+			}
+		}
+		/// <summary>
+		/// 生产订单ID	
+		/// 生产领料操作.Misc.生产订单ID
+		/// </summary>
+		/// <value></value>
+		public System.Int64 ProductionId
+		{
+			get
+			{
+				return this.productionId;
+			}
+			set
+			{
+				productionId = value;
 			}
 		}
 	    #endregion

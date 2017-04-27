@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId);
+        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId, System.Int64 productionId);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,23 +46,24 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IRcvProductionIssueProcessBP Members
 
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId)
+        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId, System.Int64 productionId)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, relationId);
+			return DoEx(commonData, relationId, productionId);
         }
         
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationId)
+        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationId, System.Int64 productionId)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RcvProductionIssueProcessBP");                
                 RcvProductionIssueProcessBP objectRef = new RcvProductionIssueProcessBP();
-	
+		
 				objectRef.RelationId = relationId;
+				objectRef.ProductionId = productionId;
 
 				//处理返回类型.
 				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
