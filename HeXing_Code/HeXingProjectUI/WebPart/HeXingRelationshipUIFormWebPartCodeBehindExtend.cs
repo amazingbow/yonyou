@@ -154,6 +154,69 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
             //BtnApprove_Click_DefaultImpl(sender,e);
 		}
 
+        private void BtnBatchApprove_Click_Extend(object sender, EventArgs e)
+        {
+            //this.DataCollect();
+            //this.DataBind();
+            //this.Model.ClearErrorMessage();//清除错误信息
+
+            string strOPath = this.Model.HxRelationshipBE.CurrentFilter.OPath;
+            IUIView view = this.Model.Views[0];
+            view.PageStrategy.IsUsing = false;
+            this.Model.HxRelationshipBE.Clear();
+            this.Model.ClearErrorMessage();
+
+            this.Model.HxRelationshipBE.CurrentFilter.OPath = strOPath;
+            this.Action.CommonAction.Load(this.Model.HxRelationshipBE);
+            this.DataCollect();
+            this.DataBind();
+
+            if (this.Model.Views[0].Records.Count == 0)
+            {
+                UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('没有查找到任何记录！');", true);
+                return;
+            }
+            else
+            {
+                int count = 0;
+                foreach (IUIRecord record in this.Model.Views[0].Records)
+                {
+                    if (string.IsNullOrEmpty(record["U9Code"].ToString()))
+                    {
+
+                    }
+                    else
+                    {
+                        if (record["RefStatus"].ToString() == "1")
+                        {
+                            record["RefStatus"] = 2;
+                            count = count + 1;
+                        }
+                    }
+                }
+
+                if (count > 0)
+                {
+                    BtnSave_Click_DefaultImpl(sender, e);
+                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('查找的所有记录中，没有审核的已经维护U9信息的数据已经全部审核成功！');", true);
+                }
+                else
+                {
+                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('查找的所有记录中，没有可以审核的数据！');", true);
+                }
+            }
+
+            view.PageStrategy.IsUsing = true;
+            this.Model.HxRelationshipBE.Clear();
+            this.Model.ClearErrorMessage();
+
+            this.Model.HxRelationshipBE.CurrentFilter.OPath = strOPath;
+            this.Action.CommonAction.Load(this.Model.HxRelationshipBE);
+            this.DataCollect();
+            this.DataBind();
+
+        }
+
         //BtnUndoApprove_Click...
         private void BtnUndoApprove_Click_Extend(object sender, EventArgs e)
         {
@@ -423,6 +486,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
             PDFormMessage.ShowConfirmDialog(this.Page, "是否要废弃当前记录？", "废弃确认", this.BtnDelete);
             //PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
             PDFormMessage.ShowConfirmDialog(this.Page, "是否要审核当前记录？", "审核确认", this.BtnApprove);
+            PDFormMessage.ShowConfirmDialog(this.Page, "是否要批量审批查找出的所有记录？", "批量审批确认", this.BtnBatchApprove);
 
 		}
 
@@ -436,9 +500,13 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
             //开启个性化
 
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
-		
+
+            
+
         }
+
         
+
         public void AfterEventBind()
         {
         }
@@ -451,6 +519,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
             this.BtnAttachment.Visible = false;
             this.BtnFlow.Visible = false;
             this.BtnDelete.Text = "废弃";
+            this.DataGrid1.IsMultiSelect = false;
+            this.DataGrid1.AllowSelectAllPage = false;
+            this.DataGrid1.AllPageSelected = false;
 		}
 
 		public void AfterUIModelBinding()
@@ -461,6 +532,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
                 this.BtnDelete.Enabled = true;
                 this.BtnApprove.Enabled = true;
                 this.BtnUndoApprove.Enabled = true;
+                this.BtnBatchApprove.Enabled = true;
                 UFGrid grid1 = this.DataGrid1 as UFGrid;
                 int i=0;
                 foreach (HxRelationshipBERecord record in this.Model.HxRelationshipBE.Records)
@@ -477,6 +549,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
                 this.BtnDelete.Enabled = false;
                 this.BtnApprove.Enabled = false;
                 this.BtnUndoApprove.Enabled = false;
+                this.BtnBatchApprove.Enabled = false;
             }
 
 		}

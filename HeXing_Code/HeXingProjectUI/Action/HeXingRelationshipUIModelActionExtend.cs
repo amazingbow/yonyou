@@ -198,6 +198,15 @@ this.OnClose_DefaultImpl(sender,e);
 
             //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
             this.ExecuteClick_DefaultImpl(sender, e);
+        }
+
+        private void BatchApproveClick_Extend(object sender, UIActionEventArgs e)
+        {
+
+
+
+            //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
+            this.BatchApproveClick_DefaultImpl(sender, e);
         } 
 		
 		#region UBF 内置两数据处理Action

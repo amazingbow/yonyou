@@ -107,6 +107,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
         IUFButton BtnPrint;
         IUFCard Card0;
         IUFButton BtnExecute;
+        IUFButton BtnBatchApprove;
         IUFCard Card3;
         IUFDataGrid DataGrid1;
 		UpdatePanel updatePanel;
@@ -177,6 +178,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 						
 				//Button控件事件
 			this.BtnExecute.Click += new EventHandler(BtnExecute_Click);		
+						
+				//Button控件事件
+			this.BtnBatchApprove.Click += new EventHandler(BtnBatchApprove_Click);		
 						
 
 	
@@ -443,8 +447,15 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 			UIControlBuilder.BuilderUFControl(this.BtnExecute, "0");		
 
 
-
+				this.BtnBatchApprove = UIControlBuilder.BuilderUFButton(_UFCard, true, "BtnBatchApprove", true, true, 80, 20, 2, 0, 1, 1, "100","", this.Model.ElementID,"BatchApproveClick",false,"190410f5-8335-4e3d-b121-d1bd72d62c41","","190410f5-8335-4e3d-b121-d1bd72d62c41");
 	
+
+		
+			UIControlBuilder.BuilderUFControl(this.BtnBatchApprove, "1");		
+
+
+
+		
 
             
             container.Controls.Add(_UFCard);
@@ -491,16 +502,19 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
        
         private void _BuilderControl_DataGrid1(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, false,false,false,false,true,20,false, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid1", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, false,false,false,false,true,20,true, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "1");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 790, 421, 0, 0, 2, 2, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.HxRelationshipBE, "HxRelationshipBE", "", null, 20, "合兴关系对照表");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
-			_UFGrid.AllowSelectAllPage=false;
+			_UFGrid.AllowSelectAllPage=true;
 			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
 		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
             this.DataGrid1 = _UFGrid;
             container.Controls.Add(_UFGrid);
+			//Grid所有页全选事件 
+			((UFWebDataGridAdapter)this.DataGrid1).GridSelectAllPageHandler +=
+				new GridSelectAllPageDelegate(UFIDA.U9.UI.PDHelper.PDListHelper.UFGridDataGrid_GridSelectAllPageDelegate);
 
 
 
@@ -618,6 +632,10 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
 
             ((IUFFldReferenceColumn)column).AddReferenceInParameter("SapCompCode", "SapCompCode", "DataGrid1");
+
+
+            ((IUFFldReferenceColumn)column).ApplyRefRelations();
+            
 								
 						
             //foreach Reference's output set data
