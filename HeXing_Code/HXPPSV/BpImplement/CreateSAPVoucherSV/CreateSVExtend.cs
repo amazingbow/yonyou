@@ -129,6 +129,8 @@
                             docline.MaterialGroupDescription = dtoline.MaterialGroupDescription;//物料组描述
                             docline.AssetsCode = dtoline.AssetsCode;//资产编号
                             docline.AssetsDescription = dtoline.AssetsDescription;//资产描述
+                            docline.RelCompCode = dtoline.RelCompCode;//关系企业代码
+                            docline.RelCompName = dtoline.RelCompName;//关系企业名称
                         }
                         session.Commit();
                         commonResultDTO.IsSuccess = true;

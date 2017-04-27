@@ -4,58 +4,6 @@
         <name>UFIDA.U9.Cust.HXPPSV.Deploy</name>
     </assembly>
     <members>
-        <member name="T:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData">
-            <summary>
-            通用返回结果对象 DTO :自定义的数据传输类型 
-            
-            </summary>
-        </member>
-        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.#ctor">
-            <summary>
-            Default Constructor
-            </summary>
-        </member>
-        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.#ctor(System.Boolean,System.String,System.String,System.String,System.DateTime,System.Int64)">
-            <summary>
-            Constructor Full Argument
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_isSuccess">
-            <summary>
-            是否成功
-            通用返回结果对象.Misc.是否成功
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_message">
-            <summary>
-            消息
-            通用返回结果对象.Misc.消息
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_companyCode">
-            <summary>
-            公司名称
-            通用返回结果对象.Misc.公司名称
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_sAPVoucherDisplayCode">
-            <summary>
-            SAP凭证号
-            通用返回结果对象.Misc.SAP凭证号
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_postDate">
-            <summary>
-            记账日期
-            通用返回结果对象.Misc.记账日期
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_middleId">
-            <summary>
-            中间表ID
-            通用返回结果对象.Misc.中间表ID
-            </summary>
-        </member>
         <member name="T:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData">
             <summary>
             SAP与U9凭证对接中间表DTO DTO :自定义的数据传输类型 
@@ -143,7 +91,7 @@
             Default Constructor
             </summary>
         </member>
-        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData.#ctor(UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData,System.Int32,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData.#ctor(UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData,System.Int32,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Constructor Full Argument
             </summary>
@@ -310,6 +258,18 @@
             SAP与U9凭证对接中间表行DTO.Misc.资产描述
             </summary>
         </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData.m_relCompCode">
+            <summary>
+            关系企业代码
+            SAP与U9凭证对接中间表行DTO.Misc.关系企业代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData.m_relCompName">
+            <summary>
+            关系企业名称
+            SAP与U9凭证对接中间表行DTO.Misc.关系企业名称
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.HXPPSV.Resource">
             <summary>
               强类型资源类，用于查找本地化字符串等。
@@ -324,6 +284,58 @@
             <summary>
               为使用此强类型资源类的所有资源查找
               重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData">
+            <summary>
+            通用返回结果对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.#ctor(System.Boolean,System.String,System.String,System.String,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_isSuccess">
+            <summary>
+            是否成功
+            通用返回结果对象.Misc.是否成功
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_message">
+            <summary>
+            消息
+            通用返回结果对象.Misc.消息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_companyCode">
+            <summary>
+            公司名称
+            通用返回结果对象.Misc.公司名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_sAPVoucherDisplayCode">
+            <summary>
+            SAP凭证号
+            通用返回结果对象.Misc.SAP凭证号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_postDate">
+            <summary>
+            记账日期
+            通用返回结果对象.Misc.记账日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.CommonResultDTOData.m_middleId">
+            <summary>
+            中间表ID
+            通用返回结果对象.Misc.中间表ID
             </summary>
         </member>
     </members>
