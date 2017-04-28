@@ -38,13 +38,13 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 productionID);
+		void Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationId);
     }
 	[Serializable]    
     public class ProductionOrderDeleteProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IProductionOrderDeleteProcessBP
     {
 	#region Fields	
-				private System.Int64 productionID ;
+				private System.Int64 relationId ;
 			
 	#endregion	
 		
@@ -53,20 +53,20 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 				
 
 		/// <summary>
-		/// 生产订单ID (该属性可为空,但有默认值)
-		/// 生产订单删除处理.Misc.生产订单ID
+		/// 相关表ID (该属性可为空,但有默认值)
+		/// 生产订单删除处理.Misc.相关表ID
 		/// </summary>
 		/// <value>System.Int64</value>
-		public System.Int64 ProductionID
+		public System.Int64 RelationId
 		{
 			get	
 			{	
-				return this.productionID;
+				return this.relationId;
 			}
 
 			set	
 			{	
-				this.productionID = value;	
+				this.relationId = value;	
 			}
 		}		
 			
@@ -82,11 +82,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 
 		#region Public Method
 		
-        public PublicDataTransObj.PublicReturnDTOData Do()
+        public void Do()
         {
   			InitKeyList() ;
- 			PublicDataTransObj.PublicReturnDTOData result = (PublicDataTransObj.PublicReturnDTOData)InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IProductionOrderDeleteProcessBP>();
-			return GetRealResult(result);
+ 			InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IProductionOrderDeleteProcessBP>();
+			
         }
         
 		protected override object InvokeImplement<T>(T oChannel)
@@ -96,18 +96,12 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
             IProductionOrderDeleteProcessBP channel = oChannel as IProductionOrderDeleteProcessBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, productionID);
+				channel.Do(context, out returnMsgs, relationId);
 	    }
             return  null;
         }
 		#endregion
 		
-		//处理由于序列化导致的返回值接口变化，而进行返回值的实际类型转换处理．
-		private PublicDataTransObj.PublicReturnDTOData GetRealResult(PublicDataTransObj.PublicReturnDTOData result)
-		{
-
-				return result ;
-		}
 		#region  Init KeyList 
 		//初始化SKey集合--由于接口不一样.BP.SV都要处理
 		private void InitKeyList()

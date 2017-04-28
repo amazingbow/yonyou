@@ -38,58 +38,18 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationId, System.Int64 productionId);
+		void Do(IContext context, out IList<MessageBase> outMessages );
     }
 	[Serializable]    
     public class RcvProductionIssueProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IRcvProductionIssueProcessBP
     {
 	#region Fields	
-				private System.Int64 relationId ;
-						private System.Int64 productionId ;
-			
+	
 	#endregion	
 		
 	#region Properties
 	
-				
-
-		/// <summary>
-		/// 相关表ID (该属性可为空,但有默认值)
-		/// 生产领料操作.Misc.相关表ID
-		/// </summary>
-		/// <value>System.Int64</value>
-		public System.Int64 RelationId
-		{
-			get	
-			{	
-				return this.relationId;
-			}
-
-			set	
-			{	
-				this.relationId = value;	
-			}
-		}		
-						
-
-		/// <summary>
-		/// 生产订单ID (该属性可为空,但有默认值)
-		/// 生产领料操作.Misc.生产订单ID
-		/// </summary>
-		/// <value>System.Int64</value>
-		public System.Int64 ProductionId
-		{
-			get	
-			{	
-				return this.productionId;
-			}
-
-			set	
-			{	
-				this.productionId = value;	
-			}
-		}		
-			
+	
 	#endregion	
 
 
@@ -102,11 +62,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
 
 		#region Public Method
 		
-        public PublicDataTransObj.PublicReturnDTOData Do()
+        public void Do()
         {
   			InitKeyList() ;
- 			PublicDataTransObj.PublicReturnDTOData result = (PublicDataTransObj.PublicReturnDTOData)InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IRcvProductionIssueProcessBP>();
-			return GetRealResult(result);
+ 			InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy.IRcvProductionIssueProcessBP>();
+			
         }
         
 		protected override object InvokeImplement<T>(T oChannel)
@@ -116,24 +76,18 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.Proxy
             IRcvProductionIssueProcessBP channel = oChannel as IRcvProductionIssueProcessBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, relationId, productionId);
+				channel.Do(context, out returnMsgs);
 	    }
             return  null;
         }
 		#endregion
 		
-		//处理由于序列化导致的返回值接口变化，而进行返回值的实际类型转换处理．
-		private PublicDataTransObj.PublicReturnDTOData GetRealResult(PublicDataTransObj.PublicReturnDTOData result)
-		{
-
-				return result ;
-		}
 		#region  Init KeyList 
 		//初始化SKey集合--由于接口不一样.BP.SV都要处理
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-										
+
 		}
 		#endregion 
 

@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 productionID);
+        void Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,15 +46,15 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IProductionOrderDeleteProcessBP Members
 
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 productionID)
+        public void Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, productionID);
+			DoEx(commonData, relationId);
         }
         
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 productionID)
+        public void DoEx(ICommonDataContract commonData, System.Int64 relationId)
         {
 			this.CommonData = commonData ;
             try
@@ -62,16 +62,10 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.ProductionOrderDeleteProcessBP");                
                 ProductionOrderDeleteProcessBP objectRef = new ProductionOrderDeleteProcessBP();
 	
-				objectRef.ProductionID = productionID;
+				objectRef.RelationId = relationId;
 
 				//处理返回类型.
-				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
-
-				if (result == null)
-					return null ;
-						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
-				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.ProductionOrderDeleteProcessBP");
-				return resultdata;
+				objectRef.Do(); //没有返回值
 
 	        }
 			catch (System.Exception e)

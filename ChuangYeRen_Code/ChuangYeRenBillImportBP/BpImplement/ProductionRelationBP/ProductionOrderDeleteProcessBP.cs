@@ -20,7 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 	public partial class ProductionOrderDeleteProcessBP
 	{
 	    #region Fields
-		private System.Int64 productionID;
+		private System.Int64 relationId;
 		
 	    #endregion
 		
@@ -32,19 +32,19 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 
 	    #region member		
 		/// <summary>
-		/// 生产订单ID	
-		/// 生产订单删除处理.Misc.生产订单ID
+		/// 相关表ID	
+		/// 生产订单删除处理.Misc.相关表ID
 		/// </summary>
 		/// <value></value>
-		public System.Int64 ProductionID
+		public System.Int64 RelationId
 		{
 			get
 			{
-				return this.productionID;
+				return this.relationId;
 			}
 			set
 			{
-				productionID = value;
+				relationId = value;
 			}
 		}
 	    #endregion
@@ -53,12 +53,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public PublicDataTransObj.PublicReturnDTO Do()
+		public void Do()
 		{	
 		    BaseStrategy selector = Select();	
-				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
+				selector.Execute(this);
 		    
-			return result ; 
 		}			
 	    #endregion 					
 	} 		
