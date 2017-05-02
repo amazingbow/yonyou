@@ -136,11 +136,12 @@
                             codeNamePair[6].Add(line.CashFlowCode, line.CashFlowDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
-                    if (!string.IsNullOrEmpty(line.AssetsCode))
+                    var assetCode = line.AssetsCode + ";" + item.CompanyCode;
+                    if (!string.IsNullOrEmpty(assetCode))
                     {
-                        if (!codeNamePair[9].ContainsKey(line.AssetsCode))//项目==资产编码
+                        if (!codeNamePair[9].ContainsKey(assetCode))//项目==资产编码
                         {
-                            codeNamePair[9].Add(line.AssetsCode, line.AssetsDescription + "@" + item.SAPVoucherDisplayCode);
+                            codeNamePair[9].Add(assetCode, line.AssetsDescription + ";" + item.CompanyName + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
                     //实收资本U9将客户直接放在二级科目，SAP为客户核算；处理方案如下：
@@ -314,15 +315,20 @@
                 #region //项目
                 foreach (var item in codeNamePair[9])
                 {
-                    HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=9 and SapCode='" + item.Key + "'");
-                    if (shipDepartment == null)
+                    var assetCodeLst = item.Key.Split(';');
+                    HxRelationshipBE shipProject = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=9 and SapCode='" + assetCodeLst[0] + "' and SapCompCode='"
+                        + assetCodeLst[1] + "'");
+                    if (shipProject == null)
                     {
+                        var valueArray = item.Value.Split('@')[0].Split(';');
                         var relationship = HxRelationshipBE.Create();
                         relationship.RefType = RelationEnum.Project;
-                        relationship.SapCode = item.Key;
-                        relationship.SapName = item.Value.Split('@')[0];
+                        relationship.SapCode = assetCodeLst[0];
+                        relationship.SapName = valueArray[0];
                         relationship.RefStatus = RefStatusEnum.Oraginal;
-                        returnVoucher.Add(item.Value.Split('@')[1] + "资产所对应的U9项目没有维护对照关系");
+                        relationship.SapCompCode = assetCodeLst[1];
+                        relationship.SapCompName = valueArray[1];
+                        returnVoucher.Add(item.Value.Split('@')[1] + "资产+公司所对应的U9项目没有维护对照关系");
                     }
                 }
                 #endregion
