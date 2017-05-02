@@ -66,54 +66,66 @@
 
             //表头
             IC_TransferInDTOData headDto = new IC_TransferInDTOData();
-            // InvStock Stock = InvStock.Finder.FindByID(stockID);
-            //InvStocks.EntityList<InvStocks> stocksList = Stock.InvStocks;
+            InvStock Stock = InvStock.Finder.FindByID(stockID);
+            InvStocks.EntityList<InvStocks> stocksList = Stock.InvStocks;
 
-            //headDto.CreatedBy //创建人
-            //headDto.CreatedOn     //创建时间
+            headDto.CreatedBy = Stock.CreatedBy;
+            headDto.CreatedOn = Stock.CreatedOn;    //创建时间
             //headDto.DescFlexField //实体扩展字段
             //headDto.ID //ID
-            //headDto.SOBAccountPeriod //记账期间
+            //headDto.SOBAccountPeriod = Stock.peroid //记账期间
             headDto.Org = new CommonArchiveDataDTOData //组织
             {
-                Code = "201",
+                ID = Stock.OrgID,
             };
             headDto.TransInDocType = new CommonArchiveDataDTOData   //单据类型
             {
-                Code = "DR01",
+                Name=Stock.IOC.Name,
+                //Code = "DR01",
 
             };
-            headDto.ApprovedBy = "张三";  //审核人
+            //headDto.ApprovedBy = Stock.;  //审核人
            // headDto.Status = 2; // 状态
             headDto.TransferType = 0;       //调入类型
             headDto.TransferDirection = 0;      //调拨方向
             headDto.BusinessDate = System.DateTime.Now; //日期
-            headDto.Memo = ".net调用测试";    //备注
-            //headDto.DocNo = "Text00001";
+            headDto.Memo = Stock.CNote;    //备注
+            headDto.DocNo =Stock.BillNO;//单据编号
             headDto.SysState = ObjectState.Inserted;
             //表行
             List<IC_TransInLineDTOData> LineList = new List<IC_TransInLineDTOData>();
-            //foreach (InvStocks stocks in stocksList)
-            //{
+            foreach (InvStocks stocks in stocksList)
+            {
             IC_TransInLineDTOData lineDto = new IC_TransInLineDTOData();
-            //lineDto.DocLineNo  //行号 
-            //lineDto.Project     //项目
-            //lineDto.StoreUOM      //调入库存单位
-            lineDto.StoreUOMQty = 1;  //调入库存数量
+            //lineDto.DocLineNo=  //行号 
+            //lineDto.Project=stocks.     //项目
+            lineDto.StoreUOM = new CommonArchiveDataDTOData
+            {
+                ID = stocks.ItemID.UOM.ID,
+            };    //调入库存单位
+            lineDto.StoreUOMQty = stocks.InQty;  //调入库存数量
             //lineDto.CostUOM   //成本单位
-            lineDto.CostPrice = 100; //单价
-            lineDto.CostUOMQty = 1;
-            //lineDto.LotInfo //批号
-            //lineDto.CostCurrency   //币种
+            lineDto.CostPrice = stocks.Price; //单价
+            lineDto.CostUOMQty = stocks.InQty;
+            lineDto.LotInfo = new CBO.SCM.PropertyTypes.LotInfoData
+            {
+                LotCode=stocks.BarCode,
+            }; //批号
+            lineDto.CostCurrency = new CommonArchiveDataDTOData
+            {
+                ID = stocks.Currency.ID,
+            };  //币种
             lineDto.CostMoney = (lineDto.CostPrice * lineDto.CostUOMQty); //成本
             //lineDto.IsVMI     //IsVMI标志
             lineDto.TransInSuppInfo = new CBO.SCM.Supplier.SupplierMISCInfoData();
-            lineDto.TransInSuppInfo.Code = "006"; //供应商       
+            //lineDto.TransInSuppInfo.Code = "006";
+            //lineDto.TransInSuppInfo.Code = "006"; //供应商       
             lineDto.ItemInfo = new CBO.SCM.Item.ItemInfoData();
-            lineDto.ItemInfo.ItemCode = "320060023";   //料品信息
+            lineDto.ItemInfo.ItemCode = stocks.ItemID.Code;    
+            //lineDto.ItemInfo.ItemCode = "320060023";   //料品信息
             lineDto.TransInWh = new CommonArchiveDataDTOData //库位
             {
-                Code = "20118",
+                ID = stocks.StockID.ID,
             };
             lineDto.ZeroCost = true;  //零成本
             lineDto.SysState = ObjectState.Inserted;
@@ -145,7 +157,7 @@
             SubLineList.Add(SubLine);
             lineDto.TransInSubLines = SubLineList;
             LineList.Add(lineDto);
-            //}
+            }
             headDto.TransInLines = LineList;
             return headDto;
         }
