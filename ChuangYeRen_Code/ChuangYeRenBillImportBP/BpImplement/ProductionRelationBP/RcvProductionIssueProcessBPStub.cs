@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        void Do(IContext context ,out IList<MessageBase> outMessages );
+        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId, System.Int64 productionId);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,25 +46,33 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IRcvProductionIssueProcessBP Members
 
         //[OperationBehavior]
-        public void Do(IContext context ,out IList<MessageBase> outMessages)
+        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId, System.Int64 productionId)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			DoEx(commonData);
+			return DoEx(commonData, relationId, productionId);
         }
         
         //[OperationBehavior]
-        public void DoEx(ICommonDataContract commonData)
+        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationId, System.Int64 productionId)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RcvProductionIssueProcessBP");                
                 RcvProductionIssueProcessBP objectRef = new RcvProductionIssueProcessBP();
-
+		
+				objectRef.RelationId = relationId;
+				objectRef.ProductionId = productionId;
 
 				//处理返回类型.
-				objectRef.Do(); //没有返回值
+				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
+
+				if (result == null)
+					return null ;
+						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
+				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RcvProductionIssueProcessBP");
+				return resultdata;
 
 	        }
 			catch (System.Exception e)
