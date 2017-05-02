@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId);
+        void Do(IContext context ,out IList<MessageBase> outMessages );
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,32 +46,25 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IRejProductionIssueProcessBP Members
 
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId)
+        public void Do(IContext context ,out IList<MessageBase> outMessages)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, relationId);
+			DoEx(commonData);
         }
         
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationId)
+        public void DoEx(ICommonDataContract commonData)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RejProductionIssueProcessBP");                
                 RejProductionIssueProcessBP objectRef = new RejProductionIssueProcessBP();
-	
-				objectRef.RelationId = relationId;
+
 
 				//处理返回类型.
-				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
-
-				if (result == null)
-					return null ;
-						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
-				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RejProductionIssueProcessBP");
-				return resultdata;
+				objectRef.Do(); //没有返回值
 
 	        }
 			catch (System.Exception e)

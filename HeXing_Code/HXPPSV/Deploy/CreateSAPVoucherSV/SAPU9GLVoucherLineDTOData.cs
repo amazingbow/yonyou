@@ -22,7 +22,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
         {
             IList<Type> knownTypes = new List<Type>();
             
-            knownTypes.Add(typeof(UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData));                                                                                                                                                                                                                                                                                                                                                   
+            knownTypes.Add(typeof(UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData));                                                                                                                                                                                                                                                                                                                                                                             
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -62,6 +62,8 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		
 		
 		
+		
+		
 
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
@@ -83,13 +85,13 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			{
 				this.SAPU9GLVoucherDTO.DoSerializeKeyList(dict);
 			}
-	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public SAPU9GLVoucherLineDTOData(  UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData sAPU9GLVoucherDTO  , System.Int32 serialNo  , System.String accountCode  , System.String accountDescription  , System.String abstracts  , System.Decimal accountedDr  , System.Decimal accountedCr  , System.Decimal enteredDr  , System.Decimal enteredCr  , System.String cashFlowCode  , System.String cashFlowDescription  , System.String feeTypeEnumCode  , System.String feeTypeEnumDescription  , System.String banks  , System.String bankAccount  , System.String customerCode  , System.String customerDescription  , System.String supplierCode  , System.String supplierDescription  , System.String departmentCode  , System.String departmentName  , System.String employeeCode  , System.String employeeName  , System.String materialGroupCode  , System.String materialGroupDescription  , System.String assetsCode  , System.String assetsDescription  )
+		public SAPU9GLVoucherLineDTOData(  UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherDTOData sAPU9GLVoucherDTO  , System.Int32 serialNo  , System.String accountCode  , System.String accountDescription  , System.String abstracts  , System.Decimal accountedDr  , System.Decimal accountedCr  , System.Decimal enteredDr  , System.Decimal enteredCr  , System.String cashFlowCode  , System.String cashFlowDescription  , System.String feeTypeEnumCode  , System.String feeTypeEnumDescription  , System.String banks  , System.String bankAccount  , System.String customerCode  , System.String customerDescription  , System.String supplierCode  , System.String supplierDescription  , System.String departmentCode  , System.String departmentName  , System.String employeeCode  , System.String employeeName  , System.String materialGroupCode  , System.String materialGroupDescription  , System.String assetsCode  , System.String assetsDescription  , System.String relCompCode  , System.String relCompName  )
 		{
 			initData();
 			this.SAPU9GLVoucherDTO = sAPU9GLVoucherDTO;
@@ -119,6 +121,8 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			this.MaterialGroupDescription = materialGroupDescription;
 			this.AssetsCode = assetsCode;
 			this.AssetsDescription = assetsDescription;
+			this.RelCompCode = relCompCode;
+			this.RelCompName = relCompName;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -666,10 +670,50 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			}
 		}
 			
+		
+
+		/// <summary>
+		/// 关系企业代码
+		/// SAP与U9凭证对接中间表行DTO.Misc.关系企业代码
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_relCompCode ;
+		public System.String RelCompCode
+		{
+			get	
+			{	
+				return m_relCompCode ;
+			}
+			set	
+			{	
+				m_relCompCode = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 关系企业名称
+		/// SAP与U9凭证对接中间表行DTO.Misc.关系企业名称
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_relCompName ;
+		public System.String RelCompName
+		{
+			get	
+			{	
+				return m_relCompName ;
+			}
+			set	
+			{	
+				m_relCompName = value ;	
+			}
+		}
+			
 		#endregion	
 
 		#region Multi_Fields
-																																																						
+																																																										
 		#endregion 
 	} 	
 }

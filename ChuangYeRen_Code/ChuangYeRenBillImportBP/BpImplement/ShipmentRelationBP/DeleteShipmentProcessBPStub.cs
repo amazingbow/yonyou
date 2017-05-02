@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        void Do(IContext context ,out IList<MessageBase> outMessages );
+        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationU9Id);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,25 +46,32 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP
         #region IDeleteShipmentProcessBP Members
 
         //[OperationBehavior]
-        public void Do(IContext context ,out IList<MessageBase> outMessages)
+        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationU9Id)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			DoEx(commonData);
+			return DoEx(commonData, relationU9Id);
         }
         
         //[OperationBehavior]
-        public void DoEx(ICommonDataContract commonData)
+        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationU9Id)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP.DeleteShipmentProcessBP");                
                 DeleteShipmentProcessBP objectRef = new DeleteShipmentProcessBP();
-
+	
+				objectRef.RelationU9Id = relationU9Id;
 
 				//处理返回类型.
-				objectRef.Do(); //没有返回值
+				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
+
+				if (result == null)
+					return null ;
+						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
+				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP.DeleteShipmentProcessBP");
+				return resultdata;
 
 	        }
 			catch (System.Exception e)

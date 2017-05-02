@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationId, System.Int64 productionId);
+        void Do(IContext context ,out IList<MessageBase> outMessages );
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,33 +46,25 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
         #region IRcvProductionIssueProcessBP Members
 
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationId, System.Int64 productionId)
+        public void Do(IContext context ,out IList<MessageBase> outMessages)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, relationId, productionId);
+			DoEx(commonData);
         }
         
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationId, System.Int64 productionId)
+        public void DoEx(ICommonDataContract commonData)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RcvProductionIssueProcessBP");                
                 RcvProductionIssueProcessBP objectRef = new RcvProductionIssueProcessBP();
-		
-				objectRef.RelationId = relationId;
-				objectRef.ProductionId = productionId;
+
 
 				//处理返回类型.
-				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
-
-				if (result == null)
-					return null ;
-						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
-				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP.RcvProductionIssueProcessBP");
-				return resultdata;
+				objectRef.Do(); //没有返回值
 
 	        }
 			catch (System.Exception e)

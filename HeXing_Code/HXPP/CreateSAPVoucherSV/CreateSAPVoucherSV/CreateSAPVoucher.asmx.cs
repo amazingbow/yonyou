@@ -105,6 +105,8 @@ namespace CreateSAPVoucherSV
                     voucherlines[j].m_materialGroupDescription = SAPU9GLVoucherS[i].SAPU9GLVoucherLineS[j].MaterialGroupDescription;//物料组描述
                     voucherlines[j].m_assetsCode = SAPU9GLVoucherS[i].SAPU9GLVoucherLineS[j].AssetsCode;//资产编号
                     voucherlines[j].m_assetsDescription = SAPU9GLVoucherS[i].SAPU9GLVoucherLineS[j].AssetsDescription;//资产描述
+                    voucherlines[j].m_relCompCode = SAPU9GLVoucherS[i].SAPU9GLVoucherLineS[j].RelCompCode;//关系企业代码
+                    voucherlines[j].m_relCompName = SAPU9GLVoucherS[i].SAPU9GLVoucherLineS[j].RelCompName;//关系企业名称
                 }
                 vouchers[i].m_sAPU9GLVoucherLineDTOS = voucherlines;
             }
@@ -208,6 +210,8 @@ namespace CreateSAPVoucherSV
         public System.String MaterialGroupDescription;//物料组描述
         public System.String AssetsCode;//资产编号
         public System.String AssetsDescription;//资产描述
+        public System.String RelCompCode;//关系企业代码
+        public System.String RelCompName;//关系企业名称
     }
 
     //通用返回结果对象
