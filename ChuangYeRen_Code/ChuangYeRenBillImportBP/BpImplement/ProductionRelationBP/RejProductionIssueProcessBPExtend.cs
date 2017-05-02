@@ -63,7 +63,6 @@
             try
             {
                 var result = proxy.Do();
-
             }
             catch (Exception ex)
             {
