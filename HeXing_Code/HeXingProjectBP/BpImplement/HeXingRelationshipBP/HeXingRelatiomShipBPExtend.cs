@@ -120,7 +120,7 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("Code like @Code and IsSystemPre=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("Code like @Code and IsSystemPre=0 and Source=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemList.Count > 0)
                             {
                                 foreach (var CashFlowItem in CashFlowItemList)
@@ -192,7 +192,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
-                                    Relatiom.FName = Account.Name;
+                                    Relatiom.FName = Account.TreeDisplayName;
                                     Relatiom.AccountProperty = Account.AccountProperty.Name;
                                     string strBalanceDirection = "";
                                     if (Account.BalanceDirection.Value == 0)
@@ -331,7 +331,7 @@
                             }
                             break;
                         case "现金流":
-                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("UseName like @Name and IsSystemPre=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.EntityList CashFlowItemList = UFIDA.U9.CBO.FI.CashFlow.CashFlowItem.Finder.FindAll("UseName like @Name and IsSystemPre=0 and Source=0", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (CashFlowItemList.Count > 0)
                             {
                                 foreach (var CashFlowItem in CashFlowItemList)
@@ -395,7 +395,7 @@
                             }
                             break;
                         case "科目":
-                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("Name like @Name and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
+                            UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.EntityList AccountList = UFIDA.U9.CBO.FI.NaturalAccount.NaturalAccount.Finder.FindAll("TreeDisplayName like @Name and IsSystem=0 and IsLeaf=1", new OqlParam[] { new OqlParam("%" + bpObj.HStr + "%") });
                             if (AccountList.Count > 0)
                             {
                                 foreach (var Account in AccountList)
@@ -403,7 +403,7 @@
                                     RelatiomShipBPDto Relatiom = new RelatiomShipBPDto();
                                     Relatiom.FID = Account.ID;
                                     Relatiom.FCode = Account.Code;
-                                    Relatiom.FName = Account.Name;
+                                    Relatiom.FName = Account.TreeDisplayName;
                                     Relatiom.AccountProperty = Account.AccountProperty.Name;
                                     string strBalanceDirection = "";
                                     if (Account.BalanceDirection.Value == 0)

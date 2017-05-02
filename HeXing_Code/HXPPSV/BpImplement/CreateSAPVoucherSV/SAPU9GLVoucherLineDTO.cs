@@ -51,6 +51,8 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		
 		
 		
+		
+		
 
 		}
 
@@ -516,10 +518,44 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 				base.SetValue("AssetsDescription",value);
 			}
 		}
+				/// <summary>
+		/// 关系企业代码 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表行DTO.Misc.关系企业代码
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String RelCompCode
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("RelCompCode",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("RelCompCode",value);
+			}
+		}
+				/// <summary>
+		/// 关系企业名称 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表行DTO.Misc.关系企业名称
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String RelCompName
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("RelCompName",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("RelCompName",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-																											
+																													
 		#endregion 
 
 		#region ModelResource
@@ -635,6 +671,14 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		/// 资产描述的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_AssetsDescription　{ get { return "";　}　}
+		/// <summary>
+		/// 关系企业代码的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_RelCompCode　{ get { return "";　}　}
+		/// <summary>
+		/// 关系企业名称的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_RelCompName　{ get { return "";　}　}
 		#endregion 
 
 
@@ -647,6 +691,8 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		private void DeSerializeKey(SAPU9GLVoucherLineDTOData data)
 		{
 		
+
+
 
 
 
@@ -758,6 +804,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 
 			this.AssetsDescription = data.AssetsDescription;
 
+			this.RelCompCode = data.RelCompCode;
+
+			this.RelCompName = data.RelCompName;
+
 		}
 
 		/// <summary>
@@ -842,6 +892,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			data.AssetsCode = this.AssetsCode;
 
 			data.AssetsDescription = this.AssetsDescription;
+
+			data.RelCompCode = this.RelCompCode;
+
+			data.RelCompName = this.RelCompName;
 
 			return data ;
 		}

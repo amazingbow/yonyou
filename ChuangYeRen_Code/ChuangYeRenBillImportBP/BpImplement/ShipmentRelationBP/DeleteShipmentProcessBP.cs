@@ -20,6 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP
 	public partial class DeleteShipmentProcessBP
 	{
 	    #region Fields
+		private System.Int64 relationU9Id;
 		
 	    #endregion
 		
@@ -30,17 +31,34 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ShipmentRelationBP
 	    #endregion
 
 	    #region member		
+		/// <summary>
+		/// 相关U9ID	
+		/// 标准出货删除操作.Misc.相关U9ID
+		/// </summary>
+		/// <value></value>
+		public System.Int64 RelationU9Id
+		{
+			get
+			{
+				return this.relationU9Id;
+			}
+			set
+			{
+				relationU9Id = value;
+			}
+		}
 	    #endregion
 		
 	    #region do method 
-		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
+		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Required)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public PublicDataTransObj.PublicReturnDTO Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

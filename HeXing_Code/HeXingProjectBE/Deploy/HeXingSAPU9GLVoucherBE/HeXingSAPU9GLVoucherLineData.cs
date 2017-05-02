@@ -53,6 +53,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
                         
                         
                                         knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData));
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -80,6 +82,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 	     							AccountedCr=0m; 
 	     							EnteredDr=0m; 
 	     							EnteredCr=0m; 
+	     			
+	     			
 	     			
 	     			
 	     			
@@ -793,10 +797,48 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 关系企业代码
+		/// SAP与U9凭证对接中间表行.Misc.关系企业代码
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_relCompCode ;
+		public System.String RelCompCode
+		{
+			get	
+			{	
+				return m_relCompCode  ;
+			}
+			set	
+			{	
+				m_relCompCode = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 关系企业名称
+		/// SAP与U9凭证对接中间表行.Misc.关系企业名称
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_relCompName ;
+		public System.String RelCompName
+		{
+			get	
+			{	
+				return m_relCompName  ;
+			}
+			set	
+			{	
+				m_relCompName = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																		
+																																				
 		#endregion 		
 	}	
 

@@ -29,6 +29,7 @@ using UFIDA.U9.UI.Commands;
 using UFSoft.UBF.UI;
 using System.Web;
 using UFSoft.UBF.Util.DataAccess;
+using UFSoft.UBF.UI.ControlModel;
 
 
 
@@ -47,49 +48,90 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		private void BtnFind_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            this.Model.HXRelationRefShowView.Clear();
-            this.Model.ClearErrorMessage();
-            if (string.IsNullOrEmpty(this.Org161.Text))
-            {
-                throw new Exception("组织机构不能为空！");
-            }
-            if (string.IsNullOrEmpty(this.RelType89.Text))
-            {
-                throw new Exception("对照类型不能为空！");
-            }
-            if (string.IsNullOrEmpty(this.RelColumn152.Text))
-            {
-                throw new Exception("栏目不能为空！");
-            }
-            if (this.RelType89.Text == "科目")
-            {
-                this.DataGrid.Columns["AccountProperty"].Visible = true;
-                this.DataGrid.Columns["BalanceDirection"].Visible = true;
-            }
-            else
-            {
-                this.DataGrid.Columns["AccountProperty"].Visible = false;
-                this.DataGrid.Columns["BalanceDirection"].Visible = false;
-            }
-            HeXingRelatiomShipBPProxy proxy = new HeXingRelatiomShipBPProxy();
-            proxy.HOrg = this.Org161.Key;
-            proxy.HRefType = this.RelType89.Text;
-            proxy.HColumn = this.RelColumn152.Text;
-            proxy.HStr = this.RelText82.Text;
-            List<RelatiomShipBPDtoData> RecordList = proxy.Do();
-            foreach (var record in RecordList)
-            {
-                HXRelationRefShowViewRecord ShowRecord = this.Model.HXRelationRefShowView.AddNewUIRecord();
-                ShowRecord.RefCode = record.FCode;
-                ShowRecord.RefName = record.FName;
-                ShowRecord.RefID = record.FID;
-                ShowRecord.AccountProperty = record.AccountProperty;
-                ShowRecord.BalanceDirection = record.BalanceDirection;
-            }
-            //AtlasHelper.RegisterStartupScript((Control)base.Action.CurrentPart.TopLevelContainer, base.Action.CurrentPart.GetType(), "ReferenceReturn","", false);
+            Refesh();
 			BtnFind_Click_DefaultImpl(sender,e);
             //CommandFactory.DoCommand("ReferenceConfirmClick", this.Action, sender, e);
-		}	
+		}
+
+        private void Refesh()
+        {
+            if (this.Model.HXRelationRefFindView.FocusedRecord != null)
+            {
+                this.Model.HXRelationRefShowView.Clear();
+                this.Model.ClearErrorMessage();
+
+                string strRelTypeName = "";//对照类型名称
+
+                DataParamList lst1 = new DataParamList();
+                lst1.Add(DataParamFactory.CreateInput("@RelType", this.Model.HXRelationRefFindView.FocusedRecord.RelType, System.Data.DbType.Int32));
+                System.Data.DataSet ds1 = new System.Data.DataSet();
+
+                DataAccessor.RunSQL(DataAccessor.GetConn(), "select dbo.F_GetEnumName('UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RelationEnum',@RelType,'zh-cn') as RelTypeName", lst1, out ds1);
+
+                if (ds1 != null && ds1.Tables.Count > 0)
+                {
+                    if (ds1.Tables[0].Rows.Count > 0)
+                    {
+                        strRelTypeName = ds1.Tables[0].Rows[0]["RelTypeName"].ToString();
+                    }
+                }
+
+                string strRelColumnName = "";//栏目名称
+
+                DataParamList lst2 = new DataParamList();
+                lst2.Add(DataParamFactory.CreateInput("@RelColumn", this.Model.HXRelationRefFindView.FocusedRecord.RelColumn, System.Data.DbType.Int32));
+                System.Data.DataSet ds2 = new System.Data.DataSet();
+
+                DataAccessor.RunSQL(DataAccessor.GetConn(), "select dbo.F_GetEnumName('UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.ColumnEmun',@RelColumn,'zh-cn') as RelColumnName", lst2, out ds2);
+
+                if (ds2 != null && ds2.Tables.Count > 0)
+                {
+                    if (ds2.Tables[0].Rows.Count > 0)
+                    {
+                        strRelColumnName = ds2.Tables[0].Rows[0]["RelColumnName"].ToString();
+                    }
+                }
+
+                if (string.IsNullOrEmpty(this.Model.HXRelationRefFindView.FocusedRecord.Org_Code))
+                {
+                    throw new Exception("组织机构不能为空！");
+                }
+                if (string.IsNullOrEmpty(strRelTypeName))
+                {
+                    throw new Exception("对照类型不能为空！");
+                }
+                if (string.IsNullOrEmpty(strRelColumnName))
+                {
+                    throw new Exception("栏目不能为空！");
+                }
+                if (strRelTypeName == "科目")
+                {
+                    this.DataGrid.Columns["AccountProperty"].Visible = true;
+                    this.DataGrid.Columns["BalanceDirection"].Visible = true;
+                }
+                else
+                {
+                    this.DataGrid.Columns["AccountProperty"].Visible = false;
+                    this.DataGrid.Columns["BalanceDirection"].Visible = false;
+                }
+                HeXingRelatiomShipBPProxy proxy = new HeXingRelatiomShipBPProxy();
+                proxy.HOrg = Convert.ToString(this.Model.HXRelationRefFindView.FocusedRecord.Org);
+                proxy.HRefType = strRelTypeName;
+                proxy.HColumn = strRelColumnName;
+                proxy.HStr = this.Model.HXRelationRefFindView.FocusedRecord.RelText;
+                List<RelatiomShipBPDtoData> RecordList = proxy.Do();
+                foreach (var record in RecordList)
+                {
+                    HXRelationRefShowViewRecord ShowRecord = this.Model.HXRelationRefShowView.AddNewUIRecord();
+                    ShowRecord.RefCode = record.FCode;
+                    ShowRecord.RefName = record.FName;
+                    ShowRecord.RefID = record.FID;
+                    ShowRecord.AccountProperty = record.AccountProperty;
+                    ShowRecord.BalanceDirection = record.BalanceDirection;
+                }
+            }
+            //AtlasHelper.RegisterStartupScript((Control)base.Action.CurrentPart.TopLevelContainer, base.Action.CurrentPart.GetType(), "ReferenceReturn","", false);
+        }
 		 
 				//BtnClose_Click...
 		private void BtnClose_Click_Extend(object sender, EventArgs  e)
@@ -186,6 +228,22 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
                 }
             }
 
+            string strRefCode = "";
+            if (this.NameValues != null && this.NameValues["RefCode"] != null)
+            {
+                strRefCode = this.NameValues["RefCode"].ToString();
+            }
+
+            if (this.Model.HXRelationRefShowView.RecordCount == 0)
+            {
+                if (string.IsNullOrEmpty(strRefCode) == false)
+                {
+                    this.Model.HXRelationRefFindView.FocusedRecord.RelColumn = 1;
+                    this.Model.HXRelationRefFindView.FocusedRecord.RelText = strRefCode;
+                    Refesh();
+                }
+            }
+
 		}
 
         public void AfterCreateChildControls()
@@ -202,7 +260,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         
 		public void BeforeUIModelBinding()
 		{
-
+            
 		}
 
 		public void AfterUIModelBinding()

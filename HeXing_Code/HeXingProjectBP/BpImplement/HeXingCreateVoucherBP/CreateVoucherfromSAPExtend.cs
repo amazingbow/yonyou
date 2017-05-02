@@ -58,6 +58,7 @@
             UpdateRepeatData();
             CreateVoucherfromSAP bpObj = (CreateVoucherfromSAP)obj;
             var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("(IsU9Successful=0 or IsU9Successful=2) and (IsRepeat=0 or IsRepeat is null)");
+            //var glVoucherLst = HeXingSAPU9GLVoucherHead.Finder.FindAll("ID=1002005179624367");//1002005179624367
             if (glVoucherLst.Count == 0) return null;//表中没有要处理的数据。
             ProcessRelData processData = new ProcessRelData();
             List<string> returnData = processData.Do();
@@ -106,7 +107,7 @@
                             TargetOrgName = shipOrg.U9Name
                         };
                         HxRelationshipBE shipCurrency = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=1 and SapCode='"
-                                  + item.CurrencyCode + "' and SapName='" + item.CurrencyDescription + "'");
+                                  + item.CurrencyCode + "'");
                         if (shipCurrency == null)
                         {
                             throw new Exception("币种信息没有传值，或者关系对照没有维护且审核");
@@ -199,7 +200,7 @@
                     }
                     session.Commit();
                 }
-                if (string.IsNullOrEmpty(docNo) && !deleteFlag) continue;
+                if (string.IsNullOrEmpty(docNo) || deleteFlag) continue;//二者只要有一个满足条件就不进行下一步
                 using (ISession session = Session.Open())
                 {
                     try
@@ -220,18 +221,26 @@
                     }
                     catch (Exception ex)
                     {
-                        item.U9ErrorResult = "导入失败！失败信息：" + ex.Message;
-                        item.IsU9Successful = ImportFlagEnum.ImportFailed;
-                        VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
-                        deleteProxy.Voucher = new List<long>();
-                        deleteProxy.Voucher.Add(item.U9VoucherID);
-                        deleteProxy.Do();
-                        //如果删除凭证的话把对应的对照关系也删掉
-                        var refList = RefVoucherInfoBE.Finder.FindAll("VoucherID=" + item.U9VoucherID);
-                        item.U9VoucherID = 0;
-                        foreach (var refItem in refList)
+                        try
                         {
-                            refItem.Remove();
+                            item.U9ErrorResult = "导入失败！失败信息：" + ex.Message;
+                            item.IsU9Successful = ImportFlagEnum.ImportFailed;
+                            VoucherDeleteProxy deleteProxy = new VoucherDeleteProxy();
+                            deleteProxy.Voucher = new List<long>();
+                            deleteProxy.Voucher.Add(item.U9VoucherID);
+                            deleteProxy.Do();
+                            //如果删除凭证的话把对应的对照关系也删掉
+                            var refList = RefVoucherInfoBE.Finder.FindAll("VoucherID=" + item.U9VoucherID);
+                            item.U9VoucherID = 0;
+                            foreach (var refItem in refList)
+                            {
+                                refItem.Remove();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            item.U9ErrorResult = "导入成功，但是审核失败，删除凭证的时候出现问题，请手动处理！凭证号：" + docNo;
+                            item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         }
                     }
                     session.Commit();
@@ -264,24 +273,40 @@
                 if (!successVoucher.Entries[i].Account.Code.StartsWith("1001")
                     && !successVoucher.Entries[i].Account.Code.StartsWith("1002")) continue;
                 HxRelationshipBE cashFlowRef = null;
+                HxRelationshipBE shipOrg = null;
                 foreach (var line in item.HeXingSAPU9GLVoucherLine)
                 {
                     if (line.DescFlexField.PrivateDescSeg1 == successVoucher.Entries[i].Account.Code)
                     {
                         cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='" + line.CashFlowCode + "'");
+                        if (!string.IsNullOrEmpty(line.RelCompCode))
+                        {
+                            shipOrg = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=7 and SapCode='" + line.RelCompCode + "'");
+                            if (shipOrg == null)
+                            {
+                                throw new Exception("关系企业信息没有传值，或者关系对照表中没有维护且审核");
+                            }
+                        }
                     }
                 }
                 if (cashFlowRef == null)
                 {
                     throw new Exception("没有传现金流，或者没有维护相应的现金流对照关系并审核！");
                 }
+
+
                 CashFlowItem cashFlowItem = CashFlowItem.Finder.Find("Code = @Code and IsSystemPre=0", new OqlParam[] { new OqlParam(cashFlowRef.U9Code) });
                 CFVoucherItem cfVoucherItem = CFVoucherItem.Create();
                 cfVoucherItem.VoucherEntry = successVoucher.Entries[i];
                 cfVoucherItem.Voucher = successVoucher;
                 cfVoucherItem.SOB = successVoucher.SOB;
                 cfVoucherItem.Org = successVoucher.Org;
+                if (shipOrg != null)
+                {
+                    cfVoucherItem.RelOrg = Organization.FindByCode(shipOrg.U9Code);
+                }
                 cfVoucherItem.CashFlowItem = cashFlowItem;
+                cfVoucherItem.CashFlowItemAttr = cashFlowItem.ItemProperty;
                 if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
                 {
                     cfVoucherItem.DrAccount = successVoucher.Entries[i].Account;
@@ -291,8 +316,8 @@
                 else
                 {
                     cfVoucherItem.CrAccount = successVoucher.Entries[i].Account;
-                    cfVoucherItem.LCMoney = -successVoucher.Entries[i].AccountedCr;//本币金额
-                    cfVoucherItem.OCMoney = -successVoucher.Entries[i].EnteredCr;//原币金额
+                    cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedCr;//本币金额
+                    cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredCr;//原币金额
                 }
                 cfVoucherItem.Currency = successVoucher.Entries[i].Currency;
                 cfVoucherItem.OCToFCExchangeRate = successVoucher.Entries[i].OCToFCExchangeRate;//汇率
@@ -570,12 +595,12 @@
                 {
                     //如果是应付股利则通过 供应商来查找到客户
                     shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=13 and SapCode='"
-                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                    + entry.SupplierCode + "'");
                 }
                 else
                 {
                     shipCust = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=2 and SapCode='"
-                   + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+                   + entry.CustomerCode + "'");
                 }
                 if (shipCust != null)
                 {
@@ -599,7 +624,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment4)
             {
                 HxRelationshipBE shipSupplier = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=3 and SapCode='"
-                    + entry.SupplierCode + "' and SapName='" + entry.SupplierDescription + "'");
+                    + entry.SupplierCode + "'");
                 if (shipSupplier != null)
                 {
                     stb.Append(shipSupplier.U9Code + SYMBOL);
@@ -671,7 +696,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment7)
             {
                 HxRelationshipBE shipDepartment = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=4 and SapCode='"
-                        + entry.DepartmentCode + "' and SapCompCode='" + voucher.CompanyCode + "'");
+                        + entry.DepartmentCode + "'");
                 if (shipDepartment != null)
                 {
                     stb.Append(shipDepartment.U9Code + SYMBOL);
@@ -693,7 +718,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment8)
             {
                 HxRelationshipBE shipWork = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=5 and SapCode='"
-                        + entry.EmployeeCode + "' and SapName='" + entry.EmployeeName + "'");
+                        + entry.EmployeeCode + "'");
 
                 if (shipWork != null)
                 {
@@ -716,7 +741,7 @@
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment9)
             {
                 HxRelationshipBE shipFee = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=11 and SapCode='"
-                             + entry.FeeTypeEnumCode + "' and SapName='" + entry.FeeTypeEnumDescription + "'");
+                             + entry.FeeTypeEnumCode + "'");
                 if (shipFee != null)
                 {
                     stb.Append(shipFee.U9Code + SYMBOL);
@@ -737,8 +762,10 @@
             #region 10. 工程项目
             if (np.NaturalAccountSOBSegmentUseRoles[0].Segment10)
             {
-                HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=9 and SapCode='"
-                      + entry.CustomerCode + "' and SapName='" + entry.CustomerDescription + "'");
+                //HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=9 and SapCode='"
+                //      + entry.AssetsCode + "'");
+                HxRelationshipBE shipProjec = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=9 and SapCode='" + entry.AssetsCode + "' and SapCompCode='"
+                    + voucher.CompanyCode + "'");
                 if (shipProjec != null)
                 {
                     stb.Append(shipProjec.U9Code);
@@ -748,7 +775,7 @@
                 }
                 else
                 {
-                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "工程项目是必输的，但是并没有传值或维护对应关系");
+                    throw new Exception("SAP凭证号" + voucher.SAPVoucherDisplayCode + "下面的" + entry.AccountCode + "工程项目(对应的是资产编码字段)是必输的，但是并没有传值或维护对应关系");
                 }
             }
             else
