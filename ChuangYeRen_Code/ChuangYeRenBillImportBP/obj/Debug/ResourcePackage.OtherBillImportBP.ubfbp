@@ -1,19 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Component id="3576b68c-27ce-428c-80df-20762bcd2629" name="OtherBillImportBP" displayName="OtherBillImportBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.ChuangYeRenBillImportBP">
   <Namespace id="61086d1c-56b2-460f-973d-ab85aabe8a83" name="UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP" displayName="UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP" description="" help="">
-    <Operation id="4277aa85-820b-4c09-876e-664f219dfa66" name="TransferApplyImportBP" displayName="调拨申请单导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+    <Operation id="4277aa85-820b-4c09-876e-664f219dfa66" name="TransferApplyImportBP" displayName="调拨申请单导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="b549bb66-75b9-46ce-bdcc-ce0a0ff10eb6" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="864cf897-2ea0-4863-b27c-bf4c833eb1b8" name="ID" displayName="ID" description="" help="调拨申请单导入.Misc.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
       <Implements>
-        <Operation id="d93338f9-9485-45e8-a447-2781bbb124e8" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+        <Operation id="d93338f9-9485-45e8-a447-2781bbb124e8" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
     </Operation>
-    <Operation id="135334a0-5d6e-4c76-894d-567777bbcb85" name="PMRtnImportBP" displayName="采购退货单导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+    <Operation id="135334a0-5d6e-4c76-894d-567777bbcb85" name="PMRtnImportBP" displayName="采购退货单导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="8b58c12c-19ca-4039-a076-528ee2b4d7ce" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="48427eb9-e67a-4013-8ba3-307a2d2403a1" name="ID" displayName="ID" description="" help="采购退货单导入.Misc.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
       <Implements>
-        <Operation id="6dea0f9b-b96a-4f5d-b1ac-bd495ef37ca8" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+        <Operation id="6dea0f9b-b96a-4f5d-b1ac-bd495ef37ca8" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
     </Operation>
-    <Operation id="2c21d4b3-54ad-4b19-aa32-f2cf7535a29f" name="ExpenseCostImportBP" displayName="费用数据导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+    <Operation id="2c21d4b3-54ad-4b19-aa32-f2cf7535a29f" name="ExpenseCostImportBP" displayName="费用数据导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="5b89defb-6e72-4f4a-8cb8-a0a73a691009" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="ff2b97b7-d4a8-43ed-b7ed-4a647d602055" name="ID" displayName="ID" description="" help="费用数据导入.Misc.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
       <Implements>
-        <Operation id="8c55887d-a429-4316-9320-9f325ec53187" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+        <Operation id="8c55887d-a429-4316-9320-9f325ec53187" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="9bd212e8-69ab-41e5-9ff9-85dd92cc3e11" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
       </Implements>
     </Operation>
     <Operation id="6f3f4747-86f5-4f38-b277-051acbc1b5bc" name="TransferFormImport" displayName="形态转换导入" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
@@ -23,19 +41,19 @@
     </Operation>
     <Diagram id="dbc75dad-df06-48af-a205-7b0faaba6603" name="OtherBillImportBP" displayName="OtherBillImportBP">
       <Class Editable="True" ID="216f8a03-b923-4ab5-81a5-d31cf438c1d9" Type="Operation" ADID="4277aa85-820b-4c09-876e-664f219dfa66">
-        <Location X="63" Y="47" />
+        <Location X="57" Y="29" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="30aae492-233a-4375-b1b6-88b007e544ce" Type="Operation" ADID="135334a0-5d6e-4c76-894d-567777bbcb85">
-        <Location X="224" Y="49" />
+        <Location X="218" Y="31" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="8843d29e-003d-4cd8-90e0-57c58b0381d5" Type="Operation" ADID="2c21d4b3-54ad-4b19-aa32-f2cf7535a29f">
-        <Location X="64" Y="149" />
+        <Location X="58" Y="131" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="True" ID="f6100a78-925c-42dd-9ff4-571bafe9439d" Type="Operation" ADID="6f3f4747-86f5-4f38-b277-051acbc1b5bc">
-        <Location X="226" Y="145" />
+        <Location X="220" Y="134" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>
