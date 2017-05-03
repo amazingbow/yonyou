@@ -58,7 +58,7 @@
                     RcvID=pub.DocID,
                 };
                 approveproxy.RCVLogicKeyINFOs.Add(AppData);
-                approveproxy.Do(Context.LoginOrg.ID);
+                approveproxy.Do();
             }
             catch (Exception ex)
             {
