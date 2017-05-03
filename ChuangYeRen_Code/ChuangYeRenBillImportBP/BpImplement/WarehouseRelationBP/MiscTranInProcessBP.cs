@@ -20,6 +20,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 	public partial class MiscTranInProcessBP
 	{
 	    #region Fields
+		private System.String relationID;
+		private System.String productionID;
 		
 	    #endregion
 		
@@ -30,17 +32,50 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 	    #endregion
 
 	    #region member		
+		/// <summary>
+		/// 相关ID	
+		/// 杂收操作.Misc.相关ID
+		/// </summary>
+		/// <value></value>
+		public System.String RelationID
+		{
+			get
+			{
+				return this.relationID;
+			}
+			set
+			{
+				relationID = value;
+			}
+		}
+		/// <summary>
+		/// U9生产订单ID	
+		/// 杂收操作.Misc.U9生产订单ID
+		/// </summary>
+		/// <value></value>
+		public System.String ProductionID
+		{
+			get
+			{
+				return this.productionID;
+			}
+			set
+			{
+				productionID = value;
+			}
+		}
 	    #endregion
 		
 	    #region do method 
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public PublicDataTransObj.PublicReturnDTO Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

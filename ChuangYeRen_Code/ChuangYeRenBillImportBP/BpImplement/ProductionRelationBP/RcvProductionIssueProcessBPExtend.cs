@@ -9,6 +9,8 @@
     using UFIDA.U9.CBO.Pub.Controller;
     using UFIDA.U9.ISV.MO;
     using UFIDA.U9.ISV.MO.Proxy;
+    using UFIDA.U9.MO.Issue.Proxy;
+    using UFIDA.U9.MO.MO;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Util.Context;
 
@@ -36,24 +38,72 @@
         {
             RcvProductionIssueProcessBP bpObj = (RcvProductionIssueProcessBP)obj;
             PublicReturnDTO pubResult = new PublicReturnDTO();
+            pubResult.Flag = false;
             CreateIssue4ExternalProxy createIssue = new CreateIssue4ExternalProxy();
+            #region 创建领料单
             try
             {
-                createIssue.IssueDTOs = GetIssueDoc(bpObj.RelationId);
-                createIssue.Do();
+                createIssue.IssueDTOs = GetIssueDoc(bpObj.RelationId, bpObj.ProductionId);
+                var data = createIssue.Do();
+                if (data.Count == 0) return pubResult;
+                pubResult.DocID = data[0].ID;
+                pubResult.DocNo = data[0].DocNo;
+                pubResult.Message = "创建领料单成功！";
             }
             catch (Exception ex)
             {
-
-                throw;
+                pubResult.Flag = false;
+                pubResult.Message = "创建领料单失败：" + ex.Message;
+                return pubResult;
             }
+            #endregion
+            #region 领料单提交
+            try
+            {
+                BatchSubmitIssueTXNProxy submitIssue = new BatchSubmitIssueTXNProxy();
+                submitIssue.IssueTXNs = new List<BatchOperationDTOData>();
+                BatchOperationDTOData submintDto = new BatchOperationDTOData
+                {
+                    ID = pubResult.DocID,
+                    DocNo = pubResult.DocNo
+                };
+                submitIssue.Do();
+            }
+            catch (Exception ex)
+            {
+                pubResult.Flag = false;
+                pubResult.Message += "提交领料单失败：" + ex.Message;
+                return pubResult;
+            }
+            #endregion
+            #region 领料单审核
+            try
+            {
+                ApproveIssueDoc4ExternalSrvProxy approveProxy = new ApproveIssueDoc4ExternalSrvProxy();
+                approveProxy.DocNoList = new List<ApproveIssueDoc4ExternalDTOData>();
+                ApproveIssueDoc4ExternalDTOData dto = new ApproveIssueDoc4ExternalDTOData
+                {
+                    DocNo = pubResult.DocNo
+                };
+                approveProxy.DocNoList.Add(dto);
+                approveProxy.Do();
+            }
+            catch (Exception ex)
+            {
+                pubResult.Flag = false;
+                pubResult.Message += "审核领料单失败：" + ex.Message;
+                return pubResult;
+            }
+
+
+            #endregion
             return pubResult;
         }
 
-        private List<IssueDTOData> GetIssueDoc(long id)
+        private List<IssueDTOData> GetIssueDoc(long relId, long productId)
         {
             List<IssueDTOData> issueLst = new List<IssueDTOData>();
-            InvStock invStock = InvStock.Finder.FindByID(id);
+            InvStock invStock = InvStock.Finder.FindByID(relId);
             IssueDTOData issueDto = new IssueDTOData
             {
                 BusinessCreatedOn = DateTime.Now,
@@ -87,7 +137,7 @@
             issueDto.MOs = new List<CommonArchiveDataDTOData>();
             CommonArchiveDataDTOData mo = new CommonArchiveDataDTOData
             {
-                ID = 0
+                ID = productId
             };
             issueDto.MOs.Add(mo);
             issueDto.PickListDTOs = new List<PickListDTOData>();
@@ -117,6 +167,10 @@
                     Code = Context.LoginOrg.Code
                 };
                 pickDto.IsNoPickLine = true;
+                pickDto.IssueBin = new CommonArchiveDataDTOData
+                {
+                    Code = item.FLocator.Code
+                };
                 issueDto.PickListDTOs.Add(pickDto);
             }
             return issueLst;

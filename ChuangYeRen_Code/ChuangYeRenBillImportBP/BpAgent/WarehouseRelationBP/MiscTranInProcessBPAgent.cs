@@ -38,18 +38,58 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		void Do(IContext context, out IList<MessageBase> outMessages );
+		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.String relationID, System.String productionID);
     }
 	[Serializable]    
     public class MiscTranInProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy.IMiscTranInProcessBP
     {
 	#region Fields	
-	
+				private System.String relationID ;
+						private System.String productionID ;
+			
 	#endregion	
 		
 	#region Properties
 	
-	
+				
+
+		/// <summary>
+		/// 相关ID (该属性可为空,且无默认值)
+		/// 杂收操作.Misc.相关ID
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String RelationID
+		{
+			get	
+			{	
+				return this.relationID;
+			}
+
+			set	
+			{	
+				this.relationID = value;	
+			}
+		}		
+						
+
+		/// <summary>
+		/// U9生产订单ID (该属性可为空,且无默认值)
+		/// 杂收操作.Misc.U9生产订单ID
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String ProductionID
+		{
+			get	
+			{	
+				return this.productionID;
+			}
+
+			set	
+			{	
+				this.productionID = value;	
+			}
+		}		
+			
 	#endregion	
 
 
@@ -62,11 +102,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 
 		#region Public Method
 		
-        public void Do()
+        public PublicDataTransObj.PublicReturnDTOData Do()
         {
   			InitKeyList() ;
- 			InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy.IMiscTranInProcessBP>();
-			
+ 			PublicDataTransObj.PublicReturnDTOData result = (PublicDataTransObj.PublicReturnDTOData)InvokeAgent<UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy.IMiscTranInProcessBP>();
+			return GetRealResult(result);
         }
         
 		protected override object InvokeImplement<T>(T oChannel)
@@ -76,18 +116,24 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
             IMiscTranInProcessBP channel = oChannel as IMiscTranInProcessBP;
             if (channel != null)
             {
-				channel.Do(context, out returnMsgs);
+				return channel.Do(context, out returnMsgs, relationID, productionID);
 	    }
             return  null;
         }
 		#endregion
 		
+		//处理由于序列化导致的返回值接口变化，而进行返回值的实际类型转换处理．
+		private PublicDataTransObj.PublicReturnDTOData GetRealResult(PublicDataTransObj.PublicReturnDTOData result)
+		{
+
+				return result ;
+		}
 		#region  Init KeyList 
 		//初始化SKey集合--由于接口不一样.BP.SV都要处理
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-
+										
 		}
 		#endregion 
 

@@ -55,11 +55,13 @@
                 if (data.Count == 0) return pub;
                 pub.DocID = data[0].ID;
                 pub.DocNo = data[0].DocNo;
+                pub.Message = "生产订单创建成功！";
             }
             catch (Exception ex)
             {
                 pub.Flag = false;
                 pub.Message ="生产订单创建失败："+ ex.Message;
+                return pub;
             }
             #endregion
             #region 生产订单提交
@@ -73,11 +75,13 @@
                 };
                 submitProxy.MOs.Add(submit);
                 submitProxy.Do();
+                pub.Message += "生产订单提交成功！";
             }
             catch (Exception ex)
             {
                 pub.Flag = false;
-                pub.Message = "生产订单提交失败：" + ex.Message;
+                pub.Message += "生产订单提交失败：" + ex.Message;
+                return pub;
             }
             #endregion
 
@@ -97,11 +101,13 @@
                 approveProxy.MOOperateParamDTOs = new List<MOOperateParamDTOData>();
                 approveProxy.MOOperateParamDTOs.Add(appData);
                 var appResult = approveProxy.Do();
+                pub.Message = "生产订单审核成功！";
             }
             catch (Exception ex)
             {
                 pub.Flag = false;
-                pub.Message = "生产订单审核失败：" + ex.Message;
+                pub.Message += "生产订单审核失败：" + ex.Message;
+                return pub;
             }
             #endregion
             #region 生产订单开工
@@ -111,11 +117,12 @@
                 startMoProxy.MOOperateParamDTOs = new List<MOOperateParamDTOData>();
                 startMoProxy.MOOperateParamDTOs.Add(appData);
                 var startResult = startMoProxy.Do();
+                pub.Message = "生产订单开工成功！";
             }
             catch (Exception ex)
             {
                 pub.Flag = false;
-                pub.Message = "生产订单开工失败：" + ex.Message;
+                pub.Message += "生产订单开工失败：" + ex.Message;
             }
             #endregion
             return pub;
