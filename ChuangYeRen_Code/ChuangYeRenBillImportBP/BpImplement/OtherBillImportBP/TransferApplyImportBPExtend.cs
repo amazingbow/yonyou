@@ -5,6 +5,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
+    using UFIDA.U9.Base;
     using UFIDA.U9.CBO.Pub.Controller;
     using UFIDA.U9.ISV.TransferInISV;
     using UFIDA.U9.ISV.TransferInISV.Proxy;
@@ -49,7 +50,20 @@
                 var data = createProxy.Do();                
                 if (data.Count == 0) return pub;
                 pub.DocID = data[0].ID;
-                pub.DocNo = data[0].Code;                
+                pub.DocNo = data[0].Code;
+                TransferInBatchApproveSRVProxy arrpoveProxy = new TransferInBatchApproveSRVProxy();
+                arrpoveProxy.ApprovedBy = Context.LoginUser;
+                arrpoveProxy.ApprovedOn = Context.OperationDate;
+                arrpoveProxy.DocList = new List<CommonArchiveDataDTOData>();
+                CommonArchiveDataDTOData archivedata = new CommonArchiveDataDTOData
+                {
+                    Code=pub.DocNo,
+                    ID=pub.DocID,
+                };
+                arrpoveProxy.DocList.Add(archivedata);
+                arrpoveProxy.Do();
+  
+
             }
             catch (Exception ex)
             {
