@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        void Do(IContext context ,out IList<MessageBase> outMessages );
+        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 iD);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,25 +46,32 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
         #region ITransferApplyImportBP Members
 
         //[OperationBehavior]
-        public void Do(IContext context ,out IList<MessageBase> outMessages)
+        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 iD)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			DoEx(commonData);
+			return DoEx(commonData, iD);
         }
         
         //[OperationBehavior]
-        public void DoEx(ICommonDataContract commonData)
+        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 iD)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.TransferApplyImportBP");                
                 TransferApplyImportBP objectRef = new TransferApplyImportBP();
-
+	
+				objectRef.ID = iD;
 
 				//处理返回类型.
-				objectRef.Do(); //没有返回值
+				PublicDataTransObj.PublicReturnDTO result = objectRef.Do();
+
+				if (result == null)
+					return null ;
+						PublicDataTransObj.PublicReturnDTOData resultdata = result.ToEntityData();
+				DoSerializeKey(resultdata, "UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.TransferApplyImportBP");
+				return resultdata;
 
 	        }
 			catch (System.Exception e)
