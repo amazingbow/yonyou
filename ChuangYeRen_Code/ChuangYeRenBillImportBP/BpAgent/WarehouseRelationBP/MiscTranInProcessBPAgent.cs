@@ -38,14 +38,14 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.String relationID, System.String productionID);
+		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationID, System.Int64 productionID);
     }
 	[Serializable]    
     public class MiscTranInProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy.IMiscTranInProcessBP
     {
 	#region Fields	
-				private System.String relationID ;
-						private System.String productionID ;
+				private System.Int64 relationID ;
+						private System.Int64 productionID ;
 			
 	#endregion	
 		
@@ -54,11 +54,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 				
 
 		/// <summary>
-		/// 相关ID (该属性可为空,且无默认值)
+		/// 相关ID (该属性可为空,但有默认值)
 		/// 杂收操作.Misc.相关ID
 		/// </summary>
-		/// <value>System.String</value>
-		public System.String RelationID
+		/// <value>System.Int64</value>
+		public System.Int64 RelationID
 		{
 			get	
 			{	
@@ -73,11 +73,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 						
 
 		/// <summary>
-		/// U9生产订单ID (该属性可为空,且无默认值)
+		/// U9生产订单ID (该属性可为空,但有默认值)
 		/// 杂收操作.Misc.U9生产订单ID
 		/// </summary>
-		/// <value>System.String</value>
-		public System.String ProductionID
+		/// <value>System.Int64</value>
+		public System.Int64 ProductionID
 		{
 			get	
 			{	

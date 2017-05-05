@@ -150,10 +150,10 @@
                     //②在生成U9凭证时，还需要考虑这个维度的关系，以便转换成U9的实收资本科目。
                     if (line.AccountCode == "4001010000")
                     {
-                        var accountCode = line.AccountCode + ";" + line.CustomerCode;
+                        var accountCode = line.AccountCode + ";" + line.SupplierCode;
                         if (!codeNamePair[10].ContainsKey(accountCode))//科目
                         {
-                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.CustomerDescription + "@" + item.SAPVoucherDisplayCode);
+                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.SupplierCode + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
                     else
@@ -342,9 +342,9 @@
                     var AccountCode = tempArray[0];
                     if (AccountCode == "4001010000")
                     {
-                        var CustomerCode = tempArray[1];
+                        var SupplierCode = tempArray[1];
                         HxRelationshipBE shipAccount = HxRelationshipBE.Finder.Find("RefStatus!=0 and RefType=10 and SapCode='" + AccountCode
-                            + "' and CustomerCode='" + CustomerCode + "'");
+                            + "' and SupplierCode='" + SupplierCode + "'");
                         if (shipAccount == null)
                         {
                             var valueArray = item.Value.Split('@')[0].Split(';');
@@ -352,8 +352,8 @@
                             relationship.RefType = RelationEnum.Account;
                             relationship.SapCode = AccountCode;
                             relationship.SapName = valueArray[0];
-                            relationship.CustomerCode = CustomerCode;
-                            relationship.CustomerName = valueArray[1];
+                            relationship.SupplierCode = SupplierCode;
+                            relationship.SupplierName = valueArray[1];
                             relationship.RefStatus = RefStatusEnum.Oraginal;
                             returnVoucher.Add(item.Value.Split('@')[1] + "科目没有维护对照关系");
                         }

@@ -554,39 +554,39 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		
 
 				/// <summary>
-		/// 客户代码
-		/// 合兴关系对照表.Misc.客户代码
+		/// 供应商代码
+		/// 合兴关系对照表.Misc.供应商代码
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.String m_customerCode ;
-		public System.String CustomerCode
+		private System.String m_supplierCode ;
+		public System.String SupplierCode
 		{
 			get	
 			{	
-				return m_customerCode  ;
+				return m_supplierCode  ;
 			}
 			set	
 			{	
-				m_customerCode = value ;	
+				m_supplierCode = value ;	
 			}
 		}
 		
 
 				/// <summary>
-		/// 客户名称
-		/// 合兴关系对照表.Misc.客户名称
+		/// 供应商名称
+		/// 合兴关系对照表.Misc.供应商名称
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.String m_customerName ;
-		public System.String CustomerName
+		private System.String m_supplierName ;
+		public System.String SupplierName
 		{
 			get	
 			{	
-				return m_customerName  ;
+				return m_supplierName  ;
 			}
 			set	
 			{	
-				m_customerName = value ;	
+				m_supplierName = value ;	
 			}
 		}
 		

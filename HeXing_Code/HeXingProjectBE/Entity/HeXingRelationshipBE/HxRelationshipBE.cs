@@ -740,15 +740,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户代码 (该属性可为空,且无默认值)
-			/// 合兴关系对照表.Misc.客户代码
+			/// 供应商代码 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.供应商代码
 			/// </summary>
 			/// <value></value>
-			public  System.String CustomerCode
+			public  System.String SupplierCode
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("CustomerCode");
+					System.String value  = (System.String)base.GetValue("SupplierCode");
 					return value;
 						}
 			}
@@ -759,15 +759,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户名称 (该属性可为空,且无默认值)
-			/// 合兴关系对照表.Misc.客户名称
+			/// 供应商名称 (该属性可为空,且无默认值)
+			/// 合兴关系对照表.Misc.供应商名称
 			/// </summary>
 			/// <value></value>
-			public  System.String CustomerName
+			public  System.String SupplierName
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("CustomerName");
+					System.String value  = (System.String)base.GetValue("SupplierName");
 					return value;
 						}
 			}
@@ -1377,21 +1377,21 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		
 			/// <summary>
-		/// 客户代码 (该属性可为空,且无默认值)
-		/// 合兴关系对照表.Misc.客户代码
+		/// 供应商代码 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.供应商代码
 		/// </summary>
 		/// <value></value>
-			public  System.String CustomerCode
+			public  System.String SupplierCode
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("CustomerCode");
+				System.String value  = (System.String)base.GetValue("SupplierCode");
 				return value;
 				}
 				set
 			{
 				
-								base.SetValue("CustomerCode", value);
+								base.SetValue("SupplierCode", value);
 						 
 			}
 		}
@@ -1401,21 +1401,21 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 
 		
 			/// <summary>
-		/// 客户名称 (该属性可为空,且无默认值)
-		/// 合兴关系对照表.Misc.客户名称
+		/// 供应商名称 (该属性可为空,且无默认值)
+		/// 合兴关系对照表.Misc.供应商名称
 		/// </summary>
 		/// <value></value>
-			public  System.String CustomerName
+			public  System.String SupplierName
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("CustomerName");
+				System.String value  = (System.String)base.GetValue("SupplierName");
 				return value;
 				}
 				set
 			{
 				
-								base.SetValue("CustomerName", value);
+								base.SetValue("SupplierName", value);
 						 
 			}
 		}
@@ -1558,15 +1558,15 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		[Obsolete("")]
 		public string Res_RefStatus　{ get { return EntityRes.GetResource("RefStatus");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerCode")的方式取资源
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SupplierCode")的方式取资源
 		/// </summary>
 		[Obsolete("")]
-		public string Res_CustomerCode　{ get { return EntityRes.GetResource("CustomerCode");　}　}
+		public string Res_SupplierCode　{ get { return EntityRes.GetResource("SupplierCode");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustomerName")的方式取资源
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SupplierName")的方式取资源
 		/// </summary>
 		[Obsolete("")]
-		public string Res_CustomerName　{ get { return EntityRes.GetResource("CustomerName");　}　}
+		public string Res_SupplierName　{ get { return EntityRes.GetResource("SupplierName");　}　}
 		#endregion 
 
 
@@ -1695,14 +1695,14 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			public static string RefStatus　{ get { return "RefStatus";　}　}
 				
 			/// <summary>
-			/// 属性: 客户代码 的名称
+			/// 属性: 供应商代码 的名称
 			/// </summary>
-			public static string CustomerCode　{ get { return "CustomerCode";　}　}
+			public static string SupplierCode　{ get { return "SupplierCode";　}　}
 				
 			/// <summary>
-			/// 属性: 客户名称 的名称
+			/// 属性: 供应商名称 的名称
 			/// </summary>
-			public static string CustomerName　{ get { return "CustomerName";　}　}
+			public static string SupplierName　{ get { return "SupplierName";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1772,8 +1772,8 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 			this.exdMultiLangAttrs.Add("U9EntityId","U9EntityId");
 			this.exdMultiLangAttrs.Add("Memo","Memo");
 			this.exdMultiLangAttrs.Add("RefStatus","RefStatus");
-			this.exdMultiLangAttrs.Add("CustomerCode","CustomerCode");
-			this.exdMultiLangAttrs.Add("CustomerName","CustomerName");
+			this.exdMultiLangAttrs.Add("SupplierCode","SupplierCode");
+			this.exdMultiLangAttrs.Add("SupplierName","SupplierName");
         }
 	#endregion 
 
@@ -1941,9 +1941,9 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 		
 								this.SetTypeValue("Memo",data.Memo);
 		
-								this.SetTypeValue("CustomerCode",data.CustomerCode);
+								this.SetTypeValue("SupplierCode",data.SupplierCode);
 		
-								this.SetTypeValue("CustomerName",data.CustomerName);
+								this.SetTypeValue("SupplierName",data.SupplierName);
 		
 			#endregion 
 
@@ -2122,16 +2122,16 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE
 	     
 	    
 			{
-				object obj =this.GetValue("CustomerCode");
+				object obj =this.GetValue("SupplierCode");
 				if (obj != null)
-					data.CustomerCode=(System.String)obj;
+					data.SupplierCode=(System.String)obj;
 			}
 	     
 	    
 			{
-				object obj =this.GetValue("CustomerName");
+				object obj =this.GetValue("SupplierName");
 				if (obj != null)
-					data.CustomerName=(System.String)obj;
+					data.SupplierName=(System.String)obj;
 			}
 	     
 			#endregion 

@@ -31,7 +31,7 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="UFSoft.UBF.MD.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
-      <HintPath>.\..\..\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.MD.Design.dll</HintPath>      
+      <HintPath>.\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.MD.Design.dll</HintPath>      
       <SpecificVersion>False</SpecificVersion>
     </Reference>
   </ItemGroup>
@@ -39,10 +39,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include=".\..\..\UBFDocs\HeXing_U9_Project\HeXingProjectBE\\HeXingProjectBE.ubfmlproj" /> 	
-    <EmbeddedResource Include=".\..\..\UBFDocs\HeXing_U9_Project\HeXingProjectBE\\HeXingSAPU9GLVoucherBE.ubfbe" /> 	
-    <EmbeddedResource Include=".\..\..\UBFDocs\HeXing_U9_Project\HeXingProjectBE\\HeXingRelationship.ubfbe" /> 	
-    <EmbeddedResource Include=".\..\..\UBFDocs\HeXing_U9_Project\HeXingProjectBE\\RefVoucherInfoBE.ubfbe" /> 	
+    <EmbeddedResource Include=".\..\..\HeXing_U9_Project\HeXingProjectBE\\HeXingProjectBE.ubfmlproj" /> 	
+    <EmbeddedResource Include=".\..\..\HeXing_U9_Project\HeXingProjectBE\\HeXingSAPU9GLVoucherBE.ubfbe" /> 	
+    <EmbeddedResource Include=".\..\..\HeXing_U9_Project\HeXingProjectBE\\HeXingRelationship.ubfbe" /> 	
+    <EmbeddedResource Include=".\..\..\HeXing_U9_Project\HeXingProjectBE\\RefVoucherInfoBE.ubfbe" /> 	
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -55,8 +55,8 @@
 
     <PropertyGroup Condition="">
     <PostBuildEvent>
-	Md $(ProjectDir)\.\..\..\UBFV50\U9.VOB.Product.Metadata\\Unconfiged\Metadata\\
-	Copy $(TargetDir)\UFIDA.U9.Cust.HeXingProjectBE.MetaData.dll $(ProjectDir)\.\..\..\UBFV50\U9.VOB.Product.Metadata\\Unconfiged\Metadata\UFIDA.U9.Cust.HeXingProjectBE.MetaData.dll
+	Md $(ProjectDir)\.\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Metadata\\Unconfiged\Metadata\\
+	Copy $(TargetDir)\UFIDA.U9.Cust.HeXingProjectBE.MetaData.dll $(ProjectDir)\.\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Metadata\\Unconfiged\Metadata\UFIDA.U9.Cust.HeXingProjectBE.MetaData.dll
     </PostBuildEvent>
   </PropertyGroup>
 

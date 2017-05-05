@@ -544,7 +544,7 @@
             if (entry.AccountCode == "4001010000")
             {
                 account = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=10 and SapCode='" + entry.AccountCode
-                            + "' and CustomerCode='" + entry.CustomerCode + "'");
+                            + "' and SupplierCode='" + entry.SupplierCode + "'");
             }
             else
             {

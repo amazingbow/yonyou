@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.String relationID, System.String productionID);
+        PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 relationID, System.Int64 productionID);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,7 +46,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
         #region IMiscTranInProcessBP Members
 
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.String relationID, System.String productionID)
+        public PublicDataTransObj.PublicReturnDTOData Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 relationID, System.Int64 productionID)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
@@ -54,7 +54,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
         }
         
         //[OperationBehavior]
-        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.String relationID, System.String productionID)
+        public PublicDataTransObj.PublicReturnDTOData DoEx(ICommonDataContract commonData, System.Int64 relationID, System.Int64 productionID)
         {
 			this.CommonData = commonData ;
             try

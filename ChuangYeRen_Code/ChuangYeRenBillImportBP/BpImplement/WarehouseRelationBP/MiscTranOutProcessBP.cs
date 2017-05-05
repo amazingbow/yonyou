@@ -20,7 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 	public partial class MiscTranOutProcessBP
 	{
 	    #region Fields
-		private System.String relationID;
+		private System.Int64 relationID;
 		
 	    #endregion
 		
@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 		/// 杂发操作.Misc.相关ID
 		/// </summary>
 		/// <value></value>
-		public System.String RelationID
+		public System.Int64 RelationID
 		{
 			get
 			{

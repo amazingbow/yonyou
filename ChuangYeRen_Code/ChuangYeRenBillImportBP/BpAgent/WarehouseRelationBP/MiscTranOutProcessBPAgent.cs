@@ -38,13 +38,13 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.String relationID);
+		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 relationID);
     }
 	[Serializable]    
     public class MiscTranOutProcessBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy.IMiscTranOutProcessBP
     {
 	#region Fields	
-				private System.String relationID ;
+				private System.Int64 relationID ;
 			
 	#endregion	
 		
@@ -53,11 +53,11 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 				
 
 		/// <summary>
-		/// 相关ID (该属性可为空,且无默认值)
+		/// 相关ID (该属性可为空,但有默认值)
 		/// 杂发操作.Misc.相关ID
 		/// </summary>
-		/// <value>System.String</value>
-		public System.String RelationID
+		/// <value>System.Int64</value>
+		public System.Int64 RelationID
 		{
 			get	
 			{	
