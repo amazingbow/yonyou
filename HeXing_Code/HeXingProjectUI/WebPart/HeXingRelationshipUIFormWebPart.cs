@@ -563,12 +563,12 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerCode0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["CustomerCode"]/*CustomerCode*/,"CustomerCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","c8e119b1-0cfb-445e-8387-16d76e8b62af","c8e119b1-0cfb-445e-8387-16d76e8b62af","afc58899-ba10-473c-9cbb-f9c8f1dc2769");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SupplierCode0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["SupplierCode"]/*SupplierCode*/,"SupplierCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","364d7fd1-cd55-4a13-9052-dd42d8ef504e","364d7fd1-cd55-4a13-9052-dd42d8ef504e","a98ee466-269a-451b-b5b0-7d3ade8bc028");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerName0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["CustomerName"]/*CustomerName*/,"CustomerName", false, true, false, false, false, true, 0, 100, "50",true, false,"","9a496b18-ee3d-47a6-942c-70bd7599d3cf","9a496b18-ee3d-47a6-942c-70bd7599d3cf","c7e967de-4488-4a60-92f2-35f687c4bde7");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SupplierName0","TextBoxColumnModel", "", 0,this.Model.HxRelationshipBE.Fields["SupplierName"]/*SupplierName*/,"SupplierName", false, true, false, false, false, true, 0, 100, "50",true, false,"","9874e2da-ed70-4107-bb5e-3eb03b34e5b0","9874e2da-ed70-4107-bb5e-3eb03b34e5b0","a0995401-362d-4052-aa65-9747c91e639f");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
@@ -635,7 +635,6 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 
 
             ((IUFFldReferenceColumn)column).ApplyRefRelations();
-            
 								
 						
             //foreach Reference's output set data

@@ -62,7 +62,7 @@ namespace UFIDA.U9.Cust.HeXingRelationshipListUI.HxRelationshipBListUIModel
 		private void InitClass()
 		{
 			this.viewHxRelationshipBE = new HxRelationshipBEView(this);
-			this.viewHxRelationshipBE.SetResourceInfo("ed16f31a-5507-4aad-a141-29135828c126");
+			this.viewHxRelationshipBE.SetResourceInfo("816249fd-3570-4ea7-b92a-02666aa8ae33");
 			this.Views.Add(this.viewHxRelationshipBE);			
 
 			
@@ -106,20 +106,14 @@ namespace UFIDA.U9.Cust.HeXingRelationshipListUI.HxRelationshipBListUIModel
 		}
 
 
-		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
-		public HxRelationshipBEDefaultFilterFilter DefaultFilter
-		{
-			get { return (HxRelationshipBEDefaultFilterFilter)this.CurrentFilter; }
-		}
 		#endregion
 
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","56b86d8b-b4f9-482d-a4f5-73754e3a532f");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","be831777-ee7b-4a3e-a85e-bf032f8ed884");
 
 
-			this.CurrentFilter = new HxRelationshipBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -182,35 +176,6 @@ namespace UFIDA.U9.Cust.HeXingRelationshipListUI.HxRelationshipBListUIModel
 		#endregion
 	}
 	
-	[Serializable]
-	public class HxRelationshipBEDefaultFilterFilter : UIFilter
-	{
-		#region Constructor
-		public HxRelationshipBEDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
-		{
-			InitClass();
-		}
-		//for Clone Constructor
-		private HxRelationshipBEDefaultFilterFilter()
-			: base("DefaultFilter",null,"","")
-		{}
-		protected override IUIFilter CreateCloneInstance()
-		{
-			return new HxRelationshipBEDefaultFilterFilter();
-		}
-		#endregion
-
-		#region property
-		#endregion
-		
-		#region function
-		private void InitClass()
-		{
-		}
-		#endregion
-
-	}
 
 
 
