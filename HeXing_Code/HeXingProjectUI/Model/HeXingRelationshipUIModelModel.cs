@@ -196,13 +196,13 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 		{
 			get { return this.Fields["RefStatus"]; }
 		}
-		public IUIField FieldCustomerCode
+		public IUIField FieldSupplierCode
 		{
-			get { return this.Fields["CustomerCode"]; }
+			get { return this.Fields["SupplierCode"]; }
 		}
-		public IUIField FieldCustomerName
+		public IUIField FieldSupplierName
 		{
-			get { return this.Fields["CustomerName"]; }
+			get { return this.Fields["SupplierName"]; }
 		}
 
 
@@ -240,8 +240,8 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"U9EntityId_Name", typeof(String), true,"","System.String", "U9EntityId.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d8802bd2-9380-4bc5-b73d-10733e20182b");
 			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), true,"","System.String", "Memo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3a709931-9052-459b-b87e-b3c6eaa692ef");
 			UIModelRuntimeFactory.AddNewUIField(this,"RefStatus", typeof(Int32), true,"0","UFIDA.U9.Cust.HeXingProjectBE.HeXingRelationshipBE.RefStatusEnum", "RefStatus", true,true, false, "",false,(UIFieldType)2,"69d1e287-de63-4ed1-a7f7-bffc57c93de9","7d50d23e-ee31-4bc6-9438-5e5391f65b5f");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustomerCode", typeof(String), true,"","System.String", "CustomerCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c8e119b1-0cfb-445e-8387-16d76e8b62af");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustomerName", typeof(String), true,"","System.String", "CustomerName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9a496b18-ee3d-47a6-942c-70bd7599d3cf");
+			UIModelRuntimeFactory.AddNewUIField(this,"SupplierCode", typeof(String), true,"","System.String", "SupplierCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","364d7fd1-cd55-4a13-9052-dd42d8ef504e");
+			UIModelRuntimeFactory.AddNewUIField(this,"SupplierName", typeof(String), true,"","System.String", "SupplierName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9874e2da-ed70-4107-bb5e-3eb03b34e5b0");
 
 
 			this.CurrentFilter = new HxRelationshipBEDefaultFilterFilter(this);
@@ -605,28 +605,28 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HeXingRelationshipUIModel
 		}
 		
 		
-		public  String CustomerCode
+		public  String SupplierCode
 		{
 			get{
-				//object value = this[this.uiviewHxRelationshipBE.FieldCustomerCode] ;
+				//object value = this[this.uiviewHxRelationshipBE.FieldSupplierCode] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewHxRelationshipBE.FieldCustomerCode);
+				return GetValue<String>(this.uiviewHxRelationshipBE.FieldSupplierCode);
 			}
 			set{
-				this[this.uiviewHxRelationshipBE.FieldCustomerCode] = value;
+				this[this.uiviewHxRelationshipBE.FieldSupplierCode] = value;
 			}
 		}
 		
 		
-		public  String CustomerName
+		public  String SupplierName
 		{
 			get{
-				//object value = this[this.uiviewHxRelationshipBE.FieldCustomerName] ;
+				//object value = this[this.uiviewHxRelationshipBE.FieldSupplierName] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewHxRelationshipBE.FieldCustomerName);
+				return GetValue<String>(this.uiviewHxRelationshipBE.FieldSupplierName);
 			}
 			set{
-				this[this.uiviewHxRelationshipBE.FieldCustomerName] = value;
+				this[this.uiviewHxRelationshipBE.FieldSupplierName] = value;
 			}
 		}
 		#endregion
