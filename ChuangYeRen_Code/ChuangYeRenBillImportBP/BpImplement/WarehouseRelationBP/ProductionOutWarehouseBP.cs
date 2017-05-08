@@ -20,6 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 	public partial class ProductionOutWarehouseBP
 	{
 	    #region Fields
+		private System.Int64 relationId;
 		
 	    #endregion
 		
@@ -30,17 +31,34 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 	    #endregion
 
 	    #region member		
+		/// <summary>
+		/// 相关ID	
+		/// 成品出库操作.Misc.相关ID
+		/// </summary>
+		/// <value></value>
+		public System.Int64 RelationId
+		{
+			get
+			{
+				return this.relationId;
+			}
+			set
+			{
+				relationId = value;
+			}
+		}
 	    #endregion
 		
 	    #region do method 
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public PublicDataTransObj.PublicReturnDTO Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

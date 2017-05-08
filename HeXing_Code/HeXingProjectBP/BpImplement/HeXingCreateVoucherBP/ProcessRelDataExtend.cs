@@ -153,7 +153,7 @@
                         var accountCode = line.AccountCode + ";" + line.SupplierCode;
                         if (!codeNamePair[10].ContainsKey(accountCode))//科目
                         {
-                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.SupplierCode + "@" + item.SAPVoucherDisplayCode);
+                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
                     else
