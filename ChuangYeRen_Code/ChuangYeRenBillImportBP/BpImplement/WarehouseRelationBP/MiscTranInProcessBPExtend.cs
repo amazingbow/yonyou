@@ -47,8 +47,7 @@
             ListmiscRcvDTO.Add(miscRcvDTO);
             var pubResult = CreateMiscRcvDoc(ListmiscRcvDTO);
             return pubResult;
-        }
-        #region 生成杂收单
+        }  
         private PublicReturnDTO CreateMiscRcvDoc(List<IC_MiscRcvDTOData> miscRcvDTO)
         {
             PublicReturnDTO pubResult = new PublicReturnDTO();
@@ -90,68 +89,6 @@
             #endregion
             return pubResult;
         }
-        private bool IsNumberic(string str, ref decimal vsNum)
-        {
-            bool isNum;
-            isNum = decimal.TryParse(str, System.Globalization.NumberStyles.Float,
-                System.Globalization.NumberFormatInfo.InvariantInfo, out vsNum);
-            return isNum;
-        }
-        private string GetLotCode(ref int Seq)
-        {
-            string lotcode = System.DateTime.Now.ToString("yyyyMMdd") + AddToLength4(Seq);
-            LotMaster lotMaster = LotMaster.Finder.Find(string.Format(" DocOwnerOrg={0} and LotCode='{1}'", Base.Context.LoginOrg.ID, lotcode));
-            while (lotMaster != null)
-            {
-                Seq += 1;
-                lotcode = System.DateTime.Now.ToString("yyyyMMdd") + AddToLength4(Seq);
-                lotMaster = LotMaster.Finder.Find(string.Format(" DocOwnerOrg={0} and LotCode='{1}'", Base.Context.LoginOrg.ID, lotcode));
-            }
-            return lotcode;
-        }
-        private LotMaster CreateLot(UFIDA.U9.CBO.SCM.Item.ItemMaster Item, string LotCode)
-        {
-            // 生成批号主挡
-            LotRequestDTO lotReqDTO = new LotRequestDTO();
-            lotReqDTO.Item = Item.Key;
-            lotReqDTO.ItemCode = Item.Code;
-            lotReqDTO.ItemOrg = Item.OrgKey;
-            lotReqDTO.QueryTime = Base.Context.LoginDateTime;
-            lotReqDTO.UsingOrg = Base.Context.LoginOrg.Key;
-            lotReqDTO.Status = LotSnStatusEnum.I_MiscRcv;
-            lotReqDTO.Lot = LotCode;
-
-            lotReqDTO.EffectiveTime = Base.Context.LoginDate;
-            lotReqDTO.InvalidTime = UFSoft.UBF.PL.Tool.Constant.DateTimeMaxValue;
-            lotReqDTO.ValidDays = (lotReqDTO.InvalidTime - lotReqDTO.EffectiveTime).Days;
-
-            //lotReqDTO.Document = this.MOKey;
-            //lotReqDTO.DocType = this.MO.MODocTypeKey;
-            //lotReqDTO.DocVersion = this.MO.Version;
-            //lotReqDTO.DocNo = this.MO.DocNo;
-
-            CreateLotOnlineSV onlineLot = new CreateLotOnlineSV();
-            onlineLot.LotRequestDTO = lotReqDTO;
-            LotInfo lotInfo = onlineLot.Do();
-            if (lotInfo == null) return null;
-            if (lotInfo.LotMaster == null) return null;
-            if (lotInfo.LotMaster.EntityID <= 0L) return null;
-            LotMaster lotMaster = LotMaster.Finder.FindByID(lotInfo.LotMaster.EntityID);
-            if (lotMaster == null) return null;
-            return lotMaster;
-        }
-        /// <summary>
-        /// 补齐4位
-        /// </summary>
-        /// <param name="No"></param>
-        /// <returns></returns>
-        private string AddToLength4(int No)
-        {
-            string strNo = No.ToString();
-            if (strNo.Length >= 4) return strNo;
-            return "0000".Substring(0, 4 - strNo.Length) + strNo;
-        }
-        #endregion
         private IC_MiscRcvDTOData GenerateMiscRcv(MiscTranInProcessBP bpObj)
         {
             InvStock invStock = InvStock.Finder.FindByID(bpObj.RelationID);
@@ -220,14 +157,18 @@
                 //miscRcvDTO.MiscRcvTransLs.Add(miscRcvLineDTO);
 
 
-                //生成相关
+                //生产相关
                 miscRcvLineDTO.IsMFG = true;
-                MO.MO.ModifyMO
+
                 //生产订单号
-                miscRcvLineDTO.MoDocNo = bomHead.Cust_Xmjl_MO_BomMain.ManufactureNo.Code;
+                var mo = MO.MO.MO.Finder.FindByID(bpObj.ProductionID);
+                miscRcvLineDTO.MoDocNo = mo.DocNo;
                 miscRcvLineDTO.MoDocEntity = bpObj.ProductionID;
 
                 miscRcvLineDTO.DescFlexSegments = new Base.FlexField.DescFlexField.DescFlexSegmentsData();
+                miscRcvLineDTO.BenefitProject = new CommonArchiveDataDTOData { Code = item.SCPO.Code };
+                miscRcvLineDTO.Project = new CommonArchiveDataDTOData { Code = item.SCPO.Code };
+
                 #endregion
                 miscRcvDTO.MiscRcvTransLs.Add(miscRcvLineDTO);
             }

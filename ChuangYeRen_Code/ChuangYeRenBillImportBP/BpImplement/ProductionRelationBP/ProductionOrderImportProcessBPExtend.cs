@@ -53,14 +53,19 @@
                 createProxy.MODTOs.Add(moDto);
                 var data = createProxy.Do();
                 if (data.Count == 0) return pub;
+                if (data[0].ID == 0)
+                {
+                    throw new Exception(data[0].ErrMsg);
+                }
                 pub.DocID = data[0].ID;
                 pub.DocNo = data[0].DocNo;
                 pub.Message = "生产订单创建成功！";
+                pub.Flag = true;
             }
             catch (Exception ex)
             {
                 pub.Flag = false;
-                pub.Message ="生产订单创建失败："+ ex.Message;
+                pub.Message = "生产订单创建失败：" + ex.Message;
                 return pub;
             }
             #endregion
@@ -76,6 +81,7 @@
                 submitProxy.MOs.Add(submit);
                 submitProxy.Do();
                 pub.Message += "生产订单提交成功！";
+                pub.Flag = true;
             }
             catch (Exception ex)
             {
@@ -91,6 +97,7 @@
                 OperateBy = Context.LoginUser,
                 OperateOn = DateTime.Now,
                 OperateQty = moDto.MRPQty,
+                OperateType = true,//false 反开工
                 Org = new CBO.Pub.Controller.CommonArchiveDataDTOData { ID = Context.LoginOrg.ID, Code = Context.LoginOrg.Code, Name = Context.LoginOrg.Name }
             };
 
@@ -101,7 +108,8 @@
                 approveProxy.MOOperateParamDTOs = new List<MOOperateParamDTOData>();
                 approveProxy.MOOperateParamDTOs.Add(appData);
                 var appResult = approveProxy.Do();
-                pub.Message = "生产订单审核成功！";
+                pub.Message += "生产订单审核成功！";
+                pub.Flag = true;
             }
             catch (Exception ex)
             {
@@ -117,7 +125,8 @@
                 startMoProxy.MOOperateParamDTOs = new List<MOOperateParamDTOData>();
                 startMoProxy.MOOperateParamDTOs.Add(appData);
                 var startResult = startMoProxy.Do();
-                pub.Message = "生产订单开工成功！";
+                pub.Message += "生产订单开工成功！";
+                pub.Flag = true;
             }
             catch (Exception ex)
             {
@@ -145,9 +154,8 @@
                 Name = order.COperator.Name
             }; // 业务员  
             moDto.CompleteDate = order.DeliverDate;
-
             //moDto.CUD//暂时不知道是什么东西
-            //moDto.DemandCode = 0;//需求分类
+            moDto.DemandCode = -1;//需求分类
             moDto.Department = new CommonArchiveDataDTOData
             {
                 Code = order.Department.Code,
@@ -157,7 +165,7 @@
             moDto.DocNo = order.MakReq;
             moDto.DocType = new CommonArchiveDataDTOData
             {
-                Code = "",
+                Code = "MO01",
                 Name = ""
             };
             moDto.ExpandLevel = 2;
@@ -201,7 +209,7 @@
             //moDto.RoutingEffeDate
             //moDto.RoutingVer
             //moDto.SCVBin
-            Organization org = Organization.Finder.FindByID(order.SCVWh.OrgID);
+            Organization org = Organization.Finder.FindByID(order.SCVWh.Org.ID);
             Warehouse wh = Warehouse.FindByCode(org, order.SCVWh.Code);
             moDto.SCVWh = new CommonArchiveDataDTOData
             {
