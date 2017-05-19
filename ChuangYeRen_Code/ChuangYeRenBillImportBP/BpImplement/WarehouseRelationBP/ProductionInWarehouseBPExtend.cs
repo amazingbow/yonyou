@@ -116,6 +116,12 @@
                 //RcvPerson=invStock.
                 Remark = "导入：" + invStock.BillNO,
             };
+            var type = RcvRptDocType.Finder.Find("Code='W01'");
+            if (type != null )
+            {
+                rcvRptProxy.RcvRpt.RcvRptDocType = type.ID;
+            }
+            //rcvRptProxy.RcvRpt.RcvRptDocType
             if (dept != null)
             {
                 rcvRptProxy.RcvRpt.RcvDep = dept.ID;

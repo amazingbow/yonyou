@@ -58,23 +58,23 @@
             }
             #endregion
             #region 领料单提交
-            try
-            {
-                BatchSubmitIssueTXNProxy submitIssue = new BatchSubmitIssueTXNProxy();
-                submitIssue.IssueTXNs = new List<BatchOperationDTOData>();
-                BatchOperationDTOData submintDto = new BatchOperationDTOData
-                {
-                    ID = pubResult.DocID,
-                    DocNo = pubResult.DocNo
-                };
-                submitIssue.Do();
-            }
-            catch (Exception ex)
-            {
-                pubResult.Flag = false;
-                pubResult.Message += "提交领料单失败：" + ex.Message;
-                return pubResult;
-            }
+            //try
+            //{
+            //    BatchSubmitIssueTXNProxy submitIssue = new BatchSubmitIssueTXNProxy();
+            //    submitIssue.IssueTXNs = new List<BatchOperationDTOData>();
+            //    BatchOperationDTOData submintDto = new BatchOperationDTOData
+            //    {
+            //        ID = pubResult.DocID,
+            //        DocNo = pubResult.DocNo
+            //    };
+            //    submitIssue.Do();
+            //}
+            //catch (Exception ex)
+            //{
+            //    pubResult.Flag = false;
+            //    pubResult.Message += "提交领料单失败：" + ex.Message;
+            //    return pubResult;
+            //}
             #endregion
             #region 领料单审核
             try
@@ -108,16 +108,11 @@
             {
                 BusinessCreatedOn = DateTime.Now,
                 BusinessDate = DateTime.Now,
-                BusinessType = 0,
-                Dept = new CommonArchiveDataDTOData
-                {
-                    Code = invStock.DeptID.Code,
-                    Name = invStock.DeptID.Name
-                },
+                BusinessType = 47,//51生产线日计划，47标准生产，48返工生产，49报废生产
                 DocNo = invStock.BillNO,
                 DocType = new CommonArchiveDataDTOData
                 {
-                    Code = "",
+                    Code = "L01",
                     Name = ""
                 },
                 Employee = new CommonArchiveDataDTOData
@@ -128,12 +123,19 @@
                 //IsSpecialIssuek
                 IssueOrg = new CommonArchiveDataDTOData
                 {
-                    Code = "",
-                    Name = ""
+                    ID = invStock.OrgID
                 },
                 //IssueType=0
                 Memo = ""
             };
+            if (invStock.DeptID != null)
+            {
+                issueDto.Dept = new CommonArchiveDataDTOData
+                {
+                    Code = invStock.DeptID.Code,
+                    Name = invStock.DeptID.Name
+                };
+            }
             issueDto.MOs = new List<CommonArchiveDataDTOData>();
             CommonArchiveDataDTOData mo = new CommonArchiveDataDTOData
             {
@@ -141,38 +143,63 @@
             };
             issueDto.MOs.Add(mo);
             issueDto.PickListDTOs = new List<PickListDTOData>();
-            issueLst.Add(issueDto);
+
             foreach (var item in invStock.InvStocks)
             {
                 PickListDTOData pickDto = new PickListDTOData();
-                pickDto.Item = new CommonArchiveDataDTOData
+                pickDto.MO = mo;
+                if (item.ItemID != null)
                 {
-                    Code = item.ItemID.Code
-                };
-                pickDto.IssueWh = new CommonArchiveDataDTOData
+                    pickDto.Item = new CommonArchiveDataDTOData
+                    {
+                        Code = item.ItemID.Code
+                    };
+                    if (item.ItemID.UOM != null)
+                    {
+                        pickDto.IssueUOM = new CommonArchiveDataDTOData
+                        {
+                            Code = item.ItemID.UOM.Code
+                        };
+                    }
+                }
+                if (item.StockID != null)
                 {
-                    Code = item.StockID.Code
-                };
+                    pickDto.IssueWh = new CommonArchiveDataDTOData
+                    {
+                        Code = item.StockID.Code
+                    };
+                }
                 pickDto.IssueQty = item.OutQty;
-                pickDto.Project = new CommonArchiveDataDTOData
+                if (item.SCPO != null)
                 {
-                    Code = item.SCPO.Code
-                };
-                pickDto.IssueUOM = new CommonArchiveDataDTOData
-                {
-                    Code = item.ItemID.UOM.Code
-                };
+                    pickDto.Project = new CommonArchiveDataDTOData
+                    {
+                        Code = item.SCPO.Code
+                    };
+                }
                 pickDto.OwnerOrg = new CommonArchiveDataDTOData
                 {
-                    Code = Context.LoginOrg.Code
+                    ID = invStock.OrgID
                 };
                 pickDto.IsNoPickLine = true;
-                pickDto.IssueBin = new CommonArchiveDataDTOData
+                if (item.FLocator != null)
                 {
-                    Code = item.FLocator.Code
-                };
+                    pickDto.IssueBin = new CommonArchiveDataDTOData
+                    {
+                        Code = item.FLocator.Code
+                    };
+                }
+                pickDto.OpNum = "1";//暂时默认
+                if (invStock.DeptID != null)
+                {
+                    pickDto.WorkCenter = new CommonArchiveDataDTOData
+                    {
+                        Code = invStock.DeptID.Code
+                    };
+                }
                 issueDto.PickListDTOs.Add(pickDto);
             }
+            issueLst.Add(issueDto);
             return issueLst;
         }
     }

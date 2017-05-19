@@ -48,7 +48,7 @@
         {
             PublicReturnDTO pub = new PublicReturnDTO();
             Complete.RcvRptBP.RcvRptInfoDTOData result = new Complete.RcvRptBP.RcvRptInfoDTOData();
-            #region 创建成品入库单
+            #region 创建成品出库单
             try
             {
                 CreateRcvRptProxy rcvRptProxy = new CreateRcvRptProxy();
@@ -67,7 +67,7 @@
                 return pub;
             }
             #endregion
-            #region 审核成品入库单
+            #region 审核成品出库单
             try
             {
                 ApproveRcvRptProxy rcvRptProxy = new ApproveRcvRptProxy();
@@ -114,6 +114,11 @@
             if (dept != null)
             {
                 rcvRptProxy.RcvRpt.RcvDep = dept.ID;
+            }
+            var type = RcvRptDocType.Finder.Find("Code='W01'");
+            if (type != null)
+            {
+                rcvRptProxy.RcvRpt.RcvRptDocType = type.ID;
             }
             rcvRptProxy.RcvRptLines = new List<RcvRptDocLineData>();
             foreach (var item in invStock.InvStocks)
