@@ -47,7 +47,7 @@
             ListmiscRcvDTO.Add(miscRcvDTO);
             var pubResult = CreateMiscRcvDoc(ListmiscRcvDTO);
             return pubResult;
-        }  
+        }
         private PublicReturnDTO CreateMiscRcvDoc(List<IC_MiscRcvDTOData> miscRcvDTO)
         {
             PublicReturnDTO pubResult = new PublicReturnDTO();
@@ -100,7 +100,16 @@
             // 业务日期
             miscRcvDTO.BusinessDate = DateTime.Now;
             // 单据类型
-            miscRcvDTO.MiscRcvDocType = new CommonArchiveDataDTOData() { };
+            string doctypeCode = "";
+            if (bpObj.ProductionID > 0)
+            {
+                doctypeCode = "ZS001";//生产退料
+            }
+            else
+            {
+                doctypeCode = "ZS002";
+            }
+            miscRcvDTO.MiscRcvDocType = new CommonArchiveDataDTOData() { Code = doctypeCode };
             // 数据状态
             miscRcvDTO.SysState = UFSoft.UBF.PL.Engine.ObjectState.Inserted;
             // 描述

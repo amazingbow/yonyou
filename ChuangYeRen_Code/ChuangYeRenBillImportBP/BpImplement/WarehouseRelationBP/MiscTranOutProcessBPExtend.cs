@@ -94,7 +94,7 @@
             inputMiscShipmentDTO.BusinessDate = DateTime.Today;
             //inputMiscShipmentDTO.DescFlexField = new UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData();
             //单据类型
-            inputMiscShipmentDTO.MiscShipDocType = new CommonArchiveDataDTOData();
+            inputMiscShipmentDTO.MiscShipDocType = new CommonArchiveDataDTOData { Code = "ZF001" };
             // 数据状态
             inputMiscShipmentDTO.SysState = UFSoft.UBF.PL.Engine.ObjectState.Inserted;
             // 描述
