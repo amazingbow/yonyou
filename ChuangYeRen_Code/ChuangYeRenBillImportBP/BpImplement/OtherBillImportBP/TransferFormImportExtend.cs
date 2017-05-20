@@ -47,7 +47,7 @@
             {
                
                 #region  创建形态转换单
-                IC_TransferFormDTOData transferhead = getInfo(bpObj.ID);
+                IC_TransferFormDTOData transferhead = getInfo(0);
                 CreateProxy.TransferFormDTOList.Add(transferhead);
                 var data = CreateProxy.Do();
                 if (data.Count == 0) return pub;
