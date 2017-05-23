@@ -1,0 +1,4055 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.MD.Design</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.MD.Cache.ProjectCache">
+            <summary>
+            Cache Project
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCache.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCache.FindObjectByKey(System.Object)">
+            <summary>
+            从dll中获取Project元数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCache.AddAllTypesToCache(UFSoft.UBF.MD.IProject)">
+            <summary>
+            将Project中的所有类型对象加载到缓存中。
+            </summary>
+            <param name="project"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ProjectCache.DeleteAllTypesFromCache(UFSoft.UBF.MD.IProject)">
+            <summary>
+            从缓存中清除Project中的所有类型对象
+            </summary>
+            <param name="project"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.TypeCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer">
+            <summary>
+            Xml data convertor generic class,
+            which contain common method and attribute
+            to convert object to xml and xml to object
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer">
+            <summary>
+            Xml data convertor interface
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer.LoadSpecialReference(System.Object,System.Object)">
+            <summary>
+            Load Special Reference
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.DataTransfer.IXmlDataTransfer.ComponentType">
+            <summary>
+            Element title
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.INDENT">
+            <summary>
+            Indent style
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.componentType">
+            <summary>
+            Component Type
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list on saving</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.LoadSpecialReference(System.Object,System.Object)">
+            <summary>
+            Load Special Reference
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeElementXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            write IElement attribute to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getElementObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to IElement
+            </summary>
+            <param name="element"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeElementChildNodeXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            write IElement ChildNode to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getElementChildNodeObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to Element Child Node Object
+            </summary>
+            <param name="element"></param>
+            <param name="obj">Serialized object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeCompnentXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Write ICompnent attribute to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getCompnentObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to Compnent's common object
+            </summary>
+            <param name="element"></param>
+            <param name="obj">serialized object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeTypeXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Write IType attribute to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getTypeObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to Type
+            </summary>
+            <param name="element"></param>
+            <param name="obj">serialized object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeComplexTypeXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            write IComplex attribute to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getComplexTypeObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to ComplexType
+            </summary>
+            <param name="element"></param>
+            <param name="obj">Serialized object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.writeModuleXml(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            write Module attribute to xml writer
+            </summary>
+            <param name="obj">unserialized object</param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getModuleObject(System.Xml.XmlElement,System.Object)">
+            <summary>
+            convert xml to IModule
+            </summary>
+            <param name="element"></param>
+            <param name="obj">Serialized object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getTitle(System.String)">
+            <summary>
+            Get Element Title by Component Type
+            </summary>
+            <param name="componentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getTypeFromImports(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Type Form Import Component By Key
+            </summary>
+            <param name="component">IComponent</param>
+            <param name="key">Entity ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getDataTypeByKey(UFSoft.UBF.MD.EntityModel.IBEComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Type By Key
+            </summary>
+            <param name="component">BEComponent</param>
+            <param name="key">Type ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getColumnByKey(UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Column By ID
+            </summary>       
+            <param name="table">Table Object</param>
+            <param name="key">Column ID</param>
+            <returns>IColumn</returns>
+            <remarks>Maybe to do some process in future,so remain</remarks>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getEntityFromImports(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Entity By Key From Imports
+            </summary>
+            <param name="component">BEComponent</param>
+            <param name="key">Entity ID</param>
+            <returns>Entity</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAssociationFromImports(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Associstion By Key From Imports
+            </summary>
+            <param name="component">Component</param>
+            <param name="key">Associstion ID</param>
+            <returns>IAssociation</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getRelationFromImports(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Relationship By Key From Imports
+            </summary>
+            <param name="component">Component</param>
+            <param name="key">Relationship ID</param>
+            <returns>IRelationship</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getTableFromImports(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Table By Key From Import
+            </summary>
+            <param name="component">IComponent</param>
+            <param name="key">Table id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributesByID(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Get Attributes By ID String
+            </summary>
+            <param name="component"></param>
+            <param name="id">Attribute ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributeByKey(UFSoft.UBF.MD.IComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Attribute By Key
+            </summary>
+            <param name="component">IComponent</param>
+            <param name="key">Entity ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getComponent(UFSoft.UBF.MD.IImport)">
+            <summary>
+            Get Component from Import
+            </summary>
+            <param name="import">Import Object</param>
+            <returns>IComponent</returns>
+            <see cref="T:UFSoft.UBF.MD.IComponent"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getComponentType(UFSoft.UBF.MD.IComponent)">
+            <summary>
+            Get Component Type
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.SetSystemAttributeInfo(UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            设置系统属性的信息
+            1、IsNullable = true
+            </summary>
+            <param name="attr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getEntityFormComponent(UFSoft.UBF.MD.EntityModel.IBEComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Entity Form BEComponent By Key
+            </summary>
+            <param name="component">IBEComponent</param>
+            <param name="key">Entity ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.createDAO(System.String)">
+            <summary>
+            Create Xml DAO interface 
+            </summary>
+            <param name="componentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributeFormComponent(UFSoft.UBF.MD.EntityModel.IBEComponent,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Attribute Form BEComponent By Key
+            </summary>
+            <param name="component">IBEComponent</param>
+            <param name="key">Attribute ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributeFormEnums(UFSoft.UBF.MD.EntityModel.IEnumTypeCollection,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Attribute Form Enums By Key
+            </summary>
+            <param name="enums">IEnumTypeCollection</param>
+            <param name="key">Attribute ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributeFormEntities(UFSoft.UBF.MD.EntityModel.IEntityCollection,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Attribute Form Entities By Key
+            </summary>
+            <param name="entities">IEntityCollection</param>
+            <param name="key">Attribute ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransfer.getAttributeFormPropertyTypes(UFSoft.UBF.MD.EntityModel.IPropertyTypeCollection,UFSoft.UBF.MD.Key)">
+            <summary>
+            Get Attribute Form PropertyTypes By Key
+            </summary>
+            <param name="propertyTypes">IPropertyTypeCollection</param>
+            <param name="key">Attribute ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ApplicationXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ApplicationXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EventInfoXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EventInfoXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EventInfoXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ExceptionInfoXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ExceptionInfoXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ExceptionInfoXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.GroupXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.GroupXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ItemXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ItemXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ItemXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ProjectXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ProjectXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ProjectXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ProjectXmlTransfer.transferSC(System.Xml.XmlElement,UFSoft.UBF.MD.IProject)">
+            <summary>
+            Deserialize source control
+            </summary>
+            <param name="element"></param>
+            <param name="project"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SCSystemXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SCSystemXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SCSystemXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.TableViewXmlTransfer">
+            <summary>
+            Convert between Table And Xml 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TableViewXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TableViewXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryItemXmlTransfer">
+            <summary>
+            Convert between DictionaryItem And Xml 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryItemXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryItemXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryTypeXmlTransfer">
+            <summary>
+            Convert between DictionaryType And Xml 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryTypeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            include child dictionary types
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryTypeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryXmlTransfer">
+            <summary>
+            Convert between Dictionary And Xml 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DictionaryXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityViewXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityViewXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ViewAttributeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ViewAttributeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ViewAttributeXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ServiceGroupXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ServiceGroupXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.Xml.UI.ReferenceComponentXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.Xml.UI.ReferenceXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            加载引用对象
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Load(System.String)">
+            <summary>
+            从文件获取对象
+            </summary>
+            <param name="content">xml file content</param>
+            <returns>ApplicationCollection</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Load(System.Xml.XmlDocument)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Load(System.IO.TextReader)">
+            <summary>
+            从文件获取对象
+            </summary>
+            <param name="textReader">xml file text content</param>
+            <returns>ServiceGroup interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Save(UFSoft.UBF.MD.IApplicationCollection,System.String)">
+            <summary>
+            Save Application
+            </summary>
+            <param name="serviceGroup">Application object</param>
+            <param name="path">File path</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Save(UFSoft.UBF.MD.IApplicationCollection,System.String,System.Text.Encoding)">
+            <summary>
+            Save Application
+            </summary>
+            <param name="serviceGroup">Application object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ApplicationXMLDAO.Delete(System.String)">
+            <summary>
+            Delete Application
+            </summary>
+            <param name="component">Application object</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO">
+            <summary>
+            XML DAO Generic class,which contain xml dao
+            common method,attribute
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO">
+            <summary>
+            Xml DAO interface
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(System.Xml.XmlDocument)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(System.IO.Stream)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(System.IO.Stream,UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>Component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(UFSoft.UBF.MD.Cache.Key,UFSoft.UBF.MD.IProject)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <param name="project">Container project</param>
+            <returns>Component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Load(System.IO.TextReader)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="textReader">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.LoadImport(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Save(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO.Delete(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Delete Component
+            </summary>
+            <param name="component">component object</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.componentCache">
+            <summary>
+            Component Cache
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.Xml.XmlDocument)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.IO.TextReader)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="textReader">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.IO.Stream)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.IO.Stream,UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(System.IO.Stream,UFSoft.UBF.MD.Cache.Key,UFSoft.UBF.MD.IProject)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Load(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>Component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.LoadImport(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Save(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <see cref="!:IXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="!:IXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Delete(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Delete Component
+            </summary>
+            <param name="component">component object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.insert(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Insert Component
+            </summary>
+            <param name="component">component object</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.IXmlDAO"/>
+            <remarks>Remain for future</remarks>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.load(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            Load XML Doc
+            </summary>
+            <param name="key">Contain path and componentid</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO.load(UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            Load XML Doc
+            </summary>
+            <param name="path">XML file path</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DictionaryXmlDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Dictionary
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DictionaryXmlDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Dictionary
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>       
+            <param name="isImport"></param>
+            <returns>DBComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DictionaryXmlDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.IProjectDao">
+            <summary>
+            项目元数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.IProjectDao.Load(System.String)">
+            <summary>
+            加载项目元数据
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.PageXmlDao.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Dictionary
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.PageXmlDao.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Dictionary
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>       
+            <param name="isImport"></param>
+            <returns>DBComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.PageXmlDao.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.Dll.ProjectDllDao">
+            <summary>
+            从dll中加载project元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase">
+            <summary>
+            XML DAO Generic class,which contain xml dao
+            common method,attribute
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.componentCache">
+            <summary>
+            Component Cache
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.builder">
+            <summary>
+            组件构造器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(System.String)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(System.Xml.XmlDocument)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="content">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(System.IO.TextReader)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="textReader">xml file text content</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(System.IO.Stream)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>Component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.LoadImport(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="key">key contain full path and component id</param>
+            <returns>component object</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Save(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <see cref="!:IXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="!:IXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Delete(UFSoft.UBF.MD.IComponent,System.String)">
+            <summary>
+            Delete Component
+            </summary>
+            <param name="component">component object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Component,由子类实施
+            </summary>
+            <param name="document">Xml Document</param>
+            <param name="key">key contain full path and component id</param>
+            <param name="isImport">是否加Import组件</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.LoadFromXml(UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            Load XML Doc
+            </summary>
+            <param name="key">Contain path and componentid</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.LoadFromXml(UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            Load XML Doc
+            </summary>
+            <param name="path">XML file path</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.XMLDAOBase.Load(System.IO.Stream,UFSoft.UBF.MD.Cache.Key,UFSoft.UBF.MD.IProject)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="Stream">xml file stream</param>
+            <returns>Component interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ReferenceComponentXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载BEComponent
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>
+            <param name="isImport">Does load import component</param>
+            <returns>BEComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.Load(System.String)">
+            <summary>
+            从文件获取对象
+            </summary>
+            <param name="content">xml file path</param>
+            <returns>ServiceGroup interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.Load(System.IO.TextReader)">
+            <summary>
+            从文件获取对象
+            </summary>
+            <param name="textReader">xml file text content</param>
+            <returns>ServiceGroup interface</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.Save(UFSoft.UBF.MD.IServiceGroup,System.String)">
+            <summary>
+            Save serviceGroup
+            </summary>
+            <param name="serviceGroup">serviceGroup object</param>
+            <param name="path">File path</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.Save(UFSoft.UBF.MD.IServiceGroup,System.String,System.Text.Encoding)">
+            <summary>
+            Save serviceGroup
+            </summary>
+            <param name="serviceGroup">serviceGroup object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.Delete(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            Delete ServiceGroup
+            </summary>
+            <param name="sg">service group object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.SerializeServiceGroupInfo(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            从ServiceGroup对象中系列化其信息,返回XML.
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ServiceGroupXMLDAO.DeserializeServiceGroupInfo(System.Xml.XmlElement,UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            根据XML内容设置ServiceGroup的属性
+            </summary>
+            <param name="element"></param>
+            <param name="serviceGruop"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Service.IReferenceService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BaseComponentService.ReLoad(UFSoft.UBF.MD.IComponent@)">
+            <summary>
+            Reload组件模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BaseComponentService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BaseComponentService.Load(System.IO.Stream,System.String)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IComponentService">
+            <summary>
+            组件服务接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.IMetaDataService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.IMetaDataService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.IComponentService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.IComponentService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Load(System.IO.Stream,System.String)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Delete(System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.ReLoad(UFSoft.UBF.MD.IComponent@)">
+            <summary>
+            Reload组件
+            </summary>
+            <param name="cmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IComponentService.Unload(UFSoft.UBF.MD.IComponent)">
+            <summary>
+            卸载
+            </summary>
+            <param name="cmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <param name="project">Container project</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.SaveToStream(UFSoft.UBF.MD.IComponent,System.IO.Stream)">
+            <summary>
+            把Component转化成Stream
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.PageService.Delete(System.String)">
+            <summary>
+            从缓存中移除dll组件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IApplicationService">
+            <summary>
+            应用接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.GetRootApplications">
+            <summary>
+            获取所有的根节点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.GetApplicationByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取对应的应用
+            </summary>
+            <param name="key">应用ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.GetApplicationByName(System.String)">
+            <summary>
+            根据名称获取应用
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Delete">
+            <summary>
+            删除一个应用文件
+            </summary>
+            <returns>删除是否成功的标志</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Reload">
+            <summary>
+            重新装载应用文件
+            </summary>
+            <returns>重新装载是否成功的标志</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Load(System.String)">
+            <summary>
+            装载一个应用文件
+            </summary>
+            <param name="path">应用文件的路径</param>
+            <returns>装载是否成功的标志</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Load">
+            <summary>
+            根据路径装载应用文档
+            </summary>
+            <param name="path">应用文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Close">
+            <summary>
+            关闭应用文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Save(System.String)">
+            <summary>
+            保存一个应用文件
+            </summary>
+            <param name="path">应用文件的保存路径</param>
+            <returns>保存是否成功的标志</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.Save">
+            <summary>
+            保存修改后的应用文件
+            </summary>
+            <returns>保存是否成功的标志</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.CreateApplication">
+            <summary>
+            创建一个带ID的应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.CreateNullApplication">
+            <summary>
+            创建一个空应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.CreateApplicationCollection">
+            <summary>
+            创建一个应用集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.AddApplication(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            加入一个应用
+            </summary>
+            <param name="application"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IApplicationService.DeleteApplication(UFSoft.UBF.MD.Key,System.Boolean)">
+            <summary>
+            删除一个应用
+            </summary>
+            <param name="key"></param>
+            <param name="isCascade">是否及联删除</param>
+        </member>
+        <member name="P:UFSoft.UBF.MD.IApplicationService.ApplicationPath">
+            <summary>
+            应用文件的全路径（含文件名）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IORMComponentService.GetMapTable(UFSoft.UBF.MD.IProject,UFSoft.UBF.MD.EntityModel.IType,UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            从be项目中获取实体的映射表
+            </summary>
+            <param name="beProject"></param>
+            <param name="type"></param>
+            <param name="attr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.IServiceGroupService">
+            <summary>
+            服务组接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.Load(System.String)">
+            <summary>
+            根据文件路径创建服务组(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.CreateServiceGroup">
+            <summary>
+            创建一个带ID的服务组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.CreateNullServiceGroup">
+            <summary>
+            创建一个空服务组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.CreateServiceGroupCollection">
+            <summary>
+            创建服务组集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.Load(System.String,UFSoft.UBF.MD.IApplication)">
+            <summary>
+            根据全路经获取服务组
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <param name="application">Container application</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.ReLoad(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            Reload服务组
+            </summary>
+            <param name="cmp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.Delete(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            删除服务组
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.SerializeServiceGroupInfo(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            从ServiceGroup对象中系列化其信息,返回XML.
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IServiceGroupService.DeserializeServiceGroupInfo(System.Xml.XmlElement,UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            根据XML内容设置ServiceGroup的属性
+            </summary>
+            <param name="element"></param>
+            <param name="serviceGruop"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.GetRootApplications">
+            <summary>
+            获取所有根应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.GetApplicationByKey(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取应用
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.GetApplicationByName(System.String)">
+            <summary>
+            根据名称获取应用
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Delete">
+            <summary>
+            删除应用文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Close">
+            <summary>
+            关闭应用文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Reload">
+            <summary>
+            重新装载应用文件数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Load(System.String)">
+            <summary>
+            根据路径装载应用文档
+            </summary>
+            <param name="path">应用文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Load">
+            <summary>
+            根据路径装载应用文档
+            </summary>
+            <param name="path">应用文档路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Save(System.String)">
+            <summary>
+            按照指定的路径保存应用文档
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.Save">
+            <summary>
+            保存应用文档
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.CreateApplication">
+            <summary>
+            创建带ID的应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.CreateNullApplication">
+            <summary>
+            创建空应用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.AddApplication(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            加入一个应用
+            </summary>
+            <param name="application"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.DeleteApplication(UFSoft.UBF.MD.Key,System.Boolean)">
+            <summary>
+            删除一个应用
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.LoadApplicationDocument">
+            <summary>
+            装载应用文档
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.ReLoadApplicationDocument">
+            <summary>
+            重新装载应用文档数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.AddChildApplications(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            递归加入IAppliaction的所有子节点
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ApplicationService.DeleteChildApplications(UFSoft.UBF.MD.IApplication)">
+            <summary>
+            删除所有的子节点
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="P:UFSoft.UBF.MD.Design.ApplicationService.ApplicationPath">
+            <summary>
+            应用文件的全路径（含文件名）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Load">
+            <summary>
+            获取默认的本地字典
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.LoadCommonResourceDic">
+            <summary>
+            获取公共资源字典组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.GetItemValue(System.String)">
+            <summary>
+            根据资源项的编号从公共资源中获取显示名称
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.GetItem(System.String)">
+            <summary>
+            根据资源项的编号从公共资源中获取资源项
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <param name="project">Container project</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Delete(System.String)">
+            <summary>
+            删除元数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DictionaryService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.LoadProjectFromDll(System.String)">
+            <summary>
+            根据组件名称创建组件模型(DLL)
+            </summary>
+            <param name="path">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.ProjectService.Save(System.String,UFSoft.UBF.MD.IElement)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.ProjectService.Save(UFSoft.UBF.MD.IElement)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.SaveToStream(UFSoft.UBF.MD.IComponent,System.IO.Stream)">
+            <summary>
+            把Component转化成Stream
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Delete(System.String)">
+            <summary>
+            删除元数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ProjectService.Delete(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据2
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.CreateServiceGroup">
+            <summary>
+            创建带ID的服务组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.CreateNullServiceGroup">
+            <summary>
+            创建空服务组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.CreateServiceGroupCollection">
+            <summary>
+            创建服务组集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.Load(System.String)">
+            <summary>
+            根据文件路径创建服务组模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.Load(System.String,UFSoft.UBF.MD.IApplication)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <param name="application">Container application</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.SerializeServiceGroupInfo(UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            从ServiceGroup对象中系列化其信息,返回XML.
+            </summary>
+            <param name="serviceGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ServiceGroupService.DeserializeServiceGroupInfo(System.Xml.XmlElement,UFSoft.UBF.MD.IServiceGroup)">
+            <summary>
+            根据XML内容设置ServiceGroup的属性
+            </summary>
+            <param name="element"></param>
+            <param name="serviceGruop"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.AssemblyManager.GetInstance">
+            <summary>
+            获取一个AssemblyManager实例.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.AssemblyManager.CreateInstance(System.String,System.String)">
+            <summary>
+            创建制定的Assembly中的指定类型的实例
+            </summary>
+            <param name="assemblyFile">Assembly的全路径(绝对路径)</param>
+            <param name="typeName">要创建的实例的类型全名,包括名字空间</param>
+            <returns>返回创建好的实例,创建失败返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.AssemblyManager.UnloadAssembly(System.String)">
+            <summary>
+            卸载一个Assembly
+            </summary>
+            <param name="assemblyFile">Assembly的全路径(绝对路径)</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.AssemblyManager.RefreshAssemblies">
+            <summary>
+            刷新所有的Assembly
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.AssemblyManager.Dispose">
+            <summary>
+            卸载所有资源,需要显示调用.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.BatchException">
+            <summary>
+            多异常集合的异常类。包含多个内部异常。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.BatchException.#ctor">
+            <summary>
+            构造BatchException
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.BatchException.#ctor(System.String,System.Collections.ArrayList)">
+            <summary>
+            Construct BatchException with msg and all of inner exception
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.Cache.ComponentCache">
+            <summary>
+            Cache Component
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCache.Add(System.Object,System.Object)">
+            <summary>
+            把组件放到缓存中
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Cache.ComponentCache.Remove(System.Object)">
+            <summary>
+            清除缓存中的组件信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder">
+            <summary>
+            Generic Component Builder 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder">
+            <summary>
+            Component Builder interface
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.Build(System.Boolean)">
+            <summary>
+            创建Component
+            </summary>
+            <param name="isImport">Does load import component</param>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.Build">
+            <summary>
+            创建Component
+            </summary>
+            <param name="isImport">Does load import component</param>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.BuildXml(System.IO.Stream,System.Object,System.Text.Encoding,System.Collections.ArrayList)">
+            <summary>
+            build object to xml
+            </summary>
+            <param name="s">stream for saving xml</param>
+            <param name="component">component object</param>
+            <param name="encoding">encoding for xml</param>
+            <param name="errList">error list</param>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.BuildXml(System.String,System.Object,System.Text.Encoding,System.Collections.ArrayList)">
+            <summary>
+            build object to xml
+            </summary>
+            <param name="s">stream for saving xml</param>
+            <param name="component">component object</param>
+            <param name="encoding">encoding for xml</param>
+            <param name="errList">error list</param>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.GetComponent">
+            <summary>
+            Get a component object has been builded
+            </summary>
+            <returns>Component</returns>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.Document">
+            <summary>
+            组件的xml文档对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.Key">
+            <summary>
+            组件标识
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.Container">
+            <summary>
+            组件所属项目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.TransferType">
+            <summary>
+            组件序列化转换类型
+            </summary>       
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder.ComponentType">
+            <summary>
+            组件类型
+            </summary>       
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.#ctor(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key)">
+            <summary>
+            Overload ComponentBuilder constructor
+            </summary>
+            <param name="document">xml document</param>
+            <param name="key">key which contain path and component id</param>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.compnent">
+            <summary>
+            Compnent 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.document">
+            <summary>
+            组件的xml文档对象
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.key">
+            <summary>
+            组件标识
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.transferType">
+            <summary>
+            组件序列化转换类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.componentType">
+            <summary>
+            组件类型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.Build">
+            <summary>
+            创建Component
+            </summary>
+            <param name="isImport">Does load import component</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.Build(System.Boolean)">
+            <summary>
+            创建Component
+            </summary>
+            <param name="isImport">Does load import component</param>       
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.BuildXml(System.IO.Stream,System.Object,System.Text.Encoding,System.Collections.ArrayList)">
+            <summary>
+            build object to xml
+            </summary>
+            <param name="s">stream for saving xml</param>
+            <param name="component">component object</param>
+            <param name="errList">error list</param>
+            <exception cref="T:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException"></exception>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.BuildXml(System.String,System.Object,System.Text.Encoding,System.Collections.ArrayList)">
+            <summary>
+            build object to xml
+            </summary>
+            <param name="s">stream for saving xml</param>
+            <param name="component">component object</param>
+            <param name="errList">error list</param>
+            <exception cref="T:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException"></exception>
+            <see cref="!:BEComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.GetComponent">
+            <summary>
+            Get a component object has been builded
+            </summary>
+            <returns>Component</returns>
+            <see cref="T:UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.buildComponent(System.Xml.XmlElement,System.Boolean)">
+            <summary>
+            Build BE component
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="isImport">Does build import component</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.buildImports(System.Xml.XmlElement)">
+            <summary>
+            Build import compnents
+            </summary>
+            <param name="element">XmlElement</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.createDAO(System.String)">
+            <summary>
+            Create Xml DAO interface 
+            </summary>
+            <param name="componentType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.buildImportsCompnent(System.Xml.XmlElement)">
+            <summary>
+            Build import compnents
+            </summary>
+            <param name="element"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.buildImportCompnent(System.Xml.XmlElement)">
+            <summary>
+            Build a import compnent
+            </summary>
+            <param name="element">XmlElement</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.getComponent(System.String,UFSoft.UBF.MD.IComponent)">
+            <summary>
+            Get Component from Import
+            </summary>
+            <param name="import">Import Object</param>
+            <returns>IComponent</returns>
+            <see cref="T:UFSoft.UBF.MD.IComponent"/>
+        </member>
+        <member name="P:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilder.Container">
+            <summary>
+            组件所属项目
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.ComponentBuilder.ComponentBuilderFactory">
+            <summary>
+            Component Builder Factory
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException">
+            <summary>
+            保存成Xml文档时可能产生该类异常
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException.#ctor">
+            <summary>
+            构造SaveXmlException类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException.#ctor(System.String)">
+            <summary>
+            构造SaveXmlException类
+            </summary>
+            <param name="msg">异常信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException.#ctor(System.String,System.Object[])">
+            <summary>
+            构造SaveXmlException类
+            </summary>
+            <param name="msgFmt">异常信息的格式化部分</param>
+            <param name="args">异常信息的参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造SaveXmlException类
+            </summary>
+            <param name="msg">异常信息</param>
+            <param name="inner">内部异常对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException.#ctor(System.String,System.Exception,System.Object[])">
+            <summary>
+            构造SaveXmlException类
+            </summary>
+            <param name="msgFmt">异常信息的格式化部分</param>
+            <param name="inner">内部异常对象</param>
+            <param name="args">异常信息的参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AssociationXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AssociationXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AssociationXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEComponentXmlDataTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEComponentXmlDataTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEComponentXmlDataTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DiagramXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DiagramXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PrimitiveTypeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PrimitiveTypeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StereotypeComponentXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StereotypeComponentXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ColumnXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ColumnXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DBComponentXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DBComponentXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DBComponentXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DependenceXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.DependenceXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityXmlDataTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityXmlDataTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityXmlDataTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EnumXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EnumXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EnumXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ImplementXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ImplementXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ImplementXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ImportXmlDataTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ImportXmlDataTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.MethodXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.MethodXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.MethodXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.NameSpaceXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.NameSpaceXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.NameSpaceXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.OperationXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.OperationXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.OperationXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ParameterXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ParameterXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ParameterXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PropertyTypeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PropertyTypeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PropertyTypeXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StereotypeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StereotypeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexColumnXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexColumnXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexColumnXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.IndexXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationColumnXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationColumnXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationColumnXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.TableXmlTransfer">
+            <summary>
+            Convert between Table And Xml 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TableXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TableXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TableXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TaggedValueXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.TaggedValueXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ValidatorXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ValidatorXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ValidatorXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ValueXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ValueXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransferFactory">
+            <summary>
+            Xml data convertor factory
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.XmlDataTransferFactory.Create(System.Type)">
+            <summary>
+            Create a Xml data convertor instance
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeMapXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeMapXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeMapXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.AttributeMapXmlTransfer.LoadSpecialReference(System.Object,System.Object)">
+            <summary>
+            Load Special Reference
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.EntityMapXmlTransfer">
+            <summary>
+            EntityMap Xml Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityMapXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityMapXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EntityMapXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.DataTransfer.ORMapComponentXmlTransfer">
+            <summary>
+            ORMapComponent XML Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapComponentXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapComponentXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapComponentXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.ORMapXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationMapXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationMapXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.RelationMapXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.BEModelXMLDAO">
+            <summary>
+            BEModel Data Access Object,Encapsulate accessing interface of xml
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.BEModelXMLDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <exception cref="T:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException"></exception>
+            <exception cref="!:IOException"></exception>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.BEModelXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载BEComponent
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>
+            <param name="isImport">Does load import component</param>
+            <returns>BEComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.BEModelXMLDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.DAOFactory">
+            <summary>
+            DAO Factory
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.DBModelXMLDAO">
+            <summary>
+            Model Data Access Object,Encapsulate accessing interface of xml
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DBModelXMLDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DBModelXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Component
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>       
+            <param name="isImport"></param>
+            <returns>DBComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DBModelXMLDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.ORMapModelXmlDAO">
+            <summary>
+            ORMapping Model Data Access Object,Encapsulate accessing interface of xml
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ORMapModelXmlDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ORMapModelXmlDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Component
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>
+            <param name="isImport"></param>
+            <returns>ORMapComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ORMapModelXmlDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.DAO.XMLDAO.StereotypeXMLDAO">
+            <summary>
+            Stereotype Data Access Object,Encapsulate accessing interface of xml
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.StereotypeXMLDAO.Save(UFSoft.UBF.MD.IComponent,System.String,System.Text.Encoding)">
+            <summary>
+            Save Component
+            </summary>
+            <param name="component">component object</param>
+            <param name="path">File path</param>
+            <param name="encoding">Encodeing</param>
+            <see cref="T:UFSoft.UBF.MD.DAO.XMLDAO.GenericXMLDAO"/>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.StereotypeXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载Component
+            </summary>
+            <param name="document">Xml document</param>
+            <param name="key">key object which contain path and component id</param>
+            <param name="isImport"></param>
+            <returns>StereotypeComponent</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.StereotypeXMLDAO.CreateComponent">
+            <summary>
+            Create a empty Component
+            </summary>
+            <returns>IComponent</returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.MD.IDBModelGenerateService”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.IDBModelGenerateService.GenDBComponentFromBEComponent(UFSoft.UBF.MD.EntityModel.IBEComponent,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.ORMapping.IORMComponent)">
+            <summary>
+            根据实体组件产生数据库组件
+            </summary>
+            <param name="comp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBModelGenerateService.BeProjectTransToDbProject(UFSoft.UBF.MD.IProject,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.ORMapping.IORMComponent)">
+            <summary>
+            根据实体项目产生数据库组件
+            </summary>
+            <param name="bePrj"></param>
+            <param name="dbComp"></param>
+            <param name="ormComp"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.IDBModelGenerateService.GenDbProject(UFSoft.UBF.MD.IProject,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.ORMapping.IORMComponent)">
+            <summary>
+            根据实体项目产生数据库组件
+            </summary>
+            <param name="bePrj"></param>
+            <param name="dbComp"></param>
+            <param name="ormComp"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.DesignReferenceLoad.GetComponent(UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.DesignReferenceLoad.GetComponent(System.String,UFSoft.UBF.MD.EnumDatasourceKind)">
+            <summary>
+            获取引用组件
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.DesignReferenceLoad.GetTypeInfo(UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取类型元信息
+            </summary>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.DesignReferenceLoad.GetReference(System.Type,UFSoft.UBF.MD.Key,UFSoft.UBF.MD.Util.ReferenceContext)">
+            <summary>
+            获取引用类型
+            </summary>
+            <param name="refType">返回元数据类型</param>
+            <param name="key">主键</param>
+            <param name="objContext">上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.GenDBComponentFromBEComponent(UFSoft.UBF.MD.EntityModel.IBEComponent,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.ORMapping.IORMComponent)">
+            <summary>
+            根据实体组件产生数据库组件
+            </summary>
+            <param name="comp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateTablePerConcreteClass(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.ORMapping.IEntityMap)">
+            <summary>
+            实体模型转换成表模型及映射模型
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateTablePerClass(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.ORMapping.IEntityMap)">
+            <summary>
+            实体模型转换成表模型及映射模型
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateGlobalizationTable(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.DBModel.IDBComponent)">
+            <summary>
+            创建国际化表模型
+            </summary>
+            <param name="entity"></param>
+            <param name="db"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.Association2RelationshipMap(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.ORMapping.IEntityMap,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.IProject)">
+            <summary>
+            构造关系映射
+            </summary>
+            <param name="entity"></param>
+            <param name="entityMap"></param>
+            <param name="tables"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.Attribute2Column(UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.IColumn,System.Boolean)">
+            <summary>
+            属性转换成列
+            </summary>
+            <param name="attr"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.PrimitiveAttribute2Column(UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.IColumn,System.Boolean)">
+            <summary>
+            简单类型属性转换成列
+            </summary>
+            <param name="attr"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.EnumAttribute2Column(UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.IColumn,System.Boolean)">
+            <summary>
+            枚举属性转换成列
+            </summary>
+            <param name="attr"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.EntityAttribute2Column(UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.IColumn,System.Boolean)">
+            <summary>
+            实体属性转换成列
+            </summary>
+            <param name="attr"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.PropertyAttribute2Columns(System.Collections.IList,UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.ORMapping.IORMap)">
+            <summary>
+            值类型属性转换成列
+            </summary>
+            <param name="attr"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.PropertyAttribute2Columns(System.Collections.IList,UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.ORMapping.IORMap,System.Boolean)">
+            <summary>
+            值类型属性转换成列
+            </summary>
+            <param name="attr"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.Association2Relationship(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.EntityModel.IAssociation,UFSoft.UBF.MD.DBModel.IRelationship@,UFSoft.UBF.MD.DBModel.IDBComponent,UFSoft.UBF.MD.IProject)">
+            <summary>
+            关联转换成数据库关系
+            </summary>
+            <param name="asso"></param>
+            <param name="relation"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateOneToMoreRelationship(UFSoft.UBF.MD.EntityModel.IAssociation,UFSoft.UBF.MD.DBModel.IRelationship,UFSoft.UBF.MD.DBModel.IRelationColumn,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            创建一对多关系
+            </summary>
+            <param name="asso"></param>
+            <param name="relation"></param>
+            <param name="rColumn"></param>
+            <param name="childEntityMapTable"></param>
+            <param name="parentEntityMapTable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateOneToOneRelationship(UFSoft.UBF.MD.EntityModel.IAssociation,UFSoft.UBF.MD.DBModel.IRelationship,UFSoft.UBF.MD.DBModel.IRelationColumn,UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            创建一对一关系
+            </summary>
+            <param name="asso"></param>
+            <param name="relation"></param>
+            <param name="rColumn"></param>
+            <param name="childEntityMapTable"></param>
+            <param name="parentEntityMapTable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateTableByEntityInOtherProject(UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            根据实体创建DB表模型,这个方法只适用于不在同一项目中的实体,
+            因为他创建的不是一个完整的DB模型,只是为了建立关系用，它没有映射模型且只有主键列。
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.BEIndex2Index(UFSoft.UBF.MD.EntityModel.IBEIndex,UFSoft.UBF.MD.DBModel.IIndex)">
+            <summary>
+            把实体索引转化成数据库索引
+            </summary>
+            <param name="beIndex"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.BEIndexAttribute2IndexColumn(UFSoft.UBF.MD.EntityModel.IBEIndexAttribute,UFSoft.UBF.MD.DBModel.IIndexColumn)">
+            <summary>
+            把实体索引属性转化成数据库索引列
+            </summary>
+            <param name="beIndexAttribute"></param>
+            <param name="indexColumn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.GetColumn(UFSoft.UBF.MD.EntityModel.IAttribute,UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            根据属性获取对应的列
+            </summary>
+            <param name="iAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.Attribute2AttributeMap(System.Collections.IList,UFSoft.UBF.MD.DBModel.IColumn,UFSoft.UBF.MD.ORMapping.IAttributeMap)">
+            <summary>
+            构造属性映射
+            </summary>
+            <param name="attr"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.Association2RelationshipMap(UFSoft.UBF.MD.EntityModel.IAssociation,UFSoft.UBF.MD.DBModel.IRelationship,UFSoft.UBF.MD.ORMapping.IRelationshipMap)">
+            <summary>
+            构造关系映射
+            </summary>
+            <param name="asso"></param>
+            <param name="relation"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.RemoveColumns(UFSoft.UBF.MD.DBModel.ITable)">
+            <summary>
+            删除主键列
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.AddKeyColumn(UFSoft.UBF.MD.DBModel.ITable,UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            添加主键列
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.CreateDiscriminatorColumn">
+            <summary>
+            创建类型标识列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.GetAttributeName(System.Collections.IList)">
+            <summary>
+            获取属性名
+            </summary>
+            <param name="attrs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBModelGenerate.GetAttributeDisplayName(System.Collections.IList)">
+            <summary>
+            获取属性名
+            </summary>
+            <param name="attrs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.MDModelUtil.CreateNewIndex(UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            根据实体，创建新索引
+            </summary>
+            <param name="entity"></param>
+            <returns>新的索引，已经添加进了entity.BEIndecs中。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.MDModelUtil.RebuildBusinessKey(UFSoft.UBF.MD.EntityModel.IEntity,UFSoft.UBF.MD.EntityModel.IBEIndex)">
+            <summary>
+            重新建立业务主键索引
+            </summary>
+            <param name="entity"></param>
+            <param name="beIndex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.MDModelUtil.ConvertBusinessKey(UFSoft.UBF.MD.EntityModel.IEntity)">
+            <summary>
+            把所有实体下的业务主键转换到实体唯一索引
+            业务主键和索引同步规则：
+            1、如果没有索引，则转换生成新的索引；
+            2、如果有索引，并且属性是业务主键，而且索引列已经存在，则不做处理；
+            3、如果有索引，并且属性是业务主键，而且索引列不存在，则加入索引列；
+            4、如果有索引，并且属性不是业务主键，而且索引列已经存在，则删除索引列；
+            5、如果有索引，并且属性不是业务主键，而且索引列不存在，则不做处理。
+            </summary>
+            <param name="ns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.MDModelUtil.HandleAttributeModify(UFSoft.UBF.MD.EntityModel.IAttribute)">
+            <summary>
+            处理设计器上对业务主键的修改
+            </summary>
+            <param name="attribute"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.MDModelUtil.RemoveNoUsedAttribute(UFSoft.UBF.MD.INamespace)">
+            <summary>
+            移除索引中包含但是模型里面已经不存在的索引列
+            </summary>
+            <param name="ns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.GetApplicationResourcePath">
+            <summary>
+            获取应用的资源文件路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.GetDictionaryPath">
+            <summary>
+            获取默认的本地字典路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.GetCommonResourceDictionaryPath">
+            <summary>
+            获取公共资源的字典路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.FindFileInPathOld(System.String,System.String)">
+            <summary>
+            在目录中查找文件
+            </summary>
+            <param name="rootPath">查找根目录</param>
+            <param name="fileName">查找文件</param>
+            <returns>查找文件对应路径</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.FindFileInPath(System.String,System.String)">
+            <summary>
+            在目录中查找文件
+            </summary>
+            <param name="rootPath">查找根目录</param>
+            <param name="fileName">查找文件</param>
+            <returns>查找文件对应路径</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.PathHelper.GetMetadataDllNameByProjectPath(System.String,System.String)">
+            <summary>
+            在目录中查找文件
+            </summary>
+            <param name="rootPath">查找根目录</param>
+            <param name="fileName">查找文件</param>
+            <returns>查找文件对应路径</returns>
+        </member>
+        <member name="T:UFSoft.UBF.MD.ISystemService">
+            <summary>
+            元数据系统服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetSystemComponent">
+            <summary>
+            获取系统组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetSystemDictionary">
+            <summary>
+            获取系统字典组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetPrimitiveType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取简单类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetPrimitiveType(System.Guid)">
+            <summary>
+            根据Guid获取简单类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetPrimitiveType(System.String)">
+            <summary>
+            根据名称获取简单类型
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetAllPrimitiveTypes">
+            <summary>
+            获取所有简单类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetStereotypeComponent(System.String)">
+            <summary>
+            获取版型组件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetSystemStereotype(UFSoft.UBF.MD.Key)">
+            <summary>
+            获取版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.ISystemService.GetSystemStereotype(System.String)">
+            <summary>
+            根据Name获取版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.ISystemService.GetAllSystemStereotypes”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.MD.ISystemService.SaveStereotype(UFSoft.UBF.MD.IStereotype)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.ISystemService.DeleteStereotype(UFSoft.UBF.MD.IStereotype)">
+            <summary>
+            从系统版型文件中删除版型
+            </summary>
+            <param name="stereotype"></param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.Design.MDSFactory">
+            <summary>
+            元数据服务工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.MDSFactory.GetService(System.Type)">
+            <summary>
+            获取元数据服务
+            </summary>
+            <example>IEntityMetaDataService service=(IEntityMetaDataService)MDSFactory.GetService(typeof(IEntityMetaDataService))</example>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <param name="project">Container project</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.SaveToStream(UFSoft.UBF.MD.IComponent,System.IO.Stream)">
+            <summary>
+            把Component转化成Stream
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.LoadProjectFromDll(System.String)">
+            <summary>
+            根据组件名称创建组件模型(DLL)
+            </summary>
+            <param name="path">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.BeforeSave(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存之前的处理
+            1、设置实体的IsModifyControl属性
+            2、设置实体的HasImpressibleAttribute属性
+            3、设置实体的IsInCache属性
+            </summary>
+            <param name="metaObj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.BEComponentService.Delete(System.String)">
+            <summary>
+            从缓存中移除dll组件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.DBService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.DBService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.DBService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.DBService.Save(UFSoft.UBF.MD.IElement)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.DBService.SaveToStream(UFSoft.UBF.MD.IComponent,System.IO.Stream)">
+            <summary>
+            把Component转化成Stream
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.DBService.Delete(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.DBService.Delete(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据2
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Load(System.String)">
+            <summary>
+            根据文件路径创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Load(System.String,System.String)">
+            <summary>
+            根据全路经获取组件
+            </summary>
+            <param name="rootPath">根路径</param>
+            <param name="fileName">相对路径</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.ORMService.Load(System.String,System.String,UFSoft.UBF.MD.IProject)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Load(System.IO.TextReader)">
+            <summary>
+            根据文件句柄创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Save(UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存元数据
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.SaveToStream(UFSoft.UBF.MD.IComponent,System.IO.Stream)">
+            <summary>
+            把Component转化成Stream
+            </summary>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.ORMService.Delete(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.ORMService.Delete(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除元数据2
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetSystemDictionary">
+            <summary>
+            获取系统字典组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetSystemComponent">
+            <summary>
+            获取系统组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetPrimitiveType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取简单类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetSystemType(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取系统类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetPrimitiveType(System.Guid)">
+            <summary>
+            根据ID获取简单类型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetPrimitiveType(System.String)">
+            <summary>
+            根据名称获取简单类型
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetAllPrimitiveTypes">
+            <summary>
+            获取所有简单类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetStereotypeComponent(System.String)">
+            <summary>
+            获取版型组件
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetSystemStereotype(UFSoft.UBF.MD.Key)">
+            <summary>
+            根据ID获取版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetSystemStereotype(System.String)">
+            <summary>
+            根据Name获取版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.GetAllSystemStereotypes">
+            <summary>
+            获取所有版型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.Save(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            保存版型
+            </summary>
+            <param name="metaObj"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.MD.Design.SystemService.Save(UFSoft.UBF.MD.IElement)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.Delete(System.String)">
+            <summary>
+            删除版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.Delete(System.String,UFSoft.UBF.MD.IElement)">
+            <summary>
+            删除版型
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.SaveStereotype(UFSoft.UBF.MD.IStereotype)">
+            <summary>
+            保存到系统版型定义文件
+            </summary>
+            <param name="stereotype"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Design.SystemService.DeleteStereotype(UFSoft.UBF.MD.IStereotype)">
+            <summary>
+            从系统版型定义文件中删除
+            </summary>
+            <param name="stereotype"></param>
+        </member>
+        <member name="T:UFSoft.UBF.MD.Util.Constant">
+            <summary>
+            Common Constant
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.MD.Util.UtilXml">
+            <summary>
+            Utilities methods to simplify dealing with  DOM XML parsing
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.#ctor">
+            <summary>
+            Since this class provides only static methods, make the default constructor private to prevent 
+            instances from being created with "new UtilXml()"
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.AddText(System.IO.FileStream,System.String,System.Text.Encoding)">
+            <summary>
+            Write Xml text to file stream
+            </summary>
+            <param name="fs">FileString</param>
+            <param name="value">Xml Text</param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.SearchString(System.String,System.String[])">
+            <summary>
+            Searching string between two separator
+            </summary>
+            <param name="text">searched string</param>
+            <param name="separator">separator array</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeStringValue(System.Xml.XmlAttributeCollection,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeBoolValue(System.Xml.XmlAttributeCollection,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeBoolValue(System.Xml.XmlAttributeCollection,System.String,System.Boolean)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeStringValue(System.Xml.XmlAttributeCollection,System.String,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <param name="defaultValue">defaultValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeIntValue(System.Xml.XmlAttributeCollection,System.String,System.Int32)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <param name="defaultValue">defaultValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeNumValue(System.Xml.XmlAttributeCollection,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetElementNumValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Return the text (element value) 
+            </summary>        
+            <param name="element">XmlElement</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetElementStringValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Return the text (element value) 
+            </summary>        
+            <param name="element">XmlElement</param>
+            <param name="key"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetXmlFromString(System.String)">
+            <summary>
+            Format Xml String
+            </summary>
+            <param name="content"></param>
+            <param name="indent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.ReadXmlDocument(System.IO.Stream)">
+            <summary>
+            Get XmlDocument form stream
+            </summary>
+            <param name="stream">Xml file stream</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.ReadXmlDocument2(System.String)">
+            <summary>
+            Get XmlDocument form path
+            </summary>
+            <param name="path">Xml file full path</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.ReadXmlDocument(System.String)">
+            <summary>
+            Get XmlDocument form path
+            </summary>
+            <param name="path">Xml file full path</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.WriteXmlDocument(System.String,UFSoft.UBF.MD.DAO.ComponentBuilder.IComponentBuilder,UFSoft.UBF.MD.IComponent,System.Text.Encoding)">
+            <summary>
+            Write text to Xml document
+            </summary>
+            <param name="path">File path</param>
+            <param name="builder">component builder object</param>
+            <param name="component">component object to be save</param>
+            <param name="encoding">Encodeing format</param>
+            <exception cref="T:UFSoft.UBF.MD.DAO.DataTransfer.SaveXmlException"></exception>
+            <exception cref="T:System.IO.IOException"></exception>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetString(System.Object)">
+            <summary>
+            Get string of object content
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetAttributeXml(System.String,System.Object)">
+            <summary>
+            Get Xml attribute string
+            </summary>
+            <param name="name">Attribute name</param>
+            <param name="value">Attribute value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.UtilXml.GetRelativePath(System.String)">
+            <summary>
+            获取相对路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.MenuInfoXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.MenuInfoXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageColumnXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageColumnXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageParamBindingXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageParamBindingXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageParameterXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PageParameterXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartFieldMapXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartFieldMapXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StateMachineXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StateMachineXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StateXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.StateXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartRelationXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object tree list into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.PartRelationXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexAttributeXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexAttributeXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexAttributeXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.BEIndexXmlTransfer.LoadReference(System.Object,System.Object)">
+            <summary>
+            Load Reference Object 
+            </summary>
+            <param name="sourceObj">Source Object</param>
+            <param name="targetObj">Target Object need to be loaded reference</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.Xml.Report.AnalysisRefInfoXmlTransfer.UFSoft#UBF#MD#DAO#DataTransfer#IXmlDataTransfer#Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            分析项目引用信息序列化
+            </summary>
+            <param name="obj"></param>
+            <param name="wr"></param>
+            <param name="errList"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.Xml.Report.AnalysisRefInfoXmlTransfer.UFSoft#UBF#MD#DAO#DataTransfer#IXmlDataTransfer#Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            分析项目引用信息反序列化
+            </summary>
+            <param name="element"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EventDrivenXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.EventDrivenXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SetStateXmlTransfer.Serialize(System.Object,System.Xml.XmlWriter,System.Collections.ArrayList)">
+            <summary>
+            Serializes an object into an XML document
+            </summary>
+            <param name="obj"></param>
+            <param name="wr">xml writer</param>
+            <param name="errList">error list</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.DataTransfer.SetStateXmlTransfer.Deserialize(System.Xml.XmlElement,System.Object)">
+            <summary>
+            Deserializes an XML document. 
+            </summary>
+            <param name="element">XmlElement</param>
+            <param name="obj">Deserialized Object</param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.DrawBillComponentXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载拉式生单模型组件
+            </summary>
+            <param name="document"></param>
+            <param name="key"></param>
+            <param name="isImport"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.QueryComponentXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载查询模型组件
+            </summary>
+            <param name="document"></param>
+            <param name="key"></param>
+            <param name="isImport"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.DAO.XMLDAO.ReportComponentXMLDAO.Deserialize(System.Xml.XmlDocument,UFSoft.UBF.MD.Cache.Key,System.Boolean)">
+            <summary>
+            加载查询模型组件
+            </summary>
+            <param name="document"></param>
+            <param name="key"></param>
+            <param name="isImport"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Service.IDrawBillService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Service.IQueryService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Service.IReportService.Load(System.IO.Stream,System.String,UFSoft.UBF.MD.IProject)">
+            <summary>
+            根据字符流创建组件模型(文件)
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.ImportManager.GetInstance">
+            <summary>
+            获取唯一实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.ImportManager.AddImport(System.String)">
+            <summary>
+            加入一个引用, 返回是否成功加入.
+            </summary>
+            <param name="import">引用</param>
+            <returns>
+            是否成功加入 :
+            true -- 成功加入, 不存在循环引用
+            false -- 加入失败, 以前已经加入过这个import, 存在循环引用
+            </returns>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.ImportManager.RemoveImport(System.String)">
+            <summary>
+            移除import
+            </summary>
+            <param name="import"></param>
+        </member>
+        <member name="M:UFSoft.UBF.MD.Util.ImportManager.ClearImport">
+            <summary>
+            清空引用列表
+            </summary>
+        </member>
+    </members>
+</doc>
