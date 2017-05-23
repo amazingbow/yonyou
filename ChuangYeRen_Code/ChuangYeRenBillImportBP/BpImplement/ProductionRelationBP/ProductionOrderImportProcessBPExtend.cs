@@ -1,5 +1,6 @@
 ﻿namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.ProductionRelationBP
 {
+    using pMakGydGyBE;
     using pMakReqOrderBE;
     using PublicDataTransObj;
     using SCPOBE;
@@ -208,9 +209,10 @@
             };
             //moDto.ItemVersion
             moDto.MOOperationDTOs = new List<MOOperationDTOData>();
-            #region 工序
+            moDto.MOPickListDTOs = new List<MOPickListDTOData>();
             if (order.GydID != null)
             {
+                #region 工序表
                 foreach (var item in order.GydID.PMakgydGy)
                 {
                     MOOperationDTOData op = new MOOperationDTOData();
@@ -219,7 +221,7 @@
                     //op.ActualProcessHours = item.ActualProcessHours;
                     //op.Coeffecient = item.Coeffecient;
                     op.CompleteWh = new CommonArchiveDataDTOData();
-                    op.TimeUOM = new CommonArchiveDataDTOData { Code = item.Uom };
+                    op.TimeUOM = new CommonArchiveDataDTOData { Code = order.ItemID.UOM.Code };
                     op.OpOrg = new CommonArchiveDataDTOData { ID = order.Org };
                     op.StdOp = new CommonArchiveDataDTOData { Code = item.WPID.Code };
                     op.WorkCenter = new CommonArchiveDataDTOData { Code = order.Department.Code };
@@ -234,8 +236,8 @@
                     op.Operation = new CommonArchiveDataDTOData();//工序
                     op.OpMaxTransTime = 0;//本序最大转移时间
                     op.OpMinTransTime = 0;// 本序最小转移时间 
-                    op.OutputBaseUOM = new CommonArchiveDataDTOData { Code = item.Uom };//工序产出副单位 
-                    op.OutputUOM = new CommonArchiveDataDTOData { Code = item.Uom };//工序产出单位 
+                    op.OutputBaseUOM = new CommonArchiveDataDTOData { Code = order.ItemID.UOM.Code };//工序产出副单位 
+                    op.OutputUOM = new CommonArchiveDataDTOData { Code = order.ItemID.UOM.Code };//工序产出单位 
                     op.OutputUOMRatio2Base = 0;//产出单位主副转换率 
                     op.OutputUOMRatio2PU = 0;//产出单位与生产单位转换率
                     op.OverlapOp = "";//重叠工序
@@ -262,9 +264,45 @@
                     op.WIPRcvQty = 0;//半成品入库数量
                     moDto.MOOperationDTOs.Add(op);
                 }
+                #endregion
+                #region 备料表
+                int lineNo = 0;
+                foreach (var item in order.GydID.PMakgydBom)
+                {
+                    lineNo += 10;
+                    MOPickListDTOData moPick = new MOPickListDTOData();
+                    moPick.DocLineNo = lineNo;
+                    moPick.MO = new CommonArchiveDataDTOData { };
+                    moPick.IsControlPos = false;
+                    moPick.IsControlSupplier = false;
+                    //moPick.IsIssueOrgFixed = false;//特定供应组织 
+                    moPick.IsCalcCost = true;//计算成本
+                    moPick.CostElement = new CommonArchiveDataDTOData { Code = "No101" };//成本要素
+                    moPick.SupplyStyle = 0;//0生产组织
+                    moPick.ConsignProcessItemSrc = 2;// 受托方领料  2  
+                    moPick.IssueStyle = 0;
+                    var pmLst = PMakgydGy.Finder.FindAll("PMakGyd=" + item.PMakGyd.ID + " and Dept=" + item.Dept.ID);
+                    short opNum = 0;
+                    foreach (var pm in pmLst)
+                    {
+                        if (opNum < pm.PX)
+                        {
+                            opNum = pm.PX;
+                        }
+                    }
+                    moPick.OperationNum = opNum.ToString();//取最大工序
+                    moPick.ItemMaster = new CommonArchiveDataDTOData { Code = order.ItemID.Code };
+                    moPick.ActualReqDate = order.ReceiveDate;
+                    moPick.ActualReqQty = 0;
+                    moPick.BOMReqQty = (decimal)item.FFQty;
+                    moPick.QtyType = 1;//变动
+                    moDto.MOPickListDTOs.Add(moPick);
+                }
+                #endregion
             }
-            #endregion
-            moDto.MOPickListDTOs = new List<MOPickListDTOData>();
+
+
+
             //moDto.MOSourceDocType
             moDto.MOSrcRelationDTOs = new List<ISV.MO.MOSrcRelationDTOData>();
             moDto.MRPQty = (decimal)order.Qty;

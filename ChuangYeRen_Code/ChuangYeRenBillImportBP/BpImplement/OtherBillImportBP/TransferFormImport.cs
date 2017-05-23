@@ -20,6 +20,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
 	public partial class TransferFormImport
 	{
 	    #region Fields
+		private System.Int64 iD;
 		
 	    #endregion
 		
@@ -30,17 +31,34 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
 	    #endregion
 
 	    #region member		
+		/// <summary>
+		/// ID	
+		/// 形态转换导入.Misc.ID
+		/// </summary>
+		/// <value></value>
+		public System.Int64 ID
+		{
+			get
+			{
+				return this.iD;
+			}
+			set
+			{
+				iD = value;
+			}
+		}
 	    #endregion
 		
 	    #region do method 
 		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
 		[Logger]
 		[Authorize]
-		public void Do()
+		public PublicDataTransObj.PublicReturnDTO Do()
 		{	
 		    BaseStrategy selector = Select();	
-				selector.Execute(this);
+				PublicDataTransObj.PublicReturnDTO result =  (PublicDataTransObj.PublicReturnDTO)selector.Execute(this);	
 		    
+			return result ; 
 		}			
 	    #endregion 					
 	} 		

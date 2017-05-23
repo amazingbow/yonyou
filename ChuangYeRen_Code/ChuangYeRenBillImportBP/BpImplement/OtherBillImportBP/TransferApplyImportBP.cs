@@ -20,7 +20,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
 	public partial class TransferApplyImportBP
 	{
 	    #region Fields
-		private System.Int64 iD;
+		private System.Int64 inSourceID;
+		private System.Int64 outSourceID;
 		
 	    #endregion
 		
@@ -32,19 +33,35 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP
 
 	    #region member		
 		/// <summary>
-		/// ID	
-		/// 调拨申请单导入.Misc.ID
+		/// 入库单ID	
+		/// 调拨申请单导入.Misc.入库单ID
 		/// </summary>
 		/// <value></value>
-		public System.Int64 ID
+		public System.Int64 InSourceID
 		{
 			get
 			{
-				return this.iD;
+				return this.inSourceID;
 			}
 			set
 			{
-				iD = value;
+				inSourceID = value;
+			}
+		}
+		/// <summary>
+		/// 出库单ID	
+		/// 调拨申请单导入.Misc.出库单ID
+		/// </summary>
+		/// <value></value>
+		public System.Int64 OutSourceID
+		{
+			get
+			{
+				return this.outSourceID;
+			}
+			set
+			{
+				outSourceID = value;
 			}
 		}
 	    #endregion
