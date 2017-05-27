@@ -4,6 +4,7 @@
     using PublicDataTransObj;
     using System;
     using System.Collections.Generic;
+    using PublicDataTransObj;
     using System.Text;
     using UFIDA.U9.Base;
     using UFIDA.U9.CBO.Pub.Controller;

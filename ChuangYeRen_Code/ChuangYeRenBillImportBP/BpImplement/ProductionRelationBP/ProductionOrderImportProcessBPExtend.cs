@@ -196,12 +196,13 @@
             {
                 Code = ProjectCode
             };
-            moDto.BusinessPerson = new CommonArchiveDataDTOData // 业务员 不要填，否则会出现指定的业务员与生产部门不匹配 
-            {
-                //ID = order.COperator.ID,
-                //Code = order.COperator.Code,
-                //Name = order.COperator.Name
-            };
+            //moDto.BusinessPerson = new CommonArchiveDataDTOData // 业务员 不要填，否则会出现指定的业务员与生产部门不匹配 
+            //{
+            //    //ID = order.COperator.ID,
+            //    //Code = order.COperator.Code,
+            //    //Name = order.COperator.Name
+            //};
+            moDto.BusinessPerson = null;// 业务员 必须为null，否者会取到当前用户，然后可能出现指定的业务员与生产部门不匹配 
             moDto.CompleteDate = (order.DeliverDate <= DateTime.Parse("2015-10-1") ? DateTime.Parse("2015-10-1") : order.DeliverDate);
             //moDto.CUD//暂时不知道是什么东西
             moDto.DemandCode = -1;//需求分类
@@ -217,7 +218,7 @@
                 Code = order.DocType.Code,
                 Name = order.DocType.Name
             };
-            moDto.ExpandLevel = 2;
+            moDto.ExpandLevel = 0;//备料表里面的料品是制造件的话，会再生成一张生产订单的。
             moDto.ItemMaster = new CommonArchiveDataDTOData
             {
                 Code = order.ItemID.Code,
@@ -330,7 +331,7 @@
             }
             //moDto.MOPickListDTOs = new List<MOPickListDTOData>();
             //moDto.MOSourceDocType
-            moDto.MOSrcRelationDTOs = new List<ISV.MO.MOSrcRelationDTOData>();
+            moDto.MOSrcRelationDTOs = null;
             moDto.MRPQty = (decimal)order.Qty;
             moDto.Org = new CommonArchiveDataDTOData
             {
