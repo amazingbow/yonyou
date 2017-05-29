@@ -23,8 +23,7 @@
     using UFIDA.U9.MO.MO.Proxy;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Business;
-    using UFSoft.UBF.Util.Context;
-    using UFSoft.UBF.UI.Portal.Components;
+    using UFSoft.UBF.Util.Context; 
     using pMakGydGyBE;
     using pMakBomBE;
     using System.Collections;
@@ -57,11 +56,11 @@
             CreateMO4ExternalProxy createProxy = new CreateMO4ExternalProxy();
             createProxy.MODTOs = new List<ISV.MO.MODTOData>();
             PMakReqOrder order = PMakReqOrder.Finder.FindByID(bpObj.RelationId);
-
+        
             ISV.MO.MODTOData moDto = GetMoInfo(order);
 
-            MO P = MO.Finder.Find("Org=" + CSContext.Current.OrgId + " and DocNo='" + order.MakReq + "'");
-
+            MO P = MO.Finder.Find("Org=" + Context.LoginOrg.ID.ToString() + " and DocNo='" + order.MakReq + "'");
+          
             if (P == null)
             {
                 #region 生产订单创建
@@ -75,7 +74,7 @@
                         throw new Exception(data[0].ErrMsg);
                     }
                     pub.DocID = data[0].ID;
-                    CyrLibH.DB.RunSQL("update PMakReqOrder set U9ID='" + data[0].ID + "' where ID ='" + bpObj.RelationId + "'");
+                    CyrLibH.DB.RunSQL("update PMakReqOrder set U9ID='" + data[0].ID + "' where ID ='"+bpObj.RelationId+"'");
                     pub.DocNo = data[0].DocNo;
                     pub.Message = "生产订单创建成功！";
                     pub.Flag = true;
@@ -87,7 +86,7 @@
                     pub.Message = "生产订单创建失败：" + ex.Message;
                     return pub;
                 }
-                #endregion
+            #endregion
                 #region 生产订单提交
                 try
                 {
@@ -167,7 +166,7 @@
                 foreach (var item in mo.MOOperations)
                 {
                     foreach (var pm in order.GydID.PMakgydGy)
-                    {
+                    { 
                         if (pm.PX.ToString() == item.OperationNum)
                         {
                             StdOperation std = StdOperation.Finder.Find("Code='" + pm.WPID.Code + "'");
@@ -180,7 +179,7 @@
         }
         private ISV.MO.MODTOData GetMoInfo(PMakReqOrder order)
         {
-            ISV.MO.MODTOData moDto = new ISV.MO.MODTOData();
+            ISV.MO.MODTOData moDto = new ISV.MO.MODTOData(); 
             moDto.StartDate = (order.ReceiveDate <= DateTime.Parse("2015-1-1") ? DateTime.Parse("2015-1-1") : order.ReceiveDate);//业务开始时间
             //moDto.AlternateType = 0;//生产目的
             ////moDto.BOMECONo//BOMECONo  BOM变更号 
@@ -196,14 +195,8 @@
             {
                 Code = ProjectCode
             };
-            //moDto.BusinessPerson = new CommonArchiveDataDTOData // 业务员 不要填，否则会出现指定的业务员与生产部门不匹配 
-            //{
-            //    //ID = order.COperator.ID,
-            //    //Code = order.COperator.Code,
-            //    //Name = order.COperator.Name
-            //};
-            moDto.BusinessPerson = null;// 业务员 必须为null，否者会取到当前用户，然后可能出现指定的业务员与生产部门不匹配 
-            moDto.CompleteDate = (order.DeliverDate <= DateTime.Parse("2015-10-1") ? DateTime.Parse("2015-10-1") : order.DeliverDate);
+          
+            moDto.CompleteDate = (order.DeliverDate <= DateTime.Parse("2015-10-1") ? DateTime.Parse("2015-10-1") : order.DeliverDate); 
             //moDto.CUD//暂时不知道是什么东西
             moDto.DemandCode = -1;//需求分类
             moDto.Department = new CommonArchiveDataDTOData
@@ -211,6 +204,12 @@
                 Code = order.Department.Code,
                 Name = order.Department.Name
             };//生产部门
+            moDto.BusinessPerson = new CommonArchiveDataDTOData // 业务员 不填，会出现指定的业务员与生产部门不匹配 
+            {
+               // ID =long.Parse("9")// order.COperator.ID,
+                Code =order.Department.DescFlexField.PrivateDescSeg2,
+              //  Name = order.COperator.Name
+            };
             moDto.DescFlexField = new UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData();
             moDto.DocNo = order.MakReq;
             moDto.DocType = new CommonArchiveDataDTOData
@@ -218,7 +217,7 @@
                 Code = order.DocType.Code,
                 Name = order.DocType.Name
             };
-            moDto.ExpandLevel = 0;//备料表里面的料品是制造件的话，会再生成一张生产订单的。
+            moDto.ExpandLevel = 0;
             moDto.ItemMaster = new CommonArchiveDataDTOData
             {
                 Code = order.ItemID.Code,
@@ -231,7 +230,7 @@
                 #region 工序表
                 if (order.GydID != null)
                 {
-                    Hashtable hPx = new Hashtable();
+                    Hashtable hPx= new Hashtable();
                     foreach (var item in order.GydID.PMakgydGy)
                     {
                         if (!(hPx.ContainsKey(item.PX)))
@@ -283,14 +282,14 @@
                             op.UrgentRatio = 0;
                             op.WIPRcvQty = 0;//半成品入库数量
                             moDto.MOOperationDTOs.Add(op);
-                        }
+                        } 
                     }
                 }
                 #endregion
                 #region 备料表
                 int lineNo = 0;
-                var makbom = PMakBom.Finder.FindAll("MakReqID='" + order.ID + "'");
-                foreach (var item in makbom)
+                var makbom = PMakBom.Finder.FindAll("MakReqID='"+order.ID+"'");
+                foreach(var item in makbom)
                 //foreach (var item in order.GydID.PMakgydBom)
                 {
                     lineNo += 10;
@@ -304,13 +303,13 @@
                     moPick.CostElement = new CommonArchiveDataDTOData { Code = "No101" };//成本要素
                     moPick.SupplyStyle = 0;//0生产组织
                     moPick.ConsignProcessItemSrc = 2;// 受托方领料  2  
-                    moPick.IssueStyle = 0;
+                    moPick.IssueStyle = 0; 
                     moPick.FromElement = -1;
                     moPick.ToElement = -1;
                     moPick.FromGrade = -1;
-                    moPick.ToGrade = -1;
-
-                    var pmLst = PMakgydGy.Finder.FindAll("PMakGyd=" + order.GydID.ID + " and Dept=" + item.Dept.ID);
+                    moPick.ToGrade = -1; 
+                    
+                    var pmLst = PMakgydGy.Finder.FindAll("PMakGyd=" +order.GydID.ID + " and Dept=" + item.Dept.ID);
                     short opNum = 0;
                     foreach (var pm in pmLst)
                     {
@@ -318,10 +317,10 @@
                         {
                             opNum = pm.PX;
                         }
-                    }
+                    } 
                     moPick.OperationNum = opNum.ToString();//取最大工序
                     moPick.ItemMaster = new CommonArchiveDataDTOData { Code = item.ItemID.Code };
-                    moPick.ActualReqDate = (order.ReceiveDate <= DateTime.Parse("2015-1-1") ? DateTime.Parse("2015-1-1") : order.ReceiveDate);
+                    moPick.ActualReqDate = (order.ReceiveDate <= DateTime.Parse("2015-1-1") ? DateTime.Parse("2015-1-1") : order.ReceiveDate); 
                     moPick.ActualReqQty = (decimal)item.FQty;
                     moPick.QPA = item.FQty / (decimal)order.Qty;
                     moPick.QtyType = 1;//变动
@@ -329,9 +328,7 @@
                 }
                 #endregion
             }
-            //moDto.MOPickListDTOs = new List<MOPickListDTOData>();
-            //moDto.MOSourceDocType
-            moDto.MOSrcRelationDTOs = null;
+            moDto.MOSrcRelationDTOs = new List<ISV.MO.MOSrcRelationDTOData>();
             moDto.MRPQty = (decimal)order.Qty;
             moDto.Org = new CommonArchiveDataDTOData
             {
@@ -349,11 +346,11 @@
             {
                 Code = order.ProductUOM.Code,
                 Name = order.ProductUOM.Name,
-            };
+            }; 
             moDto.Project = new CommonArchiveDataDTOData
             {
                 Code = ProjectCode
-            };
+            }; 
             //moDto.RoutingAlternate = 0;
             //moDto.RoutingECONo = "";
             //moDto.RoutingEffeDate
