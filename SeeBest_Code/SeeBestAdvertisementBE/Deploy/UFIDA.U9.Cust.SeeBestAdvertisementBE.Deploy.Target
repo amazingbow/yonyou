@@ -1,5 +1,13 @@
 ﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    
+	<Compile Include="AdvertisementApplyBE\AdvApplyBEData.cs" 	/> 
+    
+	<Compile Include="SpecialApplyBE\SpecialApplyBEData.cs" 	/> 
+    
+	<Compile Include="AdvertisementApproveBE\AdvApproveBEData.cs" 	/> 
+    
+	<Compile Include="CostSharingRatio\BizEntityData.cs" 	/> 
 
     	<Compile Include="EnumData.cs" 	/>
   </ItemGroup> 
@@ -57,6 +65,18 @@
       <SpecificVersion>False</SpecificVersion>
         <Private>False</Private>
    </Reference> 
+
+    <Reference Include="UFIDA.U9.CBO.PubBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\App\\UFIDA.U9.CBO.PubBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.CBO.PubBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+    <Reference Include="UFIDA.U9.Base.BaseBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\UBF\\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.Base.BaseBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
 
   </ItemGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
