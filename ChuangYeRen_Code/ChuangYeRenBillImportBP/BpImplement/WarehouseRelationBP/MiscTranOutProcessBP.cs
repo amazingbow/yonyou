@@ -32,8 +32,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 
 	    #region member		
 		/// <summary>
-		/// 相关ID	
-		/// 杂发操作.Misc.相关ID
+		/// RelationID	
+		/// 杂发操作.Misc.RelationID
 		/// </summary>
 		/// <value></value>
 		public System.Int64 RelationID

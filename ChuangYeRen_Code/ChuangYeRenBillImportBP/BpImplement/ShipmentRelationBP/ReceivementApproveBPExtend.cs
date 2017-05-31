@@ -38,7 +38,7 @@
             PublicReturnDTO pub = new PublicReturnDTO();
             pub.Flag = false;
             pub.Message = "";
-
+          
             try
             {
                 Receivement receivement = Receivement.Finder.FindByID(bpObj.RelationU9Id);
@@ -47,7 +47,7 @@
                     pub.DocID = receivement.ID;
                     pub.DocNo = receivement.DocNo;
                     ApproveRCVSRVProxy approvedProxy = new ApproveRCVSRVProxy();
-                    approvedProxy.ActType = 8;//8为审核
+                    approvedProxy.ActType = 8;//8为审核 
                     approvedProxy.RCVLogicKeyINFOs = new List<RCVLogicKeyINFOData>();
                     RCVLogicKeyINFOData infoData = new RCVLogicKeyINFOData();
                     infoData.DocNo = receivement.DocNo;

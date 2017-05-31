@@ -267,6 +267,7 @@
         private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item)
         {
             Voucher successVoucher = Voucher.Finder.FindByID(voucherID);
+            successVoucher.CreatedBy = "";
             for (int i = 0; i < successVoucher.Entries.Count; i++)
             {
                 //银行、现金类的科目维护对应的现金流量项目
@@ -361,6 +362,7 @@
             dto.PostedPeriod = voucher.PostedPeriod.ToString().Insert(4, "-");
             //附单据数
             dto.AttachmentCount = 0;
+            
             return dto;
         }
         private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry,

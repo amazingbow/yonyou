@@ -29,7 +29,7 @@
     /// </summary>	
     internal partial class TransferFormImportImpementStrategy : BaseStrategy
     {
-        public TransferFormImportImpementStrategy() { }
+        public TransferFormImportImpementStrategy() { }//形态转换导入
 
         public override object Do(object obj)
         {
@@ -47,7 +47,7 @@
             {
                
                 #region  创建形态转换单
-                IC_TransferFormDTOData transferhead = getInfo(0);
+                IC_TransferFormDTOData transferhead = getInfo(bpObj.ID);
                 CreateProxy.TransferFormDTOList.Add(transferhead);
                 var data = CreateProxy.Do();
                 if (data.Count == 0) return pub;

@@ -54,8 +54,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 				
 
 		/// <summary>
-		/// 相关ID (该属性可为空,但有默认值)
-		/// 成品入库操作.Misc.相关ID
+		/// RelationId (该属性可为空,但有默认值)
+		/// 成品入库操作.Misc.RelationId
 		/// </summary>
 		/// <value>System.Int64</value>
 		public System.Int64 RelationId
@@ -73,8 +73,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP.Proxy
 						
 
 		/// <summary>
-		/// 生产订单ID (该属性可为空,但有默认值)
-		/// 成品入库操作.Misc.生产订单ID
+		/// MoId (该属性可为空,但有默认值)
+		/// 成品入库操作.Misc.MoId
 		/// </summary>
 		/// <value>System.Int64</value>
 		public System.Int64 MoId

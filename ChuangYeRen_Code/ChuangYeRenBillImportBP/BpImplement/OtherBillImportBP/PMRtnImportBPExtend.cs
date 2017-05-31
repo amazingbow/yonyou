@@ -39,7 +39,7 @@
             PublicReturnDTO pub = new PublicReturnDTO();
             pub.Flag = false;
             pub.Message = "";
-            CreateRCVSRVProxy createProxy = new CreateRCVSRVProxy();
+            CreateRCVSRVProxy createProxy = new CreateRCVSRVProxy();//采购退货单导入
             createProxy.RCVList = new List<OBAReceivementDTOData>();
             try
             {

@@ -61,7 +61,7 @@
         private CreateExpenseCostDTOData getInfo(long stockID)
         {
             CreateExpenseCostDTOData headDto = new CreateExpenseCostDTOData();
-            headDto.Cost = new CBO.MFG.CO.CostData //成本
+            headDto.Cost = new CBO.MFG.CO.CostData //成本费用数据导入
             {
                 CurrentCost = 123123,
                 PriorCost = 1,

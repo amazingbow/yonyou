@@ -16,7 +16,7 @@
     using UFIDA.U9.Complete.RcvRptBP.Proxy;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Util.Context;
-
+    using PDeptBE;
 	/// <summary>
 	/// ProductionOutWarehouseBP partial 
 	/// </summary>	
@@ -88,7 +88,7 @@
         private void PrepareProxyInfo(CreateRcvRptProxy rcvRptProxy, ProductionOutWarehouseBP bpObj)
         {
             InvStock invStock = InvStock.Finder.FindByID(bpObj.RelationId);
-            Department dept = Department.FindByCode(invStock.DeptID.Code);
+            Department dept = Department.FindByCode(invStock.DeptID.Code2);
             rcvRptProxy.RcvRpt = new RcvRptDocData
             {
                 ActualRcvTime = invStock.BillDate,
@@ -115,6 +115,7 @@
             {
                 rcvRptProxy.RcvRpt.RcvDep = dept.ID;
             }
+            //// E:\yonyou\接口开发\ChuangYeRenBillImportB1P\ChuangYeRenBillImportBP\BpImplement\bin\Debug\UFIDA.U9.Complete.CompleteBE.Deploy.dll
             var type = RcvRptDocType.Finder.Find("Code='W01'");
             if (type != null)
             {
