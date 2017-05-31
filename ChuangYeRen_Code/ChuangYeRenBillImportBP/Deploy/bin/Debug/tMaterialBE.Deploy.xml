@@ -1,0 +1,676 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>tMaterialBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:tMaterialBE.tMaterialData">
+            <summary>
+            物料资料 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:tMaterialBE.tMaterialData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_boundedCategory">
+            <summary>
+            保税品类别
+            物料资料.保税信息.保税品类别
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_cClass">
+            <summary>
+            小类(品牌编织)
+            物料资料.料品.小类(品牌编织)
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_iD">
+            <summary>
+            ID
+            物料资料.Key.ID
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_createdOn">
+            <summary>
+            创建时间
+            物料资料.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_createdBy">
+            <summary>
+            创建人
+            物料资料.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_modifiedOn">
+            <summary>
+            修改时间
+            物料资料.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_modifiedBy">
+            <summary>
+            修改人
+            物料资料.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_sysVersion">
+            <summary>
+            事务版本
+            物料资料.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_code">
+            <summary>
+            物料编码
+            物料资料.料品.物料编码
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_name">
+            <summary>
+            物料名称
+            物料资料.料品.物料名称
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_description">
+            <summary>
+            描述
+            物料资料.料品.描述
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_sPECS">
+            <summary>
+            规格
+            物料资料.料品.规格
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_effective">
+            <summary>
+            有效性
+            物料资料.状态.有效性
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_state">
+            <summary>
+            料品状态
+            物料资料.状态.料品状态
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_stateTime">
+            <summary>
+            提交日期
+            物料资料.状态.提交日期
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isBounded">
+            <summary>
+            保税品
+            物料资料.保税信息.保税品
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_boundedTaxNO">
+            <summary>
+            料品税则号
+            物料资料.保税信息.料品税则号
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_boundedCountToLerance">
+            <summary>
+            保税盘差率
+            物料资料.保税信息.保税盘差率
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_boundedCountTaxRate">
+            <summary>
+            保税应补税率
+            物料资料.保税信息.保税应补税率
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_customTaxRate">
+            <summary>
+            海关征税率
+            物料资料.进出口.海关征税率
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_drawbackRate">
+            <summary>
+            退税率
+            物料资料.进出口.退税率
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_customNumber">
+            <summary>
+            海关编码
+            物料资料.进出口.海关编码
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isNeedLicence">
+            <summary>
+            需许可证
+            物料资料.进出口.需许可证
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_needInspect">
+            <summary>
+            需商检
+            物料资料.进出口.需商检
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_org">
+            <summary>
+            工厂
+            物料资料.料品.工厂
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_standardBatchQty">
+            <summary>
+            标准批量
+            物料资料.成本区.标准批量
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_standardCost">
+            <summary>
+            标准成本
+            物料资料.成本区.标准成本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_internalTransCost">
+            <summary>
+            内部转移成本
+            物料资料.成本区.内部转移成本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_recentlyCost">
+            <summary>
+            最新成本
+            物料资料.成本区.最新成本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isIncludedStockAsset">
+            <summary>
+            存货资产
+            物料资料.成本区.存货资产
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isIncludedCostCa">
+            <summary>
+            成本卷算
+            物料资料.成本区.成本卷算
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_planCost">
+            <summary>
+            计划价
+            物料资料.成本区.计划价
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_helpCode">
+            <summary>
+            助记词
+            物料资料.料品.助记词
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_length">
+            <summary>
+            长
+            物料资料.计量属性.长
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_width">
+            <summary>
+            宽
+            物料资料.计量属性.宽
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_height">
+            <summary>
+            高
+            物料资料.计量属性.高
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_nW">
+            <summary>
+            净重
+            物料资料.计量属性.净重
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_gW">
+            <summary>
+            毛重
+            物料资料.计量属性.毛重
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_lowLimit">
+            <summary>
+            最低采购量
+            物料资料.计量属性.最低采购量
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_highLimit">
+            <summary>
+            最高采购量
+            物料资料.计量属性.最高采购量
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_lot">
+            <summary>
+            最小批量
+            物料资料.计量属性.最小批量
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_sS">
+            <summary>
+            安全库存
+            物料资料.计量属性.安全库存
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_cLT">
+            <summary>
+            提前期
+            物料资料.计量属性.提前期
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isPur">
+            <summary>
+            采购件
+            物料资料.料品.采购件
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isSale">
+            <summary>
+            销售件
+            物料资料.料品.销售件
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isSelf">
+            <summary>
+            自制件
+            物料资料.料品.自制件
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_buyerCode">
+            <summary>
+            BuyerCode
+            物料资料.料品.BuyerCode
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_lP">
+            <summary>
+            按单领料
+            物料资料.料品.按单领料
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isBom">
+            <summary>
+            生产物料
+            物料资料.料品.生产物料
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_kz">
+            <summary>
+            克重(直径)
+            物料资料.料品.克重(直径)
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isSS">
+            <summary>
+            安全库存采购
+            物料资料.料品.安全库存采购
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_sX">
+            <summary>
+            顺序
+            物料资料.计量属性.顺序
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isCboItem">
+            <summary>
+            转CBO_ItemMaster
+            物料资料.料品.转CBO_ItemMaster
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isBarCode">
+            <summary>
+            批号控制材料
+            物料资料.计量属性.批号控制材料
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_itemFormAttribute">
+            <summary>
+            料品形态属性
+            物料资料.料品.料品形态属性
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isSpecialItem">
+            <summary>
+            专用料
+            物料资料.料品.专用料
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_isBalanceByProject">
+            <summary>
+            项目存货核算
+            物料资料.料品.项目存货核算
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_receiptMode">
+            <summary>
+            收货程序
+            物料资料.料品.收货程序
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.tMaterialData.m_receiptType">
+            <summary>
+            收货方式
+            物料资料.料品.收货方式
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.CClass_SKey">
+            <summary>
+            小类(品牌编织) 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.料品.小类(品牌编织)
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.Category_SKey">
+            <summary>
+            物料类别 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.料品.物料类别
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.Category">
+            <summary>
+            物料类别
+            物料资料.料品.物料类别
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.StateUser_SKey">
+            <summary>
+            提交人 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.状态.提交人
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.StateUser">
+            <summary>
+            提交人
+            物料资料.状态.提交人
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.UOM_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.料品.单位
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.UOM">
+            <summary>
+            单位
+            物料资料.料品.单位
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.Color_SKey">
+            <summary>
+            颜色 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.料品.颜色
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.Color">
+            <summary>
+            颜色
+            物料资料.料品.颜色
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.FinClass_SKey">
+            <summary>
+            财务分类 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.成本区.财务分类
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.FinClass">
+            <summary>
+            财务分类
+            物料资料.成本区.财务分类
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.LotParam_SKey">
+            <summary>
+            批号参数 序列化Key属性。（传递跨组织序列列字段）
+            物料资料.料品.批号参数
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.tMaterialData.LotParam">
+            <summary>
+            批号参数
+            物料资料.料品.批号参数
+            </summary>
+        </member>
+        <member name="T:tMaterialBE.TMatOrgData">
+            <summary>
+            物料编码权限表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:tMaterialBE.TMatOrgData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_matID">
+            <summary>
+            MatID
+            物料编码权限表.Misc.MatID
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_iD">
+            <summary>
+            ID
+            物料编码权限表.Key.ID
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_createdOn">
+            <summary>
+            创建时间
+            物料编码权限表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_createdBy">
+            <summary>
+            创建人
+            物料编码权限表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_modifiedOn">
+            <summary>
+            修改时间
+            物料编码权限表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_modifiedBy">
+            <summary>
+            修改人
+            物料编码权限表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_sysVersion">
+            <summary>
+            事务版本
+            物料编码权限表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_code">
+            <summary>
+            物料编码
+            物料编码权限表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_name">
+            <summary>
+            物料名称
+            物料编码权限表.Misc.物料名称
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_buyerCode">
+            <summary>
+            BuyerCode
+            物料编码权限表.Misc.BuyerCode
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_isBase">
+            <summary>
+            新建
+            物料编码权限表.Misc.新建
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatOrgData.m_oldCode">
+            <summary>
+            U8物料编码
+            物料编码权限表.Misc.U8物料编码
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.TMatOrgData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:tMaterialBE.TMatOrgData.MatID_SKey">
+            <summary>
+            MatID 序列化Key属性。（传递跨组织序列列字段）
+            物料编码权限表.Misc.MatID
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.TMatOrgData.Org_SKey">
+            <summary>
+            Org 序列化Key属性。（传递跨组织序列列字段）
+            物料编码权限表.Misc.Org
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.TMatOrgData.Org">
+            <summary>
+            Org
+            物料编码权限表.Misc.Org
+            </summary>
+        </member>
+        <member name="T:tMaterialBE.TMatCClassData">
+            <summary>
+            小类(品牌编织) 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:tMaterialBE.TMatCClassData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_iD">
+            <summary>
+            ID
+            小类(品牌编织).Key.ID
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_createdOn">
+            <summary>
+            创建时间
+            小类(品牌编织).Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_createdBy">
+            <summary>
+            创建人
+            小类(品牌编织).Sys.创建人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_modifiedOn">
+            <summary>
+            修改时间
+            小类(品牌编织).Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_modifiedBy">
+            <summary>
+            修改人
+            小类(品牌编织).Sys.修改人
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_sysVersion">
+            <summary>
+            事务版本
+            小类(品牌编织).Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_cClass">
+            <summary>
+            类别
+            小类(品牌编织).Misc.类别
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_code">
+            <summary>
+            代码
+            小类(品牌编织).Misc.代码
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_name">
+            <summary>
+            名称
+            小类(品牌编织).Misc.名称
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_isDel">
+            <summary>
+            禁用
+            小类(品牌编织).Misc.禁用
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.TMatCClassData.m_note">
+            <summary>
+            备注
+            小类(品牌编织).Misc.备注
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.TMatCClassData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="T:tMaterialBE.EnumData">
+            <summary>
+            枚举值: 保税品类别 
+            
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.EnumData.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="F:tMaterialBE.EnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:tMaterialBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:tMaterialBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

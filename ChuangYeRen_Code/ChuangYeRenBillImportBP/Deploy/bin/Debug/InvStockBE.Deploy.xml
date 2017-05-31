@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InvStockBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:InvStockBE.InvStockData">
+            <summary>
+            进出仓明细主表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:InvStockBE.InvStockData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_iOC">
+            <summary>
+            进出仓类型
+            进出仓明细主表.状态.进出仓类型
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_iR">
+            <summary>
+            进出
+            进出仓明细主表.状态.进出
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_invStocks">
+            <summary>
+            进出仓明细子表
+            进出仓明细主表.Misc.进出仓明细子表
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_iD">
+            <summary>
+            ID
+            进出仓明细主表.Key.ID
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_createdOn">
+            <summary>
+            创建时间
+            进出仓明细主表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_createdBy">
+            <summary>
+            创建人
+            进出仓明细主表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_modifiedOn">
+            <summary>
+            修改时间
+            进出仓明细主表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_modifiedBy">
+            <summary>
+            修改人
+            进出仓明细主表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_sysVersion">
+            <summary>
+            事务版本
+            进出仓明细主表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_billDate">
+            <summary>
+            进出仓日期
+            进出仓明细主表.Misc.进出仓日期
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_cNote">
+            <summary>
+            备注
+            进出仓明细主表.Misc.备注
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_state">
+            <summary>
+            单据状单
+            进出仓明细主表.状态.单据状单
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_isChecked">
+            <summary>
+            审核
+            进出仓明细主表.状态.审核
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_flowID">
+            <summary>
+            FlowID
+            进出仓明细主表.状态.FlowID
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_sendBillNO">
+            <summary>
+            到货单号
+            进出仓明细主表.Misc.到货单号
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_orgID">
+            <summary>
+            组织
+            进出仓明细主表.Misc.组织
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_editor">
+            <summary>
+            制单人员
+            进出仓明细主表.状态.制单人员
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_editDate">
+            <summary>
+            制单日期
+            进出仓明细主表.状态.制单日期
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_checkDate">
+            <summary>
+            审核日期
+            进出仓明细主表.状态.审核日期
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_checker">
+            <summary>
+            审核人员
+            进出仓明细主表.状态.审核人员
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_source">
+            <summary>
+            来源
+            进出仓明细主表.状态.来源
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_tTlPrice">
+            <summary>
+            总价
+            进出仓明细主表.Misc.总价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_pZID">
+            <summary>
+            凭证号
+            进出仓明细主表.Misc.凭证号
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_inSourceID">
+            <summary>
+            进仓来源ID
+            进出仓明细主表.Misc.进仓来源ID
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStockData.m_outSourceID">
+            <summary>
+            出仓来源ID
+            进出仓明细主表.Misc.出仓来源ID
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.StockID_SKey">
+            <summary>
+            仓库 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细主表.Misc.仓库
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.StockID">
+            <summary>
+            仓库
+            进出仓明细主表.Misc.仓库
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.SupplyID_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细主表.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.SupplyID">
+            <summary>
+            供应商
+            进出仓明细主表.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.DeptID_SKey">
+            <summary>
+            进仓部门 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细主表.Misc.进仓部门
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.DeptID">
+            <summary>
+            进仓部门
+            进出仓明细主表.Misc.进仓部门
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.CustID_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细主表.Misc.客户
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.CustID">
+            <summary>
+            客户
+            进出仓明细主表.Misc.客户
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细主表.Misc.币种
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStockData.Currency">
+            <summary>
+            币种
+            进出仓明细主表.Misc.币种
+            </summary>
+        </member>
+        <member name="T:InvStockBE.InvStocksData">
+            <summary>
+            进出仓明细子表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:InvStockBE.InvStocksData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_invStock">
+            <summary>
+            进出仓明细主表
+            进出仓明细子表.Misc.进出仓明细主表
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_iD">
+            <summary>
+            ID
+            进出仓明细子表.Key.ID
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_createdOn">
+            <summary>
+            创建时间
+            进出仓明细子表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_createdBy">
+            <summary>
+            创建人
+            进出仓明细子表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_modifiedOn">
+            <summary>
+            修改时间
+            进出仓明细子表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_modifiedBy">
+            <summary>
+            修改人
+            进出仓明细子表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_sysVersion">
+            <summary>
+            事务版本
+            进出仓明细子表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_inQty">
+            <summary>
+            进仓数量
+            进出仓明细子表.金额.进仓数量
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_outQty">
+            <summary>
+            出仓数量
+            进出仓明细子表.金额.出仓数量
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_price">
+            <summary>
+            单价
+            进出仓明细子表.金额.单价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_taxRat">
+            <summary>
+            税率
+            进出仓明细子表.金额.税率
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_note">
+            <summary>
+            备注
+            进出仓明细子表.Misc.备注
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_taxMoney">
+            <summary>
+            税额
+            进出仓明细子表.金额.税额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_costMoney">
+            <summary>
+            成本
+            进出仓明细子表.金额.成本
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_isInv">
+            <summary>
+            转进仓单
+            进出仓明细子表.Misc.转进仓单
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_balPrice">
+            <summary>
+            结算价格
+            进出仓明细子表.金额.结算价格
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_isToGLOut">
+            <summary>
+            是否转总帐
+            进出仓明细子表.Misc.是否转总帐
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_price_Sources">
+            <summary>
+            取价来源
+            进出仓明细子表.Misc.取价来源
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rcvQty">
+            <summary>
+            结存数量
+            进出仓明细子表.Misc.结存数量
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rcvQryTime">
+            <summary>
+            查询库存时间
+            进出仓明细子表.Misc.查询库存时间
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_tTLPrice">
+            <summary>
+            金额
+            进出仓明细子表.金额.金额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_taxPrice">
+            <summary>
+            含税单价
+            进出仓明细子表.金额.含税单价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_taxTTLPrice">
+            <summary>
+            含税总价
+            进出仓明细子表.金额.含税总价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rMBPrice">
+            <summary>
+            本币单价
+            进出仓明细子表.金额.本币单价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rMBTTLPrice">
+            <summary>
+            本币金额
+            进出仓明细子表.金额.本币金额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rMBTaxTTLPrice">
+            <summary>
+            本币含税额
+            进出仓明细子表.金额.本币含税额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_rMBTaxMoney">
+            <summary>
+            本币税额
+            进出仓明细子表.金额.本币税额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_payRat">
+            <summary>
+            汇率
+            进出仓明细子表.金额.汇率
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defc1">
+            <summary>
+            实际规格
+            进出仓明细子表.自定义.实际规格
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defc2">
+            <summary>
+            自定义2
+            进出仓明细子表.自定义.自定义2
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defc3">
+            <summary>
+            自定义3
+            进出仓明细子表.自定义.自定义3
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defc4">
+            <summary>
+            自定义4
+            进出仓明细子表.自定义.自定义4
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defc5">
+            <summary>
+            自定义5
+            进出仓明细子表.自定义.自定义5
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defi1">
+            <summary>
+            可入库数
+            进出仓明细子表.自定义.可入库数
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defi2">
+            <summary>
+            自定义数量2
+            进出仓明细子表.自定义.自定义数量2
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defi3">
+            <summary>
+            未税总金额
+            进出仓明细子表.自定义.未税总金额
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defi4">
+            <summary>
+            自定义数量4
+            进出仓明细子表.自定义.自定义数量4
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_defi5">
+            <summary>
+            自定义数量5
+            进出仓明细子表.自定义.自定义数量5
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_item">
+            <summary>
+            物料编码
+            进出仓明细子表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_isCal">
+            <summary>
+            IsCal
+            进出仓明细子表.Misc.IsCal
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_sPrice">
+            <summary>
+            库成单价
+            进出仓明细子表.金额.库成单价
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InvStocksData.m_tTLSPrice">
+            <summary>
+            库成金额 
+            进出仓明细子表.金额.库成金额 
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.InvStock_SKey">
+            <summary>
+            进出仓明细主表 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.进出仓明细主表
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.ItemID_SKey">
+            <summary>
+            物料编码 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.ItemID">
+            <summary>
+            物料编码
+            进出仓明细子表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.FLocator_SKey">
+            <summary>
+            库位 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.库位
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.FLocator">
+            <summary>
+            库位
+            进出仓明细子表.Misc.库位
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.金额.币种
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.Currency">
+            <summary>
+            币种
+            进出仓明细子表.金额.币种
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.StockID_SKey">
+            <summary>
+            仓库 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.仓库
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.StockID">
+            <summary>
+            仓库
+            进出仓明细子表.Misc.仓库
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.MakReqID_SKey">
+            <summary>
+            生产单号 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.生产单号
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.MakReqID">
+            <summary>
+            生产单号
+            进出仓明细子表.Misc.生产单号
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.BuPoID_SKey">
+            <summary>
+            采购单号 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.采购单号
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.BuPoID">
+            <summary>
+            采购单号
+            进出仓明细子表.Misc.采购单号
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.SCPO_SKey">
+            <summary>
+            销售单号 序列化Key属性。（传递跨组织序列列字段）
+            进出仓明细子表.Misc.销售单号
+            </summary>
+        </member>
+        <member name="P:InvStockBE.InvStocksData.SCPO">
+            <summary>
+            销售单号
+            进出仓明细子表.Misc.销售单号
+            </summary>
+        </member>
+        <member name="T:InvStockBE.InOutClassEnumData">
+            <summary>
+            枚举值: 进出仓类型 
+            
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S01">
+            <summary>
+            普通采购
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S02">
+            <summary>
+            普通销售
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S03">
+            <summary>
+            成品入库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S04">
+            <summary>
+            领料
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S07">
+            <summary>
+            调拔入库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S08">
+            <summary>
+            调拔出库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S06">
+            <summary>
+            其他出库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S05">
+            <summary>
+            其他入库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S13">
+            <summary>
+            固定资产
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S10">
+            <summary>
+            委外倒冲
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S09">
+            <summary>
+            委外加工
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S15">
+            <summary>
+            预留入库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S11">
+            <summary>
+            转换入库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S12">
+            <summary>
+            转换出库
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.S00">
+            <summary>
+            期初
+            </summary>
+        </member>
+        <member name="F:InvStockBE.InOutClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:InvStockBE.IOClassEnumData">
+            <summary>
+            枚举值: 进出枚举 
+            
+            </summary>
+        </member>
+        <member name="F:InvStockBE.IOClassEnumData.InStock">
+            <summary>
+            进仓
+            </summary>
+        </member>
+        <member name="F:InvStockBE.IOClassEnumData.OutStock">
+            <summary>
+            出仓
+            </summary>
+        </member>
+        <member name="F:InvStockBE.IOClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:InvStockBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:InvStockBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:InvStockBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

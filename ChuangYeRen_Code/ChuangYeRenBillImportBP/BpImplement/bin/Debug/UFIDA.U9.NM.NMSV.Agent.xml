@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.NM.NMSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.AutoReimSVProxy.BlankNoteReimInfoDTO">
+            <summary>
+            空白票据报销信息DTO (该属性可为空,且无默认值)
+            自动报销服务.Misc.空白票据报销信息DTO
+            </summary>
+            <value>UFIDA.U9.NM.DTOs.NMBlankNoteReimInfoDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelAutoReimSVProxy.BlankNoteDetailID_SKey">
+            <summary>
+            空白票据明细ID 序列化Key属性。（传递跨组织序列列字段）
+            取消自动报销服务.Misc.空白票据明细ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelAutoReimSVProxy.BlankNoteDetailID">
+            <summary>
+            空白票据明细ID (该属性可为空,且无默认值)
+            取消自动报销服务.Misc.空白票据明细ID
+            </summary>
+            <value>UFIDA.U9.NM.NMBlankNote.NMBlankNoteDetail</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetPayNoteDataSVProxy.CCParamDTO">
+            <summary>
+            预测来源参数DTO (该属性可为空,且无默认值)
+            提供付票据数据服务.Misc.预测来源参数DTO
+            </summary>
+            <value>UFIDA.U9.CBO.FI.CFPDTO.CFPParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetRecNoteDataSVProxy.CCParamDTO">
+            <summary>
+            预测来源参数DTO (该属性可为空,且无默认值)
+            提供收票据数据服务.Misc.预测来源参数DTO
+            </summary>
+            <value>UFIDA.U9.CBO.FI.CFPDTO.CFPParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.NMDocType">
+            <summary>
+            票据类型 (该属性可为空,但有默认值)
+            查询空白票据.Misc.票据类型
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Dept">
+            <summary>
+            部门 (该属性可为空,但有默认值)
+            查询空白票据.Misc.部门
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Transactor">
+            <summary>
+            业务员 (该属性可为空,但有默认值)
+            查询空白票据.Misc.业务员
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.PayObjType">
+            <summary>
+            付款对象 (该属性可为空,但有默认值)
+            查询空白票据.Misc.付款对象
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Cust">
+            <summary>
+            客户 (该属性可为空,但有默认值)
+            查询空白票据.Misc.客户
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Cust_Code">
+            <summary>
+            客户编码 (该属性可为空,且无默认值)
+            查询空白票据.Misc.客户编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Cust_Name">
+            <summary>
+            客户名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.客户名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.CustSite">
+            <summary>
+            客户位置 (该属性可为空,但有默认值)
+            查询空白票据.Misc.客户位置
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.CustSite_Code">
+            <summary>
+            客户位置编码 (该属性可为空,且无默认值)
+            查询空白票据.Misc.客户位置编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.CustSite_Name">
+            <summary>
+            客户位置名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.客户位置名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Supp">
+            <summary>
+            供应商 (该属性可为空,但有默认值)
+            查询空白票据.Misc.供应商
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Supp_Code">
+            <summary>
+            供应商编码 (该属性可为空,且无默认值)
+            查询空白票据.Misc.供应商编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Supp_Name">
+            <summary>
+            供应商名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.供应商名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.SuppSite">
+            <summary>
+            供应商位置 (该属性可为空,但有默认值)
+            查询空白票据.Misc.供应商位置
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.SuppSite_Code">
+            <summary>
+            供应商位置编码 (该属性可为空,且无默认值)
+            查询空白票据.Misc.供应商位置编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.SuppSite_Name">
+            <summary>
+            供应商位置名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.供应商位置名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Bank">
+            <summary>
+            银行 (该属性可为空,但有默认值)
+            查询空白票据.Misc.银行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.BkAccount">
+            <summary>
+            账号 (该属性可为空,但有默认值)
+            查询空白票据.Misc.账号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.BkSubAccount">
+            <summary>
+            子账号 (该属性可为空,但有默认值)
+            查询空白票据.Misc.子账号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Currency">
+            <summary>
+            币种 (该属性可为空,但有默认值)
+            查询空白票据.Misc.币种
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.BankName">
+            <summary>
+            银行名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.银行名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.BkAccountName">
+            <summary>
+            银行账号名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.银行账号名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.BkSubAccountName">
+            <summary>
+            子账号名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.子账号名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.CurrencyName">
+            <summary>
+            币种名称 (该属性可为空,且无默认值)
+            查询空白票据.Misc.币种名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.IsLike">
+            <summary>
+            是否模糊查询 (该属性可为空,但有默认值)
+            查询空白票据.Misc.是否模糊查询
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.DocNo">
+            <summary>
+            单号 (该属性可为空,且无默认值)
+            查询空白票据.Misc.单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.Money">
+            <summary>
+            金额 (该属性可为空,但有默认值)
+            查询空白票据.Misc.金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMSVProxy.ForER">
+            <summary>
+            费用报销 (该属性可为空,但有默认值)
+            查询空白票据.Misc.费用报销
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMDocTypeIDCodeNameSVProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            查询空白票据管理的票据类型ID编码名称.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMDocTypeIDCodeNameSVProxy.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            查询空白票据管理的票据类型ID编码名称.Misc.名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMDocTypeIDCodeNameSVProxy.IsLike">
+            <summary>
+            是否模糊查询 (该属性可为空,但有默认值)
+            查询空白票据管理的票据类型ID编码名称.Misc.是否模糊查询
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryBlankNMDocTypeIDCodeNameSVProxy.SettlementMethod">
+            <summary>
+            结算方式 (该属性可为空,但有默认值)
+            查询空白票据管理的票据类型ID编码名称.Misc.结算方式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetAAIPrimaryEntityProxy.EntityTransDTO">
+            <summary>
+            AAI来源实体转换DTO (该属性可为空,且无默认值)
+            查询交易分录对应实体服务.Misc.AAI来源实体转换DTO
+            </summary>
+            <value>UFIDA.U9.AAI.TransEntry.AAIEntityTransDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.FICloseSVProxy.PostPeriod_SKey">
+            <summary>
+            记账期间 序列化Key属性。（传递跨组织序列列字段）
+            财务关闭服务.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.FICloseSVProxy.PostPeriod">
+            <summary>
+            记账期间 (该属性可为空,且无默认值)
+            财务关闭服务.Misc.记账期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelFICloseSVProxy.PostPeriod_SKey">
+            <summary>
+            记账期间 序列化Key属性。（传递跨组织序列列字段）
+            取消财务关闭服务.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelFICloseSVProxy.PostPeriod">
+            <summary>
+            记账期间 (该属性可为空,且无默认值)
+            取消财务关闭服务.Misc.记账期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CheckNMCloseSVProxy.PostPeriod_SKey">
+            <summary>
+            记账期间 序列化Key属性。（传递跨组织序列列字段）
+            检查票据系统是否结账服务.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CheckNMCloseSVProxy.PostPeriod">
+            <summary>
+            记账期间 (该属性可为空,且无默认值)
+            检查票据系统是否结账服务.Misc.记账期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.BatchAutoReimSVProxy.BlankNoteReimInfoDTOs">
+            <summary>
+            空白票据报销信息DTOs (该属性可为空,且无默认值)
+            批自动报销服务.Misc.空白票据报销信息DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.BatchCancelAutoReimSVProxy.BlankNoteDetailIDs">
+            <summary>
+            空白票据明细IDs (该属性可为空,但有默认值)
+            批取消自动报销服务.Misc.空白票据明细IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryReceiveNMDocTypeIDCodeNameSVProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            查询应收票据管理的票据类型ID编码名称.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryReceiveNMDocTypeIDCodeNameSVProxy.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            查询应收票据管理的票据类型ID编码名称.Misc.名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryReceiveNMDocTypeIDCodeNameSVProxy.IsLike">
+            <summary>
+            是否模糊查询 (该属性可为空,但有默认值)
+            查询应收票据管理的票据类型ID编码名称.Misc.是否模糊查询
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryReceiveNMDocTypeIDCodeNameSVProxy.SettlementMethod">
+            <summary>
+            结算方式 (该属性可为空,但有默认值)
+            查询应收票据管理的票据类型ID编码名称.Misc.结算方式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.QryReceiveNMDocTypeIDCodeNameSVProxy.IsOnlineCreateRecNote">
+            <summary>
+            是否在线录票据 (该属性可为空,但有默认值)
+            查询应收票据管理的票据类型ID编码名称.Misc.是否在线录票据
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNMNoteNoIDSVProxy.NoteNos">
+            <summary>
+            票据号 (该属性可为空,且无默认值)
+            提供空白票据号ID服务.Misc.票据号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.NMBlankNoteAbandonSVProxy.BlankNoteInfos">
+            <summary>
+            空白票据信息 (该属性可为空,且无默认值)
+            空白票据作废服务.Misc.空白票据信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CreatePayNoteSVProxy.PayNoteDTOs">
+            <summary>
+            付票据DTOs (该属性可为空,且无默认值)
+            创建付票据服务.Misc.付票据DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.DeletePayNoteSVProxy.PayNoteIDs">
+            <summary>
+            付票据IDs (该属性可为空,且无默认值)
+            删除付票据服务.Misc.付票据IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.AbandonPayNoteSVProxy.PayNoteAbondanInfo">
+            <summary>
+            付票据作废操作信息DTOs (该属性可为空,且无默认值)
+            作废付票据服务.Misc.付票据作废操作信息DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetPayNoteTypeSVProxy.IsBlankNoteManage">
+            <summary>
+            是否空白票据管理 (该属性可为空,但有默认值)
+            取付票据类型服务.Misc.是否空白票据管理
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetPayNoteTypeSVProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            取付票据类型服务.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetPayNoteTypeSVProxy.ID">
+            <summary>
+            主键 (该属性可为空,但有默认值)
+            取付票据类型服务.Misc.主键
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetRecNoteTypeSVProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            取收票据类型服务.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetRecNoteTypeSVProxy.ID">
+            <summary>
+            主键 (该属性可为空,但有默认值)
+            取收票据类型服务.Misc.主键
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CreateRecNoteSVProxy.RecNoteDTOs">
+            <summary>
+            收票据DTOs (该属性可为空,且无默认值)
+            创建收票据服务.Misc.收票据DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.DeleteRecNoteSVProxy.RecNoteIDs">
+            <summary>
+            收票据IDs (该属性可为空,且无默认值)
+            删除收票据服务.Misc.收票据IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.RecNoteReturnSVProxy.RecNoteReturnInfo">
+            <summary>
+            退票信息DTOs (该属性可为空,且无默认值)
+            收票据退票服务.Misc.退票信息DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.FindCanEndorseRecNoteSVProxy.QueryCondition">
+            <summary>
+            查询条件 (该属性可为空,且无默认值)
+            查询可背书的收票据服务.Misc.查询条件
+            </summary>
+            <value>UFIDA.U9.CBO.FI.NMDTO.FindRecNoteConditionDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.RecNoteEndorseSVProxy.EndorseInfo">
+            <summary>
+            背书信息DTOs (该属性可为空,且无默认值)
+            收票据背书服务.Misc.背书信息DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.RecNoteEndorseReturnSVProxy.EndorseReturnInfo">
+            <summary>
+            背书退回DTOs (该属性可为空,且无默认值)
+            收票据背书退回服务.Misc.背书退回DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.PayNoteType">
+            <summary>
+            付票据类型 (该属性可为空,但有默认值)
+            取空白票据服务.Misc.付票据类型
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            取空白票据服务.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            取空白票据服务.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            取空白票据服务.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.BkAccount_SKey">
+            <summary>
+            银行账号 序列化Key属性。（传递跨组织序列列字段）
+            取空白票据服务.Misc.银行账号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetBlankNoteSVProxy.BkAccount">
+            <summary>
+            银行账号 (该属性可为空,且无默认值)
+            取空白票据服务.Misc.银行账号
+            </summary>
+            <value>UFIDA.U9.CBO.FI.BankAccount.BankAccount</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.IsPeriodClosedProxy.Org">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            票据是否期间结账.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.IsPeriodClosedProxy.PostPeriod">
+            <summary>
+            记账期间 (该属性可为空,但有默认值)
+            票据是否期间结账.Misc.记账期间
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelEndorseSVProxy.RecNoteID_SKey">
+            <summary>
+            收票据主数据 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.CancelEndorseSVProxy.RecNoteID">
+            <summary>
+            收票据主数据 (该属性可为空,且无默认值)
+            取消背书服务.Misc.收票据主数据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.WriteBackVoucherSVProxy.VoucherInfo">
+            <summary>
+            要回写的凭证信息 (该属性可为空,且无默认值)
+            票据回写凭证信息服务.Misc.要回写的凭证信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.WriteBackVoucherSVProxy.IsDelete">
+            <summary>
+            是否删除操作 (该属性可为空,但有默认值)
+            票据回写凭证信息服务.Misc.是否删除操作
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.GetNoteTypeIsBlankNMSVProxy.PayNoteTypeID">
+            <summary>
+            付票据类型ID (该属性可为空,但有默认值)
+            判断付票据类型是否空白票据管理.Misc.付票据类型ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.NMBatchGenAAISVProxy.IsByJob">
+            <summary>
+            是否走调度 (该属性可为空,但有默认值)
+            批量生成交易分录服务.Misc.是否走调度
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.NM.NMSV.Proxy.NMBatchGenAAISVProxy.NMAAIMainEntityList">
+            <summary>
+            票据主单实体KeyList (该属性可为空,且无默认值)
+            批量生成交易分录服务.Misc.票据主单实体KeyList
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

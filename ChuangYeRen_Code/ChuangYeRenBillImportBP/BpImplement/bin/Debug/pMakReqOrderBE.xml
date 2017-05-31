@@ -1,0 +1,3340 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pMakReqOrderBE</name>
+    </assembly>
+    <members>
+        <member name="T:pMakReqOrderBE.PMakReqOrder">
+            <summary>
+            实体: 生产单
+            
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.FromEntityData(pMakReqOrderBE.PMakReqOrderData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.ToEntityData(pMakReqOrderBE.PMakReqOrderData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            生产单.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            生产单.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            生产单.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            生产单.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            生产单.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            生产单.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Org">
+            <summary>
+            Org (该属性不可为空,但有默认值)
+            生产单.基础.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.MakReq">
+            <summary>
+            生产单号 (该属性不可为空,且无默认值)
+            生产单.基础.生产单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ReceiveDate">
+            <summary>
+            接单日期 (该属性不可为空,且无默认值)
+            生产单.基础.接单日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.DeliverDate">
+            <summary>
+            交期 (该属性不可为空,且无默认值)
+            生产单.基础.交期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Dnewdedate">
+            <summary>
+            确认交期 (该属性不可为空,且无默认值)
+            生产单.基础.确认交期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Note">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            生产单.基础.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.COperator">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            生产单.基础.业务员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.COperatorKey">
+            <summary>
+            业务员 的Key (该属性可为空,且无默认值)
+            生产单.基础.业务员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsChecked">
+            <summary>
+            已审核 (该属性可为空,但有默认值)
+            生产单.状态.已审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsClosed">
+            <summary>
+            已关闭 (该属性可为空,但有默认值)
+            生产单.状态.已关闭
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsCompleted">
+            <summary>
+            已完成 (该属性可为空,但有默认值)
+            生产单.状态.已完成
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsShip">
+            <summary>
+            已出货 (该属性可为空,但有默认值)
+            生产单.状态.已出货
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IntC">
+            <summary>
+            状态颜色 (该属性可为空,但有默认值)
+            生产单.计划.状态颜色
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsShipMak">
+            <summary>
+            已出货排载 (该属性可为空,但有默认值)
+            生产单.状态.已出货排载
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsShipMakDc">
+            <summary>
+            已提供唛头 (该属性可为空,但有默认值)
+            生产单.材料状况.已提供唛头
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ShipMakDate">
+            <summary>
+            出货排载日期 (该属性可为空,且无默认值)
+            生产单.状态.出货排载日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ShipMakDcDate">
+            <summary>
+            提供唛头日期 (该属性可为空,且无默认值)
+            生产单.材料状况.提供唛头日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Note1">
+            <summary>
+            计划备注 (该属性可为空,且无默认值)
+            生产单.计划.计划备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.MakDate">
+            <summary>
+            唛头下载日期 (该属性可为空,且无默认值)
+            生产单.材料状况.唛头下载日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsPlanCheck">
+            <summary>
+            计划已审核 (该属性可为空,但有默认值)
+            生产单.状态.计划已审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CloseDate">
+            <summary>
+            关闭日期 (该属性可为空,且无默认值)
+            生产单.状态.关闭日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Item">
+            <summary>
+            成品编码 (该属性可为空,且无默认值)
+            生产单.基础.成品编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.RequireQty">
+            <summary>
+            需求数量 (该属性不可为空,但有默认值)
+            生产单.基础.需求数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsMRPed">
+            <summary>
+            已MRP (该属性可为空,但有默认值)
+            生产单.状态.已MRP
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.MRPDate">
+            <summary>
+            MRP日期 (该属性可为空,且无默认值)
+            生产单.状态.MRP日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsPlaned">
+            <summary>
+            已计划 (该属性可为空,但有默认值)
+            生产单.状态.已计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.PlanedDate">
+            <summary>
+            计划日期 (该属性可为空,且无默认值)
+            生产单.状态.计划日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FinishDate">
+            <summary>
+            完成日期 (该属性可为空,且无默认值)
+            生产单.状态.完成日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ESize">
+            <summary>
+            展开尺寸 (该属性可为空,且无默认值)
+            生产单.工艺.展开尺寸
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Area">
+            <summary>
+            面积 (该属性可为空,但有默认值)
+            生产单.工艺.面积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Size">
+            <summary>
+            产品尺寸 (该属性可为空,且无默认值)
+            生产单.基础.产品尺寸
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Spell">
+            <summary>
+            拼法 (该属性可为空,且无默认值)
+            生产单.工艺.拼法
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Craft">
+            <summary>
+            工艺 (该属性可为空,且无默认值)
+            生产单.工艺.工艺
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Pak">
+            <summary>
+            包材 (该属性可为空,但有默认值)
+            生产单.材料状况.包材
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Pap">
+            <summary>
+            主材 (该属性可为空,但有默认值)
+            生产单.材料状况.主材
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Rop">
+            <summary>
+            提手 (该属性可为空,但有默认值)
+            生产单.材料状况.提手
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Paknote">
+            <summary>
+            包材备注 (该属性可为空,且无默认值)
+            生产单.材料状况.包材备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHCS">
+            <summary>
+            轧痕次数 (该属性可为空,但有默认值)
+            生产单.计划.轧痕次数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZDCS">
+            <summary>
+            制袋1 (该属性可为空,但有默认值)
+            生产单.计划.制袋1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CYWC">
+            <summary>
+            彩印A (该属性可为空,但有默认值)
+            生产单.计划.彩印A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CYWCB">
+            <summary>
+            彩印B (该属性可为空,但有默认值)
+            生产单.计划.彩印B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CYJA">
+            <summary>
+            彩印A (该属性可为空,但有默认值)
+            生产单.计划.彩印A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CYJB">
+            <summary>
+            彩印B (该属性可为空,但有默认值)
+            生产单.计划.彩印B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FMWC">
+            <summary>
+            覆膜A (该属性可为空,但有默认值)
+            生产单.计划.覆膜A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FMWCB">
+            <summary>
+            覆膜B (该属性可为空,但有默认值)
+            生产单.计划.覆膜B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHWC">
+            <summary>
+            轧痕A (该属性可为空,但有默认值)
+            生产单.计划.轧痕A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHWCB">
+            <summary>
+            轧痕B (该属性可为空,但有默认值)
+            生产单.计划.轧痕B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZDWC">
+            <summary>
+            制袋 (该属性可为空,但有默认值)
+            生产单.计划.制袋
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BZWC">
+            <summary>
+            包装 (该属性可为空,但有默认值)
+            生产单.计划.包装
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.RKSL">
+            <summary>
+            进仓 (该属性可为空,但有默认值)
+            生产单.计划.进仓
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHQJ">
+            <summary>
+            轧痕A (该属性可为空,但有默认值)
+            生产单.计划.轧痕A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHQJB">
+            <summary>
+            轧痕B (该属性可为空,但有默认值)
+            生产单.计划.轧痕B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CYRQ">
+            <summary>
+            彩印日期 (该属性可为空,且无默认值)
+            生产单.计划.彩印日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FMRQ">
+            <summary>
+            覆膜日期 (该属性可为空,且无默认值)
+            生产单.计划.覆膜日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZHRQ">
+            <summary>
+            轧痕日期 (该属性可为空,且无默认值)
+            生产单.计划.轧痕日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZDRQ">
+            <summary>
+            制袋日期 (该属性可为空,且无默认值)
+            生产单.计划.制袋日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CHSL">
+            <summary>
+            彩印需求 (该属性可为空,但有默认值)
+            生产单.计划.彩印需求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ZDBM">
+            <summary>
+            制袋部门 (该属性可为空,且无默认值)
+            生产单.计划.制袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BZBM">
+            <summary>
+            包装部门 (该属性可为空,且无默认值)
+            生产单.计划.包装部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.SRK">
+            <summary>
+            属性62 (该属性可为空,但有默认值)
+            生产单.计划.属性62
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.SCH">
+            <summary>
+            属性63 (该属性可为空,但有默认值)
+            生产单.计划.属性63
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.DJ">
+            <summary>
+            品质等级 (该属性可为空,但有默认值)
+            生产单.基础.品质等级
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ChangeID">
+            <summary>
+            ChangeID (该属性可为空,且无默认值)
+            生产单.其它.ChangeID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Note2">
+            <summary>
+            工艺备注 (该属性可为空,且无默认值)
+            生产单.工艺.工艺备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Note3">
+            <summary>
+            修改备注 (该属性可为空,且无默认值)
+            生产单.其它.修改备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Major">
+            <summary>
+            主管审核 (该属性可为空,且无默认值)
+            生产单.状态.主管审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Checker">
+            <summary>
+            审核人员 (该属性可为空,且无默认值)
+            生产单.状态.审核人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsMak">
+            <summary>
+            唛头已下载 (该属性可为空,但有默认值)
+            生产单.材料状况.唛头已下载
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.CompNote">
+            <summary>
+            完成备注 (该属性可为空,且无默认值)
+            生产单.状态.完成备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Li">
+            <summary>
+            拉链+拉头 (该属性可为空,但有默认值)
+            生产单.材料状况.拉链+拉头
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.LiNote">
+            <summary>
+            拉链+拉头备注 (该属性可为空,且无默认值)
+            生产单.材料状况.拉链+拉头备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Bl">
+            <summary>
+            布料 (该属性可为空,但有默认值)
+            生产单.材料状况.布料
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BlNote">
+            <summary>
+            布料备注 (该属性可为空,且无默认值)
+            生产单.材料状况.布料备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Flc">
+            <summary>
+            辅料 (该属性可为空,但有默认值)
+            生产单.材料状况.辅料
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FlcNote">
+            <summary>
+            辅料备注 (该属性可为空,且无默认值)
+            生产单.材料状况.辅料备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Bgj">
+            <summary>
+            不干胶 (该属性可为空,但有默认值)
+            生产单.材料状况.不干胶
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BgjNote">
+            <summary>
+            不干胶备注 (该属性可为空,且无默认值)
+            生产单.材料状况.不干胶备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Papnote">
+            <summary>
+            主材备注 (该属性可为空,且无默认值)
+            生产单.材料状况.主材备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Ropnote">
+            <summary>
+            提手备注 (该属性可为空,且无默认值)
+            生产单.材料状况.提手备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FMCS">
+            <summary>
+            覆膜A (该属性可为空,但有默认值)
+            生产单.计划.覆膜A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.FMCSB">
+            <summary>
+            覆膜B (该属性可为空,但有默认值)
+            生产单.计划.覆膜B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Status">
+            <summary>
+            状态 (该属性可为空,但有默认值)
+            生产单.状态.状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BomClass">
+            <summary>
+            Bom类型 (该属性不可为空,但有默认值)
+            生产单.基础.Bom类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BomEditor">
+            <summary>
+            Bom编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.Bom编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsBom">
+            <summary>
+            已建Bom (该属性可为空,但有默认值)
+            生产单.状态.已建Bom
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BomDate">
+            <summary>
+            建Bom日期 (该属性可为空,且无默认值)
+            生产单.状态.建Bom日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.SCPOID">
+            <summary>
+            销售订单 (该属性可为空,且无默认值)
+            生产单.基础.销售订单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.SCPOIDKey">
+            <summary>
+            销售订单 的Key (该属性可为空,且无默认值)
+            生产单.基础.销售订单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Qty">
+            <summary>
+            数量 (该属性不可为空,但有默认值)
+            生产单.基础.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Def1">
+            <summary>
+            自定义1 (该属性可为空,且无默认值)
+            生产单.其它.自定义1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Def2">
+            <summary>
+            自定义2 (该属性可为空,且无默认值)
+            生产单.其它.自定义2
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Def3">
+            <summary>
+            自定义3 (该属性可为空,且无默认值)
+            生产单.其它.自定义3
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Def4">
+            <summary>
+            自定义4 (该属性可为空,且无默认值)
+            生产单.其它.自定义4
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Def5">
+            <summary>
+            自定义5 (该属性可为空,且无默认值)
+            生产单.其它.自定义5
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IDef1">
+            <summary>
+            自定义数值1 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IDef2">
+            <summary>
+            自定义数值2 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值2
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IDef3">
+            <summary>
+            自定义数值3 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值3
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IDef4">
+            <summary>
+            自定义数值4 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值4
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IDef5">
+            <summary>
+            自定义数值5 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值5
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ItemID">
+            <summary>
+            物料ID (该属性可为空,且无默认值)
+            生产单.基础.物料ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.ItemIDKey">
+            <summary>
+            物料ID 的Key (该属性可为空,且无默认值)
+            生产单.基础.物料ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsGyd">
+            <summary>
+            已建工艺单 (该属性可为空,但有默认值)
+            生产单.状态.已建工艺单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.GydRq">
+            <summary>
+            建立工艺单日期 (该属性可为空,且无默认值)
+            生产单.状态.建立工艺单日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.GydMaker">
+            <summary>
+            工艺单编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.工艺单编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.PoClass">
+            <summary>
+            订单类型 (该属性可为空,但有默认值)
+            生产单.基础.订单类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.IsBop">
+            <summary>
+            已建Bop (该属性可为空,但有默认值)
+            生产单.状态.已建Bop
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BopDate">
+            <summary>
+            建BoP日期 (该属性可为空,且无默认值)
+            生产单.状态.建BoP日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.BopEditor">
+            <summary>
+            Bop编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.Bop编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.PS">
+            <summary>
+            纸张克重 (该属性可为空,且无默认值)
+            生产单.基础.纸张克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.PSKey">
+            <summary>
+            纸张克重 的Key (该属性可为空,且无默认值)
+            生产单.基础.纸张克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_MakReq">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MakReq")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ReceiveDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ReceiveDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_DeliverDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DeliverDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Dnewdedate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Dnewdedate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Note">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_COperator">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("COperator")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsChecked">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsChecked")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsClosed">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsClosed")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsCompleted">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsCompleted")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsShip">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsShip")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IntC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IntC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsShipMak">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsShipMak")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsShipMakDc">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsShipMakDc")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ShipMakDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ShipMakDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ShipMakDcDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ShipMakDcDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Note1">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note1")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_MakDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MakDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsPlanCheck">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsPlanCheck")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CloseDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CloseDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Item">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Item")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_RequireQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RequireQty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsMRPed">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsMRPed")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_MRPDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MRPDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsPlaned">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsPlaned")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_PlanedDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PlanedDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FinishDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FinishDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ESize">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ESize")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Area">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Area")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Size">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Size")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Spell">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Spell")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Craft">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Craft")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Pak">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Pak")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Pap">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Pap")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Rop">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Rop")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Paknote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Paknote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHCS">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHCS")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZDCS">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZDCS")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CYWC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CYWC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CYWCB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CYWCB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CYJA">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CYJA")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CYJB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CYJB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FMWC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FMWC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FMWCB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FMWCB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHWC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHWC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHWCB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHWCB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZDWC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZDWC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BZWC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BZWC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_RKSL">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("RKSL")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHQJ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHQJ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHQJB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHQJB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CYRQ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CYRQ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FMRQ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FMRQ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZHRQ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZHRQ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZDRQ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZDRQ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CHSL">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CHSL")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ZDBM">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZDBM")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BZBM">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BZBM")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_SRK">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SRK")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_SCH">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SCH")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_DJ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DJ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ChangeID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ChangeID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Note2">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note2")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Note3">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note3")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Major">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Major")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Checker">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Checker")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsMak">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsMak")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_CompNote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CompNote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Li">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Li")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_LiNote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LiNote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Bl">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Bl")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BlNote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BlNote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Flc">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Flc")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FlcNote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FlcNote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Bgj">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Bgj")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BgjNote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BgjNote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Papnote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Papnote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Ropnote">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Ropnote")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FMCS">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FMCS")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_FMCSB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FMCSB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Status">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Status")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BomClass">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BomClass")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BomEditor">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BomEditor")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsBom">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsBom")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BomDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BomDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_SCPOID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SCPOID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Qty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Qty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Def1">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Def1")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Def2">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Def2")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Def3">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Def3")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Def4">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Def4")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_Def5">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Def5")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IDef1">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IDef1")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IDef2">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IDef2")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IDef3">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IDef3")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IDef4">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IDef4")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IDef5">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IDef5")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_ItemID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ItemID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsGyd">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsGyd")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_GydRq">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("GydRq")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_GydMaker">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("GydMaker")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_PoClass">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PoClass")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_IsBop">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsBop")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BopDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BopDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_BopEditor">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BopEditor")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.Res_PS">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PS")的方式取资源
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityKey">
+            <summary>
+            Strong Class PMakReqOrder EntityKey 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityFinder.FindByBusinessKey(System.Int64,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityFinder.FindByBusinessKey(pMakReqOrderBE.PMakReqOrder.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityFinder.FindByIXPMakReqOrder1(pMakReqOrderBE.PMakReqOrder.EntityFinder.IXPMakReqOrder1Parameter)">
+            <summary>
+            通过索引IX_PMakReqOrder_1进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityFinder.FindByBusinessKeyIndex(pMakReqOrderBE.PMakReqOrder.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引pMakReqOrderBE_PMakReqOrder_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityFinder.IXPMakReqOrder1Parameter">
+            <summary>
+            IX_PMakReqOrder_1索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            pMakReqOrderBE_PMakReqOrder_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.PMakReqOrder.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            生产单.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            生产单.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            生产单.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            生产单.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            生产单.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            生产单.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性不可为空,但有默认值)
+            生产单.基础.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.MakReq">
+            <summary>
+             OrginalData属性。只可读。
+            生产单号 (该属性不可为空,且无默认值)
+            生产单.基础.生产单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ReceiveDate">
+            <summary>
+             OrginalData属性。只可读。
+            接单日期 (该属性不可为空,且无默认值)
+            生产单.基础.接单日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.DeliverDate">
+            <summary>
+             OrginalData属性。只可读。
+            交期 (该属性不可为空,且无默认值)
+            生产单.基础.交期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Dnewdedate">
+            <summary>
+             OrginalData属性。只可读。
+            确认交期 (该属性不可为空,且无默认值)
+            生产单.基础.确认交期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Note">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            生产单.基础.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.COperator">
+            <summary>
+             OrginalData属性。只可读。
+            业务员 (该属性可为空,且无默认值)
+            生产单.基础.业务员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.COperatorKey">
+            <summary>
+            EntityKey 属性
+            业务员 的Key (该属性可为空,且无默认值)
+            生产单.基础.业务员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsChecked">
+            <summary>
+             OrginalData属性。只可读。
+            已审核 (该属性可为空,但有默认值)
+            生产单.状态.已审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsClosed">
+            <summary>
+             OrginalData属性。只可读。
+            已关闭 (该属性可为空,但有默认值)
+            生产单.状态.已关闭
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsCompleted">
+            <summary>
+             OrginalData属性。只可读。
+            已完成 (该属性可为空,但有默认值)
+            生产单.状态.已完成
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsShip">
+            <summary>
+             OrginalData属性。只可读。
+            已出货 (该属性可为空,但有默认值)
+            生产单.状态.已出货
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IntC">
+            <summary>
+             OrginalData属性。只可读。
+            状态颜色 (该属性可为空,但有默认值)
+            生产单.计划.状态颜色
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsShipMak">
+            <summary>
+             OrginalData属性。只可读。
+            已出货排载 (该属性可为空,但有默认值)
+            生产单.状态.已出货排载
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsShipMakDc">
+            <summary>
+             OrginalData属性。只可读。
+            已提供唛头 (该属性可为空,但有默认值)
+            生产单.材料状况.已提供唛头
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ShipMakDate">
+            <summary>
+             OrginalData属性。只可读。
+            出货排载日期 (该属性可为空,且无默认值)
+            生产单.状态.出货排载日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ShipMakDcDate">
+            <summary>
+             OrginalData属性。只可读。
+            提供唛头日期 (该属性可为空,且无默认值)
+            生产单.材料状况.提供唛头日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Note1">
+            <summary>
+             OrginalData属性。只可读。
+            计划备注 (该属性可为空,且无默认值)
+            生产单.计划.计划备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.MakDate">
+            <summary>
+             OrginalData属性。只可读。
+            唛头下载日期 (该属性可为空,且无默认值)
+            生产单.材料状况.唛头下载日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsPlanCheck">
+            <summary>
+             OrginalData属性。只可读。
+            计划已审核 (该属性可为空,但有默认值)
+            生产单.状态.计划已审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CloseDate">
+            <summary>
+             OrginalData属性。只可读。
+            关闭日期 (该属性可为空,且无默认值)
+            生产单.状态.关闭日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Item">
+            <summary>
+             OrginalData属性。只可读。
+            成品编码 (该属性可为空,且无默认值)
+            生产单.基础.成品编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.RequireQty">
+            <summary>
+             OrginalData属性。只可读。
+            需求数量 (该属性不可为空,但有默认值)
+            生产单.基础.需求数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsMRPed">
+            <summary>
+             OrginalData属性。只可读。
+            已MRP (该属性可为空,但有默认值)
+            生产单.状态.已MRP
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.MRPDate">
+            <summary>
+             OrginalData属性。只可读。
+            MRP日期 (该属性可为空,且无默认值)
+            生产单.状态.MRP日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsPlaned">
+            <summary>
+             OrginalData属性。只可读。
+            已计划 (该属性可为空,但有默认值)
+            生产单.状态.已计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.PlanedDate">
+            <summary>
+             OrginalData属性。只可读。
+            计划日期 (该属性可为空,且无默认值)
+            生产单.状态.计划日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FinishDate">
+            <summary>
+             OrginalData属性。只可读。
+            完成日期 (该属性可为空,且无默认值)
+            生产单.状态.完成日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ESize">
+            <summary>
+             OrginalData属性。只可读。
+            展开尺寸 (该属性可为空,且无默认值)
+            生产单.工艺.展开尺寸
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Area">
+            <summary>
+             OrginalData属性。只可读。
+            面积 (该属性可为空,但有默认值)
+            生产单.工艺.面积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Size">
+            <summary>
+             OrginalData属性。只可读。
+            产品尺寸 (该属性可为空,且无默认值)
+            生产单.基础.产品尺寸
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Spell">
+            <summary>
+             OrginalData属性。只可读。
+            拼法 (该属性可为空,且无默认值)
+            生产单.工艺.拼法
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Craft">
+            <summary>
+             OrginalData属性。只可读。
+            工艺 (该属性可为空,且无默认值)
+            生产单.工艺.工艺
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Pak">
+            <summary>
+             OrginalData属性。只可读。
+            包材 (该属性可为空,但有默认值)
+            生产单.材料状况.包材
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Pap">
+            <summary>
+             OrginalData属性。只可读。
+            主材 (该属性可为空,但有默认值)
+            生产单.材料状况.主材
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Rop">
+            <summary>
+             OrginalData属性。只可读。
+            提手 (该属性可为空,但有默认值)
+            生产单.材料状况.提手
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Paknote">
+            <summary>
+             OrginalData属性。只可读。
+            包材备注 (该属性可为空,且无默认值)
+            生产单.材料状况.包材备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHCS">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕次数 (该属性可为空,但有默认值)
+            生产单.计划.轧痕次数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZDCS">
+            <summary>
+             OrginalData属性。只可读。
+            制袋1 (该属性可为空,但有默认值)
+            生产单.计划.制袋1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CYWC">
+            <summary>
+             OrginalData属性。只可读。
+            彩印A (该属性可为空,但有默认值)
+            生产单.计划.彩印A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CYWCB">
+            <summary>
+             OrginalData属性。只可读。
+            彩印B (该属性可为空,但有默认值)
+            生产单.计划.彩印B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CYJA">
+            <summary>
+             OrginalData属性。只可读。
+            彩印A (该属性可为空,但有默认值)
+            生产单.计划.彩印A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CYJB">
+            <summary>
+             OrginalData属性。只可读。
+            彩印B (该属性可为空,但有默认值)
+            生产单.计划.彩印B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FMWC">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜A (该属性可为空,但有默认值)
+            生产单.计划.覆膜A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FMWCB">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜B (该属性可为空,但有默认值)
+            生产单.计划.覆膜B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHWC">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕A (该属性可为空,但有默认值)
+            生产单.计划.轧痕A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHWCB">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕B (该属性可为空,但有默认值)
+            生产单.计划.轧痕B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZDWC">
+            <summary>
+             OrginalData属性。只可读。
+            制袋 (该属性可为空,但有默认值)
+            生产单.计划.制袋
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BZWC">
+            <summary>
+             OrginalData属性。只可读。
+            包装 (该属性可为空,但有默认值)
+            生产单.计划.包装
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.RKSL">
+            <summary>
+             OrginalData属性。只可读。
+            进仓 (该属性可为空,但有默认值)
+            生产单.计划.进仓
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHQJ">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕A (该属性可为空,但有默认值)
+            生产单.计划.轧痕A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHQJB">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕B (该属性可为空,但有默认值)
+            生产单.计划.轧痕B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CYRQ">
+            <summary>
+             OrginalData属性。只可读。
+            彩印日期 (该属性可为空,且无默认值)
+            生产单.计划.彩印日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FMRQ">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜日期 (该属性可为空,且无默认值)
+            生产单.计划.覆膜日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZHRQ">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕日期 (该属性可为空,且无默认值)
+            生产单.计划.轧痕日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZDRQ">
+            <summary>
+             OrginalData属性。只可读。
+            制袋日期 (该属性可为空,且无默认值)
+            生产单.计划.制袋日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CHSL">
+            <summary>
+             OrginalData属性。只可读。
+            彩印需求 (该属性可为空,但有默认值)
+            生产单.计划.彩印需求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ZDBM">
+            <summary>
+             OrginalData属性。只可读。
+            制袋部门 (该属性可为空,且无默认值)
+            生产单.计划.制袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BZBM">
+            <summary>
+             OrginalData属性。只可读。
+            包装部门 (该属性可为空,且无默认值)
+            生产单.计划.包装部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.SRK">
+            <summary>
+             OrginalData属性。只可读。
+            属性62 (该属性可为空,但有默认值)
+            生产单.计划.属性62
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.SCH">
+            <summary>
+             OrginalData属性。只可读。
+            属性63 (该属性可为空,但有默认值)
+            生产单.计划.属性63
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.DJ">
+            <summary>
+             OrginalData属性。只可读。
+            品质等级 (该属性可为空,但有默认值)
+            生产单.基础.品质等级
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ChangeID">
+            <summary>
+             OrginalData属性。只可读。
+            ChangeID (该属性可为空,且无默认值)
+            生产单.其它.ChangeID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Note2">
+            <summary>
+             OrginalData属性。只可读。
+            工艺备注 (该属性可为空,且无默认值)
+            生产单.工艺.工艺备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Note3">
+            <summary>
+             OrginalData属性。只可读。
+            修改备注 (该属性可为空,且无默认值)
+            生产单.其它.修改备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Major">
+            <summary>
+             OrginalData属性。只可读。
+            主管审核 (该属性可为空,且无默认值)
+            生产单.状态.主管审核
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Checker">
+            <summary>
+             OrginalData属性。只可读。
+            审核人员 (该属性可为空,且无默认值)
+            生产单.状态.审核人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsMak">
+            <summary>
+             OrginalData属性。只可读。
+            唛头已下载 (该属性可为空,但有默认值)
+            生产单.材料状况.唛头已下载
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.CompNote">
+            <summary>
+             OrginalData属性。只可读。
+            完成备注 (该属性可为空,且无默认值)
+            生产单.状态.完成备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Li">
+            <summary>
+             OrginalData属性。只可读。
+            拉链+拉头 (该属性可为空,但有默认值)
+            生产单.材料状况.拉链+拉头
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.LiNote">
+            <summary>
+             OrginalData属性。只可读。
+            拉链+拉头备注 (该属性可为空,且无默认值)
+            生产单.材料状况.拉链+拉头备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Bl">
+            <summary>
+             OrginalData属性。只可读。
+            布料 (该属性可为空,但有默认值)
+            生产单.材料状况.布料
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BlNote">
+            <summary>
+             OrginalData属性。只可读。
+            布料备注 (该属性可为空,且无默认值)
+            生产单.材料状况.布料备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Flc">
+            <summary>
+             OrginalData属性。只可读。
+            辅料 (该属性可为空,但有默认值)
+            生产单.材料状况.辅料
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FlcNote">
+            <summary>
+             OrginalData属性。只可读。
+            辅料备注 (该属性可为空,且无默认值)
+            生产单.材料状况.辅料备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Bgj">
+            <summary>
+             OrginalData属性。只可读。
+            不干胶 (该属性可为空,但有默认值)
+            生产单.材料状况.不干胶
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BgjNote">
+            <summary>
+             OrginalData属性。只可读。
+            不干胶备注 (该属性可为空,且无默认值)
+            生产单.材料状况.不干胶备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Papnote">
+            <summary>
+             OrginalData属性。只可读。
+            主材备注 (该属性可为空,且无默认值)
+            生产单.材料状况.主材备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Ropnote">
+            <summary>
+             OrginalData属性。只可读。
+            提手备注 (该属性可为空,且无默认值)
+            生产单.材料状况.提手备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FMCS">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜A (该属性可为空,但有默认值)
+            生产单.计划.覆膜A
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.FMCSB">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜B (该属性可为空,但有默认值)
+            生产单.计划.覆膜B
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Status">
+            <summary>
+             OrginalData属性。只可读。
+            状态 (该属性可为空,但有默认值)
+            生产单.状态.状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BomClass">
+            <summary>
+             OrginalData属性。只可读。
+            Bom类型 (该属性不可为空,但有默认值)
+            生产单.基础.Bom类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BomEditor">
+            <summary>
+             OrginalData属性。只可读。
+            Bom编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.Bom编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsBom">
+            <summary>
+             OrginalData属性。只可读。
+            已建Bom (该属性可为空,但有默认值)
+            生产单.状态.已建Bom
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BomDate">
+            <summary>
+             OrginalData属性。只可读。
+            建Bom日期 (该属性可为空,且无默认值)
+            生产单.状态.建Bom日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.SCPOID">
+            <summary>
+             OrginalData属性。只可读。
+            销售订单 (该属性可为空,且无默认值)
+            生产单.基础.销售订单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.SCPOIDKey">
+            <summary>
+            EntityKey 属性
+            销售订单 的Key (该属性可为空,且无默认值)
+            生产单.基础.销售订单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Qty">
+            <summary>
+             OrginalData属性。只可读。
+            数量 (该属性不可为空,但有默认值)
+            生产单.基础.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Def1">
+            <summary>
+             OrginalData属性。只可读。
+            自定义1 (该属性可为空,且无默认值)
+            生产单.其它.自定义1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Def2">
+            <summary>
+             OrginalData属性。只可读。
+            自定义2 (该属性可为空,且无默认值)
+            生产单.其它.自定义2
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Def3">
+            <summary>
+             OrginalData属性。只可读。
+            自定义3 (该属性可为空,且无默认值)
+            生产单.其它.自定义3
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Def4">
+            <summary>
+             OrginalData属性。只可读。
+            自定义4 (该属性可为空,且无默认值)
+            生产单.其它.自定义4
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.Def5">
+            <summary>
+             OrginalData属性。只可读。
+            自定义5 (该属性可为空,且无默认值)
+            生产单.其它.自定义5
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IDef1">
+            <summary>
+             OrginalData属性。只可读。
+            自定义数值1 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IDef2">
+            <summary>
+             OrginalData属性。只可读。
+            自定义数值2 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值2
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IDef3">
+            <summary>
+             OrginalData属性。只可读。
+            自定义数值3 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值3
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IDef4">
+            <summary>
+             OrginalData属性。只可读。
+            自定义数值4 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值4
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IDef5">
+            <summary>
+             OrginalData属性。只可读。
+            自定义数值5 (该属性可为空,但有默认值)
+            生产单.其它.自定义数值5
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ItemID">
+            <summary>
+             OrginalData属性。只可读。
+            物料ID (该属性可为空,且无默认值)
+            生产单.基础.物料ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.ItemIDKey">
+            <summary>
+            EntityKey 属性
+            物料ID 的Key (该属性可为空,且无默认值)
+            生产单.基础.物料ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsGyd">
+            <summary>
+             OrginalData属性。只可读。
+            已建工艺单 (该属性可为空,但有默认值)
+            生产单.状态.已建工艺单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.GydRq">
+            <summary>
+             OrginalData属性。只可读。
+            建立工艺单日期 (该属性可为空,且无默认值)
+            生产单.状态.建立工艺单日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.GydMaker">
+            <summary>
+             OrginalData属性。只可读。
+            工艺单编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.工艺单编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.PoClass">
+            <summary>
+             OrginalData属性。只可读。
+            订单类型 (该属性可为空,但有默认值)
+            生产单.基础.订单类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.IsBop">
+            <summary>
+             OrginalData属性。只可读。
+            已建Bop (该属性可为空,但有默认值)
+            生产单.状态.已建Bop
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BopDate">
+            <summary>
+             OrginalData属性。只可读。
+            建BoP日期 (该属性可为空,且无默认值)
+            生产单.状态.建BoP日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.BopEditor">
+            <summary>
+             OrginalData属性。只可读。
+            Bop编辑人员 (该属性可为空,且无默认值)
+            生产单.状态.Bop编辑人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.PS">
+            <summary>
+             OrginalData属性。只可读。
+            纸张克重 (该属性可为空,且无默认值)
+            生产单.基础.纸张克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityOriginal.PSKey">
+            <summary>
+            EntityKey 属性
+            纸张克重 的Key (该属性可为空,且无默认值)
+            生产单.基础.纸张克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrder.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.MakReq">
+            <summary>
+            属性: 生产单号 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ReceiveDate">
+            <summary>
+            属性: 接单日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.DeliverDate">
+            <summary>
+            属性: 交期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Dnewdedate">
+            <summary>
+            属性: 确认交期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Note">
+            <summary>
+            属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.COperator">
+            <summary>
+            属性: 业务员 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsChecked">
+            <summary>
+            属性: 已审核 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsClosed">
+            <summary>
+            属性: 已关闭 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsCompleted">
+            <summary>
+            属性: 已完成 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsShip">
+            <summary>
+            属性: 已出货 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IntC">
+            <summary>
+            属性: 状态颜色 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsShipMak">
+            <summary>
+            属性: 已出货排载 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsShipMakDc">
+            <summary>
+            属性: 已提供唛头 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ShipMakDate">
+            <summary>
+            属性: 出货排载日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ShipMakDcDate">
+            <summary>
+            属性: 提供唛头日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Note1">
+            <summary>
+            属性: 计划备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.MakDate">
+            <summary>
+            属性: 唛头下载日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsPlanCheck">
+            <summary>
+            属性: 计划已审核 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CloseDate">
+            <summary>
+            属性: 关闭日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Item">
+            <summary>
+            属性: 成品编码 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.RequireQty">
+            <summary>
+            属性: 需求数量 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsMRPed">
+            <summary>
+            属性: 已MRP 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.MRPDate">
+            <summary>
+            属性: MRP日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsPlaned">
+            <summary>
+            属性: 已计划 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.PlanedDate">
+            <summary>
+            属性: 计划日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FinishDate">
+            <summary>
+            属性: 完成日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ESize">
+            <summary>
+            属性: 展开尺寸 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Area">
+            <summary>
+            属性: 面积 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Size">
+            <summary>
+            属性: 产品尺寸 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Spell">
+            <summary>
+            属性: 拼法 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Craft">
+            <summary>
+            属性: 工艺 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Pak">
+            <summary>
+            属性: 包材 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Pap">
+            <summary>
+            属性: 主材 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Rop">
+            <summary>
+            属性: 提手 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Paknote">
+            <summary>
+            属性: 包材备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHCS">
+            <summary>
+            属性: 轧痕次数 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZDCS">
+            <summary>
+            属性: 制袋1 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CYWC">
+            <summary>
+            属性: 彩印A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CYWCB">
+            <summary>
+            属性: 彩印B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CYJA">
+            <summary>
+            属性: 彩印A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CYJB">
+            <summary>
+            属性: 彩印B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FMWC">
+            <summary>
+            属性: 覆膜A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FMWCB">
+            <summary>
+            属性: 覆膜B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHWC">
+            <summary>
+            属性: 轧痕A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHWCB">
+            <summary>
+            属性: 轧痕B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZDWC">
+            <summary>
+            属性: 制袋 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BZWC">
+            <summary>
+            属性: 包装 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.RKSL">
+            <summary>
+            属性: 进仓 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHQJ">
+            <summary>
+            属性: 轧痕A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHQJB">
+            <summary>
+            属性: 轧痕B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CYRQ">
+            <summary>
+            属性: 彩印日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FMRQ">
+            <summary>
+            属性: 覆膜日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZHRQ">
+            <summary>
+            属性: 轧痕日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZDRQ">
+            <summary>
+            属性: 制袋日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CHSL">
+            <summary>
+            属性: 彩印需求 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ZDBM">
+            <summary>
+            属性: 制袋部门 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BZBM">
+            <summary>
+            属性: 包装部门 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.SRK">
+            <summary>
+            属性: 属性62 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.SCH">
+            <summary>
+            属性: 属性63 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.DJ">
+            <summary>
+            属性: 品质等级 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ChangeID">
+            <summary>
+            属性: ChangeID 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Note2">
+            <summary>
+            属性: 工艺备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Note3">
+            <summary>
+            属性: 修改备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Major">
+            <summary>
+            属性: 主管审核 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Checker">
+            <summary>
+            属性: 审核人员 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsMak">
+            <summary>
+            属性: 唛头已下载 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.CompNote">
+            <summary>
+            属性: 完成备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Li">
+            <summary>
+            属性: 拉链+拉头 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.LiNote">
+            <summary>
+            属性: 拉链+拉头备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Bl">
+            <summary>
+            属性: 布料 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BlNote">
+            <summary>
+            属性: 布料备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Flc">
+            <summary>
+            属性: 辅料 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FlcNote">
+            <summary>
+            属性: 辅料备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Bgj">
+            <summary>
+            属性: 不干胶 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BgjNote">
+            <summary>
+            属性: 不干胶备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Papnote">
+            <summary>
+            属性: 主材备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Ropnote">
+            <summary>
+            属性: 提手备注 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FMCS">
+            <summary>
+            属性: 覆膜A 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.FMCSB">
+            <summary>
+            属性: 覆膜B 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Status">
+            <summary>
+            属性: 状态 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BomClass">
+            <summary>
+            属性: Bom类型 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BomEditor">
+            <summary>
+            属性: Bom编辑人员 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsBom">
+            <summary>
+            属性: 已建Bom 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BomDate">
+            <summary>
+            属性: 建Bom日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.SCPOID">
+            <summary>
+            属性: 销售订单 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Qty">
+            <summary>
+            属性: 数量 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Def1">
+            <summary>
+            属性: 自定义1 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Def2">
+            <summary>
+            属性: 自定义2 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Def3">
+            <summary>
+            属性: 自定义3 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Def4">
+            <summary>
+            属性: 自定义4 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.Def5">
+            <summary>
+            属性: 自定义5 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IDef1">
+            <summary>
+            属性: 自定义数值1 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IDef2">
+            <summary>
+            属性: 自定义数值2 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IDef3">
+            <summary>
+            属性: 自定义数值3 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IDef4">
+            <summary>
+            属性: 自定义数值4 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IDef5">
+            <summary>
+            属性: 自定义数值5 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.ItemID">
+            <summary>
+            属性: 物料ID 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsGyd">
+            <summary>
+            属性: 已建工艺单 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.GydRq">
+            <summary>
+            属性: 建立工艺单日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.GydMaker">
+            <summary>
+            属性: 工艺单编辑人员 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.PoClass">
+            <summary>
+            属性: 订单类型 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.IsBop">
+            <summary>
+            属性: 已建Bop 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BopDate">
+            <summary>
+            属性: 建BoP日期 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.BopEditor">
+            <summary>
+            属性: Bop编辑人员 的名称
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrder.EntityRes.PS">
+            <summary>
+            属性: 纸张克重 的名称
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.BomClassEnum">
+            <summary>
+            可扩展枚举: Bom类型 
+            
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.BomClassEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get BomClassEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.BomClassEnum.GetFromValue(System.Object)">
+            <summary>
+            Get BomClassEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.BomClassEnum.GetFromName(System.String)">
+            <summary>
+            Get BomClassEnum By Name 
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.P">
+            <summary>
+            枚举值: 订单BOM  Value:0  
+            Bom类型.Misc.订单BOM
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.I">
+            <summary>
+            枚举值: 产品BOM  Value:1  
+            Bom类型.Misc.产品BOM
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.Values">
+            <summary>
+            Get BomClassEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.Res_TypeName">
+            <summary>
+            Bom类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.Res_TypeNameS">
+            <summary>
+            Bom类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.Res_P">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.Res_I">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.BomClassEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.BomClassEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.BomClassEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.DJEnum">
+            <summary>
+            可扩展枚举: 品质等级枚举 
+            
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.DJEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get DJEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.DJEnum.GetFromValue(System.Object)">
+            <summary>
+            Get DJEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.DJEnum.GetFromName(System.String)">
+            <summary>
+            Get DJEnum By Name 
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.A">
+            <summary>
+            枚举值: A级  Value:0  
+            品质等级枚举.Misc.A级
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.B">
+            <summary>
+            枚举值: B级  Value:1  
+            品质等级枚举.Misc.B级
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.C">
+            <summary>
+            枚举值: C级  Value:2  
+            品质等级枚举.Misc.C级
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.AB">
+            <summary>
+            枚举值: AB级  Value:3  
+            品质等级枚举.Misc.AB级
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Values">
+            <summary>
+            Get DJEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_TypeName">
+            <summary>
+            品质等级枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_TypeNameS">
+            <summary>
+            品质等级枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_A">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_B">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_C">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.Res_AB">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.DJEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.DJEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.DJEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.StatusEnum">
+            <summary>
+            可扩展枚举: 状态枚举 
+            
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.StatusEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get StatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.StatusEnum.GetFromValue(System.Object)">
+            <summary>
+            Get StatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.StatusEnum.GetFromName(System.String)">
+            <summary>
+            Get StatusEnum By Name 
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.S1">
+            <summary>
+            枚举值: 开立中  Value:0  
+            状态枚举.Misc.开立中
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.S2">
+            <summary>
+            枚举值: 已审核  Value:1  
+            状态枚举.Misc.已审核
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.S3">
+            <summary>
+            枚举值: 已取消  Value:2  
+            状态枚举.Misc.已取消
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.S4">
+            <summary>
+            枚举值: 已关闭  Value:3  
+            状态枚举.Misc.已关闭
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Values">
+            <summary>
+            Get StatusEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_TypeName">
+            <summary>
+            状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_TypeNameS">
+            <summary>
+            状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_S1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_S2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_S3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.Res_S4">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.StatusEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.StatusEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.StatusEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1017 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PDeptBE</name>
+    </assembly>
+    <members>
+        <member name="T:PDeptBE.PDept">
+            <summary>
+            实体: 生产部门
+            
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:PDeptBE.PDept.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:PDeptBE.PDept.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:PDeptBE.PDept.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:PDeptBE.PDept.FromEntityData(PDeptBE.PDeptData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.ToEntityData(PDeptBE.PDeptData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            生产部门.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            生产部门.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            生产部门.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            生产部门.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            生产部门.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            生产部门.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Org">
+            <summary>
+            Org (该属性不可为空,但有默认值)
+            生产部门.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Code">
+            <summary>
+            代码 (该属性不可为空,且无默认值)
+            生产部门.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Name">
+            <summary>
+            部门名称 (该属性不可为空,且无默认值)
+            生产部门.Misc.部门名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsDel">
+            <summary>
+            禁用 (该属性不可为空,但有默认值)
+            生产部门.Misc.禁用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsWx">
+            <summary>
+            外协厂 (该属性可为空,但有默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.SupplyID">
+            <summary>
+            外协厂 (该属性可为空,且无默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.SupplyIDKey">
+            <summary>
+            外协厂 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Px">
+            <summary>
+            显示顺序 (该属性可为空,但有默认值)
+            生产部门.Misc.显示顺序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsPlan">
+            <summary>
+            计划部门 (该属性可为空,但有默认值)
+            生产部门.Misc.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsDept">
+            <summary>
+            领料部门 (该属性可为空,但有默认值)
+            生产部门.Misc.领料部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.SysDep">
+            <summary>
+            系统部门 (该属性可为空,但有默认值)
+            生产部门.Misc.系统部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.PClass">
+            <summary>
+            计划类型 (该属性可为空,但有默认值)
+            生产部门.Misc.计划类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsCost">
+            <summary>
+            成本中心 (该属性可为空,但有默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsJs">
+            <summary>
+            成本卷积 (该属性可为空,但有默认值)
+            生产部门.Misc.成本卷积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.P">
+            <summary>
+            纸袋部门 (该属性可为空,但有默认值)
+            生产部门.Misc.纸袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Nn">
+            <summary>
+            无纺布袋部门 (该属性可为空,但有默认值)
+            生产部门.Misc.无纺布袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.B">
+            <summary>
+            礼盒部门 (该属性可为空,但有默认值)
+            生产部门.Misc.礼盒部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.X">
+            <summary>
+            彩盒部门 (该属性可为空,但有默认值)
+            生产部门.Misc.彩盒部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.CostDept">
+            <summary>
+            成本中心 (该属性可为空,且无默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.CostDeptKey">
+            <summary>
+            成本中心 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            生产部门.Misc.工作日历
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.WorkCalendarKey">
+            <summary>
+            工作日历 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.工作日历
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.ParentNode">
+            <summary>
+            上级部门 (该属性可为空,且无默认值)
+            生产部门.Misc.上级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.ParentNodeKey">
+            <summary>
+            上级部门 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.上级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsLeaf">
+            <summary>
+            末级部门 (该属性不可为空,但有默认值)
+            生产部门.Misc.末级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.ShortName">
+            <summary>
+            简称 (该属性可为空,且无默认值)
+            生产部门.Misc.简称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.IsMFG">
+            <summary>
+            生产相关 (该属性不可为空,但有默认值)
+            生产部门.Misc.生产相关
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Code2">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            生产部门.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsDel">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsDel")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsWx">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsWx")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_SupplyID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SupplyID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Px">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Px")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsPlan">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsPlan")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsDept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsDept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_SysDep">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysDep")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_PClass">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PClass")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsCost">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsCost")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsJs">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsJs")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_P">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("P")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Nn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Nn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_B">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("B")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_X">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("X")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_CostDept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CostDept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_WorkCalendar">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WorkCalendar")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_ParentNode">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ParentNode")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsLeaf">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsLeaf")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_ShortName">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ShortName")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_IsMFG">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsMFG")的方式取资源
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.Res_Code2">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code2")的方式取资源
+            </summary>
+        </member>
+        <member name="T:PDeptBE.PDept.EntityKey">
+            <summary>
+            Strong Class PDept EntityKey 
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:PDeptBE.PDept.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityFinder.FindByBusinessKey(System.Int64,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityFinder.FindByBusinessKey(PDeptBE.PDept.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityFinder.FindByPDeptBizEntityBusinessKeyIndex(PDeptBE.PDept.EntityFinder.PDeptBizEntityBusinessKeyIndexParameter)">
+            <summary>
+            通过索引PDept_BizEntity_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:PDeptBE.PDept.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:PDeptBE.PDept.EntityFinder.PDeptBizEntityBusinessKeyIndexParameter">
+            <summary>
+            PDept_BizEntity_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:PDeptBE.PDept.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            生产部门.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            生产部门.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            生产部门.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            生产部门.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            生产部门.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            生产部门.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性不可为空,但有默认值)
+            生产部门.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            代码 (该属性不可为空,且无默认值)
+            生产部门.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            部门名称 (该属性不可为空,且无默认值)
+            生产部门.Misc.部门名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsDel">
+            <summary>
+             OrginalData属性。只可读。
+            禁用 (该属性不可为空,但有默认值)
+            生产部门.Misc.禁用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsWx">
+            <summary>
+             OrginalData属性。只可读。
+            外协厂 (该属性可为空,但有默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.SupplyID">
+            <summary>
+             OrginalData属性。只可读。
+            外协厂 (该属性可为空,且无默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.SupplyIDKey">
+            <summary>
+            EntityKey 属性
+            外协厂 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.外协厂
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Px">
+            <summary>
+             OrginalData属性。只可读。
+            显示顺序 (该属性可为空,但有默认值)
+            生产部门.Misc.显示顺序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsPlan">
+            <summary>
+             OrginalData属性。只可读。
+            计划部门 (该属性可为空,但有默认值)
+            生产部门.Misc.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsDept">
+            <summary>
+             OrginalData属性。只可读。
+            领料部门 (该属性可为空,但有默认值)
+            生产部门.Misc.领料部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.SysDep">
+            <summary>
+             OrginalData属性。只可读。
+            系统部门 (该属性可为空,但有默认值)
+            生产部门.Misc.系统部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.PClass">
+            <summary>
+             OrginalData属性。只可读。
+            计划类型 (该属性可为空,但有默认值)
+            生产部门.Misc.计划类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsCost">
+            <summary>
+             OrginalData属性。只可读。
+            成本中心 (该属性可为空,但有默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsJs">
+            <summary>
+             OrginalData属性。只可读。
+            成本卷积 (该属性可为空,但有默认值)
+            生产部门.Misc.成本卷积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.P">
+            <summary>
+             OrginalData属性。只可读。
+            纸袋部门 (该属性可为空,但有默认值)
+            生产部门.Misc.纸袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Nn">
+            <summary>
+             OrginalData属性。只可读。
+            无纺布袋部门 (该属性可为空,但有默认值)
+            生产部门.Misc.无纺布袋部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.B">
+            <summary>
+             OrginalData属性。只可读。
+            礼盒部门 (该属性可为空,但有默认值)
+            生产部门.Misc.礼盒部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.X">
+            <summary>
+             OrginalData属性。只可读。
+            彩盒部门 (该属性可为空,但有默认值)
+            生产部门.Misc.彩盒部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.CostDept">
+            <summary>
+             OrginalData属性。只可读。
+            成本中心 (该属性可为空,且无默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.CostDeptKey">
+            <summary>
+            EntityKey 属性
+            成本中心 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.成本中心
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.WorkCalendar">
+            <summary>
+             OrginalData属性。只可读。
+            工作日历 (该属性可为空,且无默认值)
+            生产部门.Misc.工作日历
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.WorkCalendarKey">
+            <summary>
+            EntityKey 属性
+            工作日历 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.工作日历
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ParentNode">
+            <summary>
+             OrginalData属性。只可读。
+            上级部门 (该属性可为空,且无默认值)
+            生产部门.Misc.上级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ParentNodeKey">
+            <summary>
+            EntityKey 属性
+            上级部门 的Key (该属性可为空,且无默认值)
+            生产部门.Misc.上级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsLeaf">
+            <summary>
+             OrginalData属性。只可读。
+            末级部门 (该属性不可为空,但有默认值)
+            生产部门.Misc.末级部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.ShortName">
+            <summary>
+             OrginalData属性。只可读。
+            简称 (该属性可为空,且无默认值)
+            生产部门.Misc.简称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.IsMFG">
+            <summary>
+             OrginalData属性。只可读。
+            生产相关 (该属性不可为空,但有默认值)
+            生产部门.Misc.生产相关
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityOriginal.Code2">
+            <summary>
+             OrginalData属性。只可读。
+            代码 (该属性可为空,且无默认值)
+            生产部门.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:PDeptBE.PDept.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Code">
+            <summary>
+            属性: 代码 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Name">
+            <summary>
+            属性: 部门名称 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsDel">
+            <summary>
+            属性: 禁用 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsWx">
+            <summary>
+            属性: 外协厂 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.SupplyID">
+            <summary>
+            属性: 外协厂 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Px">
+            <summary>
+            属性: 显示顺序 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsPlan">
+            <summary>
+            属性: 计划部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsDept">
+            <summary>
+            属性: 领料部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.SysDep">
+            <summary>
+            属性: 系统部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.PClass">
+            <summary>
+            属性: 计划类型 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsCost">
+            <summary>
+            属性: 成本中心 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsJs">
+            <summary>
+            属性: 成本卷积 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.P">
+            <summary>
+            属性: 纸袋部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Nn">
+            <summary>
+            属性: 无纺布袋部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.B">
+            <summary>
+            属性: 礼盒部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.X">
+            <summary>
+            属性: 彩盒部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.CostDept">
+            <summary>
+            属性: 成本中心 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.WorkCalendar">
+            <summary>
+            属性: 工作日历 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.ParentNode">
+            <summary>
+            属性: 上级部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsLeaf">
+            <summary>
+            属性: 末级部门 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.ShortName">
+            <summary>
+            属性: 简称 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.IsMFG">
+            <summary>
+            属性: 生产相关 的名称
+            </summary>
+        </member>
+        <member name="P:PDeptBE.PDept.EntityRes.Code2">
+            <summary>
+            属性: 代码 的名称
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BuPOrderBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:BuPOrderBE.BuPOrderData">
+            <summary>
+            采购订单 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:BuPOrderBE.BuPOrderData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_buyClass">
+            <summary>
+            采购类型
+            采购订单.Check.采购类型
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_buPOrderChild">
+            <summary>
+            采购订单子表
+            采购订单.Misc.采购订单子表
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_iD">
+            <summary>
+            ID
+            采购订单.Key.ID
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_createdOn">
+            <summary>
+            创建时间
+            采购订单.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_createdBy">
+            <summary>
+            创建人
+            采购订单.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_modifiedOn">
+            <summary>
+            修改时间
+            采购订单.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_modifiedBy">
+            <summary>
+            修改人
+            采购订单.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_sysVersion">
+            <summary>
+            事务版本
+            采购订单.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_flowID">
+            <summary>
+            FlowID
+            采购订单.Check.FlowID
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_isCheck">
+            <summary>
+            IsCheck
+            采购订单.Check.IsCheck
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_buPONO">
+            <summary>
+            采购单号
+            采购订单.Misc.采购单号
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_buPODate">
+            <summary>
+            采购日期
+            采购订单.Misc.采购日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_taxRate">
+            <summary>
+            税率
+            采购订单.Misc.税率
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_nflat">
+            <summary>
+            汇率
+            采购订单.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_note">
+            <summary>
+            备注
+            采购订单.Misc.备注
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_checker">
+            <summary>
+            审核人
+            采购订单.Check.审核人
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_fGM">
+            <summary>
+            副总
+            采购订单.Check.副总
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_gM">
+            <summary>
+            总经理
+            采购订单.Check.总经理
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_supplier">
+            <summary>
+            供应商
+            采购订单.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_checkDate">
+            <summary>
+            核准日期
+            采购订单.Check.核准日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_applyer">
+            <summary>
+            Applyer
+            采购订单.Check.Applyer
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_poMoney">
+            <summary>
+            订单金额
+            采购订单.Misc.订单金额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderData.m_changeNum">
+            <summary>
+            版本号
+            采购订单.Check.版本号
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Vendor_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            采购订单.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Vendor">
+            <summary>
+            供应商
+            采购订单.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.CPayCode_SKey">
+            <summary>
+            付款条件 序列化Key属性。（传递跨组织序列列字段）
+            采购订单.Misc.付款条件
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.CPayCode">
+            <summary>
+            付款条件
+            采购订单.Misc.付款条件
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            采购订单.Misc.币种
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Currency">
+            <summary>
+            币种
+            采购订单.Misc.币种
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.OrgID_SKey">
+            <summary>
+            OrgID 序列化Key属性。（传递跨组织序列列字段）
+            采购订单.Misc.OrgID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.OrgID">
+            <summary>
+            OrgID
+            采购订单.Misc.OrgID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Payment_SKey">
+            <summary>
+            付款方式 序列化Key属性。（传递跨组织序列列字段）
+            采购订单.Misc.付款方式
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderData.Payment">
+            <summary>
+            付款方式
+            采购订单.Misc.付款方式
+            </summary>
+        </member>
+        <member name="T:BuPOrderBE.BuPOrderChildData">
+            <summary>
+            采购订单子表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:BuPOrderBE.BuPOrderChildData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_source">
+            <summary>
+            来源
+            采购订单子表.基础.来源
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_pSource">
+            <summary>
+            价格来源
+            采购订单子表.采购金额.价格来源
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_buPOrder">
+            <summary>
+            采购订单
+            采购订单子表.Misc.采购订单
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iD">
+            <summary>
+            ID
+            采购订单子表.Key.ID
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_createdOn">
+            <summary>
+            创建时间
+            采购订单子表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_createdBy">
+            <summary>
+            创建人
+            采购订单子表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_modifiedOn">
+            <summary>
+            修改时间
+            采购订单子表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_modifiedBy">
+            <summary>
+            修改人
+            采购订单子表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_sysVersion">
+            <summary>
+            事务版本
+            采购订单子表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_qty">
+            <summary>
+            数量
+            采购订单子表.采购金额.数量
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_price">
+            <summary>
+            未税单价
+            采购订单子表.采购金额.未税单价
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_pArriveDate">
+            <summary>
+            计划到货日期
+            采购订单子表.基础.计划到货日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_makReq">
+            <summary>
+            生产单号
+            采购订单子表.基础.生产单号
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_note">
+            <summary>
+            备注
+            采购订单子表.基础.备注
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fQty">
+            <summary>
+            数量
+            采购订单子表.财务.数量
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_tPrice">
+            <summary>
+            订单未税金额
+            采购订单子表.采购金额.订单未税金额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fPoPrice">
+            <summary>
+            订单未税金额
+            采购订单子表.财务.订单未税金额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_tax">
+            <summary>
+            税率
+            采购订单子表.采购金额.税率
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fArriveDate">
+            <summary>
+            实际到货日期
+            采购订单子表.采购追踪.实际到货日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_taxPrice">
+            <summary>
+            含税单价
+            采购订单子表.采购金额.含税单价
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_taxTPrice">
+            <summary>
+            订单含税金额
+            采购订单子表.采购金额.订单含税金额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_taxFPoPrice">
+            <summary>
+            订单含税金额
+            采购订单子表.财务.订单含税金额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fPrice">
+            <summary>
+            未税单价
+            采购订单子表.财务.未税单价
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isFin">
+            <summary>
+            IsFin
+            采购订单子表.状态.IsFin
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isCheck">
+            <summary>
+            IsCheck
+            采购订单子表.状态.IsCheck
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isCancel">
+            <summary>
+            IsCancel
+            采购订单子表.状态.IsCancel
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_cancelDate">
+            <summary>
+            取消日期
+            采购订单子表.状态.取消日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_canceler">
+            <summary>
+            取消人员
+            采购订单子表.状态.取消人员
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_checker">
+            <summary>
+            审核人员
+            采购订单子表.状态.审核人员
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_item">
+            <summary>
+            物料编码
+            采购订单子表.基础.物料编码
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_checkDate">
+            <summary>
+            审核日期
+            采购订单子表.状态.审核日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_statue">
+            <summary>
+            状态
+            采购订单子表.状态.状态
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_buyerCode">
+            <summary>
+            BuyerCode
+            采购订单子表.采购追踪.BuyerCode
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_buyNote">
+            <summary>
+            备注
+            采购订单子表.采购追踪.备注
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_buyIsClose">
+            <summary>
+            到完货
+            采购订单子表.采购追踪.到完货
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isClose">
+            <summary>
+            IsClose
+            采购订单子表.状态.IsClose
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_buyQty">
+            <summary>
+            已到货数量
+            采购订单子表.采购追踪.已到货数量
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_invoiceNo">
+            <summary>
+            发票号
+            采购订单子表.采购追踪.发票号
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iYear">
+            <summary>
+            年份
+            采购订单子表.采购追踪.年份
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iMonth">
+            <summary>
+            月份
+            采购订单子表.采购追踪.月份
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isInvoice">
+            <summary>
+            已收发票
+            采购订单子表.财务.已收发票
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_isPay">
+            <summary>
+            已付款
+            采购订单子表.财务.已付款
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_payNO">
+            <summary>
+            付款单号
+            采购订单子表.财务.付款单号
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_invoiceDate">
+            <summary>
+            收到发票日期
+            采购订单子表.财务.收到发票日期
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_tTax">
+            <summary>
+            税额
+            采购订单子表.采购金额.税额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fTax">
+            <summary>
+            税额
+            采购订单子表.财务.税额
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_pSourceID">
+            <summary>
+            价格来源单据号
+            采购订单子表.采购金额.价格来源单据号
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_def1">
+            <summary>
+            扩展1
+            采购订单子表.扩展.扩展1
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_def2">
+            <summary>
+            扩展2
+            采购订单子表.扩展.扩展2
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_def3">
+            <summary>
+            扩展3
+            采购订单子表.扩展.扩展3
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_def4">
+            <summary>
+            扩展4
+            采购订单子表.扩展.扩展4
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_def5">
+            <summary>
+            扩展5
+            采购订单子表.扩展.扩展5
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iDef1">
+            <summary>
+            扩展枚举1
+            采购订单子表.扩展.扩展枚举1
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iDef2">
+            <summary>
+            扩展枚举2
+            采购订单子表.扩展.扩展枚举2
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iDef3">
+            <summary>
+            扩展枚举3
+            采购订单子表.扩展.扩展枚举3
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iDef4">
+            <summary>
+            扩展枚举4
+            采购订单子表.扩展.扩展枚举4
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_iDef5">
+            <summary>
+            扩展枚举5
+            采购订单子表.扩展.扩展枚举5
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fDef1">
+            <summary>
+            扩展数量1
+            采购订单子表.扩展.扩展数量1
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fDef2">
+            <summary>
+            已开票数量
+            采购订单子表.扩展.已开票数量
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fDef3">
+            <summary>
+            扩展数量3
+            采购订单子表.扩展.扩展数量3
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fDef4">
+            <summary>
+            扩展数量4
+            采购订单子表.扩展.扩展数量4
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_fDef5">
+            <summary>
+            扩展数量5
+            采购订单子表.扩展.扩展数量5
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuPOrderChildData.m_xh">
+            <summary>
+            序号
+            采购订单子表.基础.序号
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.BuPOrder_SKey">
+            <summary>
+            采购订单 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.Misc.采购订单
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.MrpID_SKey">
+            <summary>
+            MrpID 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.基础.MrpID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.MrpID">
+            <summary>
+            MrpID
+            采购订单子表.基础.MrpID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ItemID_SKey">
+            <summary>
+            料品编码 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.基础.料品编码
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ItemID">
+            <summary>
+            料品编码
+            采购订单子表.基础.料品编码
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.采购金额.币种
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.Currency">
+            <summary>
+            币种
+            采购订单子表.采购金额.币种
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ScID_SKey">
+            <summary>
+            销售单ID 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.基础.销售单ID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ScID">
+            <summary>
+            销售单ID
+            采购订单子表.基础.销售单ID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ReqID_SKey">
+            <summary>
+            请购单ID 序列化Key属性。（传递跨组织序列列字段）
+            采购订单子表.基础.请购单ID
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.BuPOrderChildData.ReqID">
+            <summary>
+            请购单ID
+            采购订单子表.基础.请购单ID
+            </summary>
+        </member>
+        <member name="T:BuPOrderBE.SourceEnumData">
+            <summary>
+            枚举值: 采购来源枚举 
+            
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.SourceEnumData.MRP">
+            <summary>
+            生产单
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.SourceEnumData.Salse">
+            <summary>
+            销售单
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.SourceEnumData.Req">
+            <summary>
+            请购单
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.SourceEnumData.Other">
+            <summary>
+            直接采购
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.SourceEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:BuPOrderBE.BuyClassEnumData">
+            <summary>
+            枚举值: 采购类型枚举 
+            
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuyClassEnumData.B1">
+            <summary>
+            普通采购
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuyClassEnumData.B2">
+            <summary>
+            固定资产
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.BuyClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:BuPOrderBE.PSourceEnumData">
+            <summary>
+            枚举值: 价格来源枚举 
+            
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.PSourceEnumData.S0">
+            <summary>
+            输入
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.PSourceEnumData.S1">
+            <summary>
+            报价单
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.PSourceEnumData.S2">
+            <summary>
+            历史价
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.PSourceEnumData.S3">
+            <summary>
+            订单采购价
+            </summary>
+        </member>
+        <member name="F:BuPOrderBE.PSourceEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:BuPOrderBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:BuPOrderBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

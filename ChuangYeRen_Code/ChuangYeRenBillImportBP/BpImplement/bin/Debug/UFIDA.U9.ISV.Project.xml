@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.ISV.Project</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.ISV.Project.ProjectDTO">
+            <summary>
+            项目数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.ProjectDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.ProjectDTO.FromEntityData(UFIDA.U9.ISV.Project.ProjectDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.ProjectDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.ProjectDTO.ToEntityData(UFIDA.U9.ISV.Project.ProjectDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.ProjectDTO.#ctor(System.Int64,System.DateTime,System.String,System.DateTime,System.String,System.Int64,System.String,System.String,System.Int32,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.SCM.ProjectTask.ProjectClassifyEnum,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,System.String,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.SCM.ProjectTask.ProjectDates,System.Decimal,System.Decimal,System.Decimal,System.Boolean,System.String,System.DateTime,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.Base.Currency.ExchangeRateTypesEnum,UFIDA.U9.CBO.SCM.ProjectTask.ProjAndTaskSource,System.Int64,System.String,System.DateTime,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.SCM.ProjectTask.ProjectStateEnum,System.String,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,System.DateTime,System.DateTime,UFIDA.U9.CBO.SCM.ProjectTask.TaskPriorityEnum,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.Base.PropertyTypes.Effective,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,System.String,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,System.Boolean,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            项目数据传输对象.Key.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            项目数据传输对象.Sys.创建时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            项目数据传输对象.Sys.创建人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            项目数据传输对象.Sys.修改时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            项目数据传输对象.Sys.修改人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            项目数据传输对象.Sys.事务版本
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            项目数据传输对象.基本.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Version">
+            <summary>
+            版本 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.版本
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.WBSProjectType">
+            <summary>
+            项目类型 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目类型
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjectType">
+            <summary>
+            项目分类 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.项目分类
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.ProjectClassifyEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Org">
+            <summary>
+            组织 (该属性不可为空,且无默认值)
+            项目数据传输对象.Misc.组织
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Department">
+            <summary>
+            负责部门 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.负责部门
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjextMaster">
+            <summary>
+            项目经理 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目经理
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjectManagerName">
+            <summary>
+            项目经理姓名 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目经理姓名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjectAddress">
+            <summary>
+            项目地址 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目地址
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ActStaAndEndTime">
+            <summary>
+            实际日期 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.实际日期
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.ProjectDates</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.PlanTotalHours">
+            <summary>
+            计划总工时数 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.计划总工时数
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ActualTotalHours">
+            <summary>
+            实际总工时数 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.实际总工时数
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CompletePercentage">
+            <summary>
+            完成百分比 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.完成百分比
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.IsCanceled">
+            <summary>
+            终止 (该属性不可为空,但有默认值)
+            项目数据传输对象.Misc.终止
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CanceledBy">
+            <summary>
+            终止人 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.终止人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CancelDate">
+            <summary>
+            终止日期 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.终止日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.HoldReason">
+            <summary>
+            挂起原因 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.挂起原因
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.币种
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ExcRateType">
+            <summary>
+            汇率类型 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.汇率类型
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.PROJSource">
+            <summary>
+            来源 (该属性不可为空,但有默认值)
+            项目数据传输对象.Misc.来源
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.ProjAndTaskSource</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.WBSProject">
+            <summary>
+            WBS项目 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.WBS项目
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CloseBy">
+            <summary>
+            关闭人 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.关闭人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CloseDate">
+            <summary>
+            关闭日期 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.关闭日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ReleaseReason">
+            <summary>
+            解除原因 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.解除原因
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.State">
+            <summary>
+            项目状态 (该属性不可为空,但有默认值)
+            项目数据传输对象.Misc.项目状态
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.ProjectStateEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjectStage">
+            <summary>
+            项目阶段划分 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目阶段划分
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.StartDate">
+            <summary>
+            开始日期 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.开始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.EndDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ProjectPriority">
+            <summary>
+            优先级 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.优先级
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.TaskPriorityEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Effective">
+            <summary>
+            有效性 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.有效性
+            </summary>
+            <value>UFIDA.U9.Base.PropertyTypes.Effective</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CustomerSite">
+            <summary>
+            客户地址 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.客户地址
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Linkman">
+            <summary>
+            客户联系人 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.客户联系人
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ShortName">
+            <summary>
+            简称 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.简称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.DescFlexField">
+            <summary>
+            描述性弹性域 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.描述性弹性域
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CostORG">
+            <summary>
+            成本组织 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.成本组织
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.IsDelFlag">
+            <summary>
+            删除标志 (该属性可为空,但有默认值)
+            项目数据传输对象.Misc.删除标志
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ParentProject">
+            <summary>
+            父项目 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.父项目
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ParentTask">
+            <summary>
+            父任务 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.父任务
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.CBS">
+            <summary>
+            项目成本分解结构 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.项目成本分解结构
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.ExpenseType">
+            <summary>
+            支出类型 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.支出类型
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.PlanOrg">
+            <summary>
+            计划组织 (该属性可为空,且无默认值)
+            项目数据传输对象.Misc.计划组织
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Description">
+            <summary>
+            描述
+            项目数据传输对象.基本.描述
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Name">
+            <summary>
+            项目名称
+            项目数据传输对象.Misc.项目名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_TypeName">
+            <summary>
+            项目数据传输对象的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CreatedOn">
+            <summary>
+            创建时间的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CreatedBy">
+            <summary>
+            创建人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ModifiedOn">
+            <summary>
+            修改时间的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ModifiedBy">
+            <summary>
+            修改人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_SysVersion">
+            <summary>
+            事务版本的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Code">
+            <summary>
+            编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Description">
+            <summary>
+            描述的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Version">
+            <summary>
+            版本的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_WBSProjectType">
+            <summary>
+            项目类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjectType">
+            <summary>
+            项目分类的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Org">
+            <summary>
+            组织的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Department">
+            <summary>
+            负责部门的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjextMaster">
+            <summary>
+            项目经理的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjectManagerName">
+            <summary>
+            项目经理姓名的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_WorkCalendar">
+            <summary>
+            工作日历的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjectAddress">
+            <summary>
+            项目地址的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ActStaAndEndTime">
+            <summary>
+            实际日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_PlanTotalHours">
+            <summary>
+            计划总工时数的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ActualTotalHours">
+            <summary>
+            实际总工时数的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CompletePercentage">
+            <summary>
+            完成百分比的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_IsCanceled">
+            <summary>
+            终止的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CanceledBy">
+            <summary>
+            终止人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CancelDate">
+            <summary>
+            终止日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_HoldReason">
+            <summary>
+            挂起原因的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Currency">
+            <summary>
+            币种的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ExcRateType">
+            <summary>
+            汇率类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_PROJSource">
+            <summary>
+            来源的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_WBSProject">
+            <summary>
+            WBS项目的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CloseBy">
+            <summary>
+            关闭人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CloseDate">
+            <summary>
+            关闭日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ReleaseReason">
+            <summary>
+            解除原因的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_State">
+            <summary>
+            项目状态的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Name">
+            <summary>
+            项目名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjectStage">
+            <summary>
+            项目阶段划分的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_StartDate">
+            <summary>
+            开始日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_EndDate">
+            <summary>
+            结束日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ProjectPriority">
+            <summary>
+            优先级的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Customer">
+            <summary>
+            客户的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Effective">
+            <summary>
+            有效性的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CustomerSite">
+            <summary>
+            客户地址的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_Linkman">
+            <summary>
+            客户联系人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ShortName">
+            <summary>
+            简称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_DescFlexField">
+            <summary>
+            描述性弹性域的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CostORG">
+            <summary>
+            成本组织的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_IsDelFlag">
+            <summary>
+            删除标志的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ParentProject">
+            <summary>
+            父项目的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ParentTask">
+            <summary>
+            父任务的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_CBS">
+            <summary>
+            项目成本分解结构的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_ExpenseType">
+            <summary>
+            支出类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.ProjectDTO.Res_PlanOrg">
+            <summary>
+            计划组织的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.ISV.Project.QueryProjectDTO">
+            <summary>
+            查询项目DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.QueryProjectDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.QueryProjectDTO.FromEntityData(UFIDA.U9.ISV.Project.QueryProjectDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.QueryProjectDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.QueryProjectDTO.ToEntityData(UFIDA.U9.ISV.Project.QueryProjectDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.ISV.Project.QueryProjectDTO.#ctor(System.Int64,UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO,System.String)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            查询项目DTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            查询项目DTO.Misc.组织
+            </summary>
+            <value>UFIDA.U9.CBO.Pub.Controller.CommonArchiveDataDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Code">
+            <summary>
+            项目编码 (该属性可为空,且无默认值)
+            查询项目DTO.Misc.项目编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Res_TypeName">
+            <summary>
+            查询项目DTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Res_Org">
+            <summary>
+            组织的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.QueryProjectDTO.Res_Code">
+            <summary>
+            项目编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.ISV.Project.BatchQueryProjectByDTOSRV">
+            <summary>
+            BatchQueryProjectByDTOSRV business operation
+            
+            </summary>
+            <summary>
+            BatchQueryProjectByDTOSRV partial 
+            </summary>	
+        </member>
+        <member name="P:UFIDA.U9.ISV.Project.BatchQueryProjectByDTOSRV.QueryProjectDTOs">
+            <summary>
+            QueryProjectDTOs	
+            批量查询项目服务.Misc.查询项目DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.ISV.Project.BatchQueryProjectByDTOSRVImpementStrategy">
+            <summary>
+            Impement Implement
+            
+            </summary>	
+        </member>
+    </members>
+</doc>
