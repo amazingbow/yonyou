@@ -136,36 +136,40 @@
                             codeNamePair[6].Add(line.CashFlowCode, line.CashFlowDescription + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
-                    var assetCode = line.AssetsCode + ";" + item.CompanyCode;
-                    if (!string.IsNullOrEmpty(assetCode))
+                    if (!string.IsNullOrEmpty(line.AssetsCode))
                     {
+                        var assetCode = line.AssetsCode + ";" + item.CompanyCode;
+
                         if (!codeNamePair[9].ContainsKey(assetCode))//项目==资产编码
                         {
                             codeNamePair[9].Add(assetCode, line.AssetsDescription + ";" + item.CompanyName + "@" + item.SAPVoucherDisplayCode);
                         }
                     }
+
                     //实收资本U9将客户直接放在二级科目，SAP为客户核算；处理方案如下：
                     //①SAP与U9档案基础维护，针对实收资本的SAP科目(SAP科目编码为4001010000)，在维护对找关系时，还需要加上一个客户编码、客户名称列，
                     //以便用户选择U9的实收资本科目。
                     //②在生成U9凭证时，还需要考虑这个维度的关系，以便转换成U9的实收资本科目。
-                    if (line.AccountCode == "4001010000")
+                    if (!string.IsNullOrEmpty(line.AccountCode))
                     {
-                        var accountCode = line.AccountCode + ";" + line.SupplierCode;
-                        if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                        if (line.AccountCode == "4001010000")
                         {
-                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                            var accountCode = line.AccountCode + ";" + line.SupplierCode;
+                            if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                            {
+                                codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.SupplierDescription + "@" + item.SAPVoucherDisplayCode);
+                            }
+                        }
+                        else
+                        {
+                            var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
+                            if (!codeNamePair[10].ContainsKey(accountCode))//科目
+                            {
+                                codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
+                                    + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
+                            }
                         }
                     }
-                    else
-                    {
-                        var accountCode = line.AccountCode + ";" + line.MaterialGroupCode + ";" + line.AssetsCode + ";" + line.FeeTypeEnumCode;
-                        if (!codeNamePair[10].ContainsKey(accountCode))//科目
-                        {
-                            codeNamePair[10].Add(accountCode, line.AccountDescription + ";" + line.MaterialGroupDescription + ";"
-                                + line.AssetsDescription + ";" + line.FeeTypeEnumDescription + "@" + item.SAPVoucherDisplayCode);
-                        }
-                    }
-
                     if (!string.IsNullOrEmpty(line.FeeTypeEnumCode))
                     {
                         if (!codeNamePair[11].ContainsKey(line.FeeTypeEnumCode))//费用项目

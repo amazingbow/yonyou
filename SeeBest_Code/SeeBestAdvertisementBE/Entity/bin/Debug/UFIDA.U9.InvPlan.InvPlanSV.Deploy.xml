@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.InvPlan.InvPlanSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData">
+            <summary>
+            库存规划计算数据 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.#ctor(System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Supplier.SupplierMISCInfoData,System.DateTime,System.Int64,System.Int32,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int32,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int32,System.Boolean,System.Int64,System.Int64,System.Decimal,System.Int32,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceItemInfo">
+            <summary>
+            来源物料信息
+            库存规划计算数据.Misc.来源物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceQty">
+            <summary>
+            来源物料数量
+            库存规划计算数据.Misc.来源物料数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceManufacture">
+            <summary>
+            来源厂牌
+            库存规划计算数据.Misc.来源厂牌
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_requireDate">
+            <summary>
+            需求日期
+            库存规划计算数据.Misc.需求日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceDocType">
+            <summary>
+            来源单据类型
+            库存规划计算数据.Misc.来源单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceDoc">
+            <summary>
+            来源单据
+            库存规划计算数据.Misc.来源单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceDocNo">
+            <summary>
+            来源单据号
+            库存规划计算数据.Misc.来源单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceDocLine">
+            <summary>
+            来源单据行
+            库存规划计算数据.Misc.来源单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceDocLineNo">
+            <summary>
+            来源单据行号
+            库存规划计算数据.Misc.来源单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceSubLine">
+            <summary>
+            来源单据子行
+            库存规划计算数据.Misc.来源单据子行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceSubLineNo">
+            <summary>
+            来源单据子行号
+            库存规划计算数据.Misc.来源单据子行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_isToInterface">
+            <summary>
+            是否插入库存规划接口数据
+            库存规划计算数据.Misc.是否插入库存规划接口数据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_sourceUomRate">
+            <summary>
+            单位对基准单位转换率
+            库存规划计算数据.Misc.单位对基准单位转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_updateOption">
+            <summary>
+            更新时机
+            库存规划计算数据.Misc.更新时机
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_isVMI">
+            <summary>
+            是否VMI
+            库存规划计算数据.Misc.是否VMI
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_demandCode">
+            <summary>
+            需求分类
+            库存规划计算数据.Misc.需求分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.m_isFulfillDemand">
+            <summary>
+            是否按需补货
+            库存规划计算数据.Misc.是否按需补货
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceOrg">
+            <summary>
+            来源组织
+            库存规划计算数据.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceWh_SKey">
+            <summary>
+            来源存储地点 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceWh">
+            <summary>
+            来源存储地点
+            库存规划计算数据.Misc.来源存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceOwnerOrg_SKey">
+            <summary>
+            来源货主组织 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceOwnerOrg">
+            <summary>
+            来源货主组织
+            库存规划计算数据.Misc.来源货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceProject_SKey">
+            <summary>
+            来源项目 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceProject">
+            <summary>
+            来源项目
+            库存规划计算数据.Misc.来源项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceTask_SKey">
+            <summary>
+            来源任务 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceTask">
+            <summary>
+            来源任务
+            库存规划计算数据.Misc.来源任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.CurrentOrg_SKey">
+            <summary>
+            目的组织 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.目的组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.CurrentOrg">
+            <summary>
+            目的组织
+            库存规划计算数据.Misc.目的组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceUOM_SKey">
+            <summary>
+            来源数量单位 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceUOM">
+            <summary>
+            来源数量单位
+            库存规划计算数据.Misc.来源数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceUOM2_SKey">
+            <summary>
+            来源数量基准单位 序列化Key属性。（传递跨组织序列列字段）
+            库存规划计算数据.Misc.来源数量基准单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanCalDTOData.SourceUOM2">
+            <summary>
+            来源数量基准单位
+            库存规划计算数据.Misc.来源数量基准单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData">
+            <summary>
+            目的组织物料信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.#ctor(System.Int32,System.Int64,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.m_itemTypeAttribute">
+            <summary>
+            料品形态属性
+            目的组织物料信息.Misc.料品形态属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.m_itemInvToPurMode">
+            <summary>
+            库存规划转采购方式
+            目的组织物料信息.Misc.库存规划转采购方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.m_isNeedRequest">
+            <summary>
+            是否请购
+            目的组织物料信息.Misc.是否请购
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.m_invPlanMethod">
+            <summary>
+            库存规划方式
+            目的组织物料信息.Misc.库存规划方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.TargetItem_SKey">
+            <summary>
+            目的物料 序列化Key属性。（传递跨组织序列列字段）
+            目的组织物料信息.Misc.目的物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.TargetItemInfoData.TargetItem">
+            <summary>
+            目的物料
+            目的组织物料信息.Misc.目的物料
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData">
+            <summary>
+            库存规划DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.#ctor(System.Int64,System.String,System.String,System.Int64,System.String,System.String,System.DateTime,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.String,System.Int64,System.String,System.String,System.Int64,System.String,System.String,System.Int64,System.Collections.Generic.List{UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_currentOrg_Code">
+            <summary>
+            需求组织编码
+            库存规划DTO.Misc.需求组织编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_currentOrg_Name">
+            <summary>
+            需求组织名称
+            库存规划DTO.Misc.需求组织名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_ownerOrg_Code">
+            <summary>
+            货主组织编码
+            库存规划DTO.Misc.货主组织编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_ownerOrg_Name">
+            <summary>
+            货主组织名称
+            库存规划DTO.Misc.货主组织名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_businessDate">
+            <summary>
+            日期
+            库存规划DTO.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_itemInfo">
+            <summary>
+            料品信息
+            库存规划DTO.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_itemCode">
+            <summary>
+            料号
+            库存规划DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_project_Code">
+            <summary>
+            任务编码
+            库存规划DTO.Misc.任务编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_project_Name">
+            <summary>
+            项目名称
+            库存规划DTO.Misc.项目名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_task_Code">
+            <summary>
+            任务编码
+            库存规划DTO.Misc.任务编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_task_Name">
+            <summary>
+            任务名称
+            库存规划DTO.Misc.任务名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_invPlanID">
+            <summary>
+            库存规划ID
+            库存规划DTO.Misc.库存规划ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.m_invPlanDetailsDTO">
+            <summary>
+            库存规划明细DTO列表
+            库存规划DTO.Misc.库存规划明细DTO列表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.CurrentOrg_SKey">
+            <summary>
+            需求组织 序列化Key属性。（传递跨组织序列列字段）
+            库存规划DTO.Misc.需求组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.CurrentOrg">
+            <summary>
+            需求组织
+            库存规划DTO.Misc.需求组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.OwnerOrg_SKey">
+            <summary>
+            货主组织 序列化Key属性。（传递跨组织序列列字段）
+            库存规划DTO.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.OwnerOrg">
+            <summary>
+            货主组织
+            库存规划DTO.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            库存规划DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.Project">
+            <summary>
+            项目
+            库存规划DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            库存规划DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData.Task">
+            <summary>
+            任务
+            库存规划DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData">
+            <summary>
+            库存规划明细DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.#ctor(System.Int64,System.Int32,System.DateTime,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.String,System.String,System.Int32,System.Int32,System.Int32,UFIDA.U9.InvPlan.InvPlan.InvPlanDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_invPlanID">
+            <summary>
+            库存规划DTO
+            库存规划明细DTO.Misc.库存规划DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_periodNum">
+            <summary>
+            期间
+            库存规划明细DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_beginTime">
+            <summary>
+            开始时间
+            库存规划明细DTO.Misc.开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_endTime">
+            <summary>
+            结束时间
+            库存规划明细DTO.Misc.结束时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_storeQty">
+            <summary>
+            存量
+            库存规划明细DTO.Misc.存量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_requireQty">
+            <summary>
+            需求量
+            库存规划明细DTO.Misc.需求量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_supplyQty">
+            <summary>
+            供应量
+            库存规划明细DTO.Misc.供应量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_safeQty">
+            <summary>
+            安全库存
+            库存规划明细DTO.料品上信息.安全库存
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_reorderQty">
+            <summary>
+            再订货量
+            库存规划明细DTO.Misc.再订货量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_inventoryMaxLimiQty">
+            <summary>
+            上限
+            库存规划明细DTO.料品上信息.上限
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_inventoryMinLimiQty">
+            <summary>
+            下限
+            库存规划明细DTO.料品上信息.下限
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_netRequire">
+            <summary>
+            净需求
+            库存规划明细DTO.Misc.净需求
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_adviseQty">
+            <summary>
+            建议补库量
+            库存规划明细DTO.Misc.建议补库量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_soreMainUom_Code">
+            <summary>
+            单位编码
+            库存规划明细DTO.料品上信息.单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_soreMainUom_Name">
+            <summary>
+            单位名称
+            库存规划明细DTO.料品上信息.单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_roundType">
+            <summary>
+            库存单位舍入类型
+            库存规划明细DTO.料品上信息.库存单位舍入类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_roundValue">
+            <summary>
+            库存单位舍入值
+            库存规划明细DTO.料品上信息.库存单位舍入值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_uomPrecision">
+            <summary>
+            库存单位精度
+            库存规划明细DTO.料品上信息.库存单位精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.m_invPlanDTO1">
+            <summary>
+            库存规划DTO1
+            库存规划明细DTO.Misc.库存规划DTO1
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.SoreMainUom_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            库存规划明细DTO.料品上信息.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlan.InvPlanDetailsDTOData.SoreMainUom">
+            <summary>
+            单位
+            库存规划明细DTO.料品上信息.单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData">
+            <summary>
+            库存规划接口补货DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.#ctor(System.Int32,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFIDA.U9.Base.Organization.OrganizationData,UFIDA.U9.CBO.SCM.Item.ItemInfoData,UFIDA.U9.CBO.SCM.ProjectTask.ProjectData,UFIDA.U9.CBO.SCM.ProjectTask.TaskData,System.Int32,UFIDA.U9.Base.Organization.OrganizationData,System.Boolean,UFIDA.U9.CBO.SCM.Warehouse.WarehouseData,System.DateTime,System.Decimal,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billType">
+            <summary>
+            供应单据类型
+            库存规划接口补货DTO.单据信息.供应单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billEntity">
+            <summary>
+            供应单据key
+            库存规划接口补货DTO.单据信息.供应单据key
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billNo">
+            <summary>
+            供应单据号
+            库存规划接口补货DTO.单据信息.供应单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billLineEntity">
+            <summary>
+            供应单据行
+            库存规划接口补货DTO.单据信息.供应单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billLineNo">
+            <summary>
+            供应单据行号
+            库存规划接口补货DTO.单据信息.供应单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billSubLineEntity">
+            <summary>
+            供应单据子行
+            库存规划接口补货DTO.单据信息.供应单据子行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_billSubLineNo">
+            <summary>
+            供应单据子行号
+            库存规划接口补货DTO.单据信息.供应单据子行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_supplyOrg">
+            <summary>
+            物流组织
+            库存规划接口补货DTO.维度信息.物流组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_itemInfo">
+            <summary>
+            物料
+            库存规划接口补货DTO.维度信息.物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_project">
+            <summary>
+            项目
+            库存规划接口补货DTO.维度信息.项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_task">
+            <summary>
+            任务
+            库存规划接口补货DTO.维度信息.任务
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_demandCode">
+            <summary>
+            需求分类
+            库存规划接口补货DTO.维度信息.需求分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_ownerOrg">
+            <summary>
+            货主组织
+            库存规划接口补货DTO.维度信息.货主组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_isVMI">
+            <summary>
+            VMI属性
+            库存规划接口补货DTO.维度信息.VMI属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_wh">
+            <summary>
+            存储地点
+            库存规划接口补货DTO.维度信息.存储地点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_demandDate">
+            <summary>
+            需求日期
+            库存规划接口补货DTO.基本信息.需求日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_supplyItemQty">
+            <summary>
+            已补数量
+            库存规划接口补货DTO.基本信息.已补数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.InvPlan.InvPlan.InterfaceSupplyItemDTOForSrvData.m_cUD">
+            <summary>
+            CUD
+            库存规划接口补货DTO.基本信息.CUD
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlan.NullCurrentItemException">
+            <summary>
+            异常类型: 目的组织物料为空
+            
+             目的组织物料为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.NullCurrentItemException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 目的组织物料为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.NullCurrentItemException.#ctor">
+            <summary>
+            异常类型: 目的组织物料为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.InvPlan.InvPlan.NullCurrentItemException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 目的组织物料为空 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.InvPlan.InvPlanSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlanSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.InvPlan.InvPlanSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

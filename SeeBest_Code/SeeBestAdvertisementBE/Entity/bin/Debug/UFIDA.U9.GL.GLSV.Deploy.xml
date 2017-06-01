@@ -1,0 +1,2600 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.GL.GLSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData">
+            <summary>
+            执行预算DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.#ctor(UFIDA.U9.CBO.FI.Account.AccountData,UFIDA.U9.Base.Currency.CurrencyData,UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudgetData,UFIDA.U9.Base.SOB.SOBAccountingPeriodData,System.Boolean,System.Decimal,System.DateTime,System.String,UFIDA.U9.Base.Application.ApplicationData,System.Int64,System.String,UFIDA.U9.GL.Voucher.VoucherData,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_account">
+            <summary>
+            会计科目
+            执行预算DTO.Misc.会计科目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_currency">
+            <summary>
+            币种
+            执行预算DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_specialProject">
+            <summary>
+            预算专项
+            执行预算DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_accountPeriod">
+            <summary>
+            会计期间
+            执行预算DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_isExceptionApproval">
+            <summary>
+            是否预算特批
+            执行预算DTO.Misc.是否预算特批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_accountedDr">
+            <summary>
+            本币借方金额
+            执行预算DTO.Misc.本币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_bizDate">
+            <summary>
+            业务日期
+            执行预算DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_digest">
+            <summary>
+            摘要
+            执行预算DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_sourceSys">
+            <summary>
+            来源系统
+            执行预算DTO.Misc.来源系统
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_sourceDocClue">
+            <summary>
+            来源单据线索
+            执行预算DTO.Misc.来源单据线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_maker">
+            <summary>
+            制单人
+            执行预算DTO.Misc.制单人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_voucher">
+            <summary>
+            对应凭证
+            执行预算DTO.Misc.对应凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_accountedCr">
+            <summary>
+            本币贷方金额
+            执行预算DTO.Misc.本币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_enteredCr">
+            <summary>
+            原币贷方金额
+            执行预算DTO.Misc.原币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ExecuteBudgetDTOData.m_enteredDr">
+            <summary>
+            原币贷方金额
+            执行预算DTO.Misc.原币贷方金额
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.VoucherDTOData">
+            <summary>
+            凭证数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.VoucherDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.VoucherDTOData.#ctor(System.Int64,UFIDA.U9.CBO.FI.VoucherCategory.VoucherCategoryData,System.Int64,System.Int64,System.Int64,System.Boolean,System.String,System.Int32,System.Boolean,System.DateTime,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String,System.Boolean,System.Boolean,System.Int32,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.DateTime,System.DateTime,System.Int64,System.Int64,System.Int32,System.String,System.Int32,UFIDA.U9.GL.Voucher.VoucherBatchData,System.Collections.Generic.List{UFIDA.U9.GL.GLService.EntryDTOData},System.Boolean,System.String,System.String,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,System.String,System.DateTime,System.Int32,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherCategory">
+            <summary>
+            凭证类型
+            凭证数据传输对象.Base.凭证类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isAutoPost">
+            <summary>
+            是否自动记账
+            凭证数据传输对象.Base.是否自动记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_systemSequenceNumber">
+            <summary>
+            系统编号
+            凭证数据传输对象.Base.系统编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_attachmentCount">
+            <summary>
+            附件数
+            凭证数据传输对象.Base.附件数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isCharteredBudgetControl">
+            <summary>
+            执行预算是否特批
+            凭证数据传输对象.BudgetInfo.执行预算是否特批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_postDate">
+            <summary>
+            记账完成日期
+            凭证数据传输对象.StatusInfo.记账完成日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_accountedDr">
+            <summary>
+            本位币借方金额
+            凭证数据传输对象.MoneyInfo.本位币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_accountedCr">
+            <summary>
+            本位币贷方金额
+            凭证数据传输对象.MoneyInfo.本位币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_enteredDr">
+            <summary>
+            原币借方金额
+            凭证数据传输对象.MoneyInfo.原币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_enteredCr">
+            <summary>
+            原币贷方金额
+            凭证数据传输对象.MoneyInfo.原币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_poster">
+            <summary>
+            记账人
+            凭证数据传输对象.StatusInfo.记账人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_applyEndFlag">
+            <summary>
+            核销是否结束
+            凭证数据传输对象.MemoBookInfo.核销是否结束
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isNeedReverse">
+            <summary>
+            是否需要转回
+            凭证数据传输对象.ReverseInfo.是否需要转回
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_reverseMethod">
+            <summary>
+            转回方法
+            凭证数据传输对象.ReverseInfo.转回方法
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isReversed">
+            <summary>
+            是否已转回
+            凭证数据传输对象.ReverseInfo.是否已转回
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isNeedCashFlowAnalysis">
+            <summary>
+            是否要求现金流量分析
+            凭证数据传输对象.CashFlowInfo.是否要求现金流量分析
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isCancelCashFlowAnalysis">
+            <summary>
+            是否可取消现金流量分析要求
+            凭证数据传输对象.CashFlowInfo.是否可取消现金流量分析要求
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherAnalysisMethod">
+            <summary>
+            凭证拆分方法
+            凭证数据传输对象.CashFlowInfo.凭证拆分方法
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_cashFlowAnalysisType">
+            <summary>
+            现金流量分析类型
+            凭证数据传输对象.CashFlowInfo.现金流量分析类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_docSourceClue">
+            <summary>
+            来源单据
+            凭证数据传输对象.SourceInfo.来源单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_createDate">
+            <summary>
+            制单日期
+            凭证数据传输对象.StatusInfo.制单日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_reverseDate">
+            <summary>
+            转回日期
+            凭证数据传输对象.ReverseInfo.转回日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherStatus">
+            <summary>
+            凭证状态
+            凭证数据传输对象.StatusInfo.凭证状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_creator">
+            <summary>
+            制单人
+            凭证数据传输对象.Base.制单人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_adjustAction">
+            <summary>
+            调整动作类型
+            凭证数据传输对象.PreAdjust.调整动作类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherBatch">
+            <summary>
+            凭证批
+            凭证数据传输对象.Misc.凭证批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_entries">
+            <summary>
+            凭证分录集合
+            凭证数据传输对象.Misc.凭证分录集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_isPostFinished">
+            <summary>
+            记账完成标志
+            凭证数据传输对象.Misc.记账完成标志
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            凭证数据传输对象.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_auditor">
+            <summary>
+            审核人
+            凭证数据传输对象.Misc.审核人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_auditDate">
+            <summary>
+            审核日期
+            凭证数据传输对象.Misc.审核日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherSourceMethod">
+            <summary>
+            凭证来源方式
+            凭证数据传输对象.Misc.凭证来源方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.VoucherDTOData.m_voucherSequenceNumber">
+            <summary>
+            凭证编号
+            凭证数据传输对象.Misc.凭证编号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.Base.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SOB">
+            <summary>
+            账簿
+            凭证数据传输对象.Base.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.ClearingCompany_SKey">
+            <summary>
+            清算公司 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.Base.清算公司
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.ClearingCompany">
+            <summary>
+            清算公司
+            凭证数据传输对象.Base.清算公司
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.CreatedPeriod_SKey">
+            <summary>
+            制单会计期间 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.StatusInfo.制单会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.CreatedPeriod">
+            <summary>
+            制单会计期间
+            凭证数据传输对象.StatusInfo.制单会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.PostedPeriod_SKey">
+            <summary>
+            记账会计期间 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.StatusInfo.记账会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.PostedPeriod">
+            <summary>
+            记账会计期间
+            凭证数据传输对象.StatusInfo.记账会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.ReversalPostPeriod_SKey">
+            <summary>
+            转回凭证记账期间 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.ReverseInfo.转回凭证记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.ReversalPostPeriod">
+            <summary>
+            转回凭证记账期间
+            凭证数据传输对象.ReverseInfo.转回凭证记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SourceVoucher_SKey">
+            <summary>
+            对应凭证 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.RelationVoucher.对应凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SourceVoucher">
+            <summary>
+            对应凭证
+            凭证数据传输对象.RelationVoucher.对应凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SourceVoucherTemplate_SKey">
+            <summary>
+            对应凭证模版 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.RelationTemplate.对应凭证模版
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.SourceVoucherTemplate">
+            <summary>
+            对应凭证模版
+            凭证数据传输对象.RelationTemplate.对应凭证模版
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.VoucherSource_SKey">
+            <summary>
+            来源系统 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.SourceInfo.来源系统
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.VoucherSource">
+            <summary>
+            来源系统
+            凭证数据传输对象.SourceInfo.来源系统
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.MainSOB_SKey">
+            <summary>
+            对应主账簿 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.MainSOB.对应主账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.MainSOB">
+            <summary>
+            对应主账簿
+            凭证数据传输对象.MainSOB.对应主账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.MainSOBVoucher_SKey">
+            <summary>
+            对应主账簿凭证 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.MainSOB.对应主账簿凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.MainSOBVoucher">
+            <summary>
+            对应主账簿凭证
+            凭证数据传输对象.MainSOB.对应主账簿凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.OutSOB_SKey">
+            <summary>
+            对应转出账簿 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.OutSOB.对应转出账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.OutSOB">
+            <summary>
+            对应转出账簿
+            凭证数据传输对象.OutSOB.对应转出账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.OutSOBVoucher_SKey">
+            <summary>
+            对应转出账簿凭证 序列化Key属性。（传递跨组织序列列字段）
+            凭证数据传输对象.OutSOB.对应转出账簿凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.OutSOBVoucher">
+            <summary>
+            对应转出账簿凭证
+            凭证数据传输对象.OutSOB.对应转出账簿凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.AuditPassFlow">
+            <summary>
+            审批流
+            凭证数据传输对象.Misc.审批流
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.Multi_AuditPassFlow">
+            <summary>
+            多语属性: 审批流
+            凭证数据传输对象.Misc.审批流
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.WorkFlow">
+            <summary>
+            工作流
+            凭证数据传输对象.Misc.工作流
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.VoucherDTOData.Multi_WorkFlow">
+            <summary>
+            多语属性: 工作流
+            凭证数据传输对象.Misc.工作流
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.EntryDTOData">
+            <summary>
+            凭证分录数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.EntryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.EntryDTOData.#ctor(System.Int64,System.DateTime,System.String,System.DateTime,System.String,System.Int64,System.Int32,System.String,System.Int64,System.Int64,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,System.Int64,UFIDA.U9.GL.GLService.VoucherDTOData,System.Collections.Generic.List{UFIDA.U9.GL.GLService.EntryMemoBookDTOData},System.Decimal,System.Decimal,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,UFIDA.U9.GL.GLCBO.PreAdjustVoucherFODataData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_iD">
+            <summary>
+            ID
+            凭证分录数据传输对象.Key.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_createdOn">
+            <summary>
+            创建时间
+            凭证分录数据传输对象.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_createdBy">
+            <summary>
+            创建人
+            凭证分录数据传输对象.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_modifiedOn">
+            <summary>
+            修改时间
+            凭证分录数据传输对象.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_modifiedBy">
+            <summary>
+            修改人
+            凭证分录数据传输对象.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_sysVersion">
+            <summary>
+            事务版本
+            凭证分录数据传输对象.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_serialNo">
+            <summary>
+            行号
+            凭证分录数据传输对象.Base.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_exchangeRateTypes">
+            <summary>
+            汇率类型
+            凭证分录数据传输对象.MoneyInfo.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_oCToFCExchangeRate">
+            <summary>
+            原币对本位币汇率
+            凭证分录数据传输对象.MoneyInfo.原币对本位币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_accountedDr">
+            <summary>
+            本位币借方金额
+            凭证分录数据传输对象.MoneyInfo.本位币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_accountedCr">
+            <summary>
+            本位币贷方金额
+            凭证分录数据传输对象.MoneyInfo.本位币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_enteredDr">
+            <summary>
+            原币借方金额
+            凭证分录数据传输对象.MoneyInfo.原币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_enteredCr">
+            <summary>
+            原币贷方金额
+            凭证分录数据传输对象.MoneyInfo.原币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_encumbranceClue">
+            <summary>
+            保留线索
+            凭证分录数据传输对象.BudgetInfo.保留线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_extraExecutedMoney">
+            <summary>
+            超预算执行金额
+            凭证分录数据传输对象.BudgetInfo.超预算执行金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_extraExecutedAffirmFlowCode">
+            <summary>
+            超预算审批流实例号
+            凭证分录数据传输对象.BudgetInfo.超预算审批流实例号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_charteredBudgetAffirmFlowCode">
+            <summary>
+            预算特批审批流实例号
+            凭证分录数据传输对象.BudgetInfo.预算特批审批流实例号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_applyEndFlag">
+            <summary>
+            核销是否结束
+            凭证分录数据传输对象.MemoBookInfo.核销是否结束
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_sourceDocLine">
+            <summary>
+            来源单据行线索
+            凭证分录数据传输对象.Source.来源单据行线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_cashFlowCtrlAF">
+            <summary>
+            现金流控制审批流实例
+            凭证分录数据传输对象.CashBankInfo.现金流控制审批流实例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_cashFlowPlanCtrlAF">
+            <summary>
+            现金流计划控制审批流实例
+            凭证分录数据传输对象.CashBankInfo.现金流计划控制审批流实例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_voucher">
+            <summary>
+            凭证
+            凭证分录数据传输对象.Base.凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_entryMemoBooks">
+            <summary>
+            凭证备查集合
+            凭证分录数据传输对象.Misc.凭证备查集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_amountDr">
+            <summary>
+            借方数量
+            凭证分录数据传输对象.AmountInfo.借方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_amountCr">
+            <summary>
+            贷方数量
+            凭证分录数据传输对象.AmountInfo.贷方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            凭证分录数据传输对象.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryDTOData.m_preAdjustVoucherData">
+            <summary>
+            前期调整凭证数据
+            凭证分录数据传输对象.Misc.前期调整凭证数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Account_SKey">
+            <summary>
+            会计科目 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.Base.会计科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Account">
+            <summary>
+            会计科目
+            凭证分录数据传输对象.Base.会计科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.MoneyInfo.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Currency">
+            <summary>
+            币种
+            凭证分录数据传输对象.MoneyInfo.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.UOM_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.AmountInfo.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.UOM">
+            <summary>
+            计量单位
+            凭证分录数据传输对象.AmountInfo.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.TaskCode_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.ProjectInfo.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.TaskCode">
+            <summary>
+            任务
+            凭证分录数据传输对象.ProjectInfo.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.ProjectCode_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.ProjectInfo.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.ProjectCode">
+            <summary>
+            项目
+            凭证分录数据传输对象.ProjectInfo.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.SpecialProject_SKey">
+            <summary>
+            预算专项 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.BudgetInfo.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.SpecialProject">
+            <summary>
+            预算专项
+            凭证分录数据传输对象.BudgetInfo.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.BankAccountCombin_SKey">
+            <summary>
+            银行账号组合 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.CashBankInfo.银行账号组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.BankAccountCombin">
+            <summary>
+            银行账号组合
+            凭证分录数据传输对象.CashBankInfo.银行账号组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.SettlementMethod_SKey">
+            <summary>
+            结算方式 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.CashBankInfo.结算方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.SettlementMethod">
+            <summary>
+            结算方式
+            凭证分录数据传输对象.CashBankInfo.结算方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.IncomeExpendItem_SKey">
+            <summary>
+            收支项目 序列化Key属性。（传递跨组织序列列字段）
+            凭证分录数据传输对象.CashBankInfo.收支项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.IncomeExpendItem">
+            <summary>
+            收支项目
+            凭证分录数据传输对象.CashBankInfo.收支项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Abstracts">
+            <summary>
+            摘要
+            凭证分录数据传输对象.Base.摘要
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryDTOData.Multi_Abstracts">
+            <summary>
+            多语属性: 摘要
+            凭证分录数据传输对象.Base.摘要
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.EntryMemoBookDTOData">
+            <summary>
+            凭证备查数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.#ctor(System.Int64,System.DateTime,System.String,System.DateTime,System.String,System.Int64,System.Int32,System.DateTime,System.String,System.Int32,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Decimal,UFIDA.U9.GL.GLService.EntryDTOData,System.Int64,System.Decimal,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_iD">
+            <summary>
+            ID
+            凭证备查数据传输对象.Key.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_createdOn">
+            <summary>
+            创建时间
+            凭证备查数据传输对象.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_createdBy">
+            <summary>
+            创建人
+            凭证备查数据传输对象.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_modifiedOn">
+            <summary>
+            修改时间
+            凭证备查数据传输对象.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_modifiedBy">
+            <summary>
+            修改人
+            凭证备查数据传输对象.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_sysVersion">
+            <summary>
+            事务版本
+            凭证备查数据传输对象.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_sequenceNumber">
+            <summary>
+            序号
+            凭证备查数据传输对象.Base.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_businessDate">
+            <summary>
+            业务日期
+            凭证备查数据传输对象.Base.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_dCFlag">
+            <summary>
+            借贷方向
+            凭证备查数据传输对象.MemoBookInfo.借贷方向
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_appliedMoney">
+            <summary>
+            累计核销金额
+            凭证备查数据传输对象.ApplyInfo.累计核销金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_applyBalance">
+            <summary>
+            核销余额
+            凭证备查数据传输对象.ApplyInfo.核销余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_memoBookAccounted">
+            <summary>
+            备查簿本位币金额
+            凭证备查数据传输对象.ApplyInfo.备查簿本位币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_entry">
+            <summary>
+            凭证分录
+            凭证备查数据传输对象.Misc.凭证分录
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_memoBookEntered">
+            <summary>
+            备查簿金额
+            凭证备查数据传输对象.ApplyInfo.备查簿金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.m_memoBookItems">
+            <summary>
+            备查项集合
+            凭证备查数据传输对象.Misc.备查项集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.Account_SKey">
+            <summary>
+            会计科目 序列化Key属性。（传递跨组织序列列字段）
+            凭证备查数据传输对象.MemoBookInfo.会计科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.Account">
+            <summary>
+            会计科目
+            凭证备查数据传输对象.MemoBookInfo.会计科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.PostPriod_SKey">
+            <summary>
+            记账会计期间 序列化Key属性。（传递跨组织序列列字段）
+            凭证备查数据传输对象.Base.记账会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.PostPriod">
+            <summary>
+            记账会计期间
+            凭证备查数据传输对象.Base.记账会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.EntryCurrency_SKey">
+            <summary>
+            分录原币 序列化Key属性。（传递跨组织序列列字段）
+            凭证备查数据传输对象.ApplyInfo.分录原币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.EntryCurrency">
+            <summary>
+            分录原币
+            凭证备查数据传输对象.ApplyInfo.分录原币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.Abstracts">
+            <summary>
+            摘要
+            凭证备查数据传输对象.Base.摘要
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.EntryMemoBookDTOData.Multi_Abstracts">
+            <summary>
+            多语属性: 摘要
+            凭证备查数据传输对象.Base.摘要
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.ImportVoucherDTOData">
+            <summary>
+            导入凭证DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportVoucherDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportVoucherDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.GL.GLService.ImportEntryDTOData},UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,UFIDA.U9.Base.Organization.OrganizationData,UFIDA.U9.Base.SOB.SetofBooksData,UFIDA.U9.CBO.FI.VoucherCategory.VoucherCategoryData,UFIDA.U9.CBO.FI.Account.BalanceEntityData,System.String,System.Boolean,System.Int32,System.String,UFIDA.U9.GL.Voucher.VoucherData,System.DateTime,UFIDA.U9.Base.Application.ApplicationData,UFIDA.U9.Base.SOB.SOBAccountingPeriodData,System.DateTime,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_entries">
+            <summary>
+            分录集合
+            导入凭证DTO.Misc.分录集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            导入凭证DTO.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_organization">
+            <summary>
+            组织
+            导入凭证DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_sOB">
+            <summary>
+            账簿
+            导入凭证DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_voucherCategory">
+            <summary>
+            凭证类型
+            导入凭证DTO.Misc.凭证类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_clearingCompany">
+            <summary>
+            结算公司
+            导入凭证DTO.Misc.结算公司
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_businessCode">
+            <summary>
+            凭证外部编号
+            导入凭证DTO.Misc.凭证外部编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_isCharteredBudgetControl">
+            <summary>
+            执行预算是否特批
+            导入凭证DTO.Misc.执行预算是否特批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_interfaceVoucherStatus">
+            <summary>
+            接口凭证状态
+            导入凭证DTO.Misc.接口凭证状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_validateInfo">
+            <summary>
+            校验出错信息
+            导入凭证DTO.Misc.校验出错信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_voucher">
+            <summary>
+            正式凭证
+            导入凭证DTO.Misc.正式凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_actionDate">
+            <summary>
+            执行时间
+            导入凭证DTO.Misc.执行时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_voucherSource">
+            <summary>
+            凭证来源系统
+            导入凭证DTO.Misc.凭证来源系统
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_postedPeriod">
+            <summary>
+            记账会计期间
+            导入凭证DTO.Misc.记账会计期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_createDate">
+            <summary>
+            制单日期
+            导入凭证DTO.Misc.制单日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportVoucherDTOData.m_voucherSourceMethod">
+            <summary>
+            凭证来源方式
+            导入凭证DTO.Misc.凭证来源方式
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.ImportEntryDTOData">
+            <summary>
+            导入分录DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportEntryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportEntryDTOData.#ctor(UFIDA.U9.GL.GLService.ImportVoucherDTOData,System.Collections.Generic.List{UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData},UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,UFIDA.U9.Base.UOM.UOMData,System.Decimal,System.Decimal,System.Int32,System.String,UFIDA.U9.CBO.FI.Account.AccountData,UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudgetData,System.Int64,System.Decimal,UFIDA.U9.CBO.FI.BankAccount.BankAccountCombinData,UFIDA.U9.CBO.FI.SettlementMethod.SettlementMethodData,UFIDA.U9.CBO.FI.IncExpItem.IncExpItemData,System.Decimal,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.Base.Currency.CurrencyData,System.Int32,System.Decimal,UFIDA.U9.CBO.SCM.ProjectTask.TaskData,UFIDA.U9.CBO.SCM.ProjectTask.ProjectData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_voucher">
+            <summary>
+            导入凭证DTO
+            导入分录DTO.Misc.导入凭证DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_entryMemoBooks">
+            <summary>
+            导入备查集合DTO
+            导入分录DTO.Misc.导入备查集合DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            导入分录DTO.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_uOM">
+            <summary>
+            计量单位
+            导入分录DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_amountDr">
+            <summary>
+            借方数量
+            导入分录DTO.Misc.借方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_amountCr">
+            <summary>
+            贷方数量
+            导入分录DTO.Misc.贷方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_serialNo">
+            <summary>
+            行号
+            导入分录DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_abstracts">
+            <summary>
+            摘要
+            导入分录DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_account">
+            <summary>
+            会计科目
+            导入分录DTO.Misc.会计科目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_specialProject">
+            <summary>
+            预算专项
+            导入分录DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_encumbranceClue">
+            <summary>
+            保留线索
+            导入分录DTO.Misc.保留线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_extraExecutedMoney">
+            <summary>
+            超预算执行金额
+            导入分录DTO.Misc.超预算执行金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_bankAccountCombin">
+            <summary>
+            银行账号组合
+            导入分录DTO.Misc.银行账号组合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_settlementMethod">
+            <summary>
+            结算方式
+            导入分录DTO.Misc.结算方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_incomeExpendItem">
+            <summary>
+            收支项目
+            导入分录DTO.Misc.收支项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_accountedDr">
+            <summary>
+            本币借方金额
+            导入分录DTO.Misc.本币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_accountedCr">
+            <summary>
+            本币贷方金额
+            导入分录DTO.Misc.本币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_enteredDr">
+            <summary>
+            原币借方金额
+            导入分录DTO.Misc.原币借方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_enteredCr">
+            <summary>
+            原币贷方金额
+            导入分录DTO.Misc.原币贷方金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_currency">
+            <summary>
+            货币
+            导入分录DTO.Misc.货币
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_exchangeRateTypes">
+            <summary>
+            汇率类型
+            导入分录DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_oCToFCExchangeRate">
+            <summary>
+            对本币汇率
+            导入分录DTO.Misc.对本币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_taskCode">
+            <summary>
+            任务编号
+            导入分录DTO.Misc.任务编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryDTOData.m_projectCode">
+            <summary>
+            项目编号
+            导入分录DTO.Misc.项目编号
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData">
+            <summary>
+            导入备查DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.#ctor(UFIDA.U9.GL.GLService.ImportEntryDTOData,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,System.Decimal,System.Decimal,System.Int32,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_entry">
+            <summary>
+            导入分录DTO
+            导入备查DTO.Misc.导入分录DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_memoBookItems">
+            <summary>
+            备查项集合
+            导入备查DTO.Misc.备查项集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_memoBookAccounted">
+            <summary>
+            备查簿本币金额
+            导入备查DTO.Misc.备查簿本币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_memoBookEntered">
+            <summary>
+            备查簿金额
+            导入备查DTO.Misc.备查簿金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_sequenceNumber">
+            <summary>
+            序号
+            导入备查DTO.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.GLService.ImportEntryMemoBookDTOData.m_abstracts">
+            <summary>
+            摘要
+            导入备查DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.AccountEffectiveException">
+            <summary>
+            异常类型: 科目无效异常
+            
+             科目无效
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.AccountEffectiveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 科目无效异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.AccountEffectiveException.#ctor">
+            <summary>
+            异常类型: 科目无效异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.AccountEffectiveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 科目无效异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.GLIsNotCreatException">
+            <summary>
+            异常类型: 总账账簿没有建立
+            
+             ${SOBName}的总账账簿没有建立
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.GLIsNotCreatException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 总账账簿没有建立 Constructor
+            </summary>
+            <param name="sOBName">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.GLIsNotCreatException.#ctor(System.String)">
+            <summary>
+            异常类型: 总账账簿没有建立 Constructor
+            </summary>
+            <param name="sOBName">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.GLIsNotCreatException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 总账账簿没有建立 Constructor
+            </summary>
+            <param name="sOBName">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.GLIsNotCreatException.SOBName">
+            <summary>
+            属性
+            总账账簿没有建立.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.NotSelectPeriodException">
+            <summary>
+            异常类型: 请选择起始结束期间
+            
+             请选择起始结束期间
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.NotSelectPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请选择起始结束期间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.NotSelectPeriodException.#ctor">
+            <summary>
+            异常类型: 请选择起始结束期间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.NotSelectPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请选择起始结束期间 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.SplitSymbolIsNullException">
+            <summary>
+            异常类型: 扩展字段分隔符不允许为空
+            
+             扩展字段分隔符不允许为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.SplitSymbolIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 扩展字段分隔符不允许为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.SplitSymbolIsNullException.#ctor">
+            <summary>
+            异常类型: 扩展字段分隔符不允许为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.SplitSymbolIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 扩展字段分隔符不允许为空 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.CodeStructIsNotComplieException">
+            <summary>
+            异常类型: 编码结构没有编译
+            
+             编码结构${Code}没有编译
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CodeStructIsNotComplieException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 编码结构没有编译 Constructor
+            </summary>
+            <param name="code">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CodeStructIsNotComplieException.#ctor(System.String)">
+            <summary>
+            异常类型: 编码结构没有编译 Constructor
+            </summary>
+            <param name="code">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CodeStructIsNotComplieException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 编码结构没有编译 Constructor
+            </summary>
+            <param name="code">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.CodeStructIsNotComplieException.Code">
+            <summary>
+            属性
+            编码结构没有编译.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLService.CurrentAccountIsNotHaveEmptyFieldException">
+            <summary>
+            异常类型: 当前科目已经没有空余的段
+            
+             当前科目已经没有空余的段
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CurrentAccountIsNotHaveEmptyFieldException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前科目已经没有空余的段 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CurrentAccountIsNotHaveEmptyFieldException.#ctor">
+            <summary>
+            异常类型: 当前科目已经没有空余的段 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GLService.CurrentAccountIsNotHaveEmptyFieldException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前科目已经没有空余的段 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.ModifyAuditingInfoService.BillStatusIsNotApprovingErrorException">
+            <summary>
+            异常类型: 不是已提交状态单据异常
+            
+             不是已提交状态单据异常！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.ModifyAuditingInfoService.BillStatusIsNotApprovingErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不是已提交状态单据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.ModifyAuditingInfoService.BillStatusIsNotApprovingErrorException.#ctor">
+            <summary>
+            异常类型: 不是已提交状态单据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.ModifyAuditingInfoService.BillStatusIsNotApprovingErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不是已提交状态单据异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransferVoucherDTOData">
+            <summary>
+            交易分录头分组集合DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransferVoucherDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransferVoucherDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.AAI.TransEntry.DocTransHeadDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.TransferVoucherDTOData.m_transEntryHeaders">
+            <summary>
+            交易分录头组
+            交易分录头分组集合DTO.Misc.交易分录头组
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData">
+            <summary>
+            删除转总账凭证服务结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.#ctor(System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.Int64},System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_voucherIDs">
+            <summary>
+            成功凭证
+            删除转总账凭证服务结果DTO.Misc.成功凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_failIDs">
+            <summary>
+            失败凭证
+            删除转总账凭证服务结果DTO.Misc.失败凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_message">
+            <summary>
+            提示信息
+            删除转总账凭证服务结果DTO.Misc.提示信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_voucherDocNos">
+            <summary>
+            成功凭证号
+            删除转总账凭证服务结果DTO.Misc.成功凭证号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_failDocNos">
+            <summary>
+            失败凭证号
+            删除转总账凭证服务结果DTO.Misc.失败凭证号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_transEntryHeadIDs">
+            <summary>
+            成功的交易分录头集合
+            删除转总账凭证服务结果DTO.Misc.成功的交易分录头集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_failExceptions">
+            <summary>
+            失败异常
+            删除转总账凭证服务结果DTO.Misc.失败异常
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.DelTransVoucherResultDTOData.m_failStackTraces">
+            <summary>
+            失败异常堆栈
+            删除转总账凭证服务结果DTO.Misc.失败异常堆栈
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData">
+            <summary>
+            转总账结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData.#ctor(System.Int64,UFIDA.U9.AAI.TransEntry.AAVoucherInfoDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData.m_aAVoucherInfoDTOs">
+            <summary>
+            单据凭证信息
+            转总账结果DTO.Misc.单据凭证信息
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData.SourceVoucher_SKey">
+            <summary>
+            源凭证 序列化Key属性。（传递跨组织序列列字段）
+            转总账结果DTO.Misc.源凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.TransToGLBaseDTOData.SourceVoucher">
+            <summary>
+            源凭证
+            转总账结果DTO.Misc.源凭证
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData">
+            <summary>
+            产业链凭证DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.#ctor(UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,System.String,System.DateTime,System.String,System.Int32,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,System.Collections.Generic.List{UFIDA.U9.GL.TransToGLService.ChainEntryDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_sOB">
+            <summary>
+            SOB
+            产业链凭证DTO.Misc.SOB
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_voucherCategory">
+            <summary>
+            VoucherCategory
+            产业链凭证DTO.Misc.VoucherCategory
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_voucherDisplayCode">
+            <summary>
+            VoucherDisplayCode
+            产业链凭证DTO.Misc.VoucherDisplayCode
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_createDate">
+            <summary>
+            CreateDate
+            产业链凭证DTO.Misc.CreateDate
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_postedPeriod">
+            <summary>
+            记账期间
+            产业链凭证DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_attachmentCount">
+            <summary>
+            附单据数
+            产业链凭证DTO.Misc.附单据数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            产业链凭证DTO.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData.m_chainEntries">
+            <summary>
+            分录
+            产业链凭证DTO.Misc.分录
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData">
+            <summary>
+            产业链凭证备查DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.#ctor(UFIDA.U9.GL.TransToGLService.ChainEntryDTOData,System.DateTime,System.String,System.Int32,System.String,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_entry">
+            <summary>
+            凭证分录
+            产业链凭证备查DTO.Misc.凭证分录
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_businessDate">
+            <summary>
+            业务日期
+            产业链凭证备查DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_postPriod">
+            <summary>
+            记账期间
+            产业链凭证备查DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_sequenceNumber">
+            <summary>
+            序号
+            产业链凭证备查DTO.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_abstracts">
+            <summary>
+            摘要
+            产业链凭证备查DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_memoBookItems">
+            <summary>
+            备查项
+            产业链凭证备查DTO.Misc.备查项
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_memoBookAccounted">
+            <summary>
+            本币金额
+            产业链凭证备查DTO.Misc.本币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData.m_memoBookEntered">
+            <summary>
+            原币金额
+            产业链凭证备查DTO.Misc.原币金额
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData">
+            <summary>
+            产业链凭证行DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.#ctor(UFIDA.U9.GL.TransToGLService.ChainVoucherDTOData,System.Int32,System.String,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.CBO.FI.DTOs.IDCodeDTOData,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData,System.Collections.Generic.List{UFIDA.U9.GL.TransToGLService.ChainVoucherMemoDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_voucher">
+            <summary>
+            凭证
+            产业链凭证行DTO.Misc.凭证
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_serialNo">
+            <summary>
+            行号
+            产业链凭证行DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_abstracts">
+            <summary>
+            摘要
+            产业链凭证行DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_account">
+            <summary>
+            科目
+            产业链凭证行DTO.Misc.科目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_currency">
+            <summary>
+            币种
+            产业链凭证行DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_exchangeRateTypes">
+            <summary>
+            汇率类型
+            产业链凭证行DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_oCToFCExchangeRate">
+            <summary>
+            汇率
+            产业链凭证行DTO.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_accountedDr">
+            <summary>
+            借方金额(本币)
+            产业链凭证行DTO.Misc.借方金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_accountedCr">
+            <summary>
+            贷方金额(本币)
+            产业链凭证行DTO.Misc.贷方金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_enteredDr">
+            <summary>
+            借方金额(原币)
+            产业链凭证行DTO.Misc.借方金额(原币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_enteredCr">
+            <summary>
+            贷方金额(原币)
+            产业链凭证行DTO.Misc.贷方金额(原币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_amountDr">
+            <summary>
+            借方数量
+            产业链凭证行DTO.Misc.借方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_amountCr">
+            <summary>
+            贷方数量
+            产业链凭证行DTO.Misc.贷方数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_bankAccount">
+            <summary>
+            银行账号
+            产业链凭证行DTO.Misc.银行账号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_incomeExpendItem">
+            <summary>
+            收支项目
+            产业链凭证行DTO.Misc.收支项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_taskCode">
+            <summary>
+            任务
+            产业链凭证行DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_projectCode">
+            <summary>
+            项目
+            产业链凭证行DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_settlementMethod">
+            <summary>
+            结算方式
+            产业链凭证行DTO.Misc.结算方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_description">
+            <summary>
+            描述性弹性域
+            产业链凭证行DTO.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.TransToGLService.ChainEntryDTOData.m_chainEntryMemoBooks">
+            <summary>
+            备查集合
+            产业链凭证行DTO.Misc.备查集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.ApplicationNullException">
+            <summary>
+            异常类型: 转总账的应用不可以为空！
+            
+             转总账的应用不可以为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 转总账的应用不可以为空！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNullException.#ctor">
+            <summary>
+            异常类型: 转总账的应用不可以为空！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 转总账的应用不可以为空！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransHeadsPeriodNotSameException">
+            <summary>
+            异常类型: 交易分录头分组中记账会计期间不完全相同,不能生成凭证!
+            
+             交易分录头分组中记账会计期间不完全相同,不能生成凭证!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsPeriodNotSameException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录头分组中记账会计期间不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsPeriodNotSameException.#ctor">
+            <summary>
+            异常类型: 交易分录头分组中记账会计期间不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsPeriodNotSameException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录头分组中记账会计期间不完全相同,不能生成凭证! Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransHeadsVoucherCategoryNotSameException">
+            <summary>
+            异常类型: 交易分录头分组中凭证类型不完全相同,不能生成凭证!
+            
+             交易分录头分组中凭证类型不完全相同,不能生成凭证!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsVoucherCategoryNotSameException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录头分组中凭证类型不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsVoucherCategoryNotSameException.#ctor">
+            <summary>
+            异常类型: 交易分录头分组中凭证类型不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsVoucherCategoryNotSameException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录头分组中凭证类型不完全相同,不能生成凭证! Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransHeadsDescFlexNotSameException">
+            <summary>
+            异常类型: 交易分录头分组中描述性弹性域公共段不完全相同,不能生成凭证!
+            
+             交易分录头分组中描述性弹性域公共段不完全相同,不能生成凭证!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsDescFlexNotSameException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录头分组中描述性弹性域公共段不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsDescFlexNotSameException.#ctor">
+            <summary>
+            异常类型: 交易分录头分组中描述性弹性域公共段不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransHeadsDescFlexNotSameException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录头分组中描述性弹性域公共段不完全相同,不能生成凭证! Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.SOBOrAccountErrorException">
+            <summary>
+            异常类型: 传入的账簿或会计科目非法！
+            
+             传入的账簿或会计科目非法！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBOrAccountErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 传入的账簿或会计科目非法！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBOrAccountErrorException.#ctor">
+            <summary>
+            异常类型: 传入的账簿或会计科目非法！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBOrAccountErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 传入的账簿或会计科目非法！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransferGLOrgNullException">
+            <summary>
+            异常类型: 转总账的组织不可以为空！
+            
+             转总账的组织不可以为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransferGLOrgNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 转总账的组织不可以为空！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransferGLOrgNullException.#ctor">
+            <summary>
+            异常类型: 转总账的组织不可以为空！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransferGLOrgNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 转总账的组织不可以为空！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TargetSobNullException">
+            <summary>
+            异常类型: 没有找到转总账需要的目标账簿!请设置对应的账簿转换规则!
+            
+             账簿${sob}的交易分录没有找到转总账需要的目标账簿！请设置对应的账簿转换规则!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TargetSobNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到转总账需要的目标账簿!请设置对应的账簿转换规则! Constructor
+            </summary>
+            <param name="sob">sob</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TargetSobNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 没有找到转总账需要的目标账簿!请设置对应的账簿转换规则! Constructor
+            </summary>
+            <param name="sob">sob</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TargetSobNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 没有找到转总账需要的目标账簿!请设置对应的账簿转换规则! Constructor
+            </summary>
+            <param name="sob">sob</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.TargetSobNullException.Sob">
+            <summary>
+            sob
+            没有找到转总账需要的目标账簿!请设置对应的账簿转换规则!.Misc.sob
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.NoCreateEntryException">
+            <summary>
+            异常类型: 交易分录合并后，无凭证分录生成！
+            
+             交易分录合并后，无凭证分录生成！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoCreateEntryException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录合并后，无凭证分录生成！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoCreateEntryException.#ctor">
+            <summary>
+            异常类型: 交易分录合并后，无凭证分录生成！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoCreateEntryException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录合并后，无凭证分录生成！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.SOBNotAllSameException">
+            <summary>
+            异常类型: 交易分录头分组中账簿不完全相同,不能生成凭证!
+            
+             交易分录头分组中账簿不完全相同,不能生成凭证!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBNotAllSameException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录头分组中账簿不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBNotAllSameException.#ctor">
+            <summary>
+            异常类型: 交易分录头分组中账簿不完全相同,不能生成凭证! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.SOBNotAllSameException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录头分组中账簿不完全相同,不能生成凭证! Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.VoucherCategoryOrgNotSameException">
+            <summary>
+            异常类型: 凭证类型所属组织和目标账簿的组织不同，无法转总账！
+            
+             凭证类型所属组织和目标账簿的组织不同，无法转总账！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryOrgNotSameException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证类型所属组织和目标账簿的组织不同，无法转总账！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryOrgNotSameException.#ctor">
+            <summary>
+            异常类型: 凭证类型所属组织和目标账簿的组织不同，无法转总账！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryOrgNotSameException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 凭证类型所属组织和目标账簿的组织不同，无法转总账！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransEntrySOBTypeException">
+            <summary>
+            异常类型: 交易分录头分组中账簿不是主账簿或多币种账簿！
+            
+             交易分录头分组中账簿不是主账簿或多币种账簿！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntrySOBTypeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录头分组中账簿不是主账簿或多币种账簿！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntrySOBTypeException.#ctor">
+            <summary>
+            异常类型: 交易分录头分组中账簿不是主账簿或多币种账簿！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntrySOBTypeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录头分组中账簿不是主账簿或多币种账簿！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.EntryNotAccountException">
+            <summary>
+            异常类型: 生成凭证分录时未取到会计科目!
+            
+             生成凭证分录时未取到会计科目!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.EntryNotAccountException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生成凭证分录时未取到会计科目! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.EntryNotAccountException.#ctor">
+            <summary>
+            异常类型: 生成凭证分录时未取到会计科目! Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.EntryNotAccountException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生成凭证分录时未取到会计科目! Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException">
+            <summary>
+            异常类型: 删除转总账凭证服务异常
+            
+             删除转总账凭证异常，成功删除${VoucherOK1}张，删除失败${VoucherFail1}张“${VoucherFailDocNo1}”
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 删除转总账凭证服务异常 Constructor
+            </summary>
+            <param name="voucherOK1">成功删除</param>
+            <param name="voucherFail1">删除失败</param>
+            <param name="voucherFailDocNo1">删除失败凭证</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            异常类型: 删除转总账凭证服务异常 Constructor
+            </summary>
+            <param name="voucherOK1">成功删除</param>
+            <param name="voucherFail1">删除失败</param>
+            <param name="voucherFailDocNo1">删除失败凭证</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.#ctor(System.Int32,System.Int32,System.String,System.Exception)">
+            <summary>
+            异常类型: 删除转总账凭证服务异常 Constructor
+            </summary>
+            <param name="voucherOK1">成功删除</param>
+            <param name="voucherFail1">删除失败</param>
+            <param name="voucherFailDocNo1">删除失败凭证</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.VoucherOK1">
+            <summary>
+            成功删除
+            删除转总账凭证服务异常.Misc.成功删除
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.VoucherFail1">
+            <summary>
+            删除失败
+            删除转总账凭证服务异常.Misc.删除失败
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.DeleteTransferVoucherException.VoucherFailDocNo1">
+            <summary>
+            删除失败凭证
+            删除转总账凭证服务异常.Misc.删除失败凭证
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.VoucherCategorySequenceStyleNotAutoException">
+            <summary>
+            异常类型: 凭证类型编号方式非自动异常
+            
+             凭证类型[${Cate}]编号方式非自动异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategorySequenceStyleNotAutoException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证类型编号方式非自动异常 Constructor
+            </summary>
+            <param name="cate">Cate</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategorySequenceStyleNotAutoException.#ctor(System.String)">
+            <summary>
+            异常类型: 凭证类型编号方式非自动异常 Constructor
+            </summary>
+            <param name="cate">Cate</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategorySequenceStyleNotAutoException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 凭证类型编号方式非自动异常 Constructor
+            </summary>
+            <param name="cate">Cate</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.VoucherCategorySequenceStyleNotAutoException.Cate">
+            <summary>
+            Cate
+            凭证类型编号方式非自动异常.Misc.Cate
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.VoucherCategoryIsNullException">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常
+            
+             交易分录凭证类型为空,或没有定义账簿凭证类型!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryIsNullException.#ctor">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherCategoryIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.ApplicationNotTransToGLException">
+            <summary>
+            异常类型: 此系统尚未实现转总账异常
+            
+             此系统尚未实现转总账！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNotTransToGLException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 此系统尚未实现转总账异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNotTransToGLException.#ctor">
+            <summary>
+            异常类型: 此系统尚未实现转总账异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.ApplicationNotTransToGLException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 此系统尚未实现转总账异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.NoTransEntryHeadException">
+            <summary>
+            异常类型: 未能找到主单对应的交易分录头异常
+            
+             未能找到主单对应的交易分录头！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoTransEntryHeadException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未能找到主单对应的交易分录头异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoTransEntryHeadException.#ctor">
+            <summary>
+            异常类型: 未能找到主单对应的交易分录头异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.NoTransEntryHeadException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未能找到主单对应的交易分录头异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransEntryHeadVoucherCategoryIsNullException">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常
+            
+             交易分录凭证类型为空,或没有定义账簿凭证类型!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntryHeadVoucherCategoryIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntryHeadVoucherCategoryIsNullException.#ctor">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransEntryHeadVoucherCategoryIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易分录凭证类型为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.VoucherSourceIsNullException">
+            <summary>
+            异常类型: 传入的数据来源系统为空异常
+            
+             传入的数据来源系统为空，请检查
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherSourceIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 传入的数据来源系统为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherSourceIsNullException.#ctor">
+            <summary>
+            异常类型: 传入的数据来源系统为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.VoucherSourceIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 传入的数据来源系统为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException">
+            <summary>
+            异常类型: 生成凭证时记账期间的账簿与当前账簿不一致
+            
+             生成凭证时记账期间${Period}的账簿${SOB1}与当前账簿${SOB2}不一致
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生成凭证时记账期间的账簿与当前账簿不一致 Constructor
+            </summary>
+            <param name="period">Period</param>
+            <param name="sOB1">SOB1</param>
+            <param name="sOB2">SOB2</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            异常类型: 生成凭证时记账期间的账簿与当前账簿不一致 Constructor
+            </summary>
+            <param name="period">Period</param>
+            <param name="sOB1">SOB1</param>
+            <param name="sOB2">SOB2</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 生成凭证时记账期间的账簿与当前账簿不一致 Constructor
+            </summary>
+            <param name="period">Period</param>
+            <param name="sOB1">SOB1</param>
+            <param name="sOB2">SOB2</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.Period">
+            <summary>
+            Period
+            生成凭证时记账期间的账簿与当前账簿不一致.Misc.Period
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.SOB1">
+            <summary>
+            SOB1
+            生成凭证时记账期间的账簿与当前账簿不一致.Misc.SOB1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.PeriodSobNotEquleException.SOB2">
+            <summary>
+            SOB2
+            生成凭证时记账期间的账簿与当前账簿不一致.Misc.SOB2
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.TransToGLService.TransVoucherToGLlogException">
+            <summary>
+            异常类型: 交易凭证转总账线索回写异常
+            
+             回写交易凭证转总账线索失败
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransVoucherToGLlogException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 交易凭证转总账线索回写异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransVoucherToGLlogException.#ctor">
+            <summary>
+            异常类型: 交易凭证转总账线索回写异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.TransToGLService.TransVoucherToGLlogException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 交易凭证转总账线索回写异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.FromPostPeriodIsNullException">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，起始SOB会计期间为空异常！
+            
+             获取预算执行凭证数据时，起始SOB会计期间为空异常！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.FromPostPeriodIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，起始SOB会计期间为空异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.FromPostPeriodIsNullException.#ctor">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，起始SOB会计期间为空异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.FromPostPeriodIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，起始SOB会计期间为空异常！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.ToPostPeriodIsNullException">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，结束SOB会计期间为空异常！
+            
+             获取预算执行凭证数据时，结束SOB会计期间为空异常！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.ToPostPeriodIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，结束SOB会计期间为空异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.ToPostPeriodIsNullException.#ctor">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，结束SOB会计期间为空异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.ToPostPeriodIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 获取预算执行凭证数据时，结束SOB会计期间为空异常！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.EntryCountErrorException">
+            <summary>
+            异常类型: 每次返回分录数或最小分录ID参数为负数异常！
+            
+             每次返回分录数或最小分录ID参数为负数异常！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.EntryCountErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 每次返回分录数或最小分录ID参数为负数异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.EntryCountErrorException.#ctor">
+            <summary>
+            异常类型: 每次返回分录数或最小分录ID参数为负数异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.EntryCountErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 每次返回分录数或最小分录ID参数为负数异常！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData">
+            <summary>
+            成本发生额取数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.m_account">
+            <summary>
+            会计科目
+            成本发生额取数DTO.Misc.会计科目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.m_fromMBIValue">
+            <summary>
+            备查簿1-9
+            成本发生额取数DTO.Misc.备查簿1-9
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.m_toMBIValue">
+            <summary>
+            备查簿1-9
+            成本发生额取数DTO.Misc.备查簿1-9
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.m_occurDir">
+            <summary>
+            取数方向
+            成本发生额取数DTO.Misc.取数方向
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.m_isIncludeUnPostVouher">
+            <summary>
+            是否包含未记账
+            成本发生额取数DTO.Misc.是否包含未记账
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.SOBAccPeriod_SKey">
+            <summary>
+            账簿会计期间 序列化Key属性。（传递跨组织序列列字段）
+            成本发生额取数DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.SOBAccPeriod">
+            <summary>
+            账簿会计期间
+            成本发生额取数DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            成本发生额取数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.Org">
+            <summary>
+            组织
+            成本发生额取数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.Sob_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            成本发生额取数DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.GLToCOCfgDTOData.Sob">
+            <summary>
+            账簿
+            成本发生额取数DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.GL.FetchDataService.AccountNotDefineMemoException">
+            <summary>
+            异常类型: 未定义备查！
+            
+             ${AccountName}未定义备查！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.GL.FetchDataService.AccountNotDefineMemoException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未定义备查！ Constructor
+            </summary>
+            <param name="accountName">会计科目</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.FetchDataService.AccountNotDefineMemoException.#ctor(System.String)">
+            <summary>
+            异常类型: 未定义备查！ Constructor
+            </summary>
+            <param name="accountName">会计科目</param>
+        </member>
+        <member name="M:UFIDA.U9.GL.FetchDataService.AccountNotDefineMemoException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未定义备查！ Constructor
+            </summary>
+            <param name="accountName">会计科目</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.AccountNotDefineMemoException.AccountName">
+            <summary>
+            会计科目
+            未定义备查！.Misc.会计科目
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.GL.GLSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

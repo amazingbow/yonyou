@@ -140,7 +140,7 @@
                             dto.Entries.Add(voucherItem);
                         }
                         proxy.ImportVoucherDTOs.Add(dto);
-                        List<ISVReturnVoucherDTOData> result = proxy.Do();
+                        List<ISVReturnVoucherDTOData> result = proxy.Do(org.ID);
                         if (result == null || result.Count == 0) throw new Exception(item.SAPVoucherDisplayCode + "：生成凭证失败");
                         docNo = result[0].DocNo;
                         foreach (var refInfo in refList)
@@ -155,7 +155,8 @@
                         {
                             using (ISession innerSession = Session.Open())
                             {
-                                GenerateCFVoucherItem(item.U9VoucherID, item);//生成现金流量项目
+                                Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
+                                GenerateCFVoucherItem(item.U9VoucherID, item, successVoucher);//生成现金流量项目
                                 innerSession.Commit();
                             }
                         }
@@ -264,10 +265,9 @@
             DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out ds);
         }
 
-        private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item)
+        private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item, Voucher successVoucher)
         {
-            Voucher successVoucher = Voucher.Finder.FindByID(voucherID);
-            successVoucher.CreatedBy = "";
+            //successVoucher.CreatedBy = "";
             for (int i = 0; i < successVoucher.Entries.Count; i++)
             {
                 //银行、现金类的科目维护对应的现金流量项目
