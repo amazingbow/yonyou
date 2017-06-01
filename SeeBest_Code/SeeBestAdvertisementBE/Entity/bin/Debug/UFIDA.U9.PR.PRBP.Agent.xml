@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PR.PRBP.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToRFQBPProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            DI转RFQ操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToRFQBPProxy.DIToRFQDTOs">
+            <summary>
+            DIToRFQDTOs (该属性可为空,且无默认值)
+            DI转RFQ操作.Misc.DIToRFQDTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.CurrentOrg_SKey">
+            <summary>
+            当前组织 序列化Key属性。（传递跨组织序列列字段）
+            需求接口表转下游单据(将删).Misc.当前组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.CurrentOrg">
+            <summary>
+            当前组织 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.当前组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.Buyer_SKey">
+            <summary>
+            采购员 序列化Key属性。（传递跨组织序列列字段）
+            需求接口表转下游单据(将删).Misc.采购员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.Buyer">
+            <summary>
+            采购员 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.采购员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.GroupParamsForPR">
+            <summary>
+            转PR分单参数 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.转PR分单参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.GroupParamsForPO">
+            <summary>
+            转PO分单参数 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.转PO分单参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.FiltrateBy">
+            <summary>
+            过滤条件 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.SplitDayForPR">
+            <summary>
+            PR允许时距 (该属性可为空,但有默认值)
+            需求接口表转下游单据(将删).Misc.PR允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.SplitDayForPO">
+            <summary>
+            PO允许时距 (该属性可为空,但有默认值)
+            需求接口表转下游单据(将删).Misc.PO允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.Supplier_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            需求接口表转下游单据(将删).Misc.供应商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.Supplier">
+            <summary>
+            供应商 (该属性可为空,且无默认值)
+            需求接口表转下游单据(将删).Misc.供应商
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Supplier.Supplier</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.DataInfor">
+            <summary>
+            下游数据信息 (该属性可为空,但有默认值)
+            需求接口表转下游单据(将删).Misc.下游数据信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.CreateFollowingDocProxy.DestID">
+            <summary>
+            目标单据标识(标志是否追加模式) (该属性可为空,但有默认值)
+            需求接口表转下游单据(将删).Misc.目标单据标识(标志是否追加模式)
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.POLastDateProxy.Paras">
+            <summary>
+            计算参数列表 (该属性可为空,且无默认值)
+            计算最晚应下订单日期.Misc.计算参数列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIRejectProxy.DIRejectDTOs">
+            <summary>
+            需求接口表回绝DTO (该属性可为空,且无默认值)
+            需求接口回绝.Misc.需求接口表回绝DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIRejectProxy.RejectType">
+            <summary>
+            回绝类型 (该属性可为空,但有默认值)
+            需求接口回绝.Misc.回绝类型
+            </summary>
+            <value>UFIDA.U9.PR.DemandInterface.RejectTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.Dikeys">
+            <summary>
+            DIKeys (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.DIKeys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.SplitRuletoPR">
+            <summary>
+            PR分单条件 (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.PR分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.SplitRuleToPO">
+            <summary>
+            PO分单条件 (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.PO分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.SplitDay">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            DI生成下游单据操作.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.SplitDateType">
+            <summary>
+            分单日期类型 (该属性可为空,但有默认值)
+            DI生成下游单据操作.Misc.分单日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.SplitDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.BaseDateType">
+            <summary>
+            基准日期类型 (该属性可为空,但有默认值)
+            DI生成下游单据操作.Misc.基准日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.BaseDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.IsMergeLine">
+            <summary>
+            是否合行 (该属性可为空,但有默认值)
+            DI生成下游单据操作.Misc.是否合行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.MergeLine">
+            <summary>
+            合行条件 (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.合行条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.IsAll">
+            <summary>
+            是否全转 (该属性可为空,但有默认值)
+            DI生成下游单据操作.Misc.是否全转
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.AllToFollowDocContion">
+            <summary>
+            全部转单条件 (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.全部转单条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToFollowingDocBPProxy.ExcludeDIs">
+            <summary>
+            全转时排除记录 (该属性可为空,且无默认值)
+            DI生成下游单据操作.Misc.全转时排除记录
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.DILines">
+            <summary>
+            DILline (该属性可为空,且无默认值)
+            DI生成PO操作.Misc.DILline
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.SplitRules">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            DI生成PO操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.SplitDay">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            DI生成PO操作.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.SplitDateType">
+            <summary>
+            分单日期类型 (该属性可为空,但有默认值)
+            DI生成PO操作.Misc.分单日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.SplitDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.BaseDateType">
+            <summary>
+            基准日期类型 (该属性可为空,但有默认值)
+            DI生成PO操作.Misc.基准日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.BaseDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.PODocType">
+            <summary>
+            订单单据类型 (该属性可为空,但有默认值)
+            DI生成PO操作.Misc.订单单据类型
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.IsMergeLine">
+            <summary>
+            是否合行 (该属性可为空,但有默认值)
+            DI生成PO操作.Misc.是否合行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPOBPProxy.MergeLine">
+            <summary>
+            合行条件 (该属性可为空,且无默认值)
+            DI生成PO操作.Misc.合行条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPRBPProxy.DILines">
+            <summary>
+            DILines (该属性可为空,且无默认值)
+            DI生成PR操作.Misc.DILines
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPRBPProxy.SplitRules">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            DI生成PR操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPRBPProxy.IsRefGenOrder">
+            <summary>
+            是否参照生单 (该属性可为空,但有默认值)
+            DI生成PR操作.Misc.是否参照生单
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPRBPProxy.IsAppend">
+            <summary>
+            是否追加生单 (该属性可为空,但有默认值)
+            DI生成PR操作.Misc.是否追加生单
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToPRBPProxy.PRID">
+            <summary>
+            追加生单时传PRID (该属性可为空,但有默认值)
+            DI生成PR操作.Misc.追加生单时传PRID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToCPBPProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            DIToCP操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.DemandInterface.Proxy.DIToCPBPProxy.DIToCPDTOs">
+            <summary>
+            DIToCPDTOs (该属性可为空,且无默认值)
+            DIToCP操作.Misc.DIToCPDTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PassPRProxy.PRLines_SKey">
+            <summary>
+            请购单行 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PassPRProxy.PRLines">
+            <summary>
+            请购单行 (该属性可为空,且无默认值)
+            下达.Misc.请购单行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdatePRLineStatusProxy.PRLines_SKey">
+            <summary>
+            请购单行列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdatePRLineStatusProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,但有默认值)
+            更新PR状态.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdatePRLineStatusProxy.Status">
+            <summary>
+            单据状态 (该属性可为空,但有默认值)
+            更新PR状态.Misc.单据状态
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.PRStatusEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToDIBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单转DI操作.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdateSourceDocProxy.PRLines_SKey">
+            <summary>
+            请购单行列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdateSourceDocProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            更新源单据.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdateSourceDocProxy.Action">
+            <summary>
+            动作 (该属性可为空,但有默认值)
+            更新源单据.Misc.动作
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.ActionTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRApproveProxy.PRLineKey_SKey">
+            <summary>
+            PR行key 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRApproveProxy.PRLineKey">
+            <summary>
+            PR行key (该属性可为空,且无默认值)
+            请购单核准.Misc.PR行key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.PRLineInfos">
+            <summary>
+            请购单行信息列表 (该属性可为空,且无默认值)
+            请购单转PO操作.Misc.请购单行信息列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.GroupParams">
+            <summary>
+            分单参数 (该属性可为空,且无默认值)
+            请购单转PO操作.Misc.分单参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.SplitDay">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.Supplier_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            请购单转PO操作.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.Supplier">
+            <summary>
+            供应商 (该属性可为空,且无默认值)
+            请购单转PO操作.Misc.供应商
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Supplier.Supplier</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.DestID">
+            <summary>
+            目标单据标识(标志是否追加模式) (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.目标单据标识(标志是否追加模式)
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.PoDocType">
+            <summary>
+            订单单据类型 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.订单单据类型
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.SplitDateType">
+            <summary>
+            分单日期类型 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.分单日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.SplitDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.BaseDateType">
+            <summary>
+            基准日期类型 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.基准日期类型
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Enums.BaseDateTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.IsTryCalc">
+            <summary>
+            是否试算 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.是否试算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.IsMergeLine">
+            <summary>
+            是否合行 (该属性可为空,但有默认值)
+            请购单转PO操作.Misc.是否合行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToPOBPProxy.MergeLine">
+            <summary>
+            合行条件 (该属性可为空,且无默认值)
+            请购单转PO操作.Misc.合行条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单转RFQ操作.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQBPProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            请购单转RFQ操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQBPProxy.OtherPara">
+            <summary>
+            扩充参数 (该属性可为空,且无默认值)
+            请购单转RFQ操作.Misc.扩充参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRCancelBPProxy.PRLines_SKey">
+            <summary>
+            请购单行列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRCancelBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单终止.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRCancelBPProxy.CancelInfo">
+            <summary>
+            终止信息 (该属性可为空,且无默认值)
+            请购单终止.Misc.终止信息
+            </summary>
+            <value>UFIDA.U9.Base.Doc.Cancel</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRReleaseBPProxy.PRLines_SKey">
+            <summary>
+            请购单行列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRReleaseBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单解除.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRReleaseBPProxy.ReleaseReason_SKey">
+            <summary>
+            解除原因 序列化Key属性。（传递跨组织序列列字段）
+            请购单解除.Misc.解除原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRReleaseBPProxy.ReleaseReason">
+            <summary>
+            解除原因 (该属性可为空,且无默认值)
+            请购单解除.Misc.解除原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.ReleaseReason</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRHoldBPProxy.PRLines_SKey">
+            <summary>
+            请购单行列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRHoldBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单挂起.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRHoldBPProxy.HoldReason_SKey">
+            <summary>
+            挂起原因 序列化Key属性。（传递跨组织序列列字段）
+            请购单挂起.Misc.挂起原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRHoldBPProxy.HoldReason">
+            <summary>
+            挂起原因 (该属性可为空,且无默认值)
+            请购单挂起.Misc.挂起原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.HoldReason</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToReqPlanBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            请购单转ReqPlan操作.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRBPProxy.MergeParams">
+            <summary>
+            合并条件 (该属性可为空,且无默认值)
+            合并分割操作(手工录入).Misc.合并条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRBPProxy.PRDTOs">
+            <summary>
+            PRDTOS (该属性可为空,且无默认值)
+            合并分割操作(手工录入).Misc.PRDTOS
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRBPProxy.SplitDay">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            合并分割操作(手工录入).Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRListBPProxy.MergeParams">
+            <summary>
+            合并条件 (该属性可为空,且无默认值)
+            合并分割操作.Misc.合并条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRListBPProxy.SplitDay">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            合并分割操作.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRListBPProxy.PRKeys_SKey">
+            <summary>
+            PRKeys 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MergePRListBPProxy.PRKeys">
+            <summary>
+            PRKeys (该属性可为空,且无默认值)
+            合并分割操作.Misc.PRKeys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MakePRFromDIBPProxy.FiltrateBy">
+            <summary>
+            过滤条件 (该属性可为空,且无默认值)
+            参照DI单张生单.Misc.过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.MakePRFromDIBPProxy.PrID">
+            <summary>
+            PrID (该属性可为空,但有默认值)
+            参照DI单张生单.Misc.PrID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.PCLines">
+            <summary>
+            采购合同行 (该属性可为空,且无默认值)
+            合同转采购.Misc.采购合同行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            合同转采购.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.TimeInterval">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            合同转采购.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.DestID_SKey">
+            <summary>
+            目标单据标识(标志是否追加模式) 序列化Key属性。（传递跨组织序列列字段）
+            合同转采购.Misc.目标单据标识(标志是否追加模式)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.DestID">
+            <summary>
+            目标单据标识(标志是否追加模式) (该属性可为空,且无默认值)
+            合同转采购.Misc.目标单据标识(标志是否追加模式)
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.PR</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRProxy.IsRefDrag">
+            <summary>
+            参照拉单 (该属性可为空,但有默认值)
+            合同转采购.Misc.参照拉单
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQBPForUIProxy.PRInfors">
+            <summary>
+            请购单行信息列表 (该属性可为空,且无默认值)
+            请购单转RFQ操作(UI).Misc.请购单行信息列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetSupplyLeadTimBPProxy.ItmKey_SKey">
+            <summary>
+            物料Key 序列化Key属性。（传递跨组织序列列字段）
+            供货最小LT.Misc.物料Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetSupplyLeadTimBPProxy.ItmKey">
+            <summary>
+            物料Key (该属性可为空,且无默认值)
+            供货最小LT.Misc.物料Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetSupplyLeadTimBPProxy.RequiredDeliveryDate">
+            <summary>
+            要求交货日期 (该属性可为空,且无默认值)
+            供货最小LT.Misc.要求交货日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetPRLinesForUIProxy.QueryConditionDTO">
+            <summary>
+            查询条件 (该属性可为空,且无默认值)
+            获取请购单行操作.Misc.查询条件
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.GetPRLinesForUIConditionDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.PRLineKeys_SKey">
+            <summary>
+            PR行Keys 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.PRLineKeys">
+            <summary>
+            PR行Keys (该属性可为空,且无默认值)
+            更新PR行状态操作.Misc.PR行Keys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.CancelInof">
+            <summary>
+            终止原因 (该属性可为空,且无默认值)
+            更新PR行状态操作.Misc.终止原因
+            </summary>
+            <value>UFIDA.U9.Base.Doc.Cancel</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.ActionType">
+            <summary>
+            活动类型 (该属性可为空,但有默认值)
+            更新PR行状态操作.Misc.活动类型
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.PRActivityTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.HoldReason_SKey">
+            <summary>
+            挂起原因 序列化Key属性。（传递跨组织序列列字段）
+            更新PR行状态操作.Misc.挂起原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.HoldReason">
+            <summary>
+            挂起原因 (该属性可为空,且无默认值)
+            更新PR行状态操作.Misc.挂起原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.HoldReason</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.ReleaseReason_SKey">
+            <summary>
+            解除原因 序列化Key属性。（传递跨组织序列列字段）
+            更新PR行状态操作.Misc.解除原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.BatchUpateStatusBPProxy.ReleaseReason">
+            <summary>
+            解除原因 (该属性可为空,且无默认值)
+            更新PR行状态操作.Misc.解除原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.ReleaseReason</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRSrcOrderDataBPProxy.SrcType">
+            <summary>
+            来源单据类型 (该属性可为空,但有默认值)
+            PR来源单据数据查询.Misc.来源单据类型
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.SrcDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRSrcOrderDataBPProxy.Qoql">
+            <summary>
+            查询语句 (该属性可为空,且无默认值)
+            PR来源单据数据查询.Misc.查询语句
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRSrcOrderDataBPProxy.SrcOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            PR来源单据数据查询.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRSrcOrderDataBPProxy.SrcOrg">
+            <summary>
+            来源组织 (该属性可为空,且无默认值)
+            PR来源单据数据查询.Misc.来源组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRSrcOrderDataBPProxy.IsSameOrg">
+            <summary>
+            是否同一个组织 (该属性可为空,但有默认值)
+            PR来源单据数据查询.Misc.是否同一个组织
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.PRLineKeys_SKey">
+            <summary>
+            PRLineKeys 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.PRLineKeys">
+            <summary>
+            PRLineKeys (该属性可为空,且无默认值)
+            请购单批量操作.Misc.PRLineKeys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.PRKeys_SKey">
+            <summary>
+            PRKeys 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.PRKeys">
+            <summary>
+            PRKeys (该属性可为空,且无默认值)
+            请购单批量操作.Misc.PRKeys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.CancelInfo">
+            <summary>
+            终止信息 (该属性可为空,且无默认值)
+            请购单批量操作.Misc.终止信息
+            </summary>
+            <value>UFIDA.U9.Base.Doc.Cancel</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.ActionType">
+            <summary>
+            活动类型 (该属性可为空,但有默认值)
+            请购单批量操作.Misc.活动类型
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.PRActivityTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.ReleaseReason">
+            <summary>
+            解除原因 (该属性可为空,但有默认值)
+            请购单批量操作.Misc.解除原因
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.HoldReason">
+            <summary>
+            挂起原因 (该属性可为空,但有默认值)
+            请购单批量操作.Misc.挂起原因
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRBatchActionBPProxy.CancelResean">
+            <summary>
+            终止原因 (该属性可为空,且无默认值)
+            请购单批量操作.Misc.终止原因
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetDefaultRegOrgBPProxy.ItemID">
+            <summary>
+            物料 (该属性可为空,但有默认值)
+            GetDefaultRegOrgBP.Misc.物料
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetDefaultRegOrgBPProxy.CurOrgID">
+            <summary>
+            当前组织ID (该属性可为空,但有默认值)
+            GetDefaultRegOrgBP.Misc.当前组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetDefaultAccountOrgBPProxy.ItemID">
+            <summary>
+            物料 (该属性可为空,但有默认值)
+            GetDefaultAccountOrgBP.Misc.物料
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetDefaultAccountOrgBPProxy.CurOrgID">
+            <summary>
+            当前组织ID (该属性可为空,但有默认值)
+            GetDefaultAccountOrgBP.Misc.当前组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.CheckRelItemMfcBPProxy.RelItemInfos">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            CheckRelItemMfcBP.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.PCLines">
+            <summary>
+            合同行集合 (该属性可为空,且无默认值)
+            合同请购参照生单.Misc.合同行集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            合同请购参照生单.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.TimeInterval">
+            <summary>
+            允许时距 (该属性可为空,但有默认值)
+            合同请购参照生单.Misc.允许时距
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.DestID_SKey">
+            <summary>
+            目标单据标识(标志是否追加模式) 序列化Key属性。（传递跨组织序列列字段）
+            合同请购参照生单.Misc.目标单据标识(标志是否追加模式)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.DestID">
+            <summary>
+            目标单据标识(标志是否追加模式) (该属性可为空,但有默认值)
+            合同请购参照生单.Misc.目标单据标识(标志是否追加模式)
+            </summary>
+            <value>UFIDA.U9.PR.PurchaseRequest.PR</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PC2PRRefProxy.IsRefDrag">
+            <summary>
+            参照拉单 (该属性可为空,但有默认值)
+            合同请购参照生单.Misc.参照拉单
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetPRIDsByLineIDsProxy.LineIDs">
+            <summary>
+            LineIDs (该属性可为空,且无默认值)
+            GetPRIDsByLineIDs.Misc.LineIDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetPRIDsByLineIDsProxy.IsRelease">
+            <summary>
+            是否解除 (该属性可为空,但有默认值)
+            GetPRIDsByLineIDs.Misc.是否解除
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetNeedReleasePRIDsBPProxy.PRIDs">
+            <summary>
+            PRIDs (该属性可为空,且无默认值)
+            GetNeedReleasePRIDsBP.Misc.PRIDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.DeletePRBPProxy.PRIDs">
+            <summary>
+            PRIDs (该属性可为空,且无默认值)
+            DeletePRBP.Misc.PRIDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.GetNeedDeletePRIDsBPProxy.PRIDs">
+            <summary>
+            PRIDs (该属性可为空,且无默认值)
+            GetNeedDeletePRIDsBP.Misc.PRIDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.UpdatePRLinesBPProxy.UpdatePRLineDTOs">
+            <summary>
+            更新列表 (该属性可为空,且无默认值)
+            UpdatePRLinesBP.Misc.更新列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQCompareBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            PRToRFQCompareBP.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQCompareBPProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            PRToRFQCompareBP.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToRFQCompareBPProxy.OtherPara">
+            <summary>
+            扩充参数 (该属性可为空,且无默认值)
+            PRToRFQCompareBP.Misc.扩充参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToCPBPProxy.PRLines">
+            <summary>
+            请购单行列表 (该属性可为空,且无默认值)
+            PRToCP操作.Misc.请购单行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToCPBPProxy.SplitRule">
+            <summary>
+            分单条件 (该属性可为空,且无默认值)
+            PRToCP操作.Misc.分单条件
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PR.PurchaseRequest.Proxy.PRToCPBPProxy.OtherPara">
+            <summary>
+            扩充参数 (该属性可为空,且无默认值)
+            PRToCP操作.Misc.扩充参数
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

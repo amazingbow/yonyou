@@ -140,7 +140,7 @@
                             dto.Entries.Add(voucherItem);
                         }
                         proxy.ImportVoucherDTOs.Add(dto);
-                        List<ISVReturnVoucherDTOData> result = proxy.Do();
+                        List<ISVReturnVoucherDTOData> result = proxy.Do(org.ID);
                         if (result == null || result.Count == 0) throw new Exception(item.SAPVoucherDisplayCode + "：生成凭证失败");
                         docNo = result[0].DocNo;
                         foreach (var refInfo in refList)

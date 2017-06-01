@@ -1,0 +1,4669 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.MO.MOCostSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData">
+            <summary>
+            取领料成本入口参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.m_isBooking">
+            <summary>
+            记账
+            取领料成本入口参数.Misc.记账
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.OrgKey">
+            <summary>
+            组织
+            取领料成本入口参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.ItemMasterKey_SKey">
+            <summary>
+            子件物料 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.子件物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.ItemMasterKey">
+            <summary>
+            子件物料
+            取领料成本入口参数.Misc.子件物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.Productkey_SKey">
+            <summary>
+            母件物料 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.母件物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.Productkey">
+            <summary>
+            母件物料
+            取领料成本入口参数.Misc.母件物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.MOKey">
+            <summary>
+            生产订单
+            取领料成本入口参数.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.PLSKey">
+            <summary>
+            生产线日计划
+            取领料成本入口参数.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.CostFieldKey_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.CostFieldKey">
+            <summary>
+            成本域
+            取领料成本入口参数.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.SOBAccountPeriodKey_SKey">
+            <summary>
+            SOB记账期间 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.SOB记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.SOBAccountPeriodKey">
+            <summary>
+            SOB记账期间
+            取领料成本入口参数.Misc.SOB记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.CostTypeKey_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.CostTypeKey">
+            <summary>
+            成本类型
+            取领料成本入口参数.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.PickSupplierKey_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本入口参数.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostInParamData.PickSupplierKey">
+            <summary>
+            厂牌
+            取领料成本入口参数.Misc.厂牌
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData">
+            <summary>
+            取领料成本返回值 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.#ctor(System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,System.Boolean,System.Decimal,System.Int64,System.Collections.Generic.List{UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.m_issueCost">
+            <summary>
+            领料单成本
+            取领料成本返回值.Misc.领料单成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.m_isBooking">
+            <summary>
+            记账
+            取领料成本返回值.Misc.记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.m_qty">
+            <summary>
+            数量
+            取领料成本返回值.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.m_uOM">
+            <summary>
+            单位
+            取领料成本返回值.Misc.单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.m_detail">
+            <summary>
+            明细成本
+            取领料成本返回值.Misc.明细成本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本返回值.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.CostField">
+            <summary>
+            成本域
+            取领料成本返回值.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            取领料成本返回值.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutParamData.CostType">
+            <summary>
+            成本类型
+            取领料成本返回值.Misc.成本类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData">
+            <summary>
+            领料成本明细DTO DTO :自定义的数据传输类型 
+            领料成本明细DTO
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.#ctor(System.Int32,System.Int32,System.Int32,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,System.Boolean,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_costElementType">
+            <summary>
+            成本要素类型
+            领料成本明细DTO.Misc.成本要素类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_grade">
+            <summary>
+            等级
+            领料成本明细DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_element">
+            <summary>
+            成分
+            领料成本明细DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_pickSuplier">
+            <summary>
+            厂牌
+            领料成本明细DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_issueCost">
+            <summary>
+            领料成本
+            领料成本明细DTO.Misc.领料成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_isBooking">
+            <summary>
+            记账
+            领料成本明细DTO.Misc.记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_qty">
+            <summary>
+            数量
+            领料成本明细DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssueCostOutDetailParamData.m_uOM">
+            <summary>
+            单位
+            领料成本明细DTO.Misc.单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData">
+            <summary>
+            取领用同阶备料信息服务入口参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.#ctor(System.Int64,System.DateTime,System.DateTime,System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.m_fromDate">
+            <summary>
+            开始日期
+            取领用同阶备料信息服务入口参数DTO.Misc.开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.m_toDate">
+            <summary>
+            结束日期
+            取领用同阶备料信息服务入口参数DTO.Misc.结束日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.m_mOList">
+            <summary>
+            MO集合
+            取领用同阶备料信息服务入口参数DTO.Misc.MO集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.m_pLSList">
+            <summary>
+            PLS集合
+            取领用同阶备料信息服务入口参数DTO.Misc.PLS集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取领用同阶备料信息服务入口参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.OrgKey">
+            <summary>
+            组织
+            取领用同阶备料信息服务入口参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.MOList_SKey">
+            <summary>
+            MO集合 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            取领用同阶备料信息服务入口参数DTO.Misc.MO集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTOData.PLSList_SKey">
+            <summary>
+            PLS集合 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            取领用同阶备料信息服务入口参数DTO.Misc.PLS集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData">
+            <summary>
+            取领用同阶备料信息服务返回值DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.#ctor(System.Int64,System.Int64,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.m_issuedItemList">
+            <summary>
+            领用物料
+            取领用同阶备料信息服务返回值DTO.Misc.领用物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.MO_SKey">
+            <summary>
+            MO 序列化Key属性。（传递跨组织序列列字段）
+            取领用同阶备料信息服务返回值DTO.Misc.MO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.MO">
+            <summary>
+            MO
+            取领用同阶备料信息服务返回值DTO.Misc.MO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.PLS_SKey">
+            <summary>
+            PLS 序列化Key属性。（传递跨组织序列列字段）
+            取领用同阶备料信息服务返回值DTO.Misc.PLS
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.PLS">
+            <summary>
+            PLS
+            取领用同阶备料信息服务返回值DTO.Misc.PLS
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetIssuedItemOutDTOData.IssuedItemList_SKey">
+            <summary>
+            领用物料 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            取领用同阶备料信息服务返回值DTO.Misc.领用物料
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.MissingItemCostException">
+            <summary>
+            异常类型: 缺少必要的物料成本异常
+            
+             物料(${Item})的成本未定义
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingItemCostException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 缺少必要的物料成本异常 Constructor
+            </summary>
+            <param name="item">物料</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingItemCostException.#ctor(System.String)">
+            <summary>
+            异常类型: 缺少必要的物料成本异常 Constructor
+            </summary>
+            <param name="item">物料</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingItemCostException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 缺少必要的物料成本异常 Constructor
+            </summary>
+            <param name="item">物料</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.MissingItemCostException.Item">
+            <summary>
+            物料
+            缺少必要的物料成本异常.Misc.物料
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.PickCalcuCostException">
+            <summary>
+            异常类型: 备料是否计算成本异常
+            
+             备料是否计算成本异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.PickCalcuCostException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 备料是否计算成本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.PickCalcuCostException.#ctor">
+            <summary>
+            异常类型: 备料是否计算成本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.PickCalcuCostException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 备料是否计算成本异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.CannotFindOrgFirstClassCostElementException">
+            <summary>
+            异常类型: 没有找到组织下一级成本要素异常
+            
+             没有找到组织${Org}下的一级成本要素！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CannotFindOrgFirstClassCostElementException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到组织下一级成本要素异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CannotFindOrgFirstClassCostElementException.#ctor(System.String)">
+            <summary>
+            异常类型: 没有找到组织下一级成本要素异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CannotFindOrgFirstClassCostElementException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 没有找到组织下一级成本要素异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.CannotFindOrgFirstClassCostElementException.Org">
+            <summary>
+            组织
+            没有找到组织下一级成本要素异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException">
+            <summary>
+            异常类型: 退料单已生成凭证不能取消异常
+            
+             退料单${DocNo}已生成凭证${Info}，请删除凭证后再取消退料单！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 退料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+            <param name="info">异常详情</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 退料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+            <param name="info">异常详情</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 退料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+            <param name="info">异常详情</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException.DocNo">
+            <summary>
+            退料单
+            退料单已生成凭证不能取消异常.Misc.退料单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForCreatedVoucherException.Info">
+            <summary>
+            异常详情
+            退料单已生成凭证不能取消异常.Misc.异常详情
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion">
+            <summary>
+            异常类型: 领料单已生成凭证不能取消异常
+            
+             领料单${DocNo}已生成凭证${Info}，请删除凭证后再取消领料单！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 领料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">领料单</param>
+            <param name="info">异常详情</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 领料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">领料单</param>
+            <param name="info">异常详情</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 领料单已生成凭证不能取消异常 Constructor
+            </summary>
+            <param name="docNo">领料单</param>
+            <param name="info">异常详情</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion.DocNo">
+            <summary>
+            领料单
+            领料单已生成凭证不能取消异常.Misc.领料单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForCreatedVoucherExcetion.Info">
+            <summary>
+            异常详情
+            领料单已生成凭证不能取消异常.Misc.异常详情
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForMonthBalancedException">
+            <summary>
+            异常类型: 发料时间已经月结不能取消领料单异常
+            
+             发料时间:${IssueTime}已经月结，请取消月结并删除凭证，再取消领料单！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForMonthBalancedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 发料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="issueTime">发料时间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForMonthBalancedException.#ctor(System.String)">
+            <summary>
+            异常类型: 发料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="issueTime">发料时间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForMonthBalancedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 发料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="issueTime">发料时间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForMonthBalancedException.IssueTime">
+            <summary>
+            发料时间
+            发料时间已经月结不能取消领料单异常.Misc.发料时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForMonthBalancedException">
+            <summary>
+            异常类型: 退料时间已经月结不能取消领料单异常
+            
+             退料时间:${RecedeTime}已经月结，请取消月结并删除凭证，再取消领料单！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForMonthBalancedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 退料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="recedeTime">退料时间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForMonthBalancedException.#ctor(System.String)">
+            <summary>
+            异常类型: 退料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="recedeTime">退料时间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForMonthBalancedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 退料时间已经月结不能取消领料单异常 Constructor
+            </summary>
+            <param name="recedeTime">退料时间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.RecedeDocCannotCancelForMonthBalancedException.RecedeTime">
+            <summary>
+            退料时间
+            退料时间已经月结不能取消领料单异常.Misc.退料时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForRecededException">
+            <summary>
+            异常类型: 退料单已退料无法取消领料单异常
+            
+             已被退料单:${DocNo}退料，请先取消退料单再取消本领料单！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForRecededException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 退料单已退料无法取消领料单异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForRecededException.#ctor(System.String)">
+            <summary>
+            异常类型: 退料单已退料无法取消领料单异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForRecededException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 退料单已退料无法取消领料单异常 Constructor
+            </summary>
+            <param name="docNo">退料单</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.IssueDocCannotCancelForRecededException.DocNo">
+            <summary>
+            退料单
+            退料单已退料无法取消领料单异常.Misc.退料单
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData">
+            <summary>
+            接收完工入库成本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.CBO.MFG.CO.CostData,System.Int64,System.Collections.Generic.List{UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData},System.Decimal,System.Decimal,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_isBooking">
+            <summary>
+            是否记账
+            接收完工入库成本DTO.Misc.是否记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_mOKey">
+            <summary>
+            生产订单
+            接收完工入库成本DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_pLSKey">
+            <summary>
+            生产线日计划
+            接收完工入库成本DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_itemInfo">
+            <summary>
+            料品信息
+            接收完工入库成本DTO.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_earnedCost">
+            <summary>
+            成本金额
+            接收完工入库成本DTO.Misc.成本金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_scapeCost">
+            <summary>
+            报废金额
+            接收完工入库成本DTO.Misc.报废金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_completeRptCostDTOList">
+            <summary>
+            完工成本
+            接收完工入库成本DTO.Misc.完工成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_totalEligibleQtyyByCoUOM">
+            <summary>
+            成本单位合格数量
+            接收完工入库成本DTO.Misc.成本单位合格数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_totalScapeQtyByCoUOM">
+            <summary>
+            成本单位报废数量
+            接收完工入库成本DTO.Misc.成本单位报废数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.m_completeRptType">
+            <summary>
+            完工报告类型
+            接收完工入库成本DTO.Misc.完工报告类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.OrgKey">
+            <summary>
+            组织
+            接收完工入库成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.SOBPeriodKey_SKey">
+            <summary>
+            SOB期间 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.SOB期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.SOBPeriodKey">
+            <summary>
+            SOB期间
+            接收完工入库成本DTO.Misc.SOB期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostTypekey_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostTypekey">
+            <summary>
+            成本类型
+            接收完工入库成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostElementKey_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostElementKey">
+            <summary>
+            成本要素
+            接收完工入库成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CoUOM_SKey">
+            <summary>
+            成本单位 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.成本单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CoUOM">
+            <summary>
+            成本单位
+            接收完工入库成本DTO.Misc.成本单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.MainProduct_SKey">
+            <summary>
+            主产品 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.主产品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.MainProduct">
+            <summary>
+            主产品
+            接收完工入库成本DTO.Misc.主产品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            接收完工入库成本DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData.CostField">
+            <summary>
+            成本域
+            接收完工入库成本DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData">
+            <summary>
+            完工成本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.#ctor(System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.MOCost.MOCost.UpdateCompleteRptCostDTOData,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.CBO.MFG.CO.CostData,System.Int64,System.Int64,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_earnedCost">
+            <summary>
+            成本金额
+            完工成本DTO.Misc.成本金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_scapeCost">
+            <summary>
+            报废金额
+            完工成本DTO.Misc.报废金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_updateCompleteRptCostDTO">
+            <summary>
+            接收完工入库成本DTO
+            完工成本DTO.Misc.接收完工入库成本DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_earnedPrice">
+            <summary>
+            成本金额单价
+            完工成本DTO.Misc.成本金额单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_scapePrice">
+            <summary>
+            报废金额单价
+            完工成本DTO.Misc.报废金额单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_isBooking">
+            <summary>
+            是否记账
+            完工成本DTO.Misc.是否记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.m_isChildDoc">
+            <summary>
+            是否子单
+            完工成本DTO.Misc.是否子单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.CostElementKey_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            完工成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.CostElementKey">
+            <summary>
+            成本要素
+            完工成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.SOBPeriodKey_SKey">
+            <summary>
+            账簿会计期间 序列化Key属性。（传递跨组织序列列字段）
+            完工成本DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.SOBPeriodKey">
+            <summary>
+            账簿会计期间
+            完工成本DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.CostTypekey_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            完工成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CompleteRptCostDTOData.CostTypekey">
+            <summary>
+            成本类型
+            完工成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData">
+            <summary>
+            月结制造异动检查返回值DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int64,System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docType">
+            <summary>
+            单据类型
+            月结制造异动检查返回值DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docNo">
+            <summary>
+            单据号
+            月结制造异动检查返回值DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_businessType">
+            <summary>
+            业务类型
+            月结制造异动检查返回值DTO.Misc.业务类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docEntityType">
+            <summary>
+            类型
+            月结制造异动检查返回值DTO.Misc.类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docDate">
+            <summary>
+            单据日期
+            月结制造异动检查返回值DTO.Misc.单据日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_userName">
+            <summary>
+            用户名
+            月结制造异动检查返回值DTO.Misc.用户名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_status">
+            <summary>
+            状态
+            月结制造异动检查返回值DTO.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_doc_EntityID">
+            <summary>
+            实体ID
+            月结制造异动检查返回值DTO.Misc.实体ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_doc_EntityType">
+            <summary>
+            实体类型
+            月结制造异动检查返回值DTO.Misc.实体类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_attribute">
+            <summary>
+            属性
+            月结制造异动检查返回值DTO.Misc.属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docLineNo">
+            <summary>
+            行号
+            月结制造异动检查返回值DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_docSubLineNo">
+            <summary>
+            子行号
+            月结制造异动检查返回值DTO.Misc.子行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_mODocNo">
+            <summary>
+            MO单号
+            月结制造异动检查返回值DTO.Misc.MO单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_pLSDocNo">
+            <summary>
+            PLS单号
+            月结制造异动检查返回值DTO.Misc.PLS单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_mOID">
+            <summary>
+            MOID
+            月结制造异动检查返回值DTO.Misc.MOID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.m_pLSID">
+            <summary>
+            PLSID
+            月结制造异动检查返回值DTO.Misc.PLSID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            月结制造异动检查返回值DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.Org">
+            <summary>
+            组织
+            月结制造异动检查返回值DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            月结制造异动检查返回值DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.SOB">
+            <summary>
+            账簿
+            月结制造异动检查返回值DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.SOBPeriod_SKey">
+            <summary>
+            账簿期间 序列化Key属性。（传递跨组织序列列字段）
+            月结制造异动检查返回值DTO.Misc.账簿期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CheckMfgSettleOutDTOData.SOBPeriod">
+            <summary>
+            账簿期间
+            月结制造异动检查返回值DTO.Misc.账簿期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.PickListQPADTOData">
+            <summary>
+            取QPA参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.#ctor(System.Int64,System.DateTime,System.String,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.m_fromDate">
+            <summary>
+            开始时间
+            取QPA参数DTO.Misc.开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.m_tableName">
+            <summary>
+            数据表名
+            取QPA参数DTO.Misc.数据表名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.m_toDate">
+            <summary>
+            结束时间
+            取QPA参数DTO.Misc.结束时间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取QPA参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.OrgKey">
+            <summary>
+            组织
+            取QPA参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.SOBAccountPeriod_SKey">
+            <summary>
+            帐簿期间 序列化Key属性。（传递跨组织序列列字段）
+            取QPA参数DTO.Misc.帐簿期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PickListQPADTOData.SOBAccountPeriod">
+            <summary>
+            帐簿期间
+            取QPA参数DTO.Misc.帐簿期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData">
+            <summary>
+            更新期初开账成本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.m_isBooking">
+            <summary>
+            记账
+            更新期初开账成本DTO.Misc.记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.m_mO">
+            <summary>
+            生产订单
+            更新期初开账成本DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.m_operation">
+            <summary>
+            工序
+            更新期初开账成本DTO.Misc.工序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.m_cost">
+            <summary>
+            成本
+            更新期初开账成本DTO.Misc.成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.m_costElementType">
+            <summary>
+            成本要素类型
+            更新期初开账成本DTO.Misc.成本要素类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            更新期初开账成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.SOB">
+            <summary>
+            账簿
+            更新期初开账成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            更新期初开账成本DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostField">
+            <summary>
+            成本域
+            更新期初开账成本DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            更新期初开账成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostType">
+            <summary>
+            成本类型
+            更新期初开账成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            更新期初开账成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOBgnCostParamDTOData.CostElement">
+            <summary>
+            成本要素
+            更新期初开账成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData">
+            <summary>
+            生成交易分录日志 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Collections.Generic.List{UFIDA.U9.MOCost.MOCost.FailResultMessDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.m_successCount">
+            <summary>
+            成功数量
+            生成交易分录日志.Misc.成功数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.m_failDocCount">
+            <summary>
+            失败数量
+            生成交易分录日志.Misc.失败数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.m_createDocCount">
+            <summary>
+            单据数量
+            生成交易分录日志.Misc.单据数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData.m_failDocList">
+            <summary>
+            失败单据明细
+            生成交易分录日志.Misc.失败单据明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData">
+            <summary>
+            生成失败单据明细 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFIDA.U9.MOCost.MOCost.CreateAAIResultDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData.m_failDocKey">
+            <summary>
+            单据
+            生成失败单据明细.Misc.单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData.m_failReslut">
+            <summary>
+            失败原因
+            生成失败单据明细.Misc.失败原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.FailResultMessDTOData.m_createAAIResultDTO">
+            <summary>
+            生成交易分录日志
+            生成失败单据明细.Misc.生成交易分录日志
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData">
+            <summary>
+            计算完工报告入库成本参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Collections.Generic.List{UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData.m_completeRptDocKey">
+            <summary>
+            完工报告
+            计算完工报告入库成本参数DTO.Misc.完工报告
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData.m_rcvLineKey">
+            <summary>
+            入库行
+            计算完工报告入库成本参数DTO.Misc.入库行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CompleteRptDTOData.m_rcvRptCostDTOList">
+            <summary>
+            成本明细
+            计算完工报告入库成本参数DTO.Misc.成本明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData">
+            <summary>
+            计算完工报告入库成本明细DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Decimal,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Decimal,UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Decimal,System.Int32,System.Boolean,System.Boolean,UFSoft.UBF.Business.BusinessEntity.EntityKey,UFIDA.U9.CBO.MFG.CO.ElementTypeCostData,UFIDA.U9.MOCost.MOCost.CompleteRptDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_accountPeriod">
+            <summary>
+            会计期间
+            计算完工报告入库成本明细DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_costAmt">
+            <summary>
+            成本金额
+            计算完工报告入库成本明细DTO.Misc.成本金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_costField">
+            <summary>
+            成本域
+            计算完工报告入库成本明细DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_costPrice">
+            <summary>
+            单价
+            计算完工报告入库成本明细DTO.Misc.单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_costType">
+            <summary>
+            成本类型
+            计算完工报告入库成本明细DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_currency">
+            <summary>
+            币种
+            计算完工报告入库成本明细DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_exRate">
+            <summary>
+            汇率
+            计算完工报告入库成本明细DTO.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_exRateType">
+            <summary>
+            汇率类型
+            计算完工报告入库成本明细DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_isAccCostType">
+            <summary>
+            记账用成本类型
+            计算完工报告入库成本明细DTO.Misc.记账用成本类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_isMainSOB">
+            <summary>
+            主账簿
+            计算完工报告入库成本明细DTO.Misc.主账簿
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_sOB">
+            <summary>
+            账簿
+            计算完工报告入库成本明细DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_elementTypeCost">
+            <summary>
+            分项成本
+            计算完工报告入库成本明细DTO.Misc.分项成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RcvRptCostDTOData.m_completeRptDTO">
+            <summary>
+            计算完工报告入库成本参数DTO
+            计算完工报告入库成本明细DTO.Misc.计算完工报告入库成本参数DTO
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData">
+            <summary>
+            币种信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.#ctor(System.Int64,UFIDA.U9.MOCost.MOCost.RoundInfoDTOData,UFIDA.U9.MOCost.MOCost.RoundInfoDTOData,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_moneyRound">
+            <summary>
+            单价精度
+            币种信息.Misc.单价精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_priceRound">
+            <summary>
+            金额精度
+            币种信息.Misc.金额精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_currencyName">
+            <summary>
+            币种名称
+            币种信息.Misc.币种名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_currencyCode">
+            <summary>
+            币种代码
+            币种信息.Misc.币种代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_currencySymbol">
+            <summary>
+            币种符号
+            币种信息.Misc.币种符号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.m_shortName">
+            <summary>
+            简称
+            币种信息.Misc.简称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            币种信息.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.CurrencyInfoDTOData.Currency">
+            <summary>
+            币种
+            币种信息.Misc.币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData">
+            <summary>
+            精度信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData.m_roundType">
+            <summary>
+            舍人类型
+            精度信息.Misc.舍人类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData.m_roundValue">
+            <summary>
+            舍入值
+            精度信息.Misc.舍入值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.RoundInfoDTOData.m_precision_">
+            <summary>
+            精度
+            精度信息.Misc.精度
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData">
+            <summary>
+            取币种信息服务参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.#ctor(System.Int64,System.Int64,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.m_dateTime">
+            <summary>
+            日期
+            取币种信息服务参数DTO.Misc.日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            取币种信息服务参数DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.CostField">
+            <summary>
+            成本域
+            取币种信息服务参数DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            取币种信息服务参数DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.GetCurrencyInfoParamDTOData.ItemMaster">
+            <summary>
+            料品
+            取币种信息服务参数DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData">
+            <summary>
+            期初成本开账要素DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.#ctor(System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.m_wIPCost">
+            <summary>
+            在制成本
+            期初成本开账要素DTO.Misc.在制成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.m_receiptCost">
+            <summary>
+            入库成本
+            期初成本开账要素DTO.Misc.入库成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.m_periodInitCostDTO">
+            <summary>
+            期初成本开账DTO
+            期初成本开账要素DTO.Misc.期初成本开账DTO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账要素DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData.CostElement">
+            <summary>
+            成本要素
+            期初成本开账要素DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData">
+            <summary>
+            期初成本开账DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.String,System.Collections.Generic.List{UFIDA.U9.MOCost.MOCost.PeriodInitElementCostDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.m_isBooking">
+            <summary>
+            是否记账
+            期初成本开账DTO.Misc.是否记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.m_mOOperationNum">
+            <summary>
+            订单工序号
+            期初成本开账DTO.Misc.订单工序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.m_initElementCost">
+            <summary>
+            要素成本
+            期初成本开账DTO.Misc.要素成本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.Org">
+            <summary>
+            组织
+            期初成本开账DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.SOB">
+            <summary>
+            账簿
+            期初成本开账DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.SOBPeriod_SKey">
+            <summary>
+            记账期间 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.SOBPeriod">
+            <summary>
+            记账期间
+            期初成本开账DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.MO_SKey">
+            <summary>
+            订单 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.MO">
+            <summary>
+            订单
+            期初成本开账DTO.Misc.订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.CostField">
+            <summary>
+            成本域
+            期初成本开账DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.CostType">
+            <summary>
+            成本类型
+            期初成本开账DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.MOOperation_SKey">
+            <summary>
+            订单工序 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账DTO.Misc.订单工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.PeriodInitCostDTOData.MOOperation">
+            <summary>
+            订单工序
+            期初成本开账DTO.Misc.订单工序
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData">
+            <summary>
+            料品要素成本 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean,System.Collections.Generic.List{UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData},System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.m_isBooking">
+            <summary>
+            记账
+            料品要素成本.Misc.记账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.m_elementCost">
+            <summary>
+            要素成本
+            料品要素成本.Misc.要素成本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.ItemKey_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            料品要素成本.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.ItemKey">
+            <summary>
+            料品
+            料品要素成本.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.CostFieldKey_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            料品要素成本.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.CostFieldKey">
+            <summary>
+            成本域
+            料品要素成本.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.CostTypeKey_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            料品要素成本.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.CostTypeKey">
+            <summary>
+            成本类型
+            料品要素成本.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            料品要素成本.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData.SOB">
+            <summary>
+            账簿
+            料品要素成本.Misc.账簿
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData">
+            <summary>
+            要素成本明细 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.#ctor(System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.MOCost.MOCost.UpdateItemElementCostDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.m_cost">
+            <summary>
+            成本
+            要素成本明细.成本信息.成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.m_updateItemElementCostDTO">
+            <summary>
+            料品要素成本
+            要素成本明细.Misc.料品要素成本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            要素成本明细.成本信息.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ItemDetialElementCostDTOData.CostElement">
+            <summary>
+            成本要素
+            要素成本明细.成本信息.成本要素
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CalCostByAVGException">
+            <summary>
+            异常类型: 工艺件生产订单不作完工结转
+            
+             工艺件生产订单不作完工结转
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CalCostByAVGException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工艺件生产订单不作完工结转 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CalCostByAVGException.#ctor">
+            <summary>
+            异常类型: 工艺件生产订单不作完工结转 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CalCostByAVGException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 工艺件生产订单不作完工结转 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.CAException">
+            <summary>
+            异常类型: 未完工入库物料不能完工返回
+            
+             未完工入库物料不能完工返回
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CAException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未完工入库物料不能完工返回 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CAException.#ctor">
+            <summary>
+            异常类型: 未完工入库物料不能完工返回 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.CAException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未完工入库物料不能完工返回 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.ClosePeriodException">
+            <summary>
+            异常类型: 前期间未结账
+            
+             账簿(${SOB})期间(${Period})的上一账簿(${PreSOB})期间(${PrePeriod})未结账
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ClosePeriodException.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 前期间未结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="preSOB">账簿</param>
+            <param name="prePeriod">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ClosePeriodException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            异常类型: 前期间未结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="preSOB">账簿</param>
+            <param name="prePeriod">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ClosePeriodException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 前期间未结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="preSOB">账簿</param>
+            <param name="prePeriod">期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ClosePeriodException.Period">
+            <summary>
+            期间
+            前期间未结账.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ClosePeriodException.SOB">
+            <summary>
+            账簿
+            前期间未结账.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ClosePeriodException.PreSOB">
+            <summary>
+            账簿
+            前期间未结账.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ClosePeriodException.PrePeriod">
+            <summary>
+            期间
+            前期间未结账.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.ReClosePeriodException">
+            <summary>
+            异常类型: 下一期间未反结账
+            
+             账簿(${SOB})期间(${Period})的下一账簿(${NextSOB})期间(${NextPeriod})未反结账
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下一期间未反结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="nextSOB">账簿</param>
+            <param name="nextPeriod">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            异常类型: 下一期间未反结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="nextSOB">账簿</param>
+            <param name="nextPeriod">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 下一期间未反结账 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="sOB">账簿</param>
+            <param name="nextSOB">账簿</param>
+            <param name="nextPeriod">期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.Period">
+            <summary>
+            期间
+            下一期间未反结账.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.SOB">
+            <summary>
+            账簿
+            下一期间未反结账.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.NextSOB">
+            <summary>
+            账簿
+            下一期间未反结账.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.ReClosePeriodException.NextPeriod">
+            <summary>
+            期间
+            下一期间未反结账.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.NOSOBPeriodException">
+            <summary>
+            异常类型: 没有选择期间
+            
+             没有选择账簿期间
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.NOSOBPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有选择期间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.NOSOBPeriodException.#ctor">
+            <summary>
+            异常类型: 没有选择期间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.NOSOBPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有选择期间 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.AlreadyClosedException">
+            <summary>
+            异常类型: 已经结过账了
+            
+             选择的账簿(${SOB})期间(${Period})已经结过账了
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyClosedException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 已经结过账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyClosedException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 已经结过账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyClosedException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 已经结过账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.AlreadyClosedException.SOB">
+            <summary>
+            账簿
+            已经结过账了.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.AlreadyClosedException.Period">
+            <summary>
+            期间
+            已经结过账了.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion">
+            <summary>
+            异常类型: 已经反结账了
+            
+             选择的账簿(${SOB})期间(${Period})没有进行过结账，不须要反结账
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 已经反结账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 已经反结账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 已经反结账了 Constructor
+            </summary>
+            <param name="sOB">账簿</param>
+            <param name="period">期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion.SOB">
+            <summary>
+            账簿
+            已经反结账了.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.AlreadyReClosedExcetion.Period">
+            <summary>
+            期间
+            已经反结账了.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.IsIPVCostedException">
+            <summary>
+            异常类型: 本期还有IPV数据未处理，不能结账
+            
+             以下期间的IPV数据未处理，不能结帐：(${SOBPeriodListStr})
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.IsIPVCostedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 本期还有IPV数据未处理，不能结账 Constructor
+            </summary>
+            <param name="sOBPeriodListStr">不能结帐的期间串</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.IsIPVCostedException.#ctor(System.String)">
+            <summary>
+            异常类型: 本期还有IPV数据未处理，不能结账 Constructor
+            </summary>
+            <param name="sOBPeriodListStr">不能结帐的期间串</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.IsIPVCostedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 本期还有IPV数据未处理，不能结账 Constructor
+            </summary>
+            <param name="sOBPeriodListStr">不能结帐的期间串</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.IsIPVCostedException.SOBPeriodListStr">
+            <summary>
+            不能结帐的期间串
+            本期还有IPV数据未处理，不能结账.Misc.不能结帐的期间串
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.OverNowIssueException">
+            <summary>
+            异常类型: 存在大于当前日期的领料单!
+            
+             存在大于当前日期的领料单,单据为:(${IssueDoc})
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowIssueException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的领料单! Constructor
+            </summary>
+            <param name="issueDoc">领料单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowIssueException.#ctor(System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的领料单! Constructor
+            </summary>
+            <param name="issueDoc">领料单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowIssueException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 存在大于当前日期的领料单! Constructor
+            </summary>
+            <param name="issueDoc">领料单</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.OverNowIssueException.IssueDoc">
+            <summary>
+            领料单
+            存在大于当前日期的领料单!.Misc.领料单
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.OverNowCompleteRptException">
+            <summary>
+            异常类型: 存在大于当前日期的完工报告!
+            
+             存在大于当前日期的完工报告,单据为:(${CompleteRpt})
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowCompleteRptException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的完工报告! Constructor
+            </summary>
+            <param name="completeRpt">完工报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowCompleteRptException.#ctor(System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的完工报告! Constructor
+            </summary>
+            <param name="completeRpt">完工报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowCompleteRptException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 存在大于当前日期的完工报告! Constructor
+            </summary>
+            <param name="completeRpt">完工报告</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.OverNowCompleteRptException.CompleteRpt">
+            <summary>
+            完工报告
+            存在大于当前日期的完工报告!.Misc.完工报告
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.OverNowResUsageRptException">
+            <summary>
+            异常类型: 存在大于当前日期的资源耗用报告!
+            
+             存在大于当前日期的资源耗用报告,单据为:(${ResUsageRpt})
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResUsageRptException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的资源耗用报告! Constructor
+            </summary>
+            <param name="resUsageRpt">资源耗用报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResUsageRptException.#ctor(System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的资源耗用报告! Constructor
+            </summary>
+            <param name="resUsageRpt">资源耗用报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResUsageRptException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 存在大于当前日期的资源耗用报告! Constructor
+            </summary>
+            <param name="resUsageRpt">资源耗用报告</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.OverNowResUsageRptException.ResUsageRpt">
+            <summary>
+            资源耗用报告
+            存在大于当前日期的资源耗用报告!.Misc.资源耗用报告
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.OverNowResTimeRptException">
+            <summary>
+            异常类型: 存在大于当前日期的资源时间用报告!
+            
+             存在大于当前日期的资源时间用报告,单据为:(${ResTimeRpt})
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResTimeRptException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的资源时间用报告! Constructor
+            </summary>
+            <param name="resTimeRpt">资源时间报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResTimeRptException.#ctor(System.String)">
+            <summary>
+            异常类型: 存在大于当前日期的资源时间用报告! Constructor
+            </summary>
+            <param name="resTimeRpt">资源时间报告</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.OverNowResTimeRptException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 存在大于当前日期的资源时间用报告! Constructor
+            </summary>
+            <param name="resTimeRpt">资源时间报告</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.OverNowResTimeRptException.ResTimeRpt">
+            <summary>
+            资源时间报告
+            存在大于当前日期的资源时间用报告!.Misc.资源时间报告
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.MOBalanceHavePostToGL">
+            <summary>
+            异常类型: 订单结存差异转总异常
+            
+             订单结存差异已经转总账,不允许此操作。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOBalanceHavePostToGL.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单结存差异转总异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOBalanceHavePostToGL.#ctor">
+            <summary>
+            异常类型: 订单结存差异转总异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOBalanceHavePostToGL.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单结存差异转总异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData">
+            <summary>
+            分割生产订单成本参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.#ctor(System.Int64,System.Decimal,System.Boolean,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_materialProportion">
+            <summary>
+            材料费比例
+            分割生产订单成本参数DTO.Misc.材料费比例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_isPrimaryMO">
+            <summary>
+            主生产订单
+            分割生产订单成本参数DTO.Misc.主生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_laborProportion">
+            <summary>
+            人工费比例
+            分割生产订单成本参数DTO.Misc.人工费比例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_machineProportion">
+            <summary>
+            机器费比例
+            分割生产订单成本参数DTO.Misc.机器费比例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_overheadProportion">
+            <summary>
+            制造费比例
+            分割生产订单成本参数DTO.Misc.制造费比例
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.m_subContractProportion">
+            <summary>
+            外协费比例
+            分割生产订单成本参数DTO.Misc.外协费比例
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.MO_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            分割生产订单成本参数DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.SplitOffMOCostDTOData.MO">
+            <summary>
+            生产订单
+            分割生产订单成本参数DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SplitOffMergeMOCost.MOIsNullException">
+            <summary>
+            异常类型: 未定义待分割生产订单异常
+            
+             未定义待分割生产订单
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MOIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未定义待分割生产订单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MOIsNullException.#ctor">
+            <summary>
+            异常类型: 未定义待分割生产订单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MOIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未定义待分割生产订单异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SplitOffMergeMOCost.MoreMOException">
+            <summary>
+            异常类型: 定义了多个待分割生产订单异常
+            
+             定义了多个待分割生产订单
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MoreMOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 定义了多个待分割生产订单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MoreMOException.#ctor">
+            <summary>
+            异常类型: 定义了多个待分割生产订单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.MoreMOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 定义了多个待分割生产订单异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SplitOffMergeMOCost.PortionErrorException">
+            <summary>
+            异常类型: 分割比例不在0~1之间
+            
+             分割比例不在0~1之间
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.PortionErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分割比例不在0~1之间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.PortionErrorException.#ctor">
+            <summary>
+            异常类型: 分割比例不在0~1之间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.PortionErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分割比例不在0~1之间 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SplitOffMergeMOCost.ParentMOIsNullException">
+            <summary>
+            异常类型: 母订单为空异常
+            
+             母订单为空，无法进行子订单生产成本结转
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.ParentMOIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 母订单为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.ParentMOIsNullException.#ctor">
+            <summary>
+            异常类型: 母订单为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SplitOffMergeMOCost.ParentMOIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 母订单为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.CloseCost.MONotCompletedException">
+            <summary>
+            异常类型: MO未完工异常
+            
+             MO(单据号:${MODocNo})未完工,不计算成本
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.CloseCost.MONotCompletedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: MO未完工异常 Constructor
+            </summary>
+            <param name="mODocNo">MO单据号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.CloseCost.MONotCompletedException.#ctor(System.String)">
+            <summary>
+            异常类型: MO未完工异常 Constructor
+            </summary>
+            <param name="mODocNo">MO单据号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.CloseCost.MONotCompletedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: MO未完工异常 Constructor
+            </summary>
+            <param name="mODocNo">MO单据号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.MONotCompletedException.MODocNo">
+            <summary>
+            MO单据号
+            MO未完工异常.Misc.MO单据号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData">
+            <summary>
+            生产订单生产线日计划信息 DTO :自定义的数据传输类型 
+            生产订单生产线日计划信息
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.Int64,System.Int32,System.String,System.DateTime,System.Int32,System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.Int64,System.String,System.Int64,System.Int64,System.String,System.Int32,UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData,System.Int64,System.Int64,System.Int32,System.Int64,System.Int64,System.Int32,System.Boolean,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_bOMAltType">
+            <summary>
+            BOM替换类型
+            生产订单生产线日计划信息.Misc.BOM替换类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_routingAltType">
+            <summary>
+            工艺替换类型
+            生产订单生产线日计划信息.Misc.工艺替换类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docNo">
+            <summary>
+            单据号
+            生产订单生产线日计划信息.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_businessDate">
+            <summary>
+            业务日期
+            生产订单生产线日计划信息.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_version">
+            <summary>
+            单据版本
+            生产订单生产线日计划信息.Misc.单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_itemVersionCode">
+            <summary>
+            物料版本号
+            生产订单生产线日计划信息.Misc.物料版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_bOMVersionCode">
+            <summary>
+            BOM版本号
+            生产订单生产线日计划信息.Misc.BOM版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_routingVersionCode">
+            <summary>
+            工艺路线版本号
+            生产订单生产线日计划信息.Misc.工艺路线版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docType">
+            <summary>
+            单据类型
+            生产订单生产线日计划信息.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_reasonForReworkValue">
+            <summary>
+            返工原因
+            生产订单生产线日计划信息.Misc.返工原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_reasonForRework">
+            <summary>
+            返工原因
+            生产订单生产线日计划信息.Misc.返工原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_deptName">
+            <summary>
+            生产部门
+            生产订单生产线日计划信息.Misc.生产部门
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_productionLineName">
+            <summary>
+            生产线
+            生产订单生产线日计划信息.Misc.生产线
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docTypeID">
+            <summary>
+            单据类型ID
+            生产订单生产线日计划信息.Misc.单据类型ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docTypeCode">
+            <summary>
+            单据类型Code
+            生产订单生产线日计划信息.Misc.单据类型Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_businessType">
+            <summary>
+            业务类型
+            生产订单生产线日计划信息.Misc.业务类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_parentDocInfo">
+            <summary>
+            母单信息
+            生产订单生产线日计划信息.Misc.母单信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docID">
+            <summary>
+            单据ID
+            生产订单生产线日计划信息.Misc.单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docState">
+            <summary>
+            订单状态
+            生产订单生产线日计划信息.Misc.订单状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_mOID">
+            <summary>
+            生产订单
+            生产订单生产线日计划信息.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_pLSID">
+            <summary>
+            生产线日计划
+            生产订单生产线日计划信息.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_docProperty">
+            <summary>
+            订单属性
+            生产订单生产线日计划信息.Misc.订单属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_isHighLLCIssue">
+            <summary>
+            存在高阶领料
+            生产订单生产线日计划信息.Misc.存在高阶领料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.m_mOType">
+            <summary>
+            特殊订单标识
+            生产订单生产线日计划信息.Misc.特殊订单标识
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Org">
+            <summary>
+            组织
+            生产订单生产线日计划信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Product_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Product">
+            <summary>
+            物料
+            生产订单生产线日计划信息.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.CostField_SKey">
+            <summary>
+            成本域 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.CostField">
+            <summary>
+            成本域
+            生产订单生产线日计划信息.Misc.成本域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.BOMVersion_SKey">
+            <summary>
+            BOM版本 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.BOM版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.BOMVersion">
+            <summary>
+            BOM版本
+            生产订单生产线日计划信息.Misc.BOM版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.RoutingVersion_SKey">
+            <summary>
+            工艺路线版本 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.工艺路线版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.RoutingVersion">
+            <summary>
+            工艺路线版本
+            生产订单生产线日计划信息.Misc.工艺路线版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ItemVersion_SKey">
+            <summary>
+            物料版本 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ItemVersion">
+            <summary>
+            物料版本
+            生产订单生产线日计划信息.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Dept_SKey">
+            <summary>
+            生产部门 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Dept">
+            <summary>
+            生产部门
+            生产订单生产线日计划信息.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ProductionLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ProductionLine">
+            <summary>
+            生产线
+            生产订单生产线日计划信息.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Supplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.Supplier">
+            <summary>
+            厂牌
+            生产订单生产线日计划信息.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.ProductUOM">
+            <summary>
+            生产单位
+            生产订单生产线日计划信息.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.CostUOM_SKey">
+            <summary>
+            成本单位 序列化Key属性。（传递跨组织序列列字段）
+            生产订单生产线日计划信息.Misc.成本单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOPLSInfoDTOData.CostUOM">
+            <summary>
+            成本单位
+            生产订单生产线日计划信息.Misc.成本单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.BothMOAndPLSAreNullException">
+            <summary>
+            异常类型: MOPLS同时为空异常
+            
+             生产订单与生产日计划不可同时为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.BothMOAndPLSAreNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: MOPLS同时为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.BothMOAndPLSAreNullException.#ctor">
+            <summary>
+            异常类型: MOPLS同时为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.BothMOAndPLSAreNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: MOPLS同时为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData">
+            <summary>
+            工序外协资源成本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.#ctor(System.Int64,System.String,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Decimal,System.Decimal,System.Decimal,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_opNum">
+            <summary>
+            工序
+            工序外协资源成本DTO.Misc.工序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_receiptQty">
+            <summary>
+            数量
+            工序外协资源成本DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_scrapQty">
+            <summary>
+            报废数量
+            工序外协资源成本DTO.Misc.报废数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_actualUsage">
+            <summary>
+            实际用量
+            工序外协资源成本DTO.Misc.实际用量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_convertionCost">
+            <summary>
+            转换成本
+            工序外协资源成本DTO.Misc.转换成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_materialCost">
+            <summary>
+            材料成本
+            工序外协资源成本DTO.Misc.材料成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_price">
+            <summary>
+            价格
+            工序外协资源成本DTO.Misc.价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_pOKey">
+            <summary>
+            属性
+            工序外协资源成本DTO.Misc.属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.m_pODate">
+            <summary>
+            日期
+            工序外协资源成本DTO.Misc.日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            工序外协资源成本DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.MOKey">
+            <summary>
+            生产订单
+            工序外协资源成本DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.UOMKey_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            工序外协资源成本DTO.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.UOMKey">
+            <summary>
+            单位
+            工序外协资源成本DTO.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.CurrencyKey_SKey">
+            <summary>
+            货币 序列化Key属性。（传递跨组织序列列字段）
+            工序外协资源成本DTO.Misc.货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTOData.CurrencyKey">
+            <summary>
+            货币
+            工序外协资源成本DTO.Misc.货币
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData">
+            <summary>
+            工序外协资源IPVDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.#ctor(System.Int64,System.String,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.m_opNum">
+            <summary>
+            工序
+            工序外协资源IPVDTO.Misc.工序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.m_iPV">
+            <summary>
+            差异
+            工序外协资源IPVDTO.Misc.差异
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            工序外协资源IPVDTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.MOKey">
+            <summary>
+            生产订单
+            工序外协资源IPVDTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.CurrencyKey_SKey">
+            <summary>
+            货币 序列化Key属性。（传递跨组织序列列字段）
+            工序外协资源IPVDTO.Misc.货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTOData.CurrencyKey">
+            <summary>
+            货币
+            工序外协资源IPVDTO.Misc.货币
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCostTransToGLSV.TransferedDocDTOData">
+            <summary>
+            获取已转总帐的单据参数DTO DTO :自定义的数据传输类型 
+            获取已转总帐的单据参数DTO
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCostTransToGLSV.TransferedDocDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCostTransToGLSV.TransferedDocDTOData.#ctor(System.String,System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCostTransToGLSV.TransferedDocDTOData.m_docType">
+            <summary>
+            单据类型
+            获取已转总帐的单据参数DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCostTransToGLSV.TransferedDocDTOData.m_docKeyList">
+            <summary>
+            单据Key集合
+            获取已转总帐的单据参数DTO.Misc.单据Key集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ExecuteTransEntryBudgetErrorException">
+            <summary>
+            异常类型: 预算执行失败异常
+            预算执行失败异常
+             预算执行失败
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ExecuteTransEntryBudgetErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预算执行失败异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ExecuteTransEntryBudgetErrorException.#ctor">
+            <summary>
+            异常类型: 预算执行失败异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ExecuteTransEntryBudgetErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 预算执行失败异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssuedQtyIs0Exception">
+            <summary>
+            异常类型: 实发数量为0异常
+            
+             领料单${DocNo},行号${LineNum}库存单位或成本单位实发数量不能为零
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssuedQtyIs0Exception.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 实发数量为0异常 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="lineNum">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssuedQtyIs0Exception.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 实发数量为0异常 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="lineNum">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssuedQtyIs0Exception.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 实发数量为0异常 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="lineNum">行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssuedQtyIs0Exception.DocNo">
+            <summary>
+            单号
+            实发数量为0异常.Misc.单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssuedQtyIs0Exception.LineNum">
+            <summary>
+            行号
+            实发数量为0异常.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTransferDocRelResUsageRptNotFindException">
+            <summary>
+            异常类型: 工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。
+            
+             工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTransferDocRelResUsageRptNotFindException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。 Constructor
+            </summary>
+            <param name="opTransferDoc">工序转移单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTransferDocRelResUsageRptNotFindException.#ctor(System.String)">
+            <summary>
+            异常类型: 工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。 Constructor
+            </summary>
+            <param name="opTransferDoc">工序转移单</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTransferDocRelResUsageRptNotFindException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。 Constructor
+            </summary>
+            <param name="opTransferDoc">工序转移单</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTransferDocRelResUsageRptNotFindException.OpTransferDoc">
+            <summary>
+            工序转移单
+            工序转移单[${OpTransferDoc}]没有已审核的资源报告存在。.Misc.工序转移单
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SOBAccountPeriodNullWhenIPVCalException">
+            <summary>
+            异常类型: 传入的结算对应SOB会计期间空错误。
+            
+             传入的结算对应SOB会计期间空错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodNullWhenIPVCalException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 传入的结算对应SOB会计期间空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodNullWhenIPVCalException.#ctor">
+            <summary>
+            异常类型: 传入的结算对应SOB会计期间空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodNullWhenIPVCalException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 传入的结算对应SOB会计期间空错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException">
+            <summary>
+            异常类型: 组织对应的SOB会计期间已经月结。
+            
+             [${Org}]对应的SOB会计期间[${Period}]已经月结。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 组织对应的SOB会计期间已经月结。 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="period">会计期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 组织对应的SOB会计期间已经月结。 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="period">会计期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 组织对应的SOB会计期间已经月结。 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="period">会计期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException.Org">
+            <summary>
+            组织
+            组织对应的SOB会计期间已经月结。.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OrgSOBAccountPeriodBalancedException.Period">
+            <summary>
+            会计期间
+            组织对应的SOB会计期间已经月结。.Misc.会计期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SOBAccountPeriodBalancedNotAntiBalanceException">
+            <summary>
+            异常类型: 期间成本已月结，不允许反结算。
+            
+             期间[${Period}]成本已月结，不允许反结算。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodBalancedNotAntiBalanceException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 期间成本已月结，不允许反结算。 Constructor
+            </summary>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodBalancedNotAntiBalanceException.#ctor(System.String)">
+            <summary>
+            异常类型: 期间成本已月结，不允许反结算。 Constructor
+            </summary>
+            <param name="period">期间</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBAccountPeriodBalancedNotAntiBalanceException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 期间成本已月结，不允许反结算。 Constructor
+            </summary>
+            <param name="period">期间</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBAccountPeriodBalancedNotAntiBalanceException.Period">
+            <summary>
+            期间
+            期间成本已月结，不允许反结算。.Misc.期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData">
+            <summary>
+            传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.#ctor(System.Int64,System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.m_periodIndex">
+            <summary>
+            SOB期间
+            传入DTO.Misc.SOB期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.m_fromDate">
+            <summary>
+            开始日期
+            传入DTO.Misc.开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.m_toDate">
+            <summary>
+            结束日期
+            传入DTO.Misc.结束日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopInDTOData.m_calObj">
+            <summary>
+            成本核算对象
+            传入DTO.Misc.成本核算对象
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData">
+            <summary>
+            传出DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.m_periodIndex">
+            <summary>
+            SOB期间
+            传出DTO.Misc.SOB期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.m_usedType">
+            <summary>
+            耗用关系类型
+            传出DTO.Misc.耗用关系类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.m_usedQty">
+            <summary>
+            耗用量
+            传出DTO.Misc.耗用量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.SonMO_SKey">
+            <summary>
+            子生产订单 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.子生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.SonMO">
+            <summary>
+            子生产订单
+            传出DTO.Misc.子生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.SonItemaster_SKey">
+            <summary>
+            子生产订单物料 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.子生产订单物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.SonItemaster">
+            <summary>
+            子生产订单物料
+            传出DTO.Misc.子生产订单物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.MotherMO_SKey">
+            <summary>
+            母生产订单 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.母生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.MotherMO">
+            <summary>
+            母生产订单
+            传出DTO.Misc.母生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.MotherItemaster_SKey">
+            <summary>
+            母生产订单物料 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.母生产订单物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.GetMFGUsedInShopOutDTOData.MotherItemaster">
+            <summary>
+            母生产订单物料
+            传出DTO.Misc.母生产订单物料
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData">
+            <summary>
+            传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.#ctor(System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.m_periodIndex">
+            <summary>
+            期间
+            传入DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.m_fromDate">
+            <summary>
+            开始日期
+            传入DTO.Misc.开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.m_toDate">
+            <summary>
+            结束日期
+            传入DTO.Misc.结束日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.m_calObj">
+            <summary>
+            成本核算对象
+            传入DTO.Misc.成本核算对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationInDTOData.Org">
+            <summary>
+            组织
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData">
+            <summary>
+            传出DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.#ctor(System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.DateTime,System.String,System.String,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_periodIndex">
+            <summary>
+            期间
+            传出DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_itemFormAttribute">
+            <summary>
+            物料形态属性
+            传出DTO.Misc.物料形态属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_department">
+            <summary>
+            部门
+            传出DTO.Misc.部门
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_productLine">
+            <summary>
+            生产线
+            传出DTO.Misc.生产线
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_docType">
+            <summary>
+            单据类型
+            传出DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_workCenter">
+            <summary>
+            工作中心
+            传出DTO.Misc.工作中心
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_itemCategory">
+            <summary>
+            料品分类
+            传出DTO.Misc.料品分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_productDate">
+            <summary>
+            生产日期
+            传出DTO.Misc.生产日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_docTypeCode">
+            <summary>
+            单据类型Code
+            传出DTO.Misc.单据类型Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_docTypeName">
+            <summary>
+            单据类型Name
+            传出DTO.Misc.单据类型Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.m_qPA">
+            <summary>
+            每装配件数量
+            传出DTO.Misc.每装配件数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.MO_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.MO">
+            <summary>
+            生产订单
+            传出DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.PLS_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.PLS">
+            <summary>
+            生产线日计划
+            传出DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.Product_SKey">
+            <summary>
+            品种或产品族 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.品种或产品族
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.Product">
+            <summary>
+            品种或产品族
+            传出DTO.Misc.品种或产品族
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.CostElement">
+            <summary>
+            成本要素
+            传出DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.ItemMaster">
+            <summary>
+            料品
+            传出DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.PickSupplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            传出DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.GetMFGIssueRationOutDTOData.PickSupplier">
+            <summary>
+            厂牌
+            传出DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetMFGIssueRationSrv.InvalidValueException">
+            <summary>
+            异常类型: 无效值异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.InvalidValueException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 无效值异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.InvalidValueException.#ctor">
+            <summary>
+            异常类型: 无效值异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMFGIssueRationSrv.InvalidValueException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 无效值异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData">
+            <summary>
+            生产外协成本取数参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            生产外协成本取数参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.OrgKey">
+            <summary>
+            组织
+            生产外协成本取数参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            生产外协成本取数参数DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.MOKey">
+            <summary>
+            生产订单
+            生产外协成本取数参数DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            生产外协成本取数参数DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.PLSKey">
+            <summary>
+            生产线日计划
+            生产外协成本取数参数DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.ItemKey_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            生产外协成本取数参数DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.ItemKey">
+            <summary>
+            料品
+            生产外协成本取数参数DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.SOBPeriodKey_SKey">
+            <summary>
+            账簿会计期间 序列化Key属性。（传递跨组织序列列字段）
+            生产外协成本取数参数DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.MOSubParamDTOData.SOBPeriodKey">
+            <summary>
+            账簿会计期间
+            生产外协成本取数参数DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData">
+            <summary>
+            生产外协成本取数结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.#ctor(System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_convertionCost">
+            <summary>
+            加工金额
+            生产外协成本取数结果DTO.Misc.加工金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_materialCost">
+            <summary>
+            材料金额
+            生产外协成本取数结果DTO.Misc.材料金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_iPV">
+            <summary>
+            加工单价
+            生产外协成本取数结果DTO.Misc.加工单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_mOID">
+            <summary>
+            生产订单
+            生产外协成本取数结果DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_pLSID">
+            <summary>
+            生产线日计划
+            生产外协成本取数结果DTO.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_itemMasterID">
+            <summary>
+            料品
+            生产外协成本取数结果DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_sOBPeriodID">
+            <summary>
+            账簿会计期间
+            生产外协成本取数结果DTO.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_costFieldID">
+            <summary>
+            成本域
+            生产外协成本取数结果DTO.Misc.成本域
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_mODeptID">
+            <summary>
+            生产订单部门
+            生产外协成本取数结果DTO.Misc.生产订单部门
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_pLSProductLine">
+            <summary>
+            日计划生产线
+            生产外协成本取数结果DTO.Misc.日计划生产线
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_uOM">
+            <summary>
+            成本单位
+            生产外协成本取数结果DTO.Misc.成本单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.MOCost.MOSubCostDTOData.m_qty">
+            <summary>
+            数量
+            生产外协成本取数结果DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData">
+            <summary>
+            传出DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_docTypeID">
+            <summary>
+            单据类型ID
+            传出DTO.单据类型.单据类型ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_docTypeCode">
+            <summary>
+            单据类型Code
+            传出DTO.单据类型.单据类型Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_docTypeName">
+            <summary>
+            单据类型名称
+            传出DTO.单据类型.单据类型名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_issueTXNType">
+            <summary>
+            领料单类型
+            传出DTO.单据类型.领料单类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_businessType">
+            <summary>
+            业务类型
+            传出DTO.业务类型.业务类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeOutDTOData.m_issueType">
+            <summary>
+            领料类别
+            传出DTO.单据类型.领料类别
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTOData">
+            <summary>
+            传入DIO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTOData.#ctor(System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            传入DIO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTOData.Org">
+            <summary>
+            组织
+            传入DIO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData">
+            <summary>
+            传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData.m_docNO">
+            <summary>
+            MO单号
+            传入DTO.Misc.MO单号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMOSrv.GetMOInDTOData.Org">
+            <summary>
+            组织
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetMOSrv.GetMOOutDTOData">
+            <summary>
+            传出DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMOSrv.GetMOOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetMOSrv.GetMOOutDTOData.#ctor(System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetMOSrv.GetMOOutDTOData.m_mOID">
+            <summary>
+            生产订单
+            传出DTO.Misc.生产订单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData">
+            <summary>
+            传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData.m_productLineCode">
+            <summary>
+            生产线Code
+            传入DTO.Misc.生产线Code
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetPLSSrv.GetPLSInDTOData.Org">
+            <summary>
+            组织
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetPLSSrv.GetPLSOutDTOData">
+            <summary>
+            传出DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetPLSSrv.GetPLSOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetPLSSrv.GetPLSOutDTOData.#ctor(System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetPLSSrv.GetPLSOutDTOData.m_pLSID">
+            <summary>
+            生产线ID
+            传出DTO.Misc.生产线ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.SOBExchRateInfoDTOData">
+            <summary>
+            SOB汇率信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.#ctor(System.Int64,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int64,System.Int64,System.Int32,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_doc">
+            <summary>
+            单据
+            SOB汇率信息DTO.Misc.单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_docNo">
+            <summary>
+            单据号
+            SOB汇率信息DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_docType">
+            <summary>
+            单据类型
+            SOB汇率信息DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_docLine">
+            <summary>
+            单据行
+            SOB汇率信息DTO.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_exchRateType">
+            <summary>
+            汇率类型
+            SOB汇率信息DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_exhcnageRate">
+            <summary>
+            汇率
+            SOB汇率信息DTO.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.m_amount">
+            <summary>
+            未匹配原值
+            SOB汇率信息DTO.Misc.未匹配原值
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            SOB汇率信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.Org">
+            <summary>
+            组织
+            SOB汇率信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            SOB汇率信息DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.SOB">
+            <summary>
+            账簿
+            SOB汇率信息DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            SOB汇率信息DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SOBExchRateInfoDTOData.Currency">
+            <summary>
+            币种
+            SOB汇率信息DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData">
+            <summary>
+            传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.#ctor(System.Int64,System.Collections.Generic.List{System.Int64},System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.m_period">
+            <summary>
+            会计期间
+            传入DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.m_lowLevelCode">
+            <summary>
+            低阶码
+            传入DTO.Misc.低阶码
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.Org">
+            <summary>
+            组织
+            传入DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.GetMFGIssueCostInDTOData.Period_SKey">
+            <summary>
+            会计期间 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            传入DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData">
+            <summary>
+            CA取资源成本参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.#ctor(System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.m_lowLevelCode">
+            <summary>
+            低阶码
+            CA取资源成本参数DTO.Misc.低阶码
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            CA取资源成本参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.Org">
+            <summary>
+            组织
+            CA取资源成本参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.Period_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            CA取资源成本参数DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOData.Period">
+            <summary>
+            会计期间
+            CA取资源成本参数DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.TempTableNameNullWhenGetResRptCostSVException">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的临时表名称空错误。
+            
+             取资源报告成本时，CA传入的临时表名称空错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.TempTableNameNullWhenGetResRptCostSVException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的临时表名称空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.TempTableNameNullWhenGetResRptCostSVException.#ctor">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的临时表名称空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.TempTableNameNullWhenGetResRptCostSVException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的临时表名称空错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.CalObjTypeValueNotRightWhenGetResRptCostSVException">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。
+            
+             取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CalObjTypeValueNotRightWhenGetResRptCostSVException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。 Constructor
+            </summary>
+            <param name="calObjType">核算对象类型</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CalObjTypeValueNotRightWhenGetResRptCostSVException.#ctor(System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。 Constructor
+            </summary>
+            <param name="calObjType">核算对象类型</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CalObjTypeValueNotRightWhenGetResRptCostSVException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。 Constructor
+            </summary>
+            <param name="calObjType">核算对象类型</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.CalObjTypeValueNotRightWhenGetResRptCostSVException.CalObjType">
+            <summary>
+            核算对象类型
+            取资源报告成本时，CA传入的核算对象类型数值[${CalObjType}]错误。.Misc.核算对象类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOOrgNullWhenGetResRptCostSVException">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中组织空错误。
+            
+             取资源报告成本时，传入的CA取资源成本参数DTO列表中组织空错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOOrgNullWhenGetResRptCostSVException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中组织空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOOrgNullWhenGetResRptCostSVException.#ctor">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中组织空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOOrgNullWhenGetResRptCostSVException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中组织空错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOPeriodNullWhenGetResRptCostSVException">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中会计期间空错误。
+            
+             取资源报告成本时，传入的CA取资源成本参数DTO列表中会计期间空错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOPeriodNullWhenGetResRptCostSVException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中会计期间空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOPeriodNullWhenGetResRptCostSVException.#ctor">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中会计期间空错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOPeriodNullWhenGetResRptCostSVException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中会计期间空错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOLowLevelNotRightWhenGetResRptCostSVException">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中低阶码数据不正确。
+            
+             取资源报告成本时，传入的CA取资源成本参数DTO列表中低阶码数据不正确。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOLowLevelNotRightWhenGetResRptCostSVException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中低阶码数据不正确。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOLowLevelNotRightWhenGetResRptCostSVException.#ctor">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中低阶码数据不正确。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.CAResRptCostParamDTOLowLevelNotRightWhenGetResRptCostSVException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取资源报告成本时，传入的CA取资源成本参数DTO列表中低阶码数据不正确。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.GetResRptCostSV.DataGenErrorWhenGetResRptCostSVException">
+            <summary>
+            异常类型: CA取资源报告成本时数据生成过程发生错误。
+            
+             CA取资源报告成本时数据生成过程发生错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.DataGenErrorWhenGetResRptCostSVException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: CA取资源报告成本时数据生成过程发生错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.DataGenErrorWhenGetResRptCostSVException.#ctor">
+            <summary>
+            异常类型: CA取资源报告成本时数据生成过程发生错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.GetResRptCostSV.DataGenErrorWhenGetResRptCostSVException.#ctor(System.Exception)">
+            <summary>
+            异常类型: CA取资源报告成本时数据生成过程发生错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData">
+            <summary>
+            订单间接费参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.m_cost">
+            <summary>
+            成本
+            订单间接费参数DTO.Misc.成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.m_updateMOIndirectCostParamDTO">
+            <summary>
+            更新间接费参数DTO
+            订单间接费参数DTO.Misc.更新间接费参数DTO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.MO_SKey">
+            <summary>
+            订单 序列化Key属性。（传递跨组织序列列字段）
+            订单间接费参数DTO.Misc.订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.MO">
+            <summary>
+            订单
+            订单间接费参数DTO.Misc.订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.PLS_SKey">
+            <summary>
+            日计划 序列化Key属性。（传递跨组织序列列字段）
+            订单间接费参数DTO.Misc.日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.PLS">
+            <summary>
+            日计划
+            订单间接费参数DTO.Misc.日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            订单间接费参数DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.SOB">
+            <summary>
+            账簿
+            订单间接费参数DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            订单间接费参数DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.CostElement">
+            <summary>
+            成本要素
+            订单间接费参数DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            订单间接费参数DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData.CostType">
+            <summary>
+            成本类型
+            订单间接费参数DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData">
+            <summary>
+            更新间接费参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.MOCost.ForCASV.MOIndirectCostParamDTOData},System.Boolean,System.DateTime,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.m_dTOList">
+            <summary>
+            订单间接费参数DTO
+            更新间接费参数DTO.Misc.订单间接费参数DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.m_cancelUpdate">
+            <summary>
+            是否取消成本
+            更新间接费参数DTO.Misc.是否取消成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.m_allocDate">
+            <summary>
+            分配日期
+            更新间接费参数DTO.Misc.分配日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.m_tempTableName">
+            <summary>
+            数据表名
+            更新间接费参数DTO.Misc.数据表名
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.Period_SKey">
+            <summary>
+            处理期间 序列化Key属性。（传递跨组织序列列字段）
+            更新间接费参数DTO.Misc.处理期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTOData.Period">
+            <summary>
+            处理期间
+            更新间接费参数DTO.Misc.处理期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData">
+            <summary>
+            更新资源成本入口参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.#ctor(System.Int64,System.Int64,System.Collections.Generic.List{UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.m_dTOList">
+            <summary>
+            资源成本DTO集合
+            更新资源成本入口参数DTO.Misc.资源成本DTO集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本入口参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.Org">
+            <summary>
+            组织
+            更新资源成本入口参数DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.SOBPeriod_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本入口参数DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData.SOBPeriod">
+            <summary>
+            会计期间
+            更新资源成本入口参数DTO.Misc.会计期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData">
+            <summary>
+            更新资源成本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.CostData,UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.m_tCost">
+            <summary>
+            分摊成本
+            更新资源成本DTO.Misc.分摊成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.m_updateResCostInParamDTO">
+            <summary>
+            更新资源成本入口参数DTO
+            更新资源成本DTO.Misc.更新资源成本入口参数DTO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromDepartment_SKey">
+            <summary>
+            来源部门 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本DTO.Misc.来源部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromDepartment">
+            <summary>
+            来源部门
+            更新资源成本DTO.Misc.来源部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromProductLine_SKey">
+            <summary>
+            来源生产线 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本DTO.Misc.来源生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromProductLine">
+            <summary>
+            来源生产线
+            更新资源成本DTO.Misc.来源生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromWorkCenter_SKey">
+            <summary>
+            来源工作中心 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本DTO.Misc.来源工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.FromWorkCenter">
+            <summary>
+            来源工作中心
+            更新资源成本DTO.Misc.来源工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.CostEle_SKey">
+            <summary>
+            来源成本要素 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本DTO.Misc.来源成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.CostEle">
+            <summary>
+            来源成本要素
+            更新资源成本DTO.Misc.来源成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.Res_SKey">
+            <summary>
+            资源 序列化Key属性。（传递跨组织序列列字段）
+            更新资源成本DTO.Misc.资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.UpdateResourceCostDTOData.Res">
+            <summary>
+            资源
+            更新资源成本DTO.Misc.资源
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.CA_P_MOIndirectCostSetHandleException">
+            <summary>
+            异常类型: 存储过程[CA_P_MOIndirectCostSet]执行过程错误。
+            
+             存储过程[CA_P_MOIndirectCostSet]执行过程错误。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.CA_P_MOIndirectCostSetHandleException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存储过程[CA_P_MOIndirectCostSet]执行过程错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.CA_P_MOIndirectCostSetHandleException.#ctor">
+            <summary>
+            异常类型: 存储过程[CA_P_MOIndirectCostSet]执行过程错误。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.CA_P_MOIndirectCostSetHandleException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 存储过程[CA_P_MOIndirectCostSet]执行过程错误。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.WorkCenterListNullWhenCAUpdateResourceCostException">
+            <summary>
+            异常类型: CA更新资源成本时，工作中心列表数据空。
+            
+             CA更新资源成本时，工作中心列表数据空。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.WorkCenterListNullWhenCAUpdateResourceCostException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: CA更新资源成本时，工作中心列表数据空。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.WorkCenterListNullWhenCAUpdateResourceCostException.#ctor">
+            <summary>
+            异常类型: CA更新资源成本时，工作中心列表数据空。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.WorkCenterListNullWhenCAUpdateResourceCostException.#ctor(System.Exception)">
+            <summary>
+            异常类型: CA更新资源成本时，工作中心列表数据空。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ForCASV.TransResUseTotalQtyZeroWhenCAUpdateResourceCostException">
+            <summary>
+            异常类型: CA更新资源成本时，资源总用量为零。
+            
+             CA更新资源成本时，资源总用量为零。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.TransResUseTotalQtyZeroWhenCAUpdateResourceCostException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: CA更新资源成本时，资源总用量为零。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.TransResUseTotalQtyZeroWhenCAUpdateResourceCostException.#ctor">
+            <summary>
+            异常类型: CA更新资源成本时，资源总用量为零。 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ForCASV.TransResUseTotalQtyZeroWhenCAUpdateResourceCostException.#ctor(System.Exception)">
+            <summary>
+            异常类型: CA更新资源成本时，资源总用量为零。 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData">
+            <summary>
+            期末处理输入参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.#ctor(System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.m_isPositive">
+            <summary>
+            月结方向
+            期末处理输入参数.Misc.月结方向
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.m_mO">
+            <summary>
+            生产订单
+            期末处理输入参数.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.m_pLS">
+            <summary>
+            日计划
+            期末处理输入参数.Misc.日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            期末处理输入参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.Org">
+            <summary>
+            组织
+            期末处理输入参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.Period_SKey">
+            <summary>
+            期间 序列化Key属性。（传递跨组织序列列字段）
+            期末处理输入参数.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.Period">
+            <summary>
+            期间
+            期末处理输入参数.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.NextPeriod_SKey">
+            <summary>
+            下个期间 序列化Key属性。（传递跨组织序列列字段）
+            期末处理输入参数.Misc.下个期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.InParamDTOData.NextPeriod">
+            <summary>
+            下个期间
+            期末处理输入参数.Misc.下个期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MO.MOCostSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MO.MOCostSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MO.MOCostSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>
