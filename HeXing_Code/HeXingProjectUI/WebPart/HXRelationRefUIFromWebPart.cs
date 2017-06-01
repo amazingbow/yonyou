@@ -102,12 +102,6 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         IUFCard Card1;
         IUFButton BtnClose;
         IUFButton BtnOk;
-        IUFLabel lblRefCode0;
-        IUFFldTextBox RefCode0;
-        IUFLabel lblRefName0;
-        IUFFldTextBox RefName0;
-        IUFLabel lblRefID0;
-        IUFFldNumberControl RefID0;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -147,7 +141,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			this.BtnOk.Click += new EventHandler(BtnOk_Click);		
 						
 
-			
+		
 			//Grid控件的分页事件				
 			((UFWebDataGridAdapter)this.DataGrid).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid_GridMakePageEventHandler);
              //Grid控件的客户化筛选，定位事件
@@ -248,9 +242,9 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
         private void CreateFormChildControls()
         {
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"HXRelationRefUIFrom",true,632,376);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 8, 0, 10, 10, 10, 10, 10);
-			InitViewBindingContainer(this, _panel,  this.Model.HXRelationRefShowView, "HXRelationRefShowView", "", null, 1, "HXRelationRefShowView");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(610,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(320,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 2, 0, 10, 10, 10, 10, 10);
+			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(610,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(320,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -275,61 +269,8 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 			UIControlBuilder.BuilderUFControl(this.Card1, "2");		
 
 
-				this.lblRefCode0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefCode0", "", "True", "True", "Right", 610, 20, 0, 2, 1, 1, "100","672ec275-b9dd-495e-a5a7-57c258977cbf","625f07ea-7ba8-4b83-860d-0161e1ddc004");
-
-
-								
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblRefCode0, "3");		
-
-
-				this.RefCode0 = UIControlBuilder.BuilderTextBox(_panel, "RefCode0", "True", "True", "True", "False", "Left", 0, 60, 0, 610, 20, 0, 3, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblRefCode0","","50","672ec275-b9dd-495e-a5a7-57c258977cbf","5fabfa7c-d524-47da-b409-73467e66823c");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefCode0, "False", "RefCode", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefCode, "HXRelationRefShowView");
-
-
-		
-			UIControlBuilder.BuilderUFControl(this.RefCode0, "4");		
-		 
-
-				this.lblRefName0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefName0", "", "True", "True", "Right", 610, 20, 0, 4, 1, 1, "100","35332702-30aa-4a7c-9f06-c2c5afd06282","08f15afb-610c-42b4-be77-f8a98c06caef");
-
-
-								
-
-		
-			UIControlBuilder.BuilderUFControl(this.lblRefName0, "5");		
-
-
-				this.RefName0 = UIControlBuilder.BuilderTextBox(_panel, "RefName0", "True", "True", "True", "False", "Left", 0, 60, 0, 610, 20, 0, 5, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblRefName0","","50","35332702-30aa-4a7c-9f06-c2c5afd06282","221e73fa-0fe0-4feb-a12c-a6e4922a73c6");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefName0, "False", "RefName", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefName, "HXRelationRefShowView");
-
-
-		
-			UIControlBuilder.BuilderUFControl(this.RefName0, "6");		
-		 
-
-				this.lblRefID0 = UIControlBuilder.BuilderUFLabel(_panel, "lblRefID0", "", "True", "True", "Right", 610, 20, 0, 6, 1, 1, "100","f558de5a-12f3-46c7-a894-99ee018253d3","d1312502-f750-4a0b-91aa-cf69a46216c9");
-
-
-								
-
-		
-			UIControlBuilder.BuilderUFControl(this.lblRefID0, "7");		
-
-
-				this.RefID0 = UIControlBuilder.BuilderNumberControl(_panel, "RefID0", "True", "True", "True", "Left", 7, 60, 0, 610, 20, 0, 7, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
-			,TextAlign.Right,0,true,false,true,"lblRefID0","19.0","f558de5a-12f3-46c7-a894-99ee018253d3","70dcc542-276d-4e88-9bdd-34f203a72bee",null,null,null, null);
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.RefID0, "False", "RefID", this.Model.HXRelationRefShowView, this.Model.HXRelationRefShowView.FieldRefID, "HXRelationRefShowView");
-	
-		
-			UIControlBuilder.BuilderUFControl(this.RefID0, "8");		
-		 
-
-
-								
      
 			
 			

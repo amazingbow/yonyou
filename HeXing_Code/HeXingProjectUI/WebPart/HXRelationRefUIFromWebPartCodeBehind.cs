@@ -216,7 +216,7 @@ namespace UFIDA.U9.Cust.HeXingProjectUI.HXRelationRefUIModel
 		}
 
 		#endregion 
-			
+		
         #region Grid控件DataGrid的分页事件	
         void UFGridDataGrid_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
         {
