@@ -245,7 +245,10 @@
                         }
                     }
                     Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
-                    successVoucher.CreatedBy
+                    successVoucher.CreatedBy = item.SapCreater;
+                    successVoucher.Auditor = item.SapAuditor;
+                    successVoucher.Poster = item.SapPoster;
+                    //successVoucher.Cashier = item.SapCashier;
                     session.Commit();
                 }
             }
