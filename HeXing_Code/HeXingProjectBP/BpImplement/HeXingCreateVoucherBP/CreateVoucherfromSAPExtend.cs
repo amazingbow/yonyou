@@ -244,6 +244,8 @@
                             item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         }
                     }
+                    Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
+                    successVoucher.CreatedBy
                     session.Commit();
                 }
             }
@@ -362,7 +364,7 @@
             dto.PostedPeriod = voucher.PostedPeriod.ToString().Insert(4, "-");
             //附单据数
             dto.AttachmentCount = 0;
-            
+
             return dto;
         }
         private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry,
