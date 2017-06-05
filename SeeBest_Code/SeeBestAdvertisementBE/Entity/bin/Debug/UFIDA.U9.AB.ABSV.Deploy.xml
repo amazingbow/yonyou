@@ -1,0 +1,2300 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.AB.ABSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData">
+            <summary>
+            单据行自动取消保留DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.m_lineID">
+            <summary>
+            单据行标识
+            单据行自动取消保留DTO.Misc.单据行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.m_money">
+            <summary>
+            金额
+            单据行自动取消保留DTO.Misc.金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.m_dealDocIndex">
+            <summary>
+            处理单线索
+            单据行自动取消保留DTO.Misc.处理单线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.m_fCMoney">
+            <summary>
+            本币金额
+            单据行自动取消保留DTO.Misc.本币金额
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            单据行自动取消保留DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.Org">
+            <summary>
+            组织
+            单据行自动取消保留DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.PostPeriod_SKey">
+            <summary>
+            记账期间 序列化Key属性。（传递跨组织序列列字段）
+            单据行自动取消保留DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.DocLineCancelEncumbDTOData.PostPeriod">
+            <summary>
+            记账期间
+            单据行自动取消保留DTO.Misc.记账期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.CancelCarryForwardException">
+            <summary>
+            异常类型: 取消月结结转下期金额不足异常
+            
+             取消期间[${ControlPeriod}]月结，控制科目[${ControlObject}]在下期的可执行金额不足以结转到本期，不能取消本期结转
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CancelCarryForwardException.#ctor(System.String,System.Int32,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取消月结结转下期金额不足异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="controlPeriod">控制周期</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CancelCarryForwardException.#ctor(System.String,System.Int32)">
+            <summary>
+            异常类型: 取消月结结转下期金额不足异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="controlPeriod">控制周期</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CancelCarryForwardException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>
+            异常类型: 取消月结结转下期金额不足异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="controlPeriod">控制周期</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.CancelCarryForwardException.ControlObject">
+            <summary>
+            控制对象
+            取消月结结转下期金额不足异常.Misc.控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.CancelCarryForwardException.ControlPeriod">
+            <summary>
+            控制周期
+            取消月结结转下期金额不足异常.Misc.控制周期
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException">
+            <summary>
+            异常类型: 凭证专项非法异常
+            
+             科目[${BudgetObject}]在期间[${BudgetPeriod}]上没有预算专项[${SpecialProject}]
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证专项非法异常 Constructor
+            </summary>
+            <param name="budgetObject">预算对象</param>
+            <param name="budgetPeriod">预算周期</param>
+            <param name="specialProject">预算专项</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            异常类型: 凭证专项非法异常 Constructor
+            </summary>
+            <param name="budgetObject">预算对象</param>
+            <param name="budgetPeriod">预算周期</param>
+            <param name="specialProject">预算专项</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 凭证专项非法异常 Constructor
+            </summary>
+            <param name="budgetObject">预算对象</param>
+            <param name="budgetPeriod">预算周期</param>
+            <param name="specialProject">预算专项</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.BudgetObject">
+            <summary>
+            预算对象
+            凭证专项非法异常.Misc.预算对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.BudgetPeriod">
+            <summary>
+            预算周期
+            凭证专项非法异常.Misc.预算周期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherSpecialProjectInvalidException.SpecialProject">
+            <summary>
+            预算专项
+            凭证专项非法异常.Misc.预算专项
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException">
+            <summary>
+            异常类型: 凭证保留专项不匹配异常
+            
+             凭证上的专项[${VSpecialProject}]与指定的预算保留的专项[${ESpecialProject}]不匹配
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证保留专项不匹配异常 Constructor
+            </summary>
+            <param name="vSpecialProject">凭证专项</param>
+            <param name="eSpecialProject">保留专项</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 凭证保留专项不匹配异常 Constructor
+            </summary>
+            <param name="vSpecialProject">凭证专项</param>
+            <param name="eSpecialProject">保留专项</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 凭证保留专项不匹配异常 Constructor
+            </summary>
+            <param name="vSpecialProject">凭证专项</param>
+            <param name="eSpecialProject">保留专项</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException.VSpecialProject">
+            <summary>
+            凭证专项
+            凭证保留专项不匹配异常.Misc.凭证专项
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbSpecialProjectNotMatchException.ESpecialProject">
+            <summary>
+            保留专项
+            凭证保留专项不匹配异常.Misc.保留专项
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException">
+            <summary>
+            异常类型: 凭证执行保留超额异常
+            
+             凭证执行保留超额，凭证执行保留金额：${VoucherExeEncumbMoney}，${EncumbItem}：${EncumbItemValue}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.#ctor(System.Decimal,System.String,System.Decimal,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证执行保留超额异常 Constructor
+            </summary>
+            <param name="voucherExeEncumbMoney">凭证执行保留金额</param>
+            <param name="encumbItem">保留项</param>
+            <param name="encumbItemValue">保留项值</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.#ctor(System.Decimal,System.String,System.Decimal)">
+            <summary>
+            异常类型: 凭证执行保留超额异常 Constructor
+            </summary>
+            <param name="voucherExeEncumbMoney">凭证执行保留金额</param>
+            <param name="encumbItem">保留项</param>
+            <param name="encumbItemValue">保留项值</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.#ctor(System.Decimal,System.String,System.Decimal,System.Exception)">
+            <summary>
+            异常类型: 凭证执行保留超额异常 Constructor
+            </summary>
+            <param name="voucherExeEncumbMoney">凭证执行保留金额</param>
+            <param name="encumbItem">保留项</param>
+            <param name="encumbItemValue">保留项值</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.VoucherExeEncumbMoney">
+            <summary>
+            凭证执行保留金额
+            凭证执行保留超额异常.Misc.凭证执行保留金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.EncumbItem">
+            <summary>
+            保留项
+            凭证执行保留超额异常.Misc.保留项
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherExeEncumbExcessException.EncumbItemValue">
+            <summary>
+            保留项值
+            凭证执行保留超额异常.Misc.保留项值
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException">
+            <summary>
+            异常类型: 凭证信息与保留信息不匹配异常
+            
+             凭证上的科目与期间与保留线索上的信息不匹配，凭证的控制科目：${VControlObject}，控制周期：${VControlPeriod}；保留线索的控制科目：${EControlObject}，控制周期：${EControlPeriod}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.#ctor(System.String,System.Int32,System.String,System.Int32,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证信息与保留信息不匹配异常 Constructor
+            </summary>
+            <param name="vControlObject">凭证控制对象</param>
+            <param name="vControlPeriod">凭证控制周期</param>
+            <param name="eControlObject">保留控制对象</param>
+            <param name="eControlPeriod">保留控制周期</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.#ctor(System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            异常类型: 凭证信息与保留信息不匹配异常 Constructor
+            </summary>
+            <param name="vControlObject">凭证控制对象</param>
+            <param name="vControlPeriod">凭证控制周期</param>
+            <param name="eControlObject">保留控制对象</param>
+            <param name="eControlPeriod">保留控制周期</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.#ctor(System.String,System.Int32,System.String,System.Int32,System.Exception)">
+            <summary>
+            异常类型: 凭证信息与保留信息不匹配异常 Constructor
+            </summary>
+            <param name="vControlObject">凭证控制对象</param>
+            <param name="vControlPeriod">凭证控制周期</param>
+            <param name="eControlObject">保留控制对象</param>
+            <param name="eControlPeriod">保留控制周期</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.VControlObject">
+            <summary>
+            凭证控制对象
+            凭证信息与保留信息不匹配异常.Misc.凭证控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.VControlPeriod">
+            <summary>
+            凭证控制周期
+            凭证信息与保留信息不匹配异常.Misc.凭证控制周期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.EControlObject">
+            <summary>
+            保留控制对象
+            凭证信息与保留信息不匹配异常.Misc.保留控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.VoucherEncumbInfoNotMatchException.EControlPeriod">
+            <summary>
+            保留控制周期
+            凭证信息与保留信息不匹配异常.Misc.保留控制周期
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException">
+            <summary>
+            异常类型: 凭证币种与预算保留币种不一致异常
+            
+             凭证币种[${VoucherCur}]与预算保留币种[${EncumbCur}]不一致,不能执行保留
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证币种与预算保留币种不一致异常 Constructor
+            </summary>
+            <param name="voucherCur">凭证币种</param>
+            <param name="encumbCur">保留币种</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 凭证币种与预算保留币种不一致异常 Constructor
+            </summary>
+            <param name="voucherCur">凭证币种</param>
+            <param name="encumbCur">保留币种</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 凭证币种与预算保留币种不一致异常 Constructor
+            </summary>
+            <param name="voucherCur">凭证币种</param>
+            <param name="encumbCur">保留币种</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException.VoucherCur">
+            <summary>
+            凭证币种
+            凭证币种与预算保留币种不一致异常.Misc.凭证币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.CurrencyNotMatchException.EncumbCur">
+            <summary>
+            保留币种
+            凭证币种与预算保留币种不一致异常.Misc.保留币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.EncumbVoucherNotApprovedException">
+            <summary>
+            异常类型: 保留凭证未审核异常
+            
+             保留凭证${DocNum}未审核,不能结转
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EncumbVoucherNotApprovedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 保留凭证未审核异常 Constructor
+            </summary>
+            <param name="docNum">凭证号</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EncumbVoucherNotApprovedException.#ctor(System.String)">
+            <summary>
+            异常类型: 保留凭证未审核异常 Constructor
+            </summary>
+            <param name="docNum">凭证号</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EncumbVoucherNotApprovedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 保留凭证未审核异常 Constructor
+            </summary>
+            <param name="docNum">凭证号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.EncumbVoucherNotApprovedException.DocNum">
+            <summary>
+            凭证号
+            保留凭证未审核异常.Misc.凭证号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.EntrySpecialProjectNullException">
+            <summary>
+            异常类型: 分录预算专项为空异常
+            
+             分录预算专项为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EntrySpecialProjectNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分录预算专项为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EntrySpecialProjectNullException.#ctor">
+            <summary>
+            异常类型: 分录预算专项为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.EntrySpecialProjectNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分录预算专项为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.GLBudget.ExeEncumbDataNotFindException">
+            <summary>
+            异常类型: 没有找到执行保留执行数据
+            
+             没有找到执行保留的执行数据!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.ExeEncumbDataNotFindException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到执行保留执行数据 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.ExeEncumbDataNotFindException.#ctor">
+            <summary>
+            异常类型: 没有找到执行保留执行数据 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.GLBudget.ExeEncumbDataNotFindException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有找到执行保留执行数据 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData">
+            <summary>
+            单据保留保存DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.#ctor(System.Int64,System.Int64,System.String,System.Int64,System.Int32,System.Int32,System.DateTime,System.String,System.Int32,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_docHead">
+            <summary>
+            单据头
+            单据保留保存DTO.Misc.单据头
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_docHeadCode">
+            <summary>
+            单据头编码
+            单据保留保存DTO.Misc.单据头编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_docLine">
+            <summary>
+            单据行
+            单据保留保存DTO.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_docLineNum">
+            <summary>
+            单据行号
+            单据保留保存DTO.Misc.单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_sourceDocType">
+            <summary>
+            来源单据类别
+            单据保留保存DTO.Misc.来源单据类别
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_businessDate">
+            <summary>
+            业务日期
+            单据保留保存DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_digest">
+            <summary>
+            摘要
+            单据保留保存DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_encumbMode">
+            <summary>
+            保留方式
+            单据保留保存DTO.Misc.保留方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_encumbPhase">
+            <summary>
+            保留环节
+            单据保留保存DTO.Misc.保留环节
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_money">
+            <summary>
+            原币金额
+            单据保留保存DTO.Misc.原币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.m_aPMatchClue">
+            <summary>
+            匹配单行
+            单据保留保存DTO.Misc.匹配单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SOB">
+            <summary>
+            账簿
+            单据保留保存DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SourceEncumbVoucherIndex_SKey">
+            <summary>
+            来源保留凭证线索 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.来源保留凭证线索
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SourceEncumbVoucherIndex">
+            <summary>
+            来源保留凭证线索
+            单据保留保存DTO.Misc.来源保留凭证线索
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ControlObject_SKey">
+            <summary>
+            预算控制对象 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.预算控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ControlObject">
+            <summary>
+            预算控制对象
+            单据保留保存DTO.Misc.预算控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SpecialProject_SKey">
+            <summary>
+            预算专项 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.SpecialProject">
+            <summary>
+            预算专项
+            单据保留保存DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ControlPeriod_SKey">
+            <summary>
+            预算控制周期 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.预算控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ControlPeriod">
+            <summary>
+            预算控制周期
+            单据保留保存DTO.Misc.预算控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ID_SKey">
+            <summary>
+            预算单据保留数据 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.预算单据保留数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.ID">
+            <summary>
+            预算单据保留数据
+            单据保留保存DTO.Misc.预算单据保留数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.OCCurrency_SKey">
+            <summary>
+            原币币种 序列化Key属性。（传递跨组织序列列字段）
+            单据保留保存DTO.Misc.原币币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOData.OCCurrency">
+            <summary>
+            原币币种
+            单据保留保存DTO.Misc.原币币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData">
+            <summary>
+            单据保留加载DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.#ctor(System.Int64,System.String,System.Int64,System.Int32,System.Int32,System.DateTime,System.Int32,System.String,System.Int32,System.Int32,System.Int64,System.Int32,System.Int64,System.Int32,System.Int64,System.String,System.String,System.Int64,System.String,System.String,System.Int64,System.Int32,System.Int64,System.String,System.Int32,System.Int64,System.String,System.Int32,System.Decimal,System.Decimal,System.String,System.String,System.Int64,System.String,System.Int64,System.String,System.Int64,System.Int64,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.Int64,System.String,System.String,System.Boolean,System.Int64,System.String,System.String,System.Int64,System.Int64,System.String,System.String,System.Int64,System.Decimal,System.Int64,UFIDA.U9.Base.PropertyTypes.RoundData,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_docHead">
+            <summary>
+            单据头
+            单据保留加载DTO.Misc.单据头
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_docHeadCode">
+            <summary>
+            单据头编码
+            单据保留加载DTO.Misc.单据头编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_docLine">
+            <summary>
+            单据行
+            单据保留加载DTO.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_docLineNum">
+            <summary>
+            单据行号
+            单据保留加载DTO.Misc.单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocType">
+            <summary>
+            来源单据类别
+            单据保留加载DTO.Misc.来源单据类别
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_businessDate">
+            <summary>
+            业务日期
+            单据保留加载DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbLineNum">
+            <summary>
+            保留行号
+            单据保留加载DTO.Misc.保留行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_digest">
+            <summary>
+            摘要
+            单据保留加载DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbMode">
+            <summary>
+            保留方式
+            单据保留加载DTO.Misc.保留方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbPhase">
+            <summary>
+            保留环节
+            单据保留加载DTO.Misc.保留环节
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbVoucherIndex">
+            <summary>
+            保留凭证线索
+            单据保留加载DTO.Misc.保留凭证线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbVoucherIndexNum">
+            <summary>
+            保留凭证线索编号
+            单据保留加载DTO.Misc.保留凭证线索编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceEncumbVoucherIndex">
+            <summary>
+            来源保留凭证线索
+            单据保留加载DTO.Misc.来源保留凭证线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceEncumbVoucherIndexNum">
+            <summary>
+            来源保留凭证线索编号
+            单据保留加载DTO.Misc.来源保留凭证线索编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_controlObjectCode">
+            <summary>
+            控制对象编码
+            单据保留加载DTO.Misc.控制对象编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_controlObjectName">
+            <summary>
+            控制对象名称
+            单据保留加载DTO.Misc.控制对象名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_specialProjectCode">
+            <summary>
+            预算专项编码
+            单据保留加载DTO.Misc.预算专项编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_specialProjectName">
+            <summary>
+            预算专项名称
+            单据保留加载DTO.Misc.预算专项名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_controlPeriodNum">
+            <summary>
+            控制周期编号
+            单据保留加载DTO.Misc.控制周期编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_beginAccPeriodCode">
+            <summary>
+            开始会计期间编号
+            单据保留加载DTO.Misc.开始会计期间编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_beginAccPeriodNumber">
+            <summary>
+            开始会计期间顺序号
+            单据保留加载DTO.Misc.开始会计期间顺序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_endAccPeriodCode">
+            <summary>
+            结束会计期间编号
+            单据保留加载DTO.Misc.结束会计期间编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_endAccPeriodNumber">
+            <summary>
+            结束会计期间顺序号
+            单据保留加载DTO.Misc.结束会计期间顺序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_money">
+            <summary>
+            原币金额
+            单据保留加载DTO.Misc.原币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_balance">
+            <summary>
+            余额
+            单据保留加载DTO.Misc.余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_beginAccPeriodDisplayName">
+            <summary>
+            开始会计期间显示名称
+            单据保留加载DTO.Misc.开始会计期间显示名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_endAccPeriodDisplayName">
+            <summary>
+            结束会计期间显示名称
+            单据保留加载DTO.Misc.结束会计期间显示名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbVoucherDocNo">
+            <summary>
+            保留凭证单据编号
+            单据保留加载DTO.Misc.保留凭证单据编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_encumbVoucherID">
+            <summary>
+            保留凭证单据ID
+            单据保留加载DTO.Misc.保留凭证单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceEncumbVoucherDocNo">
+            <summary>
+            来源保留单据编号
+            单据保留加载DTO.Misc.来源保留单据编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceEncumbVoucherID">
+            <summary>
+            来源保留单据ID
+            单据保留加载DTO.Misc.来源保留单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocIndex">
+            <summary>
+            来源单据线索
+            单据保留加载DTO.Misc.来源单据线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocEncumbIndex">
+            <summary>
+            来源单据保留线索
+            单据保留加载DTO.Misc.来源单据保留线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_replaceMoney">
+            <summary>
+            被替代金额
+            单据保留加载DTO.Misc.被替代金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_cancelMoney">
+            <summary>
+            被取消金额
+            单据保留加载DTO.Misc.被取消金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_executeMoney">
+            <summary>
+            被执行金额
+            单据保留加载DTO.Misc.被执行金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocNO">
+            <summary>
+            来源单据号
+            单据保留加载DTO.Misc.来源单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocLineIndex">
+            <summary>
+            来源单据行线索
+            单据保留加载DTO.Misc.来源单据行线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sourceDocLineNum">
+            <summary>
+            来源单据行号
+            单据保留加载DTO.Misc.来源单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_year">
+            <summary>
+            预算年度
+            单据保留加载DTO.Misc.预算年度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_executePhase">
+            <summary>
+            执行环节
+            单据保留加载DTO.Misc.执行环节
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_currencyID">
+            <summary>
+            币种ID
+            单据保留加载DTO.Misc.币种ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_currencyCode">
+            <summary>
+            币种Code
+            单据保留加载DTO.Misc.币种Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_currencyName">
+            <summary>
+            币种名称
+            单据保留加载DTO.Misc.币种名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_isFCControl">
+            <summary>
+            本币控制
+            单据保留加载DTO.Misc.本币控制
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sOBID">
+            <summary>
+            账簿ID
+            单据保留加载DTO.Misc.账簿ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sOBCode">
+            <summary>
+            账簿Code
+            单据保留加载DTO.Misc.账簿Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_sOBName">
+            <summary>
+            账簿名称
+            单据保留加载DTO.Misc.账簿名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_dealDocIndex">
+            <summary>
+            处理单线索
+            单据保留加载DTO.Misc.处理单线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_ctlSchemeID">
+            <summary>
+            预算控制方案
+            单据保留加载DTO.Misc.预算控制方案
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_ctlSchemeCode">
+            <summary>
+            预算控制方案编码
+            单据保留加载DTO.Misc.预算控制方案编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_ctlSchemeName">
+            <summary>
+            预算控制方案名称
+            单据保留加载DTO.Misc.预算控制方案名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_yearID">
+            <summary>
+            预算年度ID
+            单据保留加载DTO.Misc.预算年度ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_accesableMoney">
+            <summary>
+            可执行原币金额
+            单据保留加载DTO.Misc.可执行原币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_aPMatchClue">
+            <summary>
+            匹配单行
+            单据保留加载DTO.Misc.匹配单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_currencyMoneyRound">
+            <summary>
+            精度
+            单据保留加载DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.m_currencySymbol">
+            <summary>
+            货币符号
+            单据保留加载DTO.Misc.货币符号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ControlObject_SKey">
+            <summary>
+            控制对象 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ControlObject">
+            <summary>
+            控制对象
+            单据保留加载DTO.Misc.控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.SpecialProject_SKey">
+            <summary>
+            预算专项 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.SpecialProject">
+            <summary>
+            预算专项
+            单据保留加载DTO.Misc.预算专项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ControlPeriod_SKey">
+            <summary>
+            控制周期 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ControlPeriod">
+            <summary>
+            控制周期
+            单据保留加载DTO.Misc.控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.BeginAccPeriod_SKey">
+            <summary>
+            开始会计期间 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.开始会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.BeginAccPeriod">
+            <summary>
+            开始会计期间
+            单据保留加载DTO.Misc.开始会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.EndAccPeriod_SKey">
+            <summary>
+            结束会计期间 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.结束会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.EndAccPeriod">
+            <summary>
+            结束会计期间
+            单据保留加载DTO.Misc.结束会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ID_SKey">
+            <summary>
+            预算单据保留数据 序列化Key属性。（传递跨组织序列列字段）
+            单据保留加载DTO.Misc.预算单据保留数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbLoadDTOData.ID">
+            <summary>
+            预算单据保留数据
+            单据保留加载DTO.Misc.预算单据保留数据
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData">
+            <summary>
+            单据预算保留执行/取消DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.#ctor(System.Int64,System.Decimal,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.m_money">
+            <summary>
+            金额
+            单据预算保留执行/取消DTO.Misc.金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.m_digst">
+            <summary>
+            摘要
+            单据预算保留执行/取消DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.DocEncumbData_SKey">
+            <summary>
+            单据预算保留数据 序列化Key属性。（传递跨组织序列列字段）
+            单据预算保留执行/取消DTO.Misc.单据预算保留数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.DocEncumbData">
+            <summary>
+            单据预算保留数据
+            单据预算保留执行/取消DTO.Misc.单据预算保留数据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.OCCurrency_SKey">
+            <summary>
+            原币币种 序列化Key属性。（传递跨组织序列列字段）
+            单据预算保留执行/取消DTO.Misc.原币币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.DocEncumbExecuteOrCancelDTOData.OCCurrency">
+            <summary>
+            原币币种
+            单据预算保留执行/取消DTO.Misc.原币币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData">
+            <summary>
+            预算控制周期DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.#ctor(System.String,System.Int32,System.String,System.Int64,System.String,System.Int32,System.String,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_startAccPeriodCode">
+            <summary>
+            开始会计期间编码
+            预算控制周期DTO.Misc.开始会计期间编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_startAccPeriodNumber">
+            <summary>
+            开始会计期间号
+            预算控制周期DTO.Misc.开始会计期间号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_startAccPeriodDisplayName">
+            <summary>
+            开始会计期间显示名
+            预算控制周期DTO.Misc.开始会计期间显示名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_startAccPeriodID">
+            <summary>
+            开始会计期间ID
+            预算控制周期DTO.Misc.开始会计期间ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_endAccPeriodCode">
+            <summary>
+            结束会计期间编码
+            预算控制周期DTO.Misc.结束会计期间编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_endAccPeriodNumber">
+            <summary>
+            结束会计期间号
+            预算控制周期DTO.Misc.结束会计期间号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_endAccPeriodDisplayName">
+            <summary>
+            结束会计期间显示名
+            预算控制周期DTO.Misc.结束会计期间显示名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_endAccPeriodID">
+            <summary>
+            结束会计期间ID
+            预算控制周期DTO.Misc.结束会计期间ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_iD">
+            <summary>
+            ID
+            预算控制周期DTO.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BudgetCtlPeriodDTOData.m_number">
+            <summary>
+            Number
+            预算控制周期DTO.Misc.Number
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData">
+            <summary>
+            自动保留DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.#ctor(System.Int64,System.Int64,System.DateTime,System.Int64,System.Int64,System.Decimal,System.String,System.Int32,System.Int64,System.String,System.Int64,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Boolean,System.Boolean,System.Boolean,UFIDA.U9.CBO.SCM.Item.ItemInfoData,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_businessDate">
+            <summary>
+            业务日期
+            自动保留DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_oFRate">
+            <summary>
+            原币对本币汇率
+            自动保留DTO.Misc.原币对本币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_digest">
+            <summary>
+            摘要
+            自动保留DTO.Misc.摘要
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_docType">
+            <summary>
+            单据类别
+            自动保留DTO.Misc.单据类别
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_docTag">
+            <summary>
+            单据标识
+            自动保留DTO.Misc.单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_docNo">
+            <summary>
+            单据号
+            自动保留DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_docLineTag">
+            <summary>
+            单据数据标识
+            自动保留DTO.Misc.单据数据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_docLineNo">
+            <summary>
+            单据行号
+            自动保留DTO.Misc.单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_oNoTaxMoney">
+            <summary>
+            原币未税金额
+            自动保留DTO.Misc.原币未税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_fNoTaxMoney">
+            <summary>
+            本币未税金额
+            自动保留DTO.Misc.本币未税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_ototalMoney">
+            <summary>
+            原币总金额
+            自动保留DTO.Misc.原币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_ftotalMoney">
+            <summary>
+            本币总金额
+            自动保留DTO.Misc.本币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_matchDetailTag">
+            <summary>
+            匹配明细标识
+            自动保留DTO.Misc.匹配明细标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_nowONoTaxMoney">
+            <summary>
+            本次原币未税金额
+            自动保留DTO.Misc.本次原币未税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_nowOtotalMoney">
+            <summary>
+            本次原币总金额
+            自动保留DTO.Misc.本次原币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_businessSpecialProject">
+            <summary>
+            业务预算专项
+            自动保留DTO.Misc.业务预算专项
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_moneySpecialProject">
+            <summary>
+            资金预算专项
+            自动保留DTO.Misc.资金预算专项
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_replaceDocLineTag">
+            <summary>
+            替代单据数据标识
+            自动保留DTO.Misc.替代单据数据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_isAutoBusinessEncumb">
+            <summary>
+            是否自动业务保留
+            自动保留DTO.Misc.是否自动业务保留
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_isAutoMoneyEncumb">
+            <summary>
+            是否自动资金保留
+            自动保留DTO.Misc.是否自动资金保留
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_isApproved">
+            <summary>
+            是否已核准
+            自动保留DTO.Misc.是否已核准
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_itemInfo">
+            <summary>
+            物料
+            自动保留DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_replacedItemInfo">
+            <summary>
+            被替代物料
+            自动保留DTO.Misc.被替代物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_nowFCNoTaxMoney">
+            <summary>
+            本次本币未税金额
+            自动保留DTO.Misc.本次本币未税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.m_nowFCtotalMoney">
+            <summary>
+            本次本币总金额
+            自动保留DTO.Misc.本次本币总金额
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.SOB">
+            <summary>
+            账簿
+            自动保留DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Org">
+            <summary>
+            组织
+            自动保留DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.PostPeriod_SKey">
+            <summary>
+            记帐期间 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.记帐期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.PostPeriod">
+            <summary>
+            记帐期间
+            自动保留DTO.Misc.记帐期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.OriginCurrency_SKey">
+            <summary>
+            原币 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.原币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.OriginCurrency">
+            <summary>
+            原币
+            自动保留DTO.Misc.原币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Department">
+            <summary>
+            部门
+            自动保留DTO.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.OperatorMan_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.OperatorMan">
+            <summary>
+            业务员
+            自动保留DTO.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            自动保留DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOData.Project">
+            <summary>
+            项目
+            自动保留DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData">
+            <summary>
+            付款执行应付确认金额DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData.#ctor(System.Int64,System.Collections.Generic.List{UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData.m_paymentID">
+            <summary>
+            付款单ID
+            付款执行应付确认金额DTO.Misc.付款单ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData.m_reqConfirmDTOs">
+            <summary>
+            请款确认DTOs
+            付款执行应付确认金额DTO.Misc.请款确认DTOs
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData">
+            <summary>
+            应付确认金额DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.#ctor(System.Int64,System.Int64,System.Decimal,UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTOData,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.m_useLineID">
+            <summary>
+            用途行ID
+            应付确认金额DTO.Misc.用途行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.m_aPLIneID">
+            <summary>
+            应付单行ID
+            应付确认金额DTO.Misc.应付单行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.m_money">
+            <summary>
+            确认金额
+            应付确认金额DTO.Misc.确认金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.m_paymenExeComfirmMoneyDTO">
+            <summary>
+            付款执行应付确认金额DTO
+            应付确认金额DTO.Misc.付款执行应付确认金额DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.APConfirmMoneyDTOData.m_fcMoney">
+            <summary>
+            本币确认金额
+            应付确认金额DTO.Misc.本币确认金额
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BachInputDTOData">
+            <summary>
+            查询预算控制对象批量录入数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.#ctor(System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.m_item">
+            <summary>
+            料品
+            查询预算控制对象批量录入数据传输对象.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            查询预算控制对象批量录入数据传输对象.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Org">
+            <summary>
+            组织
+            查询预算控制对象批量录入数据传输对象.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            查询预算控制对象批量录入数据传输对象.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Department">
+            <summary>
+            部门
+            查询预算控制对象批量录入数据传输对象.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.OperatorUsr_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            查询预算控制对象批量录入数据传输对象.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.OperatorUsr">
+            <summary>
+            业务员
+            查询预算控制对象批量录入数据传输对象.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            查询预算控制对象批量录入数据传输对象.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BachInputDTOData.Project">
+            <summary>
+            项目
+            查询预算控制对象批量录入数据传输对象.Misc.项目
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BatchOutputDTOData">
+            <summary>
+            控制对象返回数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BatchOutputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BatchOutputDTOData.#ctor(System.Int64,UFIDA.U9.AB.ABControlObject.BudgetControlObjectData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BatchOutputDTOData.m_itemID">
+            <summary>
+            料品ID
+            控制对象返回数据传输对象.Misc.料品ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.BusinessBudget.BatchOutputDTOData.m_budgetControlObject">
+            <summary>
+            预算控制对象
+            控制对象返回数据传输对象.Misc.预算控制对象
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException">
+            <summary>
+            异常类型: 预算控制对象不符异常
+            
+             物料被替代后，新对应的控制对象：${NewControlObject}与原控制对象：${ControlObject}不符
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预算控制对象不符异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="newControlObject">新控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 预算控制对象不符异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="newControlObject">新控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 预算控制对象不符异常 Constructor
+            </summary>
+            <param name="controlObject">控制对象</param>
+            <param name="newControlObject">新控制对象</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException.ControlObject">
+            <summary>
+            控制对象
+            预算控制对象不符异常.Misc.控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.ControlObjectNotMatchException.NewControlObject">
+            <summary>
+            新控制对象
+            预算控制对象不符异常.Misc.新控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException">
+            <summary>
+            异常类型: 物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常
+            
+             物料${ItemInfo}，部门${Department}，项目${Project}，业务员${OperatorMan}对应的默认预算控制对象设置不存在!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常 Constructor
+            </summary>
+            <param name="itemInfo">物料</param>
+            <param name="department">部门</param>
+            <param name="project">项目</param>
+            <param name="operatorMan">业务员</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            异常类型: 物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常 Constructor
+            </summary>
+            <param name="itemInfo">物料</param>
+            <param name="department">部门</param>
+            <param name="project">项目</param>
+            <param name="operatorMan">业务员</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常 Constructor
+            </summary>
+            <param name="itemInfo">物料</param>
+            <param name="department">部门</param>
+            <param name="project">项目</param>
+            <param name="operatorMan">业务员</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.ItemInfo">
+            <summary>
+            物料
+            物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常.Misc.物料
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.Department">
+            <summary>
+            部门
+            物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常.Misc.部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.Project">
+            <summary>
+            项目
+            物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常.Misc.项目
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.BudgetControlObjectMapDataNotExistException.OperatorMan">
+            <summary>
+            业务员
+            物料，部门，项目，业务员对应的默认预算控制对象设置不存在异常.Misc.业务员
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.AutoEncumbDataDigestIsNULLException">
+            <summary>
+            异常类型: 自动预算保留单据数据的摘要不能为空异常
+            
+             自动预算保留单据数据的摘要不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDataDigestIsNULLException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动预算保留单据数据的摘要不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDataDigestIsNULLException.#ctor">
+            <summary>
+            异常类型: 自动预算保留单据数据的摘要不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDataDigestIsNULLException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动预算保留单据数据的摘要不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.AutoEncumbControlPeriodIsNULLException">
+            <summary>
+            异常类型: 控制对象的预算控制周期为空异常
+            
+             控制对象“${ControlObject}”的预算控制周期为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbControlPeriodIsNULLException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 控制对象的预算控制周期为空异常 Constructor
+            </summary>
+            <param name="controlObject">预算控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbControlPeriodIsNULLException.#ctor(System.String)">
+            <summary>
+            异常类型: 控制对象的预算控制周期为空异常 Constructor
+            </summary>
+            <param name="controlObject">预算控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbControlPeriodIsNULLException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 控制对象的预算控制周期为空异常 Constructor
+            </summary>
+            <param name="controlObject">预算控制对象</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.AutoEncumbControlPeriodIsNULLException.ControlObject">
+            <summary>
+            预算控制对象
+            控制对象的预算控制周期为空异常.Misc.预算控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.PMAutoMoneyEncumbNullException">
+            <summary>
+            异常类型: 请购单无自动资金保留异常
+            
+             请购单无自动资金保留
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.PMAutoMoneyEncumbNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请购单无自动资金保留异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.PMAutoMoneyEncumbNullException.#ctor">
+            <summary>
+            异常类型: 请购单无自动资金保留异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.PMAutoMoneyEncumbNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请购单无自动资金保留异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInAutoAndDocNotMatchException">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的预算专项不符异常
+            
+             自动资金保留数据和单据预算保留数据的预算专项不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInAutoAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInAutoAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInAutoAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.CurrencyInAutoAndDocNotMatchException">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的币种不符异常
+            
+             自动资金保留数据和单据预算保留数据的币种不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInAutoAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInAutoAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInAutoAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetYearInAutoAndDocNotMatchException">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的控制周期年度不符异常
+            
+             自动资金保留数据和单据预算保留数据的控制周期年度不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInAutoAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInAutoAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInAutoAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动资金保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInAutoAndDocNotMatchException">
+            <summary>
+            异常类型: 自动资金保留数据控制周期小于单据预算保留数据的控制周期异常
+            
+             自动资金保留数据控制周期小于单据预算保留数据的控制周期！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInAutoAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动资金保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInAutoAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 自动资金保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInAutoAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动资金保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInBuissnessAndDocNotMatchException">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的预算专项不符异常
+            
+             业务保留数据和单据预算保留数据的预算专项不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInBuissnessAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInBuissnessAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetSpecialInBuissnessAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的预算专项不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.CurrencyInBuissnessAndDocNotMatchException">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的币种不符异常
+            
+             业务保留数据和单据预算保留数据的币种不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInBuissnessAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInBuissnessAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.CurrencyInBuissnessAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的币种不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetYearInBuissnessAndDocNotMatchExceptionException">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的控制周期年度不符异常
+            
+             业务保留数据和单据预算保留数据的控制周期年度不符！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInBuissnessAndDocNotMatchExceptionException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInBuissnessAndDocNotMatchExceptionException.#ctor">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetYearInBuissnessAndDocNotMatchExceptionException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据和单据预算保留数据的控制周期年度不符异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInBusinsessAndDocNotMatchException">
+            <summary>
+            异常类型: 业务保留数据控制周期小于单据预算保留数据的控制周期异常
+            
+             业务保留数据控制周期小于单据预算保留数据的控制周期！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInBusinsessAndDocNotMatchException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInBusinsessAndDocNotMatchException.#ctor">
+            <summary>
+            异常类型: 业务保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ContolPeiriodInBusinsessAndDocNotMatchException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据控制周期小于单据预算保留数据的控制周期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.ControlObjectFCMoneyNotNullException">
+            <summary>
+            异常类型: 本币控制时，本币金额不能为0异常
+            
+             预算控制对象: ${ControlObjectName}在本币控制时，本币金额不能为0
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectFCMoneyNotNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 本币控制时，本币金额不能为0异常 Constructor
+            </summary>
+            <param name="controlObjectName">预算控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectFCMoneyNotNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 本币控制时，本币金额不能为0异常 Constructor
+            </summary>
+            <param name="controlObjectName">预算控制对象</param>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectFCMoneyNotNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 本币控制时，本币金额不能为0异常 Constructor
+            </summary>
+            <param name="controlObjectName">预算控制对象</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.ControlObjectFCMoneyNotNullException.ControlObjectName">
+            <summary>
+            预算控制对象
+            本币控制时，本币金额不能为0异常.Misc.预算控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlObjectException">
+            <summary>
+            异常类型: 业务保留数据控制对象为空异常
+            
+             业务保留数据控制对象为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlObjectException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据控制对象为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlObjectException.#ctor">
+            <summary>
+            异常类型: 业务保留数据控制对象为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlObjectException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据控制对象为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlPeriodException">
+            <summary>
+            异常类型: 业务保留数据控制周期为空异常
+            
+             业务保留数据控制周期为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务保留数据控制周期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlPeriodException.#ctor">
+            <summary>
+            异常类型: 业务保留数据控制周期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.DocEncumbSaveDTOControlPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务保留数据控制周期为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOOriginCurrencyException">
+            <summary>
+            异常类型: 自动保留数据币种为空异常
+            
+             自动保留数据币种为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOOriginCurrencyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动保留数据币种为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOOriginCurrencyException.#ctor">
+            <summary>
+            异常类型: 自动保留数据币种为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOOriginCurrencyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动保留数据币种为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOPostPeriodException">
+            <summary>
+            异常类型: 自动保留数据控制周期为空异常
+            
+             自动保留数据控制周期为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOPostPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动保留数据控制周期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOPostPeriodException.#ctor">
+            <summary>
+            异常类型: 自动保留数据控制周期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.AutoEncumbDTOPostPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动保留数据控制周期为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BachInputDTONullOrgException">
+            <summary>
+            异常类型: 批量录入查询预算控制对象组织不能为空异常
+            
+             批量录入查询预算控制对象组织不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullOrgException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 批量录入查询预算控制对象组织不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullOrgException.#ctor">
+            <summary>
+            异常类型: 批量录入查询预算控制对象组织不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullOrgException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 批量录入查询预算控制对象组织不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BachInputDTONullItemException">
+            <summary>
+            异常类型: 批量录入查询预算控制对象料品信息不能为空异常
+            
+             批量录入查询预算控制对象料品信息不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullItemException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 批量录入查询预算控制对象料品信息不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullItemException.#ctor">
+            <summary>
+            异常类型: 批量录入查询预算控制对象料品信息不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BachInputDTONullItemException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 批量录入查询预算控制对象料品信息不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.BudgetEncumbDataNotNullException">
+            <summary>
+            异常类型: 预算保留数据不能为空异常
+            
+             预算保留数据不能为空!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetEncumbDataNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预算保留数据不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetEncumbDataNotNullException.#ctor">
+            <summary>
+            异常类型: 预算保留数据不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.BudgetEncumbDataNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 预算保留数据不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.MoneyZeroFcMoneyNotZeroException">
+            <summary>
+            异常类型: 原币为0，本币不为0异常
+            
+             原币为0，本币不为0!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.MoneyZeroFcMoneyNotZeroException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 原币为0，本币不为0异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.MoneyZeroFcMoneyNotZeroException.#ctor">
+            <summary>
+            异常类型: 原币为0，本币不为0异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.MoneyZeroFcMoneyNotZeroException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 原币为0，本币不为0异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.BusinessBudget.ControlObjectNotEquelException">
+            <summary>
+            异常类型: 预算控制对象不一致异常
+            
+             预算控制对象不一致!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotEquelException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预算控制对象不一致异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotEquelException.#ctor">
+            <summary>
+            异常类型: 预算控制对象不一致异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.BusinessBudget.ControlObjectNotEquelException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 预算控制对象不一致异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData">
+            <summary>
+            AAI预算接口DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData.#ctor(System.DateTime,System.String,System.Collections.Generic.List{UFIDA.U9.CBO.FI.DTOs.BudgetInterfaceDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData.m_businessDate">
+            <summary>
+            业务日期
+            AAI预算接口DTO.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData.m_docMaker">
+            <summary>
+            制单人
+            AAI预算接口DTO.Misc.制单人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AB.AAIBudget.AAIBudgetInterfaceDTOData.m_budgetInterfaceDTOs">
+            <summary>
+            预算接口DTO集合
+            AAI预算接口DTO.Misc.预算接口DTO集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AB.AAIBudget.AAIBudgetExcessException">
+            <summary>
+            异常类型: AAI执行超预算异常
+            
+             执行超预算
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAIBudgetExcessException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: AAI执行超预算异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAIBudgetExcessException.#ctor">
+            <summary>
+            异常类型: AAI执行超预算异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAIBudgetExcessException.#ctor(System.Exception)">
+            <summary>
+            异常类型: AAI执行超预算异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.AAIBudget.AAINoBudgetExecuteDataException">
+            <summary>
+            异常类型: 没有要执行的预算数异常
+            
+             没有要执行的预算
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAINoBudgetExecuteDataException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有要执行的预算数异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAINoBudgetExecuteDataException.#ctor">
+            <summary>
+            异常类型: 没有要执行的预算数异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AB.AAIBudget.AAINoBudgetExecuteDataException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有要执行的预算数异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AB.ABSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.ABSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.ABSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

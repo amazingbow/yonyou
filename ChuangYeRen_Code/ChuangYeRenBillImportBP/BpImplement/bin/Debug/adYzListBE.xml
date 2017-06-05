@@ -1,0 +1,1902 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>adYzListBE</name>
+    </assembly>
+    <members>
+        <member name="T:adYzListBE.AdYzList">
+            <summary>
+            实体: 异状单
+            
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:adYzListBE.AdYzList.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:adYzListBE.AdYzList.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:adYzListBE.AdYzList.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:adYzListBE.AdYzList.FromEntityData(adYzListBE.AdYzListData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.ToEntityData(adYzListBE.AdYzListData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            异状单.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            异状单.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            异状单.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            异状单.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            异状单.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            异状单.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Org">
+            <summary>
+            Org (该属性不可为空,但有默认值)
+            异状单.基础.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Iid">
+            <summary>
+            Iid (该属性不可为空,但有默认值)
+            异状单.基础.Iid
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Oid">
+            <summary>
+            Oid (该属性可为空,且无默认值)
+            异状单.基础.Oid
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Date">
+            <summary>
+            异状日期 (该属性不可为空,且无默认值)
+            异状单.基础.异状日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Yzdh">
+            <summary>
+            异状单号 (该属性不可为空,且无默认值)
+            异状单.基础.异状单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Scdh">
+            <summary>
+            生产单号 (该属性不可为空,且无默认值)
+            异状单.基础.生产单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.PM">
+            <summary>
+            品名 (该属性不可为空,且无默认值)
+            异状单.基础.品名
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Zzbm">
+            <summary>
+            异状部门 (该属性不可为空,且无默认值)
+            异状单.基础.异状部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.HTSL">
+            <summary>
+            合同数量 (该属性不可为空,但有默认值)
+            异状单.基础.合同数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.HGSL">
+            <summary>
+            合格数量 (该属性不可为空,但有默认值)
+            异状单.基础.合格数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Yssl">
+            <summary>
+            印刷数量 (该属性不可为空,但有默认值)
+            异状单.基础.印刷数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.YZsl">
+            <summary>
+            异状数量 (该属性不可为空,但有默认值)
+            异状单.基础.异状数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Htcs">
+            <summary>
+            合同差数 (该属性不可为空,但有默认值)
+            异状单.基础.合同差数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.YsYZ">
+            <summary>
+            印刷不良 (该属性可为空,但有默认值)
+            异状单.异状类型.印刷不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.FmYZ">
+            <summary>
+            覆膜不良 (该属性可为空,但有默认值)
+            异状单.异状类型.覆膜不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.ZhYZ">
+            <summary>
+            轧痕不良 (该属性可为空,但有默认值)
+            异状单.异状类型.轧痕不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Bzyz">
+            <summary>
+            制袋不良 (该属性可为空,但有默认值)
+            异状单.异状类型.制袋不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Yclyz">
+            <summary>
+            原材料异状 (该属性可为空,但有默认值)
+            异状单.异状类型.原材料异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Jgyz">
+            <summary>
+            加工异状 (该属性可为空,但有默认值)
+            异状单.异状类型.加工异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Khts">
+            <summary>
+            客户投诉 (该属性可为空,但有默认值)
+            异状单.异状类型.客户投诉
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Zlyz">
+            <summary>
+            质量 (该属性可为空,但有默认值)
+            异状单.异状类型.质量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Jqyz">
+            <summary>
+            交期延误 (该属性可为空,但有默认值)
+            异状单.异状类型.交期延误
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Glyz">
+            <summary>
+            管理 (该属性可为空,但有默认值)
+            异状单.异状类型.管理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Gdyz">
+            <summary>
+            改单 (该属性可为空,但有默认值)
+            异状单.异状类型.改单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Wxyz">
+            <summary>
+            外协异状 (该属性可为空,但有默认值)
+            异状单.异状类型.外协异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Yzms">
+            <summary>
+            异状描述 (该属性不可为空,且无默认值)
+            异状单.基础.异状描述
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Yzyy">
+            <summary>
+            异状原因 (该属性可为空,且无默认值)
+            异状单.责任部门.异状原因
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Fa1">
+            <summary>
+            解决方案一 (该属性可为空,且无默认值)
+            异状单.责任部门.解决方案一
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Fa2">
+            <summary>
+            解决方案二 (该属性可为空,且无默认值)
+            异状单.责任部门.解决方案二
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Zjfy">
+            <summary>
+            直接材料及加工费 (该属性可为空,但有默认值)
+            异状单.PPC.直接材料及加工费
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Qtfy">
+            <summary>
+            其他费用 (该属性可为空,但有默认值)
+            异状单.PPC.其他费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Clyj">
+            <summary>
+            处理意见 (该属性可为空,且无默认值)
+            异状单.责任部门.处理意见
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Jzcs">
+            <summary>
+            纠正与预防措施 (该属性可为空,且无默认值)
+            异状单.责任部门.纠正与预防措施
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.QsA">
+            <summary>
+            A面欠数 (该属性不可为空,但有默认值)
+            异状单.基础.A面欠数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.QsB">
+            <summary>
+            B面欠数 (该属性不可为空,但有默认值)
+            异状单.基础.B面欠数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Kdr">
+            <summary>
+            开单人 (该属性可为空,且无默认值)
+            异状单.基础.开单人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Bmjl1">
+            <summary>
+            部门主管 (该属性可为空,且无默认值)
+            异状单.签核记录.部门主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Sgb">
+            <summary>
+            生管办 (该属性可为空,且无默认值)
+            异状单.PPC.生管办
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Bmjl4">
+            <summary>
+            厂长 (该属性可为空,且无默认值)
+            异状单.签核记录.厂长
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Zrbm">
+            <summary>
+            责任部门主管 (该属性可为空,且无默认值)
+            异状单.签核记录.责任部门主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Pgb">
+            <summary>
+            品管主管 (该属性可为空,且无默认值)
+            异状单.签核记录.品管主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Sh">
+            <summary>
+            总经理 (该属性可为空,且无默认值)
+            异状单.签核记录.总经理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsDelete">
+            <summary>
+            删除 (该属性可为空,但有默认值)
+            异状单.状态.删除
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsReP">
+            <summary>
+            补数 (该属性可为空,但有默认值)
+            异状单.PPC.补数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsSendToPPc">
+            <summary>
+            已发送给PPC (该属性可为空,但有默认值)
+            异状单.状态.已发送给PPC
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.SendToPPcDate">
+            <summary>
+            发送给PPC时间 (该属性可为空,且无默认值)
+            异状单.状态.发送给PPC时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Qtyz">
+            <summary>
+            其他异状 (该属性可为空,但有默认值)
+            异状单.异状类型.其他异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Glb">
+            <summary>
+            管理部 (该属性可为空,且无默认值)
+            异状单.签核记录.管理部
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Cwb">
+            <summary>
+            财务部 (该属性可为空,且无默认值)
+            异状单.签核记录.财务部
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.FlowID">
+            <summary>
+            FlowID (该属性可为空,但有默认值)
+            异状单.Misc.FlowID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsUser">
+            <summary>
+            已开工艺单 (该属性可为空,但有默认值)
+            异状单.Misc.已开工艺单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsSignOk">
+            <summary>
+            IsSignOk (该属性可为空,但有默认值)
+            异状单.Misc.IsSignOk
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Statu">
+            <summary>
+            状态 (该属性可为空,且无默认值)
+            异状单.状态.状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.YzFy">
+            <summary>
+            异状费用 (该属性可为空,但有默认值)
+            异状单.Misc.异状费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.DeptName">
+            <summary>
+            承担部门 (该属性可为空,且无默认值)
+            异状单.Misc.承担部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.FDay">
+            <summary>
+            天数 (该属性可为空,且无默认值)
+            异状单.责任部门.天数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.CDFY">
+            <summary>
+            部门承担费用 (该属性可为空,但有默认值)
+            异状单.责任部门.部门承担费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsMaster">
+            <summary>
+            需转总经理 (该属性可为空,但有默认值)
+            异状单.PPC.需转总经理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.IsImportant">
+            <summary>
+            是否重大异状 (该属性可为空,但有默认值)
+            异状单.PPC.是否重大异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Iid">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Iid")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Oid">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Oid")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Date">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Date")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Yzdh">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Yzdh")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Scdh">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Scdh")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_PM">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PM")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Zzbm">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Zzbm")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_HTSL">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("HTSL")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_HGSL">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("HGSL")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Yssl">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Yssl")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_YZsl">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("YZsl")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Htcs">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Htcs")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_YsYZ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("YsYZ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_FmYZ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FmYZ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_ZhYZ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ZhYZ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Bzyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Bzyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Yclyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Yclyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Jgyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Jgyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Khts">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Khts")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Zlyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Zlyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Jqyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Jqyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Glyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Glyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Gdyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Gdyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Wxyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Wxyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Yzms">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Yzms")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Yzyy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Yzyy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Fa1">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Fa1")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Fa2">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Fa2")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Zjfy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Zjfy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Qtfy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Qtfy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Clyj">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Clyj")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Jzcs">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Jzcs")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_QsA">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("QsA")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_QsB">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("QsB")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Kdr">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Kdr")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Bmjl1">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Bmjl1")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Sgb">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Sgb")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Bmjl4">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Bmjl4")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Zrbm">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Zrbm")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Pgb">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Pgb")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Sh">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Sh")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsDelete">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsDelete")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsReP">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsReP")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsSendToPPc">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsSendToPPc")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_SendToPPcDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SendToPPcDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Qtyz">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Qtyz")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Glb">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Glb")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Cwb">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Cwb")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_FlowID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FlowID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsUser">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsUser")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsSignOk">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsSignOk")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_Statu">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Statu")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_YzFy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("YzFy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_DeptName">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DeptName")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_FDay">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FDay")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_CDFY">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CDFY")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsMaster">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsMaster")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.Res_IsImportant">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsImportant")的方式取资源
+            </summary>
+        </member>
+        <member name="T:adYzListBE.AdYzList.EntityKey">
+            <summary>
+            Strong Class AdYzList EntityKey 
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:adYzListBE.AdYzList.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:adYzListBE.AdYzList.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:adYzListBE.AdYzList.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            异状单.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            异状单.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            异状单.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            异状单.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            异状单.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            异状单.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性不可为空,但有默认值)
+            异状单.基础.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Iid">
+            <summary>
+             OrginalData属性。只可读。
+            Iid (该属性不可为空,但有默认值)
+            异状单.基础.Iid
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Oid">
+            <summary>
+             OrginalData属性。只可读。
+            Oid (该属性可为空,且无默认值)
+            异状单.基础.Oid
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Date">
+            <summary>
+             OrginalData属性。只可读。
+            异状日期 (该属性不可为空,且无默认值)
+            异状单.基础.异状日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Yzdh">
+            <summary>
+             OrginalData属性。只可读。
+            异状单号 (该属性不可为空,且无默认值)
+            异状单.基础.异状单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Scdh">
+            <summary>
+             OrginalData属性。只可读。
+            生产单号 (该属性不可为空,且无默认值)
+            异状单.基础.生产单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.PM">
+            <summary>
+             OrginalData属性。只可读。
+            品名 (该属性不可为空,且无默认值)
+            异状单.基础.品名
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Zzbm">
+            <summary>
+             OrginalData属性。只可读。
+            异状部门 (该属性不可为空,且无默认值)
+            异状单.基础.异状部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.HTSL">
+            <summary>
+             OrginalData属性。只可读。
+            合同数量 (该属性不可为空,但有默认值)
+            异状单.基础.合同数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.HGSL">
+            <summary>
+             OrginalData属性。只可读。
+            合格数量 (该属性不可为空,但有默认值)
+            异状单.基础.合格数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Yssl">
+            <summary>
+             OrginalData属性。只可读。
+            印刷数量 (该属性不可为空,但有默认值)
+            异状单.基础.印刷数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.YZsl">
+            <summary>
+             OrginalData属性。只可读。
+            异状数量 (该属性不可为空,但有默认值)
+            异状单.基础.异状数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Htcs">
+            <summary>
+             OrginalData属性。只可读。
+            合同差数 (该属性不可为空,但有默认值)
+            异状单.基础.合同差数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.YsYZ">
+            <summary>
+             OrginalData属性。只可读。
+            印刷不良 (该属性可为空,但有默认值)
+            异状单.异状类型.印刷不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.FmYZ">
+            <summary>
+             OrginalData属性。只可读。
+            覆膜不良 (该属性可为空,但有默认值)
+            异状单.异状类型.覆膜不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.ZhYZ">
+            <summary>
+             OrginalData属性。只可读。
+            轧痕不良 (该属性可为空,但有默认值)
+            异状单.异状类型.轧痕不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Bzyz">
+            <summary>
+             OrginalData属性。只可读。
+            制袋不良 (该属性可为空,但有默认值)
+            异状单.异状类型.制袋不良
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Yclyz">
+            <summary>
+             OrginalData属性。只可读。
+            原材料异状 (该属性可为空,但有默认值)
+            异状单.异状类型.原材料异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Jgyz">
+            <summary>
+             OrginalData属性。只可读。
+            加工异状 (该属性可为空,但有默认值)
+            异状单.异状类型.加工异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Khts">
+            <summary>
+             OrginalData属性。只可读。
+            客户投诉 (该属性可为空,但有默认值)
+            异状单.异状类型.客户投诉
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Zlyz">
+            <summary>
+             OrginalData属性。只可读。
+            质量 (该属性可为空,但有默认值)
+            异状单.异状类型.质量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Jqyz">
+            <summary>
+             OrginalData属性。只可读。
+            交期延误 (该属性可为空,但有默认值)
+            异状单.异状类型.交期延误
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Glyz">
+            <summary>
+             OrginalData属性。只可读。
+            管理 (该属性可为空,但有默认值)
+            异状单.异状类型.管理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Gdyz">
+            <summary>
+             OrginalData属性。只可读。
+            改单 (该属性可为空,但有默认值)
+            异状单.异状类型.改单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Wxyz">
+            <summary>
+             OrginalData属性。只可读。
+            外协异状 (该属性可为空,但有默认值)
+            异状单.异状类型.外协异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Yzms">
+            <summary>
+             OrginalData属性。只可读。
+            异状描述 (该属性不可为空,且无默认值)
+            异状单.基础.异状描述
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Yzyy">
+            <summary>
+             OrginalData属性。只可读。
+            异状原因 (该属性可为空,且无默认值)
+            异状单.责任部门.异状原因
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Fa1">
+            <summary>
+             OrginalData属性。只可读。
+            解决方案一 (该属性可为空,且无默认值)
+            异状单.责任部门.解决方案一
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Fa2">
+            <summary>
+             OrginalData属性。只可读。
+            解决方案二 (该属性可为空,且无默认值)
+            异状单.责任部门.解决方案二
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Zjfy">
+            <summary>
+             OrginalData属性。只可读。
+            直接材料及加工费 (该属性可为空,但有默认值)
+            异状单.PPC.直接材料及加工费
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Qtfy">
+            <summary>
+             OrginalData属性。只可读。
+            其他费用 (该属性可为空,但有默认值)
+            异状单.PPC.其他费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Clyj">
+            <summary>
+             OrginalData属性。只可读。
+            处理意见 (该属性可为空,且无默认值)
+            异状单.责任部门.处理意见
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Jzcs">
+            <summary>
+             OrginalData属性。只可读。
+            纠正与预防措施 (该属性可为空,且无默认值)
+            异状单.责任部门.纠正与预防措施
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.QsA">
+            <summary>
+             OrginalData属性。只可读。
+            A面欠数 (该属性不可为空,但有默认值)
+            异状单.基础.A面欠数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.QsB">
+            <summary>
+             OrginalData属性。只可读。
+            B面欠数 (该属性不可为空,但有默认值)
+            异状单.基础.B面欠数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Kdr">
+            <summary>
+             OrginalData属性。只可读。
+            开单人 (该属性可为空,且无默认值)
+            异状单.基础.开单人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Bmjl1">
+            <summary>
+             OrginalData属性。只可读。
+            部门主管 (该属性可为空,且无默认值)
+            异状单.签核记录.部门主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Sgb">
+            <summary>
+             OrginalData属性。只可读。
+            生管办 (该属性可为空,且无默认值)
+            异状单.PPC.生管办
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Bmjl4">
+            <summary>
+             OrginalData属性。只可读。
+            厂长 (该属性可为空,且无默认值)
+            异状单.签核记录.厂长
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Zrbm">
+            <summary>
+             OrginalData属性。只可读。
+            责任部门主管 (该属性可为空,且无默认值)
+            异状单.签核记录.责任部门主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Pgb">
+            <summary>
+             OrginalData属性。只可读。
+            品管主管 (该属性可为空,且无默认值)
+            异状单.签核记录.品管主管
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Sh">
+            <summary>
+             OrginalData属性。只可读。
+            总经理 (该属性可为空,且无默认值)
+            异状单.签核记录.总经理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsDelete">
+            <summary>
+             OrginalData属性。只可读。
+            删除 (该属性可为空,但有默认值)
+            异状单.状态.删除
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsReP">
+            <summary>
+             OrginalData属性。只可读。
+            补数 (该属性可为空,但有默认值)
+            异状单.PPC.补数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsSendToPPc">
+            <summary>
+             OrginalData属性。只可读。
+            已发送给PPC (该属性可为空,但有默认值)
+            异状单.状态.已发送给PPC
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.SendToPPcDate">
+            <summary>
+             OrginalData属性。只可读。
+            发送给PPC时间 (该属性可为空,且无默认值)
+            异状单.状态.发送给PPC时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Qtyz">
+            <summary>
+             OrginalData属性。只可读。
+            其他异状 (该属性可为空,但有默认值)
+            异状单.异状类型.其他异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Glb">
+            <summary>
+             OrginalData属性。只可读。
+            管理部 (该属性可为空,且无默认值)
+            异状单.签核记录.管理部
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Cwb">
+            <summary>
+             OrginalData属性。只可读。
+            财务部 (该属性可为空,且无默认值)
+            异状单.签核记录.财务部
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.FlowID">
+            <summary>
+             OrginalData属性。只可读。
+            FlowID (该属性可为空,但有默认值)
+            异状单.Misc.FlowID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsUser">
+            <summary>
+             OrginalData属性。只可读。
+            已开工艺单 (该属性可为空,但有默认值)
+            异状单.Misc.已开工艺单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsSignOk">
+            <summary>
+             OrginalData属性。只可读。
+            IsSignOk (该属性可为空,但有默认值)
+            异状单.Misc.IsSignOk
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.Statu">
+            <summary>
+             OrginalData属性。只可读。
+            状态 (该属性可为空,且无默认值)
+            异状单.状态.状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.YzFy">
+            <summary>
+             OrginalData属性。只可读。
+            异状费用 (该属性可为空,但有默认值)
+            异状单.Misc.异状费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.DeptName">
+            <summary>
+             OrginalData属性。只可读。
+            承担部门 (该属性可为空,且无默认值)
+            异状单.Misc.承担部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.FDay">
+            <summary>
+             OrginalData属性。只可读。
+            天数 (该属性可为空,且无默认值)
+            异状单.责任部门.天数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.CDFY">
+            <summary>
+             OrginalData属性。只可读。
+            部门承担费用 (该属性可为空,但有默认值)
+            异状单.责任部门.部门承担费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsMaster">
+            <summary>
+             OrginalData属性。只可读。
+            需转总经理 (该属性可为空,但有默认值)
+            异状单.PPC.需转总经理
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityOriginal.IsImportant">
+            <summary>
+             OrginalData属性。只可读。
+            是否重大异状 (该属性可为空,但有默认值)
+            异状单.PPC.是否重大异状
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:adYzListBE.AdYzList.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Iid">
+            <summary>
+            属性: Iid 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Oid">
+            <summary>
+            属性: Oid 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Date">
+            <summary>
+            属性: 异状日期 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Yzdh">
+            <summary>
+            属性: 异状单号 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Scdh">
+            <summary>
+            属性: 生产单号 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.PM">
+            <summary>
+            属性: 品名 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Zzbm">
+            <summary>
+            属性: 异状部门 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.HTSL">
+            <summary>
+            属性: 合同数量 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.HGSL">
+            <summary>
+            属性: 合格数量 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Yssl">
+            <summary>
+            属性: 印刷数量 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.YZsl">
+            <summary>
+            属性: 异状数量 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Htcs">
+            <summary>
+            属性: 合同差数 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.YsYZ">
+            <summary>
+            属性: 印刷不良 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.FmYZ">
+            <summary>
+            属性: 覆膜不良 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.ZhYZ">
+            <summary>
+            属性: 轧痕不良 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Bzyz">
+            <summary>
+            属性: 制袋不良 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Yclyz">
+            <summary>
+            属性: 原材料异状 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Jgyz">
+            <summary>
+            属性: 加工异状 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Khts">
+            <summary>
+            属性: 客户投诉 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Zlyz">
+            <summary>
+            属性: 质量 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Jqyz">
+            <summary>
+            属性: 交期延误 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Glyz">
+            <summary>
+            属性: 管理 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Gdyz">
+            <summary>
+            属性: 改单 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Wxyz">
+            <summary>
+            属性: 外协异状 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Yzms">
+            <summary>
+            属性: 异状描述 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Yzyy">
+            <summary>
+            属性: 异状原因 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Fa1">
+            <summary>
+            属性: 解决方案一 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Fa2">
+            <summary>
+            属性: 解决方案二 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Zjfy">
+            <summary>
+            属性: 直接材料及加工费 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Qtfy">
+            <summary>
+            属性: 其他费用 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Clyj">
+            <summary>
+            属性: 处理意见 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Jzcs">
+            <summary>
+            属性: 纠正与预防措施 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.QsA">
+            <summary>
+            属性: A面欠数 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.QsB">
+            <summary>
+            属性: B面欠数 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Kdr">
+            <summary>
+            属性: 开单人 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Bmjl1">
+            <summary>
+            属性: 部门主管 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Sgb">
+            <summary>
+            属性: 生管办 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Bmjl4">
+            <summary>
+            属性: 厂长 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Zrbm">
+            <summary>
+            属性: 责任部门主管 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Pgb">
+            <summary>
+            属性: 品管主管 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Sh">
+            <summary>
+            属性: 总经理 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsDelete">
+            <summary>
+            属性: 删除 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsReP">
+            <summary>
+            属性: 补数 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsSendToPPc">
+            <summary>
+            属性: 已发送给PPC 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.SendToPPcDate">
+            <summary>
+            属性: 发送给PPC时间 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Qtyz">
+            <summary>
+            属性: 其他异状 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Glb">
+            <summary>
+            属性: 管理部 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Cwb">
+            <summary>
+            属性: 财务部 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.FlowID">
+            <summary>
+            属性: FlowID 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsUser">
+            <summary>
+            属性: 已开工艺单 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsSignOk">
+            <summary>
+            属性: IsSignOk 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.Statu">
+            <summary>
+            属性: 状态 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.YzFy">
+            <summary>
+            属性: 异状费用 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.DeptName">
+            <summary>
+            属性: 承担部门 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.FDay">
+            <summary>
+            属性: 天数 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.CDFY">
+            <summary>
+            属性: 部门承担费用 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsMaster">
+            <summary>
+            属性: 需转总经理 的名称
+            </summary>
+        </member>
+        <member name="P:adYzListBE.AdYzList.EntityRes.IsImportant">
+            <summary>
+            属性: 是否重大异状 的名称
+            </summary>
+        </member>
+        <member name="T:adYzListBE.RePunishClassEnum">
+            <summary>
+            可扩展枚举: 承担类型 
+            
+            </summary>
+        </member>
+        <member name="M:adYzListBE.RePunishClassEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get RePunishClassEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adYzListBE.RePunishClassEnum.GetFromValue(System.Object)">
+            <summary>
+            Get RePunishClassEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adYzListBE.RePunishClassEnum.GetFromName(System.String)">
+            <summary>
+            Get RePunishClassEnum By Name 
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.R1">
+            <summary>
+            枚举值: 材料费  Value:0  
+            承担类型.Misc.材料费
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.R2">
+            <summary>
+            枚举值: 加工费  Value:1  
+            承担类型.Misc.加工费
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.R3">
+            <summary>
+            枚举值: 材料加工费  Value:2  
+            承担类型.Misc.材料加工费
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.R4">
+            <summary>
+            枚举值: 枚举值  Value:3  
+            承担类型.Misc.枚举值
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Values">
+            <summary>
+            Get RePunishClassEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_TypeName">
+            <summary>
+            承担类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_TypeNameS">
+            <summary>
+            承担类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_R1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_R2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_R3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.Res_R4">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:adYzListBE.RePunishClassEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:adYzListBE.RePunishClassEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:adYzListBE.RePunishClassEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+    </members>
+</doc>

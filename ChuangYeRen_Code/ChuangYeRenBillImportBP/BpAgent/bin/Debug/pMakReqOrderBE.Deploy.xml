@@ -1,0 +1,819 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pMakReqOrderBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:pMakReqOrderBE.PMakReqOrderData">
+            <summary>
+            生产单 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:pMakReqOrderBE.PMakReqOrderData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_dJ">
+            <summary>
+            品质等级
+            生产单.基础.品质等级
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_status">
+            <summary>
+            状态
+            生产单.状态.状态
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bomClass">
+            <summary>
+            Bom类型
+            生产单.基础.Bom类型
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iD">
+            <summary>
+            ID
+            生产单.Key.ID
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_createdOn">
+            <summary>
+            创建时间
+            生产单.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_createdBy">
+            <summary>
+            创建人
+            生产单.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_modifiedOn">
+            <summary>
+            修改时间
+            生产单.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_modifiedBy">
+            <summary>
+            修改人
+            生产单.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_sysVersion">
+            <summary>
+            事务版本
+            生产单.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_org">
+            <summary>
+            Org
+            生产单.基础.Org
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_makReq">
+            <summary>
+            生产单号
+            生产单.基础.生产单号
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_receiveDate">
+            <summary>
+            接单日期
+            生产单.基础.接单日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_deliverDate">
+            <summary>
+            交期
+            生产单.基础.交期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_dnewdedate">
+            <summary>
+            确认交期
+            生产单.基础.确认交期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_note">
+            <summary>
+            备注
+            生产单.基础.备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isChecked">
+            <summary>
+            已审核
+            生产单.状态.已审核
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isClosed">
+            <summary>
+            已关闭
+            生产单.状态.已关闭
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isCompleted">
+            <summary>
+            已完成
+            生产单.状态.已完成
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isShip">
+            <summary>
+            已出货
+            生产单.状态.已出货
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_intC">
+            <summary>
+            状态颜色
+            生产单.计划.状态颜色
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isShipMak">
+            <summary>
+            已出货排载
+            生产单.状态.已出货排载
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isShipMakDc">
+            <summary>
+            已提供唛头
+            生产单.材料状况.已提供唛头
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_shipMakDate">
+            <summary>
+            出货排载日期
+            生产单.状态.出货排载日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_shipMakDcDate">
+            <summary>
+            提供唛头日期
+            生产单.材料状况.提供唛头日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_note1">
+            <summary>
+            计划备注
+            生产单.计划.计划备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_makDate">
+            <summary>
+            唛头下载日期
+            生产单.材料状况.唛头下载日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isPlanCheck">
+            <summary>
+            计划已审核
+            生产单.状态.计划已审核
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_closeDate">
+            <summary>
+            关闭日期
+            生产单.状态.关闭日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_item">
+            <summary>
+            成品编码
+            生产单.基础.成品编码
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_requireQty">
+            <summary>
+            需求数量
+            生产单.基础.需求数量
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isMRPed">
+            <summary>
+            已MRP
+            生产单.状态.已MRP
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_mRPDate">
+            <summary>
+            MRP日期
+            生产单.状态.MRP日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isPlaned">
+            <summary>
+            已计划
+            生产单.状态.已计划
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_planedDate">
+            <summary>
+            计划日期
+            生产单.状态.计划日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_finishDate">
+            <summary>
+            完成日期
+            生产单.状态.完成日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_eSize">
+            <summary>
+            展开尺寸
+            生产单.工艺.展开尺寸
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_area">
+            <summary>
+            面积
+            生产单.工艺.面积
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_size">
+            <summary>
+            产品尺寸
+            生产单.基础.产品尺寸
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_spell">
+            <summary>
+            拼法
+            生产单.工艺.拼法
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_craft">
+            <summary>
+            工艺
+            生产单.工艺.工艺
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_pak">
+            <summary>
+            包材
+            生产单.材料状况.包材
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_pap">
+            <summary>
+            主材
+            生产单.材料状况.主材
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_rop">
+            <summary>
+            提手
+            生产单.材料状况.提手
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_paknote">
+            <summary>
+            包材备注
+            生产单.材料状况.包材备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHCS">
+            <summary>
+            轧痕次数
+            生产单.计划.轧痕次数
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zDCS">
+            <summary>
+            制袋1
+            生产单.计划.制袋1
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cYWC">
+            <summary>
+            彩印A
+            生产单.计划.彩印A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cYWCB">
+            <summary>
+            彩印B
+            生产单.计划.彩印B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cYJA">
+            <summary>
+            彩印A
+            生产单.计划.彩印A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cYJB">
+            <summary>
+            彩印B
+            生产单.计划.彩印B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_fMWC">
+            <summary>
+            覆膜A
+            生产单.计划.覆膜A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_fMWCB">
+            <summary>
+            覆膜B
+            生产单.计划.覆膜B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHWC">
+            <summary>
+            轧痕A
+            生产单.计划.轧痕A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHWCB">
+            <summary>
+            轧痕B
+            生产单.计划.轧痕B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zDWC">
+            <summary>
+            制袋
+            生产单.计划.制袋
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bZWC">
+            <summary>
+            包装
+            生产单.计划.包装
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_rKSL">
+            <summary>
+            进仓
+            生产单.计划.进仓
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHQJ">
+            <summary>
+            轧痕A
+            生产单.计划.轧痕A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHQJB">
+            <summary>
+            轧痕B
+            生产单.计划.轧痕B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cYRQ">
+            <summary>
+            彩印日期
+            生产单.计划.彩印日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_fMRQ">
+            <summary>
+            覆膜日期
+            生产单.计划.覆膜日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zHRQ">
+            <summary>
+            轧痕日期
+            生产单.计划.轧痕日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zDRQ">
+            <summary>
+            制袋日期
+            生产单.计划.制袋日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_cHSL">
+            <summary>
+            彩印需求
+            生产单.计划.彩印需求
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_zDBM">
+            <summary>
+            制袋部门
+            生产单.计划.制袋部门
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bZBM">
+            <summary>
+            包装部门
+            生产单.计划.包装部门
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_sRK">
+            <summary>
+            属性62
+            生产单.计划.属性62
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_sCH">
+            <summary>
+            属性63
+            生产单.计划.属性63
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_changeID">
+            <summary>
+            ChangeID
+            生产单.其它.ChangeID
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_note2">
+            <summary>
+            工艺备注
+            生产单.工艺.工艺备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_note3">
+            <summary>
+            修改备注
+            生产单.其它.修改备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_major">
+            <summary>
+            主管审核
+            生产单.状态.主管审核
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_checker">
+            <summary>
+            审核人员
+            生产单.状态.审核人员
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isMak">
+            <summary>
+            唛头已下载
+            生产单.材料状况.唛头已下载
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_compNote">
+            <summary>
+            完成备注
+            生产单.状态.完成备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_li">
+            <summary>
+            拉链+拉头
+            生产单.材料状况.拉链+拉头
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_liNote">
+            <summary>
+            拉链+拉头备注
+            生产单.材料状况.拉链+拉头备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bl">
+            <summary>
+            布料
+            生产单.材料状况.布料
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_blNote">
+            <summary>
+            布料备注
+            生产单.材料状况.布料备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_flc">
+            <summary>
+            辅料
+            生产单.材料状况.辅料
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_flcNote">
+            <summary>
+            辅料备注
+            生产单.材料状况.辅料备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bgj">
+            <summary>
+            不干胶
+            生产单.材料状况.不干胶
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bgjNote">
+            <summary>
+            不干胶备注
+            生产单.材料状况.不干胶备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_papnote">
+            <summary>
+            主材备注
+            生产单.材料状况.主材备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_ropnote">
+            <summary>
+            提手备注
+            生产单.材料状况.提手备注
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_fMCS">
+            <summary>
+            覆膜A
+            生产单.计划.覆膜A
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_fMCSB">
+            <summary>
+            覆膜B
+            生产单.计划.覆膜B
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bomEditor">
+            <summary>
+            Bom编辑人员
+            生产单.状态.Bom编辑人员
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isBom">
+            <summary>
+            已建Bom
+            生产单.状态.已建Bom
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bomDate">
+            <summary>
+            建Bom日期
+            生产单.状态.建Bom日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_qty">
+            <summary>
+            数量
+            生产单.基础.数量
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_def1">
+            <summary>
+            自定义1
+            生产单.其它.自定义1
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_def2">
+            <summary>
+            自定义2
+            生产单.其它.自定义2
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_def3">
+            <summary>
+            自定义3
+            生产单.其它.自定义3
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_def4">
+            <summary>
+            自定义4
+            生产单.其它.自定义4
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_def5">
+            <summary>
+            自定义5
+            生产单.其它.自定义5
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iDef1">
+            <summary>
+            自定义数值1
+            生产单.其它.自定义数值1
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iDef2">
+            <summary>
+            自定义数值2
+            生产单.其它.自定义数值2
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iDef3">
+            <summary>
+            自定义数值3
+            生产单.其它.自定义数值3
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iDef4">
+            <summary>
+            自定义数值4
+            生产单.其它.自定义数值4
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_iDef5">
+            <summary>
+            自定义数值5
+            生产单.其它.自定义数值5
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isGyd">
+            <summary>
+            已建工艺单
+            生产单.状态.已建工艺单
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_gydRq">
+            <summary>
+            建立工艺单日期
+            生产单.状态.建立工艺单日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_gydMaker">
+            <summary>
+            工艺单编辑人员
+            生产单.状态.工艺单编辑人员
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_poClass">
+            <summary>
+            订单类型
+            生产单.基础.订单类型
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_isBop">
+            <summary>
+            已建Bop
+            生产单.状态.已建Bop
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bopDate">
+            <summary>
+            建BoP日期
+            生产单.状态.建BoP日期
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.PMakReqOrderData.m_bopEditor">
+            <summary>
+            Bop编辑人员
+            生产单.状态.Bop编辑人员
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.COperator_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            生产单.基础.业务员
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.COperator">
+            <summary>
+            业务员
+            生产单.基础.业务员
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.SCPOID_SKey">
+            <summary>
+            销售订单 序列化Key属性。（传递跨组织序列列字段）
+            生产单.基础.销售订单
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.SCPOID">
+            <summary>
+            销售订单
+            生产单.基础.销售订单
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.ItemID_SKey">
+            <summary>
+            物料ID 序列化Key属性。（传递跨组织序列列字段）
+            生产单.基础.物料ID
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.ItemID">
+            <summary>
+            物料ID
+            生产单.基础.物料ID
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.PS_SKey">
+            <summary>
+            纸张克重 序列化Key属性。（传递跨组织序列列字段）
+            生产单.基础.纸张克重
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.PMakReqOrderData.PS">
+            <summary>
+            纸张克重
+            生产单.基础.纸张克重
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.BomClassEnumData">
+            <summary>
+            枚举值: Bom类型 
+            
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.BomClassEnumData.P">
+            <summary>
+            订单BOM
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.BomClassEnumData.I">
+            <summary>
+            产品BOM
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.BomClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.DJEnumData">
+            <summary>
+            枚举值: 品质等级枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.DJEnumData.A">
+            <summary>
+            A级
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.DJEnumData.B">
+            <summary>
+            B级
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.DJEnumData.C">
+            <summary>
+            C级
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.DJEnumData.AB">
+            <summary>
+            AB级
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.DJEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.StatusEnumData">
+            <summary>
+            枚举值: 状态枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.StatusEnumData.S1">
+            <summary>
+            开立中
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.StatusEnumData.S2">
+            <summary>
+            已审核
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.StatusEnumData.S3">
+            <summary>
+            已取消
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.StatusEnumData.S4">
+            <summary>
+            已关闭
+            </summary>
+        </member>
+        <member name="F:pMakReqOrderBE.StatusEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakReqOrderBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:pMakReqOrderBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

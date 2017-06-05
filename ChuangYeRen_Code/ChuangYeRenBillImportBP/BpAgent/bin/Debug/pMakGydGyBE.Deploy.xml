@@ -1,0 +1,1695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pMakGydGyBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:pMakGydGyBE.PMakgydBomData">
+            <summary>
+            工艺单BOM表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:pMakGydGyBE.PMakgydBomData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_pMakGyd">
+            <summary>
+            工艺单主表
+            工艺单BOM表.Misc.工艺单主表
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_iD">
+            <summary>
+            ID
+            工艺单BOM表.Key.ID
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_createdOn">
+            <summary>
+            创建时间
+            工艺单BOM表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_createdBy">
+            <summary>
+            创建人
+            工艺单BOM表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_modifiedOn">
+            <summary>
+            修改时间
+            工艺单BOM表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_modifiedBy">
+            <summary>
+            修改人
+            工艺单BOM表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_sysVersion">
+            <summary>
+            事务版本
+            工艺单BOM表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_waste">
+            <summary>
+            损耗
+            工艺单BOM表.BOM用量.损耗
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_note">
+            <summary>
+            备注
+            工艺单BOM表.Misc.备注
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_fQty">
+            <summary>
+            用量
+            工艺单BOM表.BOM用量.用量
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_item">
+            <summary>
+            物料编码
+            工艺单BOM表.物料.物料编码
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_eSize">
+            <summary>
+            开料规格
+            工艺单BOM表.Misc.开料规格
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_sWaste">
+            <summary>
+            单位损耗
+            工艺单BOM表.BOM用量.单位损耗
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_sUse">
+            <summary>
+            单位用量
+            工艺单BOM表.BOM用量.单位用量
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_matName">
+            <summary>
+            物料名称
+            工艺单BOM表.物料.物料名称
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_sPECS">
+            <summary>
+            物料规格
+            工艺单BOM表.物料.物料规格
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_openNum">
+            <summary>
+            开数
+            工艺单BOM表.Misc.开数
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_gW">
+            <summary>
+            重量(kg)
+            工艺单BOM表.Misc.重量(kg)
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_aWay">
+            <summary>
+            来源
+            工艺单BOM表.状态.来源
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_pX">
+            <summary>
+            排序
+            工艺单BOM表.Misc.排序
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_isItem">
+            <summary>
+            更
+            工艺单BOM表.状态.更
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_g">
+            <summary>
+            克重/厚度
+            工艺单BOM表.物料.克重/厚度
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_price">
+            <summary>
+            单价
+            工艺单BOM表.物料.单价
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_tTLPrice">
+            <summary>
+            总价
+            工艺单BOM表.物料.总价
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_fFQty">
+            <summary>
+            标准用量
+            工艺单BOM表.BOM用量.标准用量
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydBomData.m_qty">
+            <summary>
+            订单量
+            工艺单BOM表.BOM用量.订单量
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.PMakGyd_SKey">
+            <summary>
+            工艺单主表 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.Misc.工艺单主表
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.Dept_SKey">
+            <summary>
+            领料部门 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.BOM用量.领料部门
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.Dept">
+            <summary>
+            领料部门
+            工艺单BOM表.BOM用量.领料部门
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.Uom_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.物料.单位
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.Uom">
+            <summary>
+            单位
+            工艺单BOM表.物料.单位
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.MatClass_SKey">
+            <summary>
+            物料类别 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.物料.物料类别
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.MatClass">
+            <summary>
+            物料类别
+            工艺单BOM表.物料.物料类别
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.PartName_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.Misc.项目
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.PartName">
+            <summary>
+            项目
+            工艺单BOM表.Misc.项目
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.CClass_SKey">
+            <summary>
+            品牌/编织 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.物料.品牌/编织
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.CClass">
+            <summary>
+            品牌/编织
+            工艺单BOM表.物料.品牌/编织
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.YS_SKey">
+            <summary>
+            颜色 序列化Key属性。（传递跨组织序列列字段）
+            工艺单BOM表.物料.颜色
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydBomData.YS">
+            <summary>
+            颜色
+            工艺单BOM表.物料.颜色
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.pMakGydWPIDData">
+            <summary>
+            工序 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:pMakGydGyBE.pMakGydWPIDData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_iD">
+            <summary>
+            ID
+            工序.Key.ID
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_createdOn">
+            <summary>
+            创建时间
+            工序.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_createdBy">
+            <summary>
+            创建人
+            工序.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_modifiedOn">
+            <summary>
+            修改时间
+            工序.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_modifiedBy">
+            <summary>
+            修改人
+            工序.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_sysVersion">
+            <summary>
+            事务版本
+            工序.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_code">
+            <summary>
+            代码
+            工序.Misc.代码
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_name">
+            <summary>
+            工序
+            工序.Misc.工序
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.pMakGydWPIDData.m_org">
+            <summary>
+            Org
+            工序.Misc.Org
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.pMakGydWPIDData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:pMakGydGyBE.pMakGydWPIDData.PDept_SKey">
+            <summary>
+            生产部门 序列化Key属性。（传递跨组织序列列字段）
+            工序.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.pMakGydWPIDData.PDept">
+            <summary>
+            生产部门
+            工序.Misc.生产部门
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.PMakgydGyData">
+            <summary>
+            工艺单工艺表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:pMakGydGyBE.PMakgydGyData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_wPID">
+            <summary>
+            工序
+            工艺单工艺表.Misc.工序
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_pMakGyd">
+            <summary>
+            工艺单主表
+            工艺单工艺表.Misc.工艺单主表
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_iD">
+            <summary>
+            ID
+            工艺单工艺表.Key.ID
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_createdOn">
+            <summary>
+            创建时间
+            工艺单工艺表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_createdBy">
+            <summary>
+            创建人
+            工艺单工艺表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_modifiedOn">
+            <summary>
+            修改时间
+            工艺单工艺表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_modifiedBy">
+            <summary>
+            修改人
+            工艺单工艺表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_sysVersion">
+            <summary>
+            事务版本
+            工艺单工艺表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_pX">
+            <summary>
+            顺序
+            工艺单工艺表.Misc.顺序
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_gyDem">
+            <summary>
+            工艺要求
+            工艺单工艺表.Misc.工艺要求
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_waste">
+            <summary>
+            损耗
+            工艺单工艺表.Misc.损耗
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_pPH">
+            <summary>
+            标准产能
+            工艺单工艺表.Misc.标准产能
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_uom">
+            <summary>
+            单位
+            工艺单工艺表.Misc.单位
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_fQty">
+            <summary>
+            生产量
+            工艺单工艺表.Misc.生产量
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_eSize">
+            <summary>
+            开料规格
+            工艺单工艺表.Misc.开料规格
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_qty">
+            <summary>
+            订单量
+            工艺单工艺表.Misc.订单量
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_item">
+            <summary>
+            使用材料
+            工艺单工艺表.Misc.使用材料
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_note">
+            <summary>
+            备注
+            工艺单工艺表.Misc.备注
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_fSPay">
+            <summary>
+            标准工价
+            工艺单工艺表.Misc.标准工价
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakgydGyData.m_fCJ">
+            <summary>
+            用料量
+            工艺单工艺表.Misc.用料量
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.WPID_SKey">
+            <summary>
+            工序 序列化Key属性。（传递跨组织序列列字段）
+            工艺单工艺表.Misc.工序
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.PMakGyd_SKey">
+            <summary>
+            工艺单主表 序列化Key属性。（传递跨组织序列列字段）
+            工艺单工艺表.Misc.工艺单主表
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.Dept_SKey">
+            <summary>
+            生产部门 序列化Key属性。（传递跨组织序列列字段）
+            工艺单工艺表.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.Dept">
+            <summary>
+            生产部门
+            工艺单工艺表.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.PartID_SKey">
+            <summary>
+            工件 序列化Key属性。（传递跨组织序列列字段）
+            工艺单工艺表.Misc.工件
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakgydGyData.PartID">
+            <summary>
+            工件
+            工艺单工艺表.Misc.工件
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.PMakGydData">
+            <summary>
+            工艺单主表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:pMakGydGyBE.PMakGydData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fmGlue">
+            <summary>
+            复膜胶
+            工艺单主表.测试.复膜胶
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_zdGlue">
+            <summary>
+            制袋胶
+            工艺单主表.测试.制袋胶
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_rRGlue">
+            <summary>
+            热熔胶
+            工艺单主表.测试.热熔胶
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_temDem">
+            <summary>
+            温度要求
+            工艺单主表.测试.温度要求
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_friDem">
+            <summary>
+            耐磨擦要求
+            工艺单主表.测试.耐磨擦要求
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjBu">
+            <summary>
+            采购
+            工艺单主表.附件.采购
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjDe">
+            <summary>
+            设计
+            工艺单主表.附件.设计
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjCy">
+            <summary>
+            彩印
+            工艺单主表.附件.彩印
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjFm">
+            <summary>
+            复膜模切
+            工艺单主表.附件.复膜模切
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjPg">
+            <summary>
+            品管
+            工艺单主表.附件.品管
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fjDy">
+            <summary>
+            打样室
+            工艺单主表.附件.打样室
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_pMakgydGy">
+            <summary>
+            工艺单工艺表
+            工艺单主表.Misc.工艺单工艺表
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_pMakgydBom">
+            <summary>
+            工艺单BOM表
+            工艺单主表.Misc.工艺单BOM表
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_iD">
+            <summary>
+            ID
+            工艺单主表.Key.ID
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_createdOn">
+            <summary>
+            创建时间
+            工艺单主表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_createdBy">
+            <summary>
+            创建人
+            工艺单主表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_modifiedOn">
+            <summary>
+            修改时间
+            工艺单主表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_modifiedBy">
+            <summary>
+            修改人
+            工艺单主表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_sysVersion">
+            <summary>
+            事务版本
+            工艺单主表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_dJ">
+            <summary>
+            品质等级
+            工艺单主表.Misc.品质等级
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_item">
+            <summary>
+            成品编码
+            工艺单主表.Misc.成品编码
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_changeNum">
+            <summary>
+            修改次数
+            工艺单主表.Misc.修改次数
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_beaDem">
+            <summary>
+            承重要求
+            工艺单主表.测试.承重要求
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_fl">
+            <summary>
+            菲林号/版号
+            工艺单主表.Misc.菲林号/版号
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_isPlan">
+            <summary>
+            IsPlan
+            工艺单主表.Misc.IsPlan
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_isFsc">
+            <summary>
+            FSC
+            工艺单主表.Misc.FSC
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_boxS">
+            <summary>
+            盖内径(规格)
+            工艺单主表.Misc.盖内径(规格)
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_boxX">
+            <summary>
+            底内径
+            工艺单主表.Misc.底内径
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_maker">
+            <summary>
+            制单
+            工艺单主表.审核.制单
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_makerDate">
+            <summary>
+            制单日期
+            工艺单主表.审核.制单日期
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_checker">
+            <summary>
+            审核
+            工艺单主表.审核.审核
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_checkDate">
+            <summary>
+            审核日期
+            工艺单主表.审核.审核日期
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_apper">
+            <summary>
+            核准
+            工艺单主表.审核.核准
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_apperDate">
+            <summary>
+            核准日期
+            工艺单主表.审核.核准日期
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_note">
+            <summary>
+            备注
+            工艺单主表.Misc.备注
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_ps">
+            <summary>
+            拼数
+            工艺单主表.Misc.拼数
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_ps2">
+            <summary>
+            拼数
+            工艺单主表.Misc.拼数
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_note2">
+            <summary>
+            备注2
+            工艺单主表.Misc.备注2
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_flowID">
+            <summary>
+            FlowID
+            工艺单主表.Misc.FlowID
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_isSignOk">
+            <summary>
+            核准
+            工艺单主表.Misc.核准
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_spell">
+            <summary>
+            拼法
+            工艺单主表.Misc.拼法
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PMakGydData.m_poClass">
+            <summary>
+            订单类型
+            工艺单主表.Misc.订单类型
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakGydData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakGydData.MakReqID_SKey">
+            <summary>
+            生产单号 序列化Key属性。（传递跨组织序列列字段）
+            工艺单主表.Misc.生产单号
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.PMakGydData.MakReqID">
+            <summary>
+            生产单号
+            工艺单主表.Misc.生产单号
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.GlueEnumData">
+            <summary>
+            枚举值: 胶水枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.GlueEnumData.CYR007">
+            <summary>
+            CYR007
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.GlueEnumData.CYR004">
+            <summary>
+            CYR004
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.GlueEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.TemDemEnumData">
+            <summary>
+            枚举值: 温度要求枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TemDemEnumData.T60">
+            <summary>
+            高温60℃,低温-20℃
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TemDemEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.FriDemEnumData">
+            <summary>
+            枚举值: 耐磨擦要求枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.FriDemEnumData.F0">
+            <summary>
+            未要求
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.FriDemEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.YsJtEnumData">
+            <summary>
+            枚举值: 印刷机台枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsJtEnumData.Y2">
+            <summary>
+            2色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsJtEnumData.Y4">
+            <summary>
+            4色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsJtEnumData.Y0">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsJtEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.TszfEnumData">
+            <summary>
+            枚举值: 提手织法枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2A">
+            <summary>
+            PP绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2O">
+            <summary>
+            特殊辅料绳子
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2B">
+            <summary>
+            涤棉绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2C">
+            <summary>
+            涤沦绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2D">
+            <summary>
+            PP编织带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2E">
+            <summary>
+            涤棉扁带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2F">
+            <summary>
+            涤沦缎带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2G">
+            <summary>
+            尼龙缎带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2H">
+            <summary>
+            纸绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2I">
+            <summary>
+            纸排绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2J">
+            <summary>
+            PVC管
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2K">
+            <summary>
+            皮绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2L">
+            <summary>
+            纯棉绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2M">
+            <summary>
+            PP扁带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2N">
+            <summary>
+            尼龙绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2P">
+            <summary>
+            无纺布提手
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2Q">
+            <summary>
+            塑料提手
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2R">
+            <summary>
+            雪纱带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2S">
+            <summary>
+            彩葱实心绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Y2T">
+            <summary>
+            麻绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TszfEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.TsbzEnumData">
+            <summary>
+            枚举值: 提手编织枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A1">
+            <summary>
+            针织
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A2">
+            <summary>
+            勾针
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A4">
+            <summary>
+            PP扁带
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.B1">
+            <summary>
+            三股绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.B2">
+            <summary>
+            三股扭绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C1">
+            <summary>
+            八股包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C2">
+            <summary>
+            八股不包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C3">
+            <summary>
+            20股包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C4">
+            <summary>
+            20股不包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C5">
+            <summary>
+            螺旋纹包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C7">
+            <summary>
+            无纺布芯八股
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.C8">
+            <summary>
+            两股
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D1">
+            <summary>
+            16花包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D2">
+            <summary>
+            16花不包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D3">
+            <summary>
+            32绽包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D4">
+            <summary>
+            32绽不包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D5">
+            <summary>
+            46花包芯
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.D7">
+            <summary>
+            无纺布芯16花
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.E1">
+            <summary>
+            单人字
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.E2">
+            <summary>
+            双人字
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.E3">
+            <summary>
+            网络纱
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F1">
+            <summary>
+            罗纹
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F2">
+            <summary>
+            平纹
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F3">
+            <summary>
+            斜纹
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F4">
+            <summary>
+            竖纹
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F5">
+            <summary>
+            图案
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.F6">
+            <summary>
+            跳点
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.G1">
+            <summary>
+            单面
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.G2">
+            <summary>
+            双面
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H1">
+            <summary>
+            纸绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H2">
+            <summary>
+            皮绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H3">
+            <summary>
+            PVC管
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H4">
+            <summary>
+            塑料提手
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H5">
+            <summary>
+            纸排绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.H6">
+            <summary>
+            纸扁绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.I1">
+            <summary>
+            贴纸绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.S1">
+            <summary>
+            彩葱实心绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.T1">
+            <summary>
+            麻绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A00">
+            <summary>
+            无纺布提手
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A01">
+            <summary>
+            弹力纱线
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A02">
+            <summary>
+            无弹力纱线
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A03">
+            <summary>
+            细麻线
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A04">
+            <summary>
+            布
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.A05">
+            <summary>
+            蜡绳
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.TsbzEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.ZzlxEnumData">
+            <summary>
+            枚举值: 纸张类型枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1A">
+            <summary>
+            白卡纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1B">
+            <summary>
+            铜版纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1C">
+            <summary>
+            白板纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1D">
+            <summary>
+            灰板纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1E">
+            <summary>
+            棕牛皮纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1F">
+            <summary>
+            白牛皮纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1G">
+            <summary>
+            双胶纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1H">
+            <summary>
+            单铜纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1I">
+            <summary>
+            粉卡纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1J">
+            <summary>
+            哑粉纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1K">
+            <summary>
+            竹浆纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1L">
+            <summary>
+            环保纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1M">
+            <summary>
+            石头纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y1N">
+            <summary>
+            再生纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y11">
+            <summary>
+            特种纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y12">
+            <summary>
+            瓦楞纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Y13">
+            <summary>
+            彩卡
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.ZzlxEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.SXBzlxEnumData">
+            <summary>
+            枚举值: 上下板纸张类型枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SXBzlxEnumData.Y1C">
+            <summary>
+            白板纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SXBzlxEnumData.Y1D">
+            <summary>
+            灰板纸
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SXBzlxEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.YsiEnumData">
+            <summary>
+            枚举值: 印刷计价颜色枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y01">
+            <summary>
+            1色满版专色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y02">
+            <summary>
+            2色满版专色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y03">
+            <summary>
+            3色满版专色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y04">
+            <summary>
+            4色满版专色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y05">
+            <summary>
+            5色满版
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y06">
+            <summary>
+            6色满版
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y07">
+            <summary>
+            7色满版
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y08">
+            <summary>
+            8色满版
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y09">
+            <summary>
+            1专黑色满版
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y10">
+            <summary>
+            正常4色
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y11">
+            <summary>
+            1色文字
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y12">
+            <summary>
+            2色文字
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y13">
+            <summary>
+            3色文字
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Y14">
+            <summary>
+            4色CMYK
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.YsiEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.MoEnumData">
+            <summary>
+            枚举值: 膜枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.AB">
+            <summary>
+            光膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.BB">
+            <summary>
+            亚膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.EB">
+            <summary>
+            珠光膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.FB">
+            <summary>
+            镭射膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.CC">
+            <summary>
+            金膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.CD">
+            <summary>
+            银膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.CF">
+            <summary>
+            铝膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.CH">
+            <summary>
+            复合膜（PET+PE）
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.CJ">
+            <summary>
+            触感膜
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MoEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.PartPapEnumData">
+            <summary>
+            枚举值: 纸袋工件枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P01">
+            <summary>
+            面标
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P02">
+            <summary>
+            上板
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P03">
+            <summary>
+            下板
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P04">
+            <summary>
+            纸袋
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P05">
+            <summary>
+            吊卡
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.P09">
+            <summary>
+            其它
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.B01">
+            <summary>
+            盖板
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.B02">
+            <summary>
+            底板
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PartPapEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.CGEnumData">
+            <summary>
+            枚举值: 采购枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CGEnumData.C1">
+            <summary>
+            辅料包
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CGEnumData.C2">
+            <summary>
+            客供样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CGEnumData.C0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CGEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.SJEnumData">
+            <summary>
+            枚举值: 设计枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SJEnumData.S0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SJEnumData.S1">
+            <summary>
+            图稿1份
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SJEnumData.S2">
+            <summary>
+            图稿1份+客供样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.SJEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.CYEnumData">
+            <summary>
+            枚举值: 彩印枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.C0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.C1">
+            <summary>
+            流通样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.C2">
+            <summary>
+            客供样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.C3">
+            <summary>
+            图稿1份
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.C4">
+            <summary>
+            图稿1份+客供样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.CYEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.MQEnumData">
+            <summary>
+            枚举值: 模切枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MQEnumData.F0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MQEnumData.F1">
+            <summary>
+            图稿1份
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MQEnumData.F2">
+            <summary>
+            烫金片
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.MQEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.PGEnumData">
+            <summary>
+            枚举值: 品管枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PGEnumData.P0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PGEnumData.P1">
+            <summary>
+            辅料包
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.PGEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.DyEnumData">
+            <summary>
+            枚举值: 打样室枚举 
+            
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.DyEnumData.D0">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.DyEnumData.D1">
+            <summary>
+            客供样
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.DyEnumData.D2">
+            <summary>
+            图稿1份
+            </summary>
+        </member>
+        <member name="F:pMakGydGyBE.DyEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:pMakGydGyBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:pMakGydGyBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

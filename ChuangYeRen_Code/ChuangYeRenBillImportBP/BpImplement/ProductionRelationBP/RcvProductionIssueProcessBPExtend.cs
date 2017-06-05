@@ -4,6 +4,7 @@
     using PublicDataTransObj;
     using System;
     using System.Collections.Generic;
+    using PublicDataTransObj;
     using System.Text;
     using UFIDA.U9.Base;
     using UFIDA.U9.CBO.Pub.Controller;
@@ -58,23 +59,23 @@
             }
             #endregion
             #region 领料单提交
-            //try
-            //{
-            //    BatchSubmitIssueTXNProxy submitIssue = new BatchSubmitIssueTXNProxy();
-            //    submitIssue.IssueTXNs = new List<BatchOperationDTOData>();
-            //    BatchOperationDTOData submintDto = new BatchOperationDTOData
-            //    {
-            //        ID = pubResult.DocID,
-            //        DocNo = pubResult.DocNo
-            //    };
-            //    submitIssue.Do();
-            //}
-            //catch (Exception ex)
-            //{
-            //    pubResult.Flag = false;
-            //    pubResult.Message += "提交领料单失败：" + ex.Message;
-            //    return pubResult;
-            //}
+            try
+            {
+                BatchSubmitIssueTXNProxy submitIssue = new BatchSubmitIssueTXNProxy();
+                submitIssue.IssueTXNs = new List<BatchOperationDTOData>();
+                submitIssue.IsAutoApp = true;
+                BatchOperationDTOData submintDto = new BatchOperationDTOData
+                {
+                    ID = pubResult.DocID
+                };
+                submitIssue.Do();
+            }
+            catch (Exception ex)
+            {
+                pubResult.Flag = false;
+                pubResult.Message += "提交领料单失败：" + ex.Message;
+                return pubResult;
+            }
             #endregion
             #region 领料单审核
             try
@@ -83,10 +84,24 @@
                 approveProxy.DocNoList = new List<ApproveIssueDoc4ExternalDTOData>();
                 ApproveIssueDoc4ExternalDTOData dto = new ApproveIssueDoc4ExternalDTOData
                 {
-                    DocNo = pubResult.DocNo
+                    DocNo = pubResult.DocNo,
+                    OperateType = true//false 弃审，true 审核
                 };
                 approveProxy.DocNoList.Add(dto);
-                approveProxy.Do();
+                var data = approveProxy.Do();
+                if (data.Count == 0)
+                {
+                    throw new Exception("领料单审核报错！");
+                }
+                if (data[0].IsSucceed)
+                {
+                    pubResult.Flag = true;
+                    pubResult.Message += "领料单审核成功！";
+                }
+                else
+                {
+                    throw new Exception(data[0].ErrorMsg);
+                }
             }
             catch (Exception ex)
             {
@@ -143,7 +158,6 @@
             };
             issueDto.MOs.Add(mo);
             issueDto.PickListDTOs = new List<PickListDTOData>();
-
             foreach (var item in invStock.InvStocks)
             {
                 PickListDTOData pickDto = new PickListDTOData();

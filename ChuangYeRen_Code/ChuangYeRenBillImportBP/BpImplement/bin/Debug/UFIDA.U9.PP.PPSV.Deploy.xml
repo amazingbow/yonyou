@@ -1,0 +1,882 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PP.PPSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.PP.PP.MODTOData">
+            <summary>
+            生产订单DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MODTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MODTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.DateTime,System.DateTime,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int32,System.Int32,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,System.Boolean,System.Boolean,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_demandCode">
+            <summary>
+            需求代号
+            生产订单DTO.Misc.需求代号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_plannedStartDate">
+            <summary>
+            预计开工日期
+            生产订单DTO.Misc.预计开工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_plannedCompleteDate">
+            <summary>
+            预计完工日期
+            生产订单DTO.Misc.预计完工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_qty">
+            <summary>
+            数量
+            生产订单DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_degree">
+            <summary>
+            等级
+            生产订单DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_potency">
+            <summary>
+            成分
+            生产订单DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_mO">
+            <summary>
+            MO
+            生产订单DTO.Misc.MO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_docNO">
+            <summary>
+            单据号
+            生产订单DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_isRewrite">
+            <summary>
+            是否回写
+            生产订单DTO.Misc.是否回写
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MODTOData.m_isMainProduct">
+            <summary>
+            是否主产品
+            生产订单DTO.Misc.是否主产品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Org">
+            <summary>
+            组织
+            生产订单DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Item">
+            <summary>
+            物料
+            生产订单DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.ItemVersion_SKey">
+            <summary>
+            物料版本 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.ItemVersion">
+            <summary>
+            物料版本
+            生产订单DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.OwnerOrg_SKey">
+            <summary>
+            货主 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.OwnerOrg">
+            <summary>
+            货主
+            生产订单DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Department_SKey">
+            <summary>
+            生产部门 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Department">
+            <summary>
+            生产部门
+            生产订单DTO.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Project">
+            <summary>
+            项目
+            生产订单DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Task">
+            <summary>
+            任务
+            生产订单DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Uom_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Uom">
+            <summary>
+            生产单位
+            生产订单DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Wh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            生产订单DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MODTOData.Wh">
+            <summary>
+            存储地点
+            生产订单DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.DPDTOData">
+            <summary>
+            等级比例DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DPDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DPDTOData.#ctor(System.Int32,System.Int32,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.DPDTOData.m_degree">
+            <summary>
+            等级
+            等级比例DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.DPDTOData.m_potency">
+            <summary>
+            成分
+            等级比例DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.DPDTOData.m_qty">
+            <summary>
+            预计产出数量
+            等级比例DTO.Misc.预计产出数量
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.InvReqDTOData">
+            <summary>
+            库存模拟需求DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.InvReqDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.InvReqDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int32,System.DateTime,System.String,System.Int64,System.DateTime,System.String,System.DateTime,System.Boolean,UFIDA.U9.CBO.MFG.BOM.BOMVersionData,System.Int32,System.Int64,System.Int32,System.Int64,System.Decimal,System.Int64,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_productAim">
+            <summary>
+            生产目的
+            库存模拟需求DTO.Misc.生产目的
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_bomEffictiveDate">
+            <summary>
+            BOM有效日期
+            库存模拟需求DTO.Misc.BOM有效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_bomECONo">
+            <summary>
+            BOM ECO号
+            库存模拟需求DTO.Misc.BOM ECO号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_routeEffectiveDate">
+            <summary>
+            工艺有效日期
+            库存模拟需求DTO.Misc.工艺有效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_routeECONo">
+            <summary>
+            工艺ECO号
+            库存模拟需求DTO.Misc.工艺ECO号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_planStartDate">
+            <summary>
+            预计开始时间
+            库存模拟需求DTO.Misc.预计开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_isOnly">
+            <summary>
+            Only关键件
+            库存模拟需求DTO.Misc.Only关键件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_bomVer">
+            <summary>
+            BOM版本
+            库存模拟需求DTO.Misc.BOM版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_bomLot">
+            <summary>
+            BOM批量
+            库存模拟需求DTO.Misc.BOM批量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_routingLot">
+            <summary>
+            工艺批量
+            库存模拟需求DTO.Misc.工艺批量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_productAmount">
+            <summary>
+            生产数量
+            库存模拟需求DTO.Misc.生产数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.InvReqDTOData.m_needTime">
+            <summary>
+            需求日期
+            库存模拟需求DTO.Misc.需求日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.Item">
+            <summary>
+            料品
+            库存模拟需求DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ItemVer_SKey">
+            <summary>
+            料品版本 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ItemVer">
+            <summary>
+            料品版本
+            库存模拟需求DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ProductLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ProductLine">
+            <summary>
+            生产线
+            库存模拟需求DTO.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.RouteVer_SKey">
+            <summary>
+            工艺版本 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.工艺版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.RouteVer">
+            <summary>
+            工艺版本
+            库存模拟需求DTO.Misc.工艺版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.BomUOM_SKey">
+            <summary>
+            BOM单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.BOM单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.BomUOM">
+            <summary>
+            BOM单位
+            库存模拟需求DTO.Misc.BOM单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.RoutingUOM_SKey">
+            <summary>
+            工艺单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.工艺单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.RoutingUOM">
+            <summary>
+            工艺单位
+            库存模拟需求DTO.Misc.工艺单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.InvReqDTOData.ProductUOM">
+            <summary>
+            生产单位
+            库存模拟需求DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MPSDetailDTOData">
+            <summary>
+            MPS明细DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSDetailDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSDetailDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.String,System.Decimal,System.Int64,System.Int64,System.Decimal,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_dTOID">
+            <summary>
+            DTO序号
+            MPS明细DTO.Misc.DTO序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            MPS明细DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_fromDegree">
+            <summary>
+            从等级
+            MPS明细DTO.Misc.从等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_toDegree">
+            <summary>
+            到等级
+            MPS明细DTO.Misc.到等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_fromPotency">
+            <summary>
+            从成分
+            MPS明细DTO.Misc.从成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_toPotency">
+            <summary>
+            到成分
+            MPS明细DTO.Misc.到成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_demandCode">
+            <summary>
+            需求分类
+            MPS明细DTO.Misc.需求分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_seibanCode">
+            <summary>
+            番号Code
+            MPS明细DTO.Misc.番号Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_tradeQty">
+            <summary>
+            交易数量
+            MPS明细DTO.Misc.交易数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_tradeToSecUOMRate">
+            <summary>
+            交易单位-辅单位转换率
+            MPS明细DTO.Misc.交易单位-辅单位转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSDetailDTOData.m_demandDate">
+            <summary>
+            需求日期
+            MPS明细DTO.Misc.需求日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.FOrg_SKey">
+            <summary>
+            工厂组织 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.FOrg">
+            <summary>
+            工厂组织
+            MPS明细DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Item">
+            <summary>
+            料品
+            MPS明细DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Project">
+            <summary>
+            项目
+            MPS明细DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Task">
+            <summary>
+            任务
+            MPS明细DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.OwnerOrg_SKey">
+            <summary>
+            货主组织 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.OwnerOrg">
+            <summary>
+            货主组织
+            MPS明细DTO.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Seiban_SKey">
+            <summary>
+            番号 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.Seiban">
+            <summary>
+            番号
+            MPS明细DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.TradeUOM_SKey">
+            <summary>
+            交易单位 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.交易单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.TradeUOM">
+            <summary>
+            交易单位
+            MPS明细DTO.Misc.交易单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.TradeUOMSecUOM_SKey">
+            <summary>
+            交易单位辅单位 序列化Key属性。（传递跨组织序列列字段）
+            MPS明细DTO.Misc.交易单位辅单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MPSDetailDTOData.TradeUOMSecUOM">
+            <summary>
+            交易单位辅单位
+            MPS明细DTO.Misc.交易单位辅单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MPSToPlanResultDTOData">
+            <summary>
+            MPSToPlan结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_mPSDetailDTOID">
+            <summary>
+            MPS明细DTOID
+            MPSToPlan结果DTO.Misc.MPS明细DTOID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pP">
+            <summary>
+            生产计划
+            MPSToPlan结果DTO.Misc.生产计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pPLine">
+            <summary>
+            生产计划行
+            MPSToPlan结果DTO.Misc.生产计划行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pPPeriodLine">
+            <summary>
+            生产计划分期行
+            MPSToPlan结果DTO.Misc.生产计划分期行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_errorMessage">
+            <summary>
+            失败信息
+            MPSToPlan结果DTO.Misc.失败信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_resultEnum">
+            <summary>
+            成功失败枚举
+            MPSToPlan结果DTO.Misc.成功失败枚举
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pPNo">
+            <summary>
+            生产计划No
+            MPSToPlan结果DTO.Misc.生产计划No
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pPlineNo">
+            <summary>
+            生产计划行No
+            MPSToPlan结果DTO.Misc.生产计划行No
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MPSToPlanResultDTOData.m_pPPeriodLineNo">
+            <summary>
+            生产计划分期行No
+            MPSToPlan结果DTO.Misc.生产计划分期行No
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.QryDTOData">
+            <summary>
+            批量生单查询DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.QryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.QryDTOData.#ctor(System.Object)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.QryDTOData.m_qryInDTO">
+            <summary>
+            查询DTO
+            批量生单查询DTO.Misc.查询DTO
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PPToTransReturnDTOData">
+            <summary>
+            批量生单查询返回 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransReturnDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransReturnDTOData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPToTransReturnDTOData.m_returnDTO">
+            <summary>
+            返回类型
+            批量生单查询返回.Misc.返回类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PPToTransInDTOForTransDTOData">
+            <summary>
+            转生产计划推调入单信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransInDTOForTransDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransInDTOForTransDTOData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPToTransInDTOForTransDTOData.m_toTransInDTOList">
+            <summary>
+            调拨信息
+            转生产计划推调入单信息DTO.Misc.调拨信息
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PPToTransOutDTOForTransDTOData">
+            <summary>
+            转生产计划推调出单信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransOutDTOForTransDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPToTransOutDTOForTransDTOData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPToTransOutDTOForTransDTOData.m_toTransOutDTOList">
+            <summary>
+            调出单推单信息集合
+            转生产计划推调出单信息DTO.Misc.调出单推单信息集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.BreakDownInputDTOData">
+            <summary>
+            拆解下达服务入口DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.BreakDownInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.BreakDownInputDTOData.#ctor(System.Int64,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BreakDownInputDTOData.m_details">
+            <summary>
+            子计划明细
+            拆解下达服务入口DTO.Misc.子计划明细
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.BreakDownInputDTOData.Setting_SKey">
+            <summary>
+            子计划清单行 序列化Key属性。（传递跨组织序列列字段）
+            拆解下达服务入口DTO.Misc.子计划清单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.BreakDownInputDTOData.Setting">
+            <summary>
+            子计划清单行
+            拆解下达服务入口DTO.Misc.子计划清单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.BreakDownInputDTOData.Details_SKey">
+            <summary>
+            子计划明细 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            拆解下达服务入口DTO.Misc.子计划明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData">
+            <summary>
+            MO回写释放量DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.#ctor(System.Int64,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.m_qty">
+            <summary>
+            回写数量
+            MO回写释放量DTO.Misc.回写数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.PPline_SKey">
+            <summary>
+            释放MO的计划行 序列化Key属性。（传递跨组织序列列字段）
+            MO回写释放量DTO.Misc.释放MO的计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.PPline">
+            <summary>
+            释放MO的计划行
+            MO回写释放量DTO.Misc.释放MO的计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.UOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            MO回写释放量DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MOWriteReleasedQtyDTOData.UOM">
+            <summary>
+            生产单位
+            MO回写释放量DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MPSToPPWithouPPException">
+            <summary>
+            异常类型: 主生产计划推生产计划没有生产计划异常
+            
+             请先确定一个生产计划
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToPPWithouPPException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 主生产计划推生产计划没有生产计划异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToPPWithouPPException.#ctor">
+            <summary>
+            异常类型: 主生产计划推生产计划没有生产计划异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToPPWithouPPException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 主生产计划推生产计划没有生产计划异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MPSToProductPlanWithoutPeriodException">
+            <summary>
+            异常类型: 生产计划需制定分期子表才能进行导入
+            
+             生产计划需制定分期子表才能进行导入
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToProductPlanWithoutPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产计划需制定分期子表才能进行导入 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToProductPlanWithoutPeriodException.#ctor">
+            <summary>
+            异常类型: 生产计划需制定分期子表才能进行导入 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MPSToProductPlanWithoutPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生产计划需制定分期子表才能进行导入 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

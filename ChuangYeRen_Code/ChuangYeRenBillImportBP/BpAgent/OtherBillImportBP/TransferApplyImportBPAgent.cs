@@ -38,13 +38,14 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 iD);
+		PublicDataTransObj.PublicReturnDTOData Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 inSourceID, System.Int64 outSourceID);
     }
 	[Serializable]    
     public class TransferApplyImportBPProxy : OperationProxyBase//, UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.Proxy.ITransferApplyImportBP
     {
 	#region Fields	
-				private System.Int64 iD ;
+				private System.Int64 inSourceID ;
+						private System.Int64 outSourceID ;
 			
 	#endregion	
 		
@@ -53,20 +54,39 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.Proxy
 				
 
 		/// <summary>
-		/// ID (该属性可为空,但有默认值)
-		/// 调拨申请单导入.Misc.ID
+		/// 入库单ID (该属性可为空,但有默认值)
+		/// 调拨申请单导入.Misc.入库单ID
 		/// </summary>
 		/// <value>System.Int64</value>
-		public System.Int64 ID
+		public System.Int64 InSourceID
 		{
 			get	
 			{	
-				return this.iD;
+				return this.inSourceID;
 			}
 
 			set	
 			{	
-				this.iD = value;	
+				this.inSourceID = value;	
+			}
+		}		
+						
+
+		/// <summary>
+		/// 出库单ID (该属性可为空,但有默认值)
+		/// 调拨申请单导入.Misc.出库单ID
+		/// </summary>
+		/// <value>System.Int64</value>
+		public System.Int64 OutSourceID
+		{
+			get	
+			{	
+				return this.outSourceID;
+			}
+
+			set	
+			{	
+				this.outSourceID = value;	
 			}
 		}		
 			
@@ -96,7 +116,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.Proxy
             ITransferApplyImportBP channel = oChannel as ITransferApplyImportBP;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, iD);
+				return channel.Do(context, out returnMsgs, inSourceID, outSourceID);
 	    }
             return  null;
         }
@@ -113,7 +133,7 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.OtherBillImportBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-					
+										
 		}
 		#endregion 
 

@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TColorBE</name>
+    </assembly>
+    <members>
+        <member name="T:TColorBE.TColor">
+            <summary>
+            实体: 颜色编码表
+            
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:TColorBE.TColor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:TColorBE.TColor.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:TColorBE.TColor.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:TColorBE.TColor.FromEntityData(TColorBE.TColorData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.ToEntityData(TColorBE.TColorData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            颜色编码表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            颜色编码表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            颜色编码表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            颜色编码表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            颜色编码表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            颜色编码表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            颜色编码表.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.Name">
+            <summary>
+            颜色名称 (该属性可为空,且无默认值)
+            颜色编码表.Misc.颜色名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.Color">
+            <summary>
+            颜色 (该属性可为空,且无默认值)
+            颜色编码表.Misc.颜色
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.Res_Color">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Color")的方式取资源
+            </summary>
+        </member>
+        <member name="T:TColorBE.TColor.EntityKey">
+            <summary>
+            Strong Class TColor EntityKey 
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:TColorBE.TColor.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityFinder.FindByBusinessKey(System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityFinder.FindByBusinessKey(TColorBE.TColor.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityFinder.FindByBusinessKeyIndex(TColorBE.TColor.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引TColorBE_TColor_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:TColorBE.TColor.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:TColorBE.TColor.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            TColorBE_TColor_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:TColorBE.TColor.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:TColorBE.TColor.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            颜色编码表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            颜色编码表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            颜色编码表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            颜色编码表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            颜色编码表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            颜色编码表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            代码 (该属性可为空,且无默认值)
+            颜色编码表.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            颜色名称 (该属性可为空,且无默认值)
+            颜色编码表.Misc.颜色名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TColorBE.TColor.EntityOriginal.Color">
+            <summary>
+             OrginalData属性。只可读。
+            颜色 (该属性可为空,且无默认值)
+            颜色编码表.Misc.颜色
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:TColorBE.TColor.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.Code">
+            <summary>
+            属性: 代码 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.Name">
+            <summary>
+            属性: 颜色名称 的名称
+            </summary>
+        </member>
+        <member name="P:TColorBE.TColor.EntityRes.Color">
+            <summary>
+            属性: 颜色 的名称
+            </summary>
+        </member>
+    </members>
+</doc>

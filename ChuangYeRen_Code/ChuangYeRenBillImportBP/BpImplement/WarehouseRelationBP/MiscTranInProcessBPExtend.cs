@@ -93,13 +93,11 @@
         {
             InvStock invStock = InvStock.Finder.FindByID(bpObj.RelationID);
             #region  组织杂收单表头
-            // 杂收单单头
-            IC_MiscRcvDTOData miscRcvDTO = new IC_MiscRcvDTOData() { };
-            // 组织
-            miscRcvDTO.Org = new CommonArchiveDataDTOData(Base.Context.LoginOrg.ID, Base.Context.LoginOrg.Code, Base.Context.LoginOrg.Name);
-            // 业务日期
-            miscRcvDTO.BusinessDate = DateTime.Now;
-            // 单据类型
+           
+            IC_MiscRcvDTOData miscRcvDTO = new IC_MiscRcvDTOData() { }; // 杂收单单头
+         
+            miscRcvDTO.Org = new CommonArchiveDataDTOData(Base.Context.LoginOrg.ID, Base.Context.LoginOrg.Code, Base.Context.LoginOrg.Name);   // 组织         
+            miscRcvDTO.BusinessDate = invStock.BillDate;   // 业务日期       
             string doctypeCode = "";
             if (bpObj.ProductionID > 0)
             {
@@ -109,11 +107,9 @@
             {
                 doctypeCode = "ZS002";
             }
-            miscRcvDTO.MiscRcvDocType = new CommonArchiveDataDTOData() { Code = doctypeCode };
-            // 数据状态
-            miscRcvDTO.SysState = UFSoft.UBF.PL.Engine.ObjectState.Inserted;
-            // 描述
-            miscRcvDTO.Memo = "本单据由进出仓明细主表[" + invStock.BillNO + "]自动生成";
+            miscRcvDTO.MiscRcvDocType = new CommonArchiveDataDTOData() { Code = doctypeCode };     // 单据类型         
+            miscRcvDTO.SysState = UFSoft.UBF.PL.Engine.ObjectState.Inserted;   // 数据状态          
+            miscRcvDTO.Memo =invStock.BillNO;  // 描述
             #endregion
             miscRcvDTO.MiscRcvTransLs = new List<IC_MiscRcvTransLsDTOData>();
             int mvRowNo = 0;
@@ -127,7 +123,7 @@
                 // 料品
                 miscRcvLineDTO.ItemInfo = new ItemInfoData()
                 {
-                    ItemID = item.ItemID.ID,
+                   // ItemID = item.ItemID.ID,
                     ItemCode = item.ItemID.Code,
                     ItemName = item.ItemID.Name
                 };
@@ -165,15 +161,14 @@
                 //miscRcvLineDTO.BenefitWh = bomHead.WareHouse.ID;
                 //miscRcvDTO.MiscRcvTransLs.Add(miscRcvLineDTO);
 
+                 
 
                 //生产相关
-                miscRcvLineDTO.IsMFG = true;
-
-                //生产订单号
-                var mo = MO.MO.MO.Finder.FindByID(bpObj.ProductionID);
+                miscRcvLineDTO.IsMFG = true;  
+                var mo = MO.MO.MO.Finder.FindByID(bpObj.ProductionID);//生产订单号
                 miscRcvLineDTO.MoDocNo = mo.DocNo;
                 miscRcvLineDTO.MoDocEntity = bpObj.ProductionID;
-
+                
                 miscRcvLineDTO.DescFlexSegments = new Base.FlexField.DescFlexField.DescFlexSegmentsData();
                 miscRcvLineDTO.BenefitProject = new CommonArchiveDataDTOData { Code = item.SCPO.Code };
                 miscRcvLineDTO.Project = new CommonArchiveDataDTOData { Code = item.SCPO.Code };

@@ -1,0 +1,1645 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>adDeviceBE</name>
+    </assembly>
+    <members>
+        <member name="T:adDeviceBE.AdDevice">
+            <summary>
+            实体: 设备档案
+            
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.FromEntityData(adDeviceBE.AdDeviceData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.ToEntityData(adDeviceBE.AdDeviceData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            设备档案.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            设备档案.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            设备档案.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            设备档案.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            设备档案.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            设备档案.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.FlowID">
+            <summary>
+            FlowID (该属性不可为空,但有默认值)
+            设备档案.Misc.FlowID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.IsDelete">
+            <summary>
+            报废 (该属性不可为空,但有默认值)
+            设备档案.Plan.报废
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.IsUsed">
+            <summary>
+            使用中 (该属性不可为空,但有默认值)
+            设备档案.Plan.使用中
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.IsSignOk">
+            <summary>
+            IsSignOk (该属性不可为空,但有默认值)
+            设备档案.Misc.IsSignOk
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Code">
+            <summary>
+            设备编号 (该属性不可为空,且无默认值)
+            设备档案.Plan.设备编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Model">
+            <summary>
+            型号 (该属性可为空,且无默认值)
+            设备档案.Misc.型号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.AssetNumber">
+            <summary>
+            资产编号 (该属性可为空,且无默认值)
+            设备档案.Misc.资产编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.MakDate">
+            <summary>
+            出厂日期 (该属性可为空,且无默认值)
+            设备档案.Misc.出厂日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Name">
+            <summary>
+            设备名称 (该属性不可为空,且无默认值)
+            设备档案.Plan.设备名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Specification">
+            <summary>
+            规格 (该属性可为空,且无默认值)
+            设备档案.Misc.规格
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.WarrDate">
+            <summary>
+            保修日期 (该属性可为空,且无默认值)
+            设备档案.Misc.保修日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.BeginUseDate">
+            <summary>
+            启用日期 (该属性可为空,且无默认值)
+            设备档案.Misc.启用日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Manufacture">
+            <summary>
+            制造商 (该属性可为空,且无默认值)
+            设备档案.Misc.制造商
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Attr">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            设备档案.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DeviceClass">
+            <summary>
+            排产类型 (该属性可为空,且无默认值)
+            设备档案.Plan.排产类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DeviceClassKey">
+            <summary>
+            排产类型 的Key (该属性可为空,且无默认值)
+            设备档案.Plan.排产类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.BillDate">
+            <summary>
+            建档日期 (该属性可为空,且无默认值)
+            设备档案.Misc.建档日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Supplier">
+            <summary>
+            供应商 (该属性可为空,且无默认值)
+            设备档案.Misc.供应商
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EquipType">
+            <summary>
+            设备类型 (该属性不可为空,但有默认值)
+            设备档案.Misc.设备类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.WorkTime">
+            <summary>
+            日可开机 (该属性不可为空,但有默认值)
+            设备档案.Plan.日可开机
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.CheckDate">
+            <summary>
+            审核日期 (该属性可为空,且无默认值)
+            设备档案.Misc.审核日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Purpose">
+            <summary>
+            用途 (该属性可为空,且无默认值)
+            设备档案.Misc.用途
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.UseDept">
+            <summary>
+            使用部门 (该属性不可为空,且无默认值)
+            设备档案.Plan.使用部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.UseDeptKey">
+            <summary>
+            使用部门 的Key (该属性不可为空,且无默认值)
+            设备档案.Plan.使用部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.PowerCap">
+            <summary>
+            均载产能 (该属性不可为空,但有默认值)
+            设备档案.Plan.均载产能
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Biller">
+            <summary>
+            建档人员 (该属性可为空,且无默认值)
+            设备档案.Misc.建档人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DrawingNumber">
+            <summary>
+            说明书附档 (该属性可为空,且无默认值)
+            设备档案.Misc.说明书附档
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.SettingPlace">
+            <summary>
+            存放位置 (该属性不可为空,且无默认值)
+            设备档案.Plan.存放位置
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Price">
+            <summary>
+            设备价格 (该属性不可为空,但有默认值)
+            设备档案.Plan.设备价格
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Checker">
+            <summary>
+            审核人员 (该属性可为空,且无默认值)
+            设备档案.Misc.审核人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Note">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            设备档案.Plan.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Org">
+            <summary>
+            Org (该属性不可为空,但有默认值)
+            设备档案.Plan.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Power">
+            <summary>
+            小时耗电 (该属性不可为空,但有默认值)
+            设备档案.Plan.小时耗电
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.IsPlan">
+            <summary>
+            计划设备 (该属性不可为空,但有默认值)
+            设备档案.Plan.计划设备
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.PDept">
+            <summary>
+            计划部门 (该属性可为空,且无默认值)
+            设备档案.Plan.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.PDeptKey">
+            <summary>
+            计划部门 的Key (该属性可为空,且无默认值)
+            设备档案.Plan.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DPrice">
+            <summary>
+            日折旧 (该属性不可为空,但有默认值)
+            设备档案.Plan.日折旧
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DeviceABC">
+            <summary>
+            ABC类别 (该属性不可为空,但有默认值)
+            设备档案.Misc.ABC类别
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DUseType">
+            <summary>
+            使用状态 (该属性不可为空,但有默认值)
+            设备档案.Misc.使用状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.DeviceNo">
+            <summary>
+            设备编号 (该属性可为空,且无默认值)
+            设备档案.Plan.设备编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.StopQty">
+            <summary>
+            停机产能 (该属性可为空,但有默认值)
+            设备档案.Plan.停机产能
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.HBQty">
+            <summary>
+            换版数量 (该属性可为空,但有默认值)
+            设备档案.Plan.换版数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_FlowID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FlowID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_IsDelete">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsDelete")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_IsUsed">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsUsed")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_IsSignOk">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsSignOk")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Model">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Model")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_AssetNumber">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AssetNumber")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_MakDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MakDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Specification">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Specification")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_WarrDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WarrDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_BeginUseDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BeginUseDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Manufacture">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Manufacture")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Attr">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Attr")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DeviceClass">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DeviceClass")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_BillDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BillDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Supplier">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Supplier")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_EquipType">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("EquipType")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_WorkTime">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WorkTime")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_CheckDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CheckDate")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Purpose">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Purpose")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_UseDept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("UseDept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_PowerCap">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PowerCap")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Biller">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Biller")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DrawingNumber">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DrawingNumber")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_SettingPlace">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SettingPlace")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Price">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Price")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Checker">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Checker")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Note">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_Power">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Power")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_IsPlan">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsPlan")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_PDept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PDept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DPrice">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DPrice")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DeviceABC">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DeviceABC")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DUseType">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DUseType")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_DeviceNo">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DeviceNo")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_StopQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("StopQty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.Res_HBQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("HBQty")的方式取资源
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.AdDevice.EntityKey">
+            <summary>
+            Strong Class AdDevice EntityKey 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.AdDevice.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityFinder.FindByBusinessKey(System.String,PDeptBE.PDept.EntityKey)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityFinder.FindByBusinessKey(System.String,PDeptBE.PDept)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityFinder.FindByBusinessKey(adDeviceBE.AdDevice.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityFinder.FindByBusinessKeyIndex(adDeviceBE.AdDevice.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引adDeviceBE_AdDevice_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.AdDevice.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.AdDevice.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            adDeviceBE_AdDevice_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.AdDevice.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            设备档案.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            设备档案.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            设备档案.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            设备档案.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            设备档案.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            设备档案.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.FlowID">
+            <summary>
+             OrginalData属性。只可读。
+            FlowID (该属性不可为空,但有默认值)
+            设备档案.Misc.FlowID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.IsDelete">
+            <summary>
+             OrginalData属性。只可读。
+            报废 (该属性不可为空,但有默认值)
+            设备档案.Plan.报废
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.IsUsed">
+            <summary>
+             OrginalData属性。只可读。
+            使用中 (该属性不可为空,但有默认值)
+            设备档案.Plan.使用中
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.IsSignOk">
+            <summary>
+             OrginalData属性。只可读。
+            IsSignOk (该属性不可为空,但有默认值)
+            设备档案.Misc.IsSignOk
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            设备编号 (该属性不可为空,且无默认值)
+            设备档案.Plan.设备编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Model">
+            <summary>
+             OrginalData属性。只可读。
+            型号 (该属性可为空,且无默认值)
+            设备档案.Misc.型号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.AssetNumber">
+            <summary>
+             OrginalData属性。只可读。
+            资产编号 (该属性可为空,且无默认值)
+            设备档案.Misc.资产编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.MakDate">
+            <summary>
+             OrginalData属性。只可读。
+            出厂日期 (该属性可为空,且无默认值)
+            设备档案.Misc.出厂日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            设备名称 (该属性不可为空,且无默认值)
+            设备档案.Plan.设备名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Specification">
+            <summary>
+             OrginalData属性。只可读。
+            规格 (该属性可为空,且无默认值)
+            设备档案.Misc.规格
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.WarrDate">
+            <summary>
+             OrginalData属性。只可读。
+            保修日期 (该属性可为空,且无默认值)
+            设备档案.Misc.保修日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.BeginUseDate">
+            <summary>
+             OrginalData属性。只可读。
+            启用日期 (该属性可为空,且无默认值)
+            设备档案.Misc.启用日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Manufacture">
+            <summary>
+             OrginalData属性。只可读。
+            制造商 (该属性可为空,且无默认值)
+            设备档案.Misc.制造商
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Attr">
+            <summary>
+             OrginalData属性。只可读。
+            属性 (该属性可为空,且无默认值)
+            设备档案.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DeviceClass">
+            <summary>
+             OrginalData属性。只可读。
+            排产类型 (该属性可为空,且无默认值)
+            设备档案.Plan.排产类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DeviceClassKey">
+            <summary>
+            EntityKey 属性
+            排产类型 的Key (该属性可为空,且无默认值)
+            设备档案.Plan.排产类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.BillDate">
+            <summary>
+             OrginalData属性。只可读。
+            建档日期 (该属性可为空,且无默认值)
+            设备档案.Misc.建档日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Supplier">
+            <summary>
+             OrginalData属性。只可读。
+            供应商 (该属性可为空,且无默认值)
+            设备档案.Misc.供应商
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.EquipType">
+            <summary>
+             OrginalData属性。只可读。
+            设备类型 (该属性不可为空,但有默认值)
+            设备档案.Misc.设备类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.WorkTime">
+            <summary>
+             OrginalData属性。只可读。
+            日可开机 (该属性不可为空,但有默认值)
+            设备档案.Plan.日可开机
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.CheckDate">
+            <summary>
+             OrginalData属性。只可读。
+            审核日期 (该属性可为空,且无默认值)
+            设备档案.Misc.审核日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Purpose">
+            <summary>
+             OrginalData属性。只可读。
+            用途 (该属性可为空,且无默认值)
+            设备档案.Misc.用途
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.UseDept">
+            <summary>
+             OrginalData属性。只可读。
+            使用部门 (该属性不可为空,且无默认值)
+            设备档案.Plan.使用部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.UseDeptKey">
+            <summary>
+            EntityKey 属性
+            使用部门 的Key (该属性不可为空,且无默认值)
+            设备档案.Plan.使用部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.PowerCap">
+            <summary>
+             OrginalData属性。只可读。
+            均载产能 (该属性不可为空,但有默认值)
+            设备档案.Plan.均载产能
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Biller">
+            <summary>
+             OrginalData属性。只可读。
+            建档人员 (该属性可为空,且无默认值)
+            设备档案.Misc.建档人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DrawingNumber">
+            <summary>
+             OrginalData属性。只可读。
+            说明书附档 (该属性可为空,且无默认值)
+            设备档案.Misc.说明书附档
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.SettingPlace">
+            <summary>
+             OrginalData属性。只可读。
+            存放位置 (该属性不可为空,且无默认值)
+            设备档案.Plan.存放位置
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Price">
+            <summary>
+             OrginalData属性。只可读。
+            设备价格 (该属性不可为空,但有默认值)
+            设备档案.Plan.设备价格
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Checker">
+            <summary>
+             OrginalData属性。只可读。
+            审核人员 (该属性可为空,且无默认值)
+            设备档案.Misc.审核人员
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Note">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            设备档案.Plan.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性不可为空,但有默认值)
+            设备档案.Plan.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.Power">
+            <summary>
+             OrginalData属性。只可读。
+            小时耗电 (该属性不可为空,但有默认值)
+            设备档案.Plan.小时耗电
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.IsPlan">
+            <summary>
+             OrginalData属性。只可读。
+            计划设备 (该属性不可为空,但有默认值)
+            设备档案.Plan.计划设备
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.PDept">
+            <summary>
+             OrginalData属性。只可读。
+            计划部门 (该属性可为空,且无默认值)
+            设备档案.Plan.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.PDeptKey">
+            <summary>
+            EntityKey 属性
+            计划部门 的Key (该属性可为空,且无默认值)
+            设备档案.Plan.计划部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DPrice">
+            <summary>
+             OrginalData属性。只可读。
+            日折旧 (该属性不可为空,但有默认值)
+            设备档案.Plan.日折旧
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DeviceABC">
+            <summary>
+             OrginalData属性。只可读。
+            ABC类别 (该属性不可为空,但有默认值)
+            设备档案.Misc.ABC类别
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DUseType">
+            <summary>
+             OrginalData属性。只可读。
+            使用状态 (该属性不可为空,但有默认值)
+            设备档案.Misc.使用状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.DeviceNo">
+            <summary>
+             OrginalData属性。只可读。
+            设备编号 (该属性可为空,且无默认值)
+            设备档案.Plan.设备编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.StopQty">
+            <summary>
+             OrginalData属性。只可读。
+            停机产能 (该属性可为空,但有默认值)
+            设备档案.Plan.停机产能
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityOriginal.HBQty">
+            <summary>
+             OrginalData属性。只可读。
+            换版数量 (该属性可为空,但有默认值)
+            设备档案.Plan.换版数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:adDeviceBE.AdDevice.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.FlowID">
+            <summary>
+            属性: FlowID 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.IsDelete">
+            <summary>
+            属性: 报废 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.IsUsed">
+            <summary>
+            属性: 使用中 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.IsSignOk">
+            <summary>
+            属性: IsSignOk 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Code">
+            <summary>
+            属性: 设备编号 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Model">
+            <summary>
+            属性: 型号 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.AssetNumber">
+            <summary>
+            属性: 资产编号 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.MakDate">
+            <summary>
+            属性: 出厂日期 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Name">
+            <summary>
+            属性: 设备名称 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Specification">
+            <summary>
+            属性: 规格 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.WarrDate">
+            <summary>
+            属性: 保修日期 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.BeginUseDate">
+            <summary>
+            属性: 启用日期 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Manufacture">
+            <summary>
+            属性: 制造商 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Attr">
+            <summary>
+            属性: 属性 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DeviceClass">
+            <summary>
+            属性: 排产类型 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.BillDate">
+            <summary>
+            属性: 建档日期 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Supplier">
+            <summary>
+            属性: 供应商 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.EquipType">
+            <summary>
+            属性: 设备类型 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.WorkTime">
+            <summary>
+            属性: 日可开机 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.CheckDate">
+            <summary>
+            属性: 审核日期 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Purpose">
+            <summary>
+            属性: 用途 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.UseDept">
+            <summary>
+            属性: 使用部门 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.PowerCap">
+            <summary>
+            属性: 均载产能 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Biller">
+            <summary>
+            属性: 建档人员 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DrawingNumber">
+            <summary>
+            属性: 说明书附档 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.SettingPlace">
+            <summary>
+            属性: 存放位置 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Price">
+            <summary>
+            属性: 设备价格 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Checker">
+            <summary>
+            属性: 审核人员 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Note">
+            <summary>
+            属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.Power">
+            <summary>
+            属性: 小时耗电 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.IsPlan">
+            <summary>
+            属性: 计划设备 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.PDept">
+            <summary>
+            属性: 计划部门 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DPrice">
+            <summary>
+            属性: 日折旧 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DeviceABC">
+            <summary>
+            属性: ABC类别 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DUseType">
+            <summary>
+            属性: 使用状态 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.DeviceNo">
+            <summary>
+            属性: 设备编号 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.StopQty">
+            <summary>
+            属性: 停机产能 的名称
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.AdDevice.EntityRes.HBQty">
+            <summary>
+            属性: 换版数量 的名称
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.DeviceTypeEnum">
+            <summary>
+            可扩展枚举: 设备类型枚举 
+            
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceTypeEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get DeviceTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceTypeEnum.GetFromValue(System.Object)">
+            <summary>
+            Get DeviceTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceTypeEnum.GetFromName(System.String)">
+            <summary>
+            Get DeviceTypeEnum By Name 
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.D1">
+            <summary>
+            枚举值: 辅助设备  Value:0  
+            设备类型枚举.Misc.辅助设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.D2">
+            <summary>
+            枚举值: 检测设备  Value:1  
+            设备类型枚举.Misc.检测设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.D3">
+            <summary>
+            枚举值: 生产设备  Value:2  
+            设备类型枚举.Misc.生产设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.D4">
+            <summary>
+            枚举值: 特种设备  Value:3  
+            设备类型枚举.Misc.特种设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Values">
+            <summary>
+            Get DeviceTypeEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_TypeName">
+            <summary>
+            设备类型枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_TypeNameS">
+            <summary>
+            设备类型枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_D1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_D2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_D3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.Res_D4">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceTypeEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceTypeEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceTypeEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.DeviceABCTypeEnum">
+            <summary>
+            可扩展枚举: 设备ABC枚举 
+            
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceABCTypeEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get DeviceABCTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceABCTypeEnum.GetFromValue(System.Object)">
+            <summary>
+            Get DeviceABCTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceABCTypeEnum.GetFromName(System.String)">
+            <summary>
+            Get DeviceABCTypeEnum By Name 
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.A1">
+            <summary>
+            枚举值: A类设备  Value:0  
+            设备ABC枚举.Misc.A类设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.A2">
+            <summary>
+            枚举值: B类设备  Value:1  
+            设备ABC枚举.Misc.B类设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.A3">
+            <summary>
+            枚举值: C类设备  Value:2  
+            设备ABC枚举.Misc.C类设备
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Values">
+            <summary>
+            Get DeviceABCTypeEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Res_TypeName">
+            <summary>
+            设备ABC枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Res_TypeNameS">
+            <summary>
+            设备ABC枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Res_A1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Res_A2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.Res_A3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceABCTypeEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DeviceABCTypeEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DeviceABCTypeEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:adDeviceBE.DUseTypeEnum">
+            <summary>
+            可扩展枚举: 设备使用状态枚举 
+            
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DUseTypeEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get DUseTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DUseTypeEnum.GetFromValue(System.Object)">
+            <summary>
+            Get DUseTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DUseTypeEnum.GetFromName(System.String)">
+            <summary>
+            Get DUseTypeEnum By Name 
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.A1">
+            <summary>
+            枚举值: 备用  Value:0  
+            设备使用状态枚举.Misc.备用
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.A2">
+            <summary>
+            枚举值: 使用中  Value:1  
+            设备使用状态枚举.Misc.使用中
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.A3">
+            <summary>
+            枚举值: 停用  Value:2  
+            设备使用状态枚举.Misc.停用
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Values">
+            <summary>
+            Get DUseTypeEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Res_TypeName">
+            <summary>
+            设备使用状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Res_TypeNameS">
+            <summary>
+            设备使用状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Res_A1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Res_A2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.Res_A3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DUseTypeEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:adDeviceBE.DUseTypeEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:adDeviceBE.DUseTypeEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+    </members>
+</doc>

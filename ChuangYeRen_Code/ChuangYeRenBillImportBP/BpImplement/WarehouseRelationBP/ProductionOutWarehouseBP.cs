@@ -33,8 +33,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 
 	    #region member		
 		/// <summary>
-		/// 相关ID	
-		/// 成品出库操作.Misc.相关ID
+		/// RelationId	
+		/// 成品出库操作.Misc.RelationId
 		/// </summary>
 		/// <value></value>
 		public System.Int64 RelationId
@@ -49,8 +49,8 @@ namespace UFIDA.U9.Cust.ChuangYeRenBillImportBP.WarehouseRelationBP
 			}
 		}
 		/// <summary>
-		/// 生产订单ID	
-		/// 成品出库操作.Misc.生产订单ID
+		/// MoId	
+		/// 成品出库操作.Misc.MoId
 		/// </summary>
 		/// <value></value>
 		public System.Int64 MoId

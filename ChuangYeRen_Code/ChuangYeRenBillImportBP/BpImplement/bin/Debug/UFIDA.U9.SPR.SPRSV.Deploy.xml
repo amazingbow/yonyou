@@ -1,0 +1,1904 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.SPR.SPRSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData">
+            <summary>
+            客户价表信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.#ctor(System.Int64,System.String,System.String,System.Int32,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Boolean,UFIDA.U9.CBO.SCM.DTOs.DateRangeData,System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_pLKey">
+            <summary>
+            价目表ID
+            客户价表信息.Misc.价目表ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_pLCode">
+            <summary>
+            价目表编码
+            客户价表信息.Misc.价目表编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_pLName">
+            <summary>
+            价目表名称
+            客户价表信息.Misc.价目表名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_pLVersion">
+            <summary>
+            价目表版本
+            客户价表信息.Misc.价目表版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_isIncludeTax">
+            <summary>
+            是否含税
+            客户价表信息.Misc.是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_isCanModifyInDoc">
+            <summary>
+            是否可修改
+            客户价表信息.Misc.是否可修改
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_isDefault">
+            <summary>
+            默认
+            客户价表信息.Misc.默认
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_isFromSite">
+            <summary>
+            是否来自site
+            客户价表信息.Misc.是否来自site
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_dateRange">
+            <summary>
+            日期范围
+            客户价表信息.Misc.日期范围
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_pLStatus">
+            <summary>
+            价表状态
+            客户价表信息.Misc.价表状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_isDiscountRate">
+            <summary>
+            折扣价表
+            客户价表信息.Misc.折扣价表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.m_bargainType">
+            <summary>
+            成交方式
+            客户价表信息.MR.成交方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.Currency_SKey">
+            <summary>
+            价目表币种 序列化Key属性。（传递跨组织序列列字段）
+            客户价表信息.Misc.价目表币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PartnerPLInfoData.Currency">
+            <summary>
+            价目表币种
+            客户价表信息.Misc.价目表币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.GetPriceParamData">
+            <summary>
+            取价传入参数类型 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.DateTime,System.Int64,System.Int64,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.m_itemInfo">
+            <summary>
+            物料信息
+            取价传入参数类型.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.m_date">
+            <summary>
+            日期
+            取价传入参数类型.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.m_quantity">
+            <summary>
+            数量
+            取价传入参数类型.Misc.数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Customer">
+            <summary>
+            客户
+            取价传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.CustomerSite_SKey">
+            <summary>
+            客户地址 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.CustomerSite">
+            <summary>
+            客户地址
+            取价传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Org">
+            <summary>
+            组织机构
+            取价传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.SalePriceList_SKey">
+            <summary>
+            销售价目表 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.SalePriceList">
+            <summary>
+            销售价目表
+            取价传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Currency">
+            <summary>
+            币种
+            取价传入参数类型.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.ARTerm">
+            <summary>
+            立账条件
+            取价传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.PayTerm">
+            <summary>
+            收款条件
+            取价传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Manufacturer">
+            <summary>
+            厂牌
+            取价传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamData.Territory">
+            <summary>
+            地区
+            取价传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData">
+            <summary>
+            取折扣传入参数类型 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.DateTime,System.Int64,System.Int64,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Int64,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.m_itemInfo">
+            <summary>
+            物料信息
+            取折扣传入参数类型.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.m_date">
+            <summary>
+            日期
+            取折扣传入参数类型.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.m_quantity">
+            <summary>
+            数量
+            取折扣传入参数类型.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.m_salePriceList">
+            <summary>
+            销售价目表
+            取折扣传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.m_isItemDepended">
+            <summary>
+            是否依赖定价
+            取折扣传入参数类型.Misc.是否依赖定价
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Customer">
+            <summary>
+            客户
+            取折扣传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.CustomerSite_SKey">
+            <summary>
+            客户地址 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.CustomerSite">
+            <summary>
+            客户地址
+            取折扣传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Org">
+            <summary>
+            组织机构
+            取折扣传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.ARTerm">
+            <summary>
+            立账条件
+            取折扣传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.PayTerm">
+            <summary>
+            收款条件
+            取折扣传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Manufacturer">
+            <summary>
+            厂牌
+            取折扣传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            取折扣传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamData.Territory">
+            <summary>
+            地区
+            取折扣传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData">
+            <summary>
+            合并取价传入参数类型 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.DateTime,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_itemInfo">
+            <summary>
+            物料信息
+            合并取价传入参数类型.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_date">
+            <summary>
+            日期
+            合并取价传入参数类型.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_quantity">
+            <summary>
+            数量
+            合并取价传入参数类型.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_iD">
+            <summary>
+            参数标志
+            合并取价传入参数类型.Misc.参数标志
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_addUpQty">
+            <summary>
+            累计数量
+            合并取价传入参数类型.Misc.累计数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_docType">
+            <summary>
+            取价单据类型
+            合并取价传入参数类型.Misc.取价单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.m_docLine">
+            <summary>
+            取价单据行线索
+            合并取价传入参数类型.Misc.取价单据行线索
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Customer">
+            <summary>
+            客户
+            合并取价传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.CustomerSite_SKey">
+            <summary>
+            客户地址 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.CustomerSite">
+            <summary>
+            客户地址
+            合并取价传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Org">
+            <summary>
+            组织机构
+            合并取价传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.SalePriceList_SKey">
+            <summary>
+            销售价目表 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.SalePriceList">
+            <summary>
+            销售价目表
+            合并取价传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Currency">
+            <summary>
+            币种
+            合并取价传入参数类型.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.ARTerm">
+            <summary>
+            立账条件
+            合并取价传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.PayTerm">
+            <summary>
+            收款条件
+            合并取价传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Uom_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Uom">
+            <summary>
+            计量单位
+            合并取价传入参数类型.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Manufacturer">
+            <summary>
+            厂牌
+            合并取价传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            合并取价传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParamUniteData.Territory">
+            <summary>
+            地区
+            合并取价传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData">
+            <summary>
+            合并取折扣传入参数类型 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.DateTime,System.Int64,System.Int64,System.Decimal,System.Int64,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_itemInfo">
+            <summary>
+            物料信息
+            合并取折扣传入参数类型.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_date">
+            <summary>
+            日期
+            合并取折扣传入参数类型.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_quantity">
+            <summary>
+            数量
+            合并取折扣传入参数类型.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_salePriceList">
+            <summary>
+            销售价目表
+            合并取折扣传入参数类型.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_isItemDepended">
+            <summary>
+            是否依赖定价
+            合并取折扣传入参数类型.Misc.是否依赖定价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_iD">
+            <summary>
+            参数标志
+            合并取折扣传入参数类型.Misc.参数标志
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.m_addUpQty">
+            <summary>
+            累计数量
+            合并取折扣传入参数类型.Misc.累计数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Customer">
+            <summary>
+            客户
+            合并取折扣传入参数类型.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.CustomerSite_SKey">
+            <summary>
+            客户地址 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.CustomerSite">
+            <summary>
+            客户地址
+            合并取折扣传入参数类型.Misc.客户地址
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Org">
+            <summary>
+            组织机构
+            合并取折扣传入参数类型.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.ARTerm">
+            <summary>
+            立账条件
+            合并取折扣传入参数类型.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.PayTerm">
+            <summary>
+            收款条件
+            合并取折扣传入参数类型.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Uom_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Uom">
+            <summary>
+            计量单位
+            合并取折扣传入参数类型.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Manufacturer">
+            <summary>
+            厂牌
+            合并取折扣传入参数类型.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            合并取折扣传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetDiscountParamUniteData.Territory">
+            <summary>
+            地区
+            合并取折扣传入参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceInfoData">
+            <summary>
+            取价返回参数类型 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceInfoData.#ctor(UFIDA.U9.Base.DTOs.MoneyData,UFIDA.U9.Base.DTOs.MoneyData,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Boolean,System.Collections.Generic.List{UFIDA.U9.SPR.SalePriceList.PriceListInfoData},System.Collections.Generic.List{UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData},System.String,System.Int64,System.Int64,System.Int64,System.Boolean,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_price">
+            <summary>
+            折前价
+            取价返回参数类型.Misc.折前价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_priceExDiscount">
+            <summary>
+            折后价
+            取价返回参数类型.Misc.折后价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_itemDepended">
+            <summary>
+            依赖物料
+            取价返回参数类型.Misc.依赖物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_percent">
+            <summary>
+            折前定价百分比
+            取价返回参数类型.Misc.折前定价百分比
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_percentExDiscount">
+            <summary>
+            折后定价百分比
+            取价返回参数类型.Misc.折后定价百分比
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_isIncludeTax">
+            <summary>
+            是否含税
+            取价返回参数类型.Misc.是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_priceListInfos">
+            <summary>
+            取价过程价表行信息
+            取价返回参数类型.Misc.取价过程价表行信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_discountPolicyInfos">
+            <summary>
+            取价过程折扣行信息
+            取价返回参数类型.Misc.取价过程折扣行信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_itemDependedVersion">
+            <summary>
+            依赖物料版本
+            取价返回参数类型.Misc.依赖物料版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_priceLineID">
+            <summary>
+            价表行ID
+            取价返回参数类型.Misc.价表行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_iD">
+            <summary>
+            参数序号
+            取价返回参数类型.Misc.参数序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_dSLine">
+            <summary>
+            折扣行
+            取价返回参数类型.Misc.折扣行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_isLimitQty">
+            <summary>
+            是否折扣限量
+            取价返回参数类型.Misc.是否折扣限量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceInfoData.m_discountRate">
+            <summary>
+            折扣率
+            取价返回参数类型.Misc.折扣率
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceInfoData.Uom_SKey">
+            <summary>
+            计价单位 序列化Key属性。（传递跨组织序列列字段）
+            取价返回参数类型.Misc.计价单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceInfoData.Uom">
+            <summary>
+            计价单位
+            取价返回参数类型.Misc.计价单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceInfoData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            取价返回参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceInfoData.Territory">
+            <summary>
+            地区
+            取价返回参数类型.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData">
+            <summary>
+            取默认价表返回值 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData.m_pLKey">
+            <summary>
+            价目表
+            取默认价表返回值.Misc.价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData.m_pLName">
+            <summary>
+            价目表名称
+            取默认价表返回值.Misc.价目表名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DefaultPLInfoDTOData.m_tAX_FLAG">
+            <summary>
+            是否含税
+            取默认价表返回值.Misc.是否含税
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceParmData">
+            <summary>
+            批量取价参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmData.#ctor(System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Collections.Generic.List{System.Int64},UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Int64,System.DateTime,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmData.m_itemInfo">
+            <summary>
+            料品信息
+            批量取价参数.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmData.m_salePrLists">
+            <summary>
+            销售价目表
+            批量取价参数.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmData.m_qty">
+            <summary>
+            数量
+            批量取价参数.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmData.m_date">
+            <summary>
+            日期
+            批量取价参数.Misc.日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Cus_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Cus">
+            <summary>
+            客户
+            批量取价参数.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.CusSite_SKey">
+            <summary>
+            客户位置 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.CusSite">
+            <summary>
+            客户位置
+            批量取价参数.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.SalePrLists_SKey">
+            <summary>
+            销售价目表 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            批量取价参数.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Org">
+            <summary>
+            组织
+            批量取价参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.ARTerm">
+            <summary>
+            立账条件
+            批量取价参数.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.PayTerm">
+            <summary>
+            收款条件
+            批量取价参数.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Manufacturer">
+            <summary>
+            厂牌
+            批量取价参数.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            批量取价参数.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceParmData.Territory">
+            <summary>
+            地区
+            批量取价参数.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData">
+            <summary>
+            客户与客户site DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.#ctor(System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.CusKey_SKey">
+            <summary>
+            客户Key 序列化Key属性。（传递跨组织序列列字段）
+            客户与客户site.Misc.客户Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.CusKey">
+            <summary>
+            客户Key
+            客户与客户site.Misc.客户Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.CusSiteKey_SKey">
+            <summary>
+            客户SieKey 序列化Key属性。（传递跨组织序列列字段）
+            客户与客户site.Misc.客户SieKey
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.CustomerPairDTOData.CusSiteKey">
+            <summary>
+            客户SieKey
+            客户与客户site.Misc.客户SieKey
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceParmMapData">
+            <summary>
+            批量取价参数Map DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmMapData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmMapData.#ctor(System.Guid,UFIDA.U9.SPR.SalePriceList.PriceParmData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmMapData.m_iD">
+            <summary>
+            ID
+            批量取价参数Map.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmMapData.m_priceParm">
+            <summary>
+            批量取价参数
+            批量取价参数Map.Misc.批量取价参数
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceParmOutMapData">
+            <summary>
+            批量取价返回参数Map DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmOutMapData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceParmOutMapData.#ctor(System.Guid,UFIDA.U9.SPR.SalePriceList.PriceInfoData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmOutMapData.m_iD">
+            <summary>
+            ID
+            批量取价返回参数Map.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceParmOutMapData.m_priceInfo">
+            <summary>
+            取价返回参数
+            批量取价返回参数Map.Misc.取价返回参数
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceListInfoData">
+            <summary>
+            取价过程价表行信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.#ctor(System.String,System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,UFIDA.U9.Base.DTOs.MoneyData,System.Int64,UFIDA.U9.SPR.SalePriceList.PriceInfoData,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_pRI">
+            <summary>
+            优先级
+            取价过程价表行信息.Misc.优先级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_customerCategory">
+            <summary>
+            客户分类
+            取价过程价表行信息.Misc.客户分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_customer">
+            <summary>
+            客户
+            取价过程价表行信息.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_customerSite">
+            <summary>
+            客户位置
+            取价过程价表行信息.Misc.客户位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_materialCategory">
+            <summary>
+            物料分类
+            取价过程价表行信息.Misc.物料分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_itemInfo">
+            <summary>
+            物料信息
+            取价过程价表行信息.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_price">
+            <summary>
+            单价
+            取价过程价表行信息.Misc.单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_priceLineKey">
+            <summary>
+            价表行
+            取价过程价表行信息.Misc.价表行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_priceInfo">
+            <summary>
+            取价返回参数类型
+            取价过程价表行信息.Misc.取价返回参数类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.m_manufacturer">
+            <summary>
+            厂牌
+            取价过程价表行信息.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            取价过程价表行信息.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.ARTerm">
+            <summary>
+            立账条件
+            取价过程价表行信息.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            取价过程价表行信息.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.PriceListInfoData.PayTerm">
+            <summary>
+            收款条件
+            取价过程价表行信息.Misc.收款条件
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData">
+            <summary>
+            取价过程折扣行信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.#ctor(System.String,System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Decimal,UFIDA.U9.Base.DTOs.MoneyData,UFIDA.U9.Base.DTOs.MoneyData,System.Int64,UFIDA.U9.SPR.SalePriceList.PriceInfoData,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_pRI">
+            <summary>
+            优先级
+            取价过程折扣行信息.Misc.优先级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_customerCategory">
+            <summary>
+            客户分类
+            取价过程折扣行信息.Misc.客户分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_customer">
+            <summary>
+            客户
+            取价过程折扣行信息.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_customerSite">
+            <summary>
+            客户位置
+            取价过程折扣行信息.Misc.客户位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_materialCategory">
+            <summary>
+            物料分类
+            取价过程折扣行信息.Misc.物料分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_itemInfo">
+            <summary>
+            物料信息
+            取价过程折扣行信息.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_discountRate">
+            <summary>
+            折扣率
+            取价过程折扣行信息.Misc.折扣率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_unitDiscount">
+            <summary>
+            单位折扣额
+            取价过程折扣行信息.Misc.单位折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_discount">
+            <summary>
+            折扣额
+            取价过程折扣行信息.Misc.折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_discountPolicyLine">
+            <summary>
+            折扣行
+            取价过程折扣行信息.Misc.折扣行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_priceInfo">
+            <summary>
+            取价返回参数类型
+            取价过程折扣行信息.Misc.取价返回参数类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_manufacturer">
+            <summary>
+            厂牌
+            取价过程折扣行信息.Misc.厂牌
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.m_isLimitQty">
+            <summary>
+            折扣限量
+            取价过程折扣行信息.Misc.折扣限量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            取价过程折扣行信息.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.ARTerm">
+            <summary>
+            立账条件
+            取价过程折扣行信息.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            取价过程折扣行信息.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.DiscountPolicyInfoData.PayTerm">
+            <summary>
+            收款条件
+            取价过程折扣行信息.Misc.收款条件
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data">
+            <summary>
+            取价传入参数类型2 DTO :自定义的数据传输类型 
+            参数档案未下发
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.DateTime,System.Int64,System.Int64,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_itemInfo">
+            <summary>
+            物料信息
+            取价传入参数类型2.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_date">
+            <summary>
+            日期
+            取价传入参数类型2.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_customer">
+            <summary>
+            客户
+            取价传入参数类型2.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_customerSite">
+            <summary>
+            客户地址
+            取价传入参数类型2.Misc.客户地址
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_quantity">
+            <summary>
+            数量
+            取价传入参数类型2.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_salePriceList">
+            <summary>
+            销售价目表
+            取价传入参数类型2.Misc.销售价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.m_manufacturer">
+            <summary>
+            厂牌
+            取价传入参数类型2.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型2.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Org">
+            <summary>
+            组织机构
+            取价传入参数类型2.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型2.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Currency">
+            <summary>
+            币种
+            取价传入参数类型2.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.ARTerm_SKey">
+            <summary>
+            立账条件 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型2.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.ARTerm">
+            <summary>
+            立账条件
+            取价传入参数类型2.Misc.立账条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.PayTerm_SKey">
+            <summary>
+            收款条件 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型2.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.PayTerm">
+            <summary>
+            收款条件
+            取价传入参数类型2.Misc.收款条件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            取价传入参数类型2.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.GetPriceParam2Data.Territory">
+            <summary>
+            地区
+            取价传入参数类型2.Misc.地区
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PLInfoData">
+            <summary>
+            创建价表相关单据返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PLInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PLInfoData.#ctor(System.Int64,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PLInfoData.m_iD">
+            <summary>
+            价表相关单据ID
+            创建价表相关单据返回DTO.Misc.价表相关单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PLInfoData.m_code">
+            <summary>
+            编码
+            创建价表相关单据返回DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.PLInfoData.m_docType">
+            <summary>
+            单据类型
+            创建价表相关单据返回DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData">
+            <summary>
+            调价单信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData.#ctor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData.m_aDCode">
+            <summary>
+            调价单Code
+            调价单信息.Misc.调价单Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData.m_status">
+            <summary>
+            状态
+            调价单信息.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.ADInfoDTOData.m_isCanceled">
+            <summary>
+            是否终止
+            调价单信息.Misc.是否终止
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData">
+            <summary>
+            SearchPLDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.#ctor(System.String,System.String,System.Int32,UFIDA.U9.Base.Currency.CurrencyData,System.Boolean,UFIDA.U9.CBO.HR.Operator.OperatorsData,System.Int32,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_code">
+            <summary>
+            编码
+            SearchPLDTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_name">
+            <summary>
+            名称
+            SearchPLDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_version">
+            <summary>
+            版本
+            SearchPLDTO.Misc.版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_currency">
+            <summary>
+            币种
+            SearchPLDTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_isIncludeTax">
+            <summary>
+            是否含税
+            SearchPLDTO.Misc.是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_priceMan">
+            <summary>
+            价格员
+            SearchPLDTO.Misc.价格员
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_status">
+            <summary>
+            状态
+            SearchPLDTO.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_note">
+            <summary>
+            描述
+            SearchPLDTO.Misc.描述
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SearchPLDTOData.m_pLID">
+            <summary>
+            价表ID
+            SearchPLDTO.Misc.价表ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData">
+            <summary>
+            更新折扣限量DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.#ctor(System.Int64,System.Decimal,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.m_lineID">
+            <summary>
+            销售折扣单行
+            更新折扣限量DTO.Misc.销售折扣单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.m_exeQty">
+            <summary>
+            执行数量
+            更新折扣限量DTO.Misc.执行数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.m_docLine">
+            <summary>
+            取价单据行线索
+            更新折扣限量DTO.Misc.取价单据行线索
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.PUOM_SKey">
+            <summary>
+            计价单位 序列化Key属性。（传递跨组织序列列字段）
+            更新折扣限量DTO.Misc.计价单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.PUOM">
+            <summary>
+            计价单位
+            更新折扣限量DTO.Misc.计价单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.DocOrg_SKey">
+            <summary>
+            取价组织 序列化Key属性。（传递跨组织序列列字段）
+            更新折扣限量DTO.Misc.取价组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SMUpdLimitQtyExeDTOData.DocOrg">
+            <summary>
+            取价组织
+            更新折扣限量DTO.Misc.取价组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.ItemInfoIsNullException">
+            <summary>
+            异常类型: 取价参数里物料为必要参数
+            
+             取价参数里物料为必要参数
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.ItemInfoIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取价参数里物料为必要参数 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.ItemInfoIsNullException.#ctor">
+            <summary>
+            异常类型: 取价参数里物料为必要参数 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.ItemInfoIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取价参数里物料为必要参数 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.NotApprovedPLCanNotAssigmentCustomerException">
+            <summary>
+            异常类型: 未核准的价表不能分配给用户异常
+            
+             未核准的价表不能分配给用户异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.NotApprovedPLCanNotAssigmentCustomerException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未核准的价表不能分配给用户异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.NotApprovedPLCanNotAssigmentCustomerException.#ctor">
+            <summary>
+            异常类型: 未核准的价表不能分配给用户异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.NotApprovedPLCanNotAssigmentCustomerException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未核准的价表不能分配给用户异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.DateIsNotAllowException">
+            <summary>
+            异常类型: 传入日期不合法异常
+            
+             传入日期不合法异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DateIsNotAllowException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 传入日期不合法异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DateIsNotAllowException.#ctor">
+            <summary>
+            异常类型: 传入日期不合法异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DateIsNotAllowException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 传入日期不合法异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.LoginDateNotEffectiveCanNotAssigmentCustomerException">
+            <summary>
+            异常类型: 登陆日期不在价表有效期范围内，不允许分配
+            
+             登陆日期不在价表有效期范围内，不允许分配
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.LoginDateNotEffectiveCanNotAssigmentCustomerException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 登陆日期不在价表有效期范围内，不允许分配 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.LoginDateNotEffectiveCanNotAssigmentCustomerException.#ctor">
+            <summary>
+            异常类型: 登陆日期不在价表有效期范围内，不允许分配 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.LoginDateNotEffectiveCanNotAssigmentCustomerException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 登陆日期不在价表有效期范围内，不允许分配 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.CustomerTradeCurrencyKeyException">
+            <summary>
+            异常类型: 分配客户的交易币种必须等于价表的币种
+            
+             分配客户的交易币种必须等于价表的币种
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.CustomerTradeCurrencyKeyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分配客户的交易币种必须等于价表的币种 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.CustomerTradeCurrencyKeyException.#ctor">
+            <summary>
+            异常类型: 分配客户的交易币种必须等于价表的币种 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.CustomerTradeCurrencyKeyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分配客户的交易币种必须等于价表的币种 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.DocumentTypeIsNullException">
+            <summary>
+            异常类型: 请预制一条 上游推式生成的 销售调价单单据类型
+            
+             请预制一条 上游推式生成的 销售调价单单据类型
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocumentTypeIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请预制一条 上游推式生成的 销售调价单单据类型 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocumentTypeIsNullException.#ctor">
+            <summary>
+            异常类型: 请预制一条 上游推式生成的 销售调价单单据类型 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocumentTypeIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请预制一条 上游推式生成的 销售调价单单据类型 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception">
+            <summary>
+            异常类型: 已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除
+            
+             已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除 Constructor
+            </summary>
+            <param name="docname">单据</param>
+            <param name="code">单据编号</param>
+            <param name="docDate">单据日期</param>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.#ctor(System.String,System.String,System.String)">
+            <summary>
+            异常类型: 已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除 Constructor
+            </summary>
+            <param name="docname">单据</param>
+            <param name="code">单据编号</param>
+            <param name="docDate">单据日期</param>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除 Constructor
+            </summary>
+            <param name="docname">单据</param>
+            <param name="code">单据编号</param>
+            <param name="docDate">单据日期</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.Docname">
+            <summary>
+            单据
+            已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除.Misc.单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.Code">
+            <summary>
+            单据编号
+            已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除.Misc.单据编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SalePriceList.SPRSVDocRefCheck1Exception.DocDate">
+            <summary>
+            单据日期
+            已被(${Docname}(编号:${Code},日期:${DocDate}))引用,不能修改或者删除.Misc.单据日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.MustQtyException">
+            <summary>
+            异常类型: 请输入数量
+            
+             请输入数量
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.MustQtyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 请输入数量 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.MustQtyException.#ctor">
+            <summary>
+            异常类型: 请输入数量 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.MustQtyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 请输入数量 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.DocTypeCanNotModifyException">
+            <summary>
+            异常类型: 存在核准中的销售价表,不允许修改单据确认方式
+            
+             存在核准中的销售价表,不允许修改单据确认方式
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocTypeCanNotModifyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在核准中的销售价表,不允许修改单据确认方式 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocTypeCanNotModifyException.#ctor">
+            <summary>
+            异常类型: 存在核准中的销售价表,不允许修改单据确认方式 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.DocTypeCanNotModifyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 存在核准中的销售价表,不允许修改单据确认方式 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SalePriceList.PriceListOfTradePathIsNotIsDiscountRatExceptione">
+            <summary>
+            异常类型: 贸易路径对应的价表必须是折扣价表
+            
+             贸易路径对应的价表必须是折扣价表
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceListOfTradePathIsNotIsDiscountRatExceptione.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 贸易路径对应的价表必须是折扣价表 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceListOfTradePathIsNotIsDiscountRatExceptione.#ctor">
+            <summary>
+            异常类型: 贸易路径对应的价表必须是折扣价表 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.SPR.SalePriceList.PriceListOfTradePathIsNotIsDiscountRatExceptione.#ctor(System.Exception)">
+            <summary>
+            异常类型: 贸易路径对应的价表必须是折扣价表 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.SPR.SPRSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SPRSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.SPR.SPRSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

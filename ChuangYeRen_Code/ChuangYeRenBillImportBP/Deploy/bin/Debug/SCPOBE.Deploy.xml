@@ -1,0 +1,1040 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SCPOBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:SCPOBE.SCPOMainData">
+            <summary>
+            销售订单主表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:SCPOBE.SCPOMainData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_salseClass">
+            <summary>
+            销售类型
+            销售订单主表.基础.销售类型
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_sCPO">
+            <summary>
+            销售订单子表
+            销售订单主表.Misc.销售订单子表
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_poClass">
+            <summary>
+            订单类型
+            销售订单主表.基础.订单类型
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_iD">
+            <summary>
+            ID
+            销售订单主表.Key.ID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_createdOn">
+            <summary>
+            创建时间
+            销售订单主表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_createdBy">
+            <summary>
+            创建人
+            销售订单主表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_modifiedOn">
+            <summary>
+            修改时间
+            销售订单主表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_modifiedBy">
+            <summary>
+            修改人
+            销售订单主表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_sysVersion">
+            <summary>
+            事务版本
+            销售订单主表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_pONO">
+            <summary>
+            订单号
+            销售订单主表.基础.订单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_recDate">
+            <summary>
+            订单日期
+            销售订单主表.基础.订单日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_rat">
+            <summary>
+            税率
+            销售订单主表.基础.税率
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_operater">
+            <summary>
+            业务员
+            销售订单主表.基础.业务员
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_checker">
+            <summary>
+            审核人
+            销售订单主表.状态.审核人
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_checkDate">
+            <summary>
+            审核日期
+            销售订单主表.状态.审核日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isClose">
+            <summary>
+            关闭
+            销售订单主表.状态.关闭
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_closeDate">
+            <summary>
+            关闭日期
+            销售订单主表.状态.关闭日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_note">
+            <summary>
+            备注
+            销售订单主表.基础.备注
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_payRat">
+            <summary>
+            汇率
+            销售订单主表.基础.汇率
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_depName">
+            <summary>
+            销售部门
+            销售订单主表.基础.销售部门
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_orgID">
+            <summary>
+            OrgID
+            销售订单主表.基础.OrgID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_custPO">
+            <summary>
+            客户订单号
+            销售订单主表.基础.客户订单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_flowID">
+            <summary>
+            FlowID
+            销售订单主表.状态.FlowID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isShipMak">
+            <summary>
+            唛头
+            销售订单主表.唛头.唛头
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_shipMakDate">
+            <summary>
+            唛头上传日期
+            销售订单主表.唛头.唛头上传日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_payWay">
+            <summary>
+            付款条件
+            销售订单主表.Misc.付款条件
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_shipMakID">
+            <summary>
+            ShipMakID
+            销售订单主表.Misc.ShipMakID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isSelf">
+            <summary>
+            自制
+            销售订单主表.采购.自制
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_checkerID">
+            <summary>
+            审核人ID
+            销售订单主表.状态.审核人ID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_ver">
+            <summary>
+            Ver
+            销售订单主表.状态.Ver
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_sIsSelf">
+            <summary>
+            供应商外购
+            销售订单主表.采购.供应商外购
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isOther1">
+            <summary>
+            自定义是非1
+            销售订单主表.Misc.自定义是非1
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isOther2">
+            <summary>
+            自定义是非2
+            销售订单主表.Misc.自定义是非2
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isOther3">
+            <summary>
+            自定义是非3
+            销售订单主表.Misc.自定义是非3
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_other1">
+            <summary>
+            自定义1
+            销售订单主表.Misc.自定义1
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_other2">
+            <summary>
+            仓别
+            销售订单主表.Misc.仓别
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_other3">
+            <summary>
+            发货单号
+            销售订单主表.Misc.发货单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_fOther1">
+            <summary>
+            自定义数量1
+            销售订单主表.Misc.自定义数量1
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_fOther2">
+            <summary>
+            自定义数量2
+            销售订单主表.Misc.自定义数量2
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_fOther3">
+            <summary>
+            自定义数量3
+            销售订单主表.Misc.自定义数量3
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOMainData.m_isCheck">
+            <summary>
+            审核
+            销售订单主表.状态.审核
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.CustID_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            销售订单主表.基础.客户
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.CustID">
+            <summary>
+            客户
+            销售订单主表.基础.客户
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            销售订单主表.基础.币种
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.Currency">
+            <summary>
+            币种
+            销售订单主表.基础.币种
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.TitleID_SKey">
+            <summary>
+            销售订单抬头 序列化Key属性。（传递跨组织序列列字段）
+            销售订单主表.基础.销售订单抬头
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.TitleID">
+            <summary>
+            销售订单抬头
+            销售订单主表.基础.销售订单抬头
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.POrg_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            销售订单主表.采购.供应商
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.POrg">
+            <summary>
+            供应商
+            销售订单主表.采购.供应商
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.OperaterID_SKey">
+            <summary>
+            业务员ID 序列化Key属性。（传递跨组织序列列字段）
+            销售订单主表.基础.业务员ID
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOMainData.OperaterID">
+            <summary>
+            业务员ID
+            销售订单主表.基础.业务员ID
+            </summary>
+        </member>
+        <member name="T:SCPOBE.SCPOData">
+            <summary>
+            销售订单子表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:SCPOBE.SCPOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_sCPOMain">
+            <summary>
+            销售订单主表
+            销售订单子表.Misc.销售订单主表
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_iD">
+            <summary>
+            ID
+            销售订单子表.Key.ID
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_createdOn">
+            <summary>
+            创建时间
+            销售订单子表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_createdBy">
+            <summary>
+            创建人
+            销售订单子表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_modifiedOn">
+            <summary>
+            修改时间
+            销售订单子表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_modifiedBy">
+            <summary>
+            修改人
+            销售订单子表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_sysVersion">
+            <summary>
+            事务版本
+            销售订单子表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_code">
+            <summary>
+            订单号
+            销售订单子表.基础.订单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_name">
+            <summary>
+            产品名称
+            销售订单子表.基础.产品名称
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_itemSize">
+            <summary>
+            产品规格
+            销售订单子表.基础.产品规格
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_item">
+            <summary>
+            产品编码
+            销售订单子表.基础.产品编码
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_note">
+            <summary>
+            备注
+            销售订单子表.基础.备注
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_shipDate">
+            <summary>
+            交期
+            销售订单子表.基础.交期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fQty">
+            <summary>
+            原始订单数量
+            销售订单子表.数量金额.原始订单数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_qty">
+            <summary>
+            订单数量
+            销售订单子表.数量金额.订单数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_payRat">
+            <summary>
+            汇率
+            销售订单子表.数量金额.汇率
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_sX">
+            <summary>
+            顺序
+            销售订单子表.基础.顺序
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_itemMat">
+            <summary>
+            主材
+            销售订单子表.要求.主材
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_itemSZ">
+            <summary>
+            提手
+            销售订单子表.要求.提手
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cPrint">
+            <summary>
+            印刷
+            销售订单子表.要求.印刷
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_craft">
+            <summary>
+            工艺
+            销售订单子表.要求.工艺
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cBaoBian">
+            <summary>
+            包边
+            销售订单子表.要求.包边
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_perPP">
+            <summary>
+            每PP袋
+            销售订单子表.要求.每PP袋
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_perCtn">
+            <summary>
+            每箱
+            销售订单子表.要求.每箱
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_pakWay">
+            <summary>
+            包装方式
+            销售订单子表.要求.包装方式
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_note1">
+            <summary>
+            其它要求
+            销售订单子表.要求.其它要求
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_change1">
+            <summary>
+            第1次修改
+            销售订单子表.修改.第1次修改
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_change2">
+            <summary>
+            第2次修改
+            销售订单子表.修改.第2次修改
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_change3">
+            <summary>
+            第3次修改
+            销售订单子表.修改.第3次修改
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_chB1">
+            <summary>
+            修改单价
+            销售订单子表.修改.修改单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_chB2">
+            <summary>
+            修改设计
+            销售订单子表.修改.修改设计
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_chB3">
+            <summary>
+            修改描述
+            销售订单子表.修改.修改描述
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_yReport">
+            <summary>
+            年
+            销售订单子表.统计.年
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_mReport">
+            <summary>
+            月
+            销售订单子表.统计.月
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_wReport">
+            <summary>
+            周
+            销售订单子表.统计.周
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isCheck">
+            <summary>
+            审核
+            销售订单子表.状态.审核
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_checker">
+            <summary>
+            审核人员
+            销售订单子表.状态.审核人员
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_checkDate">
+            <summary>
+            审核日期
+            销售订单子表.状态.审核日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_statues">
+            <summary>
+            状态
+            销售订单子表.状态.状态
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isClose">
+            <summary>
+            关闭
+            销售订单子表.状态.关闭
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isGroup">
+            <summary>
+            集团内订单
+            销售订单子表.状态.集团内订单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_closeDate">
+            <summary>
+            关闭日期
+            销售订单子表.状态.关闭日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isCancel">
+            <summary>
+            取消
+            销售订单子表.状态.取消
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cancelDate">
+            <summary>
+            取消日期
+            销售订单子表.状态.取消日期
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_canceler">
+            <summary>
+            取消人员
+            销售订单子表.状态.取消人员
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isComp">
+            <summary>
+            完成
+            销售订单子表.状态.完成
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_price">
+            <summary>
+            单价
+            销售订单子表.数量金额.单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_priceRMB">
+            <summary>
+            本币单价
+            销售订单子表.数量金额.本币单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_unit">
+            <summary>
+            单位
+            销售订单子表.数量金额.单位
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_rat">
+            <summary>
+            税率
+            销售订单子表.数量金额.税率
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLPrice">
+            <summary>
+            总价
+            销售订单子表.数量金额.总价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLPriceRMB">
+            <summary>
+            本币总价
+            销售订单子表.数量金额.本币总价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLPriceRat">
+            <summary>
+            含税总价
+            销售订单子表.数量金额.含税总价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLRat">
+            <summary>
+            税额
+            销售订单子表.数量金额.税额
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLPriceRMBRat">
+            <summary>
+            含税本币总价
+            销售订单子表.数量金额.含税本币总价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_orgPrice">
+            <summary>
+            采购未税单价
+            销售订单子表.采购.采购未税单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_orgRat">
+            <summary>
+            采购税率
+            销售订单子表.采购.采购税率
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_otherFee">
+            <summary>
+            其他费用
+            销售订单子表.采购.其他费用
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_sPrice">
+            <summary>
+            计价公式
+            销售订单子表.采购.计价公式
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_buPoID">
+            <summary>
+            采购单号
+            销售订单子表.采购.采购单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_tTLOrgPrice">
+            <summary>
+            采购含税总价
+            销售订单子表.采购.采购含税总价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_orgPriceF">
+            <summary>
+            实际采购未税单价
+            销售订单子表.采购.实际采购未税单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_dhDj">
+            <summary>
+            大货单价
+            销售订单子表.打样单.大货单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_dhSl">
+            <summary>
+            大货数量
+            销售订单子表.打样单.大货数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_shipQty">
+            <summary>
+            出货数量
+            销售订单子表.其它.出货数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_egoQty">
+            <summary>
+            排载数量
+            销售订单子表.其它.排载数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_makID">
+            <summary>
+            自制生产单号
+            销售订单子表.其它.自制生产单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_intC">
+            <summary>
+            IntC
+            销售订单子表.其它.IntC
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isFsc">
+            <summary>
+            FSC订单
+            销售订单子表.基础.FSC订单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cdef1">
+            <summary>
+            翻单号
+            销售订单子表.扩展.翻单号
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cdef2">
+            <summary>
+            Cdef2
+            销售订单子表.扩展.Cdef2
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cdef3">
+            <summary>
+            Cdef3
+            销售订单子表.扩展.Cdef3
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cdef4">
+            <summary>
+            Cdef4
+            销售订单子表.扩展.Cdef4
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_cdef5">
+            <summary>
+            Cdef5
+            销售订单子表.扩展.Cdef5
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fdef1">
+            <summary>
+            Fdef1
+            销售订单子表.扩展.Fdef1
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fdef2">
+            <summary>
+            Fdef2
+            销售订单子表.扩展.Fdef2
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fdef3">
+            <summary>
+            Fdef3
+            销售订单子表.扩展.Fdef3
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fdef4">
+            <summary>
+            Fdef4
+            销售订单子表.扩展.Fdef4
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_fdef5">
+            <summary>
+            库存数量
+            销售订单子表.扩展.库存数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isCal">
+            <summary>
+            统计否
+            销售订单子表.统计.统计否
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_ratPrice">
+            <summary>
+            含税单价
+            销售订单子表.数量金额.含税单价
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_beiPin">
+            <summary>
+            备品
+            销售订单子表.Misc.备品
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isSend">
+            <summary>
+            修改发送
+            销售订单子表.Misc.修改发送
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_iDef1">
+            <summary>
+            IDef1
+            销售订单子表.扩展.IDef1
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_iDef2">
+            <summary>
+            IDef2
+            销售订单子表.扩展.IDef2
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_iDef3">
+            <summary>
+            IDef3
+            销售订单子表.扩展.IDef3
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isR">
+            <summary>
+            带R字
+            销售订单子表.Misc.带R字
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_inStockQty">
+            <summary>
+            入库数量
+            销售订单子表.其它.入库数量
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SCPOData.m_isPs">
+            <summary>
+            需要评审
+            销售订单子表.Misc.需要评审
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.SCPOMain_SKey">
+            <summary>
+            销售订单主表 序列化Key属性。（传递跨组织序列列字段）
+            销售订单子表.Misc.销售订单主表
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.Design_SKey">
+            <summary>
+            设计 序列化Key属性。（传递跨组织序列列字段）
+            销售订单子表.基础.设计
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.Design">
+            <summary>
+            设计
+            销售订单子表.基础.设计
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            销售订单子表.数量金额.币种
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.Currency">
+            <summary>
+            币种
+            销售订单子表.数量金额.币种
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.ItemID_SKey">
+            <summary>
+            产品编码 序列化Key属性。（传递跨组织序列列字段）
+            销售订单子表.基础.产品编码
+            </summary>
+        </member>
+        <member name="P:SCPOBE.SCPOData.ItemID">
+            <summary>
+            产品编码
+            销售订单子表.基础.产品编码
+            </summary>
+        </member>
+        <member name="T:SCPOBE.PoClassEnumData">
+            <summary>
+            枚举值: 订单类型 
+            
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.PDY">
+            <summary>
+            纸袋打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.P">
+            <summary>
+            纸袋
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.N">
+            <summary>
+            无纺布袋
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.NDY">
+            <summary>
+            无纺布袋打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.W">
+            <summary>
+            湿纸巾
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.WDY">
+            <summary>
+            湿纸巾打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.S">
+            <summary>
+            绳子
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.SDY">
+            <summary>
+            绳子打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.B">
+            <summary>
+            盒子
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.BDY">
+            <summary>
+            盒子打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.C">
+            <summary>
+            棉布袋
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.A">
+            <summary>
+            外发的自动机制袋
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.CDY">
+            <summary>
+            棉布袋打样单
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.O">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.X">
+            <summary>
+            彩盒
+            </summary>
+        </member>
+        <member name="F:SCPOBE.PoClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:SCPOBE.SalseClassEnumData">
+            <summary>
+            枚举值: 销售类型枚举 
+            
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SalseClassEnumData.S1">
+            <summary>
+            普通销售
+            </summary>
+        </member>
+        <member name="F:SCPOBE.SalseClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:SCPOBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:SCPOBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:SCPOBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

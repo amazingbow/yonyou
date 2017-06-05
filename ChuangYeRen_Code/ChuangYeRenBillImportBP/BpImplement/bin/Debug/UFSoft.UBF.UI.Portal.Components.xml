@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.Portal.Components</name>
+    </assembly>
+    <members>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.HiddenCtrls">
+            <summary>
+            永远隐藏不需要处理的控件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.DicCtrlLayoutInfo">
+            <summary>
+            以ID为key的控件坐标信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.CtrlTabIndexInfo">
+            <summary>
+            以ID为Key的控件TabIndex信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.ContainerRows">
+            <summary>
+            容器的行数及行高的信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.ContainerColumns">
+            <summary>
+            容器的列数及列宽信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.ContainerWidth">
+            <summary>
+            容器的宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.ContainerHeight">
+            <summary>
+            容器的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.DicCtrlBlock">
+            <summary>
+            以中心控件ID为Key，value为控件块的ID集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo.OutBlocks">
+            <summary>
+            记录超出范围的控件块的核心控件ID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.GridSorter.SetControlVisibility(System.Collections.Generic.List{UFSoft.UBF.UI.Portal.Components.GridCoordinate}@,System.String,System.Boolean)">
+            <summary>
+            设置单个控件的可见性(X坐标为负数的控件定义为不可见)
+            </summary>
+            <param name="targetControlSet">目标控件集合</param>
+            <param name="id">需要设置可见性的控件</param>
+            <param name="isVisible"><c>true</c>表示将当前控件设置为可见</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.GridSorter.MoveControl(System.Collections.Generic.List{UFSoft.UBF.UI.Portal.Components.GridCoordinate}@,System.String,System.String,System.Boolean)">
+            <summary>
+            根据要求调整控件顺序及相应坐标
+            </summary>
+            <param name="targetControlSet">目标控件集合</param>
+            <param name="fromId">源控件id</param>
+            <param name="toId">目标控件id</param>
+            <param name="isForwardInsert"><c>true</c>表示将源控件插到目标控件之前，反之为<c>false</c></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.TransferHelper.ToBase64String(System.Collections.Generic.List{UFSoft.UBF.UI.Portal.Components.GridCoordinate})">
+            <summary>
+            序列化对象成字符串值
+            </summary>
+            <param name="filterDefines"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.TransferHelper.FromBase64String(System.String)">
+            <summary>
+            将字符串值序列化成FilterDefines对象
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSConnectionCollection">
+            <summary>
+            部件模型定义集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSFieldMapCollection">
+            <summary>
+            部件模型定义集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.EliminateSession.AddEliminateSessionID(System.String)">
+            <summary>
+            加入要剔除的SessionID
+            </summary>
+            <param name="SessionID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.EliminateSession.AddEliminateSessionIDs(System.Collections.Generic.IList{System.String})">
+            <summary>
+            加入一组要剔除的SessionID
+            </summary>
+            <param name="SessionIDs"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.EliminateSession.EliminateCompleted">
+            <summary>
+            设置处理完成标记
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.EliminateSession.GetInstructionArrived">
+            <summary>
+            判断是否有需要处理的Session
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.EliminateSession.EliminateBySessionID(System.String)">
+            <summary>
+            通过SessionID终止用户操作
+            </summary>
+            <param name="SessionID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSTheme">
+            <summary>
+            
+            </summary>
+            <summary>
+            Class CSPartDefine, 部件定义模型.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSTheme.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSTheme.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPartDefineCollection">
+            <summary>
+            部件模型定义集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSCache">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSCache.#cctor">
+            <summary>
+            Static initializer should ensure we only have to look up the current cache
+            instance once.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSCache.Clear">
+            <summary>
+            Removes all items from the Cache
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSCache.Remove(System.String)">
+            <summary>
+            Removes the specified key from the cache
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSCache.Insert(System.String,System.Object)">
+            <summary>
+            Insert the current "obj" into the cache. 
+            </summary>
+            <param name="key"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSCache.Max(System.String,System.Object)">
+            <summary>
+            Insert an item into the cache for the Maximum allowed time
+            </summary>
+            <param name="key"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.Create(System.Web.HttpContext)">
+            <summary>
+            Creates a Context instance based on HttpContext. Generally, this
+            method should be called in an HttpModule
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.Create(System.Web.HttpContext,System.Boolean)">
+            <summary>
+            Creates a Context instance based on HttpContext. Generally, this
+            method should be called in an HttpModule
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.#ctor(System.Web.HttpContext)">
+            <summary>
+            cnst caled when HttpContext is avaiable
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.MockUser">
+            <summary>
+            在没有进行froms验证的情况下使用MockUser
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.CheckAuthenticated">
+            <summary>
+            检查Http请求是否已通过验证，如果是需要加载CSUser信息 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.UpdateUserCategory(UFSoft.UBF.UI.Portal.Components.CSUser)">
+            <summary>
+            更新User分类的相关内容 
+            </summary>
+        </member>
+        <!-- 对于成员“F:UFSoft.UBF.UI.Portal.Components.CSContext._FixedParasKeys”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.GetGuidFromQueryString(System.String)">
+            <summary>
+            Retrieves a value from the query string and returns it as an int.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSContext.GetIntFromQueryString(System.String,System.Int32)">
+            <summary>
+            Retrieves a value from the query string and returns it as an int.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.CanAuthentication">
+            <summary>
+            检测是否启动了验证模块
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.Items">
+            <summary>
+            Simulates Context.Items and provides a per request/instance storage bag
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.Item(System.String)">
+            <summary>
+            Provides direct access to the .Items property
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.QueryString">
+            <summary>
+            Allows access to QueryString values
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.IsWebRequest">
+            <summary>
+            Quick check to see if we have a valid web reqeust
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSContext.Theme">
+            <summary>
+            请求页面的风格定义，取值优先（用户>页面>站点>默认配置）
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPage">
+            <summary>
+            
+            </summary>
+            <summary>
+            Class CSPage, 页面模型定义.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Theme">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.ResourceKey">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Orientation">
+            <summary>
+            布局方向
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Zones">
+            <summary>
+            容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPage.Culture">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPartDefine">
+            <summary>
+            
+            </summary>
+            <summary>
+            Class CSPartDefine, 部件定义模型.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.PersonalizationEnabled">
+            <summary>
+            是否可个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.PersonalizationAssignEnabled">
+            <summary>
+            是否有个性模板管控权限
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.Catalog">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.Source">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.ClassName">
+            <summary>
+            Class Name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPartDefine.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSProfile">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSProfile.#ctor(System.Web.Profile.ProfileBase)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSProfile.GetString(System.String)">
+            <summary>
+            Provides read access to the internal SettingsPropertyValueCollection.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSProfile.Set(System.String,System.Object)">
+            <summary>
+            </summary>
+            <param name="key">Data Key</param>
+            <param name="obj">Data Value</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSProfile.Save">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Theme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.BirthDate">
+            <summary>
+            Controls the skin the user views the site with
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Gender">
+            <summary>
+            Controls the skin the user views the site with
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.DateFormat">
+            <summary>
+            Format for how the user	wishes to view date	values
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.CommonName">
+            <summary>
+            User's common name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.PublicEmail">
+            <summary>
+            Specifies the user's fake email	address.  This email address, if supplied, is the one
+            that is	displayed when showing a post posted by	the	user.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.WebAddress">
+            <summary>
+            The	user's homepage	or favorite	Url.  This Url is shown	at the end of each of the user's posts.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.WebLog">
+            <summary>
+            The	user's homepage	or favorite	Url.  This Url is shown	at the end of each of the user's posts.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Signature">
+            <summary>
+            The	user's signature.  
+            Used to store raw bbcode version, for easier editting.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.SignatureFormatted">
+            <summary>
+            The	user's Formatted signature.  
+            Used to store the HTML formatted version, for faster performance.
+            
+            If specified, this signature is shown at the end of each of the user's posts.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Location">
+            <summary>
+            The	user's location
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Occupation">
+            <summary>
+            The	user's occupation
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Interests">
+            <summary>
+            The	user's interests
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.MsnIM">
+            <summary>
+            MSN	IM address
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.YahooIM">
+            <summary>
+            Yahoo IM address
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.AolIM">
+            <summary>
+            AOL	IM Address
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.IcqIM">
+            <summary>
+            ICQ	address
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.EnablePostPreviewPopup">
+            <summary>
+            Returns true or false indicating whether the user has indicated they want to see post
+            preview popups in the thread view of a forum.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSProfile.Timezone">
+            <summary>
+            Specifies the user's timezone offset.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSSite">
+            <summary>
+            站点定义信息
+            </summary>
+            <summary>
+            Class CSSite, 站点模型定义.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.SiteName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.SiteDescription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.StripDomainName">
+            <summary>
+            拆分域名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.EnablePageDescription">
+            <summary>
+            允许显示页面描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.EnableSearchFriendlyURLs">
+            <summary>
+            允许显示友好的链接
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSSite.Copyright">
+            <summary>
+            版权信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSUser">
+            <summary>
+            用户信息，封装个性化信息、集成单点登录用户信息。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPart">
+            <summary>
+            Class CSPart,  部件模型定义.
+            </summary>
+            <summary>
+            部件模型定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Id">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Theme">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.ResourceKey">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Orientation">
+            <summary>
+            布局方向
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Type">
+            <summary>
+            Class Full Name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSPart.UsePercent">
+            <summary>
+            当前WebPart所占空间的比例
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSZone">
+            <summary>
+            Class CSZone, 容器模型定义.
+            </summary>
+            <summary>
+            部件容器定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSZone.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Theme">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.ResourceKey">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Orientation">
+            <summary>
+            布局方向
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Type">
+            <summary>
+            Class Full Name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Template">
+            <summary>
+            模板文件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSZone.Parts">
+            <summary>
+            部件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSLink">
+            <summary>
+            
+            </summary>
+            
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSLink.CompareTo(System.Object)">
+            <summary>
+            Public comparer
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.IconImageUrl">
+            <summary>
+            菜单项图标图像链接
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.Theme">
+            <summary>
+            菜单项对应页面的风格主题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.Skin">
+            <summary>
+            菜单项对应页面的SkinID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.Template">
+            <summary>
+            菜单项对应页面的模板文件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.Command">
+            <summary>
+            菜单项对应页面处理命令，目前通过CommandItem直接映射到PageItem，进一步可扩展其他。
+            TODO:协调权限定义
+            </summary>
+            
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSLink.Menus">
+            <summary>
+            子菜单定义集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.Globals">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.Globals.Skin">
+            <summary>
+            Name of the skin to be applied
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSZoneCollection">
+            <summary>
+            布局容器定义集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPartCollection">
+            <summary>
+            部件模型定义集合
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.Components.PersonalTemplateData.templatedDatas">
+            <summary>
+            为了可被序列化,所以作为Public
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.AppLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.AppLocation.Default">
+            <summary>
+            All configuration settings should "default" if possible.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.AppLocation.Create(System.Xml.XmlNode)">
+            <summary>
+            Creates an instance of AppLocation  for the supplied XmlNode. 
+            This node will generally be supplied during the ForumsConfiguration
+            instantiation
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.AppLocation.IsKnownApplication">
+            <summary>
+            Does AppLocation know which application we are in?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.CSApplication.#ctor(System.String,System.String,UFSoft.UBF.UI.Portal.Components.ApplicationType)">
+            <summary>
+            Must supply all three values to create a new instance of CSApplication. Name must be unique
+            </summary>
+            <param name="pattern"></param>
+            <param name="name">Must be unique</param>
+            <param name="value"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement">
+            <summary>
+            自定义配置基类，加载Providers、DefaultProvider
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement.ValidateDefaultProvider">
+            <summary>
+            验证DefaultProvider
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement.DefaultProvider">
+            <summary>
+            默认Provider定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement.Providers">
+            <summary>
+            自定义的Provider集合定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement.Properties">
+            <summary>
+            配置节属性集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Configuration.CSProviderElement.ProvidersInternal">
+            <summary>
+            Provider实例集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.CSCoreElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.CSConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Configuration.CSConfiguration.GetConfig">
+            <summary>
+            获取定义唯一实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.CSStateElement">
+            <summary>
+            ViewState存取方式配置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Configuration.CSStateElement.Enabled">
+            <summary>
+            是否采用自定义状态管理器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSLinkCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.LanguagesConfigCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.LanguageElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.ScreenConfigCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.ScreenElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.StyleElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.FlowLayoutElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.LabelElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Configuration.UIConfiguration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Configuration.UIConfiguration.GetConfig">
+            <summary>
+            获取定义唯一实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.ControlMateData.EntityFullName">
+            <summary>
+            控件所在UIView对应的EntityFullName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.ControlMateData.CanAddNewCtrl">
+            <summary>
+            是否能在此结点下新增控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.PageManagement">
+            <summary>
+            页面定义处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.ApplicationType">
+            <summary>
+            应用程序类别
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.LoginUserStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.Components.LoginUserStatus.InvalidCredentials">
+            <summary>
+            Username and password didn't match.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.Components.LoginUserStatus.Success">
+            <summary>
+            The user name and password are ok.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.Components.LoginUserStatus.UnknownError">
+            <summary>
+            Unknown situation possibly generated by un-syncronization beteen 
+            data layer and business layer.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.Gender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.SystemType">
+            <summary>
+            Define if and how CS is hosted
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.CSHttpModule">
+            <summary>
+            自定义加载组件，自定义异常处理，请求处理，验证、授权处理。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.CSHttpModule.Init(System.Web.HttpApplication)">
+            <summary>
+            初始化加载组件
+            </summary>
+            <param name="application"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.PartManagement">
+            <summary>
+            部件定义处理类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetMoveOutNodesByVer(System.String)">
+            <summary>
+            节点在不同页签以后,要对控件树进行调整
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PersonalizationManagement.clearPersonalizationData">
+            <summary>
+            清除缓存的操作数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PersonalizationManagement.ClearCurrentVersionPersonalizationData(System.Boolean)">
+            <summary>
+            注销时清理缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetPath">
+            <summary>
+            获取Path方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetSP2Path">
+            <summary>
+            U9V1.5 SP2的Path方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetSP1MD5Path">
+            <summary>
+            SP1时Path的处理方法，在此用来升级Path到SP2时使用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetSP1OrignPath">
+            <summary>
+            SP1采用MD5之前的Path
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GetUrl">
+            <summary>
+            页面请求的URL
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.contextMenus">
+            <summary>
+            不同节点类型的ContextMenu ITEM
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GridInfos">
+            <summary>
+            用于记录Grid中列的名称(UIFieldID及列的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.AdjustModelByTrigger">
+            <summary>
+            缓存个性化数据
+            KEY:触发器的ID-->Vaule:对应的个性化数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.CtrlModelHashTable">
+            <summary>
+            缓存设计期新增的控年的模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.TriggersOfPersonalizationData">
+            <summary>
+            记录个性化数据触发控件
+            Key:控件ID,Value:控件值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.containerTable">
+            <summary>
+            注册容器的缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.GridContainerTable">
+            <summary>
+            注册容器的缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.dropDownBtnTable">
+            <summary>
+            保存dropDownBtn
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PersonalizationManagement.tabTable">
+            <summary>
+            保存tabControl 不同tabPage族的不能移动
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.GridColumnInfo.IsDeveloperHidden">
+            <summary>
+            该列是否由应用开发隐藏的
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CommonProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSProviderBase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPartProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSPageProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSSiteProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSUrlsProvider">
+            <summary>
+            根据定义解析链接处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.CSUserProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSUserProvider.KeyTable">
+            <summary>
+            根据Key值索引的节点集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.Components.CSUserProvider.NameTable">
+            <summary>
+            根据Key值索引的节点集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.ViewStateProvider">
+            <summary>
+            ViewStateHandler基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.ViewStateProviderCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.ViewStateProviderCollection.Add(System.Configuration.Provider.ProviderBase)">
+            <summary>
+            添加Provider，重写基类方法
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.ViewStateProviderCollection.Add(UFSoft.UBF.UI.Portal.Components.ViewStateProvider)">
+            <summary>
+            添加PortalProvider
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.ViewStateProviderCollection.AddArray(UFSoft.UBF.UI.Portal.Components.ViewStateProvider[])">
+            <summary>
+            批量添加PortalProvider
+            </summary>
+            <param name="providerArray"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.SiteManagement">
+            <summary>
+            站点定义处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.SiteUrls">
+            <summary>
+            导航项处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Components.Themes">
+            <summary>
+            主题定义处理类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Components.Themes.LoadAllThemes">
+            <summary>
+            获取App_Themes目录下，主题定义
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.UserManagement">
+            <summary>
+            用户信息处理类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.UserManagement.GetUser">
+            <summary>
+            获取请求的用户信息实例
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.UI.Portal.UserManagement.GetLoggedOnUsername”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.Portal.UserManagement.GetGlobalP2PMap(System.String)">
+            <summary>
+            保存全局的主Form和Page的对应关系,相对30分组过期
+            </summary>
+            <param name="enterpriseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.UserManagement.SetGlobalP2PMap(System.String,System.Object)">
+            <summary>
+            得到全局的主Form和Page的对应关系
+            </summary>
+            <param name="enterpriseId"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.UserManagement.GetGlobalMenuMap(System.String)">
+            <summary>
+            保存全局的主Form和Page的对应关系,相对30分组过期
+            </summary>
+            <param name="enterpriseId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.UserManagement.SetGlobalMenuMap(System.String,System.Object)">
+            <summary>
+            得到全局的主Form和Page的对应关系
+            </summary>
+            <param name="enterpriseId"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.SerializableDic`2.ReadXml(System.Xml.XmlReader)">
+            
+            <summary>
+            从对象的 XML 表示形式生成该对象
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.SerializableDic`2.WriteXml(System.Xml.XmlWriter)">
+            
+            <summary>
+            将对象转换为其 XML 表示形式
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Serializer">
+            <summary>
+            模型组件序列化处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.ViewStateManagement">
+            <summary>
+            ViewState管理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.ViewStateManagement.Initialize">
+            <summary>
+            初始化，根据定义加载PortalProvider
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.ViewStateManagement.Enabled">
+            <summary>
+            是否采用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.ViewStateManagement.Provider">
+            <summary>
+            默认ViewStateProvider
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.ViewStateManagement.Providers">
+            <summary>
+            定义的PortalProvider实例集合
+            </summary>
+        </member>
+    </members>
+</doc>

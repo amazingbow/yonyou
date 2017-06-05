@@ -93,7 +93,7 @@
         private void PrepareProxyInfo(CreateRcvRptProxy rcvRptProxy, ProductionInWarehouseBP bpObj)
         {
             InvStock invStock = InvStock.Finder.FindByID(bpObj.RelationId);
-            Department dept = Department.FindByCode(invStock.DeptID.Code);
+            Department dept = Department.FindByCode(invStock.DeptID.Code2);
             rcvRptProxy.RcvRpt = new RcvRptDocData
             {
                 ActualRcvTime = invStock.BillDate,
@@ -116,6 +116,7 @@
                 //RcvPerson=invStock.
                 Remark = "导入：" + invStock.BillNO,
             };
+         
             var type = RcvRptDocType.Finder.Find("Code='W01'");
             if (type != null )
             {

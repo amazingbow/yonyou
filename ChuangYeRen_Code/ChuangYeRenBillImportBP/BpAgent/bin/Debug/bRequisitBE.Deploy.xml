@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>bRequisitBE.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:bRequisitBE.bRequisitData">
+            <summary>
+            请购单主表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:bRequisitBE.bRequisitData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_bRequisitChild">
+            <summary>
+            请购单子表
+            请购单主表.Misc.请购单子表
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_reClass">
+            <summary>
+            请购类型
+            请购单主表.Misc.请购类型
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_iD">
+            <summary>
+            ID
+            请购单主表.Key.ID
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_createdOn">
+            <summary>
+            创建时间
+            请购单主表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_createdBy">
+            <summary>
+            创建人
+            请购单主表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_modifiedOn">
+            <summary>
+            修改时间
+            请购单主表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_modifiedBy">
+            <summary>
+            修改人
+            请购单主表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_sysVersion">
+            <summary>
+            事务版本
+            请购单主表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_isSignOk">
+            <summary>
+            签核完成
+            请购单主表.Misc.签核完成
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_flowID">
+            <summary>
+            流程号
+            请购单主表.Misc.流程号
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_requister">
+            <summary>
+            请购人员
+            请购单主表.Misc.请购人员
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_reqDate">
+            <summary>
+            请购日期
+            请购单主表.Misc.请购日期
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_org">
+            <summary>
+            Org
+            请购单主表.Misc.Org
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_rPrecision">
+            <summary>
+            精度
+            请购单主表.Misc.精度
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_roundType">
+            <summary>
+            舍入规则
+            请购单主表.Misc.舍入规则
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_roundValue">
+            <summary>
+            舍入值
+            请购单主表.Misc.舍入值
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_tTLMoney">
+            <summary>
+            总金额
+            请购单主表.Misc.总金额
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitData.m_isUpBudge">
+            <summary>
+            预算外请购
+            请购单主表.Misc.预算外请购
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitData.DeptID_SKey">
+            <summary>
+            请购部门 序列化Key属性。（传递跨组织序列列字段）
+            请购单主表.Misc.请购部门
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitData.DeptID">
+            <summary>
+            请购部门
+            请购单主表.Misc.请购部门
+            </summary>
+        </member>
+        <member name="T:bRequisitBE.bRequisitChildData">
+            <summary>
+            请购单子表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:bRequisitBE.bRequisitChildData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_bRequisit">
+            <summary>
+            请购单主表
+            请购单子表.Misc.请购单主表
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_iD">
+            <summary>
+            ID
+            请购单子表.Key.ID
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_createdOn">
+            <summary>
+            创建时间
+            请购单子表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_createdBy">
+            <summary>
+            创建人
+            请购单子表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_modifiedOn">
+            <summary>
+            修改时间
+            请购单子表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_modifiedBy">
+            <summary>
+            修改人
+            请购单子表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_sysVersion">
+            <summary>
+            事务版本
+            请购单子表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_purpose">
+            <summary>
+            用途
+            请购单子表.Misc.用途
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_cUnit">
+            <summary>
+            单位
+            请购单子表.Misc.单位
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_price">
+            <summary>
+            单价
+            请购单子表.Misc.单价
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_tTLAmount">
+            <summary>
+            总金额
+            请购单子表.Misc.总金额
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_isBuy">
+            <summary>
+            采购
+            请购单子表.Misc.采购
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.bRequisitChildData.m_needDate">
+            <summary>
+            需求日期
+            请购单子表.Misc.需求日期
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitChildData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitChildData.BRequisit_SKey">
+            <summary>
+            请购单主表 序列化Key属性。（传递跨组织序列列字段）
+            请购单子表.Misc.请购单主表
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitChildData.Item_SKey">
+            <summary>
+            物料编码 序列化Key属性。（传递跨组织序列列字段）
+            请购单子表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.bRequisitChildData.Item">
+            <summary>
+            物料编码
+            请购单子表.Misc.物料编码
+            </summary>
+        </member>
+        <member name="T:bRequisitBE.ReClassEnumData">
+            <summary>
+            枚举值: 请购类型枚举 
+            
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.ReClassEnumData.A">
+            <summary>
+            材料请购
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.ReClassEnumData.B">
+            <summary>
+            生产设备请购
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.ReClassEnumData.C">
+            <summary>
+            信息设备请购
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.ReClassEnumData.D">
+            <summary>
+            办公用品请购
+            </summary>
+        </member>
+        <member name="F:bRequisitBE.ReClassEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:bRequisitBE.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:bRequisitBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

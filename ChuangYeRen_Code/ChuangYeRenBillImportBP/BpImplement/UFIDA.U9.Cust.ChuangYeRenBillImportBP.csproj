@@ -32,11 +32,16 @@
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BSupplierBE">
-      <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\BSupplierBE.dll</HintPath>
+    <Reference Include="BSupplierBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\BSupplierBE.dll</HintPath>
     </Reference>
-    <Reference Include="BSupplierBE.Deploy">
-      <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\BSupplierBE.Deploy.dll</HintPath>
+    <Reference Include="BSupplierBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\BSupplierBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="CyrLibH">
+      <HintPath>..\..\..\CyrLib\CyrLibH\bin\Debug\CyrLibH.dll</HintPath>
     </Reference>
     <Reference Include="InvStockBE">
       <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\InvStockBE.dll</HintPath>
@@ -54,25 +59,33 @@
     </Reference>
     <Reference Include="PDeptBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\PDeptBE.dll</HintPath>
+      <HintPath>..\..\PDeptBE\Entity\bin\Debug\PDeptBE.dll</HintPath>
     </Reference>
     <Reference Include="PDeptBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\PDeptBE.Deploy.dll</HintPath>
+      <HintPath>..\..\PDeptBE\Deploy\bin\Debug\PDeptBE.Deploy.dll</HintPath>
     </Reference>
-    <Reference Include="pMakGydGyBE">
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakGydGyBE.dll</HintPath>
+    <Reference Include="pMakBomBE">
+      <HintPath>..\..\..\..\U9V30\Portal\ApplicationServer\Libs\pMakBomBE.dll</HintPath>
     </Reference>
-    <Reference Include="pMakGydGyBE.Deploy">
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakGydGyBE.Deploy.dll</HintPath>
+    <Reference Include="pMakBomBE.Deploy">
+      <HintPath>..\..\..\..\U9V30\Portal\ApplicationLib\pMakBomBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="pMakGydGyBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\pMakGydGyBE\Entity\bin\Debug\pMakGydGyBE.dll</HintPath>
+    </Reference>
+    <Reference Include="pMakGydGyBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\pMakGydGyBE\Deploy\bin\Debug\pMakGydGyBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="pMakReqOrderBE, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakReqOrderBE.dll</HintPath>
+      <HintPath>..\..\pMakReqOrderBE\Entity\bin\Debug\pMakReqOrderBE.dll</HintPath>
     </Reference>
     <Reference Include="pMakReqOrderBE.Deploy, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\pMakReqOrderBE.Deploy.dll</HintPath>
+      <HintPath>..\..\pMakReqOrderBE\Deploy\bin\Debug\pMakReqOrderBE.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="PPCSDailyProductChildBE">
       <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\PPCSDailyProductChildBE.dll</HintPath>
@@ -144,6 +157,9 @@
     <Reference Include="UFIDA.U9.CBO.PubBE.Deploy">
       <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.PubBE.Deploy.dll</HintPath>
     </Reference>
+    <Reference Include="UFIDA.U9.CBO.PubBP.Agent">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.CBO.PubBP.Agent.dll</HintPath>
+    </Reference>
     <Reference Include="UFIDA.U9.CBO.PubSV">
       <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.PubSV.dll</HintPath>
     </Reference>
@@ -153,8 +169,9 @@
     <Reference Include="UFIDA.U9.CBO.SCMBE.Deploy">
       <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.SCMBE.Deploy.dll</HintPath>
     </Reference>
-    <Reference Include="UFIDA.U9.Complete.CompleteBE">
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Complete.CompleteBE.dll</HintPath>
+    <Reference Include="UFIDA.U9.Complete.CompleteBE, Version=25.5401.1193.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.Complete.CompleteBE.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.Complete.CompleteBE.Deploy, Version=25.5401.8882.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -189,7 +206,7 @@
       <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.MiscShipISV.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.ISV.MO.MOSV">
-      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.MO.MOSV.dll</HintPath>
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.ISV.MO.MOSV.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.ISV.MO.MOSV.Agent">
       <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.MO.MOSV.Agent.dll</HintPath>
@@ -205,6 +222,15 @@
     </Reference>
     <Reference Include="UFIDA.U9.ISV.PM.PMISV.Deploy">
       <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.PM.PMISV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.Project">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.ISV.Project.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.Project.Agent">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.ISV.Project.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.Project.Deploy">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.Component\App\UFIDA.U9.ISV.Project.Deploy.dll</HintPath>
     </Reference>
     <Reference Include="UFIDA.U9.ISV.SM.SDIndustryChainSV">
       <HintPath>..\..\..\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.SM.SDIndustryChainSV.dll</HintPath>
@@ -278,6 +304,12 @@
     <Reference Include="UFSoft.UBF.Sys.ResourceBP.Agent">
       <HintPath>..\..\..\..\..\yonyou\U9V50\SearchService\Libs\UFSoft.UBF.Sys.ResourceBP.Agent.dll</HintPath>
     </Reference>
+    <Reference Include="UFSoft.UBF.UI.Portal.Components">
+      <HintPath>..\..\..\..\UBFV30\U9.VOB.Product.UBF\UBFStudio\Runtime\UFSoft.UBF.UI.Portal.Components.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="UFIDA.U9.Cust.ChuangYeRenBillImportBP.target" />

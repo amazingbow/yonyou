@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Sn.SnSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.Sn.SnNotNullException">
+            <summary>
+            异常类型: 序列号为空异常
+            
+             [序列号服务异常]在线产生序列号服务：序列号编码规则自动编号为false，序列号必须手工录入！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotNullException.#ctor">
+            <summary>
+            异常类型: 序列号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 序列号为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnSvParameterNull">
+            <summary>
+            异常类型: 服务参数不能为空
+            
+             [序列号服务异常]服务:${SvName},参数:${ParameterList}不能为空!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvParameterNull.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 服务参数不能为空 Constructor
+            </summary>
+            <param name="svName">服务名称</param>
+            <param name="parameterList">为空参数集合</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvParameterNull.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 服务参数不能为空 Constructor
+            </summary>
+            <param name="svName">服务名称</param>
+            <param name="parameterList">为空参数集合</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvParameterNull.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 服务参数不能为空 Constructor
+            </summary>
+            <param name="svName">服务名称</param>
+            <param name="parameterList">为空参数集合</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnSvParameterNull.SvName">
+            <summary>
+            服务名称
+            服务参数不能为空.Misc.服务名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnSvParameterNull.ParameterList">
+            <summary>
+            为空参数集合
+            服务参数不能为空.Misc.为空参数集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.QueryDocSnSVQuantityNullException">
+            <summary>
+            异常类型: 数量为0异常
+            
+             [业务单据查询序列号服务异常]单据上传入的数量为0!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.QueryDocSnSVQuantityNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 数量为0异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.QueryDocSnSVQuantityNullException.#ctor">
+            <summary>
+            异常类型: 数量为0异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.QueryDocSnSVQuantityNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 数量为0异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnSvDocInfoNullException">
+            <summary>
+            异常类型: 来源单据信息为空异常
+            
+             [序列号服务异常]序列号来源单据信息为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvDocInfoNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源单据信息为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvDocInfoNullException.#ctor">
+            <summary>
+            异常类型: 来源单据信息为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnSvDocInfoNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源单据信息为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnWhNullException">
+            <summary>
+            异常类型: 出库类单据存储地点不能为空异常
+            
+             [序列号异常]出库类单据存储地点不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 出库类单据存储地点不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhNullException.#ctor">
+            <summary>
+            异常类型: 出库类单据存储地点不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 出库类单据存储地点不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnMaxNumException">
+            <summary>
+            异常类型: 序列号数量异常
+            
+             [序列号异常]传入数量为${Quantity},序列号处理的数量最大值为${MaxQuantity}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnMaxNumException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="quantity">数量</param>
+            <param name="maxQuantity">最大数量</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnMaxNumException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="quantity">数量</param>
+            <param name="maxQuantity">最大数量</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnMaxNumException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="quantity">数量</param>
+            <param name="maxQuantity">最大数量</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnMaxNumException.Quantity">
+            <summary>
+            数量
+            序列号数量异常.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnMaxNumException.MaxQuantity">
+            <summary>
+            最大数量
+            序列号数量异常.Misc.最大数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCreateException">
+            <summary>
+            异常类型: 批量创建序列号错误
+            
+             [序列号异常]批量创建序列号错误！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCreateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 批量创建序列号错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCreateException.#ctor">
+            <summary>
+            异常类型: 批量创建序列号错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCreateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 批量创建序列号错误 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCountException">
+            <summary>
+            异常类型: 序列号个数不匹配异常
+            
+             [序列号异常]传入SnVerifyDTO个数${Quantity1}，库存业务主键个数${Quantity2}，参数传入不匹配
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCountException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号个数不匹配异常 Constructor
+            </summary>
+            <param name="quantity1">数量1</param>
+            <param name="quantity2">数量2</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCountException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 序列号个数不匹配异常 Constructor
+            </summary>
+            <param name="quantity1">数量1</param>
+            <param name="quantity2">数量2</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCountException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号个数不匹配异常 Constructor
+            </summary>
+            <param name="quantity1">数量1</param>
+            <param name="quantity2">数量2</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCountException.Quantity1">
+            <summary>
+            数量1
+            序列号个数不匹配异常.Misc.数量1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCountException.Quantity2">
+            <summary>
+            数量2
+            序列号个数不匹配异常.Misc.数量2
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnNotInputException">
+            <summary>
+            异常类型: 序列号不允许录入异常异常
+            
+             [序列号异常]第${DocLineNo} 行${DocSubLineNo}子行不进行序列号管理，不允许录入序列号!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInputException.#ctor(System.Int32,System.Int32,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号不允许录入异常异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInputException.#ctor(System.Int32,System.Int32)">
+            <summary>
+            异常类型: 序列号不允许录入异常异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInputException.#ctor(System.Int32,System.Int32,System.Exception)">
+            <summary>
+            异常类型: 序列号不允许录入异常异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnNotInputException.DocLineNo">
+            <summary>
+            行号
+            序列号不允许录入异常异常.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnNotInputException.DocSubLineNo">
+            <summary>
+            子行号
+            序列号不允许录入异常异常.Misc.子行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnInputException">
+            <summary>
+            异常类型: 序列号必须录入异常
+            
+             [序列号异常]第${DocLineNo}行${DocSubLineNo} 子行进行序列号管理，必须录入序列号!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnInputException.#ctor(System.Int32,System.Int32,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号必须录入异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnInputException.#ctor(System.Int32,System.Int32)">
+            <summary>
+            异常类型: 序列号必须录入异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnInputException.#ctor(System.Int32,System.Int32,System.Exception)">
+            <summary>
+            异常类型: 序列号必须录入异常 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="docSubLineNo">子行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnInputException.DocLineNo">
+            <summary>
+            行号
+            序列号必须录入异常.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnInputException.DocSubLineNo">
+            <summary>
+            子行号
+            序列号必须录入异常.Misc.子行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCodingRuleIsNull">
+            <summary>
+            异常类型: 序列号编码规则为空
+            
+             [序列号异常]品名${ItemName} 上序列号参数对应的序列号编码规则为空 !
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodingRuleIsNull.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号编码规则为空 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodingRuleIsNull.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号编码规则为空 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodingRuleIsNull.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号编码规则为空 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCodingRuleIsNull.ItemName">
+            <summary>
+            料品
+            序列号编码规则为空.Misc.料品
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.KeyFlexFieldDTOIsNull">
+            <summary>
+            异常类型: 弹性域信息不能为空
+            
+             [序列号异常]品名${ItemName} 上序列号参数对应的弹性域信息为空 !
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.KeyFlexFieldDTOIsNull.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 弹性域信息不能为空 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.KeyFlexFieldDTOIsNull.#ctor(System.String)">
+            <summary>
+            异常类型: 弹性域信息不能为空 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.KeyFlexFieldDTOIsNull.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 弹性域信息不能为空 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.KeyFlexFieldDTOIsNull.ItemName">
+            <summary>
+            料品名称
+            弹性域信息不能为空.Misc.料品名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnBalanceKeyException">
+            <summary>
+            异常类型: 序列号业务主键校验
+            
+             [序列号异常]第${DocLineNo}行业务主键与序列号不一致，请修改序列号!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnBalanceKeyException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号业务主键校验 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnBalanceKeyException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号业务主键校验 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnBalanceKeyException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号业务主键校验 Constructor
+            </summary>
+            <param name="docLineNo">行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnBalanceKeyException.DocLineNo">
+            <summary>
+            行号
+            序列号业务主键校验.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnRepeatException">
+            <summary>
+            异常类型: 序列号重复异常
+            
+             [序列号异常]序列号${SnCode}重复，请重新录入!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnRepeatException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号重复异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnRepeatException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号重复异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnRepeatException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号重复异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnRepeatException.SnCode">
+            <summary>
+            序列号
+            序列号重复异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnQtyException">
+            <summary>
+            异常类型: 序列号数量异常
+            
+             [序列号异常]序列号数量已超出单据数量${Qty}个!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnQtyException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="qty">数量</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnQtyException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="qty">数量</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnQtyException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号数量异常 Constructor
+            </summary>
+            <param name="qty">数量</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnQtyException.Qty">
+            <summary>
+            数量
+            序列号数量异常.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnNotInException">
+            <summary>
+            异常类型: 不在库序列号异常
+            
+             [序列号异常]序列号${SnCode}不是在库序列号，请重新录入!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotInException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不在库序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotInException.#ctor(System.String)">
+            <summary>
+            异常类型: 不在库序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotInException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 不在库序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnNotInException.SnCode">
+            <summary>
+            序列号
+            不在库序列号异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnOutUsedException">
+            <summary>
+            异常类型: 序列号出库占用异常
+            
+             序列号${SnCode}已被出库占用，请重新录入!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnOutUsedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnOutUsedException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnOutUsedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnOutUsedException.SnCode">
+            <summary>
+            序列号
+            序列号出库占用异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnInUsedException">
+            <summary>
+            异常类型: 序列号已入库异常
+            
+             [序列号异常]序列号${SnCode}已入库，请重新录入!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnInUsedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号已入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnInUsedException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号已入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnInUsedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号已入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnInUsedException.SnCode">
+            <summary>
+            序列号
+            序列号已入库异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnNotExistException">
+            <summary>
+            异常类型: 序列号不存在异常
+            
+             [序列号异常]没有对应的序列号${SnCode}，请首先创建序列号主档!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotExistException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号不存在异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotExistException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号不存在异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnNotExistException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号不存在异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnNotExistException.SnCode">
+            <summary>
+            序列号
+            序列号不存在异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnSrDocNotExistException">
+            <summary>
+            异常类型: 序列号不在源单范围异常
+            
+             [序列号异常]序列号${SnCode}不在源单(或者其子行范围内)范围，请重新录入!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnSrDocNotExistException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号不在源单范围异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnSrDocNotExistException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号不在源单范围异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnSrDocNotExistException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号不在源单范围异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnSrDocNotExistException.SnCode">
+            <summary>
+            序列号
+            序列号不在源单范围异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_SnMasterNotExistException">
+            <summary>
+            异常类型: 序列号主档信息不存在
+            
+             [序列号异常]没有对应的序列号${SnCode}主档信息，请首先创建序列号主档!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnMasterNotExistException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号主档信息不存在 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnMasterNotExistException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号主档信息不存在 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_SnMasterNotExistException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号主档信息不存在 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_SnMasterNotExistException.SnCode">
+            <summary>
+            序列号
+            序列号主档信息不存在.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_NoSnCodingRuleException">
+            <summary>
+            异常类型: 没有序列号编码规则异常
+            
+             [序列号异常]没有获取料品${ItemName}上定义的序列号编码规则!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_NoSnCodingRuleException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有序列号编码规则异常 Constructor
+            </summary>
+            <param name="itemName">品名</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_NoSnCodingRuleException.#ctor(System.String)">
+            <summary>
+            异常类型: 没有序列号编码规则异常 Constructor
+            </summary>
+            <param name="itemName">品名</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_NoSnCodingRuleException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 没有序列号编码规则异常 Constructor
+            </summary>
+            <param name="itemName">品名</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_NoSnCodingRuleException.ItemName">
+            <summary>
+            品名
+            没有序列号编码规则异常.Misc.品名
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnPrc_QtyException">
+            <summary>
+            异常类型: 单据数量与序列号不一致异常
+            
+             [序列号异常]第${LineInfo}行(子行${SunLineInfo})数量与序列号不对应!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_QtyException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 单据数量与序列号不一致异常 Constructor
+            </summary>
+            <param name="lineInfo">行信息</param>
+            <param name="sunLineInfo">子行信息</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_QtyException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 单据数量与序列号不一致异常 Constructor
+            </summary>
+            <param name="lineInfo">行信息</param>
+            <param name="sunLineInfo">子行信息</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnPrc_QtyException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 单据数量与序列号不一致异常 Constructor
+            </summary>
+            <param name="lineInfo">行信息</param>
+            <param name="sunLineInfo">子行信息</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_QtyException.LineInfo">
+            <summary>
+            行信息
+            单据数量与序列号不一致异常.Misc.行信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnPrc_QtyException.SunLineInfo">
+            <summary>
+            子行信息
+            单据数量与序列号不一致异常.Misc.子行信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnWhQohException">
+            <summary>
+            异常类型: 在手量匹配异常
+            
+             [序列号异常]序列号${SnCode}没有匹配到在手量，不能出库，请重新录入序列号!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhQohException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 在手量匹配异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhQohException.#ctor(System.String)">
+            <summary>
+            异常类型: 在手量匹配异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnWhQohException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 在手量匹配异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnWhQohException.SnCode">
+            <summary>
+            序列号
+            在手量匹配异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCodeIsOutBoundException">
+            <summary>
+            异常类型: 发类单据弃审出库占用异常
+            
+             [序列号异常]序列号${SnCode}已经被出库占用！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutBoundException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 发类单据弃审出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutBoundException.#ctor(System.String)">
+            <summary>
+            异常类型: 发类单据弃审出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutBoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 发类单据弃审出库占用异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCodeIsOutBoundException.SnCode">
+            <summary>
+            序列号
+            发类单据弃审出库占用异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCodeLengthException">
+            <summary>
+            异常类型: 序列号长度溢出异常
+            
+             [序列号异常]序列号${SnCode}超出序列号长度限制(50个字符)!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeLengthException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号长度溢出异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeLengthException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号长度溢出异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeLengthException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号长度溢出异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCodeLengthException.SnCode">
+            <summary>
+            序列号
+            序列号长度溢出异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnCodeIsOutException">
+            <summary>
+            异常类型: 序列号已经出库异常
+            
+             [序列号异常]单据上序列号${SnCode}已经出库！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号已经出库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号已经出库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnCodeIsOutException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号已经出库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnCodeIsOutException.SnCode">
+            <summary>
+            序列号
+            序列号已经出库异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnNotEffectiveException">
+            <summary>
+            异常类型: 序列号失效异常异常
+            
+             [序列号异常]序列号${Sncode}已失效，请重新录入
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotEffectiveException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号失效异常异常 Constructor
+            </summary>
+            <param name="sncode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotEffectiveException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号失效异常异常 Constructor
+            </summary>
+            <param name="sncode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotEffectiveException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号失效异常异常 Constructor
+            </summary>
+            <param name="sncode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnNotEffectiveException.Sncode">
+            <summary>
+            序列号
+            序列号失效异常异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnOnProduceException">
+            <summary>
+            异常类型: 生产序列号异常
+            
+             [序列号异常]序列号${SnCode}已经使用过，请换一个序列号！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduceException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduceException.#ctor(System.String)">
+            <summary>
+            异常类型: 生产序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduceException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 生产序列号异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnOnProduceException.SnCode">
+            <summary>
+            序列号
+            生产序列号异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnOnProduce_CompleteOutException">
+            <summary>
+            异常类型: 完工出库异常
+            
+             [序列号异常]源单无序列号，不允许录入
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduce_CompleteOutException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 完工出库异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduce_CompleteOutException.#ctor">
+            <summary>
+            异常类型: 完工出库异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnOnProduce_CompleteOutException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 完工出库异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnReInException">
+            <summary>
+            异常类型: 序列号重复入库异常
+            
+             [序列号异常]序列号${SnCode}已被别的单据入库，请换一个序列号！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnReInException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号重复入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnReInException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号重复入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnReInException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号重复入库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnReInException.SnCode">
+            <summary>
+            序列号
+            序列号重复入库异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnNotInHandException">
+            <summary>
+            异常类型: 序列号不在库异常
+            
+             [序列号异常]序列号${SnCode}已被别的单据出库或不在库，请换一个序列号！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInHandException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 序列号不在库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInHandException.#ctor(System.String)">
+            <summary>
+            异常类型: 序列号不在库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+        </member>
+        <member name="M:UFIDA.U9.Sn.SnNotInHandException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 序列号不在库异常 Constructor
+            </summary>
+            <param name="snCode">序列号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnNotInHandException.SnCode">
+            <summary>
+            序列号
+            序列号不在库异常.Misc.序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Sn.NotAllowCreateSnException">
+            <summary>
+            异常类型: 不允许创建序列号异常
+            
+             [序列号异常]序列号预先设定，不允许在线创建序列号
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.NotAllowCreateSnException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不允许创建序列号异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.NotAllowCreateSnException.#ctor">
+            <summary>
+            异常类型: 不允许创建序列号异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Sn.NotAllowCreateSnException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不允许创建序列号异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.Sn.SnSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.SnSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

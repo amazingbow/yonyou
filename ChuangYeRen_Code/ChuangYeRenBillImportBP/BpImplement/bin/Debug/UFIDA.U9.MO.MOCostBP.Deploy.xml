@@ -1,0 +1,1481 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.MO.MOCostBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.MOCost.EstimateCost.PurchasePartRelatedCostElementNotDefExceiption">
+            <summary>
+            异常类型: 未在BOM子项上定义物料的成本要素
+            
+             未在BOM子项上定义物料${Name}对应的成本要素
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.PurchasePartRelatedCostElementNotDefExceiption.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未在BOM子项上定义物料的成本要素 Constructor
+            </summary>
+            <param name="name">名称 </param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.PurchasePartRelatedCostElementNotDefExceiption.#ctor(System.String)">
+            <summary>
+            异常类型: 未在BOM子项上定义物料的成本要素 Constructor
+            </summary>
+            <param name="name">名称 </param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.PurchasePartRelatedCostElementNotDefExceiption.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未在BOM子项上定义物料的成本要素 Constructor
+            </summary>
+            <param name="name">名称 </param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.PurchasePartRelatedCostElementNotDefExceiption.Name">
+            <summary>
+            名称 
+            未在BOM子项上定义物料的成本要素.Misc.名称 
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.EstimateCost.EssentialItemCostNotExistException">
+            <summary>
+            异常类型: 缺少必要的库存单价异常
+            缺少必要的库存单价
+             缺少必要的库存单价
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.EssentialItemCostNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 缺少必要的库存单价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.EssentialItemCostNotExistException.#ctor">
+            <summary>
+            异常类型: 缺少必要的库存单价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.EssentialItemCostNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 缺少必要的库存单价异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.WithdrawingQtyOverIssuedException">
+            <summary>
+            异常类型: 退料数量已超过已领用数量
+            退料数量已超过已领用数量
+             退料数量已超过已领用数量
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.WithdrawingQtyOverIssuedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 退料数量已超过已领用数量 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.WithdrawingQtyOverIssuedException.#ctor">
+            <summary>
+            异常类型: 退料数量已超过已领用数量 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.WithdrawingQtyOverIssuedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 退料数量已超过已领用数量 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetInnerBalCostException">
+            <summary>
+            异常类型: 取库存内部结算单成本异常
+            取库存内部结算单成本异常
+             内部结算价格未找到
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetInnerBalCostException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取库存内部结算单成本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetInnerBalCostException.#ctor">
+            <summary>
+            异常类型: 取库存内部结算单成本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetInnerBalCostException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取库存内部结算单成本异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException">
+            <summary>
+            异常类型: 来源组织目的组织为空异常
+            来源组织,目的组织为空
+             ${Src}与${Dest}不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源组织目的组织为空异常 Constructor
+            </summary>
+            <param name="src">来源组织资源名称</param>
+            <param name="dest">目的组织资源名称</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 来源组织目的组织为空异常 Constructor
+            </summary>
+            <param name="src">来源组织资源名称</param>
+            <param name="dest">目的组织资源名称</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 来源组织目的组织为空异常 Constructor
+            </summary>
+            <param name="src">来源组织资源名称</param>
+            <param name="dest">目的组织资源名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException.Src">
+            <summary>
+            来源组织资源名称
+            来源组织目的组织为空异常.Misc.来源组织资源名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.SrcDestOrgNullException.Dest">
+            <summary>
+            目的组织资源名称
+            来源组织目的组织为空异常.Misc.目的组织资源名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException">
+            <summary>
+            异常类型: 取组织间营业行为关系异常
+            取组织间营业行为关系异常
+             未取得组织间营业行为关系.来源组织${SrcOrg}目的组织${DestOrg}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取组织间营业行为关系异常 Constructor
+            </summary>
+            <param name="srcOrg">来源组织</param>
+            <param name="destOrg">目的组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 取组织间营业行为关系异常 Constructor
+            </summary>
+            <param name="srcOrg">来源组织</param>
+            <param name="destOrg">目的组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 取组织间营业行为关系异常 Constructor
+            </summary>
+            <param name="srcOrg">来源组织</param>
+            <param name="destOrg">目的组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException.SrcOrg">
+            <summary>
+            来源组织
+            取组织间营业行为关系异常.Misc.来源组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetOrgBusinessRelationException.DestOrg">
+            <summary>
+            目的组织
+            取组织间营业行为关系异常.Misc.目的组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException">
+            <summary>
+            异常类型: 取关联供应商异常
+            取关联供应商异常
+             未取得满足条件的供应商.${Org},${ContractObj}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取关联供应商异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 取关联供应商异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 取关联供应商异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException.Org">
+            <summary>
+            组织
+            取关联供应商异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetContractSupplierException.ContractObj">
+            <summary>
+            关联对象
+            取关联供应商异常.Misc.关联对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.SupplierPLNotDefineException">
+            <summary>
+            异常类型: 供应商价表未定义异常
+            供应商价表未定义异常
+             供应商:${Supplier}价表未定义
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SupplierPLNotDefineException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商价表未定义异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SupplierPLNotDefineException.#ctor(System.String)">
+            <summary>
+            异常类型: 供应商价表未定义异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.SupplierPLNotDefineException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 供应商价表未定义异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.SupplierPLNotDefineException.Supplier">
+            <summary>
+            供应商
+            供应商价表未定义异常.Misc.供应商
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException">
+            <summary>
+            异常类型: 取关联客户异常
+            
+             未取得满足条件的客户.${Org},${ContractObj}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取关联客户异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 取关联客户异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 取关联客户异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="contractObj">关联对象</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException.Org">
+            <summary>
+            组织
+            取关联客户异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetContractCustomerException.ContractObj">
+            <summary>
+            关联对象
+            取关联客户异常.Misc.关联对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.CustomerPLNotDefineException">
+            <summary>
+            异常类型: 客户价表未定义异常
+            客户价表未定义异常
+             客户:${Customer}价表未定义
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CustomerPLNotDefineException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 客户价表未定义异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CustomerPLNotDefineException.#ctor(System.String)">
+            <summary>
+            异常类型: 客户价表未定义异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CustomerPLNotDefineException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 客户价表未定义异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.CustomerPLNotDefineException.Customer">
+            <summary>
+            客户
+            客户价表未定义异常.Misc.客户
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException">
+            <summary>
+            异常类型: 供应商价表中找不到合适的物料价格异常
+            供应商价表中找不到合适的物料价格异常
+             供应商${Supplier}的价表中找不到物料${Item}的价格
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+            <param name="item">物料</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 供应商价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+            <param name="item">物料</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 供应商价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="supplier">供应商</param>
+            <param name="item">物料</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException.Supplier">
+            <summary>
+            供应商
+            供应商价表中找不到合适的物料价格异常.Misc.供应商
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInSPLException.Item">
+            <summary>
+            物料
+            供应商价表中找不到合适的物料价格异常.Misc.物料
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInCPLException">
+            <summary>
+            异常类型: 客户价表中找不到合适的物料价格异常
+            供应商价表中找不到合适的物料价格异常
+             客户${Customer}的价表中找不到物料的价格
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInCPLException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 客户价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInCPLException.#ctor(System.String)">
+            <summary>
+            异常类型: 客户价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInCPLException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 客户价表中找不到合适的物料价格异常 Constructor
+            </summary>
+            <param name="customer">客户</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.ItemPriceNotInCPLException.Customer">
+            <summary>
+            客户
+            客户价表中找不到合适的物料价格异常.Misc.客户
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.CostQtyAndUOMNullException">
+            <summary>
+            异常类型: 成本单位数量为空异常
+            成本单位数量为空异常
+             领料单行${LineNum}成本单位,及发料数量不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CostQtyAndUOMNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 成本单位数量为空异常 Constructor
+            </summary>
+            <param name="lineNum">领料单行号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CostQtyAndUOMNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 成本单位数量为空异常 Constructor
+            </summary>
+            <param name="lineNum">领料单行号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.CostQtyAndUOMNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 成本单位数量为空异常 Constructor
+            </summary>
+            <param name="lineNum">领料单行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.CostQtyAndUOMNullException.LineNum">
+            <summary>
+            领料单行号
+            成本单位数量为空异常.Misc.领料单行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.TransOutOrgBusinessRelationTypeNDefException">
+            <summary>
+            异常类型: 未设置调出组织的物流、工厂、营业职能异常
+            未设置调出组织的物流、工厂、营业职能异常
+             未设置调出组织${TransOutOrg}的物流、工厂、营业职能
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransOutOrgBusinessRelationTypeNDefException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未设置调出组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transOutOrg">调出组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransOutOrgBusinessRelationTypeNDefException.#ctor(System.String)">
+            <summary>
+            异常类型: 未设置调出组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transOutOrg">调出组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransOutOrgBusinessRelationTypeNDefException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未设置调出组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transOutOrg">调出组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.TransOutOrgBusinessRelationTypeNDefException.TransOutOrg">
+            <summary>
+            调出组织
+            未设置调出组织的物流、工厂、营业职能异常.Misc.调出组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.TransInOrgBusinessRelationTypeNDefException">
+            <summary>
+            异常类型: 未设置调入组织的物流、工厂、营业职能异常
+            未设置调入组织的物流、工厂、营业职能异常
+             未设置调入组织${TransInOrg}的物流、工厂、营业职能
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransInOrgBusinessRelationTypeNDefException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未设置调入组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transInOrg">调入组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransInOrgBusinessRelationTypeNDefException.#ctor(System.String)">
+            <summary>
+            异常类型: 未设置调入组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transInOrg">调入组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.TransInOrgBusinessRelationTypeNDefException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未设置调入组织的物流、工厂、营业职能异常 Constructor
+            </summary>
+            <param name="transInOrg">调入组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.TransInOrgBusinessRelationTypeNDefException.TransInOrg">
+            <summary>
+            调入组织
+            未设置调入组织的物流、工厂、营业职能异常.Misc.调入组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.ContractObjNDefineException">
+            <summary>
+            异常类型: 组织的联系对象为空异常
+            组织的联系对象为空异常
+             组织${Org}的联系对象不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ContractObjNDefineException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 组织的联系对象为空异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ContractObjNDefineException.#ctor(System.String)">
+            <summary>
+            异常类型: 组织的联系对象为空异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.ContractObjNDefineException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 组织的联系对象为空异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.ContractObjNDefineException.Org">
+            <summary>
+            组织
+            组织的联系对象为空异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.MissingPickSupplierException">
+            <summary>
+            异常类型: 未提供供应商异常
+            供应商不能为空
+             供应商不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingPickSupplierException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未提供供应商异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingPickSupplierException.#ctor">
+            <summary>
+            异常类型: 未提供供应商异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.MissingPickSupplierException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未提供供应商异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException">
+            <summary>
+            异常类型: 币种转换异常
+            
+             币种转换失败.从币种${Src},到币种${Dest}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 币种转换异常 Constructor
+            </summary>
+            <param name="src">从币种</param>
+            <param name="dest">到币种</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 币种转换异常 Constructor
+            </summary>
+            <param name="src">从币种</param>
+            <param name="dest">到币种</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 币种转换异常 Constructor
+            </summary>
+            <param name="src">从币种</param>
+            <param name="dest">到币种</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException.Src">
+            <summary>
+            从币种
+            币种转换异常.Misc.从币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.GetExchangeRateException.Dest">
+            <summary>
+            到币种
+            币种转换异常.Misc.到币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.OpTransferDocIsNullException">
+            <summary>
+            异常类型: 工序转移单为空异常
+            
+             工序转移单为空异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.OpTransferDocIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工序转移单为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.OpTransferDocIsNullException.#ctor">
+            <summary>
+            异常类型: 工序转移单为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.OpTransferDocIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 工序转移单为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.SrcOpNumIsNullException">
+            <summary>
+            异常类型: 来源工序号为空异常
+            
+             来源工序号为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SrcOpNumIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源工序号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SrcOpNumIsNullException.#ctor">
+            <summary>
+            异常类型: 来源工序号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SrcOpNumIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源工序号为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.TargetOpNumIsNullException">
+            <summary>
+            异常类型: 目标工序号为空异常
+            
+             目标工序号为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.TargetOpNumIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 目标工序号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.TargetOpNumIsNullException.#ctor">
+            <summary>
+            异常类型: 目标工序号为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.TargetOpNumIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 目标工序号为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.CompleteRptIsNullException">
+            <summary>
+            异常类型: 完工报告为空异常
+            
+             完工报告为空异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CompleteRptIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 完工报告为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CompleteRptIsNullException.#ctor">
+            <summary>
+            异常类型: 完工报告为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CompleteRptIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 完工报告为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNullException">
+            <summary>
+            异常类型: 生产订单、生产线日计划都为空异常
+            
+             生产订单、生产线日计划都为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产订单、生产线日计划都为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNullException.#ctor">
+            <summary>
+            异常类型: 生产订单、生产线日计划都为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生产订单、生产线日计划都为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNotNullException">
+            <summary>
+            异常类型: 生产订单、生产线日计划都存在异常
+            
+             生产订单、生产线日计划都存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产订单、生产线日计划都存在异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNotNullException.#ctor">
+            <summary>
+            异常类型: 生产订单、生产线日计划都存在异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAreNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生产订单、生产线日计划都存在异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.CostFieldIsNullException">
+            <summary>
+            异常类型: 成本域为空异常
+            
+             成本域为空异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostFieldIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 成本域为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostFieldIsNullException.#ctor">
+            <summary>
+            异常类型: 成本域为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostFieldIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 成本域为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.SOBListIsNullException">
+            <summary>
+            异常类型: 帐簿集合为空异常
+            
+             帐簿集合为空异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SOBListIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 帐簿集合为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SOBListIsNullException.#ctor">
+            <summary>
+            异常类型: 帐簿集合为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.SOBListIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 帐簿集合为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.CostTypeListIsNullException">
+            <summary>
+            异常类型: 成本类型集合为空异常
+            
+             成本类型集合为空异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostTypeListIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 成本类型集合为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostTypeListIsNullException.#ctor">
+            <summary>
+            异常类型: 成本类型集合为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.CostTypeListIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 成本类型集合为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData">
+            <summary>
+            物料分项调整成本DTO DTO :自定义的数据传输类型 
+            物料分项调整成本DTO
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int32,System.Int32,System.Int64,System.Collections.Generic.List{System.String},System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.ElementTypeCostData,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_degree">
+            <summary>
+            等级
+            物料分项调整成本DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_potency">
+            <summary>
+            成分
+            物料分项调整成本DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_uDI">
+            <summary>
+            自由项1-10
+            物料分项调整成本DTO.Misc.自由项1-10
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_adjCost">
+            <summary>
+            调整成本
+            物料分项调整成本DTO.Misc.调整成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_applyDate">
+            <summary>
+            执行时间
+            物料分项调整成本DTO.Misc.执行时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.m_detailLine">
+            <summary>
+            明细ID
+            物料分项调整成本DTO.Misc.明细ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Org">
+            <summary>
+            组织
+            物料分项调整成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.ItemMaster_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.ItemMaster">
+            <summary>
+            物料
+            物料分项调整成本DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.ItemVersion_SKey">
+            <summary>
+            物料版本 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.ItemVersion">
+            <summary>
+            物料版本
+            物料分项调整成本DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Supplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Supplier">
+            <summary>
+            厂牌
+            物料分项调整成本DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.CostType">
+            <summary>
+            成本类型
+            物料分项调整成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.SOB">
+            <summary>
+            账簿
+            物料分项调整成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Period_SKey">
+            <summary>
+            期间 序列化Key属性。（传递跨组织序列列字段）
+            物料分项调整成本DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementTypeCostDTOData.Period">
+            <summary>
+            期间
+            物料分项调整成本DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData">
+            <summary>
+            物料要素调整成本DTO DTO :自定义的数据传输类型 
+            物料要素调整成本DTO
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int32,System.Int32,System.Int64,System.Collections.Generic.List{System.String},System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.MFG.CO.ElementTypeCostData,System.DateTime,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_degree">
+            <summary>
+            等级
+            物料要素调整成本DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_potency">
+            <summary>
+            成分
+            物料要素调整成本DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_uDI">
+            <summary>
+            自由项1-10
+            物料要素调整成本DTO.Misc.自由项1-10
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_adjCost">
+            <summary>
+            调整成本
+            物料要素调整成本DTO.Misc.调整成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_applyDate">
+            <summary>
+            执行时间
+            物料要素调整成本DTO.Misc.执行时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.m_detailLine">
+            <summary>
+            明细ID
+            物料要素调整成本DTO.Misc.明细ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Org">
+            <summary>
+            组织
+            物料要素调整成本DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.ItemMaster_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.ItemMaster">
+            <summary>
+            物料
+            物料要素调整成本DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.ItemVersion_SKey">
+            <summary>
+            物料版本 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.ItemVersion">
+            <summary>
+            物料版本
+            物料要素调整成本DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Supplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Supplier">
+            <summary>
+            厂牌
+            物料要素调整成本DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.CostType_SKey">
+            <summary>
+            成本类型 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.CostType">
+            <summary>
+            成本类型
+            物料要素调整成本DTO.Misc.成本类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.SOB">
+            <summary>
+            账簿
+            物料要素调整成本DTO.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Period_SKey">
+            <summary>
+            期间 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.Period">
+            <summary>
+            期间
+            物料要素调整成本DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.CostElement_SKey">
+            <summary>
+            成本要素 序列化Key属性。（传递跨组织序列列字段）
+            物料要素调整成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.AdjustCost.ItemAdjElementCostDTOData.CostElement">
+            <summary>
+            成本要素
+            物料要素调整成本DTO.Misc.成本要素
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.POMoveResSubCostNotFoundException">
+            <summary>
+            异常类型: 未能找到与委外资源对应的成本记录异常
+            
+             未能找到相应的成本记录（消息=${Message}）
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.POMoveResSubCostNotFoundException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未能找到与委外资源对应的成本记录异常 Constructor
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.POMoveResSubCostNotFoundException.#ctor(System.String)">
+            <summary>
+            异常类型: 未能找到与委外资源对应的成本记录异常 Constructor
+            </summary>
+            <param name="message">消息</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.POMoveResSubCostNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未能找到与委外资源对应的成本记录异常 Constructor
+            </summary>
+            <param name="message">消息</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ResourceCost.POMoveResSubCostNotFoundException.Message">
+            <summary>
+            消息
+            未能找到与委外资源对应的成本记录异常.Misc.消息
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNullException">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时为空异常
+            
+             生产订单、生产线日计划同时为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNullException.#ctor">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNotNullException">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时存在异常
+            
+             生产订单、生产线日计划同时存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时存在异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNotNullException.#ctor">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时存在异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ResourceCost.MOPLSAllNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 生产订单、生产线日计划同时存在异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.EstimateCost.ResCostCacheTransferDTOData">
+            <summary>
+            资源成本缓存传输DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.EstimateCost.ResCostCacheTransferDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ItemCostNotDefineException">
+            <summary>
+            异常类型: 物料成本未定义异常
+            物料成本未定义异常
+             物料${Item}成本未定义，请在料品成本手工维护中定义其成本
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineException.#ctor(System.String)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ItemCostNotDefineException.Item">
+            <summary>
+            属性
+            物料成本未定义异常.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException">
+            <summary>
+            异常类型: 物料成本未定义异常
+            
+             物料${Item}在组织${Org}成本未定义，请在料品成本手工维护中定义其成本
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+            <param name="org">属性1</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+            <param name="org">属性1</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 物料成本未定义异常 Constructor
+            </summary>
+            <param name="item">属性</param>
+            <param name="org">属性1</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException.Item">
+            <summary>
+            属性
+            物料成本未定义异常.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ItemCostNotDefineByOrgException.Org">
+            <summary>
+            属性1
+            物料成本未定义异常.Misc.属性1
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTranCost.InParamDTOData">
+            <summary>
+            工序转移单成本计算DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.InParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.InParamDTOData.#ctor(System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.InParamDTOData.OpTransferDoc_SKey">
+            <summary>
+            工序转移单 序列化Key属性。（传递跨组织序列列字段）
+            工序转移单成本计算DTO.Misc.工序转移单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.InParamDTOData.OpTransferDoc">
+            <summary>
+            工序转移单
+            工序转移单成本计算DTO.Misc.工序转移单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTranCost.OpRcvScrapQtyNegtiveWhenCalcOpTransferDocCostException">
+            <summary>
+            异常类型: 工序待入库报废数量小于0，需要进行退库操作
+            
+             工序${OpNum}待入库报废数量小于0，需要进行退库操作
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvScrapQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工序待入库报废数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvScrapQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String)">
+            <summary>
+            异常类型: 工序待入库报废数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序号</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvScrapQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 工序待入库报废数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.OpRcvScrapQtyNegtiveWhenCalcOpTransferDocCostException.OpNum">
+            <summary>
+            工序号
+            工序待入库报废数量小于0，需要进行退库操作.Misc.工序号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTranCost.OpRcvQtyNegtiveWhenCalcOpTransferDocCostException">
+            <summary>
+            异常类型: 工序待入库数量小于0，需要进行退库操作
+            
+             工序${OpNum}待入库数量小于0，需要进行退库操作
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工序待入库数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String)">
+            <summary>
+            异常类型: 工序待入库数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序</param>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpRcvQtyNegtiveWhenCalcOpTransferDocCostException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 工序待入库数量小于0，需要进行退库操作 Constructor
+            </summary>
+            <param name="opNum">工序</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.OpRcvQtyNegtiveWhenCalcOpTransferDocCostException.OpNum">
+            <summary>
+            工序
+            工序待入库数量小于0，需要进行退库操作.Misc.工序
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData">
+            <summary>
+            工序转移参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.#ctor(System.Int64,System.Int64,System.DateTime,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.m_mO">
+            <summary>
+            订单
+            工序转移参数.Misc.订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.m_pLS">
+            <summary>
+            日计划
+            工序转移参数.Misc.日计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.m_tDate">
+            <summary>
+            时间
+            工序转移参数.Misc.时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.OpTransCostParamDTOData.m_opNum">
+            <summary>
+            工序
+            工序转移参数.Misc.工序
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData">
+            <summary>
+            撤复线完工成本参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.m_mO">
+            <summary>
+            生产订单
+            撤复线完工成本参数.Misc.生产订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.m_pLS">
+            <summary>
+            日计划
+            撤复线完工成本参数.Misc.日计划
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.m_opNum">
+            <summary>
+            工序
+            撤复线完工成本参数.Misc.工序
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.m_org">
+            <summary>
+            组织
+            撤复线完工成本参数.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.Period_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            撤复线完工成本参数.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpTranCost.WIPCostParamDTOData.Period">
+            <summary>
+            会计期间
+            撤复线完工成本参数.Misc.会计期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MO.MOCostBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MO.MOCostBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MO.MOCostBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

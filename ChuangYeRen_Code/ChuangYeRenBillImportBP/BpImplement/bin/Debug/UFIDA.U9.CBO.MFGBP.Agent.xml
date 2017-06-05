@@ -1,0 +1,2935 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.CBO.MFGBP.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CopyConfigBOMProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            销售时复制选配BOM.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CopyConfigBOMProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            销售时复制选配BOM.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CopyConfigBOMProxy.EffectiveDate">
+            <summary>
+            生效日期 (该属性可为空,且无默认值)
+            销售时复制选配BOM.Misc.生效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.ConfigBOM">
+            <summary>
+            选配结果DTO (该属性可为空,且无默认值)
+            提交配置子件.Misc.选配结果DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigBOMDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.IsATO">
+            <summary>
+            是否预配置 (该属性可为空,但有默认值)
+            提交配置子件.Misc.是否预配置
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.ChangeConfig_SKey">
+            <summary>
+            选配结果 序列化Key属性。（传递跨组织序列列字段）
+            提交配置子件.Misc.选配结果
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.ChangeConfig">
+            <summary>
+            选配结果 (该属性可为空,且无默认值)
+            提交配置子件.Misc.选配结果
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigResult</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.ItemInfo">
+            <summary>
+            料品信息 (该属性可为空,且无默认值)
+            提交配置子件.Misc.料品信息
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.Qty">
+            <summary>
+            数量 (该属性可为空,但有默认值)
+            提交配置子件.Misc.数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.CustomerKey_SKey">
+            <summary>
+            客户Key 序列化Key属性。（传递跨组织序列列字段）
+            提交配置子件.Misc.客户Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.CustomerKey">
+            <summary>
+            客户Key (该属性可为空,且无默认值)
+            提交配置子件.Misc.客户Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.CustomerSiteKey_SKey">
+            <summary>
+            客户地址Key 序列化Key属性。（传递跨组织序列列字段）
+            提交配置子件.Misc.客户地址Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.CustomerSiteKey">
+            <summary>
+            客户地址Key (该属性可为空,且无默认值)
+            提交配置子件.Misc.客户地址Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.CustomerSite</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.BizDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            提交配置子件.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.ConfigType">
+            <summary>
+            选配类型 (该属性可为空,但有默认值)
+            提交配置子件.Misc.选配类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.SrcDocNO">
+            <summary>
+            来源单据号 (该属性可为空,且无默认值)
+            提交配置子件.Misc.来源单据号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitConfigComponentsProxy.SrcDocLine">
+            <summary>
+            来源单据行号 (该属性可为空,且无默认值)
+            提交配置子件.Misc.来源单据行号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ValidateConfigComponentsProxy.ConfigBOMs">
+            <summary>
+            选配结果 (该属性可为空,且无默认值)
+            校验配置子件.Misc.选配结果
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateConfigBOMProxy.ConfigBOMs">
+            <summary>
+            选配结果DTO (该属性可为空,且无默认值)
+            创建配置BOM.Misc.选配结果DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateConfigBOMProxy.IsATO">
+            <summary>
+            是否ATO (该属性可为空,但有默认值)
+            创建配置BOM.Misc.是否ATO
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateConfigBOMProxy.SrcDocument">
+            <summary>
+            来源单据 (该属性可为空,且无默认值)
+            创建配置BOM.Misc.来源单据
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.SourceDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateConfigBOMProxy.ConfigType">
+            <summary>
+            选配类型 (该属性可为空,但有默认值)
+            创建配置BOM.Misc.选配类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateConfigBOMProxy.EffectiveDate">
+            <summary>
+            生效日期 (该属性可为空,且无默认值)
+            创建配置BOM.Misc.生效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.ModelItem">
+            <summary>
+            模型物料 (该属性可为空,且无默认值)
+            创建ATOFAS物料.Misc.模型物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.IsATO">
+            <summary>
+            是否ATO件 (该属性可为空,但有默认值)
+            创建ATOFAS物料.Misc.是否ATO件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.SoCode">
+            <summary>
+            销售订单编号 (该属性可为空,且无默认值)
+            创建ATOFAS物料.Misc.销售订单编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.SoLine">
+            <summary>
+            销售订单行号 (该属性可为空,且无默认值)
+            创建ATOFAS物料.Misc.销售订单行号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.CodeIndex">
+            <summary>
+            编码顺序 (该属性可为空,但有默认值)
+            创建ATOFAS物料.Misc.编码顺序
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.ConfigType">
+            <summary>
+            选配类型 (该属性可为空,但有默认值)
+            创建ATOFAS物料.Misc.选配类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.FASItemName">
+            <summary>
+            结果品名 (该属性可为空,且无默认值)
+            创建ATOFAS物料.Misc.结果品名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.FasItemCodeRule">
+            <summary>
+            FAS廖号生成规则 (该属性可为空,但有默认值)
+            创建ATOFAS物料.Misc.FAS廖号生成规则
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.SOOrg_SKey">
+            <summary>
+            销售组织 序列化Key属性。（传递跨组织序列列字段）
+            创建ATOFAS物料.Misc.销售组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CreateATOFASItemProxy.SOOrg">
+            <summary>
+            销售组织 (该属性可为空,且无默认值)
+            创建ATOFAS物料.Misc.销售组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.ConfigBOM">
+            <summary>
+            选配结果 (该属性可为空,且无默认值)
+            计算选配价格.Misc.选配结果
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigBOMDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.Pl">
+            <summary>
+            价目表 (该属性可为空,且无默认值)
+            计算选配价格.Misc.价目表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.Qty">
+            <summary>
+            销售数量 (该属性可为空,但有默认值)
+            计算选配价格.Misc.销售数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.CustomerKey_SKey">
+            <summary>
+            客户Key 序列化Key属性。（传递跨组织序列列字段）
+            计算选配价格.Misc.客户Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.CustomerKey">
+            <summary>
+            客户Key (该属性可为空,且无默认值)
+            计算选配价格.Misc.客户Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.CustomerSiteKey_SKey">
+            <summary>
+            客户地址Key 序列化Key属性。（传递跨组织序列列字段）
+            计算选配价格.Misc.客户地址Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.CustomerSiteKey">
+            <summary>
+            客户地址Key (该属性可为空,且无默认值)
+            计算选配价格.Misc.客户地址Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.CustomerSite</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.BizDate">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            计算选配价格.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.ConfigType">
+            <summary>
+            选配类型 (该属性可为空,但有默认值)
+            计算选配价格.Misc.选配类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.SupplierKey_SKey">
+            <summary>
+            供应商Key 序列化Key属性。（传递跨组织序列列字段）
+            计算选配价格.Misc.供应商Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.SupplierKey">
+            <summary>
+            供应商Key (该属性可为空,且无默认值)
+            计算选配价格.Misc.供应商Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Supplier.Supplier</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.SupplierSiteKey_SKey">
+            <summary>
+            供应商地址Key 序列化Key属性。（传递跨组织序列列字段）
+            计算选配价格.Misc.供应商地址Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcConfigPriceProxy.SupplierSiteKey">
+            <summary>
+            供应商地址Key (该属性可为空,且无默认值)
+            计算选配价格.Misc.供应商地址Key
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Supplier.SupplierSite</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.Item_SKey">
+            <summary>
+            选配物料 序列化Key属性。（传递跨组织序列列字段）
+            取BOM可选配信息.Misc.选配物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.Item">
+            <summary>
+            选配物料 (该属性可为空,且无默认值)
+            取BOM可选配信息.Misc.选配物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.VersionCode">
+            <summary>
+            物料版本号 (该属性可为空,且无默认值)
+            取BOM可选配信息.Misc.物料版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.EffectiveDate">
+            <summary>
+            生效期 (该属性可为空,且无默认值)
+            取BOM可选配信息.Misc.生效期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.CurrencyID">
+            <summary>
+            币种ID (该属性可为空,但有默认值)
+            取BOM可选配信息.Misc.币种ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMConfigInfoProxy.TradeUOMID">
+            <summary>
+            交易单位ID (该属性可为空,但有默认值)
+            取BOM可选配信息.Misc.交易单位ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetConfigResultTreeProxy.ConfigResult_SKey">
+            <summary>
+            选配结果 序列化Key属性。（传递跨组织序列列字段）
+            取选配结果.Misc.选配结果
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetConfigResultTreeProxy.ConfigResult">
+            <summary>
+            选配结果 (该属性可为空,且无默认值)
+            取选配结果.Misc.选配结果
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigResult</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetConfigResultTreeProxy.IsExpand">
+            <summary>
+            是否展开 (该属性可为空,但有默认值)
+            取选配结果.Misc.是否展开
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.ShareRoutingProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            共享工艺.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.ShareRoutingProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            共享工艺.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.ShareRoutingProxy.ShareItem_SKey">
+            <summary>
+            共享物料 序列化Key属性。（传递跨组织序列列字段）
+            共享工艺.Misc.共享物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.ShareRoutingProxy.ShareItem">
+            <summary>
+            共享物料 (该属性可为空,且无默认值)
+            共享工艺.Misc.共享物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.RoutingSet_SKey">
+            <summary>
+            工艺路线集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.RoutingSet">
+            <summary>
+            工艺路线集合 (该属性可为空,且无默认值)
+            批量变更工艺.Misc.工艺路线集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.DataType">
+            <summary>
+            变更对象类型 (该属性可为空,但有默认值)
+            批量变更工艺.Misc.变更对象类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BatchChangeObjectEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.ChangeSet">
+            <summary>
+            变更内容数组 (该属性可为空,且无默认值)
+            批量变更工艺.Misc.变更内容数组
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.IsAddVersion">
+            <summary>
+            是否增加新版本 (该属性可为空,但有默认值)
+            批量变更工艺.Misc.是否增加新版本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.NewDate">
+            <summary>
+            新版本生效日期 (该属性可为空,且无默认值)
+            批量变更工艺.Misc.新版本生效日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.ECNDocNo">
+            <summary>
+            工程变更单单号 (该属性可为空,且无默认值)
+            批量变更工艺.Misc.工程变更单单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.ECNExecuteDate">
+            <summary>
+            工程变更执行日期 (该属性可为空,且无默认值)
+            批量变更工艺.Misc.工程变更执行日期
+            </summary>
+            <value>System.Time</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.ECNACDType">
+            <summary>
+            工程变更更改类型 (该属性可为空,但有默认值)
+            批量变更工艺.Misc.工程变更更改类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ACDTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchChangeRoutingProxy.IsRunningChange">
+            <summary>
+            现场变更 (该属性可为空,但有默认值)
+            批量变更工艺.Misc.现场变更
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.UpdateRefResEntityProxy.Resource_SKey">
+            <summary>
+            资源 序列化Key属性。（传递跨组织序列列字段）
+            更新引用资源的实体.Misc.资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.UpdateRefResEntityProxy.Resource">
+            <summary>
+            资源 (该属性可为空,且无默认值)
+            更新引用资源的实体.Misc.资源
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Resource.Resource</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.SubmitApprovalProxy.RoutingID">
+            <summary>
+            工艺ID (该属性可为空,但有默认值)
+            提交审核工艺路线.Misc.工艺ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.SubmitApprovalProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            提交审核工艺路线.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CopyResourcesFromStdOperationProxy.StdOperation_SKey">
+            <summary>
+            标准工序 序列化Key属性。（传递跨组织序列列字段）
+            从标准工序拷贝资源供批量变更使用.Misc.标准工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CopyResourcesFromStdOperationProxy.StdOperation">
+            <summary>
+            标准工序 (该属性可为空,且无默认值)
+            从标准工序拷贝资源供批量变更使用.Misc.标准工序
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.StdOperation</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GenRoutingVersionCodeProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            创建工艺版本号.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GenRoutingVersionCodeProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            创建工艺版本号.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GenRoutingVersionCodeProxy.AlternateType">
+            <summary>
+            替换类型 (该属性可为空,但有默认值)
+            创建工艺版本号.Misc.替换类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.TakeResourcesFromStdOperationProxy.StdOperation_SKey">
+            <summary>
+            标准工序 序列化Key属性。（传递跨组织序列列字段）
+            从标准工序带出所含资源信息供界面使用.Misc.标准工序
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.TakeResourcesFromStdOperationProxy.StdOperation">
+            <summary>
+            标准工序 (该属性可为空,且无默认值)
+            从标准工序带出所含资源信息供界面使用.Misc.标准工序
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.StdOperation</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的工艺路线.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            是否是第一个版本的工艺路线.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的工艺路线.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            是否是第一个版本的工艺路线.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.AlternateType">
+            <summary>
+            生产目的 (该属性可为空,但有默认值)
+            是否是第一个版本的工艺路线.Misc.生产目的
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.ProductionLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的工艺路线.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.ProductionLine">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            是否是第一个版本的工艺路线.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的工艺路线.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.ProductUOM">
+            <summary>
+            生产单位 (该属性可为空,且无默认值)
+            是否是第一个版本的工艺路线.Misc.生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.Lot">
+            <summary>
+            批量 (该属性可为空,但有默认值)
+            是否是第一个版本的工艺路线.Misc.批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.IsFirstVersionRoutingBPProxy.RoutingVerCode">
+            <summary>
+            工艺版本号 (该属性可为空,且无默认值)
+            是否是第一个版本的工艺路线.Misc.工艺版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.RoutingApproveProxy.Routing_SKey">
+            <summary>
+            工艺路线 序列化Key属性。（传递跨组织序列列字段）
+            工艺路线审核.Misc.工艺路线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.RoutingApproveProxy.Routing">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            工艺路线审核.Misc.工艺路线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.Routing</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.RoutingAntiApproveProxy.Routing_SKey">
+            <summary>
+            工艺路线 序列化Key属性。（传递跨组织序列列字段）
+            工艺路线弃审.Misc.工艺路线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.RoutingAntiApproveProxy.Routing">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            工艺路线弃审.Misc.工艺路线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.Routing</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            根据业务主键查工艺路线.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            根据业务主键查工艺路线.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            根据业务主键查工艺路线.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            根据业务主键查工艺路线.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.VersionCode">
+            <summary>
+            版本号 (该属性可为空,且无默认值)
+            根据业务主键查工艺路线.Misc.版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.AlternateType">
+            <summary>
+            替换类型 (该属性可为空,但有默认值)
+            根据业务主键查工艺路线.Misc.替换类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.Lot">
+            <summary>
+            批量 (该属性可为空,但有默认值)
+            根据业务主键查工艺路线.Misc.批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            根据业务主键查工艺路线.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ProductUOM">
+            <summary>
+            生产单位 (该属性可为空,且无默认值)
+            根据业务主键查工艺路线.Misc.生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ProductLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            根据业务主键查工艺路线.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.FindRoutingByBusinessKeyProxy.ProductLine">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            根据业务主键查工艺路线.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CalcCumYieldBPProxy.CalcCumYieldDTO">
+            <summary>
+            累计产出率DTO (该属性可为空,且无默认值)
+            计算累计产出率.Misc.累计产出率DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.DTOs.CalcCumYieldDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CalcOpPositionAdjacencyProxy.Routing_SKey">
+            <summary>
+            工艺路线 序列化Key属性。（传递跨组织序列列字段）
+            计算工序节点位置及连接关系.Misc.工艺路线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CalcOpPositionAdjacencyProxy.Routing">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            计算工序节点位置及连接关系.Misc.工艺路线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.Routing</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CheckOperationOrgTypeProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            判断工序组织类型.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CheckOperationOrgTypeProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            判断工序组织类型.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CheckOperationOrgTypeProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            判断工序组织类型.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.CheckOperationOrgTypeProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            判断工序组织类型.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchApproveRoutingBPProxy.Routings">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            批量审核工艺路线.Misc.工艺路线
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchAntiApproveRoutingBPProxy.Routings">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            批量弃审工艺路线.Misc.工艺路线
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetResourcesByLayerProxy.Layer">
+            <summary>
+            层级 (该属性可为空,但有默认值)
+            根据工艺路线层级得到资源.Misc.层级
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetResourcesByLayerProxy.IDs">
+            <summary>
+            ID集合 (该属性可为空,且无默认值)
+            根据工艺路线层级得到资源.Misc.ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetPerResUsageFromResItemProxy.Lot">
+            <summary>
+            批量 (该属性可为空,但有默认值)
+            从资源用途带出每资源用量.Misc.批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetPerResUsageFromResItemProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            从资源用途带出每资源用量.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetPerResUsageFromResItemProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            从资源用途带出每资源用量.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetPerResUsageFromResItemProxy.Resource_SKey">
+            <summary>
+            资源 序列化Key属性。（传递跨组织序列列字段）
+            从资源用途带出每资源用量.Misc.资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.GetPerResUsageFromResItemProxy.Resource">
+            <summary>
+            资源 (该属性可为空,且无默认值)
+            从资源用途带出每资源用量.Misc.资源
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Resource.Resource</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Routing.Proxy.BatchSubmitRoutingBPProxy.Routings">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            批量提交工艺路线.Misc.工艺路线
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ShareBOMProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            共享BOM.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ShareBOMProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            共享BOM.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ShareBOMProxy.ShareItem_SKey">
+            <summary>
+            共享物料 序列化Key属性。（传递跨组织序列列字段）
+            共享BOM.Misc.共享物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ShareBOMProxy.ShareItem">
+            <summary>
+            共享物料 (该属性可为空,且无默认值)
+            共享BOM.Misc.共享物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.BOMSet_SKey">
+            <summary>
+            BOM母项集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.BOMSet">
+            <summary>
+            BOM母项集合 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.BOM母项集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.DataType">
+            <summary>
+            变更对象类型 (该属性可为空,但有默认值)
+            批量变更BOM.Misc.变更对象类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BatchChangeObjectEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.ChangeSet">
+            <summary>
+            变更内容数组 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.变更内容数组
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.IsAddVersion">
+            <summary>
+            是否增加新版本 (该属性可为空,但有默认值)
+            批量变更BOM.Misc.是否增加新版本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.NewDate">
+            <summary>
+            新版本生效日期 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.新版本生效日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.ECNDocNo">
+            <summary>
+            工程变更单单号 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.工程变更单单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.ECNExecuteDate">
+            <summary>
+            工程变更执行日期 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.工程变更执行日期
+            </summary>
+            <value>System.Time</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.ECNACDType">
+            <summary>
+            工程变更更改类型 (该属性可为空,但有默认值)
+            批量变更BOM.Misc.工程变更更改类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ACDTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.IsRunningChange">
+            <summary>
+            现场变更 (该属性可为空,但有默认值)
+            批量变更BOM.Misc.现场变更
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.NewBOMComponent">
+            <summary>
+            新增子项信息 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.新增子项信息
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMComponentDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.ACDType">
+            <summary>
+            更改类型 (该属性可为空,但有默认值)
+            批量变更BOM.Misc.更改类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ACDTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.BOMCompSet_SKey">
+            <summary>
+            BOM子项集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchChangeBOMProxy.BOMCompSet">
+            <summary>
+            BOM子项集合 (该属性可为空,且无默认值)
+            批量变更BOM.Misc.BOM子项集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcLeadTimeProxy.Items_SKey">
+            <summary>
+            料品集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcLeadTimeProxy.Items">
+            <summary>
+            料品集合 (该属性可为空,且无默认值)
+            计算指定物料累计提前期.Misc.料品集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcLeadTimeProxy.IsUpdateDTF">
+            <summary>
+            更新需求时栅 (该属性可为空,但有默认值)
+            计算指定物料累计提前期.Misc.更新需求时栅
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcLeadTimeProxy.IsUpdatePTF">
+            <summary>
+            更新计划时栅 (该属性可为空,但有默认值)
+            计算指定物料累计提前期.Misc.更新计划时栅
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcLeadTimeProxy.IsUpdateRTF">
+            <summary>
+            更新释放时栅 (该属性可为空,但有默认值)
+            计算指定物料累计提前期.Misc.更新释放时栅
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            计算动态提前期.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            计算动态提前期.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            计算动态提前期.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            计算动态提前期.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Routing_SKey">
+            <summary>
+            工艺路线 序列化Key属性。（传递跨组织序列列字段）
+            计算动态提前期.Misc.工艺路线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Routing">
+            <summary>
+            工艺路线 (该属性可为空,且无默认值)
+            计算动态提前期.Misc.工艺路线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Routing.Routing</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.ProductLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            计算动态提前期.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.ProductLine">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            计算动态提前期.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.Qty">
+            <summary>
+            生产数量 (该属性可为空,但有默认值)
+            计算动态提前期.Misc.生产数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.UOM_SKey">
+            <summary>
+            生产数量单位 序列化Key属性。（传递跨组织序列列字段）
+            计算动态提前期.Misc.生产数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.UOM">
+            <summary>
+            生产数量单位 (该属性可为空,且无默认值)
+            计算动态提前期.Misc.生产数量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.IsHourBased">
+            <summary>
+            结果是否以小时计算 (该属性可为空,但有默认值)
+            计算动态提前期.Misc.结果是否以小时计算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.IsPurchase">
+            <summary>
+            制造件外购 (该属性可为空,但有默认值)
+            计算动态提前期.Misc.制造件外购
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcDynamicLeadtimeProxy.IsMakePart">
+            <summary>
+            采购件自制 (该属性可为空,但有默认值)
+            计算动态提前期.Misc.采购件自制
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcModOptRoutLTProxy.BOM_SKey">
+            <summary>
+            BOM母项 序列化Key属性。（传递跨组织序列列字段）
+            计算模型件选项类工艺提前期.Misc.BOM母项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcModOptRoutLTProxy.BOM">
+            <summary>
+            BOM母项 (该属性可为空,且无默认值)
+            计算模型件选项类工艺提前期.Misc.BOM母项
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcItemLLCProxy.Maxllc">
+            <summary>
+            最大低阶码 (该属性可为空,但有默认值)
+            计算低阶码.Misc.最大低阶码
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcItemLLCProxy.IsReCalcLLC">
+            <summary>
+            是否重新计算 (该属性可为空,但有默认值)
+            计算低阶码.Misc.是否重新计算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcItemLLCProxy.IsCalcSub">
+            <summary>
+            是否考虑替代件 (该属性可为空,但有默认值)
+            计算低阶码.Misc.是否考虑替代件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitApprovalProxy.BOMID">
+            <summary>
+            BOMID (该属性可为空,但有默认值)
+            提交审核物料清单.Misc.BOMID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SubmitApprovalProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            提交审核物料清单.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCumulativeLeadTimeProxy.CalcLTParam">
+            <summary>
+            计算条件 (该属性可为空,且无默认值)
+            计算累计提前期.Misc.计算条件
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.CalcCumuLTParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetEffCompItemFormProxy.BOMItemForm">
+            <summary>
+            母项料品形态 (该属性可为空,但有默认值)
+            获得可用的子项料品形态.Misc.母项料品形态
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetEffCompItemFormProxy.BOMItem_SKey">
+            <summary>
+            母项料品 序列化Key属性。（传递跨组织序列列字段）
+            获得可用的子项料品形态.Misc.母项料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetEffCompItemFormProxy.BOMItem">
+            <summary>
+            母项料品 (该属性可为空,且无默认值)
+            获得可用的子项料品形态.Misc.母项料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.Qty">
+            <summary>
+            数量 (该属性可为空,但有默认值)
+            计算子件用量及日期.Misc.数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.StartDate">
+            <summary>
+            开工日期 (该属性可为空,且无默认值)
+            计算子件用量及日期.Misc.开工日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.BOM_SKey">
+            <summary>
+            BOM 序列化Key属性。（传递跨组织序列列字段）
+            计算子件用量及日期.Misc.BOM
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.BOM">
+            <summary>
+            BOM (该属性可为空,且无默认值)
+            计算子件用量及日期.Misc.BOM
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.EndDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            计算子件用量及日期.Misc.结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CalcCompUsageAndDateBPProxy.IsCalcScrap">
+            <summary>
+            是否考虑损耗 (该属性可为空,但有默认值)
+            计算子件用量及日期.Misc.是否考虑损耗
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            查找所有BOM版本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            查找所有BOM版本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            查找所有BOM版本.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            查找所有BOM版本.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.UOM_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            查找所有BOM版本.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.UOM">
+            <summary>
+            单位 (该属性可为空,且无默认值)
+            查找所有BOM版本.Misc.单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.AlternateType">
+            <summary>
+            替换类型 (该属性可为空,但有默认值)
+            查找所有BOM版本.Misc.替换类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.StartDate">
+            <summary>
+            开始日期 (该属性可为空,且无默认值)
+            查找所有BOM版本.Misc.开始日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllBOMVersionBPProxy.EndDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            查找所有BOM版本.Misc.结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.PlanCalcItemLLCProxy.Maxllc">
+            <summary>
+            最大低阶码 (该属性可为空,但有默认值)
+            调度计算低阶码.Misc.最大低阶码
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.PlanCalcItemLLCProxy.IsReCalcLLC">
+            <summary>
+            是否重新计算 (该属性可为空,但有默认值)
+            调度计算低阶码.Misc.是否重新计算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.PlanCalcItemLLCProxy.IsCalcSub">
+            <summary>
+            是否考虑替代件 (该属性可为空,但有默认值)
+            调度计算低阶码.Misc.是否考虑替代件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.PlanCalcItemLLCProxy.Patten_SKey">
+            <summary>
+            调度计划 序列化Key属性。（传递跨组织序列列字段）
+            调度计算低阶码.Misc.调度计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.PlanCalcItemLLCProxy.Patten">
+            <summary>
+            调度计划 (该属性可为空,且无默认值)
+            调度计算低阶码.Misc.调度计划
+            </summary>
+            <value>UFIDA.U9.BS.Job.RecurrencePattern</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ScheduleCalcCumulativeLTProxy.CalcLTParam">
+            <summary>
+            计算条件 (该属性可为空,且无默认值)
+            调度计算累计提前期.Misc.计算条件
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.CalcCumuLTParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ScheduleCalcCumulativeLTProxy.ScheduleJob_SKey">
+            <summary>
+            调度计划 序列化Key属性。（传递跨组织序列列字段）
+            调度计算累计提前期.Misc.调度计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.ScheduleCalcCumulativeLTProxy.ScheduleJob">
+            <summary>
+            调度计划 (该属性可为空,且无默认值)
+            调度计算累计提前期.Misc.调度计划
+            </summary>
+            <value>UFIDA.U9.BS.Job.RecurrencePattern</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMApproveBPProxy.BOMID_SKey">
+            <summary>
+            BOMID 序列化Key属性。（传递跨组织序列列字段）
+            物料清单审核.Misc.BOMID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMApproveBPProxy.BOMID">
+            <summary>
+            BOMID (该属性可为空,且无默认值)
+            物料清单审核.Misc.BOMID
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMUnApproveBPProxy.BOMID_SKey">
+            <summary>
+            BOMID 序列化Key属性。（传递跨组织序列列字段）
+            物料清单弃审.Misc.BOMID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMUnApproveBPProxy.BOMID">
+            <summary>
+            BOMID (该属性可为空,且无默认值)
+            物料清单弃审.Misc.BOMID
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的BOM.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            是否是第一个版本的BOM.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的BOM.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            是否是第一个版本的BOM.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.AlternateType">
+            <summary>
+            生产目的 (该属性可为空,但有默认值)
+            是否是第一个版本的BOM.Misc.生产目的
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.ProductionLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的BOM.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.ProductionLine">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            是否是第一个版本的BOM.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            是否是第一个版本的BOM.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.ProductUOM">
+            <summary>
+            生产单位 (该属性可为空,且无默认值)
+            是否是第一个版本的BOM.Misc.生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.Lot">
+            <summary>
+            批量 (该属性可为空,但有默认值)
+            是否是第一个版本的BOM.Misc.批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.IsFirstVersionBOMBPProxy.BOMVersionCode">
+            <summary>
+            版本号 (该属性可为空,且无默认值)
+            是否是第一个版本的BOM.Misc.版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMProfileValidatorProxy.ProfileValues">
+            <summary>
+            参数值 (该属性可为空,且无默认值)
+            BOM参数校验.Misc.参数值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            获取变更对象版本信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            获取变更对象版本信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            获取变更对象版本信息.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            获取变更对象版本信息.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.VersionCode">
+            <summary>
+            版本号 (该属性可为空,且无默认值)
+            获取变更对象版本信息.Misc.版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.AlternateType">
+            <summary>
+            替换类型 (该属性可为空,但有默认值)
+            获取变更对象版本信息.Misc.替换类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChgObjVerInfoProxy.VersionType">
+            <summary>
+            版本类型 (该属性可为空,但有默认值)
+            获取变更对象版本信息.Misc.版本类型
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChangeObjNextVerInfoProxy.ChangeType">
+            <summary>
+            变更类型 (该属性可为空,但有默认值)
+            获取变更对象下一版本信息.Misc.变更类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BatchChangeTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChangeObjNextVerInfoProxy.Org">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            获取变更对象下一版本信息.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChangeObjNextVerInfoProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,但有默认值)
+            获取变更对象下一版本信息.Misc.料品
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChangeObjNextVerInfoProxy.VersionCode">
+            <summary>
+            版本号 (该属性可为空,且无默认值)
+            获取变更对象下一版本信息.Misc.版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetChangeObjNextVerInfoProxy.AlternateType">
+            <summary>
+            替换类型 (该属性可为空,但有默认值)
+            获取变更对象下一版本信息.Misc.替换类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SelectBOMVerBPProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            选择BOM版本.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SelectBOMVerBPProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            选择BOM版本.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.SelectBOMVerBPProxy.ItemVerCode">
+            <summary>
+            料品版本号 (该属性可为空,且无默认值)
+            选择BOM版本.Misc.料品版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BOMGetOptionalFeatherBPProxy.OptionStrList">
+            <summary>
+            特征列表 (该属性可为空,且无默认值)
+            获取特征选配操作.Misc.特征列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetLeafComponentsProxy.ConfigResult_SKey">
+            <summary>
+            选配结果 序列化Key属性。（传递跨组织序列列字段）
+            获取料品产品结构中所有最终原材料.Misc.选配结果
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetLeafComponentsProxy.ConfigResult">
+            <summary>
+            选配结果 (该属性可为空,且无默认值)
+            获取料品产品结构中所有最终原材料.Misc.选配结果
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.ConfigResult</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetLeafComponentsProxy.EffectiveDate">
+            <summary>
+            有效日期 (该属性可为空,且无默认值)
+            获取料品产品结构中所有最终原材料.Misc.有效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetLeafComponentsProxy.IsIncludeModel">
+            <summary>
+            包含来源模型件 (该属性可为空,但有默认值)
+            获取料品产品结构中所有最终原材料.Misc.包含来源模型件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBOMCompIDFromNextLevelProxy.IDsFromList">
+            <summary>
+            IDs (该属性可为空,但有默认值)
+            从孙项获取子项的ID.Misc.IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBOMCompIDFromNextLevelProxy.AttrName">
+            <summary>
+            ID属性名称 (该属性可为空,且无默认值)
+            从孙项获取子项的ID.Misc.ID属性名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.MultiLevelBOMExpandProxy.BOMExpandInParamList">
+            <summary>
+            多阶展开入口参数集合 (该属性可为空,且无默认值)
+            BOM多阶展开.Misc.多阶展开入口参数集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.MultiLevelBOMExpandProxy.BOMExpandMatchPolicyList">
+            <summary>
+            多阶展开匹配策略集合 (该属性可为空,且无默认值)
+            BOM多阶展开.Misc.多阶展开匹配策略集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBomListForCopyProxy.RootBOMMaster_SKey">
+            <summary>
+            根节点BOM母项集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBomListForCopyProxy.RootBOMMaster">
+            <summary>
+            根节点BOM母项集合 (该属性可为空,且无默认值)
+            获取需复制的BOM列表.Misc.根节点BOM母项集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBomListForCopyProxy.IsProjectControl">
+            <summary>
+            专项控制 (该属性可为空,但有默认值)
+            获取需复制的BOM列表.Misc.专项控制
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBomListForCopyProxy.ExpandLevel">
+            <summary>
+            展开阶数 (该属性可为空,但有默认值)
+            获取需复制的BOM列表.Misc.展开阶数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetBomListForCopyProxy.BOMVersionPolicy">
+            <summary>
+            版本选择策略 (该属性可为空,但有默认值)
+            获取需复制的BOM列表.Misc.版本选择策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BOMVersionPolicyEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.BOMList_SKey">
+            <summary>
+            待复制BOM集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.BOMList">
+            <summary>
+            待复制BOM集合 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.待复制BOM集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.RootBOMList_SKey">
+            <summary>
+            根节点BOM母项集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.RootBOMList">
+            <summary>
+            根节点BOM母项集合 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.根节点BOM母项集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetBOMVersionCode">
+            <summary>
+            复制后BOM版本号 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后BOM版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetEffectiveDate">
+            <summary>
+            复制后生效日期 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后生效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetDisableDate">
+            <summary>
+            复制后失效日期 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后失效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetAlternateType">
+            <summary>
+            复制后生产目的 (该属性可为空,但有默认值)
+            批量复制BOM母项.Misc.复制后生产目的
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetProductUOM_SKey">
+            <summary>
+            复制后生产单位 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项.Misc.复制后生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetProductUOM">
+            <summary>
+            复制后生产单位 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetProject_SKey">
+            <summary>
+            复制后项目 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项.Misc.复制后项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetProject">
+            <summary>
+            复制后项目 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetOwnerOrg_SKey">
+            <summary>
+            复制后货主组织 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项.Misc.复制后货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetOwnerOrg">
+            <summary>
+            复制后货主组织 (该属性可为空,且无默认值)
+            批量复制BOM母项.Misc.复制后货主组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetLot">
+            <summary>
+            复制后批量 (该属性可为空,但有默认值)
+            批量复制BOM母项.Misc.复制后批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetIsPrimaryLot">
+            <summary>
+            复制后是否主批量 (该属性可为空,但有默认值)
+            批量复制BOM母项.Misc.复制后是否主批量
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetFromQty">
+            <summary>
+            复制后从数量 (该属性可为空,但有默认值)
+            批量复制BOM母项.Misc.复制后从数量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterProxy.TargetToQty">
+            <summary>
+            复制后到数量 (该属性可为空,但有默认值)
+            批量复制BOM母项.Misc.复制后到数量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.UpdateBOMBPProxy.BOMMaster_SKey">
+            <summary>
+            BOM母项 序列化Key属性。（传递跨组织序列列字段）
+            更新BOM(为创建服务提供).Misc.BOM母项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.UpdateBOMBPProxy.BOMMaster">
+            <summary>
+            BOM母项 (该属性可为空,且无默认值)
+            更新BOM(为创建服务提供).Misc.BOM母项
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.UpdateBOMBPProxy.BOMMasterDTO">
+            <summary>
+            BOM母项DTO (该属性可为空,且无默认值)
+            更新BOM(为创建服务提供).Misc.BOM母项DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMasterDTO4CreateSv</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchApproveBOMBPProxy.BOMs">
+            <summary>
+            BOM (该属性可为空,且无默认值)
+            批量审核BOM.Misc.BOM
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchAntiApproveBOMBPProxy.BOMs">
+            <summary>
+            BOM (该属性可为空,且无默认值)
+            批量弃审BOM.Misc.BOM
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetSuppliersFromItemSupplierCrossProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            根据料品从料品供应商交叉档获取供应商信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetSuppliersFromItemSupplierCrossProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            根据料品从料品供应商交叉档获取供应商信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetSuppliersFromItemSupplierCrossProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            根据料品从料品供应商交叉档获取供应商信息.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetSuppliersFromItemSupplierCrossProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            根据料品从料品供应商交叉档获取供应商信息.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.TakeScalarScrapInfoFromItemMasterProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            从料品带出阶梯损耗信息.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.TakeScalarScrapInfoFromItemMasterProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            从料品带出阶梯损耗信息.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForRootProxy.RootBOMList_SKey">
+            <summary>
+            根节点BOM集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForRootProxy.RootBOMList">
+            <summary>
+            根节点BOM集合 (该属性可为空,且无默认值)
+            按照展开条件查找根节点BOM.Misc.根节点BOM集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForRootProxy.ExpandDate">
+            <summary>
+            展开日期 (该属性可为空,且无默认值)
+            按照展开条件查找根节点BOM.Misc.展开日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForRootProxy.ExpandPoclicy">
+            <summary>
+            展开策略 (该属性可为空,但有默认值)
+            按照展开条件查找根节点BOM.Misc.展开策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BOMTreeExpandPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.BOMMaster_SKey">
+            <summary>
+            BOM母项 序列化Key属性。（传递跨组织序列列字段）
+            为树状录入查找符合条件的BOM子项.Misc.BOM母项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.BOMMaster">
+            <summary>
+            BOM母项 (该属性可为空,且无默认值)
+            为树状录入查找符合条件的BOM子项.Misc.BOM母项
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.IsOnlyBOMEnabledComp">
+            <summary>
+            是否只显示可BOM的子项 (该属性可为空,但有默认值)
+            为树状录入查找符合条件的BOM子项.Misc.是否只显示可BOM的子项
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.IsOnlyEffComp">
+            <summary>
+            是否只显示生效的子项 (该属性可为空,但有默认值)
+            为树状录入查找符合条件的BOM子项.Misc.是否只显示生效的子项
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.CompEffDate">
+            <summary>
+            子项生效日期 (该属性可为空,且无默认值)
+            为树状录入查找符合条件的BOM子项.Misc.子项生效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMComponentForTreeProxy.ComponentType">
+            <summary>
+            子项类型 (该属性可为空,但有默认值)
+            为树状录入查找符合条件的BOM子项.Misc.子项类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ComponentTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetItemMasterInfoProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            获取料品详细信息.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetItemMasterInfoProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            获取料品详细信息.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForLeafProxy.BOMComponent_SKey">
+            <summary>
+            BOM子项 序列化Key属性。（传递跨组织序列列字段）
+            按照展开条件查找叶子节点BOM.Misc.BOM子项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForLeafProxy.BOMComponent">
+            <summary>
+            BOM子项 (该属性可为空,且无默认值)
+            按照展开条件查找叶子节点BOM.Misc.BOM子项
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMComponent</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForLeafProxy.ExpandDate">
+            <summary>
+            展开日期 (该属性可为空,且无默认值)
+            按照展开条件查找叶子节点BOM.Misc.展开日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindBOMMasterForLeafProxy.ExpandPolicy">
+            <summary>
+            展开策略 (该属性可为空,但有默认值)
+            按照展开条件查找叶子节点BOM.Misc.展开策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.BOMTreeExpandPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.BOMKey_SKey">
+            <summary>
+            待复制BOM 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项内嵌操作.Misc.待复制BOM
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.BOMKey">
+            <summary>
+            待复制BOM (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.待复制BOM
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.RootBOMList_SKey">
+            <summary>
+            根节点BOM母项集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.RootBOMList">
+            <summary>
+            根节点BOM母项集合 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.根节点BOM母项集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetBOMVersionCode">
+            <summary>
+            复制后BOM版本号 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后BOM版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetEffectiveDate">
+            <summary>
+            复制后生效日期 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后生效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetDisableDate">
+            <summary>
+            复制后失效日期 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后失效日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetAlternateType">
+            <summary>
+            复制后生产目的 (该属性可为空,但有默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后生产目的
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.AlternateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetProductUOM_SKey">
+            <summary>
+            复制后生产单位 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项内嵌操作.Misc.复制后生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetProductUOM">
+            <summary>
+            复制后生产单位 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetProject_SKey">
+            <summary>
+            复制后项目 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项内嵌操作.Misc.复制后项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetProject">
+            <summary>
+            复制后项目 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetOwnerOrg_SKey">
+            <summary>
+            复制后货主组织 序列化Key属性。（传递跨组织序列列字段）
+            批量复制BOM母项内嵌操作.Misc.复制后货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetOwnerOrg">
+            <summary>
+            复制后货主组织 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后货主组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetLot">
+            <summary>
+            复制后批量 (该属性可为空,但有默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetIsPrimaryLot">
+            <summary>
+            复制后是否主批量 (该属性可为空,但有默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后是否主批量
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetFromQty">
+            <summary>
+            复制后从数量 (该属性可为空,但有默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后从数量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetToQty">
+            <summary>
+            复制后到数量 (该属性可为空,但有默认值)
+            批量复制BOM母项内嵌操作.Misc.复制后到数量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCopyBOMMasterInnerBPProxy.TargetSuccessBOMList">
+            <summary>
+            已复制BOM集合 (该属性可为空,且无默认值)
+            批量复制BOM母项内嵌操作.Misc.已复制BOM集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.GetMatchedRoutingIDByBOMInfoProxy.BOMInfoDTO4MatchRouting">
+            <summary>
+            BOM信息 (该属性可为空,且无默认值)
+            通过BOM信息获取匹配的工艺路线ID.Misc.BOM信息
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMAndBOMCompInfoDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchSubmitBOMBPProxy.BOMs">
+            <summary>
+            BOM (该属性可为空,且无默认值)
+            批量提交BOM.Misc.BOM
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            更新物料累计数量.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            更新物料累计数量.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            更新物料累计数量.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            更新物料累计数量.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.TotalQtyType">
+            <summary>
+            累计数量类型 (该属性可为空,但有默认值)
+            更新物料累计数量.Misc.累计数量类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.TotalQtyTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.UpdateItemTotalQtyProxy.ProductQty">
+            <summary>
+            生产数量 (该属性可为空,但有默认值)
+            更新物料累计数量.Misc.生产数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.Org">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.料品
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.AlternateType">
+            <summary>
+            生产目的 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.生产目的
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.ProductUOM">
+            <summary>
+            生产单位 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.生产单位
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.RcvUOM">
+            <summary>
+             库存单位 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc. 库存单位
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.PUToPBURate">
+            <summary>
+            生产－生产基准 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.生产－生产基准
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.SUToSBURate">
+            <summary>
+            库存-库存基准 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.库存-库存基准
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemTotalQty.Proxy.GetItemVersionByProdQtyProxy.PBUToSBURate">
+            <summary>
+            生产基准-库存基准 (该属性可为空,但有默认值)
+            根据料品生产数量查找对应料品版本.Misc.生产基准-库存基准
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemProductionLine.Proxy.CalcItemLTProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            计算物料提前期.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemProductionLine.Proxy.CalcItemLTProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            计算物料提前期.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcResourceUsageProxy.UsageBasis">
+            <summary>
+            用量基础 (该属性可为空,但有默认值)
+            计算资源用量.Misc.用量基础
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.UsageBasisEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcResourceUsageProxy.ProductQty">
+            <summary>
+            生产数量 (该属性可为空,但有默认值)
+            计算资源用量.Misc.生产数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcResourceUsageProxy.PerResUsage">
+            <summary>
+            每资源用量 (该属性可为空,但有默认值)
+            计算资源用量.Misc.每资源用量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcResourceUsageProxy.ResQty">
+            <summary>
+            资源数量 (该属性可为空,但有默认值)
+            计算资源用量.Misc.资源数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcResourceUsageProxy.Lot">
+            <summary>
+            批量 (该属性可为空,但有默认值)
+            计算资源用量.Misc.批量
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.CalcItemResCostBPProxy.CalcItemResCostDTO">
+            <summary>
+            计算物料资源成本参数 (该属性可为空,且无默认值)
+            计算物料资源成本服务.Misc.计算物料资源成本参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.Resource.Proxy.ResBatchModifyBPProxy.ResBatchModifyDTO">
+            <summary>
+            资源排程相关批量修改DTO (该属性可为空,且无默认值)
+            资源排程相关批量修改.Misc.资源排程相关批量修改DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Resource.ResBatchModifyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.QUERY.Proxy.BOMStructMultiLevelQueryProxy.BOMMultiLevelQueryIn">
+            <summary>
+            BOM多阶查询参数DTO (该属性可为空,且无默认值)
+            BOM多阶查询.Misc.BOM多阶查询参数DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.QUERY.BOMStructMultiLevelQueryIn</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.QUERY.Proxy.BOMStructStartQueryProxy.BOMParamterDTO">
+            <summary>
+            BOM参数 (该属性可为空,且无默认值)
+            BOM母项查询.Misc.BOM参数
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.QUERY.BOMStructStartQueryIn</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.QUERY.Proxy.BOMDifferenceCompareQryBPProxy.QryInParameter">
+            <summary>
+            QryInParameter (该属性可为空,且无默认值)
+            物料清单差异比较.Misc.QryInParameter
+            </summary>
+            <value>UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.QUERY.Proxy.GetItemIDByOrgAndCodeBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            根据组织获取料品ID.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.QUERY.Proxy.GetItemIDByOrgAndCodeBPProxy.ItemCode">
+            <summary>
+            料号 (该属性可为空,且无默认值)
+            根据组织获取料品ID.Misc.料号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllConfigurableBOMOfModelBOMProxy.ItemMaster_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            查找模型件BOM的所有可配置BOM.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllConfigurableBOMOfModelBOMProxy.ItemMaster">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            查找模型件BOM的所有可配置BOM.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.FindAllConfigurableBOMOfModelBOMProxy.VersionCode">
+            <summary>
+            版本 (该属性可为空,且无默认值)
+            查找模型件BOM的所有可配置BOM.Misc.版本
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CostLevel.Proxy.GetLastRecordProxy.OrgID">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            取最后一条记录.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.CheckResourceInWorkCenterProxy.WorkCenter_SKey">
+            <summary>
+            工作中心 序列化Key属性。（传递跨组织序列列字段）
+            检查资源是否已在工作中心中定义.Misc.工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.CheckResourceInWorkCenterProxy.WorkCenter">
+            <summary>
+            工作中心 (该属性可为空,且无默认值)
+            检查资源是否已在工作中心中定义.Misc.工作中心
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.WorkCenter.WorkCenter</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.CheckResourceInWorkCenterProxy.Resource_SKey">
+            <summary>
+            资源 序列化Key属性。（传递跨组织序列列字段）
+            检查资源是否已在工作中心中定义.Misc.资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.CheckResourceInWorkCenterProxy.Resource">
+            <summary>
+            资源 (该属性可为空,且无默认值)
+            检查资源是否已在工作中心中定义.Misc.资源
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Resource.Resource</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.TakeResourcesFromWorkCenterProxy.WorkCenter_SKey">
+            <summary>
+            工作中心 序列化Key属性。（传递跨组织序列列字段）
+            从工作中心带出所含资源信息.Misc.工作中心
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.TakeResourcesFromWorkCenterProxy.WorkCenter">
+            <summary>
+            工作中心 (该属性可为空,且无默认值)
+            从工作中心带出所含资源信息.Misc.工作中心
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.WorkCenter.WorkCenter</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.TakeResourcesFromWorkCenterProxy.IsIncludeSubcRes">
+            <summary>
+            是否包含委外资源 (该属性可为空,但有默认值)
+            从工作中心带出所含资源信息.Misc.是否包含委外资源
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.WorkCenterBP.Proxy.TakeResourcesFromWorkCenterProxy.OrgType">
+            <summary>
+            工序组织类型 (该属性可为空,但有默认值)
+            从工作中心带出所含资源信息.Misc.工序组织类型
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.IsForMRP">
+            <summary>
+            是否MRP使用 (该属性可为空,但有默认值)
+            重复排产操作.Misc.是否MRP使用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.InputParam">
+            <summary>
+            MO参数 (该属性可为空,且无默认值)
+            重复排产操作.Misc.MO参数
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.RepSchedule.MOInputParam</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.MRPAppendParam">
+            <summary>
+            MRP附加参数 (该属性可为空,且无默认值)
+            重复排产操作.Misc.MRP附加参数
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.RepSchedule.MRPInputParam</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.CapacityLimitPolicy">
+            <summary>
+            额定产能的取值策略 (该属性可为空,但有默认值)
+            重复排产操作.Misc.额定产能的取值策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.CapacityLimitPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.ScheduleType">
+            <summary>
+            排程方法 (该属性可为空,但有默认值)
+            重复排产操作.Misc.排程方法
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ScheduleType</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.CapacityLoadPolicy">
+            <summary>
+            日产能战胜策略 (该属性可为空,但有默认值)
+            重复排产操作.Misc.日产能战胜策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.CapacityLoadPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.ParallelLineRule">
+            <summary>
+            优先级不同生产线选择策略 (该属性可为空,但有默认值)
+            重复排产操作.Misc.优先级不同生产线选择策略
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.ParallelLineRule</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.PLSPKInfo">
+            <summary>
+            重复计划主键信息 (该属性可为空,且无默认值)
+            重复排产操作.Misc.重复计划主键信息
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.RepSchedule.PLSPKInfoDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.ProductPeriod_SKey">
+            <summary>
+            生产期间 序列化Key属性。（传递跨组织序列列字段）
+            重复排产操作.Misc.生产期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.RepScheduleProxy.ProductPeriod">
+            <summary>
+            生产期间 (该属性可为空,且无默认值)
+            重复排产操作.Misc.生产期间
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductPeriod.ProductPeriodDetailInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            生产线排产.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            生产线排产.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.Line_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            生产线排产.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.Line">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            生产线排产.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.Qty">
+            <summary>
+            排产数量 (该属性可为空,但有默认值)
+            生产线排产.Misc.排产数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.StartDate">
+            <summary>
+            开工日期 (该属性可为空,且无默认值)
+            生产线排产.Misc.开工日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.UOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            生产线排产.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.UOM">
+            <summary>
+            生产单位 (该属性可为空,且无默认值)
+            生产线排产.Misc.生产单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.LineScheduleProxy.PLSPKInfo">
+            <summary>
+            PLS主键信息 (该属性可为空,且无默认值)
+            生产线排产.Misc.PLS主键信息
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.RepSchedule.PLSPKInfoDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.UpdatePLineDailyCapByWorkCalendarProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            工作日历变化时同步更新生产线日能力.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.UpdatePLineDailyCapByWorkCalendarProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            工作日历变化时同步更新生产线日能力.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.UpdatePLineDailyCapByPLineProxy.ProductLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            生产线变化时同步更新生产线日能力.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RepSchedule.Proxy.UpdatePLineDailyCapByPLineProxy.ProductLine">
+            <summary>
+            生产线 (该属性可为空,且无默认值)
+            生产线变化时同步更新生产线日能力.Misc.生产线
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductionLine.ProductionLine</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RoutingQuery.Proxy.StdWorkHourQueryProxy.QryInParameter">
+            <summary>
+            查询入口参数 (该属性可为空,且无默认值)
+            产品标准工时查询.Misc.查询入口参数
+            </summary>
+            <value>UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.RoutingQuery.Proxy.StdResUsageQueryProxy.QryInParameter">
+            <summary>
+            查询入口参数 (该属性可为空,且无默认值)
+            产品标准资源耗用查询.Misc.查询入口参数
+            </summary>
+            <value>UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CostElementBP.Proxy.GetCostElementByTypeProxy.CostElementType">
+            <summary>
+            成本要素类型 (该属性可为空,但有默认值)
+            操作.Misc.成本要素类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.CostElementTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemCostRollup.Proxy.GetCostRollupDTOListProxy.ResRate_SKey">
+            <summary>
+            标准资源费率 序列化Key属性。（传递跨组织序列列字段）
+            生成批量成本卷积DTO集合.Misc.标准资源费率
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemCostRollup.Proxy.GetCostRollupDTOListProxy.ResRate">
+            <summary>
+            标准资源费率 (该属性可为空,且无默认值)
+            生成批量成本卷积DTO集合.Misc.标准资源费率
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ResourceRate.ResourceStdRate</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemCostRollup.Proxy.GetCostRollupDTOListProxy.BOMMaster_SKey">
+            <summary>
+            BOM母项 序列化Key属性。（传递跨组织序列列字段）
+            生成批量成本卷积DTO集合.Misc.BOM母项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ItemCostRollup.Proxy.GetCostRollupDTOListProxy.BOMMaster">
+            <summary>
+            BOM母项 (该属性可为空,且无默认值)
+            生成批量成本卷积DTO集合.Misc.BOM母项
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.BOMMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.CheckSubstituteRuleProxy.SubRuleCheckParam">
+            <summary>
+            检查范围参数 (该属性可为空,且无默认值)
+            替代约束规则检查.Misc.检查范围参数
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.SubRuleRangeDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOM.Proxy.BatchCheckSubstituteRuleProxy.BatchCheckSubRuleParam">
+            <summary>
+            检查范围 (该属性可为空,且无默认值)
+            批量检查替代约束规则.Misc.检查范围
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.BOM.SubRuleRangeDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOMPLM.Proxy.FindImportItemInfoProxy.IsOnlyNoneImported">
+            <summary>
+            是否仅查找未曾导入过的料品 (该属性可为空,但有默认值)
+            获取可导入的料品信息.Misc.是否仅查找未曾导入过的料品
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOMPLM.Proxy.GetBOMDetailInfoProxy.BOMMasterItem">
+            <summary>
+            BOM母项料品 (该属性可为空,但有默认值)
+            获取导入BOM的详细信息.Misc.BOM母项料品
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOMPLM.Proxy.GetItemOdditionalInfoProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            获取料品附加信息.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.BOMPLM.Proxy.GetItemOdditionalInfoProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            获取料品附加信息.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ResourceFeeRateBP.Proxy.SynchroniseResActualRateProxy.ResourceFeeRate">
+            <summary>
+            资源费率 (该属性可为空,且无默认值)
+            同步资源实际费率.Misc.资源费率
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ResourceFeeRateBP.ResourceFeeRateDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ResourceFeeRateBP.Proxy.CopyResStdRateToResActualRateProxy.ResourceFeeRate">
+            <summary>
+            同步资源标准费率到资源实际费率 (该属性可为空,且无默认值)
+            同步资源标准费率到资源实际费率.Misc.同步资源标准费率到资源实际费率
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ResourceFeeRateBP.ResourceFeeRateDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ResourceFeeRateBP.Proxy.CopyResStdRateToResActualRateProxy.IsAutoSynchronize">
+            <summary>
+            自动同步 (该属性可为空,但有默认值)
+            同步资源标准费率到资源实际费率.Misc.自动同步
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.SubstituteGroup.Proxy.CreateSubstituteGroupProxy.SubstituteGroupDTO">
+            <summary>
+            替代组DTO (该属性可为空,且无默认值)
+            创建或更新替代组.Misc.替代组DTO
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.SubstituteGroup.SubstituteGroupDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.SubstituteGroup.Proxy.GetSubGroupMembersProxy.SubGroup_SKey">
+            <summary>
+            替代组 序列化Key属性。（传递跨组织序列列字段）
+            获取替代组成员.Misc.替代组
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.SubstituteGroup.Proxy.GetSubGroupMembersProxy.SubGroup">
+            <summary>
+            替代组 (该属性可为空,且无默认值)
+            获取替代组成员.Misc.替代组
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.SubstituteGroup.SubstituteGroup</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapAdjustCompiled.Proxy.CompileCapAdjustProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            编译产能占用.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapAdjustCompiled.Proxy.CompileCapAdjustProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            编译产能占用.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapAdjustCompiled.Proxy.CompileCapAdjustProxy.FromDate">
+            <summary>
+            从日期 (该属性可为空,且无默认值)
+            编译产能占用.Misc.从日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapAdjustCompiled.Proxy.CompileCapAdjustProxy.ToDate">
+            <summary>
+            到日期 (该属性可为空,且无默认值)
+            编译产能占用.Misc.到日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapAdjustCompiled.Proxy.CompileCapAdjustProxy.IsCTP">
+            <summary>
+            是否进行产能校对 (该属性可为空,但有默认值)
+            编译产能占用.Misc.是否进行产能校对
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.ApproveCapAdjustDocProxy.CapAdjustDoc_SKey">
+            <summary>
+            产能调整单 序列化Key属性。（传递跨组织序列列字段）
+            审核产能调整单.Misc.产能调整单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.ApproveCapAdjustDocProxy.CapAdjustDoc">
+            <summary>
+            产能调整单 (该属性可为空,且无默认值)
+            审核产能调整单.Misc.产能调整单
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.CapAdjustDoc.CapAdjustDoc</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.UnApproveCapAdjustDocProxy.CapAdjustDoc_SKey">
+            <summary>
+            产能调整单 序列化Key属性。（传递跨组织序列列字段）
+            弃审产能调整单.Misc.产能调整单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.UnApproveCapAdjustDocProxy.CapAdjustDoc">
+            <summary>
+            产能调整单 (该属性可为空,且无默认值)
+            弃审产能调整单.Misc.产能调整单
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.CapAdjustDoc.CapAdjustDoc</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.SubmitApproveCapAdjustDocProxy.CapAdjustDocID">
+            <summary>
+            产能调整单 (该属性可为空,但有默认值)
+            提交审核产能调整单.Misc.产能调整单
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CapacityAdjust.Proxy.SubmitApproveCapAdjustDocProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            提交审核产能调整单.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPBatchEvalutionProxy.Demands">
+            <summary>
+            需求集合 (该属性可为空,且无默认值)
+            CTP批量评估.Misc.需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPBatchEvalutionProxy.IsSimulation">
+            <summary>
+            是否模拟评估 (该属性可为空,但有默认值)
+            CTP批量评估.Misc.是否模拟评估
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPEvalutionProxy.Demand">
+            <summary>
+            需求 (该属性可为空,且无默认值)
+            CTP评估.Misc.需求
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.CTPCalcBP.CTPDemandDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            获取CTP资源.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            获取CTP资源.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.ItemVersion_SKey">
+            <summary>
+            料品版本 序列化Key属性。（传递跨组织序列列字段）
+            获取CTP资源.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.ItemVersion">
+            <summary>
+            料品版本 (该属性可为空,且无默认值)
+            获取CTP资源.Misc.料品版本
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMasterVersion</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            获取CTP资源.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.GetCTPResourcesProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            获取CTP资源.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            CTP资源提取.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            CTP资源提取.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.ItemCategory_SKey">
+            <summary>
+            料品分类 序列化Key属性。（传递跨组织序列列字段）
+            CTP资源提取.Misc.料品分类
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.ItemCategory">
+            <summary>
+            料品分类 (该属性可为空,且无默认值)
+            CTP资源提取.Misc.料品分类
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemCategory</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            CTP资源提取.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            CTP资源提取.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPResDistillProxy.BOMEffectiveDate">
+            <summary>
+            BOM有效期 (该属性可为空,且无默认值)
+            CTP资源提取.Misc.BOM有效期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            CTP产能释放.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            CTP产能释放.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.ItemVersion_SKey">
+            <summary>
+            料品版本 序列化Key属性。（传递跨组织序列列字段）
+            CTP产能释放.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.ItemVersion">
+            <summary>
+            料品版本 (该属性可为空,且无默认值)
+            CTP产能释放.Misc.料品版本
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMasterVersion</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DemandOrg_SKey">
+            <summary>
+            需求组织 序列化Key属性。（传递跨组织序列列字段）
+            CTP产能释放.Misc.需求组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DemandOrg">
+            <summary>
+            需求组织 (该属性可为空,且无默认值)
+            CTP产能释放.Misc.需求组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocType">
+            <summary>
+            需求单据类型 (该属性可为空,但有默认值)
+            CTP产能释放.Misc.需求单据类型
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.Enums.CapacityOccupyDetailDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocKey">
+            <summary>
+            需求单据Key (该属性可为空,且无默认值)
+            CTP产能释放.Misc.需求单据Key
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocNo">
+            <summary>
+            需求单据号 (该属性可为空,且无默认值)
+            CTP产能释放.Misc.需求单据号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocLineKey">
+            <summary>
+            需求单据行Key (该属性可为空,且无默认值)
+            CTP产能释放.Misc.需求单据行Key
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocLineNo">
+            <summary>
+            需求单据行号 (该属性可为空,但有默认值)
+            CTP产能释放.Misc.需求单据行号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocSubLineKey">
+            <summary>
+            需求单据子行Key (该属性可为空,且无默认值)
+            CTP产能释放.Misc.需求单据子行Key
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.CTPCapReleaseProxy.DocSubLineNo">
+            <summary>
+            需求单据子行号 (该属性可为空,但有默认值)
+            CTP产能释放.Misc.需求单据子行号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.CTPCalcBP.Proxy.UpdateCTPCapacityProxy.Demand">
+            <summary>
+            计算结果 (该属性可为空,且无默认值)
+            更新CTP资源能力占用.Misc.计算结果
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.CTPCalcBP.CTPDemandDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ChgScheme.Proxy.GetChgSchemeTitleNameProxy.ChgScheme_SKey">
+            <summary>
+            换机方案 序列化Key属性。（传递跨组织序列列字段）
+            从换机方案对应的换机纬度中获取纬度名称.Misc.换机方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ChgScheme.Proxy.GetChgSchemeTitleNameProxy.ChgScheme">
+            <summary>
+            换机方案 (该属性可为空,且无默认值)
+            从换机方案对应的换机纬度中获取纬度名称.Misc.换机方案
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ChgScheme.ChgScheme</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ChgScheme.Proxy.GetFlexFieldInfoByEntityFullNameProxy.EntityFullName">
+            <summary>
+            实体名称 (该属性可为空,且无默认值)
+            从实体名称获取弹性域信息.Misc.实体名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ProductPeriod.Proxy.AppendProductPeriodProxy.ProductPeriod_SKey">
+            <summary>
+            生产期间 序列化Key属性。（传递跨组织序列列字段）
+            追加生产期间期间.Misc.生产期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ProductPeriod.Proxy.AppendProductPeriodProxy.ProductPeriod">
+            <summary>
+            生产期间 (该属性可为空,且无默认值)
+            追加生产期间期间.Misc.生产期间
+            </summary>
+            <value>UFIDA.U9.CBO.MFG.ProductPeriod.ProductPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.MFG.ProductPeriod.Proxy.AppendProductPeriodProxy.AppendWay">
+            <summary>
+            追加方向 (该属性可为空,但有默认值)
+            追加生产期间期间.Misc.追加方向
+            </summary>
+            <value>System.Int32</value>
+        </member>
+    </members>
+</doc>

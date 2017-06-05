@@ -1,0 +1,1256 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pGydWasteBE</name>
+    </assembly>
+    <members>
+        <member name="T:pGydWasteBE.pGydWaste">
+            <summary>
+            实体: 工艺单消耗表
+            
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.FromEntityData(pGydWasteBE.pGydWasteData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.ToEntityData(pGydWasteBE.pGydWasteData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            工艺单消耗表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            工艺单消耗表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.PDept">
+            <summary>
+            生产部门 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.生产部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.PDeptKey">
+            <summary>
+            生产部门 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.生产部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.WPID">
+            <summary>
+            工序 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.WPIDKey">
+            <summary>
+            工序 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Pap">
+            <summary>
+            纸张类型 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.纸张类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.G">
+            <summary>
+            克重 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.GyDem">
+            <summary>
+            工艺要求 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.GyDemKey">
+            <summary>
+            工艺要求 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.MQty">
+            <summary>
+            数量 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Waste">
+            <summary>
+            消耗 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.消耗
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.LQty">
+            <summary>
+            起数 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.起数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.TJ">
+            <summary>
+            调色/调机 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.调色/调机
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.SP">
+            <summary>
+            特殊要求 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.特殊要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Note">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Org">
+            <summary>
+            Org (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_PDept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PDept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_WPID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WPID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_Pap">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Pap")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_G">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("G")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_GyDem">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("GyDem")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_MQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MQty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_Waste">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Waste")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_LQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LQty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_TJ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("TJ")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_SP">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SP")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_Note">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWaste.EntityKey">
+            <summary>
+            Strong Class pGydWaste EntityKey 
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWaste.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityFinder.FindByBusinessKey(PDeptBE.PDept.EntityKey,pMakGydGyBE.pMakGydWPID.EntityKey,pGydWasteBE.PapEnum,System.Int32,pGydWasteBE.pGydWasteGyDem.EntityKey,System.Double)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityFinder.FindByBusinessKey(PDeptBE.PDept,pMakGydGyBE.pMakGydWPID,pGydWasteBE.PapEnum,System.Int32,pGydWasteBE.pGydWasteGyDem,System.Double)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityFinder.FindByBusinessKey(pGydWasteBE.pGydWaste.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityFinder.FindByBusinessKeyIndex(pGydWasteBE.pGydWaste.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引pGydWasteBE_pGydWaste_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWaste.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWaste.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            pGydWasteBE_pGydWaste_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWaste.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            工艺单消耗表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            工艺单消耗表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            工艺单消耗表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.PDept">
+            <summary>
+             OrginalData属性。只可读。
+            生产部门 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.生产部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.PDeptKey">
+            <summary>
+            EntityKey 属性
+            生产部门 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.生产部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.WPID">
+            <summary>
+             OrginalData属性。只可读。
+            工序 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.WPIDKey">
+            <summary>
+            EntityKey 属性
+            工序 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工序
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.Pap">
+            <summary>
+             OrginalData属性。只可读。
+            纸张类型 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.纸张类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.G">
+            <summary>
+             OrginalData属性。只可读。
+            克重 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.克重
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.GyDem">
+            <summary>
+             OrginalData属性。只可读。
+            工艺要求 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.GyDemKey">
+            <summary>
+            EntityKey 属性
+            工艺要求 的Key (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.MQty">
+            <summary>
+             OrginalData属性。只可读。
+            数量 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.Waste">
+            <summary>
+             OrginalData属性。只可读。
+            消耗 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.消耗
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.LQty">
+            <summary>
+             OrginalData属性。只可读。
+            起数 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.起数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.TJ">
+            <summary>
+             OrginalData属性。只可读。
+            调色/调机 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.调色/调机
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.SP">
+            <summary>
+             OrginalData属性。只可读。
+            特殊要求 (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.特殊要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.Note">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            工艺单消耗表.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性可为空,但有默认值)
+            工艺单消耗表.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:pGydWasteBE.pGydWaste.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.PDept">
+            <summary>
+            属性: 生产部门 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.WPID">
+            <summary>
+            属性: 工序 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.Pap">
+            <summary>
+            属性: 纸张类型 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.G">
+            <summary>
+            属性: 克重 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.GyDem">
+            <summary>
+            属性: 工艺要求 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.MQty">
+            <summary>
+            属性: 数量 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.Waste">
+            <summary>
+            属性: 消耗 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.LQty">
+            <summary>
+            属性: 起数 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.TJ">
+            <summary>
+            属性: 调色/调机 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.SP">
+            <summary>
+            属性: 特殊要求 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.Note">
+            <summary>
+            属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWaste.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWasteGyDem">
+            <summary>
+            实体: 工艺要求
+            
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.FromEntityData(pGydWasteBE.pGydWasteGyDemData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.ToEntityData(pGydWasteBE.pGydWasteGyDemData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            工艺要求.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            工艺要求.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            工艺要求.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            工艺要求.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            工艺要求.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            工艺要求.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Code">
+            <summary>
+            编号 (该属性可为空,且无默认值)
+            工艺要求.Misc.编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Name">
+            <summary>
+            工艺要求 (该属性可为空,且无默认值)
+            工艺要求.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Dept">
+            <summary>
+            部门 (该属性可为空,且无默认值)
+            工艺要求.Misc.部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.DeptKey">
+            <summary>
+            部门 的Key (该属性可为空,且无默认值)
+            工艺要求.Misc.部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Org">
+            <summary>
+            Org (该属性可为空,但有默认值)
+            工艺要求.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_Dept">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Dept")的方式取资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.Res_Org">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Org")的方式取资源
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWasteGyDem.EntityKey">
+            <summary>
+            Strong Class pGydWasteGyDem EntityKey 
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWasteGyDem.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.pGydWasteGyDem.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            工艺要求.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            工艺要求.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            工艺要求.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            工艺要求.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            工艺要求.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            工艺要求.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            编号 (该属性可为空,且无默认值)
+            工艺要求.Misc.编号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            工艺要求 (该属性可为空,且无默认值)
+            工艺要求.Misc.工艺要求
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.Dept">
+            <summary>
+             OrginalData属性。只可读。
+            部门 (该属性可为空,且无默认值)
+            工艺要求.Misc.部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.DeptKey">
+            <summary>
+            EntityKey 属性
+            部门 的Key (该属性可为空,且无默认值)
+            工艺要求.Misc.部门
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityOriginal.Org">
+            <summary>
+             OrginalData属性。只可读。
+            Org (该属性可为空,但有默认值)
+            工艺要求.Misc.Org
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:pGydWasteBE.pGydWasteGyDem.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.Code">
+            <summary>
+            属性: 编号 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.Name">
+            <summary>
+            属性: 工艺要求 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.Dept">
+            <summary>
+            属性: 部门 的名称
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.pGydWasteGyDem.EntityRes.Org">
+            <summary>
+            属性: Org 的名称
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.PapEnum">
+            <summary>
+            可扩展枚举: 纸张类型 
+            
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get PapEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.GetFromValue(System.Object)">
+            <summary>
+            Get PapEnum By Value 
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.GetFromName(System.String)">
+            <summary>
+            Get PapEnum By Name 
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.P1">
+            <summary>
+            枚举值: 不限  Value:0  
+            纸张类型.Misc.不限
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.P2">
+            <summary>
+            枚举值: 白卡纸  Value:1  
+            纸张类型.Misc.白卡纸
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.P3">
+            <summary>
+            枚举值: 铜版纸  Value:2  
+            纸张类型.Misc.铜版纸
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.P4">
+            <summary>
+            枚举值: 金银卡  Value:3  
+            纸张类型.Misc.金银卡
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Values">
+            <summary>
+            Get PapEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_TypeName">
+            <summary>
+            纸张类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_TypeNameS">
+            <summary>
+            纸张类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_P1">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_P2">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_P3">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.Res_P4">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="T:pGydWasteBE.PapEnum.ExtendManager">
+            <summary>
+            可扩展枚举管理器
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.ExtendManager.NewValue(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            添加新枚举项
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.ExtendManager.DeleteValue(pGydWasteBE.PapEnum)">
+            <summary>
+            删除枚举项
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:pGydWasteBE.PapEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:pGydWasteBE.PapEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+    </members>
+</doc>

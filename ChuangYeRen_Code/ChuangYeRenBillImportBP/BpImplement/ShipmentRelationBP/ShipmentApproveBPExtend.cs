@@ -51,6 +51,7 @@
                 approvedProxy.ShipmentKey = pub.DocID;
                 approvedProxy.SysVersion = ship.SysVersion;
                 ErrorMessageDTOData errordata = approvedProxy.Do();
+
                 if ((errordata != null) && !string.IsNullOrEmpty(errordata.ErrorMessage))
                 {
                     pub.Flag = false;

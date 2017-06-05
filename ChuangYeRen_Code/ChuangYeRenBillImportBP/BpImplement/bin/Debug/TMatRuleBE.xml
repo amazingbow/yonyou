@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TMatRuleBE</name>
+    </assembly>
+    <members>
+        <member name="T:TMatRuleBE.TMatRule">
+            <summary>
+            实体: 物料类别
+            
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.FromEntityData(TMatRuleBE.TMatRuleData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.ToEntityData(TMatRuleBE.TMatRuleData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            物料类别.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            物料类别.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            物料类别.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            物料类别.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            物料类别.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            物料类别.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            物料类别.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Name">
+            <summary>
+            编码内容 (该属性可为空,且无默认值)
+            物料类别.Misc.编码内容
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.PID">
+            <summary>
+            上级编码 (该属性可为空,且无默认值)
+            物料类别.Misc.上级编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.PIDKey">
+            <summary>
+            上级编码 的Key (该属性可为空,且无默认值)
+            物料类别.Misc.上级编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Note">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            物料类别.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.OrgID">
+            <summary>
+            OrgID (该属性可为空,但有默认值)
+            物料类别.Misc.OrgID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.IsBuy">
+            <summary>
+            采购报价类别 (该属性可为空,但有默认值)
+            物料类别.Misc.采购报价类别
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.BT">
+            <summary>
+            采购提前期 (该属性可为空,但有默认值)
+            物料类别.Misc.采购提前期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.FiClass">
+            <summary>
+            财务分类 (该属性可为空,且无默认值)
+            物料类别.Misc.财务分类
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.FiClassKey">
+            <summary>
+            财务分类 的Key (该属性可为空,且无默认值)
+            物料类别.Misc.财务分类
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_PID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("PID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_Note">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Note")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_OrgID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("OrgID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_IsBuy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsBuy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_BT">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BT")的方式取资源
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.Res_FiClass">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("FiClass")的方式取资源
+            </summary>
+        </member>
+        <member name="T:TMatRuleBE.TMatRule.EntityKey">
+            <summary>
+            Strong Class TMatRule EntityKey 
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:TMatRuleBE.TMatRule.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:TMatRuleBE.TMatRule.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            物料类别.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            物料类别.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            物料类别.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            物料类别.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            物料类别.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            物料类别.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            编码 (该属性可为空,且无默认值)
+            物料类别.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            编码内容 (该属性可为空,且无默认值)
+            物料类别.Misc.编码内容
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.PID">
+            <summary>
+             OrginalData属性。只可读。
+            上级编码 (该属性可为空,且无默认值)
+            物料类别.Misc.上级编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.PIDKey">
+            <summary>
+            EntityKey 属性
+            上级编码 的Key (该属性可为空,且无默认值)
+            物料类别.Misc.上级编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.Note">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            物料类别.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.OrgID">
+            <summary>
+             OrginalData属性。只可读。
+            OrgID (该属性可为空,但有默认值)
+            物料类别.Misc.OrgID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.IsBuy">
+            <summary>
+             OrginalData属性。只可读。
+            采购报价类别 (该属性可为空,但有默认值)
+            物料类别.Misc.采购报价类别
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.BT">
+            <summary>
+             OrginalData属性。只可读。
+            采购提前期 (该属性可为空,但有默认值)
+            物料类别.Misc.采购提前期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.FiClass">
+            <summary>
+             OrginalData属性。只可读。
+            财务分类 (该属性可为空,且无默认值)
+            物料类别.Misc.财务分类
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityOriginal.FiClassKey">
+            <summary>
+            EntityKey 属性
+            财务分类 的Key (该属性可为空,且无默认值)
+            物料类别.Misc.财务分类
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:TMatRuleBE.TMatRule.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.Code">
+            <summary>
+            属性: 编码 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.Name">
+            <summary>
+            属性: 编码内容 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.PID">
+            <summary>
+            属性: 上级编码 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.Note">
+            <summary>
+            属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.OrgID">
+            <summary>
+            属性: OrgID 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.IsBuy">
+            <summary>
+            属性: 采购报价类别 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.BT">
+            <summary>
+            属性: 采购提前期 的名称
+            </summary>
+        </member>
+        <member name="P:TMatRuleBE.TMatRule.EntityRes.FiClass">
+            <summary>
+            属性: 财务分类 的名称
+            </summary>
+        </member>
+    </members>
+</doc>

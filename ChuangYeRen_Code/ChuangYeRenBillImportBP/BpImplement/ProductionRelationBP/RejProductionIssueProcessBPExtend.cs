@@ -13,7 +13,7 @@
     /// <summary>
     /// RejProductionIssueProcessBP partial 
     /// </summary>	
-    public partial class RejProductionIssueProcessBP
+    public partial class RejProductionIssueProcessBP//生产退料操作
     {
         internal BaseStrategy Select()
         {

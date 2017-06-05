@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.SM.SMPub.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CustomerMarketabilityCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            客户可销售检查操作.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CustomerMarketabilityCheckBPProxy.CustomerNo">
+            <summary>
+            客户编号 (该属性可为空,且无默认值)
+            客户可销售检查操作.Misc.客户编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CustomerHoldCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            客户Hold检查.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CustomerHoldCheckBPProxy.Doc">
+            <summary>
+            当前单据 (该属性可为空,且无默认值)
+            客户Hold检查.Misc.当前单据
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.BillToSiteCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            收票客户site检查.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.BillToSiteCheckBPProxy.CusSiteNo">
+            <summary>
+            收票客户site编号 (该属性可为空,且无默认值)
+            收票客户site检查.Misc.收票客户site编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.ShipToSiteCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            收货客户site检查.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.ShipToSiteCheckBPProxy.CusSiteNo">
+            <summary>
+            收票客户site编号 (该属性可为空,且无默认值)
+            收货客户site检查.Misc.收票客户site编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SupplierUseabilityCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            供应商可使用检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SupplierUseabilityCheckBPProxy.SpplierNo">
+            <summary>
+            供应商编号 (该属性可为空,且无默认值)
+            供应商可使用检查.Misc.供应商编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.WarehouseToSiteCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            存储地点组织检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.WarehouseToSiteCheckBPProxy.StoreSiteNo">
+            <summary>
+            存储编号 (该属性可为空,且无默认值)
+            存储地点组织检查.Misc.存储编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CoporationOfRelationSalesOrgCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            销售组织的关系企业检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CoporationOfRelationSalesOrgCheckBPProxy.SaleOrganization">
+            <summary>
+            销售组织 (该属性可为空,且无默认值)
+            销售组织的关系企业检查.Misc.销售组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SaleOrgOfInnerOrgCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            销售组织的内部组织检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SaleOrgOfInnerOrgCheckBPProxy.SaleOrganization">
+            <summary>
+            销售组织 (该属性可为空,且无默认值)
+            销售组织的内部组织检查.Misc.销售组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.OrgRunRelationCheckBPProxy.FromOrg">
+            <summary>
+            来源组织 (该属性可为空,且无默认值)
+            组织营业关系是否存在检查.Misc.来源组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.OrgRunRelationCheckBPProxy.ToOrg">
+            <summary>
+            目的组织 (该属性可为空,且无默认值)
+            组织营业关系是否存在检查.Misc.目的组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.OrgRunRelationCheckBPProxy.MaturalFromOrg">
+            <summary>
+            来源组织物料 (该属性可为空,且无默认值)
+            组织营业关系是否存在检查.Misc.来源组织物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.OrgRunRelationCheckBPProxy.RelationRun">
+            <summary>
+            营业关系 (该属性可为空,但有默认值)
+            组织营业关系是否存在检查.Misc.营业关系
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Organization.BusinessRelationTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SaleAbilityCheckBPProxy.Materiel">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            物料可销售性检查.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.KitSonNumberToParentNumberBPProxy.KitSonUom">
+            <summary>
+            子件单位 (该属性可为空,且无默认值)
+            Kit件子件对母件数量转换操作.Misc.子件单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.KitSonNumberToParentNumberBPProxy.KitSonNum">
+            <summary>
+            子件数量 (该属性可为空,但有默认值)
+            Kit件子件对母件数量转换操作.Misc.子件数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.KitSonNumberToParentNumberBPProxy.KitParent">
+            <summary>
+            母件 (该属性可为空,且无默认值)
+            Kit件子件对母件数量转换操作.Misc.母件
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.KitSonNumberToParentNumberBPProxy.KitParentUom">
+            <summary>
+            母件单位 (该属性可为空,且无默认值)
+            Kit件子件对母件数量转换操作.Misc.母件单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.GradeMaterielCheckBPProxy.Grade">
+            <summary>
+            等级 (该属性可为空,但有默认值)
+            物料等级检查.Misc.等级
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.GradeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.GradeMaterielCheckBPProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            物料等级检查.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MadeOfMaterielCheckBPProxy.Potency">
+            <summary>
+            成分 (该属性可为空,但有默认值)
+            物料成分检查.Misc.成分
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ElementEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MadeOfMaterielCheckBPProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            物料成分检查.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            物料价格转换操作.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.FromCurrency">
+            <summary>
+            From币种 (该属性可为空,且无默认值)
+            物料价格转换操作.Misc.From币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.FromUom">
+            <summary>
+            From计量单位 (该属性可为空,且无默认值)
+            物料价格转换操作.Misc.From计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.FromPrice">
+            <summary>
+            From价格 (该属性可为空,但有默认值)
+            物料价格转换操作.Misc.From价格
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.ToCurrency">
+            <summary>
+            To币种 (该属性可为空,且无默认值)
+            物料价格转换操作.Misc.To币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PriceOfMaterielChangeBPProxy.ToUom">
+            <summary>
+            To计量单位 (该属性可为空,但有默认值)
+            物料价格转换操作.Misc.To计量单位
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LegalityOfDepartmentSaleCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            部门销售合法性检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LegalityOfDepartmentSaleCheckBPProxy.DeptNo">
+            <summary>
+            部门编号 (该属性可为空,且无默认值)
+            部门销售合法性检查.Misc.部门编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LegalityOfSalerCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            销售员销售合法性检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LegalityOfSalerCheckBPProxy.SellerNo">
+            <summary>
+            销售业务员编号 (该属性可为空,且无默认值)
+            销售员销售合法性检查.Misc.销售业务员编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LimiingtMaterielOfOrgCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            当前组织限销物料检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LimiingtMaterielOfOrgCheckBPProxy.Materiel">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            当前组织限销物料检查.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LimiingtMaterielOfOrgCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            当前组织限销物料检查.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.LimiingtMaterielOfOrgCheckBPProxy.DateNow">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            当前组织限销物料检查.Misc.属性
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MoneyfillConditionCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            收款条件可使用检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MoneyfillConditionCheckBPProxy.MoneyConditionNo">
+            <summary>
+            收款条件编码 (该属性可为空,且无默认值)
+            收款条件可使用检查.Misc.收款条件编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MoneyfillConditionCheckBPProxy.DateNow">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            收款条件可使用检查.Misc.属性
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.UomSameCheckBPProxy.UomFirst">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            计量单位是否同组检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.UomSameCheckBPProxy.UomSeconde">
+            <summary>
+            部门编号 (该属性可为空,且无默认值)
+            计量单位是否同组检查.Misc.部门编号
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.RatioUomMaterielBPProxy.Materiel">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            取得物料计量单位的转换率.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.RatioUomMaterielBPProxy.FormUom">
+            <summary>
+            From计量单位 (该属性可为空,且无默认值)
+            取得物料计量单位的转换率.Misc.From计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.RatioUomMaterielBPProxy.ToUom">
+            <summary>
+            To计量单位 (该属性可为空,且无默认值)
+            取得物料计量单位的转换率.Misc.To计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CopyOfRatioUomMaterielCheckBPProxy.FromCurrency">
+            <summary>
+            From币种 (该属性可为空,且无默认值)
+            取得币种间的汇率.Misc.From币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CopyOfRatioUomMaterielCheckBPProxy.ToCurrency">
+            <summary>
+            To币种 (该属性可为空,且无默认值)
+            取得币种间的汇率.Misc.To币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.CopyOfRatioUomMaterielCheckBPProxy.ToUom">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            取得币种间的汇率.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PayerSiteCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            付款客户Site检查.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.PayerSiteCheckBPProxy.SiteNo">
+            <summary>
+            客户Site编号 (该属性可为空,且无默认值)
+            付款客户Site检查.Misc.客户Site编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SalePlantOrgCheckBPProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            销售组织的工厂组织检查.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SalePlantOrgCheckBPProxy.SaleOrganization">
+            <summary>
+            销售组织 (该属性可为空,且无默认值)
+            销售组织的工厂组织检查.Misc.销售组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MaterilOrgCheckBPProxy.Org">
+            <summary>
+            当前组织 (该属性可为空,且无默认值)
+            当前组织限销物料检查操作.Misc.当前组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MaterilOrgCheckBPProxy.Materil">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            当前组织限销物料检查操作.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MaterilOrgCheckBPProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            当前组织限销物料检查操作.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.MaterilOrgCheckBPProxy.DateNow">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            当前组织限销物料检查操作.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SDGetOptionalFeatherProxy.OptionStr">
+            <summary>
+            选配特性参数 (该属性可为空,且无默认值)
+            取可选配特征参数.Misc.选配特性参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.SM.SMPub.Proxy.SMGetWorkDateBPProxy.GetWorkDateInfos">
+            <summary>
+            取工作日历参数 (该属性可为空,且无默认值)
+            取工作日历.Misc.取工作日历参数
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

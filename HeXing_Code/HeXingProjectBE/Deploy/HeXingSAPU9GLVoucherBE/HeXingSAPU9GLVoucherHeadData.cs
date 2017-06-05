@@ -42,6 +42,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
                                         knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData));
                         
                         
+                        
+                        
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -74,7 +78,11 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 	     			
 	     							IsU9Successful= 0; 			     			
 	     			
-	     							U9VoucherID= 0; 			     							IsRepeat= 0; 		
+	     							U9VoucherID= 0; 			     							IsRepeat= 0; 			     			
+	     			
+	     			
+	     			
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -545,10 +553,86 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			}
 		}
 		
+
+				/// <summary>
+		/// SAP凭证制单人
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证制单人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapCreater ;
+		public System.String SapCreater
+		{
+			get	
+			{	
+				return m_sapCreater  ;
+			}
+			set	
+			{	
+				m_sapCreater = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// SAP凭证审核人
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证审核人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapAuditor ;
+		public System.String SapAuditor
+		{
+			get	
+			{	
+				return m_sapAuditor  ;
+			}
+			set	
+			{	
+				m_sapAuditor = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// SAP凭证记账人
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证记账人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapPoster ;
+		public System.String SapPoster
+		{
+			get	
+			{	
+				return m_sapPoster  ;
+			}
+			set	
+			{	
+				m_sapPoster = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// SAP凭证出纳人
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证出纳人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapCashier ;
+		public System.String SapCashier
+		{
+			get	
+			{	
+				return m_sapCashier  ;
+			}
+			set	
+			{	
+				m_sapCashier = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																							
+																											
 		#endregion 		
 	}	
 

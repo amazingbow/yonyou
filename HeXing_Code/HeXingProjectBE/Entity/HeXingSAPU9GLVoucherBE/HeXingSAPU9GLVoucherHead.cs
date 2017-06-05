@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// <returns>Instance</returns>
 		public  static HeXingSAPU9GLVoucherHead Create() {
 			HeXingSAPU9GLVoucherHead entity = (HeXingSAPU9GLVoucherHead)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																					 
+																																																																																	 
 			return entity;
 		}
 
@@ -726,6 +726,82 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// SAP凭证制单人 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表头.Misc.SAP凭证制单人
+			/// </summary>
+			/// <value></value>
+			public  System.String SapCreater
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("SapCreater");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// SAP凭证审核人 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表头.Misc.SAP凭证审核人
+			/// </summary>
+			/// <value></value>
+			public  System.String SapAuditor
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("SapAuditor");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// SAP凭证记账人 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表头.Misc.SAP凭证记账人
+			/// </summary>
+			/// <value></value>
+			public  System.String SapPoster
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("SapPoster");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// SAP凭证出纳人 (该属性可为空,且无默认值)
+			/// SAP与U9凭证对接中间表头.Misc.SAP凭证出纳人
+			/// </summary>
+			/// <value></value>
+			public  System.String SapCashier
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("SapCashier");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1399,6 +1475,102 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 
 
 
+		
+			/// <summary>
+		/// SAP凭证制单人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证制单人
+		/// </summary>
+		/// <value></value>
+			public  System.String SapCreater
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("SapCreater");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("SapCreater", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// SAP凭证审核人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证审核人
+		/// </summary>
+		/// <value></value>
+			public  System.String SapAuditor
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("SapAuditor");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("SapAuditor", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// SAP凭证记账人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证记账人
+		/// </summary>
+		/// <value></value>
+			public  System.String SapPoster
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("SapPoster");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("SapPoster", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// SAP凭证出纳人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表头.Misc.SAP凭证出纳人
+		/// </summary>
+		/// <value></value>
+			public  System.String SapCashier
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("SapCashier");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("SapCashier", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1557,6 +1729,26 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_IsRepeat　{ get { return EntityRes.GetResource("IsRepeat");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SapCreater")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_SapCreater　{ get { return EntityRes.GetResource("SapCreater");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SapAuditor")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_SapAuditor　{ get { return EntityRes.GetResource("SapAuditor");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SapPoster")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_SapPoster　{ get { return EntityRes.GetResource("SapPoster");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SapCashier")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_SapCashier　{ get { return EntityRes.GetResource("SapCashier");　}　}
 		#endregion 
 
 
@@ -2020,6 +2212,26 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			/// 属性: 是否重复 的名称
 			/// </summary>
 			public static string IsRepeat　{ get { return "IsRepeat";　}　}
+				
+			/// <summary>
+			/// 属性: SAP凭证制单人 的名称
+			/// </summary>
+			public static string SapCreater　{ get { return "SapCreater";　}　}
+				
+			/// <summary>
+			/// 属性: SAP凭证审核人 的名称
+			/// </summary>
+			public static string SapAuditor　{ get { return "SapAuditor";　}　}
+				
+			/// <summary>
+			/// 属性: SAP凭证记账人 的名称
+			/// </summary>
+			public static string SapPoster　{ get { return "SapPoster";　}　}
+				
+			/// <summary>
+			/// 属性: SAP凭证出纳人 的名称
+			/// </summary>
+			public static string SapCashier　{ get { return "SapCashier";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2030,7 +2242,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																										
 				if (attrName.StartsWith("DescFlexField."))
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetPropertyResource(DescFlexField_TypeFullName, attrName);
-						
+														
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2173,6 +2385,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
 			this.exdMultiLangAttrs.Add("U9VoucherID","U9VoucherID");
 			this.exdMultiLangAttrs.Add("IsRepeat","IsRepeat");
+			this.exdMultiLangAttrs.Add("SapCreater","SapCreater");
+			this.exdMultiLangAttrs.Add("SapAuditor","SapAuditor");
+			this.exdMultiLangAttrs.Add("SapPoster","SapPoster");
+			this.exdMultiLangAttrs.Add("SapCashier","SapCashier");
         }
 	#endregion 
 
@@ -2192,7 +2408,7 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 																																																																	
 																																																																																																																																																																																																																																																						
 
-						
+																		
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2213,6 +2429,14 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 		private void DeSerializeKey(HeXingSAPU9GLVoucherHeadData data)
 		{
 		
+			
+
+			
+
+			
+
+			
+
 			
 
 			
@@ -2340,6 +2564,14 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 								this.SetTypeValue("U9VoucherID",data.U9VoucherID);
 		
 								this.SetTypeValue("IsRepeat",data.IsRepeat);
+		
+								this.SetTypeValue("SapCreater",data.SapCreater);
+		
+								this.SetTypeValue("SapAuditor",data.SapAuditor);
+		
+								this.SetTypeValue("SapPoster",data.SapPoster);
+		
+								this.SetTypeValue("SapCashier",data.SapCashier);
 		
 			#endregion 
 
@@ -2550,6 +2782,34 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 					data.IsRepeat=(System.Int32)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("SapCreater");
+				if (obj != null)
+					data.SapCreater=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("SapAuditor");
+				if (obj != null)
+					data.SapAuditor=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("SapPoster");
+				if (obj != null)
+					data.SapPoster=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("SapCashier");
+				if (obj != null)
+					data.SapCashier=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2612,6 +2872,10 @@ namespace UFIDA.U9.Cust.HeXingProjectBE.HeXingSAPU9GLVoucherBE
 			//调用UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments属性类型的内置校验方法.
 			this.DescFlexField.OnValidate() ;
 	
+
+
+
+
 
 
 			//调用实体自身校验器代码.

@@ -140,7 +140,7 @@
                             dto.Entries.Add(voucherItem);
                         }
                         proxy.ImportVoucherDTOs.Add(dto);
-                        List<ISVReturnVoucherDTOData> result = proxy.Do();
+                        List<ISVReturnVoucherDTOData> result = proxy.Do(org.ID);
                         if (result == null || result.Count == 0) throw new Exception(item.SAPVoucherDisplayCode + "：生成凭证失败");
                         docNo = result[0].DocNo;
                         foreach (var refInfo in refList)
@@ -155,7 +155,8 @@
                         {
                             using (ISession innerSession = Session.Open())
                             {
-                                GenerateCFVoucherItem(item.U9VoucherID, item);//生成现金流量项目
+                                Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
+                                GenerateCFVoucherItem(item.U9VoucherID, item, successVoucher);//生成现金流量项目
                                 innerSession.Commit();
                             }
                         }
@@ -243,6 +244,11 @@
                             item.IsU9Successful = ImportFlagEnum.ImportSuccess;
                         }
                     }
+                    Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
+                    successVoucher.CreatedBy = item.SapCreater;
+                    successVoucher.Auditor = item.SapAuditor;
+                    successVoucher.Poster = item.SapPoster;
+                    successVoucher.Cashier = item.SapCashier;
                     session.Commit();
                 }
             }
@@ -264,9 +270,9 @@
             DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out ds);
         }
 
-        private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item)
+        private void GenerateCFVoucherItem(long voucherID, HeXingSAPU9GLVoucherHead item, Voucher successVoucher)
         {
-            Voucher successVoucher = Voucher.Finder.FindByID(voucherID);
+            //successVoucher.CreatedBy = "";
             for (int i = 0; i < successVoucher.Entries.Count; i++)
             {
                 //银行、现金类的科目维护对应的现金流量项目
@@ -307,17 +313,28 @@
                 }
                 cfVoucherItem.CashFlowItem = cashFlowItem;
                 cfVoucherItem.CashFlowItemAttr = cashFlowItem.ItemProperty;
+
                 if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
                 {
                     cfVoucherItem.DrAccount = successVoucher.Entries[i].Account;
                     cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedDr;//本币金额
                     cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredDr;//原币金额
+                    if (cfVoucherItem.CashFlowItemAttr == CashFlowItemPropertyEnum.OutFlowOrReduce)
+                    {
+                        cfVoucherItem.LCMoney = cfVoucherItem.LCMoney * -1;//本币金额
+                        cfVoucherItem.OCMoney = cfVoucherItem.OCMoney * -1;//原币金额
+                    }
                 }
                 else
                 {
                     cfVoucherItem.CrAccount = successVoucher.Entries[i].Account;
                     cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedCr;//本币金额
                     cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredCr;//原币金额
+                    if (cfVoucherItem.CashFlowItemAttr == CashFlowItemPropertyEnum.InFlowOrAdd)
+                    {
+                        cfVoucherItem.LCMoney = cfVoucherItem.LCMoney * -1;//本币金额
+                        cfVoucherItem.OCMoney = cfVoucherItem.OCMoney * -1;//原币金额
+                    }
                 }
                 cfVoucherItem.Currency = successVoucher.Entries[i].Currency;
                 cfVoucherItem.OCToFCExchangeRate = successVoucher.Entries[i].OCToFCExchangeRate;//汇率
@@ -361,6 +378,7 @@
             dto.PostedPeriod = voucher.PostedPeriod.ToString().Insert(4, "-");
             //附单据数
             dto.AttachmentCount = 0;
+
             return dto;
         }
         private ISVImportEntryDTOData ConstructEntry(HeXingSAPU9GLVoucherLine entry,

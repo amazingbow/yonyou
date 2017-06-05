@@ -1,0 +1,2694 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.CC.CreditBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectStateDTOData">
+            <summary>
+            信用对象状态 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.#ctor(System.Int64,System.Int32,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.m_objectStatus">
+            <summary>
+            状态
+            信用对象状态.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.m_holdReason">
+            <summary>
+            留置原因
+            信用对象状态.Misc.留置原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用对象状态.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectStateDTOData.CreditObject">
+            <summary>
+            信用控制对象
+            信用对象状态.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData">
+            <summary>
+            临时额度状态 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.#ctor(System.Int64,System.Int32,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.m_status">
+            <summary>
+            状态
+            临时额度状态.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.m_reason">
+            <summary>
+            原因
+            临时额度状态.Misc.原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.TempCredit_SKey">
+            <summary>
+            临时额度 序列化Key属性。（传递跨组织序列列字段）
+            临时额度状态.Misc.临时额度
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLimitAdjustStateDTOData.TempCredit">
+            <summary>
+            临时额度
+            临时额度状态.Misc.临时额度
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData">
+            <summary>
+            等级核准 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.#ctor(System.Int64,System.Int64,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.m_lastApproveDate">
+            <summary>
+            最后核定日期
+            等级核准.Misc.最后核定日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.ObjectCreditLevel_SKey">
+            <summary>
+            对象信用等级 序列化Key属性。（传递跨组织序列列字段）
+            等级核准.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.ObjectCreditLevel">
+            <summary>
+            对象信用等级
+            等级核准.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.ApprovePerson_SKey">
+            <summary>
+            核准人 序列化Key属性。（传递跨组织序列列字段）
+            等级核准.Misc.核准人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectLevelApproveDTOData.ApprovePerson">
+            <summary>
+            核准人
+            等级核准.Misc.核准人
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData">
+            <summary>
+            政策分配 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.#ctor(System.Int64,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.m_objectType">
+            <summary>
+            对象类型
+            政策分配.Misc.对象类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.m_objectCreditPolicyDTO">
+            <summary>
+            对象信用政策
+            政策分配.Misc.对象信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.CreditPolicy_SKey">
+            <summary>
+            信用政策 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.CreditPolicy">
+            <summary>
+            信用政策
+            政策分配.Misc.信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Customer">
+            <summary>
+            客户
+            政策分配.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Department">
+            <summary>
+            部门
+            政策分配.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Operater_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.Operater">
+            <summary>
+            业务员
+            政策分配.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.CustomerSite_SKey">
+            <summary>
+            客户位置 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.CustomerSite">
+            <summary>
+            客户位置
+            政策分配.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.OperatingOrg_SKey">
+            <summary>
+            营运组织 序列化Key属性。（传递跨组织序列列字段）
+            政策分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeDTOData.OperatingOrg">
+            <summary>
+            营运组织
+            政策分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData">
+            <summary>
+            等级分配 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.#ctor(System.Int64,System.Int32,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData},System.Boolean,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.m_objectType">
+            <summary>
+            对象类型
+            等级分配.Misc.对象类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.m_controlPoint">
+            <summary>
+            控制点
+            等级分配.Misc.控制点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.m_objectCreditLevelCurrencyDTO">
+            <summary>
+            对象信用等级币种
+            等级分配.Misc.对象信用等级币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.m_isEffective">
+            <summary>
+            是否生效
+            等级分配.Misc.是否生效
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.CreditLevel_SKey">
+            <summary>
+            信用等级 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.CreditLevel">
+            <summary>
+            信用等级
+            等级分配.Misc.信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Customer">
+            <summary>
+            客户
+            等级分配.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Department">
+            <summary>
+            部门
+            等级分配.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Operater_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.Operater">
+            <summary>
+            业务员
+            等级分配.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.CustomerSite_SKey">
+            <summary>
+            客户位置 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.CustomerSite">
+            <summary>
+            客户位置
+            等级分配.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.OperatingOrg_SKey">
+            <summary>
+            营运组织 序列化Key属性。（传递跨组织序列列字段）
+            等级分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData.OperatingOrg">
+            <summary>
+            营运组织
+            等级分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ClearObjectDTOData">
+            <summary>
+            清除对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.#ctor(System.Int64,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.m_clearObject">
+            <summary>
+            清除对象
+            清除对象.Misc.清除对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.m_controlPoint">
+            <summary>
+            控制点
+            清除对象.Misc.控制点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.m_bDelApproval">
+            <summary>
+            是否删除等级评定表
+            清除对象.Misc.是否删除等级评定表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            清除对象.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ClearObjectDTOData.CreditObject">
+            <summary>
+            信用控制对象
+            清除对象.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData">
+            <summary>
+            对象信用政策 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.#ctor(System.Int32,System.Int32,UFIDA.U9.CC.CreditPolicy.CreditFlowControlData,UFIDA.U9.CC.CreditPolicy.CreditContentSetData,System.Boolean,System.Boolean,System.Int32,System.Int64,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_customerLimitSet">
+            <summary>
+            额度范围
+            对象信用政策.Misc.额度范围
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_creditLimitUpdateDate">
+            <summary>
+            更新间隔
+            对象信用政策.Misc.更新间隔
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_controlFlow">
+            <summary>
+            控制时点
+            对象信用政策.Misc.控制时点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_contentSet">
+            <summary>
+            控制设置
+            对象信用政策.Misc.控制设置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_product">
+            <summary>
+            料品
+            对象信用政策.Misc.料品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_productCategory">
+            <summary>
+            料品分类
+            对象信用政策.Misc.料品分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_productRule">
+            <summary>
+            物料未设信时的规则
+            对象信用政策.Misc.物料未设信时的规则
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            对象信用政策.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.CreditLimitRate_SKey">
+            <summary>
+            额度占用规则 序列化Key属性。（传递跨组织序列列字段）
+            对象信用政策.Misc.额度占用规则
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData.CreditLimitRate">
+            <summary>
+            额度占用规则
+            对象信用政策.Misc.额度占用规则
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData">
+            <summary>
+            对象信用等级产品 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.#ctor(System.Int64,System.Int64,System.Decimal,UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.m_creditLimit">
+            <summary>
+            信用额度
+            对象信用等级产品.Misc.信用额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.m_objectCreditLevelCurrencyDTO">
+            <summary>
+            对象信用等级币种
+            对象信用等级产品.Misc.对象信用等级币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            对象信用等级产品.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.Product_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            对象信用等级产品.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.Product">
+            <summary>
+            料品
+            对象信用等级产品.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.ProductCategory_SKey">
+            <summary>
+            料品分类 序列化Key属性。（传递跨组织序列列字段）
+            对象信用等级产品.Misc.料品分类
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData.ProductCategory">
+            <summary>
+            料品分类
+            对象信用等级产品.Misc.料品分类
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData">
+            <summary>
+            对象信用等级币种 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.#ctor(UFIDA.U9.CC.PropertyType.CopyOfCreditContentData,System.Int64,System.Int32,UFIDA.U9.CC.CreditBP.CreditLevelDistributeDTOData,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.ObjectCreditLevelProductDTOData},UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData,UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_creditContent">
+            <summary>
+            额度指标
+            对象信用等级币种.Misc.额度指标
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_pledgeCount">
+            <summary>
+            押单笔数
+            对象信用等级币种.Misc.押单笔数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_creditLevelDistributeDTO">
+            <summary>
+            等级分配
+            对象信用等级币种.Misc.等级分配
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_objectCreditLevelProductDTO">
+            <summary>
+            对象信用等级产品
+            对象信用等级币种.Misc.对象信用等级产品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_creditLevelApprovalDistributeDTO">
+            <summary>
+            等级评定分配
+            对象信用等级币种.Misc.等级评定分配
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.m_descFlexField">
+            <summary>
+            描述性弹性域
+            对象信用等级币种.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.CreditLimitCurrency_SKey">
+            <summary>
+            额币 序列化Key属性。（传递跨组织序列列字段）
+            对象信用等级币种.Misc.额币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData.CreditLimitCurrency">
+            <summary>
+            额币
+            对象信用等级币种.Misc.额币
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData">
+            <summary>
+            额度占用统计 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.#ctor(System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_creditLimit">
+            <summary>
+            信用额度
+            额度占用统计.Misc.信用额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempCredit">
+            <summary>
+            临时额度
+            额度占用统计.Misc.临时额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_creditLimitUsed">
+            <summary>
+            已使用额度
+            额度占用统计.Misc.已使用额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badBillCount">
+            <summary>
+            呆票次数限制
+            额度占用统计.Misc.呆票次数限制
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempBadBillCount">
+            <summary>
+            呆票临时宽限次数
+            额度占用统计.Misc.呆票临时宽限次数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badBillCountUsed">
+            <summary>
+            已发生呆票次数
+            额度占用统计.Misc.已发生呆票次数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badBillAmount">
+            <summary>
+            呆票限额
+            额度占用统计.Misc.呆票限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempBadBillAmount">
+            <summary>
+            呆票临时宽限额度
+            额度占用统计.Misc.呆票临时宽限额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badBillAmountUsed">
+            <summary>
+            已发生呆票累计额
+            额度占用统计.Misc.已发生呆票累计额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badDebts">
+            <summary>
+            坏账
+            额度占用统计.Misc.坏账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempBadDebts">
+            <summary>
+            坏账临时宽限额度
+            额度占用统计.Misc.坏账临时宽限额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_badDebtsUsed">
+            <summary>
+            已发生坏账
+            额度占用统计.Misc.已发生坏账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_overdueAR">
+            <summary>
+            逾期应收限额
+            额度占用统计.Misc.逾期应收限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempOverdueAR">
+            <summary>
+            逾期应收临时宽限额度
+            额度占用统计.Misc.逾期应收临时宽限额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_overdueARUsed">
+            <summary>
+            已发生逾期应收
+            额度占用统计.Misc.已发生逾期应收
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_maxAccountPeriodDays">
+            <summary>
+            账期天数
+            额度占用统计.Misc.账期天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempMaxAccountPeriodDays">
+            <summary>
+            账期临时宽限天数
+            额度占用统计.Misc.账期临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_currentMaxAccountPeriodDays">
+            <summary>
+            目前最大账期
+            额度占用统计.Misc.目前最大账期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_maxOverDueDays">
+            <summary>
+            逾期天数
+            额度占用统计.Misc.逾期天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempMaxOverDueDays">
+            <summary>
+            逾期临时宽限天数
+            额度占用统计.Misc.逾期临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_currentMaxOverDueDays">
+            <summary>
+            已发生逾期的最大天数
+            额度占用统计.Misc.已发生逾期的最大天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_lastShipmentedRate">
+            <summary>
+            上次出货未结比率限额
+            额度占用统计.Misc.上次出货未结比率限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempLastShipmentedRate">
+            <summary>
+            出货未结比率临时宽限度
+            额度占用统计.Misc.出货未结比率临时宽限度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_lastShipmentedRateUsed">
+            <summary>
+            上次出货未结率
+            额度占用统计.Misc.上次出货未结率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_depositAmount">
+            <summary>
+            保证金限额
+            额度占用统计.Misc.保证金限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempDepositAmount">
+            <summary>
+            保证金临时宽限额
+            额度占用统计.Misc.保证金临时宽限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_currentDepositAmount">
+            <summary>
+            已缴保证金
+            额度占用统计.Misc.已缴保证金
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_remainCreditLimit">
+            <summary>
+            额度余额
+            额度占用统计.Misc.额度余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_remainBadDebts">
+            <summary>
+            坏账余额
+            额度占用统计.Misc.坏账余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_remainOverdueAR">
+            <summary>
+            逾期应收余额
+            额度占用统计.Misc.逾期应收余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_remainBadBillAmount">
+            <summary>
+            呆票余额
+            额度占用统计.Misc.呆票余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_aRBalance">
+            <summary>
+            应收账款
+            额度占用统计.Misc.应收账款
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_nRBalance">
+            <summary>
+            应收票据
+            额度占用统计.Misc.应收票据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_undoReturnMoney">
+            <summary>
+            未处理退货
+            额度占用统计.Misc.未处理退货
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_preGathering">
+            <summary>
+            预收款
+            额度占用统计.Misc.预收款
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_shipmented">
+            <summary>
+            未立账出货
+            额度占用统计.Misc.未立账出货
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_orderedRat">
+            <summary>
+            未立账订单
+            额度占用统计.Misc.未立账订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_entrust">
+            <summary>
+            未结代销
+            额度占用统计.Misc.未结代销
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_shipmenting">
+            <summary>
+            即将出货额
+            额度占用统计.Misc.即将出货额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_ordered">
+            <summary>
+            未出货订单
+            额度占用统计.Misc.未出货订单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_maxGoodDays">
+            <summary>
+            货龄天数
+            额度占用统计.Misc.货龄天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_tempGoodDays">
+            <summary>
+            货龄临时宽限天数
+            额度占用统计.Misc.货龄临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLimitRateStatDTOData.m_curMaxGoodDays">
+            <summary>
+            目前最大货龄
+            额度占用统计.Misc.目前最大货龄
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData">
+            <summary>
+            对象信用政策DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.#ctor(System.Int64,System.String,System.String,UFIDA.U9.CC.CreditPolicy.CreditLimitRateData,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencyCode">
+            <summary>
+            额币编码
+            对象信用政策DTO.Misc.额币编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencyName">
+            <summary>
+            额币名称
+            对象信用政策DTO.Misc.额币名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_creditLimitRate">
+            <summary>
+            额度占用规则
+            对象信用政策DTO.Misc.额度占用规则
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_creditLimitRateCode">
+            <summary>
+            额度占用规则编码
+            对象信用政策DTO.Misc.额度占用规则编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_creditLimitRateName">
+            <summary>
+            额度占用规则名称
+            对象信用政策DTO.Misc.额度占用规则名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_product">
+            <summary>
+            料品
+            对象信用政策DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_productCategory">
+            <summary>
+            料品纬度
+            对象信用政策DTO.Misc.料品纬度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_creditCM">
+            <summary>
+            信用控管方式
+            对象信用政策DTO.Misc.信用控管方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencySymbol">
+            <summary>
+            币符
+            对象信用政策DTO.Misc.币符
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencyPrecision">
+            <summary>
+            精度
+            对象信用政策DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencyRoundValue">
+            <summary>
+            舍入值
+            对象信用政策DTO.Misc.舍入值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.m_currencyRoundType">
+            <summary>
+            舍入类型
+            对象信用政策DTO.Misc.舍入类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.Currency_SKey">
+            <summary>
+            额币 序列化Key属性。（传递跨组织序列列字段）
+            对象信用政策DTO.Misc.额币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyDTOData.Currency">
+            <summary>
+            额币
+            对象信用政策DTO.Misc.额币
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData">
+            <summary>
+            信用等级产品DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.#ctor(System.Int64,UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData,System.String,System.String,System.Int64,System.String,System.String,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productID">
+            <summary>
+            料品ID
+            信用等级产品DTO.Misc.料品ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_creditLevelCurrencyDTO">
+            <summary>
+            信用等级币种DTO
+            信用等级产品DTO.Misc.信用等级币种DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productCode">
+            <summary>
+            料品编码
+            信用等级产品DTO.Misc.料品编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productName">
+            <summary>
+            料品名称
+            信用等级产品DTO.Misc.料品名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productCategoryID">
+            <summary>
+            料品分类ID
+            信用等级产品DTO.Misc.料品分类ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productCategoryCode">
+            <summary>
+            料品分类编码
+            信用等级产品DTO.Misc.料品分类编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_productCategoryName">
+            <summary>
+            料品分类名称
+            信用等级产品DTO.Misc.料品分类名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData.m_creditLimit">
+            <summary>
+            信用额度
+            信用等级产品DTO.Misc.信用额度
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData">
+            <summary>
+            信用等级币种DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.#ctor(UFIDA.U9.CC.PropertyType.CopyOfCreditContentData,System.String,System.Int64,System.String,System.Int32,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.CreditLevelProductDTOData},UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_creditContent">
+            <summary>
+            额度指标
+            信用等级币种DTO.Misc.额度指标
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_creditLimitCurrencyCode">
+            <summary>
+            额币编码
+            信用等级币种DTO.Misc.额币编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_creditLimitCurrencyID">
+            <summary>
+            额币
+            信用等级币种DTO.Misc.额币
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_creditLimitCurrencyName">
+            <summary>
+            额币名称
+            信用等级币种DTO.Misc.额币名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_pledgeCount">
+            <summary>
+            押单比数
+            信用等级币种DTO.Misc.押单比数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_creditLevelProducts">
+            <summary>
+            对象信用等级产品
+            信用等级币种DTO.Misc.对象信用等级产品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData.m_objectCreditLevelAndLevel">
+            <summary>
+            对象信用等级和信用等级
+            信用等级币种DTO.Misc.对象信用等级和信用等级
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData">
+            <summary>
+            对象信用政策和等级 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.#ctor(UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditPolicyData,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData},UFIDA.U9.CC.CreditPolicy.CreditPolicyData,UFIDA.U9.Base.Currency.CurrencyData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.m_objectCreditPolicy">
+            <summary>
+            对象信用政策
+            对象信用政策和等级.Misc.对象信用政策
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.m_objectCreditLevel">
+            <summary>
+            对象信用等级DTO
+            对象信用政策和等级.Misc.对象信用等级DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.m_creditPolicy">
+            <summary>
+            信用政策
+            对象信用政策和等级.Misc.信用政策
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData.m_currency">
+            <summary>
+            额币
+            对象信用政策和等级.Misc.额币
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.TempCreditLoadDefaultDTOData">
+            <summary>
+            临时额度调整单返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.TempCreditLoadDefaultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.TempCreditLoadDefaultDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.Base.Util.OptionalFeatureDTOData},UFIDA.U9.CC.CreditLimitAdjust.CreditLimitDocTypeData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.TempCreditLoadDefaultDTOData.m_optionalFeatureList">
+            <summary>
+            可选配特征集合
+            临时额度调整单返回DTO.Misc.可选配特征集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.TempCreditLoadDefaultDTOData.m_tempCreditDocType">
+            <summary>
+            临时额度调整单单据类型
+            临时额度调整单返回DTO.Misc.临时额度调整单单据类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData">
+            <summary>
+            待核准等级 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData.#ctor(System.Int64,System.String,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData.m_objectCreditLevelApproval">
+            <summary>
+            对象信用等级评定表
+            待核准等级.Misc.对象信用等级评定表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData.m_operater">
+            <summary>
+            核定人
+            待核准等级.Misc.核定人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ApprovalLevelDTOData.m_lastApprovalDate">
+            <summary>
+            核定日期
+            待核准等级.Misc.核定日期
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData">
+            <summary>
+            等级评定分配 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.#ctor(System.Int64,System.Int32,System.Int64,UFIDA.U9.CC.CreditBP.ObjectCreditPolicyDTOData,System.Int32,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.ObjectCreditLevelCurrencyDTOData},System.Int64,System.Int64,System.DateTime,System.String,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_objectType">
+            <summary>
+            对象类型
+            等级评定分配.Misc.对象类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_creditObject">
+            <summary>
+            信用控制对象
+            等级评定分配.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_objectCreditPolicyDTO">
+            <summary>
+            对象信用政策
+            等级评定分配.Misc.对象信用政策
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_controlPoint">
+            <summary>
+            信用控制点
+            等级评定分配.Misc.信用控制点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_objectCreditLevelCurrencyDTO">
+            <summary>
+            对象信用等级
+            等级评定分配.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_dateofRequest">
+            <summary>
+            申请日期
+            等级评定分配.Misc.申请日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_memo">
+            <summary>
+            备注
+            等级评定分配.Misc.备注
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.m_actionType">
+            <summary>
+            操作
+            等级评定分配.Misc.操作
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.CreditPolicy_SKey">
+            <summary>
+            信用政策 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.Misc.信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.CreditPolicy">
+            <summary>
+            信用政策
+            等级评定分配.Misc.信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.CreditLevel_SKey">
+            <summary>
+            信用等级 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.Misc.信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.CreditLevel">
+            <summary>
+            信用等级
+            等级评定分配.Misc.信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.OriginalCreditPolicy_SKey">
+            <summary>
+            初始信用政策 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.Misc.初始信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.OriginalCreditPolicy">
+            <summary>
+            初始信用政策
+            等级评定分配.Misc.初始信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.Applicant_SKey">
+            <summary>
+            申请人 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.Misc.申请人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.Applicant">
+            <summary>
+            申请人
+            等级评定分配.Misc.申请人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.OperatingOrg_SKey">
+            <summary>
+            营运组织 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.OperatingOrg">
+            <summary>
+            营运组织
+            等级评定分配.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.ProposeDept_SKey">
+            <summary>
+            申请部门 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.三洋.申请部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.ProposeDept">
+            <summary>
+            申请部门
+            等级评定分配.三洋.申请部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.BizOrg_SKey">
+            <summary>
+            申请组织 序列化Key属性。（传递跨组织序列列字段）
+            等级评定分配.三洋.申请组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeDTOData.BizOrg">
+            <summary>
+            申请组织
+            等级评定分配.三洋.申请组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData">
+            <summary>
+            对象信用等级和信用等级 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.#ctor(UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditLevelData,UFIDA.U9.CC.CreditPolicy.CreditLevelData,UFIDA.U9.CC.CreditBP.GetObjectCreditPolicyData,System.Collections.Generic.List{UFIDA.U9.CC.CreditBP.CreditLevelCurrencyDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.m_objectCreditLevel">
+            <summary>
+            对象信用等级
+            对象信用等级和信用等级.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.m_creditLevel">
+            <summary>
+            信用等级
+            对象信用等级和信用等级.Misc.信用等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.m_getObjectCreditPolicy">
+            <summary>
+            对象信用政策和等级
+            对象信用等级和信用等级.Misc.对象信用政策和等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.ObjectCreditLevelAndLevelData.m_creditLevelCurrency">
+            <summary>
+            信用等级币种DTO
+            对象信用等级和信用等级.Misc.信用等级币种DTO
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData">
+            <summary>
+            信用等级评定表列表批量操作传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.#ctor(System.Int32,System.Int64,System.String,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.m_operateType">
+            <summary>
+            操作类型
+            信用等级评定表列表批量操作传入DTO.Misc.操作类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.m_sysVersion">
+            <summary>
+            版本
+            信用等级评定表列表批量操作传入DTO.Misc.版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.m_operater">
+            <summary>
+            操作员
+            信用等级评定表列表批量操作传入DTO.Misc.操作员
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.m_bizDate">
+            <summary>
+            操作日期
+            信用等级评定表列表批量操作传入DTO.Misc.操作日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchInDTOData.m_objectCreditLevelApproval">
+            <summary>
+            信用等级评定表
+            信用等级评定表列表批量操作传入DTO.Misc.信用等级评定表
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchOutDTOData">
+            <summary>
+            信用等级评定表列表批量操作返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchOutDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchOutDTOData.m_objectCreditLevelApproval">
+            <summary>
+            信用等级评定表
+            信用等级评定表列表批量操作返回DTO.Misc.信用等级评定表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CreditLevelAppprovalBatchOutDTOData.m_errMsg">
+            <summary>
+            错误原因
+            信用等级评定表列表批量操作返回DTO.Misc.错误原因
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData">
+            <summary>
+            信用评估批量操作入口参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.#ctor(System.Int64,System.Int64,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.m_sysVersion">
+            <summary>
+            版本
+            信用评估批量操作入口参数.Misc.版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.m_operater">
+            <summary>
+            操作员
+            信用评估批量操作入口参数.Misc.操作员
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.m_bizDate">
+            <summary>
+            操作日期
+            信用评估批量操作入口参数.Misc.操作日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckInDTOData.m_objectCreditLevel">
+            <summary>
+            对象信用等级
+            信用评估批量操作入口参数.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckOutDTOData">
+            <summary>
+            信用评估批量操作返回参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckOutDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckOutDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckOutDTOData.m_objectCreditLevel">
+            <summary>
+            对象信用等级
+            信用评估批量操作返回参数.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.BatchSetCreditLevelCheckOutDTOData.m_errMsg">
+            <summary>
+            错误信息
+            信用评估批量操作返回参数.Misc.错误信息
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData">
+            <summary>
+            信用状况查询返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.String,System.String,System.Int64,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.String,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_objectType">
+            <summary>
+            对象类型
+            信用状况查询返回DTO.Misc.对象类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_operaterOrg">
+            <summary>
+            营运组织
+            信用状况查询返回DTO.Misc.营运组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_objectName">
+            <summary>
+            对象
+            信用状况查询返回DTO.Misc.对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_customerSite">
+            <summary>
+            客户位置
+            信用状况查询返回DTO.Misc.客户位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_objectStatus">
+            <summary>
+            信用状态
+            信用状况查询返回DTO.Misc.信用状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditPolicyName">
+            <summary>
+            信用政策名称
+            信用状况查询返回DTO.Misc.信用政策名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditPolicy">
+            <summary>
+            信用政策
+            信用状况查询返回DTO.Misc.信用政策
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_controlPoint">
+            <summary>
+            信用控制点
+            信用状况查询返回DTO.Misc.信用控制点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditLevelName">
+            <summary>
+            信用等级名称
+            信用状况查询返回DTO.Misc.信用等级名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditLevel">
+            <summary>
+            信用等级
+            信用状况查询返回DTO.Misc.信用等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditCurrency">
+            <summary>
+            额度币种
+            信用状况查询返回DTO.Misc.额度币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditLimit">
+            <summary>
+            信用额度
+            信用状况查询返回DTO.Misc.信用额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempCreditLimit">
+            <summary>
+            临时额度
+            信用状况查询返回DTO.Misc.临时额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditLimitUsed">
+            <summary>
+            已使用额度
+            信用状况查询返回DTO.Misc.已使用额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_creditLimitOverage">
+            <summary>
+            额度余额
+            信用状况查询返回DTO.Misc.额度余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_badDebts">
+            <summary>
+            坏账限额
+            信用状况查询返回DTO.Misc.坏账限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempBadDebts">
+            <summary>
+            坏账临时额度
+            信用状况查询返回DTO.Misc.坏账临时额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_badDebtsUsed">
+            <summary>
+            已发生坏账
+            信用状况查询返回DTO.Misc.已发生坏账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_badDebtsOverage">
+            <summary>
+            坏账余额
+            信用状况查询返回DTO.Misc.坏账余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_overdueAR">
+            <summary>
+            逾期应收
+            信用状况查询返回DTO.Misc.逾期应收
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempOverdueAR">
+            <summary>
+            逾期应收临时额度
+            信用状况查询返回DTO.Misc.逾期应收临时额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_overdueARUsed">
+            <summary>
+            已发生逾期应收
+            信用状况查询返回DTO.Misc.已发生逾期应收
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_overdueAROverage">
+            <summary>
+            逾期应收余额
+            信用状况查询返回DTO.Misc.逾期应收余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_maxAccountPeriodDays">
+            <summary>
+            账期天数
+            信用状况查询返回DTO.Misc.账期天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempMaxAccountPeriodDays">
+            <summary>
+            账期临时宽限天数
+            信用状况查询返回DTO.Misc.账期临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currentMaxAccountPeriodDays">
+            <summary>
+            目前最大账期
+            信用状况查询返回DTO.Misc.目前最大账期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_maxAccountPeriodDaysDiff">
+            <summary>
+            账期差异
+            信用状况查询返回DTO.Misc.账期差异
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_maxOverDueDays">
+            <summary>
+            逾期天数
+            信用状况查询返回DTO.Misc.逾期天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempMaxOverDueDays">
+            <summary>
+            逾期临时宽限天数
+            信用状况查询返回DTO.Misc.逾期临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currentMaxOverDueDays">
+            <summary>
+            当前最大逾期天数
+            信用状况查询返回DTO.Misc.当前最大逾期天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_maxOverDueDaysDiff">
+            <summary>
+            逾期天数差异
+            信用状况查询返回DTO.Misc.逾期天数差异
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_lastShipmentedRate">
+            <summary>
+            上次出货未结率
+            信用状况查询返回DTO.Misc.上次出货未结率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempLastShipmentedRate">
+            <summary>
+            出货未结临时宽限
+            信用状况查询返回DTO.Misc.出货未结临时宽限
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_lastShipmentedRateUsed">
+            <summary>
+            实际上次出货未结
+            信用状况查询返回DTO.Misc.实际上次出货未结
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_lastShipmentedRateDiff">
+            <summary>
+            出货未结率差异
+            信用状况查询返回DTO.Misc.出货未结率差异
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_depositAmount">
+            <summary>
+            保证金限额
+            信用状况查询返回DTO.Misc.保证金限额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempDepositAmount">
+            <summary>
+            保证金临时额度
+            信用状况查询返回DTO.Misc.保证金临时额度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currentDepositAmount">
+            <summary>
+            已缴保证金
+            信用状况查询返回DTO.Misc.已缴保证金
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_depositAmountDiff">
+            <summary>
+            保证金差额
+            信用状况查询返回DTO.Misc.保证金差额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_pawnDoc">
+            <summary>
+            可押笔数
+            信用状况查询返回DTO.Misc.可押笔数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_pawnDocUsed">
+            <summary>
+            实押笔数
+            信用状况查询返回DTO.Misc.实押笔数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_objectCreditLevelID">
+            <summary>
+            对象信用等级ID
+            信用状况查询返回DTO.Misc.对象信用等级ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currency_Symbol">
+            <summary>
+            币种符号
+            信用状况查询返回DTO.Misc.币种符号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currency_Presion">
+            <summary>
+            币种精度
+            信用状况查询返回DTO.Misc.币种精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currency_RoundType">
+            <summary>
+            币种舍入类型
+            信用状况查询返回DTO.Misc.币种舍入类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_currency_RoundValue">
+            <summary>
+            币种舍入值
+            信用状况查询返回DTO.Misc.币种舍入值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_maxGoodsDays">
+            <summary>
+            货龄天数
+            信用状况查询返回DTO.Misc.货龄天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_tempGoodsDays">
+            <summary>
+            货龄临时宽限天数
+            信用状况查询返回DTO.Misc.货龄临时宽限天数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_curGoodsDays">
+            <summary>
+            目前最大货龄
+            信用状况查询返回DTO.Misc.目前最大货龄
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryReturnDTOData.m_goodsDayDiff">
+            <summary>
+            货龄差异
+            信用状况查询返回DTO.Misc.货龄差异
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData">
+            <summary>
+            信用状况查询传入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.#ctor(System.Collections.Generic.List{System.Int64},System.Int32,System.Int32,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.m_creditObjects">
+            <summary>
+            信用控制对象集合
+            信用状况查询传入DTO.Misc.信用控制对象集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.m_objectStatus">
+            <summary>
+            对象状态
+            信用状况查询传入DTO.Misc.对象状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.m_creditCM">
+            <summary>
+            控管方式
+            信用状况查询传入DTO.Misc.控管方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.m_queryDate">
+            <summary>
+            查询日期
+            信用状况查询传入DTO.Misc.查询日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.CreditObjects_SKey">
+            <summary>
+            信用控制对象集合 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            信用状况查询传入DTO.Misc.信用控制对象集合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.CreditCurrency_SKey">
+            <summary>
+            额度币种 序列化Key属性。（传递跨组织序列列字段）
+            信用状况查询传入DTO.Misc.额度币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CCQueryInputDTOData.CreditCurrency">
+            <summary>
+            额度币种
+            信用状况查询传入DTO.Misc.额度币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditLevelNeedCheckException">
+            <summary>
+            异常类型: 对象等级需要重新核定异常
+            
+             对象等级需要重新核定
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelNeedCheckException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 对象等级需要重新核定异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelNeedCheckException.#ctor">
+            <summary>
+            异常类型: 对象等级需要重新核定异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditLevelNeedCheckException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 对象等级需要重新核定异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CurrencyCheckException">
+            <summary>
+            异常类型: 币种校验异常
+            
+             对象没有设置交易币种:${CurrencyName}的信用信用额度，交验不能通过
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CurrencyCheckException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 币种校验异常 Constructor
+            </summary>
+            <param name="currencyName">币种名称</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CurrencyCheckException.#ctor(System.String)">
+            <summary>
+            异常类型: 币种校验异常 Constructor
+            </summary>
+            <param name="currencyName">币种名称</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CurrencyCheckException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 币种校验异常 Constructor
+            </summary>
+            <param name="currencyName">币种名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CurrencyCheckException.CurrencyName">
+            <summary>
+            币种名称
+            币种校验异常.Misc.币种名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.TempCreditNotExistException">
+            <summary>
+            异常类型: 终止临时额度调整单异常
+            
+             临时额度调整单不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.TempCreditNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 终止临时额度调整单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.TempCreditNotExistException.#ctor">
+            <summary>
+            异常类型: 终止临时额度调整单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.TempCreditNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 终止临时额度调整单异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ClearObjectException1">
+            <summary>
+            异常类型: 清除对象异常1
+            
+             信用控制对象不存在或者已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 清除对象异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException1.#ctor">
+            <summary>
+            异常类型: 清除对象异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 清除对象异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ClearObjectException2">
+            <summary>
+            异常类型: 清除对象异常2
+            
+             对象信用政策不存在或者已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 清除对象异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException2.#ctor">
+            <summary>
+            异常类型: 清除对象异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 清除对象异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ClearObjectException3">
+            <summary>
+            异常类型: 清除对象异常3
+            
+             信用政策不存在或者已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException3.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 清除对象异常3 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException3.#ctor">
+            <summary>
+            异常类型: 清除对象异常3 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ClearObjectException3.#ctor(System.Exception)">
+            <summary>
+            异常类型: 清除对象异常3 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCheckException1">
+            <summary>
+            异常类型: 信用检查异常1
+            
+             信用对象被信用Hold
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用检查异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException1.#ctor">
+            <summary>
+            异常类型: 信用检查异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用检查异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCheckException2">
+            <summary>
+            异常类型: 信用检查异常2
+            
+             对象信用余额不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用检查异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException2.#ctor">
+            <summary>
+            异常类型: 信用检查异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用检查异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException1">
+            <summary>
+            异常类型: 信用等级分配异常1
+            
+             信用等级不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用等级分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException1.#ctor">
+            <summary>
+            异常类型: 信用等级分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用等级分配异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException2">
+            <summary>
+            异常类型: 信用等级分配异常2
+            
+             分配的信用等级对应的信用政策和此对象已分配信用政策不符，不能分配等级
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用等级分配异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException2.#ctor">
+            <summary>
+            异常类型: 信用等级分配异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelDistributeException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用等级分配异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeException1">
+            <summary>
+            异常类型: 信用政策分配异常1
+            
+             信用政策不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用政策分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeException1.#ctor">
+            <summary>
+            异常类型: 信用政策分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicyDistributeException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用政策分配异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditRecalculationException1">
+            <summary>
+            异常类型: 信用重算异常1
+            
+             对象信用余额表不存在或已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用重算异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException1.#ctor">
+            <summary>
+            异常类型: 信用重算异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用重算异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditRecalculationException2">
+            <summary>
+            异常类型: 信用重算异常2
+            
+             对象信用政策不存在或已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用重算异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException2.#ctor">
+            <summary>
+            异常类型: 信用重算异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditRecalculationException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用重算异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetCreditLevelException1">
+            <summary>
+            异常类型: 取信用等级异常1
+            
+             信用等级不存在或已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取信用等级异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException1.#ctor">
+            <summary>
+            异常类型: 取信用等级异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取信用等级异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetCreditLevelException2">
+            <summary>
+            异常类型: 取信用等级异常2
+            
+             对象信用等级不存在或已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取信用等级异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException2.#ctor">
+            <summary>
+            异常类型: 取信用等级异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取信用等级异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetCreditLevelException3">
+            <summary>
+            异常类型: 取信用等级异常3
+            
+             对象没有设置交易币种${Currency}的信用额度，校验不能通过
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException3.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取信用等级异常3 Constructor
+            </summary>
+            <param name="currency">币种</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException3.#ctor(System.String)">
+            <summary>
+            异常类型: 取信用等级异常3 Constructor
+            </summary>
+            <param name="currency">币种</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditLevelException3.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 取信用等级异常3 Constructor
+            </summary>
+            <param name="currency">币种</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.GetCreditLevelException3.Currency">
+            <summary>
+            币种
+            取信用等级异常3.Misc.币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.GetCreditObjectException">
+            <summary>
+            异常类型: 取信用控制对象异常
+            
+             对象必须输入
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditObjectException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取信用控制对象异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditObjectException.#ctor">
+            <summary>
+            异常类型: 取信用控制对象异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.GetCreditObjectException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取信用控制对象异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCheckException3">
+            <summary>
+            异常类型: 信用检查异常3
+            
+             额度币种和单据币种无法转换，不能检查信用
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException3.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用检查异常3 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException3.#ctor">
+            <summary>
+            异常类型: 信用检查异常3 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException3.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用检查异常3 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.SetCreditObjectStateException">
+            <summary>
+            异常类型: 设置信用控制对象状态异常
+            
+             信用挂起时，挂起原因不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetCreditObjectStateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 设置信用控制对象状态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetCreditObjectStateException.#ctor">
+            <summary>
+            异常类型: 设置信用控制对象状态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetCreditObjectStateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 设置信用控制对象状态异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException1">
+            <summary>
+            异常类型: 信用等级评定分配异常1
+            
+             已存在该信用等级评定表
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用等级评定分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException1.#ctor">
+            <summary>
+            异常类型: 信用等级评定分配异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用等级评定分配异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException2">
+            <summary>
+            异常类型: 信用等级评定分配异常2
+            
+             客户位置不存在或已被删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用等级评定分配异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException2.#ctor">
+            <summary>
+            异常类型: 信用等级评定分配异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelApprovalDistributeException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用等级评定分配异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.SetObjectStateException1">
+            <summary>
+            异常类型: 设置信用控制对象状态异常1
+            
+             信用控制对象已被其他人修改,当前操作不能保存
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetObjectStateException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 设置信用控制对象状态异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetObjectStateException1.#ctor">
+            <summary>
+            异常类型: 设置信用控制对象状态异常1 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.SetObjectStateException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 设置信用控制对象状态异常1 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCheckException4">
+            <summary>
+            异常类型: 信用检查异常4
+            
+             产品没有设置信用额度
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException4.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用检查异常4 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException4.#ctor">
+            <summary>
+            异常类型: 信用检查异常4 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCheckException4.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用检查异常4 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException">
+            <summary>
+            异常类型: 信用客户联动异常
+            
+             信用政策的信用控制点与信用等级1不匹配
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用客户联动异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException.#ctor">
+            <summary>
+            异常类型: 信用客户联动异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用客户联动异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException2">
+            <summary>
+            异常类型: 信用客户联动异常2
+            
+             信用政策的信用控制点与信用等级2不匹配
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用客户联动异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException2.#ctor">
+            <summary>
+            异常类型: 信用客户联动异常2 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditCustomerLingageException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用客户联动异常2 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLimitSensitiveException">
+            <summary>
+            异常类型: 额度占用规则敏感性异常
+            
+             存在该额度占用规则的对象信用政策，#{UFIDA.U9.CC.CreditPolicy.CreditLimitRate:CreditPoint}不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitSensitiveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 额度占用规则敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitSensitiveException.#ctor">
+            <summary>
+            异常类型: 额度占用规则敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLimitSensitiveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 额度占用规则敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException">
+            <summary>
+            异常类型: 信用政策敏感性异常
+            
+             存在该信用政策的${EntityName},${EntityAttribute}不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityName">实体名称</param>
+            <param name="entityAttribute">实体属性</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityName">实体名称</param>
+            <param name="entityAttribute">实体属性</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityName">实体名称</param>
+            <param name="entityAttribute">实体属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException.EntityName">
+            <summary>
+            实体名称
+            信用政策敏感性异常.Misc.实体名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.CreditPolicySensitiveException.EntityAttribute">
+            <summary>
+            实体属性
+            信用政策敏感性异常.Misc.实体属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.ObjectCreditPolicySensitiveException">
+            <summary>
+            异常类型: 对象信用政策敏感性异常
+            
+             该对象信用政策的对象信用等级币种档中有${EntityAttribute}数据，${EntityAttribute}不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditPolicySensitiveException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 对象信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityAttribute">实体属性</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditPolicySensitiveException.#ctor(System.String)">
+            <summary>
+            异常类型: 对象信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityAttribute">实体属性</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.ObjectCreditPolicySensitiveException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 对象信用政策敏感性异常 Constructor
+            </summary>
+            <param name="entityAttribute">实体属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.ObjectCreditPolicySensitiveException.EntityAttribute">
+            <summary>
+            实体属性
+            对象信用政策敏感性异常.Misc.实体属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditlevelNotExistException">
+            <summary>
+            异常类型: 信用等级不存在或已被删除异常
+            
+             信用等级不存在或已被删除!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditlevelNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用等级不存在或已被删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditlevelNotExistException.#ctor">
+            <summary>
+            异常类型: 信用等级不存在或已被删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditlevelNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用等级不存在或已被删除异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditObjectCheckedException">
+            <summary>
+            异常类型: 异该信用控制对象已正常检查常
+            
+             该信用控制对象已正常检查!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditObjectCheckedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 异该信用控制对象已正常检查常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditObjectCheckedException.#ctor">
+            <summary>
+            异常类型: 异该信用控制对象已正常检查常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditObjectCheckedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 异该信用控制对象已正常检查常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditLevelNotCompletedException">
+            <summary>
+            异常类型: 选中对象的信用等级未定义完整异常
+            
+             选中对象的信用等级未定义完整!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelNotCompletedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 选中对象的信用等级未定义完整异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelNotCompletedException.#ctor">
+            <summary>
+            异常类型: 选中对象的信用等级未定义完整异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditLevelNotCompletedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 选中对象的信用等级未定义完整异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.CreditBalanceNotExistException">
+            <summary>
+            异常类型: 信用余额表不存在或已被删除异常
+            
+             信用余额表不存在或已被删除!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditBalanceNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用余额表不存在或已被删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditBalanceNotExistException.#ctor">
+            <summary>
+            异常类型: 信用余额表不存在或已被删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditBP.CreditBalanceNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用余额表不存在或已被删除异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

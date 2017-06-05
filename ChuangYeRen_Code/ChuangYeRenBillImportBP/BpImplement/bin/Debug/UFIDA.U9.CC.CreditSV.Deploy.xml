@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.CC.CreditSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData">
+            <summary>
+            取对象信用等级 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.#ctor(System.Int64,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.m_objectCreditLevel">
+            <summary>
+            对象信用等级
+            取对象信用等级.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.CreditControlObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            取对象信用等级.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.CreditControlObject">
+            <summary>
+            信用控制对象
+            取对象信用等级.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.GetObjectCreditLevelInfoDTOData.ObjectCreditLevel_SKey">
+            <summary>
+            对象信用等级 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            取对象信用等级.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.GetCreditCurrencyException">
+            <summary>
+            异常类型: 核算币种非额度设置币种异常
+            
+             核算币种非额度设置币种
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.GetCreditCurrencyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 核算币种非额度设置币种异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.GetCreditCurrencyException.#ctor">
+            <summary>
+            异常类型: 核算币种非额度设置币种异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.GetCreditCurrencyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 核算币种非额度设置币种异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CreditControlOpenCBOException">
+            <summary>
+            异常类型: 信用控制启用异常
+            
+             当前组织下已存在信用管理数据，不能取消信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlOpenCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用控制启用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlOpenCBOException.#ctor">
+            <summary>
+            异常类型: 信用控制启用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlOpenCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用控制启用异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CreditParaCBOException">
+            <summary>
+            异常类型: 信用控制参数异常
+            
+             客户、立账位置、客户集团至少有一个为True。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditParaCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用控制参数异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditParaCBOException.#ctor">
+            <summary>
+            异常类型: 信用控制参数异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditParaCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用控制参数异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelSalesPersonLayerCCCBOException">
+            <summary>
+            异常类型: 业务员层信用控制关闭异常
+            
+             当前组织下已有业务员定义信用政策，不能取消业务员层信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelSalesPersonLayerCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 业务员层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelSalesPersonLayerCCCBOException.#ctor">
+            <summary>
+            异常类型: 业务员层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelSalesPersonLayerCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 业务员层信用控制关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelCustomerLayerCCCBOException">
+            <summary>
+            异常类型: 客户层信用控制关闭异常
+            
+             当前组织下已有客户定义信用政策，不能取消客户层信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerLayerCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 客户层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerLayerCCCBOException.#ctor">
+            <summary>
+            异常类型: 客户层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerLayerCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 客户层信用控制关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelCustomerGroupLayerCCCBOException">
+            <summary>
+            异常类型: 客户集团层信用控制关闭异常
+            
+             当前组织下已有集团客户定义信用政策，不能取消客户集团层信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerGroupLayerCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 客户集团层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerGroupLayerCCCBOException.#ctor">
+            <summary>
+            异常类型: 客户集团层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerGroupLayerCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 客户集团层信用控制关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelCustomerSiteLayerCCCBOException">
+            <summary>
+            异常类型: 客户位置层信用控制关闭异常
+            
+             当前组织下已有客户位置定义信用政策，不能取消客户位置层信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerSiteLayerCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 客户位置层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerSiteLayerCCCBOException.#ctor">
+            <summary>
+            异常类型: 客户位置层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelCustomerSiteLayerCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 客户位置层信用控制关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelDepartmentLayerCCCBOException">
+            <summary>
+            异常类型: 部门层信用控制关闭异常
+            
+             当前组织下已有业务部门定义信用政策，不能取消部门层信用控制。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelDepartmentLayerCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 部门层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelDepartmentLayerCCCBOException.#ctor">
+            <summary>
+            异常类型: 部门层信用控制关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelDepartmentLayerCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 部门层信用控制关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CancelItemDimensionCCCBOException">
+            <summary>
+            异常类型: 产品信用控制纬度关闭异常
+            
+             当前组织里已启用并设置了产品(线)的信用控制数据，不能取消产品(线)的信用控制纬度。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelItemDimensionCCCBOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 产品信用控制纬度关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelItemDimensionCCCBOException.#ctor">
+            <summary>
+            异常类型: 产品信用控制纬度关闭异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CancelItemDimensionCCCBOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 产品信用控制纬度关闭异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException1">
+            <summary>
+            异常类型: 物料敏感性异常
+            
+             物料已被信用等级产品子档使用不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException1.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException1.#ctor">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException1.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException2">
+            <summary>
+            异常类型: 物料敏感性异常
+            
+             物料已被对象信用等级产品子档使用不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException2.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException2.#ctor">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException2.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException3">
+            <summary>
+            异常类型: 物料敏感性异常
+            
+             物料已被对象信用余额产品子档使用不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException3.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException3.#ctor">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException3.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException4">
+            <summary>
+            异常类型: 物料敏感性异常
+            
+             物料已被临时额度变更单体使用不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException4.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException4.#ctor">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException4.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException5">
+            <summary>
+            异常类型: 物料敏感性异常
+            
+             物料已被对象信用期初产品子表使用不能修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException5.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException5.#ctor">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CheckItemAllowSaveException5.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料敏感性异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CreditCheckException">
+            <summary>
+            异常类型: 信用检查异常
+            
+             组织${Org}下，${CreditObject}的信用检查未通过,超标的指标项为：${Item}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditCheckException.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用检查异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="creditObject">信用控制对象</param>
+            <param name="item">超信项目</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditCheckException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            异常类型: 信用检查异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="creditObject">信用控制对象</param>
+            <param name="item">超信项目</param>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditCheckException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 信用检查异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="creditObject">信用控制对象</param>
+            <param name="item">超信项目</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.CreditCheckException.Org">
+            <summary>
+            组织
+            信用检查异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.CreditCheckException.CreditObject">
+            <summary>
+            信用控制对象
+            信用检查异常.Misc.信用控制对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.CreditCheckException.Item">
+            <summary>
+            超信项目
+            信用检查异常.Misc.超信项目
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.AccountNotNullException">
+            <summary>
+            异常类型: 取额度币种异常
+            
+             核币不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.AccountNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取额度币种异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.AccountNotNullException.#ctor">
+            <summary>
+            异常类型: 取额度币种异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.AccountNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取额度币种异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CharacterConfigException">
+            <summary>
+            异常类型: 特征选配异常
+            
+             未选配多维度信用特征
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CharacterConfigException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 特征选配异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CharacterConfigException.#ctor">
+            <summary>
+            异常类型: 特征选配异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CharacterConfigException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 特征选配异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.CreditControlProductNotNullException">
+            <summary>
+            异常类型: 信用控制纬度非空时, 信用控制纬度值不能为空异常
+            
+             信用控制纬度非空时, 信用控制纬度值不能为空!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlProductNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 信用控制纬度非空时, 信用控制纬度值不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlProductNotNullException.#ctor">
+            <summary>
+            异常类型: 信用控制纬度非空时, 信用控制纬度值不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CC.CreditSV.CreditControlProductNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 信用控制纬度非空时, 信用控制纬度值不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.CC.CreditSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>
