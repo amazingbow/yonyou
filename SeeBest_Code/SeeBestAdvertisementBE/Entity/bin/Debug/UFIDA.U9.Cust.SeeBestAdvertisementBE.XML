@@ -158,21 +158,21 @@
         </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.AdvCode">
             <summary>
-            编号 (该属性可为空,且无默认值)
+            编号 (该属性不可为空,且无默认值)
             广告申请单.Misc.编号
             </summary>
             <value></value>
         </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.ApplyDept">
             <summary>
-            办事处 (该属性可为空,且无默认值)
+            办事处 (该属性不可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
         </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.ApplyDeptKey">
             <summary>
-            办事处 的Key (该属性可为空,且无默认值)
+            办事处 的Key (该属性不可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -270,7 +270,7 @@
         </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.Qty">
             <summary>
-            数量 (该属性可为空,但有默认值)
+            数量 (该属性不可为空,但有默认值)
             广告申请单.Misc.数量
             </summary>
             <value></value>
@@ -345,17 +345,31 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:AdvertisementApplyBE.AdvApplyBE.AdvAbout">
-            <summary>
-            广告体现项目 (该属性可为空,且无默认值)
-            广告申请单.Misc.广告体现项目
-            </summary>
-            <value></value>
-        </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.AdvMemo">
             <summary>
             客户排版文字信息 (该属性可为空,且无默认值)
             广告申请单.Misc.客户排版文字信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.ApproveQty">
+            <summary>
+            核销数量 (该属性可为空,但有默认值)
+            广告申请单.Misc.核销数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.IsClose">
+            <summary>
+            关闭 (该属性可为空,但有默认值)
+            广告申请单.Misc.关闭
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.AdvAboutBE">
+            <summary>
+            广告体现项目子表 (该属性可为空,且无默认值)
+            广告申请单.Misc.广告体现项目子表
             </summary>
             <value></value>
         </member>
@@ -524,14 +538,24 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDispInfo2")的方式取资源
             </summary>
         </member>
-        <member name="P:AdvertisementApplyBE.AdvApplyBE.Res_AdvAbout">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvAbout")的方式取资源
-            </summary>
-        </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.Res_AdvMemo">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvMemo")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.Res_ApproveQty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApproveQty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.Res_AdvAboutBE">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvAboutBE")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.Res_IsClose">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsClose")的方式取资源
             </summary>
         </member>
         <member name="T:AdvertisementApplyBE.AdvApplyBE.EntityKey">
@@ -624,7 +648,7 @@
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvCode">
             <summary>
              OrginalData属性。只可读。
-            编号 (该属性可为空,且无默认值)
+            编号 (该属性不可为空,且无默认值)
             广告申请单.Misc.编号
             </summary>
             <value></value>
@@ -632,7 +656,7 @@
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ApplyDept">
             <summary>
              OrginalData属性。只可读。
-            办事处 (该属性可为空,且无默认值)
+            办事处 (该属性不可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -640,7 +664,7 @@
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ApplyDeptKey">
             <summary>
             EntityKey 属性
-            办事处 的Key (该属性可为空,且无默认值)
+            办事处 的Key (该属性不可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -752,7 +776,7 @@
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.Qty">
             <summary>
              OrginalData属性。只可读。
-            数量 (该属性可为空,但有默认值)
+            数量 (该属性不可为空,但有默认值)
             广告申请单.Misc.数量
             </summary>
             <value></value>
@@ -837,19 +861,34 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvAbout">
-            <summary>
-             OrginalData属性。只可读。
-            广告体现项目 (该属性可为空,且无默认值)
-            广告申请单.Misc.广告体现项目
-            </summary>
-            <value></value>
-        </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvMemo">
             <summary>
              OrginalData属性。只可读。
             客户排版文字信息 (该属性可为空,且无默认值)
             广告申请单.Misc.客户排版文字信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ApproveQty">
+            <summary>
+             OrginalData属性。只可读。
+            核销数量 (该属性可为空,但有默认值)
+            广告申请单.Misc.核销数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.IsClose">
+            <summary>
+             OrginalData属性。只可读。
+            关闭 (该属性可为空,但有默认值)
+            广告申请单.Misc.关闭
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvAboutBE">
+            <summary>
+            广告体现项目子表 (该属性可为空,且无默认值)
+            广告申请单.Misc.广告体现项目子表
             </summary>
             <value></value>
         </member>
@@ -1023,14 +1062,432 @@
             属性: 版面要求2 的名称
             </summary>
         </member>
-        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityRes.AdvAbout">
-            <summary>
-            属性: 广告体现项目 的名称
-            </summary>
-        </member>
         <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityRes.AdvMemo">
             <summary>
             属性: 客户排版文字信息 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityRes.ApproveQty">
+            <summary>
+            属性: 核销数量 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityRes.AdvAboutBE">
+            <summary>
+            属性: 广告体现项目子表 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvApplyBE.EntityRes.IsClose">
+            <summary>
+            属性: 关闭 的名称
+            </summary>
+        </member>
+        <member name="T:AdvertisementApplyBE.AdvAboutBE">
+            <summary>
+            实体: 广告体现项目子表
+            
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.Create(AdvertisementApplyBE.AdvApplyBE)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.CreateDefault(AdvertisementApplyBE.AdvApplyBE)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.FromEntityData(AdvertisementApplyBE.AdvAboutBEData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.ToEntityData(AdvertisementApplyBE.AdvAboutBEData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            广告体现项目子表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            广告体现项目子表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.AdvApplyBE">
+            <summary>
+            广告申请单 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.AdvApplyBEKey">
+            <summary>
+            广告申请单 的Key (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.Res_AdvApplyBE">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyBE")的方式取资源
+            </summary>
+        </member>
+        <member name="T:AdvertisementApplyBE.AdvAboutBE.EntityKey">
+            <summary>
+            Strong Class AdvAboutBE EntityKey 
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:AdvertisementApplyBE.AdvAboutBE.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:AdvertisementApplyBE.AdvAboutBE.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            广告体现项目子表.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            广告体现项目子表.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            广告体现项目子表.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            代码 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.代码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            名称 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.AdvApplyBE">
+            <summary>
+             OrginalData属性。只可读。
+            广告申请单 (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityOriginal.AdvApplyBEKey">
+            <summary>
+            EntityKey 属性
+            广告申请单 的Key (该属性可为空,且无默认值)
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:AdvertisementApplyBE.AdvAboutBE.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.Code">
+            <summary>
+            属性: 代码 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.Name">
+            <summary>
+            属性: 名称 的名称
+            </summary>
+        </member>
+        <member name="P:AdvertisementApplyBE.AdvAboutBE.EntityRes.AdvApplyBE">
+            <summary>
+            属性: 广告申请单 的名称
             </summary>
         </member>
         <member name="T:AdvertisementApplyBE.AdvDisplayTypeEnum">

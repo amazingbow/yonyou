@@ -52,6 +52,8 @@ namespace AdvertisementApplyBE
                         
                         
                         
+                                        knownTypes.Add(typeof(List<AdvertisementApplyBE.AdvAboutBEData>));
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -96,7 +98,9 @@ namespace AdvertisementApplyBE
 	     							AdvDisplayType= 0; 			     			
 	     			
 	     			
+	     							ApproveQty=0m; 
 	     			
+	     							IsClose=false; 
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -139,6 +143,29 @@ namespace AdvertisementApplyBE
 			set	
 			{	
 				m_advDisplayType = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 广告体现项目子表
+		/// 广告申请单.Misc.广告体现项目子表
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private List<AdvertisementApplyBE.AdvAboutBEData> m_advAboutBE;
+		public List<AdvertisementApplyBE.AdvAboutBEData> AdvAboutBE
+		{
+			get	
+			{	
+				if (m_advAboutBE == null)
+				{
+					List<AdvertisementApplyBE.AdvAboutBEData> m_list = new List<AdvertisementApplyBE.AdvAboutBEData>() ;
+					m_advAboutBE = m_list;
+				}
+				return m_advAboutBE ;
+			}
+			set	
+			{	
+				m_advAboutBE = value ;
 			}
 		}		
 
@@ -774,25 +801,6 @@ namespace AdvertisementApplyBE
 		
 
 				/// <summary>
-		/// 广告体现项目
-		/// 广告申请单.Misc.广告体现项目
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advAbout ;
-		public System.String AdvAbout
-		{
-			get	
-			{	
-				return m_advAbout  ;
-			}
-			set	
-			{	
-				m_advAbout = value ;	
-			}
-		}
-		
-
-				/// <summary>
 		/// 客户排版文字信息
 		/// 广告申请单.Misc.客户排版文字信息
 		/// </summary>
@@ -810,10 +818,48 @@ namespace AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 核销数量
+		/// 广告申请单.Misc.核销数量
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Decimal m_approveQty ;
+		public System.Decimal ApproveQty
+		{
+			get	
+			{	
+				return m_approveQty  ;
+			}
+			set	
+			{	
+				m_approveQty = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 关闭
+		/// 广告申请单.Misc.关闭
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Boolean m_isClose ;
+		public System.Boolean IsClose
+		{
+			get	
+			{	
+				return m_isClose  ;
+			}
+			set	
+			{	
+				m_isClose = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																	
+																																			
 		#endregion 		
 	}	
 

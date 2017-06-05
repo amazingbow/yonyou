@@ -248,7 +248,7 @@
                     successVoucher.CreatedBy = item.SapCreater;
                     successVoucher.Auditor = item.SapAuditor;
                     successVoucher.Poster = item.SapPoster;
-                    //successVoucher.Cashier = item.SapCashier;
+                    successVoucher.Cashier = item.SapCashier;
                     session.Commit();
                 }
             }
@@ -313,17 +313,28 @@
                 }
                 cfVoucherItem.CashFlowItem = cashFlowItem;
                 cfVoucherItem.CashFlowItemAttr = cashFlowItem.ItemProperty;
+
                 if (Math.Abs(successVoucher.Entries[i].AccountedDr) > 0)//借方金额绝对值>0则 是借方
                 {
                     cfVoucherItem.DrAccount = successVoucher.Entries[i].Account;
                     cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedDr;//本币金额
                     cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredDr;//原币金额
+                    if (cfVoucherItem.CashFlowItemAttr == CashFlowItemPropertyEnum.OutFlowOrReduce)
+                    {
+                        cfVoucherItem.LCMoney = cfVoucherItem.LCMoney * -1;//本币金额
+                        cfVoucherItem.OCMoney = cfVoucherItem.OCMoney * -1;//原币金额
+                    }
                 }
                 else
                 {
                     cfVoucherItem.CrAccount = successVoucher.Entries[i].Account;
                     cfVoucherItem.LCMoney = successVoucher.Entries[i].AccountedCr;//本币金额
                     cfVoucherItem.OCMoney = successVoucher.Entries[i].EnteredCr;//原币金额
+                    if (cfVoucherItem.CashFlowItemAttr == CashFlowItemPropertyEnum.InFlowOrAdd)
+                    {
+                        cfVoucherItem.LCMoney = cfVoucherItem.LCMoney * -1;//本币金额
+                        cfVoucherItem.OCMoney = cfVoucherItem.OCMoney * -1;//原币金额
+                    }
                 }
                 cfVoucherItem.Currency = successVoucher.Entries[i].Currency;
                 cfVoucherItem.OCToFCExchangeRate = successVoucher.Entries[i].OCToFCExchangeRate;//汇率

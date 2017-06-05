@@ -33,7 +33,7 @@ namespace AdvertisementApplyBE
 		/// <returns>Instance</returns>
 		public  static AdvApplyBE Create() {
 			AdvApplyBE entity = (AdvApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																																																						 
+																																																																																																									 
 			return entity;
 		}
 
@@ -412,7 +412,7 @@ namespace AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 编号 (该属性可为空,且无默认值)
+			/// 编号 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.编号
 			/// </summary>
 			/// <value></value>
@@ -431,7 +431,7 @@ namespace AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 办事处 (该属性可为空,且无默认值)
+			/// 办事处 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.办事处
 			/// </summary>
 			/// <value></value>
@@ -451,7 +451,7 @@ namespace AdvertisementApplyBE
    		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_ApplyDeptKey ;
 		/// <summary>
 		/// EntityKey 属性
-		/// 办事处 的Key (该属性可为空,且无默认值)
+		/// 办事处 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -725,7 +725,7 @@ namespace AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 数量 (该属性可为空,但有默认值)
+			/// 数量 (该属性不可为空,但有默认值)
 			/// 广告申请单.Misc.数量
 			/// </summary>
 			/// <value></value>
@@ -935,25 +935,6 @@ namespace AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 广告体现项目 (该属性可为空,且无默认值)
-			/// 广告申请单.Misc.广告体现项目
-			/// </summary>
-			/// <value></value>
-			public  System.String AdvAbout
-			{
-				get
-				{
-					System.String value  = (System.String)base.GetValue("AdvAbout");
-					return value;
-						}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
 			/// 客户排版文字信息 (该属性可为空,且无默认值)
 			/// 广告申请单.Misc.客户排版文字信息
 			/// </summary>
@@ -970,11 +951,76 @@ namespace AdvertisementApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 核销数量 (该属性可为空,但有默认值)
+			/// 广告申请单.Misc.核销数量
+			/// </summary>
+			/// <value></value>
+			public  System.Decimal ApproveQty
+			{
+				get
+				{
+					System.Decimal value  = (System.Decimal)base.GetValue("ApproveQty");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 关闭 (该属性可为空,但有默认值)
+			/// 广告申请单.Misc.关闭
+			/// </summary>
+			/// <value></value>
+			public  System.Boolean IsClose
+			{
+				get
+				{
+					System.Boolean value  = (System.Boolean)base.GetValue("IsClose");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
 
 			#region List member						
+		
+			
+			private List<AdvertisementApplyBE.AdvAboutBE> m_AdvAboutBE  ;
+			/// <summary>
+			/// 广告体现项目子表 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.广告体现项目子表
+			/// </summary>
+			/// <value></value>
+			public  List<AdvertisementApplyBE.AdvAboutBE> AdvAboutBE
+			{
+				get
+				{
+					if (m_AdvAboutBE == null)
+						m_AdvAboutBE = new List<AdvertisementApplyBE.AdvAboutBE>();
+					m_AdvAboutBE.Clear();	
+					foreach (AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE)
+					{
+						if (child.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
+							m_AdvAboutBE.Add(child);
+					}
+					foreach (AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE.DelLists)
+					{
+						m_AdvAboutBE.Add(child);
+					}
+					return m_AdvAboutBE;
+				}
+			}
 			#endregion
 
 			#region Be List member						
@@ -1140,7 +1186,7 @@ namespace AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 编号 (该属性可为空,且无默认值)
+		/// 编号 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.编号
 		/// </summary>
 		/// <value></value>
@@ -1164,7 +1210,7 @@ namespace AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 办事处 (该属性可为空,且无默认值)
+		/// 办事处 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -1195,7 +1241,7 @@ namespace AdvertisementApplyBE
 
    		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_ApplyDeptKey ;
 		/// <summary>
-		/// 办事处 的Key (该属性可为空,且无默认值)
+		/// 办事处 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -1557,7 +1603,7 @@ namespace AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 数量 (该属性可为空,但有默认值)
+		/// 数量 (该属性不可为空,但有默认值)
 		/// 广告申请单.Misc.数量
 		/// </summary>
 		/// <value></value>
@@ -1825,30 +1871,6 @@ namespace AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 广告体现项目 (该属性可为空,且无默认值)
-		/// 广告申请单.Misc.广告体现项目
-		/// </summary>
-		/// <value></value>
-			public  System.String AdvAbout
-		{
-			get
-			{
-				System.String value  = (System.String)base.GetValue("AdvAbout");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("AdvAbout", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
 		/// 客户排版文字信息 (该属性可为空,且无默认值)
 		/// 广告申请单.Misc.客户排版文字信息
 		/// </summary>
@@ -1871,11 +1893,78 @@ namespace AdvertisementApplyBE
 
 
 
+		
+			/// <summary>
+		/// 核销数量 (该属性可为空,但有默认值)
+		/// 广告申请单.Misc.核销数量
+		/// </summary>
+		/// <value></value>
+			public  System.Decimal ApproveQty
+		{
+			get
+			{
+				System.Decimal value  = (System.Decimal)base.GetValue("ApproveQty");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("ApproveQty", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 关闭 (该属性可为空,但有默认值)
+		/// 广告申请单.Misc.关闭
+		/// </summary>
+		/// <value></value>
+			public  System.Boolean IsClose
+		{
+			get
+			{
+				System.Boolean value  = (System.Boolean)base.GetValue("IsClose");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("IsClose", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
 
 		#region List member						
+	
+		
+		private AdvertisementApplyBE.AdvAboutBE.EntityList m_AdvAboutBE  ;
+		/// <summary>
+		/// 广告体现项目子表 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.广告体现项目子表
+		/// </summary>
+		/// <value></value>
+		public  AdvertisementApplyBE.AdvAboutBE.EntityList AdvAboutBE
+		{
+			get
+			{
+				if (m_AdvAboutBE == null)
+					m_AdvAboutBE = new AdvertisementApplyBE.AdvAboutBE.EntityList("AdvApplyBE",this,"AdvAboutBE",(IList)this.GetRelation("AdvAboutBE"));
+				else
+					m_AdvAboutBE.InnerList = (IList)this.GetRelation("AdvAboutBE");
+				return m_AdvAboutBE;
+			}
+		}
 		#endregion
 
 		#region Be List member						
@@ -2051,15 +2140,25 @@ namespace AdvertisementApplyBE
 		[Obsolete("")]
 		public string Res_AdvDispInfo2　{ get { return EntityRes.GetResource("AdvDispInfo2");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvAbout")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_AdvAbout　{ get { return EntityRes.GetResource("AdvAbout");　}　}
-		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvMemo")的方式取资源
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvMemo　{ get { return EntityRes.GetResource("AdvMemo");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApproveQty")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_ApproveQty　{ get { return EntityRes.GetResource("ApproveQty");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvAboutBE")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvAboutBE　{ get { return EntityRes.GetResource("AdvAboutBE");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsClose")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_IsClose　{ get { return EntityRes.GetResource("IsClose");　}　}
 		#endregion 
 
 
@@ -2233,14 +2332,24 @@ namespace AdvertisementApplyBE
 			public static string AdvDispInfo2　{ get { return "AdvDispInfo2";　}　}
 				
 			/// <summary>
-			/// 属性: 广告体现项目 的名称
-			/// </summary>
-			public static string AdvAbout　{ get { return "AdvAbout";　}　}
-				
-			/// <summary>
 			/// 属性: 客户排版文字信息 的名称
 			/// </summary>
 			public static string AdvMemo　{ get { return "AdvMemo";　}　}
+				
+			/// <summary>
+			/// 属性: 核销数量 的名称
+			/// </summary>
+			public static string ApproveQty　{ get { return "ApproveQty";　}　}
+				
+			/// <summary>
+			/// 属性: 广告体现项目子表 的名称
+			/// </summary>
+			public static string AdvAboutBE　{ get { return "AdvAboutBE";　}　}
+				
+			/// <summary>
+			/// 属性: 关闭 的名称
+			/// </summary>
+			public static string IsClose　{ get { return "IsClose";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2248,7 +2357,7 @@ namespace AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																																		
+																																																																						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2319,8 +2428,9 @@ namespace AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("AdvDisplayType","AdvDisplayType");
 			this.exdMultiLangAttrs.Add("AdvDispInfo1","AdvDispInfo1");
 			this.exdMultiLangAttrs.Add("AdvDispInfo2","AdvDispInfo2");
-			this.exdMultiLangAttrs.Add("AdvAbout","AdvAbout");
 			this.exdMultiLangAttrs.Add("AdvMemo","AdvMemo");
+			this.exdMultiLangAttrs.Add("ApproveQty","ApproveQty");
+			this.exdMultiLangAttrs.Add("IsClose","IsClose");
         }
 	#endregion 
 
@@ -2337,7 +2447,7 @@ namespace AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																																																																																																			
+																																																																																																						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2399,6 +2509,8 @@ namespace AdvertisementApplyBE
 			if (data.AdvItem == -1 && data.AdvItem_SKey!=null)
 				data.AdvItem = data.AdvItem_SKey.GetEntity().ID ;
 	
+
+			
 
 			
 
@@ -2530,15 +2642,48 @@ namespace AdvertisementApplyBE
 		
 								this.SetTypeValue("AdvDispInfo2",data.AdvDispInfo2);
 		
-								this.SetTypeValue("AdvAbout",data.AdvAbout);
-		
 								this.SetTypeValue("AdvMemo",data.AdvMemo);
+		
+								this.SetTypeValue("ApproveQty",data.ApproveQty);
+		
+								this.SetTypeValue("IsClose",data.IsClose);
 		
 			#endregion 
 
 			#region 组件内属性
 	
 					this.SetTypeValue("AdvDisplayType",data.AdvDisplayType);
+	     
+
+					if (data.AdvAboutBE != null)
+			{	
+				foreach(AdvertisementApplyBE.AdvAboutBEData obj in data.AdvAboutBE )
+				{
+					AdvertisementApplyBE.AdvAboutBE child = dict[obj] as AdvertisementApplyBE.AdvAboutBE;
+					if (child == null)
+					{
+						if (obj.ID>0)
+						{
+							if (obj.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
+								child = (AdvertisementApplyBE.AdvAboutBE)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(obj.ID,obj.SysEntityType).GetEntity());
+							if (child==null) child = (AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,obj.ID,true) ;
+						}
+						else
+						{
+							 child = (AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,null,true) ;
+						}
+						
+						child.FromEntityData(obj,dict);
+					}
+					if (child.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+					{
+						this.AdvAboutBE.Remove(child);
+						this.AdvAboutBE.DelLists.Add(child);
+					}
+					else
+						this.AdvAboutBE.Add(child);
+				}
+			}
 	     
 
 			#endregion 
@@ -2778,16 +2923,23 @@ namespace AdvertisementApplyBE
 	     
 	    
 			{
-				object obj =this.GetValue("AdvAbout");
+				object obj =this.GetValue("AdvMemo");
 				if (obj != null)
-					data.AdvAbout=(System.String)obj;
+					data.AdvMemo=(System.String)obj;
 			}
 	     
 	    
 			{
-				object obj =this.GetValue("AdvMemo");
+				object obj =this.GetValue("ApproveQty");
 				if (obj != null)
-					data.AdvMemo=(System.String)obj;
+					data.ApproveQty=(System.Decimal)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("IsClose");
+				if (obj != null)
+					data.IsClose=(System.Boolean)obj;
 			}
 	     
 			#endregion 
@@ -2800,6 +2952,18 @@ namespace AdvertisementApplyBE
 					data.AdvDisplayType=System.Int32.Parse(obj.ToString());
 			}
 	
+			if (this.AdvAboutBE != null)
+			{	
+				List<AdvertisementApplyBE.AdvAboutBEData> listAdvAboutBE = new List<AdvertisementApplyBE.AdvAboutBEData>();
+				//必然要访问集合中实体。没办法直接去取实体里面的ID。
+				foreach(AdvertisementApplyBE.AdvAboutBE obj in this.AdvAboutBE ){
+					if (obj == null)
+						continue;
+					AdvertisementApplyBE.AdvAboutBEData old = dict["AdvertisementApplyBE.AdvAboutBE"+obj.ID.ToString()] as AdvertisementApplyBE.AdvAboutBEData;
+					listAdvAboutBE.Add((old != null) ? old : obj.ToEntityData(null, dict));
+				}
+				data.AdvAboutBE = listAdvAboutBE;
+			}	
 
 			#endregion 
 			return data ;
@@ -2849,6 +3013,8 @@ namespace AdvertisementApplyBE
 
 
 
+
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -2857,6 +3023,21 @@ namespace AdvertisementApplyBE
 		{
 			base.SelfNullableVlidator();
 		
+			if (string.IsNullOrEmpty((string)base.GetValue("AdvCode"))){
+				UFSoft.UBF.Business.AttributeInValidException AdvCode_Exception =new UFSoft.UBF.Business.AttributeInValidException("AdvertisementApplyBE.AdvApplyBE","AdvCode","1c849172-7572-4b06-aad1-26c6201b14b8");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvCode_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvCode_Exception);
+			}
+
+			if (Convert.ToInt64(base.GetValue("ApplyDept")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException ApplyDept_Exception = new UFSoft.UBF.Business.AttributeInValidException("AdvertisementApplyBE.AdvApplyBE","ApplyDept","712732a7-1c9b-4204-955d-3f28614ec0bb");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					ApplyDept_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(ApplyDept_Exception);
+			}
+
+
 			
 		}
 			    
