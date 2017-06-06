@@ -1,0 +1,444 @@
+<View ID="50e4e7ec-2c5f-4059-af07-d546f82715e5" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="专柜设计申请单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="SpecialApplyUIForm" Namespace="UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="b65b1c63-3f70-479c-a185-275aa849150c" URI=".UI_多卡多表WebPart" ViewID="4983" Width="992" X="10" Y="83">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="True" Height="25" Name="Row2" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Toolbar ID="8035faae-5bed-4ca8-b967-106a56271ad9" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
+    <Button ID="e7252edf-3eb1-42d7-95fa-18ce84d522f7" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="12514d7d-eadb-4a17-a008-0b30ee96713c" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="3eb41e72-66bc-413b-aad8-93b17424b77b" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="a86172ab-8c55-4182-907a-a5a7a91bed2d" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="6d71ad2a-4d53-4bd8-b19c-fc059da31b53" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="db03c9f3-ad17-4629-9fdb-2c5f8dee8255" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="a860b3bc-6f35-4c91-b283-0589e5bbf894" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Separator ID="f39ca0d5-74e5-4498-bbd7-40c23050a871" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="191" Y="0" />
+    <Button ID="a34738a4-4716-416c-ad10-27b1a501980d" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="199" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="ed2da758-617c-46fb-8f75-eb19e683200d" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="234" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="70fe1605-20a0-4752-9e09-a42ded6963ed" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="269" Y="0" />
+    <Button ID="2ec71df4-a157-449c-8aa3-7be4c62dde33" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="277" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="4cffd97c-dd38-42e1-ba99-eae14e320f51" DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="312" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="67ef2c71-33dc-4327-8d72-0c18b8253198" DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="347" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="772607fc-9c64-453c-aacb-17581bccda9a" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="382" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="673aa483-a728-409f-9f07-108a423e7a87" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="417" Y="0" />
+    <Button ID="6a8a0c79-f01b-4a2a-8424-f728b03e277b" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="425" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="c9390609-fdcd-4765-9ccf-035d74ab994f" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="460" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="009c466c-fe87-49d3-906d-6cc1af4efb8e" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="495" Y="0" />
+    <Button ID="6c6ce977-2a03-4e53-bd06-8f1967f9169d" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="503" Y="0">
+      <Events>
+        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="10189d9f-c51e-4049-af51-5e446a4c082f" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="538" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="187eb1f3-4582-4a1a-8d19-07a77903d8ed" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="2" Height="421" LayoutType="GridBag" Name="Card5" TabIndex="2" TabStop="False" Width="992" X="0" Y="73">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="971" />
+      <Column Fixed="False" Name="Column7" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="190" Name="Row0" />
+      <Row Fixed="True" Height="205" Name="Row3" />
+      <Row Fixed="False" Height="1" Name="Row4" />
+    </Rows>
+    <TabControl ID="efea552d-d7c3-4c47-8b89-41d37181ac63" GridHeight="1" GridWidth="2" GridX="0" GridY="0" Height="190" Name="TabControl4" TabIndex="1" TabStop="True" Width="972" X="10" Y="0">
+      <TabPage ID="e6931b0d-dd0c-48b9-b491-fa2b4dbe9089" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="相关资料" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="12" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="6" GridRowSpace="5" GridTopMargin="5" Height="160" LayoutType="GridBag" Name="TabPage31" TabIndex="1" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column1" Width="150" />
+          <Column Fixed="True" Name="Column2" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column3" Type="Title" Width="150" />
+          <Column Fixed="True" Name="Column9" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column4" Width="150" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column6" Type="Title" Width="149" />
+          <Column Fixed="True" Name="Column10" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column7" Width="149" />
+          <Column Fixed="False" Name="Column11" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+          <Row Fixed="True" Height="20" Name="Row3" />
+          <Row Fixed="True" Height="20" Name="Row4" />
+          <Row Fixed="True" Height="20" Name="Row5" />
+        </Rows>
+        <Line ID="e23f05fe-d7ec-480a-9ec0-d61c01dd4f78" DisplayName="办事处资料" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="11" GridX="0" GridY="0" Height="20" Name="Line0" TabIndex="0" TabStop="True" Width="953" X="5" Y="5" />
+        <Line ID="959517c7-2327-4b8b-ad6c-d984c3d0fa92" DisplayName="客户资料（资料需要填写完整，否则不予设计）" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="11" GridX="0" GridY="3" Height="20" Name="Line1" TabIndex="1" TabStop="True" Width="953" X="5" Y="80" />
+        <Label ID="eb66ac58-58c4-4aed-be40-9b97bfe6abc8" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblApplyDept71" RelationControl="ApplyDept71" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="5" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Reference ID="8c287a9b-33dc-4617-9e25-98668b73cecb" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ApplyDept_Code" CodeFieldUIViewID="SpecialApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ApplyDept71" NameAttributeName="Name" NameFieldUIFieldID="ApplyDept_Name" NameFieldUIViewID="SpecialApplyBE" PkeyField="ID" RefType="874cc1b6-f844-486c-b3f5-f8cca21fe1e0" RelationControl="lblApplyDept71" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDept" UIViewID="SpecialApplyBE" Visible="True" Width="150" WindowHeight="408" WindowWidth="580" X="160" Y="30">
+          <Events />
+          <RelationControls />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="客户编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="客户名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类名称" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="客户描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="组织机构名称" ColumnID="Org_Name" TargetControlType="" TargetID="" TargetProperty="" />
+          <ReferenceRelation Action="Clear" ColumnDisplayName="私有段14" ColumnID="DescFlexField_PrivateDescSeg14" TargetControlType="" TargetID="" TargetProperty="" />
+          <RefNameFields>
+            <RefNameField UIFieldID="Name" />
+          </RefNameFields>
+          <UIFilterBar Name="ReferenceFilter" />
+          <Events />
+        </Reference>
+        <Label ID="875c8d40-f3f9-47ae-8689-64b405ed71f3" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblApplier86" RelationControl="Applier86" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="5" Y="55">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="1820f940-a4bc-4820-97c7-6e8c5ab4972b" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Applier86" RelationControl="lblApplier86" TabIndex="5" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Applier" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="160" Y="55">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="c38effda-89b6-4f9c-b3fb-ccb668111135" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblPhone155" RelationControl="Phone155" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="330" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="bd2951ea-cb25-4fc3-8d4c-e267e0729e2b" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="Phone155" RelationControl="lblPhone155" TabIndex="7" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="Phone" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="485" Y="30">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="6c637d31-a537-457b-8e99-81626dd8a207" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" IsSequence="False" Name="lblQQ149" RelationControl="QQ149" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="330" Y="55">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="dbf8ca64-ea30-44a9-aa34-d1b696997322" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="2" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="QQ149" RelationControl="lblQQ149" TabIndex="9" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="QQ" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="485" Y="55">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="a20c8342-8532-4d5d-9d6e-6b6613aa7edf" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblApplyDate131" RelationControl="ApplyDate131" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="149" X="655" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DatePicker ID="95aa52bc-fcc0-4192-9cdb-595fe46b4aca" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate131" RelationControl="lblApplyDate131" TabIndex="11" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="SpecialApplyBE" Visible="True" Width="149" X="809" Y="30">
+          <Events />
+          <RelationControls />
+        </DatePicker>
+        <Label ID="daecc4f6-0f9b-4a28-99b1-a538aeb12a39" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblCustName104" RelationControl="CustName104" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="5" Y="105">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="5d4ac7fe-6c53-4ce3-aef2-ccbff742cc40" DisplayFormat="100" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="4" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="CustName104" RelationControl="lblCustName104" TabIndex="13" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="CustName" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="160" Y="105">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="f5362e60-bc9b-4a45-a1b3-f0681c075c73" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblCustPhone77" RelationControl="CustPhone77" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="5" Y="130">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="b91002a1-47f4-4879-ad62-0d91571d1aac" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="5" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="CustPhone77" RelationControl="lblCustPhone77" TabIndex="15" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="CustPhone" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="160" Y="130">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="b73bd394-4ac9-4be6-9720-769cb9286b2a" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="4" Height="20" IsNull="True" IsSequence="False" Name="lblCustConterName149" RelationControl="CustConterName149" TabIndex="16" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="330" Y="105">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="4d02af1a-1f77-4d0c-a9fd-2960220f6743" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="6" GridX="6" GridY="4" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="CustConterName149" RelationControl="lblCustConterName149" TabIndex="17" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="CustConterName" UIViewID="SpecialApplyBE" Visible="True" Width="474" X="485" Y="105">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <Label ID="48a01baf-40a7-4457-8989-927e779b8d65" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="5" Height="20" IsNull="True" IsSequence="False" Name="lblCustAddress121" RelationControl="CustAddress121" TabIndex="18" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="330" Y="130">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <TextBox ID="69d8eb4a-e84a-4b0d-9d35-bc8e1a5c9f6e" DisplayFormat="500" Enabled="True" GridHeight="1" GridWidth="6" GridX="6" GridY="5" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="CustAddress121" RelationControl="lblCustAddress121" TabIndex="19" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="CustAddress" UIViewID="SpecialApplyBE" Visible="True" Width="474" X="485" Y="130">
+          <Events />
+          <RelationControls />
+        </TextBox>
+        <FlexFieldPicker ID="11f6d96c-bc3a-4fff-b55c-92d537dad9b0" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="2" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="20" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="149" X="655" Y="55">
+          <Events />
+          <RelationControls />
+        </FlexFieldPicker>
+      </TabPage>
+      <TabPage ID="b755828e-e8e0-47c2-b6d6-3eb2a6f77d38" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="专柜设计风格" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="12" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="5" GridRowCount="6" GridRowSpace="5" GridTopMargin="5" Height="160" LayoutType="GridBag" Name="TabPage32" TabIndex="2" TabStop="False" Width="964" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Title" Width="120" />
+          <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column2" Type="Value" Width="150" />
+          <Column Fixed="True" Name="Column3" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column4" Type="Title" Width="120" />
+          <Column Fixed="True" Name="Column5" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column6" Type="Value" Width="75" />
+          <Column Fixed="True" Name="Column11" Type="Spacing" Width="20" />
+          <Column Fixed="True" Name="Column7" Type="Title" Width="120" />
+          <Column Fixed="True" Name="Column8" Type="Spacing" Width="5" />
+          <Column Fixed="True" Name="Column9" Type="Value" Width="70" />
+          <Column Fixed="False" Name="Column15" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="20" Name="Row0" />
+          <Row Fixed="True" Height="20" Name="Row1" />
+          <Row Fixed="True" Height="20" Name="Row2" />
+          <Row Fixed="True" Height="20" Name="Row3" />
+          <Row Fixed="True" Height="20" Name="Row4" />
+          <Row Fixed="True" Height="20" Name="Row5" />
+        </Rows>
+        <Label ID="89da71fb-b754-460a-ad4f-ff79ad2e82f1" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSpecialDesignStyle119" RelationControl="SpecialDesignStyle119" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="120" X="5" Y="5">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <DropDownList ID="7c3b95f9-d6c4-4a53-a23e-bc924c08d20c" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum" EnumID="a96d15c8-0b6e-48d4-9bd3-ec2d4f4c0db9" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="SpecialDesignStyle119" RelationControl="lblSpecialDesignStyle119" TabIndex="1" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="SpecialDesignStyle" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="130" Y="5">
+          <Events />
+          <RelationControls />
+        </DropDownList>
+        <Label ID="b5b36797-b89c-463b-875e-d96c2112d7a8" DisplayName="蓝色专柜方案" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" Name="Label2737" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="120" X="300" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Label ID="1bbc5f71-b128-4ec1-9f7c-37b3f3f49463" DisplayName="（图例）" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="2" Height="20" IsNull="True" Name="Label2738" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="120" X="300" Y="55">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Label ID="59690b2c-f828-4d9a-86e0-93c101bef85d" DisplayName="白色专柜方案" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="1" Height="20" IsNull="True" Name="Label2739" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="120" X="520" Y="30">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Label ID="2bda3cf9-1aff-454b-9ec3-5d8909d5b506" DisplayName="（图例）" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="2" Height="20" IsNull="True" Name="Label2740" TabIndex="5" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="120" X="520" Y="55">
+          <Events />
+          <RelationControls />
+          <Events />
+        </Label>
+        <Image ID="767e26c1-179a-4cdd-bead-90c9e13709b5" GridHeight="6" GridWidth="1" GridX="6" GridY="0" Height="145" ImageUrl="/images/SeeBestBlueSpecial.bmp" Name="Image0" TabIndex="6" TabStop="True" Width="75" X="425" Y="5" />
+        <Image ID="d1461f39-687f-4366-9164-b31f8ab1bc09" GridHeight="6" GridWidth="1" GridX="10" GridY="0" Height="145" ImageUrl="/images/SeeBestWhiteSpecial.bmp" Name="Image1" TabIndex="7" TabStop="True" Width="70" X="645" Y="5" />
+      </TabPage>
+      <Events />
+    </TabControl>
+    <TabControl ID="69fab6f3-7125-414d-a7d4-901d6e42d676" GridHeight="2" GridWidth="1" GridX="0" GridY="1" Height="211" Name="TabControl5" TabIndex="2" TabStop="True" Width="971" X="10" Y="195">
+      <TabPage ID="3f530af6-59d4-42ca-a633-12e3e1103cda" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="专柜子制作详情" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="2" GridColumnSpace="0" GridLeftMargin="5" GridRightMargin="3" GridRowCount="3" GridRowSpace="5" GridTopMargin="5" Height="181" LayoutType="GridBag" Name="TabPage36" TabIndex="1" TabStop="False" Width="963" X="0" Y="0">
+        <Columns>
+          <Column Fixed="True" Name="Column0" Type="Value" Width="953" />
+          <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+        </Columns>
+        <Rows>
+          <Row Fixed="True" Height="100" Name="Row0" />
+          <Row Fixed="False" Height="1" Name="Row1" />
+          <Row Fixed="True" Height="50" Name="Row2" />
+        </Rows>
+        <DataGrid ID="335bd9bd-7fc4-4169-975b-e86c0bd421eb" EditStatus="edit" Enabled="True" GridHeight="2" GridWidth="1" GridX="0" GridY="0" HasSum="False" Height="106" Name="DataGrid14" PageSize="5" Paging="True" TabIndex="1" TabStop="True" Width="953" X="5" Y="5">
+          <Events />
+          <Header ID="528d232d-0c4f-4854-80b9-14ae8d3e22d6" Name="Header8">
+            <HeaderRow ID="defb2968-09a6-485b-b2c8-7bb44af6a67d" Name="DefaultRow">
+              <HeaderCell ID="cebd8869-ce4b-4c30-bf41-8ce327fde745" ColSpan="1" Name="HeaderCell3" OwnerColName="ID61" RowSpan="1" />
+              <HeaderCell ID="54799f02-ecb9-404f-b645-0e2e3c884dad" ColSpan="1" Name="HeaderCell4" OwnerColName="SysVersion57" RowSpan="1" />
+              <HeaderCell ID="4f926f72-a3ef-4b62-a20b-25a10a5f394f" ColSpan="1" Name="HeaderCell5" OwnerColName="DisplayProductType0" RowSpan="1" />
+              <HeaderCell ID="437c3231-f45a-41f8-8aa8-9a8f20854dee" ColSpan="1" Name="HeaderCell6" OwnerColName="Width0" RowSpan="1" />
+              <HeaderCell ID="7adcf7f7-3a71-4b97-8593-ef9dc1005a07" ColSpan="1" Name="HeaderCell7" OwnerColName="Hight0" RowSpan="1" />
+              <HeaderCell ID="cf2151b9-dfa2-4152-a5b7-f916291b6a74" ColSpan="1" Name="HeaderCell8" OwnerColName="Thick0" RowSpan="1" />
+              <HeaderCell ID="fc56f75b-9460-440b-80b7-bd5530cf7c09" ColSpan="1" Name="HeaderCell9" OwnerColName="Qty0" RowSpan="1" />
+              <HeaderCell ID="ca58b4b3-18ba-463e-b3d7-25a0d6961b88" ColSpan="1" Name="HeaderCell10" OwnerColName="Area0" RowSpan="1" />
+              <HeaderCell ID="c0a10401-a328-46fd-86e9-77b3e4e88f47" ColSpan="1" Name="HeaderCell11" OwnerColName="Memo0" RowSpan="1" />
+              <HeaderCell ID="60d7372f-2cc9-4bb4-bdb2-2b08795809b0" ColSpan="1" DisplayName="TextBoxColumn2" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell12" OwnerColName="TextBoxColumn2" RowSpan="1" />
+            </HeaderRow>
+          </Header>
+          <UIFilterBar ID="32c896b4-0042-4094-a707-b9604930e3a0" Name="LocateBar" />
+          <Columns>
+            <NumberColumn ID="a094e128-8bcd-461d-9fd0-36db189d3687" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="专柜尺寸.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID61" NPos="1" Point="0" UIFieldID="ID" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="False">
+              <PrecisionBind Name="PrecisionBind0" />
+              <RoundRuleBind Name="RoundRuleBind0" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+              <CurrencyType Name="CurrencyType0" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="c42d1d27-dd47-4efa-a26b-87c16b106961" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="专柜尺寸.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion57" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="False">
+              <PrecisionBind Name="PrecisionBind1" />
+              <RoundRuleBind Name="RoundRuleBind1" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+              <CurrencyType Name="CurrencyType1" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="4849cb34-3c61-4e24-b34c-eaa1affcbd23" DefaultValue="" DisplayFormat="100" Enabled="True" Help="专柜尺寸.Misc.展示产品类型" IsNull="False" IsProperty="False" IsSequence="False" Name="DisplayProductType0" NPos="3" Point="0" TextAlign="Left" UIFieldID="DisplayProductType" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True" Width="150">
+              <Events />
+            </TextBoxColumn>
+            <NumberColumn ID="8841e903-93d2-4b6f-a216-0f5dfa27be8f" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="专柜尺寸.Misc.宽" IsNull="True" IsProperty="False" IsSequence="False" Name="Width0" NPos="4" Point="0" UIFieldID="Width" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True">
+              <PrecisionBind Name="PrecisionBind2" />
+              <RoundRuleBind Name="RoundRuleBind2" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+              <CurrencyType Name="CurrencyType2" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="80b26c22-3b4c-410c-b205-4a50662afaff" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="专柜尺寸.Misc.高" IsNull="True" IsProperty="False" IsSequence="False" Name="Hight0" NPos="5" Point="0" UIFieldID="Hight" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True">
+              <PrecisionBind Name="PrecisionBind3" />
+              <RoundRuleBind Name="RoundRuleBind3" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+              <CurrencyType Name="CurrencyType3" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="0f9f0597-c9b4-48c3-bd8b-738029084bdf" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="专柜尺寸.Misc.厚" IsNull="True" IsProperty="False" IsSequence="False" Name="Thick0" NPos="6" Point="0" UIFieldID="Thick" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True">
+              <PrecisionBind Name="PrecisionBind4" />
+              <RoundRuleBind Name="RoundRuleBind4" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+              <CurrencyType Name="CurrencyType4" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="7c6adb56-4333-483f-960b-e123a49e775f" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="专柜尺寸.Misc.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty0" NPos="7" Point="0" UIFieldID="Qty" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True">
+              <PrecisionBind Name="PrecisionBind5" />
+              <RoundRuleBind Name="RoundRuleBind5" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+              <CurrencyType Name="CurrencyType5" />
+              <Events />
+            </NumberColumn>
+            <NumberColumn ID="a6131913-df8f-4a02-88b6-812f33bb86e7" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Formula="Width*Hight*Qty" Help="专柜尺寸.Misc.面积" IsNull="True" IsProperty="False" IsSequence="False" Name="Area0" NPos="8" Point="0" UIFieldID="Area" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True">
+              <PrecisionBind Name="PrecisionBind6" />
+              <RoundRuleBind Name="RoundRuleBind6" />
+              <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
+              <CurrencyType Name="CurrencyType6" />
+              <Events />
+            </NumberColumn>
+            <TextBoxColumn ID="9ecf2eb5-d3b9-47aa-8875-d9a48a973324" DefaultValue="" DisplayFormat="500" Enabled="True" Help="专柜尺寸.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="9" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="SpecialApplyBE_SpecialSizeBE" Visible="True" Width="150">
+              <Events />
+            </TextBoxColumn>
+            <TextBoxColumn ID="54bf15dd-292a-431a-b2ae-12a7254013c2" DisplayFormat="" Enabled="True" IsNull="True" Name="TextBoxColumn2" NPos="10" Point="0" TextAlign="Left" Visible="True">
+              <Events />
+            </TextBoxColumn>
+          </Columns>
+        </DataGrid>
+        <Card ID="4aac3994-673b-47f3-8804-0b07150ed52d" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="2" GridColumnCount="1" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="50" Name="Card7" TabStop="False" Width="953" X="5" Y="116">
+          <Columns>
+            <Column Fixed="True" Name="Column0" Type="Title" Width="900" />
+          </Columns>
+          <Rows>
+            <Row Fixed="True" Height="20" Name="Row0" />
+            <Row Fixed="True" Height="20" Name="Row1" />
+          </Rows>
+          <Label ID="d8344260-c921-48d1-98ae-718d43a8bd55" DisplayName="注：同一尺寸专柜可只填同一表格，并勾选所需事业部名称及填写数量；不同尺寸专柜再分开填写！" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" Name="Label2741" TabIndex="0" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="900" X="10" Y="3">
+            <Events />
+            <RelationControls />
+            <Events />
+          </Label>
+          <Label ID="1b0e0edc-97f4-4ded-8030-807dff300fb4" DisplayName="墙壁开关专柜，放单列展板的话专柜尺寸为0.8m左右；放双列展板的话专柜尺寸为1.4m左右！" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" Name="Label2742" TabIndex="1" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="900" X="10" Y="28">
+            <Events />
+            <RelationControls />
+            <Events />
+          </Label>
+        </Card>
+      </TabPage>
+      <Events />
+    </TabControl>
+  </Card>
+  <Card ID="a3190c20-bb42-462c-8229-7a79f6c28965" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="2" GridColumnCount="3" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="1" Height="25" Name="Card6" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="150" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
+      <Column Fixed="True" Name="Column2" Width="150" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Label ID="7e428d43-8491-4ab8-8a86-20bdbf2df4c6" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblID60" RelationControl="ID60" TabIndex="0" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="150" X="10" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="f1987493-9e0b-436e-b4aa-e1e489c1adeb" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID60" RelationControl="lblID60" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="SpecialApplyBE" Visible="False" Width="150" X="165" Y="3">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind7" />
+      <RoundRuleBind Name="RoundRuleBind7" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
+      <CurrencyType Name="CurrencyType7" />
+    </NumberControl>
+    <Label ID="3929b1dc-1afb-4210-bb82-9d5ca50f148e" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion56" RelationControl="SysVersion56" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="150" X="10" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <NumberControl ID="864b6e86-869a-4927-a1b6-16e04b75d96b" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion56" RelationControl="lblSysVersion56" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="SpecialApplyBE" Visible="False" Width="150" X="165" Y="3">
+      <Events />
+      <RelationControls />
+      <PrecisionBind Name="PrecisionBind8" />
+      <RoundRuleBind Name="RoundRuleBind8" />
+      <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
+      <CurrencyType Name="CurrencyType8" />
+    </NumberControl>
+    <Label ID="88cbbce9-6055-4115-8797-b0c957feffe9" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblAdvCode72" RelationControl="AdvCode72" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="150" X="10" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="4a78e514-b96c-4bc5-9759-a4ce6a259357" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="AdvCode72" ReadOnly="True" RelationControl="lblAdvCode72" TabIndex="5" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvCode" UIViewID="SpecialApplyBE" Visible="True" Width="150" X="165" Y="3">
+      <Events />
+      <RelationControls />
+    </TextBox>
+  </Card>
+  <Events />
+</View>
