@@ -4,13 +4,13 @@
 	using System.Collections.Generic ;
 	using System.Runtime.Serialization;
 
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
 	/// <summary>
 	/// 广告体现项目子表 缺省DTO 
 	/// 
 	/// </summary>
-	[DataContract(Name = "AdvertisementApplyBE.AdvAboutBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
+	[DataContract(Name = "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
 	[Serializable]
     [KnownType("GetKnownTypes")]
 	public partial class AdvAboutBEData : UFSoft.UBF.Business.DataTransObjectBase
@@ -27,7 +27,8 @@ namespace AdvertisementApplyBE
                         
                         
                         
-                                        knownTypes.Add(typeof(AdvertisementApplyBE.AdvApplyBEData));
+                                        knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData));
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -50,6 +51,7 @@ namespace AdvertisementApplyBE
 	     							SysVersion= 0; 			     			
 	     			
 	     			
+	     							IsSelected=false; 
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -70,7 +72,7 @@ namespace AdvertisementApplyBE
 		[DataMember(IsRequired=false)]
 		public override string SysEntityType
 		{
-			get { return "AdvertisementApplyBE.AdvAboutBE" ;}
+			get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE" ;}
 		}
 		#endregion
 
@@ -100,8 +102,8 @@ namespace AdvertisementApplyBE
 		/// 广告体现项目子表.Misc.广告申请单
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private AdvertisementApplyBE.AdvApplyBEData m_advApplyBE;
-		public AdvertisementApplyBE.AdvApplyBEData AdvApplyBE
+		private UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData m_advApplyBE;
+		public UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData AdvApplyBE
 		{
 			get	
 			{	
@@ -269,10 +271,29 @@ namespace AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 是否被选用
+		/// 广告体现项目子表.Misc.是否被选用
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Boolean m_isSelected ;
+		public System.Boolean IsSelected
+		{
+			get	
+			{	
+				return m_isSelected  ;
+			}
+			set	
+			{	
+				m_isSelected = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-									
+										
 		#endregion 		
 	}	
 

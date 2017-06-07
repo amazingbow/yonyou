@@ -5,7 +5,7 @@ using System.Transactions;
 using NUnit.Framework;
 using UFSoft.UBF.Business;
 
-namespace AdvertisementApplyBE.TestSuite{
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.TestSuite{
 
 	/// <summary>
 	/// AdvAboutBE Auto Test Class
@@ -20,13 +20,17 @@ namespace AdvertisementApplyBE.TestSuite{
 		/*	using (TransactionScope scope = new TransactionScope())
 			{
 				#region __merge CustomVariable
-				AdvertisementApplyBE.AdvAboutBE obj;
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE obj;
 				//add you custome variable code here ...
 				#endregion
 
 				using (ISession session = Session.Open()) {
 					#region __merge CreateAdvAboutBE
-										obj  = AdvertisementApplyBE.AdvAboutBE.Create() ;
+					
+					obj  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Create() ;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE n_advaboutbe =UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE.Create(obj) ;
+
+
 					//add you custome assign code here ...
 					#endregion
 
@@ -34,8 +38,8 @@ namespace AdvertisementApplyBE.TestSuite{
 					session.Commit();
 				}
 	
-				AdvertisementApplyBE.AdvApplyBE.EntityList list = AdvertisementApplyBE.AdvApplyBE.Finder.FindAll("");
-				Assert.IsTrue(list.Contains(obj), " Add <" + typeof(AdvertisementApplyBE.AdvApplyBE).ToString() + "> failed.");
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityList list = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Finder.FindAll("");
+				Assert.IsTrue(list.Contains(obj), " Add <" + typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE).ToString() + "> failed.");
 				using (ISession session = Session.Open()) {
 					#region __merge RemoveAdvAboutBE	
 					obj.Remove();
@@ -44,8 +48,8 @@ namespace AdvertisementApplyBE.TestSuite{
 
 					session.Commit();
 				}
-				list = AdvertisementApplyBE.AdvApplyBE.Finder.FindAll("");
-				Assert.IsFalse(list.Contains(obj), " Delete <" + typeof(AdvertisementApplyBE.AdvApplyBE).ToString() + "> failed.");
+				list = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Finder.FindAll("");
+				Assert.IsFalse(list.Contains(obj), " Delete <" + typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE).ToString() + "> failed.");
 			}
 		*/
 		}

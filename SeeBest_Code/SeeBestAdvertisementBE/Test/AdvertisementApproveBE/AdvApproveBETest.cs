@@ -5,7 +5,7 @@ using System.Transactions;
 using NUnit.Framework;
 using UFSoft.UBF.Business;
 
-namespace AdvertisementApproveBE.TestSuite{
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.TestSuite{
 
 	/// <summary>
 	/// AdvApproveBE Auto Test Class
@@ -20,13 +20,13 @@ namespace AdvertisementApproveBE.TestSuite{
 		/*	using (TransactionScope scope = new TransactionScope())
 			{
 				#region __merge CustomVariable
-				AdvertisementApproveBE.AdvApproveBE obj;
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE obj;
 				//add you custome variable code here ...
 				#endregion
 
 				using (ISession session = Session.Open()) {
 					#region __merge CreateAdvApproveBE
-										obj  = AdvertisementApproveBE.AdvApproveBE.Create() ;
+										obj  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Create() ;
 					//add you custome assign code here ...
 					#endregion
 
@@ -34,8 +34,8 @@ namespace AdvertisementApproveBE.TestSuite{
 					session.Commit();
 				}
 	
-				AdvertisementApproveBE.AdvApproveBE.EntityList list = AdvertisementApproveBE.AdvApproveBE.Finder.FindAll("");
-				Assert.IsTrue(list.Contains(obj), " Add <" + typeof(AdvertisementApproveBE.AdvApproveBE).ToString() + "> failed.");
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityList list = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Finder.FindAll("");
+				Assert.IsTrue(list.Contains(obj), " Add <" + typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE).ToString() + "> failed.");
 				using (ISession session = Session.Open()) {
 					#region __merge RemoveAdvApproveBE	
 					obj.Remove();
@@ -44,8 +44,8 @@ namespace AdvertisementApproveBE.TestSuite{
 
 					session.Commit();
 				}
-				list = AdvertisementApproveBE.AdvApproveBE.Finder.FindAll("");
-				Assert.IsFalse(list.Contains(obj), " Delete <" + typeof(AdvertisementApproveBE.AdvApproveBE).ToString() + "> failed.");
+				list = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Finder.FindAll("");
+				Assert.IsFalse(list.Contains(obj), " Delete <" + typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE).ToString() + "> failed.");
 			}
 		*/
 		}

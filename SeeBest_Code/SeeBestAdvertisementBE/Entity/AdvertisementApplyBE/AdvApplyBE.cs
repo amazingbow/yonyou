@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic ;
 using System.Runtime.Serialization;
 
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
 	
 	/// <summary>
@@ -33,7 +33,7 @@ namespace AdvertisementApplyBE
 		/// <returns>Instance</returns>
 		public  static AdvApplyBE Create() {
 			AdvApplyBE entity = (AdvApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																																																									 
+																																																																																																												 
 			return entity;
 		}
 
@@ -79,14 +79,14 @@ namespace AdvertisementApplyBE
 		#region ClassKey
 		protected override string ClassKey_FullName
         {
-            get { return "AdvertisementApplyBE.AdvApplyBE"; }    
+            get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE"; }    
         }
 		//private static UFSoft.UBF.PL.IClassKey _currentClassKey;
 		//由于可能每次访问时的Enterprise不一样，所以每次重取.
 		private static UFSoft.UBF.PL.IClassKey CurrentClassKey
 		{
 			get {
-				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("AdvertisementApplyBE.AdvApplyBE");
+				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE");
 			}
 		}
 		
@@ -102,7 +102,7 @@ namespace AdvertisementApplyBE
 	    [DataContract(Name = "EntityKey", Namespace = "UFSoft.UBF.Business.BusinessEntity")]
 		public new partial class EntityKey : UFSoft.UBF.Business.BusinessEntity.EntityKey
 		{
-			public EntityKey(long id): this(id, "AdvertisementApplyBE.AdvApplyBE")
+			public EntityKey(long id): this(id, "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE")
 			{}
 			//Construct using by freamwork.
 			protected EntityKey(long id , string entityType):base(id,entityType)
@@ -881,12 +881,12 @@ namespace AdvertisementApplyBE
 			/// 广告申请单.Misc.版面类型
 			/// </summary>
 			/// <value></value>
-			public  AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
 			{
 				get
 				{
 
-					AdvertisementApplyBE.AdvDisplayTypeEnum value  = AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
 					return value;
 				}
 			}
@@ -989,6 +989,25 @@ namespace AdvertisementApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 编号的4位流水 (该属性可为空,但有默认值)
+			/// 广告申请单.Misc.编号的4位流水
+			/// </summary>
+			/// <value></value>
+			public  System.Int32 Flow4Bit
+			{
+				get
+				{
+					System.Int32 value  = (System.Int32)base.GetValue("Flow4Bit");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -996,25 +1015,25 @@ namespace AdvertisementApplyBE
 			#region List member						
 		
 			
-			private List<AdvertisementApplyBE.AdvAboutBE> m_AdvAboutBE  ;
+			private List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE> m_AdvAboutBE  ;
 			/// <summary>
 			/// 广告体现项目子表 (该属性可为空,且无默认值)
 			/// 广告申请单.Misc.广告体现项目子表
 			/// </summary>
 			/// <value></value>
-			public  List<AdvertisementApplyBE.AdvAboutBE> AdvAboutBE
+			public  List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE> AdvAboutBE
 			{
 				get
 				{
 					if (m_AdvAboutBE == null)
-						m_AdvAboutBE = new List<AdvertisementApplyBE.AdvAboutBE>();
+						m_AdvAboutBE = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE>();
 					m_AdvAboutBE.Clear();	
-					foreach (AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE)
+					foreach (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE)
 					{
 						if (child.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
 							m_AdvAboutBE.Add(child);
 					}
-					foreach (AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE.DelLists)
+					foreach (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE child in ContainerEntity.AdvAboutBE.DelLists)
 					{
 						m_AdvAboutBE.Add(child);
 					}
@@ -1799,19 +1818,19 @@ namespace AdvertisementApplyBE
 		/// 广告申请单.Misc.版面类型
 		/// </summary>
 		/// <value></value>
-			public  AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
 		{
 			get
 			{
 
-				AdvertisementApplyBE.AdvDisplayTypeEnum value  = AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
 				return value;
 			}
 				set
 			{
 				
 				if (value == null)
-					base.SetValue("AdvDisplayType",AdvertisementApplyBE.AdvDisplayTypeEnum.Empty.Value);
+					base.SetValue("AdvDisplayType",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.Empty.Value);
 				else
 					base.SetValue("AdvDisplayType",value.Value);
 					 
@@ -1941,6 +1960,30 @@ namespace AdvertisementApplyBE
 
 
 
+		
+			/// <summary>
+		/// 编号的4位流水 (该属性可为空,但有默认值)
+		/// 广告申请单.Misc.编号的4位流水
+		/// </summary>
+		/// <value></value>
+			public  System.Int32 Flow4Bit
+		{
+			get
+			{
+				System.Int32 value  = (System.Int32)base.GetValue("Flow4Bit");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("Flow4Bit", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1948,18 +1991,18 @@ namespace AdvertisementApplyBE
 		#region List member						
 	
 		
-		private AdvertisementApplyBE.AdvAboutBE.EntityList m_AdvAboutBE  ;
+		private UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE.EntityList m_AdvAboutBE  ;
 		/// <summary>
 		/// 广告体现项目子表 (该属性可为空,且无默认值)
 		/// 广告申请单.Misc.广告体现项目子表
 		/// </summary>
 		/// <value></value>
-		public  AdvertisementApplyBE.AdvAboutBE.EntityList AdvAboutBE
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE.EntityList AdvAboutBE
 		{
 			get
 			{
 				if (m_AdvAboutBE == null)
-					m_AdvAboutBE = new AdvertisementApplyBE.AdvAboutBE.EntityList("AdvApplyBE",this,"AdvAboutBE",(IList)this.GetRelation("AdvAboutBE"));
+					m_AdvAboutBE = new UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE.EntityList("AdvApplyBE",this,"AdvAboutBE",(IList)this.GetRelation("AdvAboutBE"));
 				else
 					m_AdvAboutBE.InnerList = (IList)this.GetRelation("AdvAboutBE");
 				return m_AdvAboutBE;
@@ -1980,7 +2023,7 @@ namespace AdvertisementApplyBE
 		/// Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
 		/// </summary>
 		[Obsolete("")]
-		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("AdvertisementApplyBE.AdvApplyBE")  ;}	}
+		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE")  ;}	}
 		#endregion 		
 
 		#region ModelResource,这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource()内部类的方式取资源
@@ -2159,6 +2202,11 @@ namespace AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_IsClose　{ get { return EntityRes.GetResource("IsClose");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Flow4Bit")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_Flow4Bit　{ get { return EntityRes.GetResource("Flow4Bit");　}　}
 		#endregion 
 
 
@@ -2174,7 +2222,7 @@ namespace AdvertisementApplyBE
 			/// <summary>
 			/// Entity　的全名. 
 			/// </summary>
-			public static string BE_FullName { get { return "AdvertisementApplyBE.AdvApplyBE";　}　}
+			public static string BE_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE";　}　}
 		
 			/// <summary>
 			/// 属性: ID 的名称
@@ -2350,6 +2398,11 @@ namespace AdvertisementApplyBE
 			/// 属性: 关闭 的名称
 			/// </summary>
 			public static string IsClose　{ get { return "IsClose";　}　}
+				
+			/// <summary>
+			/// 属性: 编号的4位流水 的名称
+			/// </summary>
+			public static string Flow4Bit　{ get { return "Flow4Bit";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2357,7 +2410,7 @@ namespace AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																																						
+																																																																								
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2431,6 +2484,7 @@ namespace AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("AdvMemo","AdvMemo");
 			this.exdMultiLangAttrs.Add("ApproveQty","ApproveQty");
 			this.exdMultiLangAttrs.Add("IsClose","IsClose");
+			this.exdMultiLangAttrs.Add("Flow4Bit","Flow4Bit");
         }
 	#endregion 
 
@@ -2447,7 +2501,7 @@ namespace AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																																																																																																						
+																																																																																																									
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2509,6 +2563,8 @@ namespace AdvertisementApplyBE
 			if (data.AdvItem == -1 && data.AdvItem_SKey!=null)
 				data.AdvItem = data.AdvItem_SKey.GetEntity().ID ;
 	
+
+			
 
 			
 
@@ -2648,6 +2704,8 @@ namespace AdvertisementApplyBE
 		
 								this.SetTypeValue("IsClose",data.IsClose);
 		
+								this.SetTypeValue("Flow4Bit",data.Flow4Bit);
+		
 			#endregion 
 
 			#region 组件内属性
@@ -2657,20 +2715,20 @@ namespace AdvertisementApplyBE
 
 					if (data.AdvAboutBE != null)
 			{	
-				foreach(AdvertisementApplyBE.AdvAboutBEData obj in data.AdvAboutBE )
+				foreach(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData obj in data.AdvAboutBE )
 				{
-					AdvertisementApplyBE.AdvAboutBE child = dict[obj] as AdvertisementApplyBE.AdvAboutBE;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE child = dict[obj] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE;
 					if (child == null)
 					{
 						if (obj.ID>0)
 						{
 							if (obj.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
-								child = (AdvertisementApplyBE.AdvAboutBE)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(obj.ID,obj.SysEntityType).GetEntity());
-							if (child==null) child = (AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,obj.ID,true) ;
+								child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(obj.ID,obj.SysEntityType).GetEntity());
+							if (child==null) child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,obj.ID,true) ;
 						}
 						else
 						{
-							 child = (AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,null,true) ;
+							 child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,null,true) ;
 						}
 						
 						child.FromEntityData(obj,dict);
@@ -2707,7 +2765,7 @@ namespace AdvertisementApplyBE
 			
 			if (dict == null ) dict = new Hashtable() ;
 			//就直接用ID,如果不同实体会出现相同ID，则到时候要改进。? ID一定要有。
-			dict["AdvertisementApplyBE.AdvApplyBE"+this.ID.ToString()] = data;
+			dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE"+this.ID.ToString()] = data;
 		
 			data.SysState = this.SysState ;
 			#region 组件外属性 -BusinessEntity,"简单值对象",简单类型,多语言.不可能存在一对多.没有集合可能.
@@ -2942,6 +3000,13 @@ namespace AdvertisementApplyBE
 					data.IsClose=(System.Boolean)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("Flow4Bit");
+				if (obj != null)
+					data.Flow4Bit=(System.Int32)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2954,12 +3019,12 @@ namespace AdvertisementApplyBE
 	
 			if (this.AdvAboutBE != null)
 			{	
-				List<AdvertisementApplyBE.AdvAboutBEData> listAdvAboutBE = new List<AdvertisementApplyBE.AdvAboutBEData>();
+				List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData> listAdvAboutBE = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData>();
 				//必然要访问集合中实体。没办法直接去取实体里面的ID。
-				foreach(AdvertisementApplyBE.AdvAboutBE obj in this.AdvAboutBE ){
+				foreach(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE obj in this.AdvAboutBE ){
 					if (obj == null)
 						continue;
-					AdvertisementApplyBE.AdvAboutBEData old = dict["AdvertisementApplyBE.AdvAboutBE"+obj.ID.ToString()] as AdvertisementApplyBE.AdvAboutBEData;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData old = dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE"+obj.ID.ToString()] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData;
 					listAdvAboutBE.Add((old != null) ? old : obj.ToEntityData(null, dict));
 				}
 				data.AdvAboutBE = listAdvAboutBE;
@@ -3015,6 +3080,7 @@ namespace AdvertisementApplyBE
 
 
 
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -3024,14 +3090,14 @@ namespace AdvertisementApplyBE
 			base.SelfNullableVlidator();
 		
 			if (string.IsNullOrEmpty((string)base.GetValue("AdvCode"))){
-				UFSoft.UBF.Business.AttributeInValidException AdvCode_Exception =new UFSoft.UBF.Business.AttributeInValidException("AdvertisementApplyBE.AdvApplyBE","AdvCode","1c849172-7572-4b06-aad1-26c6201b14b8");
+				UFSoft.UBF.Business.AttributeInValidException AdvCode_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvCode","1c849172-7572-4b06-aad1-26c6201b14b8");
 				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
 					AdvCode_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
 				this.PropertyExceptions.Add(AdvCode_Exception);
 			}
 
 			if (Convert.ToInt64(base.GetValue("ApplyDept")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
-				UFSoft.UBF.Business.AttributeInValidException ApplyDept_Exception = new UFSoft.UBF.Business.AttributeInValidException("AdvertisementApplyBE.AdvApplyBE","ApplyDept","712732a7-1c9b-4204-955d-3f28614ec0bb");
+				UFSoft.UBF.Business.AttributeInValidException ApplyDept_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","ApplyDept","712732a7-1c9b-4204-955d-3f28614ec0bb");
 				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
 					ApplyDept_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
 				this.PropertyExceptions.Add(ApplyDept_Exception);

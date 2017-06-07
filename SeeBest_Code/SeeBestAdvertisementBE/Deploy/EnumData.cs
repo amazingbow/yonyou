@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
 
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
 	/// <summary>
 	/// 枚举值: 版面类型 

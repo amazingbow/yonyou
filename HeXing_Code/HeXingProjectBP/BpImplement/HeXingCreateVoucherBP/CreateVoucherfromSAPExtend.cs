@@ -245,10 +245,10 @@
                         }
                     }
                     Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
-                    successVoucher.CreatedBy = item.SapCreater;
-                    successVoucher.Auditor = item.SapAuditor;
-                    successVoucher.Poster = item.SapPoster;
-                    successVoucher.Cashier = item.SapCashier;
+                    //successVoucher.CreatedBy = item.SapCreater;
+                    //successVoucher.Auditor = item.SapAuditor;
+                    //successVoucher.Poster = item.SapPoster;
+                    //successVoucher.Cashier = item.SapCashier;
                     session.Commit();
                 }
             }
@@ -282,7 +282,8 @@
                 HxRelationshipBE shipOrg = null;
                 foreach (var line in item.HeXingSAPU9GLVoucherLine)
                 {
-                    if (line.DescFlexField.PrivateDescSeg1 == successVoucher.Entries[i].Account.Code)
+                    //if (line.DescFlexField.PrivateDescSeg1 == successVoucher.Entries[i].Account.Code)
+                    if (line.ID.ToString() == successVoucher.Entries[i].Description.PrivateDescSeg2)
                     {
                         cashFlowRef = HxRelationshipBE.Finder.Find("RefStatus=2 and RefType=6 and SapCode='" + line.CashFlowCode + "'");
                         if (!string.IsNullOrEmpty(line.RelCompCode))
@@ -455,8 +456,8 @@
             #endregion
             #region 实体扩展字段集合
             VoucherItem.Description = new Base.FlexField.DescFlexField.DescFlexSegmentsData();
-            VoucherItem.Description.PrivateDescSeg1 = entry.DescFlexField.PrivateDescSeg1;
-            VoucherItem.Description.PrivateDescSeg2 = entry.DescFlexField.PrivateDescSeg2;
+            //VoucherItem.Description.PrivateDescSeg1 = entry.ID.ToString();
+            VoucherItem.Description.PrivateDescSeg2 = entry.ID.ToString();
             VoucherItem.Description.PrivateDescSeg3 = entry.DescFlexField.PrivateDescSeg3;
             VoucherItem.Description.PrivateDescSeg4 = entry.DescFlexField.PrivateDescSeg4;
             VoucherItem.Description.PrivateDescSeg5 = entry.DescFlexField.PrivateDescSeg5;

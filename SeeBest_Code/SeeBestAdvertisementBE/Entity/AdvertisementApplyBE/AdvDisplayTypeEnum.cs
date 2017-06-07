@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UFSoft.UBF.Business;
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
     /// <summary>
     /// 可扩展枚举: 版面类型 
@@ -12,7 +12,7 @@ namespace AdvertisementApplyBE
     public sealed class AdvDisplayTypeEnum
     {
 
-        //private static readonly ExtendableEnum innerExtendableEnum = new ExtendableEnum("AdvertisementApplyBE.AdvDisplayTypeEnum");
+        //private static readonly ExtendableEnum innerExtendableEnum = new ExtendableEnum("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum");
         #region ctor & cctor 
         static AdvDisplayTypeEnum()
         {
@@ -198,7 +198,7 @@ namespace AdvertisementApplyBE
 		/// <summary>
 		/// 版面类型的显示名称资源
 		/// </summary>
-		public static string Res_TypeNameS {	get {return EnumRes.GetResource("AdvertisementApplyBE.AdvDisplayTypeEnum")  ;} }
+		public static string Res_TypeNameS {	get {return EnumRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum")  ;} }
 
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
@@ -223,7 +223,7 @@ namespace AdvertisementApplyBE
 			/// <summary>
 			/// 枚举全名: FullName 
 			/// </summary>
-			public static string Enum_FullName { get { return "AdvertisementApplyBE.AdvDisplayTypeEnum";　}　}
+			public static string Enum_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum";　}　}
 
 			/// <summary>
 			///  获取资源接口,直接传了枚举对象.Name 就可.

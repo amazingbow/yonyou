@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic ;
 using System.Runtime.Serialization;
 
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
 	
 	/// <summary>
@@ -31,7 +31,7 @@ namespace AdvertisementApplyBE
 		/// Create Instance With Parent 
 		/// </summary>
 		/// <returns>Instance</returns>
-		public  static AdvAboutBE Create(AdvertisementApplyBE.AdvApplyBE parentEntity) {
+		public  static AdvAboutBE Create(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE parentEntity) {
 			AdvAboutBE entity = (AdvAboutBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, parentEntity);
 			if (parentEntity == null)
 				throw new ArgumentNullException("parentEntity");
@@ -60,7 +60,7 @@ namespace AdvertisementApplyBE
 		/// </summary>
 		/// <returns>Instance</returns>
         [Obsolete("仅用于开发的测试用例时期.正式版返回NULL.不可使用.")]
-		public  static AdvAboutBE CreateDefault(AdvertisementApplyBE.AdvApplyBE parentEntity) {
+		public  static AdvAboutBE CreateDefault(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE parentEntity) {
 		#if Test		
 			return CreateDefault_Extend(parentEntity);
 		#else 
@@ -73,14 +73,14 @@ namespace AdvertisementApplyBE
 		#region ClassKey
 		protected override string ClassKey_FullName
         {
-            get { return "AdvertisementApplyBE.AdvAboutBE"; }    
+            get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE"; }    
         }
 		//private static UFSoft.UBF.PL.IClassKey _currentClassKey;
 		//由于可能每次访问时的Enterprise不一样，所以每次重取.
 		private static UFSoft.UBF.PL.IClassKey CurrentClassKey
 		{
 			get {
-				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("AdvertisementApplyBE.AdvAboutBE");
+				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE");
 			}
 		}
 		
@@ -96,7 +96,7 @@ namespace AdvertisementApplyBE
 	    [DataContract(Name = "EntityKey", Namespace = "UFSoft.UBF.Business.BusinessEntity")]
 		public new partial class EntityKey : UFSoft.UBF.Business.BusinessEntity.EntityKey
 		{
-			public EntityKey(long id): this(id, "AdvertisementApplyBE.AdvAboutBE")
+			public EntityKey(long id): this(id, "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE")
 			{}
 			//Construct using by freamwork.
 			protected EntityKey(long id , string entityType):base(id,entityType)
@@ -448,27 +448,27 @@ namespace AdvertisementApplyBE
 			/// 广告体现项目子表.Misc.广告申请单
 			/// </summary>
 			/// <value></value>
-			public  AdvertisementApplyBE.AdvApplyBE AdvApplyBE
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE AdvApplyBE
 			{
 				get
 				{
 					if (AdvApplyBEKey == null)
 						return null ;
-					AdvertisementApplyBE.AdvApplyBE value =  (AdvertisementApplyBE.AdvApplyBE)AdvApplyBEKey.GetEntity();
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE value =  (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE)AdvApplyBEKey.GetEntity();
 					return value ;
 				}
 			}
 		
 
 
-   		private AdvertisementApplyBE.AdvApplyBE.EntityKey m_AdvApplyBEKey ;
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey m_AdvApplyBEKey ;
 		/// <summary>
 		/// EntityKey 属性
 		/// 广告申请单 的Key (该属性可为空,且无默认值)
 		/// 广告体现项目子表.Misc.广告申请单
 		/// </summary>
 		/// <value></value>
-		public  AdvertisementApplyBE.AdvApplyBE.EntityKey AdvApplyBEKey
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey AdvApplyBEKey
 		{
 			get 
 			{
@@ -477,10 +477,29 @@ namespace AdvertisementApplyBE
 					return null ;
 				Int64 key = (System.Int64)obj ;
 				if (m_AdvApplyBEKey==null || m_AdvApplyBEKey.ID != key )
-					m_AdvApplyBEKey = new AdvertisementApplyBE.AdvApplyBE.EntityKey(key); 
+					m_AdvApplyBEKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey(key); 
 				return m_AdvApplyBEKey ;
 			}
 		}
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 是否被选用 (该属性可为空,但有默认值)
+			/// 广告体现项目子表.Misc.是否被选用
+			/// </summary>
+			/// <value></value>
+			public  System.Boolean IsSelected
+			{
+				get
+				{
+					System.Boolean value  = (System.Boolean)base.GetValue("IsSelected");
+					return value;
+						}
+			}
+		
+
+
 
 		
 
@@ -704,7 +723,7 @@ namespace AdvertisementApplyBE
 		/// 广告体现项目子表.Misc.广告申请单
 		/// </summary>
 		/// <value></value>
-			public  AdvertisementApplyBE.AdvApplyBE AdvApplyBE
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE AdvApplyBE
 		{
 			get
 			{
@@ -715,7 +734,7 @@ namespace AdvertisementApplyBE
 				}
 				else
 				{
-					AdvertisementApplyBE.AdvApplyBE value  = (AdvertisementApplyBE.AdvApplyBE)obj;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE value  = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE)obj;
 					return value;
 				 }
 			}
@@ -729,13 +748,13 @@ namespace AdvertisementApplyBE
 	
 
 
-   		private AdvertisementApplyBE.AdvApplyBE.EntityKey m_AdvApplyBEKey ;
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey m_AdvApplyBEKey ;
 		/// <summary>
 		/// 广告申请单 的Key (该属性可为空,且无默认值)
 		/// 广告体现项目子表.Misc.广告申请单
 		/// </summary>
 		/// <value></value>
-		public  AdvertisementApplyBE.AdvApplyBE.EntityKey AdvApplyBEKey
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey AdvApplyBEKey
 		{
 			get 
 			{
@@ -744,7 +763,7 @@ namespace AdvertisementApplyBE
 					return null ;
 				Int64 key = (System.Int64)obj ;
 				if (m_AdvApplyBEKey==null || m_AdvApplyBEKey.ID != key )
-					m_AdvApplyBEKey = new AdvertisementApplyBE.AdvApplyBE.EntityKey(key); 
+					m_AdvApplyBEKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey(key); 
 				return m_AdvApplyBEKey ;
 			}
 			set
@@ -761,6 +780,30 @@ namespace AdvertisementApplyBE
 					base.SetValue("AdvApplyBE",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
 			}
 		}
+
+		
+			/// <summary>
+		/// 是否被选用 (该属性可为空,但有默认值)
+		/// 广告体现项目子表.Misc.是否被选用
+		/// </summary>
+		/// <value></value>
+			public  System.Boolean IsSelected
+		{
+			get
+			{
+				System.Boolean value  = (System.Boolean)base.GetValue("IsSelected");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("IsSelected", value);
+						 
+			}
+		}
+	
+
+
 
 	
 
@@ -782,7 +825,7 @@ namespace AdvertisementApplyBE
 		/// Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
 		/// </summary>
 		[Obsolete("")]
-		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("AdvertisementApplyBE.AdvAboutBE")  ;}	}
+		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE")  ;}	}
 		#endregion 		
 
 		#region ModelResource,这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource()内部类的方式取资源
@@ -831,6 +874,11 @@ namespace AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvApplyBE　{ get { return EntityRes.GetResource("AdvApplyBE");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsSelected")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_IsSelected　{ get { return EntityRes.GetResource("IsSelected");　}　}
 		#endregion 
 
 
@@ -846,7 +894,7 @@ namespace AdvertisementApplyBE
 			/// <summary>
 			/// Entity　的全名. 
 			/// </summary>
-			public static string BE_FullName { get { return "AdvertisementApplyBE.AdvAboutBE";　}　}
+			public static string BE_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE";　}　}
 		
 			/// <summary>
 			/// 属性: ID 的名称
@@ -892,6 +940,11 @@ namespace AdvertisementApplyBE
 			/// 属性: 广告申请单 的名称
 			/// </summary>
 			public static string AdvApplyBE　{ get { return "AdvApplyBE";　}　}
+				
+			/// <summary>
+			/// 属性: 是否被选用 的名称
+			/// </summary>
+			public static string IsSelected　{ get { return "IsSelected";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -899,7 +952,7 @@ namespace AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																		
+																				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -948,6 +1001,7 @@ namespace AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("Code","Code");
 			this.exdMultiLangAttrs.Add("Name","Name");
 			this.exdMultiLangAttrs.Add("AdvApplyBE","AdvApplyBE");
+			this.exdMultiLangAttrs.Add("IsSelected","IsSelected");
         }
 	#endregion 
 
@@ -964,7 +1018,7 @@ namespace AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																											
+																														
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -985,6 +1039,8 @@ namespace AdvertisementApplyBE
 		private void DeSerializeKey(AdvAboutBEData data)
 		{
 		
+			
+
 			
 
 			
@@ -1061,24 +1117,26 @@ namespace AdvertisementApplyBE
 		
 								this.SetTypeValue("Name",data.Name);
 		
+								this.SetTypeValue("IsSelected",data.IsSelected);
+		
 			#endregion 
 
 			#region 组件内属性
 	
 					if (data.AdvApplyBE!=null)
 			{
-				AdvertisementApplyBE.AdvApplyBE child = dict[data.AdvApplyBE] as AdvertisementApplyBE.AdvApplyBE ;
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE child = dict[data.AdvApplyBE] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE ;
 				if (child == null)
 				{
 					if (data.AdvApplyBE.ID>0)
 					{
 						if (data.AdvApplyBE.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
-							child = (AdvertisementApplyBE.AdvApplyBE)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(data.AdvApplyBE.ID,data.AdvApplyBE.SysEntityType).GetEntity());
-						if (child==null) child = (AdvertisementApplyBE.AdvApplyBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(data.AdvApplyBE.SysEntityType,null,data.AdvApplyBE.ID,true) ;
+							child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(data.AdvApplyBE.ID,data.AdvApplyBE.SysEntityType).GetEntity());
+						if (child==null) child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(data.AdvApplyBE.SysEntityType,null,data.AdvApplyBE.ID,true) ;
 					}
 					else
 					{
- 						child = (AdvertisementApplyBE.AdvApplyBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(data.AdvApplyBE.SysEntityType,null,null,true) ;				
+ 						child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(data.AdvApplyBE.SysEntityType,null,null,true) ;				
  					}
 					
 					child.FromEntityData(data.AdvApplyBE,dict);
@@ -1108,7 +1166,7 @@ namespace AdvertisementApplyBE
 			
 			if (dict == null ) dict = new Hashtable() ;
 			//就直接用ID,如果不同实体会出现相同ID，则到时候要改进。? ID一定要有。
-			dict["AdvertisementApplyBE.AdvAboutBE"+this.ID.ToString()] = data;
+			dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE"+this.ID.ToString()] = data;
 		
 			data.SysState = this.SysState ;
 			#region 组件外属性 -BusinessEntity,"简单值对象",简单类型,多语言.不可能存在一对多.没有集合可能.
@@ -1168,6 +1226,13 @@ namespace AdvertisementApplyBE
 					data.Name=(System.String)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("IsSelected");
+				if (obj != null)
+					data.IsSelected=(System.Boolean)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1176,7 +1241,7 @@ namespace AdvertisementApplyBE
 				object oID = this.GetValue("AdvApplyBE");
 				if (oID != null && (Int64)oID > 0 )
 				{
-					AdvertisementApplyBE.AdvApplyBEData _AdvApplyBE = dict["AdvertisementApplyBE.AdvApplyBE"+oID.ToString()] as AdvertisementApplyBE.AdvApplyBEData;			
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData _AdvApplyBE = dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE"+oID.ToString()] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData;			
 					data.AdvApplyBE = (_AdvApplyBE != null) ? _AdvApplyBE : (this.AdvApplyBE==null?null:this.AdvApplyBE.ToEntityData(null,dict));
 				}
 			}
@@ -1197,6 +1262,7 @@ namespace AdvertisementApplyBE
         private bool SelfEntityValidator()
         {
         
+
 
 
 

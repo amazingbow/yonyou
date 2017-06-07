@@ -7,7 +7,7 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 
  
 		
-		[assembly: UBFComponent("ef3f588a-34ca-428d-a069-db5d9c3031bb", "AdvertisementApplyBE", "AdvertisementApplyBE")]
+		[assembly: UBFComponent("ef3f588a-34ca-428d-a069-db5d9c3031bb", "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE", "AdvertisementApplyBE")]
 	
  
 		
@@ -15,7 +15,7 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 	
  
 		
-		[assembly: UBFComponent("e852098c-f1b7-42a0-8976-d684172a6508", "AdvertisementApproveBE", "AdvertisementApproveBE")]
+		[assembly: UBFComponent("e852098c-f1b7-42a0-8976-d684172a6508", "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE", "AdvertisementApproveBE")]
 	
  
 		

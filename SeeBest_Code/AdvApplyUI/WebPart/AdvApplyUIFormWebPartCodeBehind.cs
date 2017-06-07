@@ -193,76 +193,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			
         }
 		 
-				//MethodName:BtnSubmit_Click ActionName:SubmitClick
-        /// <summary>
-        /// Help Info : {varEvent.Help}
-        /// </summary>
-        public void BtnSubmit_Click(object sender, EventArgs e)
-        {
-			
-				OnDataCollect(this); //当前事件先执行数据收集		    
-		
-
-			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
-			this.IsConsuming = false;
-					
-			this.InvokeMethod(sender,e,BtnSubmit_Click_Extend) ;
-	
-			
-        }
-
-        //default implement by tpl ...
-        private void BtnSubmit_Click_DefaultImpl(object sender, EventArgs e)
-        {
-			if (adjust.DoRequireCheck())
-			{
-			//Template (tpl) Code here...
-			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:SubmitClick
-
-	
-		Action.SubmitClick(sender,new UIActionEventArgs());
-
-		
-			
-
-			}
-        }
-		 
-				//MethodName:BtnApprove_Click ActionName:ApproveClick
-        /// <summary>
-        /// Help Info : {varEvent.Help}
-        /// </summary>
-        public void BtnApprove_Click(object sender, EventArgs e)
-        {
-			
-				OnDataCollect(this); //当前事件先执行数据收集		    
-		
-
-			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
-			this.IsConsuming = false;
-					
-			this.InvokeMethod(sender,e,BtnApprove_Click_Extend) ;
-	
-			
-        }
-
-        //default implement by tpl ...
-        private void BtnApprove_Click_DefaultImpl(object sender, EventArgs e)
-        {
-			if (adjust.DoRequireCheck())
-			{
-			//Template (tpl) Code here...
-			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:ApproveClick
-
-	
-		Action.ApproveClick(sender,new UIActionEventArgs());
-
-		
-			
-
-			}
-        }
-		 
 				//MethodName:BtnFind_Click ActionName:FindClick
         /// <summary>
         /// Help Info : {varEvent.Help}
@@ -573,6 +503,216 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		
 			
         }
+		 
+
+			
+
+		//MethodName:Qty693_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void Qty693_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,Qty693_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void Qty693_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
+
+			
+
+		//MethodName:BMWidth146_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BMWidth146_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BMWidth146_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BMWidth146_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
+
+			
+
+		//MethodName:BMHight124_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BMHight124_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BMHight124_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BMHight124_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
+
+			
+
+		//MethodName:BMArea187_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BMArea187_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BMArea187_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BMArea187_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
+
+			
+
+		//MethodName:DZWidth187_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void DZWidth187_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,DZWidth187_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void DZWidth187_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
+		 
+
+			
+
+		//MethodName:DZThick224_TextChanged ActionName:
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void DZThick224_TextChanged(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,DZThick224_TextChanged_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void DZThick224_TextChanged_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+					//throw new NotImplementedException() ;
+	 
+
+		
+			
+        }
 		#region  数据初始化加载和数据收集方法
 		public void OnLoadData(object sender)
 		{	
@@ -617,7 +757,23 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		}
 
 		#endregion 
-				
+			
+        #region Grid控件DataGrid0的分页事件	
+        void UFGridDataGrid0_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
+        {
+            //Grid的首页、下页、上页、末页处理逻辑
+			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridMakePage",this.Action,this.DataGrid0,e);
+        }
+        #endregion
+
+        #region Grid控件DataGrid0的客户化筛选事件	
+        void UFGridDataGrid0_GridCustomFilterHandler(Object sender, GridCustomFilterArgs  e)
+        {
+            //Grid的客户化筛选，首条、上一条、下一条、末条处理逻辑
+			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridCustomFilter",this.Action,this.DataGrid0,e);
+        }
+        #endregion
+		
         #endregion
         
     }

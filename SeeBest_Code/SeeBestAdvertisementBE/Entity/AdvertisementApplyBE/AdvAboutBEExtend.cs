@@ -9,7 +9,7 @@ using System.Text;
 
 #endregion
 
-namespace AdvertisementApplyBE {
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE {
 
 	public partial class AdvAboutBE{
 
@@ -103,19 +103,12 @@ namespace AdvertisementApplyBE {
 		#endregion
 
 		#region CreateDefault
-		private static AdvAboutBE CreateDefault_Extend() {
-			//TODO delete next code and add your custome code here
-			throw new NotImplementedException () ;
-		}
-		/// <summary>
-		/// Create DefaultComponent
-		/// </summary>
-		/// <returns>DefaultComponent Instance</returns>
-		private  static AdvAboutBE CreateDefaultComponent_Extend(){
-			//TODO delete next code and add your custome code here
-			throw new NotImplementedException () ;
-		}
 		
+		private  static AdvAboutBE CreateDefault_Extend(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE parentEntity) {
+			//TODO delete next code and add your custome code here
+			throw new NotImplementedException () ;
+		}
+	    		
 		#endregion 
 
 

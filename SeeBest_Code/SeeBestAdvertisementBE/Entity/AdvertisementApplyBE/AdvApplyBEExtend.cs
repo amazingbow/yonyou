@@ -9,7 +9,7 @@ using System.Text;
 
 #endregion
 
-namespace AdvertisementApplyBE {
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE {
 
 	public partial class AdvApplyBE{
 

@@ -15,6 +15,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         public override  void AfterInitModel()
         {
             //this.Views[0].Fields[0].DefaultValue = thsi.co
+
         }
         
         //UIModel提交保存之前的校验操作.

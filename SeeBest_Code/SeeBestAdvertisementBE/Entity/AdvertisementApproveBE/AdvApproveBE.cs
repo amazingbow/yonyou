@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic ;
 using System.Runtime.Serialization;
 
-namespace AdvertisementApproveBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 {
 	
 	/// <summary>
@@ -33,7 +33,7 @@ namespace AdvertisementApproveBE
 		/// <returns>Instance</returns>
 		public  static AdvApproveBE Create() {
 			AdvApproveBE entity = (AdvApproveBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																					 
+																														 
 			return entity;
 		}
 
@@ -79,14 +79,14 @@ namespace AdvertisementApproveBE
 		#region ClassKey
 		protected override string ClassKey_FullName
         {
-            get { return "AdvertisementApproveBE.AdvApproveBE"; }    
+            get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE"; }    
         }
 		//private static UFSoft.UBF.PL.IClassKey _currentClassKey;
 		//由于可能每次访问时的Enterprise不一样，所以每次重取.
 		private static UFSoft.UBF.PL.IClassKey CurrentClassKey
 		{
 			get {
-				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("AdvertisementApproveBE.AdvApproveBE");
+				return  UFSoft.UBF.PL.ClassKeyFacatory.CreateKey("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE");
 			}
 		}
 		
@@ -102,7 +102,7 @@ namespace AdvertisementApproveBE
 	    [DataContract(Name = "EntityKey", Namespace = "UFSoft.UBF.Business.BusinessEntity")]
 		public new partial class EntityKey : UFSoft.UBF.Business.BusinessEntity.EntityKey
 		{
-			public EntityKey(long id): this(id, "AdvertisementApproveBE.AdvApproveBE")
+			public EntityKey(long id): this(id, "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE")
 			{}
 			//Construct using by freamwork.
 			protected EntityKey(long id , string entityType):base(id,entityType)
@@ -409,11 +409,120 @@ namespace AdvertisementApproveBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 办事处 (该属性可为空,但有默认值)
+			/// 广告核销单.Misc.办事处
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.CBO.SCM.Customer.Customer AdvApplyCust
+			{
+				get
+				{
+					if (AdvApplyCustKey == null)
+						return null ;
+					UFIDA.U9.CBO.SCM.Customer.Customer value =  (UFIDA.U9.CBO.SCM.Customer.Customer)AdvApplyCustKey.GetEntity();
+					return value ;
+				}
+			}
+		
+
+
+   		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_AdvApplyCustKey ;
+		/// <summary>
+		/// EntityKey 属性
+		/// 办事处 的Key (该属性可为空,但有默认值)
+		/// 广告核销单.Misc.办事处
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey AdvApplyCustKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApplyCust") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApplyCustKey==null || m_AdvApplyCustKey.ID != key )
+					m_AdvApplyCustKey = new UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey(key); 
+				return m_AdvApplyCustKey ;
+			}
+		}
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 月份 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.月份
+			/// </summary>
+			/// <value></value>
+			public  System.DateTime Month
+			{
+				get
+				{
+					object obj = base.GetValue("Month");
+					if (obj == null)
+						return System.DateTime.MinValue;
+					else
+					       return (System.DateTime)obj;
+				}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 单号 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.单号
+			/// </summary>
+			/// <value></value>
+			public  System.String DocNo
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("DocNo");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
 
 			#region List member						
+		
+			
+			private List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine> m_AdvApproveLine  ;
+			/// <summary>
+			/// 广告核销单行 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.广告核销单行
+			/// </summary>
+			/// <value></value>
+			public  List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine> AdvApproveLine
+			{
+				get
+				{
+					if (m_AdvApproveLine == null)
+						m_AdvApproveLine = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine>();
+					m_AdvApproveLine.Clear();	
+					foreach (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine child in ContainerEntity.AdvApproveLine)
+					{
+						if (child.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
+							m_AdvApproveLine.Add(child);
+					}
+					foreach (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine child in ContainerEntity.AdvApproveLine.DelLists)
+					{
+						m_AdvApproveLine.Add(child);
+					}
+					return m_AdvApproveLine;
+				}
+			}
 			#endregion
 
 			#region Be List member						
@@ -577,11 +686,143 @@ namespace AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 办事处 (该属性可为空,但有默认值)
+		/// 广告核销单.Misc.办事处
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.CBO.SCM.Customer.Customer AdvApplyCust
+		{
+			get
+			{
+				object  obj = this.GetRelation("AdvApplyCust");
+				if (obj == null)
+				{
+					return null ;
+				}
+				else
+				{
+					UFIDA.U9.CBO.SCM.Customer.Customer value  = (UFIDA.U9.CBO.SCM.Customer.Customer)obj;
+					return value;
+				 }
+			}
+				set
+			{
+				
+				this.SetRelation("AdvApplyCust", value);
+					 
+			}
+		}
+	
+
+
+   		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_AdvApplyCustKey ;
+		/// <summary>
+		/// 办事处 的Key (该属性可为空,但有默认值)
+		/// 广告核销单.Misc.办事处
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey AdvApplyCustKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApplyCust") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApplyCustKey==null || m_AdvApplyCustKey.ID != key )
+					m_AdvApplyCustKey = new UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey(key); 
+				return m_AdvApplyCustKey ;
+			}
+			set
+			{	
+				if (AdvApplyCustKey==value)
+					return ;
+				this.SetRelation("AdvApplyCust", null);
+				m_AdvApplyCustKey = value ;
+				if (value != null) 
+				{
+					base.SetValue("AdvApplyCust",value.ID);
+				}
+				else
+					base.SetValue("AdvApplyCust",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
+
+		
+			/// <summary>
+		/// 月份 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.月份
+		/// </summary>
+		/// <value></value>
+			public  System.DateTime Month
+		{
+			get
+			{
+				System.DateTime value  = (System.DateTime)base.GetValue("Month");
+				return value.Date ;
+				}
+				set
+			{
+				
+				
+				base.SetValue("Month", value.Date);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 单号 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.单号
+		/// </summary>
+		/// <value></value>
+			public  System.String DocNo
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("DocNo");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("DocNo", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
 
 		#region List member						
+	
+		
+		private UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityList m_AdvApproveLine  ;
+		/// <summary>
+		/// 广告核销单行 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.广告核销单行
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityList AdvApproveLine
+		{
+			get
+			{
+				if (m_AdvApproveLine == null)
+					m_AdvApproveLine = new UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityList("AdvApproveBE",this,"AdvApproveLine",(IList)this.GetRelation("AdvApproveLine"));
+				else
+					m_AdvApproveLine.InnerList = (IList)this.GetRelation("AdvApproveLine");
+				return m_AdvApproveLine;
+			}
+		}
 		#endregion
 
 		#region Be List member						
@@ -597,7 +838,7 @@ namespace AdvertisementApproveBE
 		/// Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
 		/// </summary>
 		[Obsolete("")]
-		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("AdvertisementApproveBE.AdvApproveBE")  ;}	}
+		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE")  ;}	}
 		#endregion 		
 
 		#region ModelResource,这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource()内部类的方式取资源
@@ -631,6 +872,26 @@ namespace AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_SysVersion　{ get { return EntityRes.GetResource("SysVersion");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyCust")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvApplyCust　{ get { return EntityRes.GetResource("AdvApplyCust");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Month")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_Month　{ get { return EntityRes.GetResource("Month");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocNo")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_DocNo　{ get { return EntityRes.GetResource("DocNo");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveLine")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvApproveLine　{ get { return EntityRes.GetResource("AdvApproveLine");　}　}
 		#endregion 
 
 
@@ -646,7 +907,7 @@ namespace AdvertisementApproveBE
 			/// <summary>
 			/// Entity　的全名. 
 			/// </summary>
-			public static string BE_FullName { get { return "AdvertisementApproveBE.AdvApproveBE";　}　}
+			public static string BE_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE";　}　}
 		
 			/// <summary>
 			/// 属性: ID 的名称
@@ -677,6 +938,26 @@ namespace AdvertisementApproveBE
 			/// 属性: 事务版本 的名称
 			/// </summary>
 			public static string SysVersion　{ get { return "SysVersion";　}　}
+				
+			/// <summary>
+			/// 属性: 办事处 的名称
+			/// </summary>
+			public static string AdvApplyCust　{ get { return "AdvApplyCust";　}　}
+				
+			/// <summary>
+			/// 属性: 月份 的名称
+			/// </summary>
+			public static string Month　{ get { return "Month";　}　}
+				
+			/// <summary>
+			/// 属性: 单号 的名称
+			/// </summary>
+			public static string DocNo　{ get { return "DocNo";　}　}
+				
+			/// <summary>
+			/// 属性: 广告核销单行 的名称
+			/// </summary>
+			public static string AdvApproveLine　{ get { return "AdvApproveLine";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -684,7 +965,7 @@ namespace AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-												
+																				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -730,6 +1011,9 @@ namespace AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("ModifiedOn","ModifiedOn");
 			this.exdMultiLangAttrs.Add("ModifiedBy","ModifiedBy");
 			this.exdMultiLangAttrs.Add("SysVersion","SysVersion");
+			this.exdMultiLangAttrs.Add("AdvApplyCust","AdvApplyCust");
+			this.exdMultiLangAttrs.Add("Month","Month");
+			this.exdMultiLangAttrs.Add("DocNo","DocNo");
         }
 	#endregion 
 
@@ -746,7 +1030,7 @@ namespace AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																		
+																											
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -774,6 +1058,14 @@ namespace AdvertisementApproveBE
 			
 
 			
+
+			
+
+			
+
+			if (data.AdvApplyCust == -1 && data.AdvApplyCust_SKey!=null)
+				data.AdvApplyCust = data.AdvApplyCust_SKey.GetEntity().ID ;
+	
 
 			
 
@@ -835,10 +1127,47 @@ namespace AdvertisementApproveBE
 
 								this.SetTypeValue("SysVersion",data.SysVersion);
 		
+								this.SetTypeValue("AdvApplyCust",data.AdvApplyCust);
+		
+								this.SetTypeValue("Month",data.Month);
+		
+								this.SetTypeValue("DocNo",data.DocNo);
+		
 			#endregion 
 
 			#region 组件内属性
 	
+					if (data.AdvApproveLine != null)
+			{	
+				foreach(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData obj in data.AdvApproveLine )
+				{
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine child = dict[obj] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine;
+					if (child == null)
+					{
+						if (obj.ID>0)
+						{
+							if (obj.SysState != UFSoft.UBF.PL.Engine.ObjectState.Inserted)
+								child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine)(new UFSoft.UBF.Business.BusinessEntity.EntityKey(obj.ID,obj.SysEntityType).GetEntity());
+							if (child==null) child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,obj.ID,true) ;
+						}
+						else
+						{
+							 child = (UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine)UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(obj.SysEntityType,this,null,true) ;
+						}
+						
+						child.FromEntityData(obj,dict);
+					}
+					if (child.SysState == UFSoft.UBF.PL.Engine.ObjectState.Deleted)
+					{
+						this.AdvApproveLine.Remove(child);
+						this.AdvApproveLine.DelLists.Add(child);
+					}
+					else
+						this.AdvApproveLine.Add(child);
+				}
+			}
+	     
+
 			#endregion 
 			this.NeedPersistable = m_isNeedPersistable ;
 			dict[data] = this;
@@ -860,7 +1189,7 @@ namespace AdvertisementApproveBE
 			
 			if (dict == null ) dict = new Hashtable() ;
 			//就直接用ID,如果不同实体会出现相同ID，则到时候要改进。? ID一定要有。
-			dict["AdvertisementApproveBE.AdvApproveBE"+this.ID.ToString()] = data;
+			dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE"+this.ID.ToString()] = data;
 		
 			data.SysState = this.SysState ;
 			#region 组件外属性 -BusinessEntity,"简单值对象",简单类型,多语言.不可能存在一对多.没有集合可能.
@@ -906,10 +1235,43 @@ namespace AdvertisementApproveBE
 					data.SysVersion=(System.Int64)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("AdvApplyCust");
+				if (obj != null)
+					data.AdvApplyCust=(System.Int64)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("Month");
+				if (obj != null)
+					data.Month=(System.DateTime)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("DocNo");
+				if (obj != null)
+					data.DocNo=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
 	
+			if (this.AdvApproveLine != null)
+			{	
+				List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData> listAdvApproveLine = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData>();
+				//必然要访问集合中实体。没办法直接去取实体里面的ID。
+				foreach(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine obj in this.AdvApproveLine ){
+					if (obj == null)
+						continue;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData old = dict["UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine"+obj.ID.ToString()] as UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData;
+					listAdvApproveLine.Add((old != null) ? old : obj.ToEntityData(null, dict));
+				}
+				data.AdvApproveLine = listAdvApproveLine;
+			}	
 
 			#endregion 
 			return data ;
@@ -926,6 +1288,10 @@ namespace AdvertisementApproveBE
         private bool SelfEntityValidator()
         {
         
+
+
+
+
 
 
 

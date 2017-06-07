@@ -843,12 +843,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			/// 专柜申请单.Misc.版面类型
 			/// </summary>
 			/// <value></value>
-			public  AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
 			{
 				get
 				{
 
-					AdvertisementApplyBE.AdvDisplayTypeEnum value  = AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
 					return value;
 				}
 			}
@@ -1667,19 +1667,19 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// 专柜申请单.Misc.版面类型
 		/// </summary>
 		/// <value></value>
-			public  AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum AdvDisplayType
 		{
 			get
 			{
 
-				AdvertisementApplyBE.AdvDisplayTypeEnum value  = AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.GetFromValue(base.GetValue("AdvDisplayType"));
 				return value;
 			}
 				set
 			{
 				
 				if (value == null)
-					base.SetValue("AdvDisplayType",AdvertisementApplyBE.AdvDisplayTypeEnum.Empty.Value);
+					base.SetValue("AdvDisplayType",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnum.Empty.Value);
 				else
 					base.SetValue("AdvDisplayType",value.Value);
 					 

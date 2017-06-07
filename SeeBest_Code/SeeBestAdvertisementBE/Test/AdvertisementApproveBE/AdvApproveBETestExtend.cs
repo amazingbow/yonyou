@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Transactions;
 
-namespace AdvertisementApproveBE.TestSuite{
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.TestSuite{
 	using NUnit.Framework;
 	using UFSoft.UBF.Business;
 

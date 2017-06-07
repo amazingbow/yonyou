@@ -4,13 +4,13 @@
 	using System.Collections.Generic ;
 	using System.Runtime.Serialization;
 
-namespace AdvertisementApplyBE
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 {
 	/// <summary>
 	/// 广告申请单 缺省DTO 
 	/// 
 	/// </summary>
-	[DataContract(Name = "AdvertisementApplyBE.AdvApplyBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
+	[DataContract(Name = "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
 	[Serializable]
     [KnownType("GetKnownTypes")]
 	public partial class AdvApplyBEData : UFSoft.UBF.Business.DataTransObjectBase
@@ -52,7 +52,8 @@ namespace AdvertisementApplyBE
                         
                         
                         
-                                        knownTypes.Add(typeof(List<AdvertisementApplyBE.AdvAboutBEData>));
+                                        knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData>));
+                        
                         
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
@@ -101,7 +102,7 @@ namespace AdvertisementApplyBE
 	     							ApproveQty=0m; 
 	     			
 	     							IsClose=false; 
-
+	     							Flow4Bit= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -121,7 +122,7 @@ namespace AdvertisementApplyBE
 		[DataMember(IsRequired=false)]
 		public override string SysEntityType
 		{
-			get { return "AdvertisementApplyBE.AdvApplyBE" ;}
+			get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE" ;}
 		}
 		#endregion
 
@@ -151,14 +152,14 @@ namespace AdvertisementApplyBE
 		/// 广告申请单.Misc.广告体现项目子表
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private List<AdvertisementApplyBE.AdvAboutBEData> m_advAboutBE;
-		public List<AdvertisementApplyBE.AdvAboutBEData> AdvAboutBE
+		private List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData> m_advAboutBE;
+		public List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData> AdvAboutBE
 		{
 			get	
 			{	
 				if (m_advAboutBE == null)
 				{
-					List<AdvertisementApplyBE.AdvAboutBEData> m_list = new List<AdvertisementApplyBE.AdvAboutBEData>() ;
+					List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData> m_list = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData>() ;
 					m_advAboutBE = m_list;
 				}
 				return m_advAboutBE ;
@@ -856,10 +857,29 @@ namespace AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 编号的4位流水
+		/// 广告申请单.Misc.编号的4位流水
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_flow4Bit ;
+		public System.Int32 Flow4Bit
+		{
+			get	
+			{	
+				return m_flow4Bit  ;
+			}
+			set	
+			{	
+				m_flow4Bit = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																			
+																																				
 		#endregion 		
 	}	
 
