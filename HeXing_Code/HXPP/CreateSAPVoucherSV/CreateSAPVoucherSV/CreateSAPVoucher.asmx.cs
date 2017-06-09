@@ -70,6 +70,10 @@ namespace CreateSAPVoucherSV
                 vouchers[i].m_postedPeriodSpecified = true;
                 vouchers[i].m_currencyCode = SAPU9GLVoucherS[i].CurrencyCode;//币种编码
                 vouchers[i].m_currencyDescription = SAPU9GLVoucherS[i].CurrencyDescription;//货币描述
+                vouchers[i].m_sapCreater = SAPU9GLVoucherS[i].SapCreater;//SAP凭证制单人
+                vouchers[i].m_sapAuditor = SAPU9GLVoucherS[i].SapAuditor;//SAP凭证审核人
+                vouchers[i].m_sapPoster = SAPU9GLVoucherS[i].SapPoster;//SAP凭证记账人
+                vouchers[i].m_sapCashier = SAPU9GLVoucherS[i].SapCashier;//SAP凭证出纳人
                 UFIDAU9CustHXPPSVCreateSAPVoucherSVSAPU9GLVoucherLineDTOData[] voucherlines = new UFIDAU9CustHXPPSVCreateSAPVoucherSVSAPU9GLVoucherLineDTOData[SAPU9GLVoucherS[i].SAPU9GLVoucherLineS.Count];
                 for (int j = 0; j < SAPU9GLVoucherS[i].SAPU9GLVoucherLineS.Count; j++)
                 {
@@ -174,6 +178,10 @@ namespace CreateSAPVoucherSV
         public System.Int32 PostedPeriod;//记账期间
         public System.String CurrencyCode;//币种编码
         public System.String CurrencyDescription;//货币描述
+        public System.String SapCreater;//SAP凭证制单人
+        public System.String SapAuditor;//SAP凭证审核人
+        public System.String SapPoster;//SAP凭证记账人
+        public System.String SapCashier;//SAP凭证出纳人
         public List<SAPU9GLVoucherLine> SAPU9GLVoucherLineS;//SAP与U9凭证对接中间表行列表
     }
 

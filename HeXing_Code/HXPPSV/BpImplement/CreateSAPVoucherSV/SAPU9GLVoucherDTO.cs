@@ -34,6 +34,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		
 		
 		
+		
+		
+		
+		
 
 		}
 
@@ -210,10 +214,78 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 				base.SetValue("SAPU9GLVoucherLineDTOS",value);
 			}
 		}
+				/// <summary>
+		/// SAP凭证制单人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证制单人
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String SapCreater
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("SapCreater",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("SapCreater",value);
+			}
+		}
+				/// <summary>
+		/// SAP凭证审核人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证审核人
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String SapAuditor
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("SapAuditor",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("SapAuditor",value);
+			}
+		}
+				/// <summary>
+		/// SAP凭证记账人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证记账人
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String SapPoster
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("SapPoster",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("SapPoster",value);
+			}
+		}
+				/// <summary>
+		/// SAP凭证出纳人 (该属性可为空,且无默认值)
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证出纳人
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String SapCashier
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("SapCashier",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("SapCashier",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-										
+														
 		#endregion 
 
 		#region ModelResource
@@ -261,6 +333,22 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		/// SAP与U9凭证对接中间表行列表的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_SAPU9GLVoucherLineDTOS　{ get { return "";　}　}
+		/// <summary>
+		/// SAP凭证制单人的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_SapCreater　{ get { return "";　}　}
+		/// <summary>
+		/// SAP凭证审核人的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_SapAuditor　{ get { return "";　}　}
+		/// <summary>
+		/// SAP凭证记账人的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_SapPoster　{ get { return "";　}　}
+		/// <summary>
+		/// SAP凭证出纳人的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_SapCashier　{ get { return "";　}　}
 		#endregion 
 
 
@@ -273,6 +361,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		private void DeSerializeKey(SAPU9GLVoucherDTOData data)
 		{
 		
+
+
+
+
 
 
 
@@ -340,6 +432,14 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 				this.SAPU9GLVoucherLineDTOS = listSAPU9GLVoucherLineDTOS;
 			}
 
+			this.SapCreater = data.SapCreater;
+
+			this.SapAuditor = data.SapAuditor;
+
+			this.SapPoster = data.SapPoster;
+
+			this.SapCashier = data.SapCashier;
+
 		}
 
 		/// <summary>
@@ -398,6 +498,14 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 				}
 				data.SAPU9GLVoucherLineDTOS = listSAPU9GLVoucherLineDTOS;
 			}
+
+			data.SapCreater = this.SapCreater;
+
+			data.SapAuditor = this.SapAuditor;
+
+			data.SapPoster = this.SapPoster;
+
+			data.SapCashier = this.SapCashier;
 
 			return data ;
 		}

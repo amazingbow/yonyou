@@ -97,6 +97,10 @@
                         doc.PostedPeriod = dto.PostedPeriod;//记账期间
                         doc.CurrencyCode = dto.CurrencyCode;//币种编码
                         doc.CurrencyDescription = dto.CurrencyDescription;//货币描述
+                        doc.SapCreater = dto.SapCreater;//SAP凭证制单人
+                        doc.SapAuditor = dto.SapAuditor;//SAP凭证审核人
+                        doc.SapPoster = dto.SapPoster;//SAP凭证记账人
+                        doc.SapCashier = dto.SapCashier;//SAP凭证出纳人
                         doc.ImportDate = System.DateTime.Now;//导入日期
 
                         foreach (SAPU9GLVoucherLineDTO dtoline in dto.SAPU9GLVoucherLineDTOS)

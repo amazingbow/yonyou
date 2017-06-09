@@ -22,7 +22,7 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
         {
             IList<Type> knownTypes = new List<Type>();
                                                                                                                                  
-            knownTypes.Add(typeof(List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData>)); 
+            knownTypes.Add(typeof(List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData>));                                                     
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -43,6 +43,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 		
 					PostedPeriod= 0; 
 				
+		
+		
+		
+		
 		
 		
 
@@ -69,13 +73,13 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 					objdata.DoSerializeKeyList(dict);
 				}
 			}
-			
+				        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public SAPU9GLVoucherDTOData(  System.String companyCode  , System.String companyName  , System.String sAPVoucherDisplayCode  , System.String voucherCategoryCode  , System.String voucherCategoryDescription  , System.DateTime postDate  , System.Int32 postedPeriod  , System.String currencyCode  , System.String currencyDescription  , List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData> sAPU9GLVoucherLineDTOS  )
+		public SAPU9GLVoucherDTOData(  System.String companyCode  , System.String companyName  , System.String sAPVoucherDisplayCode  , System.String voucherCategoryCode  , System.String voucherCategoryDescription  , System.DateTime postDate  , System.Int32 postedPeriod  , System.String currencyCode  , System.String currencyDescription  , List<UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV.SAPU9GLVoucherLineDTOData> sAPU9GLVoucherLineDTOS  , System.String sapCreater  , System.String sapAuditor  , System.String sapPoster  , System.String sapCashier  )
 		{
 			initData();
 			this.CompanyCode = companyCode;
@@ -88,6 +92,10 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			this.CurrencyCode = currencyCode;
 			this.CurrencyDescription = currencyDescription;
 			this.SAPU9GLVoucherLineDTOS = sAPU9GLVoucherLineDTOS;
+			this.SapCreater = sapCreater;
+			this.SapAuditor = sapAuditor;
+			this.SapPoster = sapPoster;
+			this.SapCashier = sapCashier;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -300,10 +308,90 @@ namespace UFIDA.U9.Cust.HXPPSV.CreateSAPVoucherSV
 			}
 		}
 			
+		
+
+		/// <summary>
+		/// SAP凭证制单人
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证制单人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapCreater ;
+		public System.String SapCreater
+		{
+			get	
+			{	
+				return m_sapCreater ;
+			}
+			set	
+			{	
+				m_sapCreater = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// SAP凭证审核人
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证审核人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapAuditor ;
+		public System.String SapAuditor
+		{
+			get	
+			{	
+				return m_sapAuditor ;
+			}
+			set	
+			{	
+				m_sapAuditor = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// SAP凭证记账人
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证记账人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapPoster ;
+		public System.String SapPoster
+		{
+			get	
+			{	
+				return m_sapPoster ;
+			}
+			set	
+			{	
+				m_sapPoster = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// SAP凭证出纳人
+		/// SAP与U9凭证对接中间表DTO.Misc.SAP凭证出纳人
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_sapCashier ;
+		public System.String SapCashier
+		{
+			get	
+			{	
+				return m_sapCashier ;
+			}
+			set	
+			{	
+				m_sapCashier = value ;	
+			}
+		}
+			
 		#endregion	
 
 		#region Multi_Fields
-																				
+																												
 		#endregion 
 	} 	
 }
