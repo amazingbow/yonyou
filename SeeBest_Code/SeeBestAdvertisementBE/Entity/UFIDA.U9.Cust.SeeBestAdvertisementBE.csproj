@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-
-
-
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-  <Import Project="UFIDA.U9.Cust.SeeBestAdvertisementBE.target" />  
-
+  <ItemGroup>
+    <Reference Include="UFSoft.UBF.Util.DataAccess">
+      <HintPath>..\..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\bin\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="UFIDA.U9.Cust.SeeBestAdvertisementBE.target" />
 </Project>

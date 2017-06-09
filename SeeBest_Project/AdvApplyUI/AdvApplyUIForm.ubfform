@@ -1,4 +1,4 @@
-<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" Height="800" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1216" X="8" Y="8">
+<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" Height="800" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1216" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="1000" />
   </Columns>
@@ -135,10 +135,19 @@
         <RelationControls />
         <Events />
       </Label>
-      <Reference ID="17a910b4-1d37-439d-b85b-240b63182192" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDept161" ReadOnly="True" RelationControl="lblApplyDept161" TabIndex="4" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDept" UIViewID="AdvApplyBE" Visible="True" Width="120" X="120" Y="35">
+      <Reference ID="17a910b4-1d37-439d-b85b-240b63182192" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ApplyDept_Code" CodeFieldUIViewID="AdvApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDept161" NameAttributeName="Name" NameFieldUIFieldID="ApplyDept_Name" NameFieldUIViewID="AdvApplyBE" PkeyField="ID" ReadOnly="True" RefType="874cc1b6-f844-486c-b3f5-f8cca21fe1e0" RelationControl="lblApplyDept161" TabIndex="4" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDept" UIViewID="AdvApplyBE" Visible="True" Width="120" WindowHeight="408" WindowWidth="580" X="120" Y="35">
         <Events />
         <RelationControls />
-        <RefNameFields />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类名称" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="组织机构名称" ColumnID="Org_Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="私有段14" ColumnID="DescFlexField_PrivateDescSeg14" TargetControlType="" TargetID="" TargetProperty="" />
+        <RefNameFields>
+          <RefNameField UIFieldID="Name" />
+        </RefNameFields>
         <UIFilterBar Name="ReferenceFilter" />
         <Events />
       </Reference>
@@ -174,7 +183,7 @@
         <RelationControls />
         <Events />
       </Label>
-      <DatePicker ID="a9dde658-d7d6-49c0-a7db-2a08b41b3db9" DisplayFormat="10" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate268" RelationControl="lblApplyDate268" TabIndex="12" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="AdvApplyBE" Visible="True" Width="120" X="600" Y="35">
+      <DatePicker ID="a9dde658-d7d6-49c0-a7db-2a08b41b3db9" DisplayFormat="10" Enabled="False" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate268" RelationControl="lblApplyDate268" TabIndex="12" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="AdvApplyBE" Visible="True" Width="120" X="600" Y="35">
         <Events />
         <RelationControls />
       </DatePicker>
@@ -234,7 +243,7 @@
         <RelationControls />
       </TextBox>
     </TabPage>
-    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="28" GridRowSpace="5" GridTopMargin="10" Height="662" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
+    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="662" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -281,6 +290,8 @@
         <Row Fixed="False" Height="20" Name="Row25" />
         <Row Fixed="False" Height="20" Name="Row26" />
         <Row Fixed="False" Height="20" Name="Row27" />
+        <Row Fixed="False" Height="20" Name="Row28" />
+        <Row Fixed="False" Height="20" Name="Row29" />
       </Rows>
       <Line ID="005cdc8b-0b79-4e7c-a684-d4467f18f419" DisplayName="尺寸信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="0" Height="20" Name="Line3" TabIndex="0" TabStop="True" Width="950" X="10" Y="10" />
       <Label ID="a014a2ba-574e-4efa-98e0-70d2e7b21bc8" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblAdvItem433" RelationControl="AdvItem433" TabIndex="1" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="10" Y="35">
@@ -288,10 +299,17 @@
         <RelationControls />
         <Events />
       </Label>
-      <Reference ID="537f419a-6eae-40c0-baaf-8a4935189e11" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvItem433" RelationControl="lblAdvItem433" TabIndex="2" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvItem" UIViewID="AdvApplyBE" Visible="True" Width="117" X="120" Y="35">
+      <Reference ID="537f419a-6eae-40c0-baaf-8a4935189e11" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AdvItem_Code" CodeFieldUIViewID="AdvApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvItem433" NameAttributeName="Name" NameFieldUIFieldID="AdvItem_Name" NameFieldUIViewID="AdvApplyBE" PkeyField="ID" RefType="81c79b25-3104-4ac6-ab99-af61bec43501" RelationControl="lblAdvItem433" TabIndex="2" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvItem" UIViewID="AdvApplyBE" Visible="True" Width="117" WindowHeight="408" WindowWidth="580" X="120" Y="35">
         <Events />
         <RelationControls />
-        <RefNameFields />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="别名" ColumnID="AliasName" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+        <RefNameFields>
+          <RefNameField UIFieldID="Name" />
+        </RefNameFields>
         <UIFilterBar Name="ReferenceFilter" />
         <Events />
       </Reference>
@@ -427,13 +445,14 @@
         <CurrencyType Name="CurrencyType8" />
       </NumberControl>
       <Line ID="e91ee868-d4e6-4df8-96a1-0bec6f755371" DisplayName="广告体现项目" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="18" Height="20" Name="Line7" TabIndex="33" TabStop="True" Width="950" X="10" Y="460" />
-      <DataGrid ID="e605d2b2-e6dc-455f-85ba-766364ec60b4" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="9" GridWidth="8" GridX="0" GridY="19" HasSum="False" Height="220" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="34" TabStop="True" Width="480" X="10" Y="485">
+      <DataGrid ID="e605d2b2-e6dc-455f-85ba-766364ec60b4" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="11" GridWidth="8" GridX="0" GridY="19" HasSum="False" Height="270" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="34" TabStop="True" Width="480" X="10" Y="485">
         <Events />
         <Header ID="093e5479-d404-4a0c-9ed0-bd976595ac63" Name="Header0">
           <HeaderRow Name="DefaultRow">
             <HeaderCell ID="dd8b1e69-75cd-4d06-bfaa-c398f7321af1" ColSpan="1" DisplayName="勾选" DisplayNameIndexStr="" DisplayNameResourceID="6a6017df-d0b1-441c-b448-99c77840d58f" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell3" OwnerColName="IsSelected0" RowSpan="1" />
-            <HeaderCell ID="7c4add12-4b13-4c4f-aa50-ed9c76765726" ColSpan="1" Name="HeaderCell0" OwnerColName="Code0" RowSpan="1" />
+            <HeaderCell ID="fa8b2614-820e-4ef5-9632-0a8af4e7df2e" ColSpan="1" DisplayName="编码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell6" OwnerColName="Code0" RowSpan="1" />
             <HeaderCell ID="31dade86-70cd-491b-b104-dea048c1b6a7" ColSpan="1" Name="HeaderCell1" OwnerColName="Name0" RowSpan="1" />
+            <HeaderCell ID="ff5c9f84-2c22-4d91-b29d-d88dc15e083c" ColSpan="1" Name="HeaderCell4" OwnerColName="Description0" RowSpan="1" />
           </HeaderRow>
         </Header>
         <UIFilterBar Name="LocateBar" />
@@ -441,10 +460,13 @@
           <CheckBoxColumn ID="9095e781-305c-4b67-b5d5-2a60f599985c" DefaultValue="false" DisplayFormat="1" DisplaySrcType="Custom" Enabled="True" Help="广告体现项目子表.Misc.是否被选用" IsNull="True" IsProperty="False" IsSequence="False" Name="IsSelected0" NPos="1" Point="0" UIFieldID="IsSelected" UIViewID="AdvApplyBE_AdvAboutBE" Visible="True" Width="80">
             <Events />
           </CheckBoxColumn>
-          <TextBoxColumn ID="e2fe9eff-9cfe-4437-a3dc-9de0dc0c5de1" DefaultValue="" DisplayFormat="50" Enabled="False" Help="广告体现项目子表.Misc.代码" IsNull="True" IsProperty="False" IsSequence="False" Name="Code0" NPos="2" Point="0" TextAlign="Left" UIFieldID="Code" UIViewID="AdvApplyBE_AdvAboutBE" Visible="True">
+          <TextBoxColumn ID="6f717870-a9fb-4ccd-91dd-51c89aeeec47" DefaultValue="" DisplayFormat="50" Enabled="True" Help="广告体现项目子表.Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="Code0" NPos="2" Point="0" TextAlign="Left" UIFieldID="Code" UIViewID="AdvApplyBE_AdvAboutBE" Visible="True">
             <Events />
           </TextBoxColumn>
           <TextBoxColumn ID="9dcfd79f-01d8-4e27-9892-8f8ea5932882" DefaultValue="" DisplayFormat="50" Enabled="False" Help="广告体现项目子表.Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="Name0" NPos="3" Point="0" TextAlign="Left" UIFieldID="Name" UIViewID="AdvApplyBE_AdvAboutBE" Visible="True" Width="160">
+            <Events />
+          </TextBoxColumn>
+          <TextBoxColumn ID="6d271c96-f7ea-47bf-a28f-623c0d1c76d4" DefaultValue="" DisplayFormat="50" Enabled="True" Help="广告体现项目子表.Misc.简码描述" IsNull="True" IsProperty="False" IsSequence="False" Name="Description0" NPos="4" Point="0" TextAlign="Left" UIFieldID="Description" UIViewID="AdvApplyBE_AdvAboutBE" Visible="True">
             <Events />
           </TextBoxColumn>
         </Columns>

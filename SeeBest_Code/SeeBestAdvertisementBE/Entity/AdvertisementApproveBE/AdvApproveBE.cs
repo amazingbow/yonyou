@@ -11,7 +11,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	/// 
 	/// </summary>
 	[Serializable]	
-	public  partial class AdvApproveBE : UFSoft.UBF.Business.BusinessEntity
+	public  partial class AdvApproveBE : UFIDA.U9.Base.Doc.Doc
 	{
 
 
@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <returns>Instance</returns>
 		public  static AdvApproveBE Create() {
 			AdvApproveBE entity = (AdvApproveBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																														 
+									 
 			return entity;
 		}
 
@@ -100,7 +100,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Serializable()]
 	    [DataContract(Name = "EntityKey", Namespace = "UFSoft.UBF.Business.BusinessEntity")]
-		public new partial class EntityKey : UFSoft.UBF.Business.BusinessEntity.EntityKey
+		public new partial class EntityKey : UFIDA.U9.Base.Doc.Doc.EntityKey
 		{
 			public EntityKey(long id): this(id, "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE")
 			{}
@@ -179,7 +179,107 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+			/// <summary>
+			/// 业务主键查询参数类型
+			/// </summary>
+			public class BusinessKeyParameter
+			{
+				private UFIDA.U9.Base.Organization.Organization.EntityKey m_Org ;
+				public  UFIDA.U9.Base.Organization.Organization.EntityKey Org
+				{
+					get { return m_Org ;}
+					set { m_Org = value ;}
+				}
+				private System.String m_DocNo ;
+				public  System.String DocNo
+				{
+					get { return m_DocNo ;}
+					set { m_DocNo = value ;}
+				}
+			}
+			/// <summary>
+			/// 通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+			/// </summary>
+			public AdvApproveBE FindByBusinessKey(  UFIDA.U9.Base.Organization.Organization.EntityKey org  , System.String docNo  )
+			{
+				BusinessKeyParameter　parameter = new BusinessKeyParameter() ;
+				
+				parameter.Org = org ;
+				
+				parameter.DocNo = docNo ;
+				return this.FindByBusinessKey(parameter) ;
+			}
+			/// <summary>
+			/// 通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+			/// </summary>
+			[Obsolete("请使用另一FindByBusinessKey重载接口，参数为EntityKey类型，提高效率 ")]
+			public AdvApproveBE FindByBusinessKey(  UFIDA.U9.Base.Organization.Organization org  , System.String docNo  )
+			{
+				BusinessKeyParameter　parameter = new BusinessKeyParameter() ;
+				
+				parameter.Org = org==null?null:org.Key ;
+								parameter.DocNo = docNo ;
+				return this.FindByBusinessKey(parameter) ;
+			}
+			/// <summary>
+			/// 通过实体设置的业务主键进行查询－建议使用.
+			/// </summary>
+			public AdvApproveBE FindByBusinessKey(BusinessKeyParameter parameter)
+			{
+                if (parameter == null)
+                    throw new ArgumentException("parameter");
+                System.Text.StringBuilder sbuilder = new System.Text.StringBuilder(40*2);
+                UFSoft.UBF.PL.OqlParamList paramlist = new UFSoft.UBF.PL.OqlParamList();
+                
+								
+				
+
+				sbuilder.Append("Org = @Org");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("Org",parameter.Org.ID));												
+				
+
+				sbuilder.Append(" and DocNo = @DocNo");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("DocNo",parameter.DocNo));				
 						
+				return this.Find(sbuilder.ToString(), paramlist.ToArray());
+			}
+			
+			/// <summary>
+			/// UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApproveBE_AdvApproveBE_BusinessKey_Index索引查询参数类型
+			/// </summary>
+			public class BusinessKeyIndexParameter
+			{
+				private UFIDA.U9.Base.Organization.Organization.EntityKey m_Org ;
+				public  UFIDA.U9.Base.Organization.Organization.EntityKey Org
+				{
+					get { return m_Org ;}
+					set { m_Org = value ;}
+				}				private System.String m_DocNo ;
+				public  System.String DocNo
+				{
+					get { return m_DocNo ;}
+					set { m_DocNo = value ;}
+				}
+			}
+			
+			
+			/// <summary>
+			/// 通过索引UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApproveBE_AdvApproveBE_BusinessKey_Index进行查询(参数对象接口)
+			/// </summary>
+			public AdvApproveBE FindByBusinessKeyIndex(BusinessKeyIndexParameter parameter)
+			{
+                if (parameter == null)
+                    throw new ArgumentException("parameter");
+                System.Text.StringBuilder sbuilder = new System.Text.StringBuilder(20*2);
+                UFSoft.UBF.PL.OqlParamList paramlist = new UFSoft.UBF.PL.OqlParamList();
+				
+				sbuilder.Append("Org = @Org");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("Org",parameter.Org.ID));				
+				sbuilder.Append(" and DocNo = @DocNo");
+				paramlist.Add(new UFSoft.UBF.PL.OqlParam("DocNo",parameter.DocNo));				
+				return this.Find(sbuilder.ToString(), paramlist.ToArray());
+			}
+			
 		}
 
 		//private static EntityFinder _finder  ;
@@ -201,7 +301,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <summary>
 		/// EntityList
 		/// </summary>
-		public partial class EntityList :UFSoft.UBF.Business.Entity.EntityList<AdvApproveBE>{
+		public new partial class EntityList :UFSoft.UBF.Business.Entity.EntityList<AdvApproveBE>{
 		    #region constructor 
 		    /// <summary>
 		    /// EntityList 无参的构造方法,用于其它特殊情况
@@ -266,7 +366,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			return new EntityOriginal(this);
 		}
 		
-		public new partial class EntityOriginal: UFSoft.UBF.Business.Entity.EntityOriginal
+		public new partial class EntityOriginal:  UFIDA.U9.Base.Doc.Doc.EntityOriginal
 		{
 		    //private AdvApproveBE ContainerEntity ;
 		    public  new AdvApproveBE ContainerEntity 
@@ -275,7 +375,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				set { base.ContainerEntity = value ;}
 		    }
 		    
-		    public EntityOriginal(AdvApproveBE container)
+		    public EntityOriginal(AdvApproveBE container):base(container)
 		    {
 				if (container == null )
 					throw new ArgumentNullException("container") ;
@@ -290,126 +390,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 			#region member					
 			
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// ID (该属性不可为空,且无默认值)
-			/// 广告核销单.Key.ID
-			/// </summary>
-			/// <value></value>
-			public  System.Int64 ID
-			{
-				get
-				{
-					System.Int64 value  = (System.Int64)base.GetValue("ID");
-					return value;
-						}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 创建时间 (该属性可为空,且无默认值)
-			/// 广告核销单.Sys.创建时间
-			/// </summary>
-			/// <value></value>
-			public  System.DateTime CreatedOn
-			{
-				get
-				{
-					object obj = base.GetValue("CreatedOn");
-					if (obj == null)
-						return System.DateTime.MinValue;
-					else
-					       return (System.DateTime)obj;
-				}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 创建人 (该属性可为空,且无默认值)
-			/// 广告核销单.Sys.创建人
-			/// </summary>
-			/// <value></value>
-			public  System.String CreatedBy
-			{
-				get
-				{
-					System.String value  = (System.String)base.GetValue("CreatedBy");
-					return value;
-						}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 修改时间 (该属性可为空,且无默认值)
-			/// 广告核销单.Sys.修改时间
-			/// </summary>
-			/// <value></value>
-			public  System.DateTime ModifiedOn
-			{
-				get
-				{
-					object obj = base.GetValue("ModifiedOn");
-					if (obj == null)
-						return System.DateTime.MinValue;
-					else
-					       return (System.DateTime)obj;
-				}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 修改人 (该属性可为空,且无默认值)
-			/// 广告核销单.Sys.修改人
-			/// </summary>
-			/// <value></value>
-			public  System.String ModifiedBy
-			{
-				get
-				{
-					System.String value  = (System.String)base.GetValue("ModifiedBy");
-					return value;
-						}
-			}
-		
-
-
-
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 事务版本 (该属性可为空,但有默认值)
-			/// 广告核销单.Sys.事务版本
-			/// </summary>
-			/// <value></value>
-			public  System.Int64 SysVersion
-			{
-				get
-				{
-					System.Int64 value  = (System.Int64)base.GetValue("SysVersion");
-					return value;
-						}
-			}
-		
-
-
-
-				
 			/// <summary>
 			///  OrginalData属性。只可读。
 			/// 办事处 (该属性可为空,但有默认值)
@@ -472,25 +452,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
-				
-			/// <summary>
-			///  OrginalData属性。只可读。
-			/// 单号 (该属性可为空,且无默认值)
-			/// 广告核销单.Misc.单号
-			/// </summary>
-			/// <value></value>
-			public  System.String DocNo
-			{
-				get
-				{
-					System.String value  = (System.String)base.GetValue("DocNo");
-					return value;
-						}
-			}
-		
-
-
-
 		
 
 			#endregion
@@ -541,151 +502,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 		#region member					
-		
-			/// <summary>
-		/// ID (该属性不可为空,且无默认值)
-		/// 广告核销单.Key.ID
-		/// </summary>
-		/// <value></value>
-	 
-		public new System.Int64 ID
-		{
-			get
-			{
-				System.Int64 value  = (System.Int64)base.GetValue("ID");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("ID", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
-		/// 创建时间 (该属性可为空,且无默认值)
-		/// 广告核销单.Sys.创建时间
-		/// </summary>
-		/// <value></value>
-			public  System.DateTime CreatedOn
-		{
-			get
-			{
-				System.DateTime value  = (System.DateTime)base.GetValue("CreatedOn");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("CreatedOn", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
-		/// 创建人 (该属性可为空,且无默认值)
-		/// 广告核销单.Sys.创建人
-		/// </summary>
-		/// <value></value>
-			public  System.String CreatedBy
-		{
-			get
-			{
-				System.String value  = (System.String)base.GetValue("CreatedBy");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("CreatedBy", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
-		/// 修改时间 (该属性可为空,且无默认值)
-		/// 广告核销单.Sys.修改时间
-		/// </summary>
-		/// <value></value>
-			public  System.DateTime ModifiedOn
-		{
-			get
-			{
-				System.DateTime value  = (System.DateTime)base.GetValue("ModifiedOn");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("ModifiedOn", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
-		/// 修改人 (该属性可为空,且无默认值)
-		/// 广告核销单.Sys.修改人
-		/// </summary>
-		/// <value></value>
-			public  System.String ModifiedBy
-		{
-			get
-			{
-				System.String value  = (System.String)base.GetValue("ModifiedBy");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("ModifiedBy", value);
-						 
-			}
-		}
-	
-
-
-
-		
-			/// <summary>
-		/// 事务版本 (该属性可为空,但有默认值)
-		/// 广告核销单.Sys.事务版本
-		/// </summary>
-		/// <value></value>
-			public  System.Int64 SysVersion
-		{
-			get
-			{
-				System.Int64 value  = (System.Int64)base.GetValue("SysVersion");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("SysVersion", value);
-						 
-			}
-		}
-	
-
-
-
 		
 			/// <summary>
 		/// 办事处 (该属性可为空,但有默认值)
@@ -775,30 +591,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
-		
-			/// <summary>
-		/// 单号 (该属性可为空,且无默认值)
-		/// 广告核销单.Misc.单号
-		/// </summary>
-		/// <value></value>
-			public  System.String DocNo
-		{
-			get
-			{
-				System.String value  = (System.String)base.GetValue("DocNo");
-				return value;
-				}
-				set
-			{
-				
-								base.SetValue("DocNo", value);
-						 
-			}
-		}
-	
-
-
-
 	
 
 		#endregion
@@ -833,45 +625,15 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
 		/// </summary>
 		[Obsolete("")]
-		public  string Res_EntityName {	get {return Res_EntityNameS ;}	}
+		public  new  string Res_EntityName {	get {return Res_EntityNameS ;}	}
 		/// <summary>
 		/// Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
 		/// </summary>
 		[Obsolete("")]
-		public  static string Res_EntityNameS {	get {return EntityRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE")  ;}	}
+		public  new  static string Res_EntityNameS {	get {return EntityRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE")  ;}	}
 		#endregion 		
 
 		#region ModelResource,这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource()内部类的方式取资源
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_ID　{ get { return EntityRes.GetResource("ID");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_CreatedOn　{ get { return EntityRes.GetResource("CreatedOn");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_CreatedBy　{ get { return EntityRes.GetResource("CreatedBy");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_ModifiedOn　{ get { return EntityRes.GetResource("ModifiedOn");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_ModifiedBy　{ get { return EntityRes.GetResource("ModifiedBy");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_SysVersion　{ get { return EntityRes.GetResource("SysVersion");　}　}
 		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyCust")的方式取资源
 		/// </summary>
@@ -882,11 +644,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_Month　{ get { return EntityRes.GetResource("Month");　}　}
-		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocNo")的方式取资源
-		/// </summary>
-		[Obsolete("")]
-		public string Res_DocNo　{ get { return EntityRes.GetResource("DocNo");　}　}
 		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveLine")的方式取资源
 		/// </summary>
@@ -910,36 +667,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string BE_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE";　}　}
 		
 			/// <summary>
-			/// 属性: ID 的名称
-			/// </summary>
-			public static string ID　{ get { return "ID";　}　}
-				
-			/// <summary>
-			/// 属性: 创建时间 的名称
-			/// </summary>
-			public static string CreatedOn　{ get { return "CreatedOn";　}　}
-				
-			/// <summary>
-			/// 属性: 创建人 的名称
-			/// </summary>
-			public static string CreatedBy　{ get { return "CreatedBy";　}　}
-				
-			/// <summary>
-			/// 属性: 修改时间 的名称
-			/// </summary>
-			public static string ModifiedOn　{ get { return "ModifiedOn";　}　}
-				
-			/// <summary>
-			/// 属性: 修改人 的名称
-			/// </summary>
-			public static string ModifiedBy　{ get { return "ModifiedBy";　}　}
-				
-			/// <summary>
-			/// 属性: 事务版本 的名称
-			/// </summary>
-			public static string SysVersion　{ get { return "SysVersion";　}　}
-				
-			/// <summary>
 			/// 属性: 办事处 的名称
 			/// </summary>
 			public static string AdvApplyCust　{ get { return "AdvApplyCust";　}　}
@@ -948,11 +675,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 月份 的名称
 			/// </summary>
 			public static string Month　{ get { return "Month";　}　}
-				
-			/// <summary>
-			/// 属性: 单号 的名称
-			/// </summary>
-			public static string DocNo　{ get { return "DocNo";　}　}
 				
 			/// <summary>
 			/// 属性: 广告核销单行 的名称
@@ -965,7 +687,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																				
+						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1011,9 +733,109 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("ModifiedOn","ModifiedOn");
 			this.exdMultiLangAttrs.Add("ModifiedBy","ModifiedBy");
 			this.exdMultiLangAttrs.Add("SysVersion","SysVersion");
+			this.exdMultiLangAttrs.Add("Org","Org");
+			this.exdMultiLangAttrs.Add("DocNo","DocNo");
+			this.exdMultiLangAttrs.Add("BusinessDate","BusinessDate");
+			this.exdMultiLangAttrs.Add("Version","Version");
+			this.exdMultiLangAttrs.Add("PrintAmount","PrintAmount");
+			this.exdMultiLangAttrs.Add("LatestPrintedDate","LatestPrintedDate");
+			this.exdMultiLangAttrs.Add("Cancel.Canceled","Cancel_Canceled");
+			this.exdMultiLangAttrs.Add("Cancel.CancelDate","Cancel_CancelDate");
+			this.exdMultiLangAttrs.Add("Cancel.CancelReason","Cancel_CancelReason");
+			this.exdMultiLangAttrs.Add("Cancel.CancelUser","Cancel_CancelUser");
+			this.exdMultiLangAttrs.Add("WorkFlowID","WorkFlowID");
+			this.exdMultiLangAttrs.Add("StateMachineID","StateMachineID");
+			this.exdMultiLangAttrs.Add("HoldReason","HoldReason");
+			this.exdMultiLangAttrs.Add("HoldUser","HoldUser");
+			this.exdMultiLangAttrs.Add("HoldDate","HoldDate");
+			this.exdMultiLangAttrs.Add("ReleaseReason","ReleaseReason");
+			this.exdMultiLangAttrs.Add("ReleaseUser","ReleaseUser");
+			this.exdMultiLangAttrs.Add("ReleaseDate","ReleaseDate");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg1","DescFlexField_PubDescSeg1");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg2","DescFlexField_PubDescSeg2");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg3","DescFlexField_PubDescSeg3");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg4","DescFlexField_PubDescSeg4");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg5","DescFlexField_PubDescSeg5");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg6","DescFlexField_PubDescSeg6");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg7","DescFlexField_PubDescSeg7");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg8","DescFlexField_PubDescSeg8");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg9","DescFlexField_PubDescSeg9");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg10","DescFlexField_PubDescSeg10");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg11","DescFlexField_PubDescSeg11");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg12","DescFlexField_PubDescSeg12");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg13","DescFlexField_PubDescSeg13");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg14","DescFlexField_PubDescSeg14");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg15","DescFlexField_PubDescSeg15");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg16","DescFlexField_PubDescSeg16");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg17","DescFlexField_PubDescSeg17");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg18","DescFlexField_PubDescSeg18");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg19","DescFlexField_PubDescSeg19");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg20","DescFlexField_PubDescSeg20");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg21","DescFlexField_PubDescSeg21");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg22","DescFlexField_PubDescSeg22");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg23","DescFlexField_PubDescSeg23");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg24","DescFlexField_PubDescSeg24");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg25","DescFlexField_PubDescSeg25");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg26","DescFlexField_PubDescSeg26");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg27","DescFlexField_PubDescSeg27");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg28","DescFlexField_PubDescSeg28");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg29","DescFlexField_PubDescSeg29");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg30","DescFlexField_PubDescSeg30");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg31","DescFlexField_PubDescSeg31");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg32","DescFlexField_PubDescSeg32");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg33","DescFlexField_PubDescSeg33");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg34","DescFlexField_PubDescSeg34");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg35","DescFlexField_PubDescSeg35");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg36","DescFlexField_PubDescSeg36");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg37","DescFlexField_PubDescSeg37");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg38","DescFlexField_PubDescSeg38");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg39","DescFlexField_PubDescSeg39");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg40","DescFlexField_PubDescSeg40");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg41","DescFlexField_PubDescSeg41");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg42","DescFlexField_PubDescSeg42");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg43","DescFlexField_PubDescSeg43");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg44","DescFlexField_PubDescSeg44");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg45","DescFlexField_PubDescSeg45");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg46","DescFlexField_PubDescSeg46");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg47","DescFlexField_PubDescSeg47");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg48","DescFlexField_PubDescSeg48");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg49","DescFlexField_PubDescSeg49");
+			this.exdMultiLangAttrs.Add("DescFlexField.PubDescSeg50","DescFlexField_PubDescSeg50");
+			this.exdMultiLangAttrs.Add("DescFlexField.ContextValue","DescFlexField_ContextValue");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg1","DescFlexField_PrivateDescSeg1");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg2","DescFlexField_PrivateDescSeg2");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg3","DescFlexField_PrivateDescSeg3");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg4","DescFlexField_PrivateDescSeg4");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg5","DescFlexField_PrivateDescSeg5");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg6","DescFlexField_PrivateDescSeg6");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg7","DescFlexField_PrivateDescSeg7");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg8","DescFlexField_PrivateDescSeg8");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg9","DescFlexField_PrivateDescSeg9");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg10","DescFlexField_PrivateDescSeg10");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg11","DescFlexField_PrivateDescSeg11");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg12","DescFlexField_PrivateDescSeg12");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg13","DescFlexField_PrivateDescSeg13");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg14","DescFlexField_PrivateDescSeg14");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg15","DescFlexField_PrivateDescSeg15");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg16","DescFlexField_PrivateDescSeg16");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg17","DescFlexField_PrivateDescSeg17");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg18","DescFlexField_PrivateDescSeg18");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg19","DescFlexField_PrivateDescSeg19");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg20","DescFlexField_PrivateDescSeg20");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg21","DescFlexField_PrivateDescSeg21");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg22","DescFlexField_PrivateDescSeg22");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg23","DescFlexField_PrivateDescSeg23");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg24","DescFlexField_PrivateDescSeg24");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg25","DescFlexField_PrivateDescSeg25");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg26","DescFlexField_PrivateDescSeg26");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg27","DescFlexField_PrivateDescSeg27");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg28","DescFlexField_PrivateDescSeg28");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg29","DescFlexField_PrivateDescSeg29");
+			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg30","DescFlexField_PrivateDescSeg30");
+			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
+			this.exdMultiLangAttrs.Add("FlowInstance","FlowInstance");
 			this.exdMultiLangAttrs.Add("AdvApplyCust","AdvApplyCust");
 			this.exdMultiLangAttrs.Add("Month","Month");
-			this.exdMultiLangAttrs.Add("DocNo","DocNo");
         }
 	#endregion 
 
@@ -1030,7 +852,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																											
+						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1051,23 +873,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void DeSerializeKey(AdvApproveBEData data)
 		{
 		
-			
-
-			
-
-			
-
-			
-
-			
-
-			
-
 			if (data.AdvApplyCust == -1 && data.AdvApplyCust_SKey!=null)
 				data.AdvApplyCust = data.AdvApplyCust_SKey.GetEntity().ID ;
 	
-
-			
 
 			
 	
@@ -1104,34 +912,17 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			
 			//this.innerData.ChangeEventEnabled = false;
 			//this.innerRelation.RelationEventEnabled = false;
-				
+		
+			base.FromEntityData(data,dict) ;
+		
 			if (dict == null ) dict = new Hashtable() ;
 			dict[data] = this;
 			this.SysState = data.SysState ;
 			DeSerializeKey(data);
 			#region 组件外属性
-		
-			//ID与系统字段不处理 --Sysversion需要处理。
-
-		
-			//ID与系统字段不处理 --Sysversion需要处理。
-
-		
-			//ID与系统字段不处理 --Sysversion需要处理。
-
-		
-			//ID与系统字段不处理 --Sysversion需要处理。
-
-		
-			//ID与系统字段不处理 --Sysversion需要处理。
-
-								this.SetTypeValue("SysVersion",data.SysVersion);
-		
 								this.SetTypeValue("AdvApplyCust",data.AdvApplyCust);
 		
 								this.SetTypeValue("Month",data.Month);
-		
-								this.SetTypeValue("DocNo",data.DocNo);
 		
 			#endregion 
 
@@ -1176,7 +967,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <summary>
 		/// Create EntityData From Entity
 		/// </summary>
-		public AdvApproveBEData ToEntityData()
+		public new AdvApproveBEData ToEntityData()
 		{
 			return ToEntityData(null,null);
 		}
@@ -1186,6 +977,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		public AdvApproveBEData ToEntityData(AdvApproveBEData data, IDictionary dict){
 			if (data == null)
 				data = new AdvApproveBEData();
+			base.ToEntityData(data, dict);
 			
 			if (dict == null ) dict = new Hashtable() ;
 			//就直接用ID,如果不同实体会出现相同ID，则到时候要改进。? ID一定要有。
@@ -1193,48 +985,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		
 			data.SysState = this.SysState ;
 			#region 组件外属性 -BusinessEntity,"简单值对象",简单类型,多语言.不可能存在一对多.没有集合可能.
-	    
-			{
-				object obj =this.GetValue("ID");
-				if (obj != null)
-					data.ID=(System.Int64)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("CreatedOn");
-				if (obj != null)
-					data.CreatedOn=(System.DateTime)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("CreatedBy");
-				if (obj != null)
-					data.CreatedBy=(System.String)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("ModifiedOn");
-				if (obj != null)
-					data.ModifiedOn=(System.DateTime)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("ModifiedBy");
-				if (obj != null)
-					data.ModifiedBy=(System.String)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("SysVersion");
-				if (obj != null)
-					data.SysVersion=(System.Int64)obj;
-			}
-	     
 	    
 			{
 				object obj =this.GetValue("AdvApplyCust");
@@ -1247,13 +997,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				object obj =this.GetValue("Month");
 				if (obj != null)
 					data.Month=(System.DateTime)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("DocNo");
-				if (obj != null)
-					data.DocNo=(System.String)obj;
 			}
 	     
 			#endregion 
@@ -1287,14 +1030,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	//实体检验： 含自身检验器检验，内嵌属性类型的检验以及属性类型上的校验器的检验。
         private bool SelfEntityValidator()
         {
+		//L类档案的组织相关检查.
+		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
-
-
-
-
-
-
-
 
 
 

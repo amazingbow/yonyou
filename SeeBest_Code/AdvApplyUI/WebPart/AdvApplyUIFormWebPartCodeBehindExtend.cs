@@ -222,6 +222,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     var newRecord = this.Model.AdvApplyBE_AdvAboutBE.AddNewUIRecord();
                     newRecord.Code = item.Code;
                     newRecord.Name = item.Name;
+                    newRecord.Description = item.Description;
                     newRecord.IsSelected = false;
                 }
             }

@@ -944,10 +944,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		{
 			get { return this.Fields["AdvApplyBE"]; }
 		}
-		public IUIField FieldCode
-		{
-			get { return this.Fields["Code"]; }
-		}
 		public IUIField FieldName
 		{
 			get { return this.Fields["Name"]; }
@@ -955,6 +951,14 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		public IUIField FieldIsSelected
 		{
 			get { return this.Fields["IsSelected"]; }
+		}
+		public IUIField FieldDescription
+		{
+			get { return this.Fields["Description"]; }
+		}
+		public IUIField FieldCode
+		{
+			get { return this.Fields["Code"]; }
 		}
 
 
@@ -975,9 +979,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","270dd6eb-35bb-4de2-a0ca-3c246ecf5877");
 			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","ef2412e6-730f-4d5b-b1d3-4fa32c573261");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyBE", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE", "AdvApplyBE", true,true, false, "",false,(UIFieldType)4,"34b34c55-0b84-4313-8595-ec236b56752e","c352fd3d-65ec-4c70-acb5-5c0a0024f94c");
-			UIModelRuntimeFactory.AddNewUIField(this,"Code", typeof(String), true,"","System.String", "Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e0605e22-9d69-42b8-90f9-ffd65a705e34");
 			UIModelRuntimeFactory.AddNewUIField(this,"Name", typeof(String), true,"","System.String", "Name", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7ea67510-329d-4872-86fc-66be477ea2c5");
 			UIModelRuntimeFactory.AddNewUIField(this,"IsSelected", typeof(Boolean), true,"false","System.Boolean", "IsSelected", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","88da77a8-c726-4783-b16c-a82c8880c9f7");
+			UIModelRuntimeFactory.AddNewUIField(this,"Description", typeof(String), true,"","System.String", "Description", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f56ca411-45c9-4096-911d-90114a584d40");
+			UIModelRuntimeFactory.AddNewUIField(this,"Code", typeof(String), true,"","System.String", "Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7a56b13a-60a9-47f5-9540-55bcd02ea9a3");
 
 
 			this.CurrentFilter = new AdvApplyBE_AdvAboutBEDefaultFilterFilter(this);
@@ -1120,19 +1125,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		}
 		
 		
-		public  String Code
-		{
-			get{
-				//object value = this[this.uiviewAdvApplyBE_AdvAboutBE.FieldCode] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewAdvApplyBE_AdvAboutBE.FieldCode);
-			}
-			set{
-				this[this.uiviewAdvApplyBE_AdvAboutBE.FieldCode] = value;
-			}
-		}
-		
-		
 		public new String Name
 		{
 			get{
@@ -1155,6 +1147,32 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			}
 			set{
 				this[this.uiviewAdvApplyBE_AdvAboutBE.FieldIsSelected] = value;
+			}
+		}
+		
+		
+		public  String Description
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE_AdvAboutBE.FieldDescription] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE_AdvAboutBE.FieldDescription);
+			}
+			set{
+				this[this.uiviewAdvApplyBE_AdvAboutBE.FieldDescription] = value;
+			}
+		}
+		
+		
+		public  String Code
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE_AdvAboutBE.FieldCode] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE_AdvAboutBE.FieldCode);
+			}
+			set{
+				this[this.uiviewAdvApplyBE_AdvAboutBE.FieldCode] = value;
 			}
 		}
 		#endregion

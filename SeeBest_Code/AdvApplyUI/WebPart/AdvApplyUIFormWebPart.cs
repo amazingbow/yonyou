@@ -539,9 +539,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				this.ApplyDept161 = UIControlBuilder.BuilderRefrenceControl(_UFTabPage,"ApplyDept161",true,true, true,120, 20, 2, 1, 1, 1, "100","4",true,false,true,"lblApplyDept161","46233598-0adf-4b99-a9a1-d094c9f4b27b","17a910b4-1d37-439d-b85b-240b63182192");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ApplyDept161, "False", "ApplyDept", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldApplyDept, "AdvApplyBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.ApplyDept161,"", 580,408, "","","", null,null);
+			UIControlBuilder.SetReferenceControlRefInfo(this.ApplyDept161,"874cc1b6-f844-486c-b3f5-f8cca21fe1e0", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldApplyDept_Code,this.Model.AdvApplyBE.FieldApplyDept_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
+			ScriptBuilder.BuildReferenceControlOuputScript(this.ApplyDept161,"ApplyDept161",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Description",""),new ReferenceOutputParam("","Org_Name",""),new ReferenceOutputParam("","DescFlexField_PrivateDescSeg14",""),});
 				
 
 		
@@ -750,9 +751,9 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 	        private IUFTabPage _BuilderControl_TabPage32(IUFTabControl container)
         {
             IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage32",true, true, "0","c73192be-1408-46bf-9ba8-f74e7a93701c","c73192be-1408-46bf-9ba8-f74e7a93701c");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 15, 28, 0, 5, 10, 10, 10, 10);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 15, 30, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFTabPage,  this.Model.AdvApplyBE, "AdvApplyBE", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(117,bool.Parse("True")),new GridColumnDef(13,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(117,bool.Parse("True")),new GridColumnDef(13,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
@@ -777,9 +778,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				this.AdvItem433 = UIControlBuilder.BuilderRefrenceControl(_UFTabPage,"AdvItem433",true,true, true,117, 20, 2, 1, 1, 1, "100","2",false,false,true,"lblAdvItem433","6633b8b3-cd02-4fea-810a-0b6fdb967f6f","537f419a-6eae-40c0-baaf-8a4935189e11");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvItem433, "False", "AdvItem", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvItem, "AdvApplyBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.AdvItem433,"", 580,408, "","","", null,null);
+			UIControlBuilder.SetReferenceControlRefInfo(this.AdvItem433,"81c79b25-3104-4ac6-ab99-af61bec43501", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldAdvItem_Code,this.Model.AdvApplyBE.FieldAdvItem_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvItem433,"AdvItem433",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","AliasName",""),new ReferenceOutputParam("","Description",""),});
 				
 
 		
@@ -1086,7 +1088,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, false,false,false,false,true,20,false, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "34");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 480, 220, 0, 19, 8, 9, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 480, 270, 0, 19, 8, 11, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvApplyBE_AdvAboutBE, "AdvApplyBE_AdvAboutBE", "", null, 20, "广告申请单.Misc.广告体现项目子表");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
 			_UFGrid.AllowSelectAllPage=false;
@@ -1103,12 +1105,17 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"IsSelected0","CheckBoxColumnModel", "", 0,this.Model.AdvApplyBE_AdvAboutBE.Fields["IsSelected"]/*IsSelected*/,"IsSelected", false, true, true, false, false, true, 22, 80, "1",true, false,"false","88da77a8-c726-4783-b16c-a82c8880c9f7","88da77a8-c726-4783-b16c-a82c8880c9f7","9095e781-305c-4b67-b5d5-2a60f599985c");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code0","TextBoxColumnModel", "", 0,this.Model.AdvApplyBE_AdvAboutBE.Fields["Code"]/*Code*/,"Code", false, true, false, false, false, true, 0, 100, "50",true, false,"","e0605e22-9d69-42b8-90f9-ffd65a705e34","e0605e22-9d69-42b8-90f9-ffd65a705e34","e2fe9eff-9cfe-4437-a3dc-9de0dc0c5de1");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code0","TextBoxColumnModel", "", 0,this.Model.AdvApplyBE_AdvAboutBE.Fields["Code"]/*Code*/,"Code", false, true, true, false, false, true, 0, 100, "50",true, false,"","7a56b13a-60a9-47f5-9540-55bcd02ea9a3","7a56b13a-60a9-47f5-9540-55bcd02ea9a3","6f717870-a9fb-4ccd-91dd-51c89aeeec47");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Name0","TextBoxColumnModel", "", 0,this.Model.AdvApplyBE_AdvAboutBE.Fields["Name"]/*Name*/,"Name", false, true, false, false, false, true, 0, 160, "50",true, false,"","7ea67510-329d-4872-86fc-66be477ea2c5","7ea67510-329d-4872-86fc-66be477ea2c5","9dcfd79f-01d8-4e27-9892-8f8ea5932882");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Description0","TextBoxColumnModel", "", 0,this.Model.AdvApplyBE_AdvAboutBE.Fields["Description"]/*Description*/,"Description", false, true, true, false, false, true, 0, 100, "50",true, false,"","f56ca411-45c9-4096-911d-90114a584d40","f56ca411-45c9-4096-911d-90114a584d40","6d271c96-f7ea-47bf-a28f-623c0d1c76d4");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  

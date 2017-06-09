@@ -29,6 +29,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
                         
                                         knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData));
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -52,6 +53,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     			
 	     			
 	     							IsSelected=false; 
+	     			
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -235,8 +237,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		
 
 				/// <summary>
-		/// 代码
-		/// 广告体现项目子表.Misc.代码
+		/// 编码
+		/// 广告体现项目子表.Misc.编码
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.String m_code ;
@@ -290,10 +292,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 简码描述
+		/// 广告体现项目子表.Misc.简码描述
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_description ;
+		public System.String Description
+		{
+			get	
+			{	
+				return m_description  ;
+			}
+			set	
+			{	
+				m_description = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-										
+											
 		#endregion 		
 	}	
 

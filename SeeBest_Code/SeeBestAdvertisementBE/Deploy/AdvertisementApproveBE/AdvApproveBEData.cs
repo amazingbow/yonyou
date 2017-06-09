@@ -13,20 +13,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	[DataContract(Name = "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
 	[Serializable]
     [KnownType("GetKnownTypes")]
-	public partial class AdvApproveBEData : UFSoft.UBF.Business.DataTransObjectBase
+	public partial class AdvApproveBEData : UFIDA.U9.Base.Doc.DocData
 	{
 
 	    public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-            
-                        
-                        
-                        
-                        
-                        
-                                        knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Customer.CustomerData));
-                        
+                            knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Customer.CustomerData));
                         
                                         knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData>));
             
@@ -43,13 +36,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void initData()
 		{
 			//设置默认值
-	     			
-	     			
-	     			
-	     			
-	     			
-	     							SysVersion= 0; 			     							     			
-	     			
+	     							     			
 	     			
 
 
@@ -106,120 +93,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 		#region Properties Outer Component
 		
-				/// <summary>
-		/// ID
-		/// 广告核销单.Key.ID
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int64 m_iD ;
-		public System.Int64 ID
-		{
-			get	
-			{	
-				return m_iD  ;
-			}
-			set	
-			{	
-				m_iD = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 创建时间
-		/// 广告核销单.Sys.创建时间
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.DateTime m_createdOn ;
-		public System.DateTime CreatedOn
-		{
-			get	
-			{	
-				return m_createdOn  ;
-			}
-			set	
-			{	
-				m_createdOn = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 创建人
-		/// 广告核销单.Sys.创建人
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_createdBy ;
-		public System.String CreatedBy
-		{
-			get	
-			{	
-				return m_createdBy  ;
-			}
-			set	
-			{	
-				m_createdBy = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 修改时间
-		/// 广告核销单.Sys.修改时间
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.DateTime m_modifiedOn ;
-		public System.DateTime ModifiedOn
-		{
-			get	
-			{	
-				return m_modifiedOn  ;
-			}
-			set	
-			{	
-				m_modifiedOn = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 修改人
-		/// 广告核销单.Sys.修改人
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_modifiedBy ;
-		public System.String ModifiedBy
-		{
-			get	
-			{	
-				return m_modifiedBy  ;
-			}
-			set	
-			{	
-				m_modifiedBy = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 事务版本
-		/// 广告核销单.Sys.事务版本
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int64 m_sysVersion ;
-		public System.Int64 SysVersion
-		{
-			get	
-			{	
-				return m_sysVersion  ;
-			}
-			set	
-			{	
-				m_sysVersion = value ;	
-			}
-		}
-		
-
 		
 		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advApplyCust_SKey ;
 		/// <summary>
@@ -285,29 +158,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
-
-				/// <summary>
-		/// 单号
-		/// 广告核销单.Misc.单号
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_docNo ;
-		public System.String DocNo
-		{
-			get	
-			{	
-				return m_docNo  ;
-			}
-			set	
-			{	
-				m_docNo = value ;	
-			}
-		}
-		
 		#endregion	
 
 		#region Multi_Fields
-										
+			
 		#endregion 		
 	}	
 

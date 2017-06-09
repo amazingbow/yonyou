@@ -406,8 +406,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 代码 (该属性可为空,且无默认值)
-			/// 广告体现项目子表.Misc.代码
+			/// 编码 (该属性可为空,且无默认值)
+			/// 广告体现项目子表.Misc.编码
 			/// </summary>
 			/// <value></value>
 			public  System.String Code
@@ -494,6 +494,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				get
 				{
 					System.Boolean value  = (System.Boolean)base.GetValue("IsSelected");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 简码描述 (该属性可为空,且无默认值)
+			/// 广告体现项目子表.Misc.简码描述
+			/// </summary>
+			/// <value></value>
+			public  System.String Description
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("Description");
 					return value;
 						}
 			}
@@ -671,8 +690,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 代码 (该属性可为空,且无默认值)
-		/// 广告体现项目子表.Misc.代码
+		/// 编码 (该属性可为空,且无默认值)
+		/// 广告体现项目子表.Misc.编码
 		/// </summary>
 		/// <value></value>
 			public  System.String Code
@@ -805,6 +824,30 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 
 
+		
+			/// <summary>
+		/// 简码描述 (该属性可为空,且无默认值)
+		/// 广告体现项目子表.Misc.简码描述
+		/// </summary>
+		/// <value></value>
+			public  System.String Description
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("Description");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("Description", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -879,6 +922,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_IsSelected　{ get { return EntityRes.GetResource("IsSelected");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Description")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_Description　{ get { return EntityRes.GetResource("Description");　}　}
 		#endregion 
 
 
@@ -927,7 +975,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			public static string SysVersion　{ get { return "SysVersion";　}　}
 				
 			/// <summary>
-			/// 属性: 代码 的名称
+			/// 属性: 编码 的名称
 			/// </summary>
 			public static string Code　{ get { return "Code";　}　}
 				
@@ -945,6 +993,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// 属性: 是否被选用 的名称
 			/// </summary>
 			public static string IsSelected　{ get { return "IsSelected";　}　}
+				
+			/// <summary>
+			/// 属性: 简码描述 的名称
+			/// </summary>
+			public static string Description　{ get { return "Description";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -952,7 +1005,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																				
+																						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1002,6 +1055,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("Name","Name");
 			this.exdMultiLangAttrs.Add("AdvApplyBE","AdvApplyBE");
 			this.exdMultiLangAttrs.Add("IsSelected","IsSelected");
+			this.exdMultiLangAttrs.Add("Description","Description");
         }
 	#endregion 
 
@@ -1018,7 +1072,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																														
+																																	
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1039,6 +1093,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		private void DeSerializeKey(AdvAboutBEData data)
 		{
 		
+			
+
 			
 
 			
@@ -1118,6 +1174,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 								this.SetTypeValue("Name",data.Name);
 		
 								this.SetTypeValue("IsSelected",data.IsSelected);
+		
+								this.SetTypeValue("Description",data.Description);
 		
 			#endregion 
 
@@ -1233,6 +1291,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 					data.IsSelected=(System.Boolean)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("Description");
+				if (obj != null)
+					data.Description=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1262,6 +1327,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
         private bool SelfEntityValidator()
         {
         
+
 
 
 
