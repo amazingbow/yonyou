@@ -295,7 +295,7 @@ namespace SpecialApplyCustomerRef
 	{
 		#region Constructor
 		public cRefDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"DescFlexField.PrivateDescSeg14='#Context.UserCode#' and Org.ID=#Context.OrgID#",@" order by Code asc")
+			: base("DefaultFilter",view,@"(DescFlexField.PrivateDescSeg14='#Context.UserCode#' and Org.ID=#Context.OrgID# and ('#Context.UserCode#' like '%BSC%') ) or (('#Context.UserCode#' not like '%BSC%') and Org.ID=#Context.OrgID#) ",@" order by Code asc")
 		{
 			InitClass();
 		}

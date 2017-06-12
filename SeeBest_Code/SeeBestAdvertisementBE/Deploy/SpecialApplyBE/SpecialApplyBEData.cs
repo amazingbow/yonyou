@@ -35,21 +35,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
                         
                         
                         
-                                        knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Item.ItemMasterData));
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                                        knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData>));
+                                        knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData));
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -79,19 +67,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	     			
 	     			
 	     			
-	     			
-	     							TotalArea=0m; 
-	     							Qty=0m; 
-	     							BMWidth=0m; 
-	     							BMHight=0m; 
-	     							BMThick=0m; 
-	     							BMArea=0m; 
-	     							DZWidth=0m; 
-	     							DZThick=0m; 
-	     							DZArea=0m; 
-	     							AdvDisplayType= 0; 			     			
-	     			
-	     			
+	     							SpecialDesignStyle= 0; 			     			
 	     			
 
 
@@ -120,7 +96,48 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 		#region Properties Inner Component
-	
+	        					/// <summary>
+		/// 专柜设计风格
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_specialDesignStyle;
+		public System.Int32 SpecialDesignStyle
+		{
+			get	
+			{	
+				return m_specialDesignStyle ;
+			}
+			set	
+			{	
+				m_specialDesignStyle = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 专柜尺寸
+		/// 专柜申请单.Misc.专柜尺寸
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private List<UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData> m_specialSizeBE;
+		public List<UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData> SpecialSizeBE
+		{
+			get	
+			{	
+				if (m_specialSizeBE == null)
+				{
+					List<UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData> m_list = new List<UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData>() ;
+					m_specialSizeBE = m_list;
+				}
+				return m_specialSizeBE ;
+			}
+			set	
+			{	
+				m_specialSizeBE = value ;
+			}
+		}		
+
+			
 		#endregion	
 
 		#region Properties Outer Component
@@ -457,322 +474,28 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		}
 		
 
-		
-		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advItem_SKey ;
-		/// <summary>
-		/// 广告载体 序列化Key属性。（传递跨组织序列列字段）
-		/// 专柜申请单.Misc.广告载体
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvItem_SKey
-		{
-			get 
-			{
-				return m_advItem_SKey ;					
-			}
-			set
-			{
-				 m_advItem_SKey = value ;	
-			}
-		}
-		/// <summary>
-		/// 广告载体
-		/// 专柜申请单.Misc.广告载体
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		public System.Int64 AdvItem
-		{
-			get	
-			{	
-				if (AdvItem_SKey == null)
-					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
-				else
-					return AdvItem_SKey.ID ;
-			}
-			set	
-			{	
-				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
-					AdvItem_SKey = null ;
-				else
-				{
-					if (AdvItem_SKey == null )
-						AdvItem_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.CBO.SCM.Item.ItemMaster") ;
-					else
-						AdvItem_SKey.ID = value ;
-				}
-			}
-		}
-		
-
 				/// <summary>
-		/// 总面积
-		/// 专柜申请单.Misc.总面积
+		/// 实体扩展字段
+		/// 专柜申请单.Misc.实体扩展字段
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.Decimal m_totalArea ;
-		public System.Decimal TotalArea
+		private UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData m_descFlexField ;
+		public UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData DescFlexField
 		{
 			get	
 			{	
-				return m_totalArea  ;
+				return m_descFlexField  ;
 			}
 			set	
 			{	
-				m_totalArea = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 数量
-		/// 专柜申请单.Misc.数量
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_qty ;
-		public System.Decimal Qty
-		{
-			get	
-			{	
-				return m_qty  ;
-			}
-			set	
-			{	
-				m_qty = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面-宽
-		/// 专柜申请单.Misc.版面-宽
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_bMWidth ;
-		public System.Decimal BMWidth
-		{
-			get	
-			{	
-				return m_bMWidth  ;
-			}
-			set	
-			{	
-				m_bMWidth = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面-高
-		/// 专柜申请单.Misc.版面-高
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_bMHight ;
-		public System.Decimal BMHight
-		{
-			get	
-			{	
-				return m_bMHight  ;
-			}
-			set	
-			{	
-				m_bMHight = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面-厚
-		/// 专柜申请单.Misc.版面-厚
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_bMThick ;
-		public System.Decimal BMThick
-		{
-			get	
-			{	
-				return m_bMThick  ;
-			}
-			set	
-			{	
-				m_bMThick = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面-面积
-		/// 专柜申请单.Misc.版面-面积
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_bMArea ;
-		public System.Decimal BMArea
-		{
-			get	
-			{	
-				return m_bMArea  ;
-			}
-			set	
-			{	
-				m_bMArea = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 店招-宽
-		/// 专柜申请单.Misc.店招-宽
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_dZWidth ;
-		public System.Decimal DZWidth
-		{
-			get	
-			{	
-				return m_dZWidth  ;
-			}
-			set	
-			{	
-				m_dZWidth = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 店招-厚
-		/// 专柜申请单.Misc.店招-厚
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_dZThick ;
-		public System.Decimal DZThick
-		{
-			get	
-			{	
-				return m_dZThick  ;
-			}
-			set	
-			{	
-				m_dZThick = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 店招-面积
-		/// 专柜申请单.Misc.店招-面积
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Decimal m_dZArea ;
-		public System.Decimal DZArea
-		{
-			get	
-			{	
-				return m_dZArea  ;
-			}
-			set	
-			{	
-				m_dZArea = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面类型
-		/// 专柜申请单.Misc.版面类型
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int32 m_advDisplayType ;
-		public System.Int32 AdvDisplayType
-		{
-			get	
-			{	
-				return m_advDisplayType  ;
-			}
-			set	
-			{	
-				m_advDisplayType = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面要求1
-		/// 专柜申请单.Misc.版面要求1
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advDispInfo1 ;
-		public System.String AdvDispInfo1
-		{
-			get	
-			{	
-				return m_advDispInfo1  ;
-			}
-			set	
-			{	
-				m_advDispInfo1 = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面要求2
-		/// 专柜申请单.Misc.版面要求2
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advDispInfo2 ;
-		public System.String AdvDispInfo2
-		{
-			get	
-			{	
-				return m_advDispInfo2  ;
-			}
-			set	
-			{	
-				m_advDispInfo2 = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 广告体现项目
-		/// 专柜申请单.Misc.广告体现项目
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advAbout ;
-		public System.String AdvAbout
-		{
-			get	
-			{	
-				return m_advAbout  ;
-			}
-			set	
-			{	
-				m_advAbout = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 客户排版文字信息
-		/// 专柜申请单.Misc.客户排版文字信息
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advMemo ;
-		public System.String AdvMemo
-		{
-			get	
-			{	
-				return m_advMemo  ;
-			}
-			set	
-			{	
-				m_advMemo = value ;	
+				m_descFlexField = value ;	
 			}
 		}
 		
 		#endregion	
 
 		#region Multi_Fields
-																															
+																			
 		#endregion 		
 	}	
 

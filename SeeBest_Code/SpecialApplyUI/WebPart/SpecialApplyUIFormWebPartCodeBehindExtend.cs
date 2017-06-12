@@ -22,6 +22,9 @@ using UFSoft.UBF.UI.Engine;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
+using UFIDA.U9.UI.PDHelper;
+using UFSoft.UBF.UI.FormProcess;
+using UFSoft.UBF.Util.DataAccess;
 
 
 
@@ -39,10 +42,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 				//BtnSave_Click...
 		private void BtnSave_Click_Extend(object sender, EventArgs  e)
 		{
-			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-			
-		
-			BtnSave_Click_DefaultImpl(sender,e);
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+
+            BtnSave_Click_DefaultImpl(sender,e);
 		}	
 		 
 				//BtnCancel_Click...
@@ -52,6 +55,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnCancel_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnAdd_Click...
@@ -61,6 +67,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnAdd_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnDelete_Click...
@@ -70,6 +79,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnDelete_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnCopy_Click...
@@ -79,6 +91,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnCopy_Click_DefaultImpl(sender,e);
+
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                this.Model.SpecialApplyBE.FocusedRecord.AdvCode = "";
+                this.Model.SpecialApplyBE.FocusedRecord.ApplyDate = System.DateTime.Now;
+            }
 		}	
 		 
 				//BtnFind_Click...
@@ -106,6 +124,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnFirstPage_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnPrevPage_Click...
@@ -115,6 +136,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnPrevPage_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnNextPage_Click...
@@ -124,6 +148,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnNextPage_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnLastPage_Click...
@@ -133,6 +160,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
 		
 			BtnLastPage_Click_DefaultImpl(sender,e);
+
+            //赋默认值
+            this.AssignDefaultValues();
 		}	
 		 
 				//BtnAttachment_Click...
@@ -190,13 +220,70 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         #region 自己扩展 Extended Event handler 
 		public void AfterOnLoad()
 		{
+            //弹性域设置
+            FlexFieldHelper.SetDescFlexField(new DescFlexFieldParameter[] { new DescFlexFieldParameter(this.FlexFieldPicker0, this.Model.SpecialApplyBE) });
+            FlexFieldHelper.SetDescFlexField(new DescFlexFieldParameter[] { new DescFlexFieldParameter(this.DataGrid14, this.DataGrid14.Columns.Count - 1, "DescFlexField") });
+
+            //查找按钮设置
+            string paramWhere = null;
+            PDFormMessage.ShowConfirmDialog(this.Page, "0b7636d4-a26a-469c-b4ef-c8f61a800554", "580", "408",
+                Title, wpFindID.ClientID, this.BtnFind, paramWhere);
+
+            //取得提示信息资源：是否删除当前记录
+            string message = PDResource.GetDeleteConfirmInfo();
+
+            //绑定注册弹出对话框到删除按钮
+            PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
+            PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
+
+            //赋默认值
+            this.AssignDefaultValues();
 
 		}
+
+        //默认值
+        private void AssignDefaultValues()
+        {
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                //下单日期赋默认值
+                if (this.Model.SpecialApplyBE.FocusedRecord.ApplyDate == null || this.Model.SpecialApplyBE.FocusedRecord.ApplyDate == System.DateTime.MinValue)
+                {
+                    this.Model.SpecialApplyBE.FocusedRecord.ApplyDate = System.DateTime.Now;
+                }
+
+                //办事处赋默认值
+                if (this.Model.SpecialApplyBE.FocusedRecord.ApplyDept <= 0L)
+                {
+                    DataParamList lst1 = new DataParamList();
+                    lst1.Add(DataParamFactory.CreateInput("@UserCode", UFIDA.U9.UI.PDHelper.PDContext.Current.UserCode, System.Data.DbType.String));
+                    lst1.Add(DataParamFactory.CreateInput("@OrgID", UFIDA.U9.UI.PDHelper.PDContext.Current.OrgID, System.Data.DbType.Int64));
+                    System.Data.DataSet ds1 = new System.Data.DataSet();
+
+                    DataAccessor.RunSQL(DataAccessor.GetConn(), "select top 1 A1.ID as CustomerID,A1.Code as CustomerCode,A2.Name as CustomerName from CBO_Customer A1 left join CBO_Customer_Trl A2 on A1.ID=A2.ID where A1.DescFlexField_PrivateDescSeg14=@UserCode and A1.Org=@OrgID order by A1.Code", lst1, out ds1);
+
+                    if (ds1 != null && ds1.Tables.Count > 0)
+                    {
+                        if (ds1.Tables[0].Rows.Count > 0)
+                        {
+                            if (Convert.ToInt64(ds1.Tables[0].Rows[0]["CustomerID"].ToString()) > 0L)
+                            {
+                                this.Model.SpecialApplyBE.FocusedRecord.ApplyDept = Convert.ToInt64(ds1.Tables[0].Rows[0]["CustomerID"].ToString());
+                                this.Model.SpecialApplyBE.FocusedRecord.ApplyDept_Code = ds1.Tables[0].Rows[0]["CustomerCode"].ToString();
+                                this.Model.SpecialApplyBE.FocusedRecord.ApplyDept_Name = ds1.Tables[0].Rows[0]["CustomerName"].ToString();
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         public void AfterCreateChildControls()
         {
 
+            //开启个性化
 
+            UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
 		
         }
         
@@ -206,12 +293,34 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         
 		public void BeforeUIModelBinding()
 		{
-
+            this.BtnFlow.Visible = false;
+            this.BtnFirstPage.Visible = false;
+            this.BtnPrevPage.Visible = false;
+            this.BtnNextPage.Visible = false;
+            this.BtnLastPage.Visible = false;
+            this.ApplyDate131.Enabled = false;
 		}
 
 		public void AfterUIModelBinding()
 		{
-
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
+                {
+                    this.BtnDelete.Enabled = true;
+                    this.BtnCopy.Enabled = true;
+                }
+                else
+                {
+                    this.BtnDelete.Enabled = false;
+                    this.BtnCopy.Enabled = false;
+                }
+            }
+            else
+            {
+                this.BtnDelete.Enabled = false;
+                this.BtnCopy.Enabled = false;
+            }
 
 		}
 
