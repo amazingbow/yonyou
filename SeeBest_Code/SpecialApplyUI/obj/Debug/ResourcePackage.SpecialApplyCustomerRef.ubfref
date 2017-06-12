@@ -14,7 +14,7 @@
       <OrderFields>
         <OrderField id="fff4a9a2-f1d8-40cf-8883-2848fde0c5a3" name="Code" displayName="编码" description="" help="客户.客户.编码" direction="0" sequence="0" refAttributeName="UFIDA.U9.CBO.SCM.Customer.Customer:Code" />
       </OrderFields>
-      <Filter>UFIDA::U9::CBO::SCM::Customer::Customer.DescFlexField.PrivateDescSeg14='#Context.UserCode#' and UFIDA::U9::CBO::SCM::Customer::Customer.Org.ID=#Context.OrgID#</Filter>
+      <Filter>(UFIDA::U9::CBO::SCM::Customer::Customer.DescFlexField.PrivateDescSeg14='#Context.UserCode#' and UFIDA::U9::CBO::SCM::Customer::Customer.Org.ID=#Context.OrgID# and ('#Context.UserCode#' like '%BSC%') ) or (('#Context.UserCode#' not like '%BSC%') and UFIDA::U9::CBO::SCM::Customer::Customer.Org.ID=#Context.OrgID#) </Filter>
     </Reference>
   </References>
 </ReferenceComponent>

@@ -76,7 +76,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 			//this.linkSpecialApplyBE__SpecialApplyBE_SpecialSizeBE
 			{
-			IUILink link = new UILink("SpecialApplyBE__SpecialApplyBE_SpecialSizeBE",this,this.viewSpecialApplyBE.FieldID,this.viewSpecialApplyBE_SpecialSizeBE.FieldSpecialApplyBE,EnumAssociationKind.COMPOSITION,EnumAssociationDirection.Double,EnumCardinality.ONE,EnumCardinality.MORE,"");
+			IUILink link = new UILink("SpecialApplyBE__SpecialApplyBE_SpecialSizeBE",this,this.viewSpecialApplyBE.FieldID,this.viewSpecialApplyBE_SpecialSizeBE.FieldSpecialApplyBE,EnumAssociationKind.COMPOSITION,EnumAssociationDirection.Double,EnumCardinality.ONE,EnumCardinality.MORE,"SpecialSizeBE");
 			this.Links.Add(link);
 			}
 			//this.linkSpecialApplyBE__SpecialApplyBE_SpecialSizeBE.ChildKeyConstraint.UpdateRule = Rule.None;
@@ -540,18 +540,18 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9101cb28-38f2-4b3c-b08b-ccf14d423436");
 			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","c53373e9-6c60-4cf8-9766-ea8d302cf10b");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvCode", typeof(String), true,"","System.String", "AdvCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","66114ed7-b79b-4834-86e9-455f5bacc91b");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept", typeof(Int64), true,"","UFIDA.U9.CBO.SCM.Customer.Customer", "ApplyDept", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","5cf29749-aacc-456e-8ea0-6d0a4b87ed55");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept", typeof(Int64), false,"","UFIDA.U9.CBO.SCM.Customer.Customer", "ApplyDept", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","5cf29749-aacc-456e-8ea0-6d0a4b87ed55");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Code", typeof(String), false,"","System.String", "ApplyDept.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e06dd9da-3c4c-4a8b-976e-c17ce74c543c");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Name", typeof(String), true,"","System.String", "ApplyDept.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","122296a9-7492-4553-8e5e-b8933a01286f");
 			UIModelRuntimeFactory.AddNewUIField(this,"Applier", typeof(String), true,"","System.String", "Applier", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5efaa630-1e81-4af4-971c-d629e1ca4e56");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","49c1650a-603e-49eb-bcba-bfa153d185e7");
 			UIModelRuntimeFactory.AddNewUIField(this,"Phone", typeof(String), true,"","System.String", "Phone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8bd8d5c2-ce03-45b4-9b5f-f904c2b9c5ef");
 			UIModelRuntimeFactory.AddNewUIField(this,"QQ", typeof(String), true,"","System.String", "QQ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f0ba3c1d-9c5b-459d-adca-a882cf16c827");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustConterName", typeof(String), true,"","System.String", "CustConterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","595c37ff-5e89-49bd-9872-59b63279bdcf");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustName", typeof(String), true,"","System.String", "CustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f5d3e494-a29c-4a2c-aa2e-3e3cda78bdbd");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustPhone", typeof(String), true,"","System.String", "CustPhone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af55c1e1-e153-4c38-91e4-249a1b6b9e2d");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustAddress", typeof(String), true,"","System.String", "CustAddress", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fa2bcdbb-bfde-47c7-9a5b-f97d5a28c8a6");
-			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle", typeof(Int32), true,"0","System.String", "SpecialDesignStyle", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c675c8f7-9c56-40e8-8797-224776233f3e");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustConterName", typeof(String), false,"","System.String", "CustConterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","595c37ff-5e89-49bd-9872-59b63279bdcf");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustName", typeof(String), false,"","System.String", "CustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f5d3e494-a29c-4a2c-aa2e-3e3cda78bdbd");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustPhone", typeof(String), false,"","System.String", "CustPhone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af55c1e1-e153-4c38-91e4-249a1b6b9e2d");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustAddress", typeof(String), false,"","System.String", "CustAddress", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fa2bcdbb-bfde-47c7-9a5b-f97d5a28c8a6");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle", typeof(Int32), false,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum", "SpecialDesignStyle", true,true, false, "",false,(UIFieldType)2,"a96d15c8-0b6e-48d4-9bd3-ec2d4f4c0db9","c675c8f7-9c56-40e8-8797-224776233f3e");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e01efbae-e85e-4a4f-bcba-418bc0a719f3");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c11a9093-51e4-46a6-a233-015aa189273c");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3c6d1fc3-2ff1-4dd4-a611-45bb899e87b7");
@@ -776,12 +776,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		}
 		
 		
-		public  Int64? ApplyDept
+		public  Int64 ApplyDept
 		{
 			get{
 				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept] ;
-				//return (Int64?)value;
-				return GetValue<Int64?>(this.uiviewSpecialApplyBE.FieldApplyDept);
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewSpecialApplyBE.FieldApplyDept);
 			}
 			set{
 				this[this.uiviewSpecialApplyBE.FieldApplyDept] = value;
@@ -919,12 +919,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		}
 		
 		
-		public  Int32? SpecialDesignStyle
+		public  Int32 SpecialDesignStyle
 		{
 			get{
 				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] ;
-				//return (Int32?)value;
-				return GetValue<Int32?>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle);
+				//return (Int32)value;
+				return GetValue<Int32>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle);
 			}
 			set{
 				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] = value;
@@ -2035,12 +2035,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 	public partial class SpecialApplyBE_SpecialSizeBEView : UIView
 	{
 		#region Constructor
-		public SpecialApplyBE_SpecialSizeBEView(IUIModel model) : base(model,"SpecialApplyBE_SpecialSizeBE","System.String", false)
+		public SpecialApplyBE_SpecialSizeBEView(IUIModel model) : base(model,"SpecialApplyBE_SpecialSizeBE","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE", false)
 		{
 			InitClass();
 		}
 		//构造空实例,不进行初始化.目前为Clone使用.
-		private SpecialApplyBE_SpecialSizeBEView():base(null,"SpecialApplyBE_SpecialSizeBE","System.String", false)
+		private SpecialApplyBE_SpecialSizeBEView():base(null,"SpecialApplyBE_SpecialSizeBE","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE", false)
 		{
 		}
 		protected override IUIView CreateCloneInstance()
@@ -2434,6 +2434,14 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["DescFlexField_CombineName"]; }
 		}
+		public IUIField FieldDisplayProductType_Code
+		{
+			get { return this.Fields["DisplayProductType_Code"]; }
+		}
+		public IUIField FieldDisplayProductType_Name
+		{
+			get { return this.Fields["DisplayProductType_Name"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -2446,19 +2454,19 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.String", "ID", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5d43dab0-d67e-42a6-980c-d8cbcf65fcab");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.String", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c3fe70a2-c6de-4139-bf0a-db6c313c3763");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","5d43dab0-d67e-42a6-980c-d8cbcf65fcab");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","c3fe70a2-c6de-4139-bf0a-db6c313c3763");
 			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), true,"","System.String", "CreatedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0ecb6e1b-3b7f-478b-91ad-7d49f04bc669");
-			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.String", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8f3f8778-f47d-4938-b8f8-26ba8101444b");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.DateTime", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","8f3f8778-f47d-4938-b8f8-26ba8101444b");
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","941b9dd8-4a95-4908-b562-728a6f5c9f86");
-			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.String", "SysVersion", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","655a9e25-fa07-4b51-bc62-97917a0a4e1f");
-			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyBE", typeof(Int64), true,"","System.String", "SpecialApplyBE", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d38569a7-3f98-41c2-a133-204dfaef8f98");
-			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType", typeof(String), true,"","System.String", "DisplayProductType", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","741bc932-1bb4-477a-8759-2c7e5d175c13");
-			UIModelRuntimeFactory.AddNewUIField(this,"Width", typeof(Decimal), true,"0","System.String", "Width", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3ce03126-0912-4492-9fbf-0701d4ba5f31");
-			UIModelRuntimeFactory.AddNewUIField(this,"Hight", typeof(Decimal), true,"0","System.String", "Hight", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","14fe6f02-0761-4213-a3f1-0a40a576bfcf");
-			UIModelRuntimeFactory.AddNewUIField(this,"Thick", typeof(Decimal), true,"0","System.String", "Thick", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","918ec36d-4d3e-472c-8c0d-169b1ebf1970");
-			UIModelRuntimeFactory.AddNewUIField(this,"Qty", typeof(Decimal), true,"0","System.String", "Qty", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5019383f-1764-4204-8ce1-dd62722a127a");
-			UIModelRuntimeFactory.AddNewUIField(this,"Area", typeof(Decimal), true,"0","System.String", "Area", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3d84e584-9b4f-4ba3-913a-eab83e8666a7");
+			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","655a9e25-fa07-4b51-bc62-97917a0a4e1f");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyBE", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE", "SpecialApplyBE", true,true, false, "",false,(UIFieldType)4,"363e7e53-0181-4a45-95b9-2980fa1a68cf","d38569a7-3f98-41c2-a133-204dfaef8f98");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType", typeof(Int64), false,"","UFIDA.U9.Base.FlexField.ValueSet.DefineValue", "DisplayProductType", true,true, false, "",false,(UIFieldType)4,"f52b36dc-e642-4513-a0e6-8bddd4f9e7fc","741bc932-1bb4-477a-8759-2c7e5d175c13");
+			UIModelRuntimeFactory.AddNewUIField(this,"Width", typeof(Decimal), true,"0","System.Decimal", "Width", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","3ce03126-0912-4492-9fbf-0701d4ba5f31");
+			UIModelRuntimeFactory.AddNewUIField(this,"Hight", typeof(Decimal), true,"0","System.Decimal", "Hight", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","14fe6f02-0761-4213-a3f1-0a40a576bfcf");
+			UIModelRuntimeFactory.AddNewUIField(this,"Thick", typeof(Decimal), true,"0","System.Decimal", "Thick", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","918ec36d-4d3e-472c-8c0d-169b1ebf1970");
+			UIModelRuntimeFactory.AddNewUIField(this,"Qty", typeof(Decimal), true,"0","System.Decimal", "Qty", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","5019383f-1764-4204-8ce1-dd62722a127a");
+			UIModelRuntimeFactory.AddNewUIField(this,"Area", typeof(Decimal), true,"0","System.Decimal", "Area", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","3d84e584-9b4f-4ba3-913a-eab83e8666a7");
 			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), true,"","System.String", "Memo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","631cfbc8-e966-4e11-bd48-3aa8fdf20b7d");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d82c5704-da36-453e-875b-8ce9a5a72193");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cfbdeb60-e4e1-48b3-ba3c-b8a97a35c5e5");
@@ -2542,6 +2550,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8223829d-49f4-4600-b13c-36db630c13b6");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a6efef93-4fdd-410d-b238-7dda09c4d8de");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5e4c2ed3-831c-4751-8083-f90face3be2b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Code", typeof(String), false,"","System.String", "DisplayProductType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d8bf7bb9-ec94-42c3-96a8-e68a164ce824");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Name", typeof(String), true,"","System.String", "DisplayProductType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","79c15cec-c53c-4254-ac25-a0e43099255e");
 
 
 			this.CurrentFilter = new SpecialApplyBE_SpecialSizeBEDefaultFilterFilter(this);
@@ -2684,12 +2694,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		}
 		
 		
-		public  String DisplayProductType
+		public  Int64 DisplayProductType
 		{
 			get{
 				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType);
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType);
 			}
 			set{
 				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType] = value;
@@ -3837,6 +3847,32 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			}
 			set{
 				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDescFlexField_CombineName] = value;
+			}
+		}
+		
+		
+		public  String DisplayProductType_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] = value;
+			}
+		}
+		
+		
+		public  String DisplayProductType_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] = value;
 			}
 		}
 		#endregion

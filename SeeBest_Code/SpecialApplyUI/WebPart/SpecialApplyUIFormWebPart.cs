@@ -473,9 +473,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         {
             IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card5",false,"none", true, true, "2","","187eb1f3-4582-4a1a-8d19-07a77903d8ed");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 421, 0, 2, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 3, 0, 5, 10, 0, 10, 0);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 3, 0, 2, 10, 0, 10, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(190,bool.Parse("True")),new GridRowDef(205,bool.Parse("True")),new GridRowDef(1,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 2,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(190,bool.Parse("True")),new GridRowDef(205,bool.Parse("True")),new GridRowDef(1,bool.Parse("False")),});
             this.Card5 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
@@ -825,7 +825,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 	        private void _BuilderControl_Image0(IUFContainer container)
         {
             IUFImage _Image = UIControlBuilder.BuildImageControl(container,"Image0",true, true, "6");
-			_Image.ImageUrl = @"~\/images/SeeBestBlueSpecial.bmp";
+			_Image.ImageUrl = @"~\/Images/CustU9/SeeBestBlueSpecial.bmp";
 			CommonBuilder.GridLayoutPropBuilder(container, _Image, 75, 145, 6, 0, 1, 6, "100");
             this.Image0 = _Image;
         }
@@ -833,14 +833,14 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 	        private void _BuilderControl_Image1(IUFContainer container)
         {
             IUFImage _Image = UIControlBuilder.BuildImageControl(container,"Image1",true, true, "7");
-			_Image.ImageUrl = @"~\/images/SeeBestWhiteSpecial.bmp";
+			_Image.ImageUrl = @"~\/Images/CustU9/SeeBestWhiteSpecial.bmp";
 			CommonBuilder.GridLayoutPropBuilder(container, _Image, 70, 145, 10, 0, 1, 6, "100");
             this.Image1 = _Image;
         }
 
 	         private void _BuilderControl_TabControl5(IUFContainer container)
         {
-            IUFTabControl _UFTabControl = UIControlBuilder.BuildTabControl(container,"TabControl5",true, true, "2",EventResponseType.Client,971, 211, 0, 1, 1, 2, "100");
+            IUFTabControl _UFTabControl = UIControlBuilder.BuildTabControl(container,"TabControl5",true, true, "2",EventResponseType.Client,971, 208, 0, 1, 1, 2, "100");
             ///foreach UFTabbedPane下的所有控件，增加到此容器
             _UFTabControl.TabPages.Add(_BuilderControl_TabPage36(_UFTabControl));
             this.TabControl5 = _UFTabControl;
@@ -891,7 +891,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid14", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, true,true,true,true,true,5,false, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "1");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 953, 106, 0, 0, 1, 2, "100");
-			InitViewBindingContainer(this, _UFGrid,  this.Model.SpecialApplyBE_SpecialSizeBE, "SpecialApplyBE_SpecialSizeBE", "", null, 5, "专柜申请单");
+			InitViewBindingContainer(this, _UFGrid,  this.Model.SpecialApplyBE_SpecialSizeBE, "SpecialApplyBE_SpecialSizeBE", "", null, 5, "专柜申请单.Misc.专柜尺寸");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
 			_UFGrid.AllowSelectAllPage=false;
 			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
@@ -914,32 +914,42 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DisplayProductType0","TextBoxColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["DisplayProductType"]/*DisplayProductType*/,"DisplayProductType", false, true, true, false, false, false, 0, 150, "100",true, false,"","741bc932-1bb4-477a-8759-2c7e5d175c13","741bc932-1bb4-477a-8759-2c7e5d175c13","4849cb34-3c61-4e24-b34c-eaa1affcbd23");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","100") ;          
-	  
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DisplayProductType0","ReferenceColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["DisplayProductType"]/*DisplayProductType*/,"DisplayProductType", false, true, true, false, false, false, 7, 150, "19.0",true, false,"","741bc932-1bb4-477a-8759-2c7e5d175c13","741bc932-1bb4-477a-8759-2c7e5d175c13","847dfaa6-5dd1-450b-9db3-f55c5d6870cd");
+			GridControlBuilder.GridReferenceColumnBuilder((IUFFldReferenceColumn)column, ColumnTextAlign.Right, "ID", "Code", "Name", this.Model.SpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code/*DisplayProductType_Code*/, this.Model.SpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name/*DisplayProductType_Name*/, "0ca6ee2a-4ae2-41f6-a089-05fd4b542d49"
+			,false,true,580,408);
+            ((IUFFldReferenceColumn)column).CtrlId = "847dfaa6-5dd1-450b-9db3-f55c5d6870cd";
+ 			((IUFFldReferenceColumn)column).IsMultiOrg  = false ;
+           //foreach Reference's input filter parameter
+
+            //foreach Reference's output set data
+							
+							
+							
+							
+            ((IUFFldReferenceColumn)column).ApplyRefRelations();
+			  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Width"]/*Width*/,"Width", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","3ce03126-0912-4492-9fbf-0701d4ba5f31","3ce03126-0912-4492-9fbf-0701d4ba5f31","8841e903-93d2-4b6f-a216-0f5dfa27be8f");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Width"]/*Width*/,"Width", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","3ce03126-0912-4492-9fbf-0701d4ba5f31","3ce03126-0912-4492-9fbf-0701d4ba5f31","8841e903-93d2-4b6f-a216-0f5dfa27be8f");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Hight0","NumberColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Hight"]/*Hight*/,"Hight", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","14fe6f02-0761-4213-a3f1-0a40a576bfcf","14fe6f02-0761-4213-a3f1-0a40a576bfcf","80b26c22-3b4c-410c-b205-4a50662afaff");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Hight0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Hight"]/*Hight*/,"Hight", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","14fe6f02-0761-4213-a3f1-0a40a576bfcf","14fe6f02-0761-4213-a3f1-0a40a576bfcf","80b26c22-3b4c-410c-b205-4a50662afaff");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Thick"]/*Thick*/,"Thick", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","918ec36d-4d3e-472c-8c0d-169b1ebf1970","918ec36d-4d3e-472c-8c0d-169b1ebf1970","0f9f0597-c9b4-48c3-bd8b-738029084bdf");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Thick"]/*Thick*/,"Thick", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","918ec36d-4d3e-472c-8c0d-169b1ebf1970","918ec36d-4d3e-472c-8c0d-169b1ebf1970","0f9f0597-c9b4-48c3-bd8b-738029084bdf");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Qty0","NumberColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Qty"]/*Qty*/,"Qty", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","5019383f-1764-4204-8ce1-dd62722a127a","5019383f-1764-4204-8ce1-dd62722a127a","7c6adb56-4333-483f-960b-e123a49e775f");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Qty0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Qty"]/*Qty*/,"Qty", false, true, true, false, false, true, 8, 100, "24.9",true, false,"0","5019383f-1764-4204-8ce1-dd62722a127a","5019383f-1764-4204-8ce1-dd62722a127a","7c6adb56-4333-483f-960b-e123a49e775f");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Area0","NumberColumnModel", "", 0,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Area"]/*Area*/,"Area", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","3d84e584-9b4f-4ba3-913a-eab83e8666a7","3d84e584-9b4f-4ba3-913a-eab83e8666a7","a6131913-df8f-4a02-88b6-812f33bb86e7");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Area0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Area"]/*Area*/,"Area", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","3d84e584-9b4f-4ba3-913a-eab83e8666a7","3d84e584-9b4f-4ba3-913a-eab83e8666a7","a6131913-df8f-4a02-88b6-812f33bb86e7");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"Width*Hight*Qty",false,"1","1");
 	  
@@ -1057,8 +1067,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode72, "4");		
 
 
-				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "False", "True", "False", "False", "Left", 0, 60, 0, 150, 20, 2, 0, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode72","","50","66114ed7-b79b-4834-86e9-455f5bacc91b","4a78e514-b96c-4bc5-9759-a4ce6a259357");
+				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "True", "True", "False", "False", "Left", 0, 60, 0, 150, 20, 2, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblAdvCode72","","50","66114ed7-b79b-4834-86e9-455f5bacc91b","4a78e514-b96c-4bc5-9759-a4ce6a259357");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode72, "False", "AdvCode", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldAdvCode, "SpecialApplyBE");
 
 
