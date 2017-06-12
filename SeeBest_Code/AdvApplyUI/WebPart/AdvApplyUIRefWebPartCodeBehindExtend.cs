@@ -116,7 +116,6 @@ namespace AdvApplyUIRef
         #region 自己扩展 Extended Event handler 
 		public void AfterOnLoad()
 		{
-
 		}
 
         public void AfterCreateChildControls()

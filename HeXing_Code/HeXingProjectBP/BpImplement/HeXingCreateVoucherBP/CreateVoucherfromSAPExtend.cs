@@ -29,6 +29,7 @@
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Business;
     using UFSoft.UBF.PL;
+    using UFSoft.UBF.Sys.Database;
     using UFSoft.UBF.Util.Context;
     using UFSoft.UBF.Util.DataAccess;
 
@@ -245,12 +246,15 @@
                         }
                     }
                     Voucher successVoucher = Voucher.Finder.FindByID(item.U9VoucherID);
-                    successVoucher.CreatedBy = item.SapCreater;
+                    successVoucher.ModifiedBy = item.SapCreater;
                     successVoucher.Auditor = item.SapAuditor;
                     successVoucher.Poster = item.SapPoster;
-                    successVoucher.Cashier = item.SapCashier;
+                    //successVoucher.Cashier = item.SapCashier;
                     session.Commit();
                 }
+                string sql = "update GL_Voucher set CreatedBy='" + item.SapCreater + "' ,ModifiedBy='" + item.SapCreater + "' where ID=" + item.U9VoucherID;
+                DataSet data11 = null;
+                DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out data11);
             }
             return null;
         }
