@@ -14,6 +14,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
 
 	public partial class SpecialApplyBE{
 
+        public override Base.Doc.DocType DocType
+        {
+            get { return this.SpecialApplyDocType; }
+        }
+
 		#region Custom Constructor
 
 		#endregion
@@ -31,6 +36,15 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
 		protected override void OnSetDefaultValue()
 		{
 			base.OnSetDefaultValue();
+            if (this.Org == null)
+            {
+                this.Org = UFIDA.U9.Base.Context.LoginOrg;
+            }
+
+            if (this.StateMachineInstance.CurrentState == SpecialApplyBEStateMachine.State.Empty)
+            {
+                this.StateMachineInstance.Initialize();
+            }
 		}
 		/// <summary>
 		/// before Insert

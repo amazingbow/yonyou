@@ -193,6 +193,108 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			
         }
 		 
+				//MethodName:BtnSubmit_Click ActionName:SubmitClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnSubmit_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnSubmit_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnSubmit_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			if (adjust.DoRequireCheck())
+			{
+			//Template (tpl) Code here...
+			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:SubmitClick
+
+	
+		Action.SubmitClick(sender,new UIActionEventArgs());
+
+		
+			
+
+			}
+        }
+		 
+				//MethodName:BtnApprove_Click ActionName:ApproveClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnApprove_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnApprove_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnApprove_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			if (adjust.DoRequireCheck())
+			{
+			//Template (tpl) Code here...
+			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:ApproveClick
+
+	
+		Action.ApproveClick(sender,new UIActionEventArgs());
+
+		
+			
+
+			}
+        }
+		 
+				//MethodName:BtnUndoApprove_Click ActionName:UndoApprove
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnUndoApprove_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnUndoApprove_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnUndoApprove_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+	
+		Action.UndoApprove(sender,new UIActionEventArgs());
+
+		
+			
+        }
+		 
 				//MethodName:BtnFind_Click ActionName:FindClick
         /// <summary>
         /// Help Info : {varEvent.Help}

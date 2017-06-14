@@ -68,10 +68,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		private void InitClass()
 		{
 			this.viewSpecialApplyBE = new SpecialApplyBEView(this);
-			this.viewSpecialApplyBE.SetResourceInfo("98f59678-956f-4d9b-8cc1-7e532448b08e");
+			this.viewSpecialApplyBE.SetResourceInfo("003ffa76-12eb-4250-9f17-a402377f7e9d");
 			this.Views.Add(this.viewSpecialApplyBE);			
 			this.viewSpecialApplyBE_SpecialSizeBE = new SpecialApplyBE_SpecialSizeBEView(this);
-			this.viewSpecialApplyBE_SpecialSizeBE.SetResourceInfo("9d6e25db-d257-432f-8a50-8b38e44d8547");
+			this.viewSpecialApplyBE_SpecialSizeBE.SetResourceInfo("6b12305d-4302-4e1d-baa2-fbcc80eb6542");
 			this.Views.Add(this.viewSpecialApplyBE_SpecialSizeBE);			
 
 			//this.linkSpecialApplyBE__SpecialApplyBE_SpecialSizeBE
@@ -141,57 +141,101 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["SysVersion"]; }
 		}
-		public IUIField FieldAdvCode
+		public IUIField FieldOrg
 		{
-			get { return this.Fields["AdvCode"]; }
+			get { return this.Fields["Org"]; }
 		}
-		public IUIField FieldApplyDept
+		public IUIField FieldOrg_Code
 		{
-			get { return this.Fields["ApplyDept"]; }
+			get { return this.Fields["Org_Code"]; }
 		}
-		public IUIField FieldApplyDept_Code
+		public IUIField FieldOrg_Name
 		{
-			get { return this.Fields["ApplyDept_Code"]; }
+			get { return this.Fields["Org_Name"]; }
 		}
-		public IUIField FieldApplyDept_Name
+		public IUIField FieldDocNo
 		{
-			get { return this.Fields["ApplyDept_Name"]; }
+			get { return this.Fields["DocNo"]; }
 		}
-		public IUIField FieldApplier
+		public IUIField FieldBusinessDate
 		{
-			get { return this.Fields["Applier"]; }
+			get { return this.Fields["BusinessDate"]; }
 		}
-		public IUIField FieldApplyDate
+		public IUIField FieldVersion
 		{
-			get { return this.Fields["ApplyDate"]; }
+			get { return this.Fields["Version"]; }
 		}
-		public IUIField FieldPhone
+		public IUIField FieldPrintAmount
 		{
-			get { return this.Fields["Phone"]; }
+			get { return this.Fields["PrintAmount"]; }
 		}
-		public IUIField FieldQQ
+		public IUIField FieldLatestPrintedDate
 		{
-			get { return this.Fields["QQ"]; }
+			get { return this.Fields["LatestPrintedDate"]; }
 		}
-		public IUIField FieldCustConterName
+		public IUIField FieldCancel_Canceled
 		{
-			get { return this.Fields["CustConterName"]; }
+			get { return this.Fields["Cancel_Canceled"]; }
 		}
-		public IUIField FieldCustName
+		public IUIField FieldCancel_CancelDate
 		{
-			get { return this.Fields["CustName"]; }
+			get { return this.Fields["Cancel_CancelDate"]; }
 		}
-		public IUIField FieldCustPhone
+		public IUIField FieldCancel_CancelReason
 		{
-			get { return this.Fields["CustPhone"]; }
+			get { return this.Fields["Cancel_CancelReason"]; }
 		}
-		public IUIField FieldCustAddress
+		public IUIField FieldCancel_CancelUser
 		{
-			get { return this.Fields["CustAddress"]; }
+			get { return this.Fields["Cancel_CancelUser"]; }
 		}
-		public IUIField FieldSpecialDesignStyle
+		public IUIField FieldWorkFlowID
 		{
-			get { return this.Fields["SpecialDesignStyle"]; }
+			get { return this.Fields["WorkFlowID"]; }
+		}
+		public IUIField FieldStateMachineID
+		{
+			get { return this.Fields["StateMachineID"]; }
+		}
+		public IUIField FieldHoldReason
+		{
+			get { return this.Fields["HoldReason"]; }
+		}
+		public IUIField FieldHoldReason_Code
+		{
+			get { return this.Fields["HoldReason_Code"]; }
+		}
+		public IUIField FieldHoldReason_Name
+		{
+			get { return this.Fields["HoldReason_Name"]; }
+		}
+		public IUIField FieldHoldUser
+		{
+			get { return this.Fields["HoldUser"]; }
+		}
+		public IUIField FieldHoldDate
+		{
+			get { return this.Fields["HoldDate"]; }
+		}
+		public IUIField FieldReleaseReason
+		{
+			get { return this.Fields["ReleaseReason"]; }
+		}
+		public IUIField FieldReleaseReason_Code
+		{
+			get { return this.Fields["ReleaseReason_Code"]; }
+		}
+		public IUIField FieldReleaseReason_Name
+		{
+			get { return this.Fields["ReleaseReason_Name"]; }
+		}
+		public IUIField FieldReleaseUser
+		{
+			get { return this.Fields["ReleaseUser"]; }
+		}
+		public IUIField FieldReleaseDate
+		{
+			get { return this.Fields["ReleaseDate"]; }
 		}
 		public IUIField FieldDescFlexField_PubDescSeg1
 		{
@@ -521,6 +565,86 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["DescFlexField_CombineName"]; }
 		}
+		public IUIField FieldFlowInstance
+		{
+			get { return this.Fields["FlowInstance"]; }
+		}
+		public IUIField FieldAdvCode
+		{
+			get { return this.Fields["AdvCode"]; }
+		}
+		public IUIField FieldApplyDept
+		{
+			get { return this.Fields["ApplyDept"]; }
+		}
+		public IUIField FieldApplyDept_Code
+		{
+			get { return this.Fields["ApplyDept_Code"]; }
+		}
+		public IUIField FieldApplyDept_Name
+		{
+			get { return this.Fields["ApplyDept_Name"]; }
+		}
+		public IUIField FieldApplier
+		{
+			get { return this.Fields["Applier"]; }
+		}
+		public IUIField FieldApplyDate
+		{
+			get { return this.Fields["ApplyDate"]; }
+		}
+		public IUIField FieldPhone
+		{
+			get { return this.Fields["Phone"]; }
+		}
+		public IUIField FieldQQ
+		{
+			get { return this.Fields["QQ"]; }
+		}
+		public IUIField FieldCustConterName
+		{
+			get { return this.Fields["CustConterName"]; }
+		}
+		public IUIField FieldCustName
+		{
+			get { return this.Fields["CustName"]; }
+		}
+		public IUIField FieldCustPhone
+		{
+			get { return this.Fields["CustPhone"]; }
+		}
+		public IUIField FieldCustAddress
+		{
+			get { return this.Fields["CustAddress"]; }
+		}
+		public IUIField FieldSpecialDesignStyle
+		{
+			get { return this.Fields["SpecialDesignStyle"]; }
+		}
+		public IUIField FieldSpecialApplyDocType
+		{
+			get { return this.Fields["SpecialApplyDocType"]; }
+		}
+		public IUIField FieldSpecialApplyDocType_Code
+		{
+			get { return this.Fields["SpecialApplyDocType_Code"]; }
+		}
+		public IUIField FieldSpecialApplyDocType_Name
+		{
+			get { return this.Fields["SpecialApplyDocType_Name"]; }
+		}
+		public IUIField FieldStatus
+		{
+			get { return this.Fields["Status"]; }
+		}
+		public IUIField FieldSpecialApplyDocType_ConfirmType
+		{
+			get { return this.Fields["SpecialApplyDocType_ConfirmType"]; }
+		}
+		public IUIField FieldSpecialApplyDocType_ApproveType
+		{
+			get { return this.Fields["SpecialApplyDocType_ApproveType"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -533,107 +657,138 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","06368069-4511-4f9d-bd40-8f222da3586f");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","e569b7f7-c9f2-4c48-8b1f-2ed3f42baa83");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), true,"","System.String", "CreatedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","02a72197-1f86-4ee0-b6be-d936316eb01b");
-			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.DateTime", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","15f9cdf4-e077-43ae-b3be-f54f939c9eec");
-			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9101cb28-38f2-4b3c-b08b-ccf14d423436");
-			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","c53373e9-6c60-4cf8-9766-ea8d302cf10b");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvCode", typeof(String), true,"","System.String", "AdvCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","66114ed7-b79b-4834-86e9-455f5bacc91b");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept", typeof(Int64), false,"","UFIDA.U9.CBO.SCM.Customer.Customer", "ApplyDept", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","5cf29749-aacc-456e-8ea0-6d0a4b87ed55");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Code", typeof(String), false,"","System.String", "ApplyDept.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e06dd9da-3c4c-4a8b-976e-c17ce74c543c");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Name", typeof(String), true,"","System.String", "ApplyDept.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","122296a9-7492-4553-8e5e-b8933a01286f");
-			UIModelRuntimeFactory.AddNewUIField(this,"Applier", typeof(String), true,"","System.String", "Applier", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5efaa630-1e81-4af4-971c-d629e1ca4e56");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","49c1650a-603e-49eb-bcba-bfa153d185e7");
-			UIModelRuntimeFactory.AddNewUIField(this,"Phone", typeof(String), true,"","System.String", "Phone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8bd8d5c2-ce03-45b4-9b5f-f904c2b9c5ef");
-			UIModelRuntimeFactory.AddNewUIField(this,"QQ", typeof(String), true,"","System.String", "QQ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f0ba3c1d-9c5b-459d-adca-a882cf16c827");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustConterName", typeof(String), false,"","System.String", "CustConterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","595c37ff-5e89-49bd-9872-59b63279bdcf");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustName", typeof(String), false,"","System.String", "CustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f5d3e494-a29c-4a2c-aa2e-3e3cda78bdbd");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustPhone", typeof(String), false,"","System.String", "CustPhone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af55c1e1-e153-4c38-91e4-249a1b6b9e2d");
-			UIModelRuntimeFactory.AddNewUIField(this,"CustAddress", typeof(String), false,"","System.String", "CustAddress", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fa2bcdbb-bfde-47c7-9a5b-f97d5a28c8a6");
-			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle", typeof(Int32), false,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum", "SpecialDesignStyle", true,true, false, "",false,(UIFieldType)2,"a96d15c8-0b6e-48d4-9bd3-ec2d4f4c0db9","c675c8f7-9c56-40e8-8797-224776233f3e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e01efbae-e85e-4a4f-bcba-418bc0a719f3");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c11a9093-51e4-46a6-a233-015aa189273c");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3c6d1fc3-2ff1-4dd4-a611-45bb899e87b7");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","09527355-ebfc-4846-95b7-e0ca177b3cc4");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c52579fb-3d28-42a2-ab78-feac7be2aaed");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","514baf4a-9b9a-4b56-af74-e0c8aac77fdb");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4d1ee722-206d-4443-867e-391204d8ab99");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fad18523-e907-4ac0-9ac1-047da0547ddf");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","40477226-1b8d-40ad-bcd3-cfc686652b72");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","316ed585-9415-4f78-ac22-fdb01d829143");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6116af93-f913-44ce-9faa-77ab2afbf9f1");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","58b1740e-839c-4f09-abf2-b0236ec8b7f9");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","59bf652b-1c4a-46c0-b209-e2cbf80149e4");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","670b1569-c9b4-4cf8-aa6e-a6da0003547e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","eb793b73-c10b-45ef-9deb-e59df31ae415");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3fe906ac-2186-46ae-94e4-807740328415");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","22e8703f-3030-4e04-9bbf-b61de99699e8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a303bc71-28e1-410c-89e0-bbba701993f0");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","53527d69-cc89-4ed0-ac47-d15bc061ef6d");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b7987aec-396e-4a00-a5ad-1e5d8730f494");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","01036df5-90a8-478d-9879-9f0b51da2d70");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ffee4817-428e-4163-be72-83ba00154062");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d7f1cfe7-f4d7-47f9-9b17-7b41761442d1");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","96e9d2a9-3e90-4bcc-8819-13e76b50529f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","31fcc611-68f3-4875-a461-f03e99de67d8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6bef21ba-6678-4269-a003-380b172cc22e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fa8c72fd-1a84-4715-ad13-fafd54def82f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3a1c4638-ea32-4211-8ced-c337e4e74c21");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ca084246-af3e-42ee-af25-813a875de4f3");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","619c95fa-7914-4566-bfaf-5a6c4390573d");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg31", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg31", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","74f62204-2259-4c97-9c3a-30f7744e123b");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg32", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg32", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2263ebdc-7494-477d-8485-10fb66462d87");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg33", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg33", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","84b2a75e-b0be-463c-b37c-5be0cf90450a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg34", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg34", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fbaee58c-c530-4b3a-b3ae-9fd4dea3dffb");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg35", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg35", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bf86bb82-d28c-443d-a8e3-5a71e720237f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg36", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg36", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","99001f50-a197-4e84-a53d-195ba6057525");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg37", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg37", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8d0c86be-3968-42f2-8256-a3536d55a210");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg38", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg38", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","614dee43-03f6-4c11-82db-cd48632ae335");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg39", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg39", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b830a82d-7383-4395-929e-14c741bfde87");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg40", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg40", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fb260996-cdfb-46ce-8134-98f118336568");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg41", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg41", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","277d69cf-94e8-41ff-b2b9-022c17e72325");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg42", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg42", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fa33cf3d-60c3-4cc0-8fff-7e7d5f4a70d1");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg43", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg43", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","024fdd5d-3730-4e97-af45-3dddd25a258e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg44", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg44", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4ce922e6-40ac-4067-a8cb-26c74e8b3649");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg45", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg45", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fe415c0f-5f0c-4864-b41a-f8acbd91544b");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg46", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg46", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ce8c8f99-3b18-483c-a51b-edf2c7a217dc");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg47", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg47", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0e4e0079-8b20-4420-8b6f-aa259d7036fa");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg48", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg48", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1df79b81-2ec7-4eab-9670-a71c5a661a6a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg49", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg49", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9b7a6bfc-8977-4288-ad67-2854e123c07a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg50", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg50", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e5b26d8d-e7ad-48e6-a03b-88961d146083");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_ContextValue", typeof(String), true,"","System.String", "DescFlexField.ContextValue", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6ea80e13-e8b8-4b80-bac3-6d72f6d9b225");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","641baee4-d6e6-4381-9150-ec19973c1a56");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c91d28b6-dd23-4895-96b6-ebb23771cad9");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6cc0f844-e8a6-4223-8eea-740d8999cc2f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","26313781-1a08-4b0a-b280-d2ef0acf8eb8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7dc94d1e-c22e-4976-bb51-ff20635f69a2");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","466011c0-bb2b-4886-a13c-a72792b85f38");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9fc9b087-3867-447d-8901-7a96e61c2dfd");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","31fead91-5940-4533-8411-c842abd89382");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","aa1a7c5f-fa2c-4f9a-820f-d8a2fcd1a9b6");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e9db2ae0-320c-45f9-a2c6-a173cfa5b53e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a6b3cdb7-df02-4054-bef4-7502fcf78286");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bab4f1bc-88a9-484d-8bba-c0af6fd94057");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e2585731-feca-42d8-becd-50b83f83cfda");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a50908ed-f104-4747-a278-254b6795f034");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f694248d-96a6-46fb-9fb4-839dae86e73f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","41aa9257-c86d-41e0-ad3d-fa1b42080444");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","52059dd7-6ccf-4e26-97a8-992d968b1a22");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5f666259-4cd2-477c-b953-50637c191ae8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","15806283-7058-45f7-96e7-e87aad19d573");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0ff7ff81-8130-48b0-8f78-7154421d4828");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7bddb9a4-8341-4bb8-83ba-4a5fd678e63d");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8875aecd-7a04-47bf-800b-c53fd0db98a2");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c50c9bb5-94b4-4429-95aa-c032bbd2b60b");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","28e1ef88-b5f9-496a-a6dc-bd2584b9eab4");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bdbd0956-394f-44ce-89d4-4f17ada54fda");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ca0965d7-0a18-41ad-8754-f29517b3cdea");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7a681317-ec48-40e9-ab1a-3ecf6178ca9c");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4af60cf3-1031-484a-a122-d2f7836631d5");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","763668cc-80c4-45bb-b212-5f90b9e9b456");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6c2fe77d-76f9-4c68-bdbc-f45ad9b6e25a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0591b881-47fe-4ed7-a76d-c7c0386ed574");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","43926a76-79a3-442f-a913-fd5057c8611b");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","24e7df97-238a-475c-8a35-25afc0f152b9");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), true,"","System.String", "CreatedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bedf9854-5822-44d4-96e2-f2e6572ff0bb");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.DateTime", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","061e2398-dcd0-4e95-b81d-4901bdcc3fc2");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ec4622e2-5995-415c-afa0-45fb2c52d758");
+			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","a7ce340a-93a1-4f6a-96d0-1b34d0f22889");
+			UIModelRuntimeFactory.AddNewUIField(this,"Org", typeof(Int64), false,"","UFIDA.U9.Base.Organization.Organization", "Org", true,true, false, "",false,(UIFieldType)4,"73eb56da-f25a-4636-94e7-61b0cb4b7784","f0cc4331-d080-4a56-a1e5-038e38101fe1");
+			UIModelRuntimeFactory.AddNewUIField(this,"Org_Code", typeof(String), false,"","System.String", "Org.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","efa1dd95-b879-4fc1-bed9-63aee5afa952");
+			UIModelRuntimeFactory.AddNewUIField(this,"Org_Name", typeof(String), true,"","System.String", "Org.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","34cebfb9-d02e-4171-8ac4-43e41babc263");
+			UIModelRuntimeFactory.AddNewUIField(this,"DocNo", typeof(String), false,"","System.String", "DocNo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","dea4d40c-eab1-442c-aad7-d09817db16bd");
+			UIModelRuntimeFactory.AddNewUIField(this,"BusinessDate", typeof(DateTime), false,"","System.Date", "BusinessDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","e8fc24f8-1bd1-4b14-8dd2-1cdfe5ecc8cc");
+			UIModelRuntimeFactory.AddNewUIField(this,"Version", typeof(Int32), true,"0","System.Int32", "Version", true,true, false, "",false,(UIFieldType)1,"d7c6031e-d3fe-41aa-a397-5edd86c10cae","14751490-5181-4b3b-9ea6-8ba54f0a0ed2");
+			UIModelRuntimeFactory.AddNewUIField(this,"PrintAmount", typeof(Int32), true,"0","System.Int32", "PrintAmount", true,true, false, "",false,(UIFieldType)1,"d7c6031e-d3fe-41aa-a397-5edd86c10cae","a54806f0-15a3-405f-8b98-2895f94fb786");
+			UIModelRuntimeFactory.AddNewUIField(this,"LatestPrintedDate", typeof(DateTime), true,"","System.DateTime", "LatestPrintedDate", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","02551ba6-9e45-4e36-944f-9544e11c4541");
+			UIModelRuntimeFactory.AddNewUIField(this,"Cancel_Canceled", typeof(Boolean), true,"false","System.Boolean", "Cancel.Canceled", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","839f033c-d284-460b-9f5f-9be37f80d0e7");
+			UIModelRuntimeFactory.AddNewUIField(this,"Cancel_CancelDate", typeof(DateTime), true,"","System.DateTime", "Cancel.CancelDate", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","6425727b-07ec-4d63-9819-eafca63d55a3");
+			UIModelRuntimeFactory.AddNewUIField(this,"Cancel_CancelReason", typeof(String), true,"","System.String", "Cancel.CancelReason", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3876c5d6-b752-406a-9d34-1a7a7dae1c3d");
+			UIModelRuntimeFactory.AddNewUIField(this,"Cancel_CancelUser", typeof(String), true,"","System.String", "Cancel.CancelUser", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","99d77671-34d4-4b72-bc13-de95c5634970");
+			UIModelRuntimeFactory.AddNewUIField(this,"WorkFlowID", typeof(Guid), true,"","System.Guid", "WorkFlowID", true,true, false, "",false,(UIFieldType)1,"2b057235-c58e-441e-9477-5e52fcb7f95b","79bf9cbb-6048-4dc9-869a-d44111995d0f");
+			UIModelRuntimeFactory.AddNewUIField(this,"StateMachineID", typeof(Guid), true,"","System.Guid", "StateMachineID", true,true, false, "",false,(UIFieldType)1,"2b057235-c58e-441e-9477-5e52fcb7f95b","209c7e04-7dc9-4fe6-b7f8-d3480a8043a3");
+			UIModelRuntimeFactory.AddNewUIField(this,"HoldReason", typeof(Int64), true,"","UFIDA.U9.Base.HoldRelease.HoldReason", "HoldReason", true,true, false, "",false,(UIFieldType)4,"aca6401c-cd2c-460c-9883-a704f9ea93a6","9a221856-0008-47e3-afa1-6bfc816a1c87");
+			UIModelRuntimeFactory.AddNewUIField(this,"HoldReason_Code", typeof(String), false,"","System.String", "HoldReason.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c8f116de-bb83-49fd-82a8-81b0a8821f1e");
+			UIModelRuntimeFactory.AddNewUIField(this,"HoldReason_Name", typeof(String), true,"","System.String", "HoldReason.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e2133020-21df-4432-ac5e-1621c7520b88");
+			UIModelRuntimeFactory.AddNewUIField(this,"HoldUser", typeof(String), true,"","System.String", "HoldUser", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b6553fe5-d013-47e3-9dff-9156110bcb23");
+			UIModelRuntimeFactory.AddNewUIField(this,"HoldDate", typeof(DateTime), true,"","System.DateTime", "HoldDate", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","b1f81a2f-7572-47f6-b41e-4f4236de20ca");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReleaseReason", typeof(Int64), true,"","UFIDA.U9.Base.HoldRelease.ReleaseReason", "ReleaseReason", true,true, false, "",false,(UIFieldType)4,"8f4c20a0-ea48-4e30-a76a-1f8d38bcc7cc","efeff814-61f1-47ae-9acc-b71b9c4ba25c");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReleaseReason_Code", typeof(String), false,"","System.String", "ReleaseReason.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cca25055-bde3-4c45-93a6-0e79ee63cb0f");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReleaseReason_Name", typeof(String), true,"","System.String", "ReleaseReason.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9620563b-6c9a-42b6-afc4-90aaf983fb53");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReleaseUser", typeof(String), true,"","System.String", "ReleaseUser", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2b6cb4fc-708d-4e5c-86e4-18aeac010029");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReleaseDate", typeof(DateTime), true,"","System.DateTime", "ReleaseDate", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","042b1a81-ff23-4602-a41c-6023345fd917");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c008e375-6a4e-4b62-8f08-77a37095731e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","abef95e2-b4fc-49ed-af3d-7f1ba50703a7");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a6790745-45d0-4a05-8310-1bcf10625d92");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","80599d1b-933d-4a0a-b343-205217c326f7");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","17a6af37-aaf4-4362-882a-a1874e71f213");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0e67f0df-86f7-42fc-becb-034a153a3ec3");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8d31e8e5-9339-4384-bc68-6ff564b19fcd");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9be6a8a7-e260-4c2d-b8b9-8b7e839fa3f9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e8c1746c-6d95-44f9-8d25-159ef3c3771b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ec1989e6-3fde-419d-8a76-1a476ccc55fd");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e52c981c-96f3-451c-97ac-1436987d6c03");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1aafd98f-49a8-48f7-a48b-c44ddef99e7f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c391b71d-5b26-4436-9e0b-20aeef52877f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","76a2c65d-defc-4315-b8f4-f935171c23ef");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","eb306d6d-6108-45a1-87e6-49f5e03bc351");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b90e985b-9a7d-45e0-9e48-f94f5de06980");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6158dc6d-4092-4523-a0aa-42a9b0b9a1a5");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ac324492-2db7-4f1c-b07c-5c5bb4602708");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bd0bc38d-4e01-45f8-b9d7-25b0557317f6");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","550a0455-bac9-4ae2-ba6d-2577dfcadd38");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ebfccb06-6f59-43fa-a540-a8d1ac51b1f4");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ae70987e-474c-4a36-a031-aeeceac968aa");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6cc0734c-2069-4e7d-93fe-f3f4605354a1");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ccf648d5-6688-4183-859c-bb44278949d7");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","be695ef5-e48b-4d91-ad38-ea5fd5af3def");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7a7f653c-38fa-4811-8fef-6bbdfcedd898");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","47362e57-b7ca-4fbf-ae04-b15a89def002");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","05af0b30-4b92-458c-aea1-19e41bb85028");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","82216451-3c41-42b3-b974-ffdadd9e6089");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","270c166c-5a5a-4c6c-9b51-62a9db784004");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg31", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg31", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","64d50ada-1d6d-403a-ae12-1f9de0acb172");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg32", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg32", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8b127251-3284-408a-b7dd-83b9bcdf6e3c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg33", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg33", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af0f8762-43e7-47e1-be18-b260884b1997");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg34", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg34", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","12fd7161-a6de-4c1a-9da8-14f1343563b4");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg35", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg35", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6bfd47bb-3b4b-47e7-bf76-02daccf5e35c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg36", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg36", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2fed8f39-e9e6-4dae-b8b7-76d639e9efff");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg37", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg37", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","18faec11-633b-4a98-b4b7-aef093be6a57");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg38", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg38", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1fcd7014-36c7-4142-89d8-1cc56b5adaa8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg39", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg39", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","51f8a497-b0fa-4a35-9420-0dd21eed7c2a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg40", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg40", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","241e4584-4112-4b18-a12f-406e244a59e5");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg41", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg41", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","518107c4-b0ff-4562-b2f5-87abfd347784");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg42", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg42", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3bb94bb0-f594-471b-9476-1ac28ae555a1");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg43", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg43", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8bed2dc6-899f-4bae-ac98-d0a22a2982e8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg44", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg44", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","43e87747-5e4e-46b6-87d7-208081396b3a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg45", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg45", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8c55ad4d-64aa-4560-be1c-696af864bbd9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg46", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg46", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","290a65a8-3acd-4589-af60-471c0e524888");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg47", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg47", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a8b71f4c-49fb-4115-8c3f-35e3443b0445");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg48", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg48", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e7b1e4d9-54b4-4715-845e-d8cd52127a66");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg49", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg49", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","21801398-c243-454d-8795-61a2126c6b5a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg50", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg50", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e42586ea-f82c-434b-a71c-25be67a38d6a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_ContextValue", typeof(String), true,"","System.String", "DescFlexField.ContextValue", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1edc0112-0588-4bd8-8f90-cdffdbd12967");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","88869d6f-fd67-467a-b221-e163e1313002");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6d86f302-21ee-470c-a09a-cc110722efb3");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","20c3ae0f-215e-4df3-8055-e59e905a6659");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cce60303-1b93-4b9f-af91-05eff6375bf7");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","495edae5-73e2-4b8b-866a-263c46253456");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bcfecc0f-48f9-4550-b573-663888ab64f2");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","74bd9f5f-85be-4090-8a84-3da46a49ee9c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c8e013ef-fd7c-4304-917b-14f18a024a4e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3ea604e7-e66a-4310-862d-093b237f1f8f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5ade10d4-84c0-46a3-aa02-dfa260164b6a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ec398cd9-7217-463c-aeb5-cfb38e0ea3e6");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","23f8f5c0-08f6-4f20-aa11-e89cf2b57373");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0fc14c26-846e-4b9c-9892-e0b1b4b47abe");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","39c1d65b-b878-4793-82dd-6b293d36552e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1cb211de-a92c-4b32-a7ef-1f74052d39f9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7eef4603-9754-43c5-96b9-bd383d6db28c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e0846571-2c6d-4e29-925d-413b10d24b08");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fdd28a7a-a8df-4f44-83e0-90bee08ac2db");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7d63e9ba-8921-4c10-956f-5f5bddc47bab");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","75d7c445-fbca-401e-b634-d9deab6f1f57");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cdc6b25f-1fde-411c-ad19-b63479f02748");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c5c123c9-34d2-48b2-af6c-8426711fa238");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3b74ba04-3829-4cc2-8993-fc3cd14f120a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7ff021ad-86ae-4bb5-aac8-753357f11e11");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5ea4c0a2-8332-4141-8636-f4a11964d47e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a1500970-e26f-429d-81d7-3a08a98b1bc0");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c87b38e7-19e2-4a7c-954b-0f53b6f691bf");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3870bade-a194-44d8-8a5d-cea143cb6d2e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","772ee7ca-a12b-4c7a-a497-a15df0d11fe8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3c6464d8-ade0-4d97-90b5-095f86b8c222");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f5799fe5-74f3-40c1-9b60-582c36101616");
+			UIModelRuntimeFactory.AddNewUIField(this,"FlowInstance", typeof(Int64), true,"","UFIDA.U9.CS.Workflow.WorkflowInstanceBE.FlowInstance", "FlowInstance", true,true, false, "",false,(UIFieldType)4,"d87a7006-6643-42f4-98f4-168847a71955","a0512995-c703-4a0b-8c61-30350f114b88");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCode", typeof(String), true,"","System.String", "AdvCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","effe8553-8301-4475-bc58-6563f3ba5074");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept", typeof(Int64), false,"","UFIDA.U9.CBO.SCM.Customer.Customer", "ApplyDept", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","47ba4445-3a49-4325-bb22-6d9535a8b5c1");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Code", typeof(String), false,"","System.String", "ApplyDept.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8815311e-4cb7-42b0-b173-9624b926dc44");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Name", typeof(String), true,"","System.String", "ApplyDept.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","15598cd1-04e4-453c-84fb-ef79fd6486f7");
+			UIModelRuntimeFactory.AddNewUIField(this,"Applier", typeof(String), true,"","System.String", "Applier", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","86805d91-9115-44a7-a690-ffa7807d2966");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","e2c2c8ab-558d-40b2-8eeb-499d6ae816ec");
+			UIModelRuntimeFactory.AddNewUIField(this,"Phone", typeof(String), true,"","System.String", "Phone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","96253916-1787-4f20-a11e-e5fb4a332ef7");
+			UIModelRuntimeFactory.AddNewUIField(this,"QQ", typeof(String), true,"","System.String", "QQ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","dc39c36e-8866-4711-bfc8-a3f655efb523");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustConterName", typeof(String), false,"","System.String", "CustConterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","07451c37-bef9-41b5-9f6a-05e7cb872c70");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustName", typeof(String), false,"","System.String", "CustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0074206b-e493-44b2-bf21-784ac2b62b11");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustPhone", typeof(String), false,"","System.String", "CustPhone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bb269534-1699-4559-99d4-a6a836be05ba");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustAddress", typeof(String), false,"","System.String", "CustAddress", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","272d005b-3401-44ca-93b5-3cb4dd4ac8f6");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle", typeof(Int32), false,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum", "SpecialDesignStyle", true,true, false, "",false,(UIFieldType)2,"a96d15c8-0b6e-48d4-9bd3-ec2d4f4c0db9","04205a3f-bdcf-4e85-bebd-d1cbee8fe60b");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType", typeof(Int64), false,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType", "SpecialApplyDocType", true,true, false, "",false,(UIFieldType)4,"0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a","aa348215-bed5-44e6-a81f-8f5629648e17");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_Code", typeof(String), false,"","System.String", "SpecialApplyDocType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5edf8ab4-af9e-4d6f-979d-7af5daa89495");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_Name", typeof(String), true,"","System.String", "SpecialApplyDocType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f689ed4b-d9c5-45aa-af37-883f67266647");
+			UIModelRuntimeFactory.AddNewUIField(this,"Status", typeof(Int32), true,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum", "Status", true,true, false, "",false,(UIFieldType)2,"8afc5e31-561f-4522-9d38-9deb778a04ba","5894fb42-f027-47d9-aa26-3a82c3d91655");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "SpecialApplyDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","3249c7d7-a33c-471a-bd77-c404c4a71faf");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "SpecialApplyDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","aa7ca7e5-7e7c-4834-a9c9-cdf4ef1f3d74");
 
 
 			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
@@ -763,171 +918,314 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		}
 		
 		
-		public  String AdvCode
+		public  Int64 Org
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldAdvCode] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldAdvCode);
-			}
-			set{
-				this[this.uiviewSpecialApplyBE.FieldAdvCode] = value;
-			}
-		}
-		
-		
-		public  Int64 ApplyDept
-		{
-			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldOrg] ;
 				//return (Int64)value;
-				return GetValue<Int64>(this.uiviewSpecialApplyBE.FieldApplyDept);
+				return GetValue<Int64>(this.uiviewSpecialApplyBE.FieldOrg);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldApplyDept] = value;
+				this[this.uiviewSpecialApplyBE.FieldOrg] = value;
 			}
 		}
 		
 		
-		public  String ApplyDept_Code
+		public  String Org_Code
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept_Code] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldOrg_Code] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplyDept_Code);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldOrg_Code);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldApplyDept_Code] = value;
+				this[this.uiviewSpecialApplyBE.FieldOrg_Code] = value;
 			}
 		}
 		
 		
-		public  String ApplyDept_Name
+		public  String Org_Name
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept_Name] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldOrg_Name] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplyDept_Name);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldOrg_Name);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldApplyDept_Name] = value;
+				this[this.uiviewSpecialApplyBE.FieldOrg_Name] = value;
 			}
 		}
 		
 		
-		public  String Applier
+		public  String DocNo
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldApplier] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldDocNo] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplier);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldDocNo);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldApplier] = value;
+				this[this.uiviewSpecialApplyBE.FieldDocNo] = value;
 			}
 		}
 		
 		
-		public  DateTime? ApplyDate
+		public  DateTime BusinessDate
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDate] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldBusinessDate] ;
+				//return (DateTime)value;
+				return GetValue<DateTime>(this.uiviewSpecialApplyBE.FieldBusinessDate);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldBusinessDate] = value;
+			}
+		}
+		
+		
+		public  Int32? Version
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldVersion] ;
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewSpecialApplyBE.FieldVersion);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldVersion] = value;
+			}
+		}
+		
+		
+		public  Int32? PrintAmount
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldPrintAmount] ;
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewSpecialApplyBE.FieldPrintAmount);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldPrintAmount] = value;
+			}
+		}
+		
+		
+		public  DateTime? LatestPrintedDate
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldLatestPrintedDate] ;
 				//return (DateTime?)value;
-				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldApplyDate);
+				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldLatestPrintedDate);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldApplyDate] = value;
+				this[this.uiviewSpecialApplyBE.FieldLatestPrintedDate] = value;
 			}
 		}
 		
 		
-		public  String Phone
+		public  Boolean? Cancel_Canceled
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldPhone] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldCancel_Canceled] ;
+				//return (Boolean?)value;
+				return GetValue<Boolean?>(this.uiviewSpecialApplyBE.FieldCancel_Canceled);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCancel_Canceled] = value;
+			}
+		}
+		
+		
+		public  DateTime? Cancel_CancelDate
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCancel_CancelDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldCancel_CancelDate);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCancel_CancelDate] = value;
+			}
+		}
+		
+		
+		public  String Cancel_CancelReason
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCancel_CancelReason] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldPhone);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCancel_CancelReason);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldPhone] = value;
+				this[this.uiviewSpecialApplyBE.FieldCancel_CancelReason] = value;
 			}
 		}
 		
 		
-		public  String QQ
+		public  String Cancel_CancelUser
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldQQ] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldCancel_CancelUser] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldQQ);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCancel_CancelUser);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldQQ] = value;
+				this[this.uiviewSpecialApplyBE.FieldCancel_CancelUser] = value;
 			}
 		}
 		
 		
-		public  String CustConterName
+		public  Guid WorkFlowID
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldCustConterName] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldWorkFlowID] ;
+				//return (Guid)value;
+				return GetValue<Guid>(this.uiviewSpecialApplyBE.FieldWorkFlowID);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldWorkFlowID] = value;
+			}
+		}
+		
+		
+		public  Guid StateMachineID
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldStateMachineID] ;
+				//return (Guid)value;
+				return GetValue<Guid>(this.uiviewSpecialApplyBE.FieldStateMachineID);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldStateMachineID] = value;
+			}
+		}
+		
+		
+		public  Int64? HoldReason
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldHoldReason] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewSpecialApplyBE.FieldHoldReason);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldHoldReason] = value;
+			}
+		}
+		
+		
+		public  String HoldReason_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldHoldReason_Code] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustConterName);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldHoldReason_Code);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldCustConterName] = value;
+				this[this.uiviewSpecialApplyBE.FieldHoldReason_Code] = value;
 			}
 		}
 		
 		
-		public  String CustName
+		public  String HoldReason_Name
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldCustName] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldHoldReason_Name] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustName);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldHoldReason_Name);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldCustName] = value;
+				this[this.uiviewSpecialApplyBE.FieldHoldReason_Name] = value;
 			}
 		}
 		
 		
-		public  String CustPhone
+		public  String HoldUser
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldCustPhone] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldHoldUser] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustPhone);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldHoldUser);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldCustPhone] = value;
+				this[this.uiviewSpecialApplyBE.FieldHoldUser] = value;
 			}
 		}
 		
 		
-		public  String CustAddress
+		public  DateTime? HoldDate
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldCustAddress] ;
+				//object value = this[this.uiviewSpecialApplyBE.FieldHoldDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldHoldDate);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldHoldDate] = value;
+			}
+		}
+		
+		
+		public  Int64? ReleaseReason
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldReleaseReason] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewSpecialApplyBE.FieldReleaseReason);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldReleaseReason] = value;
+			}
+		}
+		
+		
+		public  String ReleaseReason_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldReleaseReason_Code] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustAddress);
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldReleaseReason_Code);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldCustAddress] = value;
+				this[this.uiviewSpecialApplyBE.FieldReleaseReason_Code] = value;
 			}
 		}
 		
 		
-		public  Int32 SpecialDesignStyle
+		public  String ReleaseReason_Name
 		{
 			get{
-				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] ;
-				//return (Int32)value;
-				return GetValue<Int32>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle);
+				//object value = this[this.uiviewSpecialApplyBE.FieldReleaseReason_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldReleaseReason_Name);
 			}
 			set{
-				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] = value;
+				this[this.uiviewSpecialApplyBE.FieldReleaseReason_Name] = value;
+			}
+		}
+		
+		
+		public  String ReleaseUser
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldReleaseUser] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldReleaseUser);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldReleaseUser] = value;
+			}
+		}
+		
+		
+		public  DateTime? ReleaseDate
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldReleaseDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldReleaseDate);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldReleaseDate] = value;
 			}
 		}
 		
@@ -1996,6 +2294,266 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 				this[this.uiviewSpecialApplyBE.FieldDescFlexField_CombineName] = value;
 			}
 		}
+		
+		
+		public  Int64? FlowInstance
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldFlowInstance] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewSpecialApplyBE.FieldFlowInstance);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldFlowInstance] = value;
+			}
+		}
+		
+		
+		public  String AdvCode
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldAdvCode] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldAdvCode);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldAdvCode] = value;
+			}
+		}
+		
+		
+		public  Int64 ApplyDept
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept] ;
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewSpecialApplyBE.FieldApplyDept);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldApplyDept] = value;
+			}
+		}
+		
+		
+		public  String ApplyDept_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplyDept_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldApplyDept_Code] = value;
+			}
+		}
+		
+		
+		public  String ApplyDept_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDept_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplyDept_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldApplyDept_Name] = value;
+			}
+		}
+		
+		
+		public  String Applier
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldApplier] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldApplier);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldApplier] = value;
+			}
+		}
+		
+		
+		public  DateTime? ApplyDate
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldApplyDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewSpecialApplyBE.FieldApplyDate);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldApplyDate] = value;
+			}
+		}
+		
+		
+		public  String Phone
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldPhone] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldPhone);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldPhone] = value;
+			}
+		}
+		
+		
+		public  String QQ
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldQQ] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldQQ);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldQQ] = value;
+			}
+		}
+		
+		
+		public  String CustConterName
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCustConterName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustConterName);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCustConterName] = value;
+			}
+		}
+		
+		
+		public  String CustName
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCustName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustName);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCustName] = value;
+			}
+		}
+		
+		
+		public  String CustPhone
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCustPhone] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustPhone);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCustPhone] = value;
+			}
+		}
+		
+		
+		public  String CustAddress
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldCustAddress] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldCustAddress);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldCustAddress] = value;
+			}
+		}
+		
+		
+		public  Int32 SpecialDesignStyle
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] ;
+				//return (Int32)value;
+				return GetValue<Int32>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle] = value;
+			}
+		}
+		
+		
+		public  Int64 SpecialApplyDocType
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType] ;
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewSpecialApplyBE.FieldSpecialApplyDocType);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType] = value;
+			}
+		}
+		
+		
+		public  String SpecialApplyDocType_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Code] = value;
+			}
+		}
+		
+		
+		public  String SpecialApplyDocType_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_Name] = value;
+			}
+		}
+		
+		
+		public  Int32? Status
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldStatus] ;
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewSpecialApplyBE.FieldStatus);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldStatus] = value;
+			}
+		}
+		
+		
+		public  Int32 SpecialApplyDocType_ConfirmType
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ConfirmType] ;
+				//return (Int32)value;
+				return GetValue<Int32>(this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ConfirmType);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ConfirmType] = value;
+			}
+		}
+		
+		
+		public  Int32? SpecialApplyDocType_ApproveType
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ApproveType] ;
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ApproveType);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ApproveType] = value;
+			}
+		}
 		#endregion
 	}
 	
@@ -2004,7 +2562,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 	{
 		#region Constructor
 		public SpecialApplyBEDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
+			: base("DefaultFilter",view,@"UFIDA::U9::Cust::SeeBestAdvertisementBE::SpecialApplyBE::SpecialApplyBE.Org.ID=#Context.OrgID#",@"")
 		{
 			InitClass();
 		}
@@ -2081,6 +2639,14 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		public IUIField FieldDisplayProductType
 		{
 			get { return this.Fields["DisplayProductType"]; }
+		}
+		public IUIField FieldDisplayProductType_Code
+		{
+			get { return this.Fields["DisplayProductType_Code"]; }
+		}
+		public IUIField FieldDisplayProductType_Name
+		{
+			get { return this.Fields["DisplayProductType_Name"]; }
 		}
 		public IUIField FieldWidth
 		{
@@ -2434,127 +3000,113 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["DescFlexField_CombineName"]; }
 		}
-		public IUIField FieldDisplayProductType_Code
-		{
-			get { return this.Fields["DisplayProductType_Code"]; }
-		}
-		public IUIField FieldDisplayProductType_Name
-		{
-			get { return this.Fields["DisplayProductType_Name"]; }
-		}
 
 
-		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
-		public SpecialApplyBE_SpecialSizeBEDefaultFilterFilter DefaultFilter
-		{
-			get { return (SpecialApplyBE_SpecialSizeBEDefaultFilterFilter)this.CurrentFilter; }
-		}
 		#endregion
 
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","5d43dab0-d67e-42a6-980c-d8cbcf65fcab");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","c3fe70a2-c6de-4139-bf0a-db6c313c3763");
-			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), true,"","System.String", "CreatedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0ecb6e1b-3b7f-478b-91ad-7d49f04bc669");
-			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.DateTime", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","8f3f8778-f47d-4938-b8f8-26ba8101444b");
-			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","941b9dd8-4a95-4908-b562-728a6f5c9f86");
-			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","655a9e25-fa07-4b51-bc62-97917a0a4e1f");
-			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyBE", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE", "SpecialApplyBE", true,true, false, "",false,(UIFieldType)4,"363e7e53-0181-4a45-95b9-2980fa1a68cf","d38569a7-3f98-41c2-a133-204dfaef8f98");
-			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType", typeof(Int64), false,"","UFIDA.U9.Base.FlexField.ValueSet.DefineValue", "DisplayProductType", true,true, false, "",false,(UIFieldType)4,"f52b36dc-e642-4513-a0e6-8bddd4f9e7fc","741bc932-1bb4-477a-8759-2c7e5d175c13");
-			UIModelRuntimeFactory.AddNewUIField(this,"Width", typeof(Decimal), true,"0","System.Decimal", "Width", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","3ce03126-0912-4492-9fbf-0701d4ba5f31");
-			UIModelRuntimeFactory.AddNewUIField(this,"Hight", typeof(Decimal), true,"0","System.Decimal", "Hight", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","14fe6f02-0761-4213-a3f1-0a40a576bfcf");
-			UIModelRuntimeFactory.AddNewUIField(this,"Thick", typeof(Decimal), true,"0","System.Decimal", "Thick", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","918ec36d-4d3e-472c-8c0d-169b1ebf1970");
-			UIModelRuntimeFactory.AddNewUIField(this,"Qty", typeof(Decimal), true,"0","System.Decimal", "Qty", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","5019383f-1764-4204-8ce1-dd62722a127a");
-			UIModelRuntimeFactory.AddNewUIField(this,"Area", typeof(Decimal), true,"0","System.Decimal", "Area", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","3d84e584-9b4f-4ba3-913a-eab83e8666a7");
-			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), true,"","System.String", "Memo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","631cfbc8-e966-4e11-bd48-3aa8fdf20b7d");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d82c5704-da36-453e-875b-8ce9a5a72193");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cfbdeb60-e4e1-48b3-ba3c-b8a97a35c5e5");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d830e6f0-f9e2-4ba1-a155-c6880c014919");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a2bd8a36-16ed-45fd-b292-51423669a2ef");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","58502d96-dcb4-40d1-b913-ad846c52562d");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2a9a061b-d6a9-44d5-b126-c6d5f230687e");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c15fddf3-41ab-4744-8cd3-2920dbf86fb8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","86659199-40dc-4cfa-a008-d2a76da88e47");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","04eac0d4-28cd-4e8e-a48c-28c59c5036a8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","86144089-1fff-4682-9843-9f89c8344c34");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6d03c7c0-aab9-48e1-ab9e-ab5a308a583a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2379acc2-96d3-4796-beb2-986dac1ae6d5");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a2910279-7b41-4cfd-a156-b9d68369d64f");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","16e55285-0126-4071-b529-5ec061842742");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","18f3746c-653a-4f07-931f-21f80c8f18d8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b4850cb7-b366-45e0-854b-1050d91a30f2");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","83b8281a-6623-4995-b42d-d119a13d98b4");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d73e85c9-4ba6-4404-9f5b-9bdd03328cf0");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ab52748e-772d-40f3-a6e8-b016e7628c2b");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ca1f2421-2b07-403e-bc6a-c7a771506b0a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fd9a6f90-f18c-4336-bb67-2c2105ce47ee");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a9d7a7fd-7fdb-4f94-8b1f-81cea1f79eca");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","52048312-be07-45d1-9401-77718d2db012");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","09ccb10b-ff8f-4e8f-9cbe-c396c070dacd");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e57464e8-2bac-4ba0-9703-dc0bb648ed5a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","404d0dab-5b2c-4127-8d41-38167e9d0203");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7fa84aa9-0588-45a5-bf47-763023efa8d2");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","de06f22e-951f-4102-85a2-9cc0b6e347b9");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","800313e1-2d76-4afc-9c44-c17e08134312");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","85b2e139-4c9c-4160-bd89-c1823d0c3f57");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg31", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg31", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2d1b3e74-b570-4efc-952d-9c0c7caf48af");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg32", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg32", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ad7d3af8-d71d-46fb-956b-9c66d7d27b09");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg33", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg33", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","34783b2e-e0be-4228-a119-158d6c222675");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg34", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg34", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","16a0f447-a618-46f4-aa0f-7c16642c8fcc");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg35", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg35", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bfdf299c-34df-4366-bdd0-e791cd31fb18");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg36", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg36", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b9555fac-6bd1-4230-825b-4fa33c22d226");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg37", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg37", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","58051d13-53cd-40dd-8b72-a37c0d4eb375");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg38", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg38", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","baad91b6-a066-4cc1-a79f-49a341880582");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg39", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg39", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7a3acf1b-0889-4e5d-9fb3-8e642029bd25");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg40", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg40", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ae783d61-82ed-429c-9e25-01a6bfab47c3");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg41", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg41", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","61a64af7-d4fa-4bb8-851f-8135647ed8dd");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg42", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg42", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","91905edf-43ff-4c03-9d2d-75824e17e797");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg43", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg43", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f6ed923b-76f4-42d0-b924-706f2db2a176");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg44", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg44", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","44283133-443c-4965-b0f2-2d2cbf247d51");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg45", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg45", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e4a47527-1da2-4970-ae25-d6024c1f85be");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg46", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg46", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3c466e71-3d16-4a8b-ac29-05c1cc9194de");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg47", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg47", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d0b81aeb-6cb7-4303-80d3-f6799f2bcda0");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg48", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg48", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e060dc6e-f236-4453-9ca8-40b7fa89315a");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg49", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg49", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4632cf97-c3f5-4621-9603-b1169977ae54");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg50", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg50", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ce5686db-0bdc-44f7-8318-4851e9967318");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_ContextValue", typeof(String), true,"","System.String", "DescFlexField.ContextValue", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3b9862ba-9248-4530-a2bd-9f1e96c0e218");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","08821fb3-167b-4d5d-9516-2580344eb787");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","165441c9-9461-49d3-9315-f398262c8714");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a2609835-8c5a-4809-a3a8-cb816e04a458");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0bd7cbeb-4d50-4c0e-8cd6-dbcbec3b80fb");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","61513d9d-23a3-434e-87a8-9bcd3de42cee");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1343e81c-858c-4ddb-b70e-c65742b1bd9c");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cf74fbe7-8e65-4e87-a73a-2a1f57313d32");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9ea3111e-0c8d-47aa-8755-1df46ece0535");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ea07ba5f-9f89-4b6a-91f1-a625d0927557");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","960b269a-f884-4c80-8f91-36c64640e62c");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","172dfbad-450c-4607-9a48-cc31bf9eb0e8");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5526ecf2-c4d6-40c9-94bf-ce85a7763a15");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7ac75c72-ece4-4f54-abc3-806eeeb24eb0");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7e19ac2a-fb7e-49e5-8a09-04737a6fcdf9");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5a44b6d1-0cc3-4887-8e0c-b24045323573");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2f8a2dcd-677d-4ee4-9fbb-dfc14f9042cf");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4f9e5c75-f738-4139-bd2b-9e7eb65f2d37");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e4125a00-a83c-4460-82b6-fd1cde28f911");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d4a183b1-57ea-46ea-8d80-97a9536992b1");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b22325a8-8024-4653-a780-2d77ba04fd98");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cc7ab943-cac7-4c55-8019-13f06150c698");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9a718854-4881-4bff-b820-92162746b591");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a381fc65-849b-4828-a740-e130dec9a762");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d44ced8a-dc75-49f9-981b-a7ecba4baea5");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0b9b9b73-656f-4f89-a1ab-2d78b5cb58c7");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","24692ae4-f7c2-428f-9dd9-cdc49d08dc33");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2cc6011e-9d27-4b9e-be11-80904a29bdcb");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","21cd05f3-dd23-4937-b3d8-bc861f007fa4");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8223829d-49f4-4600-b13c-36db630c13b6");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a6efef93-4fdd-410d-b238-7dda09c4d8de");
-			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5e4c2ed3-831c-4751-8083-f90face3be2b");
-			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Code", typeof(String), false,"","System.String", "DisplayProductType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d8bf7bb9-ec94-42c3-96a8-e68a164ce824");
-			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Name", typeof(String), true,"","System.String", "DisplayProductType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","79c15cec-c53c-4254-ac25-a0e43099255e");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","97cd5994-f893-41ca-aece-c7637a8d16d7");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), true,"","System.DateTime", "CreatedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","ab9ced53-e4db-4c2a-80b2-bee1b9290479");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), true,"","System.String", "CreatedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fd7ed919-1060-4db2-8cbe-3625f920a79d");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), true,"","System.DateTime", "ModifiedOn", true,true, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","8173e4c3-130b-4f39-978f-0bf79ece2954");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a99242c1-a2fc-4dbb-941c-4676a6bc22ac");
+			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","f07ccda6-5b4c-4d02-8310-328b563cbf58");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyBE", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE", "SpecialApplyBE", true,true, false, "",false,(UIFieldType)4,"363e7e53-0181-4a45-95b9-2980fa1a68cf","923bce92-45da-4593-833f-9d5509a8d938");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType", typeof(Int64), false,"","UFIDA.U9.Base.FlexField.ValueSet.DefineValue", "DisplayProductType", true,true, false, "",false,(UIFieldType)4,"f52b36dc-e642-4513-a0e6-8bddd4f9e7fc","206a39b2-c85c-4ca0-aa5f-fa2763e25ca4");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Code", typeof(String), false,"","System.String", "DisplayProductType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","483bb13c-6556-423f-b083-d39d0a1fbd0d");
+			UIModelRuntimeFactory.AddNewUIField(this,"DisplayProductType_Name", typeof(String), true,"","System.String", "DisplayProductType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f6fb85e6-ff76-4cf1-b75c-b9ee1e85e45f");
+			UIModelRuntimeFactory.AddNewUIField(this,"Width", typeof(Decimal), true,"0","System.Decimal", "Width", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","6c76eb1d-8586-46b8-b5d7-c0ca46a812c5");
+			UIModelRuntimeFactory.AddNewUIField(this,"Hight", typeof(Decimal), true,"0","System.Decimal", "Hight", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","e5c9c41c-38e4-4f92-bccd-4a64256b868b");
+			UIModelRuntimeFactory.AddNewUIField(this,"Thick", typeof(Decimal), true,"0","System.Decimal", "Thick", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","24d90726-c97e-49c1-9367-8fab9037e7dd");
+			UIModelRuntimeFactory.AddNewUIField(this,"Qty", typeof(Decimal), true,"0","System.Decimal", "Qty", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","5a2668f2-f610-4fc4-9ede-84f8a34fece2");
+			UIModelRuntimeFactory.AddNewUIField(this,"Area", typeof(Decimal), true,"0","System.Decimal", "Area", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","e35814aa-875f-45de-9e1b-7fa3f076b0e4");
+			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), true,"","System.String", "Memo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","65fc421e-9fb2-48e4-a776-61ff59badfc8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f7dc772f-47cd-415e-b4e6-43a8977b90c1");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","af83a2b1-55cc-4139-86b5-2163fc4d1e46");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4f6b6e94-5690-4ff5-bb3f-7d4f4f9c5759");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","06951b16-957a-4ef5-afd7-54acfb2d9e1f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3d06ba88-d28a-420f-939f-9bd9a3af3762");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f583c329-d108-4a40-8d1e-d0bbc1fdd023");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8b428cec-c956-4b99-bd36-327fbc698944");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","98755bd4-2414-4274-8076-a665212b1c2f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d02d4f0b-ad28-4ccf-a226-bb1a80c1d20a");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","243bf367-658e-4185-a861-ad0d736fbf46");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c3be32db-b3da-425c-ad2a-f7c9abe0b0dc");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2ab37564-53ba-49e3-9dee-32ed672e5dda");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8ec5a819-aa7e-470c-941c-f06c7a596075");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","349d5a82-7ea6-4180-9fba-48aa95691672");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","88d157b3-4591-4a90-957c-5f220bd2bf4d");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","dc85754a-0aed-4f46-85ae-6cec9ea79c1d");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d3080501-7ced-436e-a359-13858ddc7f4d");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8f495400-0bdf-4c6f-a6f0-9a6ede99c772");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9180402f-07dd-4d41-84ea-170024871561");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","043a79f9-6a4b-4de4-a1bf-776de21ff812");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","16062636-e73f-4e5d-ad47-d0567a9ef107");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a770c675-56d6-4def-b750-3a168075b607");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c657c0cf-e011-4bff-aebe-0c0c2a935ad6");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d043afde-750d-4e3c-bc3c-f4c4bdb57c8b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6da21e31-ccad-4627-8117-c28a701d828c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f46e3716-85a7-4db0-93c8-b7a6025ef4e1");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0e318e75-1eae-42a2-ab03-6778521c269c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2fd81659-bdf1-4ff0-9f39-4d17dd8a27f9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","73403efe-242d-490b-a4f3-e45883680a99");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","aa3b0bdf-976f-4d36-b2c2-00780b0f9158");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg31", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg31", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3acd9708-205a-4981-b6c1-d2a9d832dc3b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg32", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg32", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9adcb191-6234-484c-bf42-552544d0c67b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg33", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg33", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","40e201b2-c2ba-487f-9e72-0fbaa8a44403");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg34", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg34", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d9dbe8c9-292f-4971-bc4a-a9a813ce9788");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg35", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg35", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","62d4f4ae-b493-4f91-9f60-6a9fc991d029");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg36", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg36", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c20e7700-441f-42d7-b398-0b161dbbf8b3");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg37", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg37", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8f2d9ea0-22d2-4069-ab95-bc0e18bcbdc2");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg38", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg38", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ee66cccf-3af9-440e-9496-ad1aa5a2d782");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg39", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg39", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3ae940ff-43ac-4800-9b2e-ffdbdce4faf4");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg40", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg40", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c75cc3a9-b030-4f5f-a35d-19c7e7b999bb");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg41", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg41", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c8f27781-f1c1-40ac-bf9e-611cb33bab2b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg42", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg42", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","732554b2-bb64-494c-b585-7e4b9fbb26c5");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg43", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg43", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","748cdc8b-7e26-4a80-a6d8-5e8c52a204e1");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg44", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg44", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f2a74d29-7b9b-4a15-911e-304eb532adc3");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg45", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg45", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2d0294b9-f1d5-4f3c-9c09-d568dcd5ab1c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg46", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg46", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","149714e3-a4e4-403c-97d3-80592d2cf5c0");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg47", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg47", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c524301a-930f-400f-a32d-2c4e646bf45b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg48", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg48", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a5b0e1ab-8b17-4195-9d9a-26f772fc73ab");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg49", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg49", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0b8c8834-b660-430b-9f6b-d47908ec15ea");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PubDescSeg50", typeof(String), true,"","System.String", "DescFlexField.PubDescSeg50", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d5bcc6a1-fcfe-4fac-93c3-b81e7be7b106");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_ContextValue", typeof(String), true,"","System.String", "DescFlexField.ContextValue", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","036c951f-7b05-4070-af57-35b816a7e004");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg1", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg1", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6254aa1b-4d5f-4704-b3e6-d3de78b24087");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg2", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg2", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","51430500-5e97-422b-92f5-6bd2dfe16949");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg3", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg3", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","70908ef4-37d4-411f-a776-bf3f1fa415db");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg4", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg4", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9e88e663-04e9-4e5b-8414-73968dc771d9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg5", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg5", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","21cea46e-ca12-4780-b34f-d731eb9f3cb8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg6", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg6", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ea521506-1b5f-4573-9eb2-09fac42ed1e2");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg7", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg7", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8b27f529-1be4-4e5a-83e2-1bd09281c73c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg8", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg8", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","182fb0be-cdd1-4856-8829-9af059c9d084");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg9", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg9", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d97d59b6-90f7-4de7-87b0-ad0d69d7b603");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg10", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg10", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e321c95e-1a62-4807-8236-e0cc1883e616");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d8619259-54e5-4e52-a776-c07ad3b3327b");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg12", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg12", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","85c99974-8dae-4ebb-9657-eed5e6cb1084");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg13", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg13", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5e10221b-cd96-48b9-826e-686d72134858");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a641c47a-a6a5-469f-8538-e7d83b3b6287");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg15", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg15", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3bb44e75-6f07-4c7c-8c90-10fc1f9f708f");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg16", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg16", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","aef1de90-0cda-45f8-9ff2-7e4d588e7817");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg17", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg17", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","243c9662-3dba-4e49-bddd-0eff8cb081f8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg18", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg18", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","714e06b5-a2a2-4f4e-be78-27f46a4f23f4");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg19", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg19", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","cf9c3790-2ccf-4aef-a44d-c5cc89e9fcf9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg20", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg20", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","27960fb8-8e0c-4168-a5e1-d1eb7aba62c9");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg21", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg21", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","48495ee2-3181-4ae1-a999-caff6b0d17ca");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg22", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg22", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","29df99ff-e5fb-44f1-a8df-abdbfa51aa3c");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg23", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg23", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d6ff9d76-105d-4853-a6e9-351e2db2efd8");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg24", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg24", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2593e56e-81df-4444-bb73-4ba8948d8a34");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg25", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg25", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","54d6f9b8-c74b-49d4-9c25-62581c394985");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg26", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg26", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a379a3b9-cab1-414b-a7e8-afeaa4c6c839");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg27", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg27", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6bf99d68-d6ba-4383-9e50-88b8095068f0");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg28", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg28", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e3f2e498-865c-44c7-8d5c-dbbd8b63e157");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fb1a3a8c-36c6-4ae2-b4a7-61048c0adf0e");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a69444fa-97f5-46d8-984b-fa5e276598bb");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","03f78fcd-c338-4a25-bb8e-b381ea25daa0");
 
 
-			this.CurrentFilter = new SpecialApplyBE_SpecialSizeBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -2703,6 +3255,32 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			}
 			set{
 				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType] = value;
+			}
+		}
+		
+		
+		public  String DisplayProductType_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] = value;
+			}
+		}
+		
+		
+		public  String DisplayProductType_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] = value;
 			}
 		}
 		
@@ -3849,64 +4427,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDescFlexField_CombineName] = value;
 			}
 		}
-		
-		
-		public  String DisplayProductType_Code
-		{
-			get{
-				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code);
-			}
-			set{
-				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Code] = value;
-			}
-		}
-		
-		
-		public  String DisplayProductType_Name
-		{
-			get{
-				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name);
-			}
-			set{
-				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDisplayProductType_Name] = value;
-			}
-		}
 		#endregion
 	}
 	
-	[Serializable]
-	public class SpecialApplyBE_SpecialSizeBEDefaultFilterFilter : UIFilter
-	{
-		#region Constructor
-		public SpecialApplyBE_SpecialSizeBEDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
-		{
-			InitClass();
-		}
-		//for Clone Constructor
-		private SpecialApplyBE_SpecialSizeBEDefaultFilterFilter()
-			: base("DefaultFilter",null,"","")
-		{}
-		protected override IUIFilter CreateCloneInstance()
-		{
-			return new SpecialApplyBE_SpecialSizeBEDefaultFilterFilter();
-		}
-		#endregion
-
-		#region property
-		#endregion
-		
-		#region function
-		private void InitClass()
-		{
-		}
-		#endregion
-
-	}
 
 
 
