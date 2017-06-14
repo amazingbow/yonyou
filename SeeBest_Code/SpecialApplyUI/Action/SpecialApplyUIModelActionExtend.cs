@@ -13,6 +13,7 @@ using System.Text;
 using UFSoft.UBF.Util.Log;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
+using UFIDA.U9.Cust.SeeBestAdvertisementBP.SpecialApplyBP.Proxy;
 
 
 
@@ -69,20 +70,43 @@ this.CopyClick_DefaultImpl(sender,e);
         } 
 		private void SubmitClick_Extend(object sender, UIActionEventArgs e)
 		{
-	
-			
+
+            UpDocStatus();
 
 			//调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
 this.SubmitClick_DefaultImpl(sender,e);								
         } 
 		private void ApproveClick_Extend(object sender, UIActionEventArgs e)
 		{
-	
-			
+
+            if (this.CurrentModel.SpecialApplyBE.FocusedRecord.SpecialApplyDocType_ApproveType.Value == Convert.ToInt32(UFIDA.U9.Base.Doc.ApproveTypeEnumData.WorkFlow))
+            {
+                //UFIDA.U9.UI.PDHelper.PDPopWebPart.ApproveFlow_ApproveBatchUIWebPart(this);//工作流审批
+            }
+            else
+            {
+                UpDocStatus();
+            }
 
 			//调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
 this.ApproveClick_DefaultImpl(sender,e);								
-        } 
+        }
+
+        private void UpDocStatus()
+        {
+            if (this.CurrentModel.SpecialApplyBE.FocusedRecord != null)
+            {
+                UpdateSpecialApplyStatusProxy proxy = new UpdateSpecialApplyStatusProxy();
+                proxy.ID = this.CurrentModel.SpecialApplyBE.FocusedRecord.ID;
+                proxy.SysVersion = this.CurrentModel.SpecialApplyBE.FocusedRecord.SysVersion ?? 00;
+                bool retbool = proxy.Do();
+                if (retbool)
+                {
+                    this.NavigateAction.Refresh(null, false);
+                }
+            }
+        }
+
 		private void FindClick_Extend(object sender, UIActionEventArgs e)
 		{
 	
@@ -180,6 +204,14 @@ this.OnOk_DefaultImpl(sender,e);
 
 			//调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
 this.OnClose_DefaultImpl(sender,e);								
+        }
+        private void UndoApprove_Extend(object sender, UIActionEventArgs e)
+        {
+
+            UpDocStatus();
+
+            //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
+            this.UndoApprove_DefaultImpl(sender, e);
         } 
 		
 		#region UBF 内置两数据处理Action

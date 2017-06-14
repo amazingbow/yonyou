@@ -25,6 +25,7 @@ using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
 using UFSoft.UBF.UI.FormProcess;
 using UFSoft.UBF.Util.DataAccess;
+using UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDocTypeUIModel;
 
 
 
@@ -96,8 +97,42 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             {
                 this.Model.SpecialApplyBE.FocusedRecord.AdvCode = "";
                 this.Model.SpecialApplyBE.FocusedRecord.ApplyDate = System.DateTime.Now;
+                this.Model.SpecialApplyBE.FocusedRecord.DocNo = "";
+                this.Model.SpecialApplyBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+                this.Model.SpecialApplyBE.FocusedRecord.Status = 0;
             }
-		}	
+		}
+
+        //BtnSubmit_Click...
+        private void BtnSubmit_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+
+            BtnSubmit_Click_DefaultImpl(sender, e);
+        }
+
+        //BtnApprove_Click...
+        private void BtnApprove_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+            if (this.Model.SpecialApplyBE.FocusedRecord.SpecialApplyDocType_ApproveType.Value == Convert.ToInt32(UFIDA.U9.Base.Doc.ApproveTypeEnumData.WorkFlow))
+            {
+                UFIDA.U9.UI.PDHelper.PDPopWebPart.ApproveFlow_ApproveBatchUIWebPart(this);//工作流审批
+            }
+
+            BtnApprove_Click_DefaultImpl(sender, e);
+        }
+
+        //BtnUndoApprove_Click...
+        private void BtnUndoApprove_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+
+            BtnUndoApprove_Click_DefaultImpl(sender, e);
+        }	
 		 
 				//BtnFind_Click...
 		private void BtnFind_Click_Extend(object sender, EventArgs  e)
@@ -220,6 +255,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         #region 自己扩展 Extended Event handler 
 		public void AfterOnLoad()
 		{
+            string strIsAFKey = UFIDA.U9.UI.PDHelper.FormAuthorityHelper.GetIsApproveDocKey;
+            this.CurrentState[strIsAFKey] = new SetIsApprovalDoc(SetIsApprovalDoc);
+
             //弹性域设置
             FlexFieldHelper.SetDescFlexField(new DescFlexFieldParameter[] { new DescFlexFieldParameter(this.FlexFieldPicker0, this.Model.SpecialApplyBE) });
             FlexFieldHelper.SetDescFlexField(new DescFlexFieldParameter[] { new DescFlexFieldParameter(this.DataGrid14, this.DataGrid14.Columns.Count - 1, "DescFlexField") });
@@ -240,6 +278,18 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             this.AssignDefaultValues();
 
 		}
+
+        internal static bool SetIsApprovalDoc(IUIModel model)
+        {
+            bool isAF = false;
+            SpecialApplyUIModelModel curModel = model as SpecialApplyUIModelModel;
+            if (curModel != null && curModel.SpecialApplyBE.FocusedRecord != null)
+            {
+                SpecialApplyBERecord record = curModel.SpecialApplyBE.FocusedRecord;
+                isAF = record.SpecialApplyDocType_ConfirmType == Convert.ToInt32(UFIDA.U9.Base.Doc.ConfirmTypeEnumData.ApproveFlow);
+            }
+            return isAF;
+        }
 
         //默认值
         private void AssignDefaultValues()
@@ -275,6 +325,19 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                         }
                     }
                 }
+
+                //业务日期赋默认值
+                if (this.Model.SpecialApplyBE.FocusedRecord.BusinessDate == null || this.Model.SpecialApplyBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
+                {
+                    this.Model.SpecialApplyBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+                }
+
+                //单号赋默认值
+                if (string.IsNullOrEmpty(this.Model.SpecialApplyBE.FocusedRecord.DocNo))
+                {
+                    this.Model.SpecialApplyBE.FocusedRecord.DocNo = System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                }
+
             }
         }
 
@@ -293,18 +356,38 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         
 		public void BeforeUIModelBinding()
 		{
-            this.BtnFlow.Visible = false;
+            //this.BtnFlow.Visible = false;
             this.BtnFirstPage.Visible = false;
             this.BtnPrevPage.Visible = false;
             this.BtnNextPage.Visible = false;
             this.BtnLastPage.Visible = false;
             this.ApplyDate131.Enabled = false;
+            this.Status101.Enabled = false;
 		}
 
 		public void AfterUIModelBinding()
 		{
             if (this.Model.SpecialApplyBE.FocusedRecord != null)
             {
+                this.BtnSubmit.Enabled = true;
+                this.BtnApprove.Enabled = true;
+                this.BtnUndoApprove.Enabled = true;
+                switch (this.Model.SpecialApplyBE.FocusedRecord.Status.Value)
+                {
+                    case 0:
+                        this.BtnApprove.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 1:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 2:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnApprove.Enabled = false;
+                        break;
+                }
+
                 if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
                 {
                     this.BtnDelete.Enabled = true;
