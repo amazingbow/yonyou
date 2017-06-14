@@ -15,6 +15,7 @@
     using UFIDA.U9.CBO.SCM.Warehouse;
     using UFIDA.U9.Complete.RCVRpt;
     using UFIDA.U9.Complete.RcvRptBP.Proxy;
+    using UFIDA.U9.ISV.MO.Proxy;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Util.Context;
     using UFSoft.UBF.Util.Log;
@@ -78,7 +79,14 @@
                 ApproveRcvRptProxy rcvRptProxy = new ApproveRcvRptProxy();
                 rcvRptProxy.IsAutoApproved = true;
                 rcvRptProxy.RcvRptDocKey = result.RcvRptKey;
-                rcvRptProxy.Do();
+                var returnData = rcvRptProxy.Do();
+                OperationRcvRptDocProxy rcvRptProxyB = new OperationRcvRptDocProxy();
+                // ApproveRcvRptProxy rcvRptProxy = new ApproveRcvRptProxy();
+                //rcvRptProxy.IsAutoApproved = true;
+                //rcvRptProxy.RcvRptDocKey = result.RcvRptKey;
+                //rcvRptProxyB.
+                rcvRptProxyB.Do();
+                //returnData.RcvRptKey
             }
             catch (Exception ex)
             {
@@ -106,7 +114,7 @@
                 CreatedOn = DateTime.Now,
                 Direction = 0,//收发类型：0 入库，1 出库
                 DocDate = DateTime.Now,
-                //DocState=1
+                DocState=1,
                 DocNo = invStock.BillNO,
                 //FlowInstance
                 //HoldDate
@@ -116,9 +124,9 @@
                 //RcvPerson=invStock.
                 Remark = "导入：" + invStock.BillNO,
             };
-         
+
             var type = RcvRptDocType.Finder.Find("Code='W01'");
-            if (type != null )
+            if (type != null)
             {
                 rcvRptProxy.RcvRpt.RcvRptDocType = type.ID;
             }
@@ -148,7 +156,7 @@
                 //Currency currency = Currency.FindByCode();
                 Organization org = Organization.Finder.FindByID(invStock.OrgID);
                 Warehouse wh = Warehouse.FindByCode(org, item.StockID.Code);
-               
+
                 Project project = Project.FindByCode(item.SCPO.Code);
                 RcvRptDocLineData line = new RcvRptDocLineData
                 {
@@ -178,7 +186,7 @@
                 {
                     line.Project = project.ID;
                 }
-            
+
             }
         }
     }
