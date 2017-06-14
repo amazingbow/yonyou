@@ -148,7 +148,7 @@
                 //Currency currency = Currency.FindByCode();
                 Organization org = Organization.Finder.FindByID(invStock.OrgID);
                 Warehouse wh = Warehouse.FindByCode(org, item.StockID.Code);
-                CostFieldObject costFieldObject = CostFieldObject.Finder.Find("Warehouse=" + wh.ID);
+               
                 Project project = Project.FindByCode(item.SCPO.Code);
                 RcvRptDocLineData line = new RcvRptDocLineData
                 {
@@ -168,15 +168,17 @@
                 if (wh != null)
                 {
                     line.Wh = wh.ID;
+                    CostFieldObject costFieldObject = CostFieldObject.Finder.Find("Warehouse=" + wh.ID);
+                    if (costFieldObject != null)
+                    {
+                        line.CostField = costFieldObject.ID;
+                    }
                 }
                 if (project != null)
                 {
                     line.Project = project.ID;
                 }
-                if (costFieldObject != null)
-                {
-                    line.CostField = costFieldObject.ID;
-                }
+            
             }
         }
     }
