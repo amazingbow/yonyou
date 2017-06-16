@@ -1326,6 +1326,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	//实体检验： 含自身检验器检验，内嵌属性类型的检验以及属性类型上的校验器的检验。
         private bool SelfEntityValidator()
         {
+		//L类档案的组织相关检查.
+		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
 
 

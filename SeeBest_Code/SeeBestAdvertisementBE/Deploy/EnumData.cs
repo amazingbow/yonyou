@@ -31,3 +31,83 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	}
 }
 
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
+{
+	/// <summary>
+	/// 枚举值: 广告申请单状态枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum AdvApplyStatusEnumData
+	{
+		/// <summary>
+		/// 开立
+		/// </summary>
+		OpenL = 0,
+		/// <summary>
+		/// 审核中
+		/// </summary>
+		Approving = 1,
+		/// <summary>
+		/// 审核
+		/// </summary>
+		Approved = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
+{
+	/// <summary>
+	/// 枚举值: 专柜设计风格 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum SpecialDesignStyleEnumData
+	{
+		/// <summary>
+		/// 蓝色专柜方案
+		/// </summary>
+		BlueSpecial = 1,
+		/// <summary>
+		/// 白色专柜方案
+		/// </summary>
+		WhiteSpecial = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
+{
+	/// <summary>
+	/// 枚举值: 专柜申请单状态枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum SpecialApplyStatusEnumData
+	{
+		/// <summary>
+		/// 开立
+		/// </summary>
+		OpenL = 0,
+		/// <summary>
+		/// 审核中
+		/// </summary>
+		Approving = 1,
+		/// <summary>
+		/// 审核
+		/// </summary>
+		Approved = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+

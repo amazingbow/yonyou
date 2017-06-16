@@ -13,19 +13,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	[DataContract(Name = "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
 	[Serializable]
     [KnownType("GetKnownTypes")]
-	public partial class AdvApplyBEData : UFSoft.UBF.Business.DataTransObjectBase
+	public partial class AdvApplyBEData : UFIDA.U9.Base.Doc.DocData
 	{
 
 	    public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
             
-                        
-                        
-                        
-                        
-                        
-                        
                                         knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Customer.CustomerData));
                         
                         
@@ -55,6 +49,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
                                         knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData>));
                         
                         
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -70,11 +66,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		{
 			//设置默认值
 	     			
-	     			
-	     			
-	     			
-	     			
-	     							SysVersion= 0; 			     			
 	     			
 	     			
 	     			
@@ -102,7 +93,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     							ApproveQty=0m; 
 	     			
 	     							IsClose=false; 
-	     							Flow4Bit= 0; 		
+	     							Flow4Bit= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -175,120 +166,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		#region Properties Outer Component
 		
-				/// <summary>
-		/// ID
-		/// 广告申请单.Key.ID
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int64 m_iD ;
-		public System.Int64 ID
-		{
-			get	
-			{	
-				return m_iD  ;
-			}
-			set	
-			{	
-				m_iD = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 创建时间
-		/// 广告申请单.Sys.创建时间
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.DateTime m_createdOn ;
-		public System.DateTime CreatedOn
-		{
-			get	
-			{	
-				return m_createdOn  ;
-			}
-			set	
-			{	
-				m_createdOn = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 创建人
-		/// 广告申请单.Sys.创建人
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_createdBy ;
-		public System.String CreatedBy
-		{
-			get	
-			{	
-				return m_createdBy  ;
-			}
-			set	
-			{	
-				m_createdBy = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 修改时间
-		/// 广告申请单.Sys.修改时间
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.DateTime m_modifiedOn ;
-		public System.DateTime ModifiedOn
-		{
-			get	
-			{	
-				return m_modifiedOn  ;
-			}
-			set	
-			{	
-				m_modifiedOn = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 修改人
-		/// 广告申请单.Sys.修改人
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_modifiedBy ;
-		public System.String ModifiedBy
-		{
-			get	
-			{	
-				return m_modifiedBy  ;
-			}
-			set	
-			{	
-				m_modifiedBy = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 事务版本
-		/// 广告申请单.Sys.事务版本
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.Int64 m_sysVersion ;
-		public System.Int64 SysVersion
-		{
-			get	
-			{	
-				return m_sysVersion  ;
-			}
-			set	
-			{	
-				m_sysVersion = value ;	
-			}
-		}
-		
-
 				/// <summary>
 		/// 编号
 		/// 广告申请单.Misc.编号
@@ -876,10 +753,48 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 当前状态
+		/// 广告申请单.StateMachine.当前状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_wFCurrentState ;
+		public System.Int32 WFCurrentState
+		{
+			get	
+			{	
+				return m_wFCurrentState  ;
+			}
+			set	
+			{	
+				m_wFCurrentState = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 之前状态
+		/// 广告申请单.StateMachine.之前状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_wFOriginalState ;
+		public System.Int32 WFOriginalState
+		{
+			get	
+			{	
+				return m_wFOriginalState  ;
+			}
+			set	
+			{	
+				m_wFOriginalState = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																				
+																																
 		#endregion 		
 	}	
 
