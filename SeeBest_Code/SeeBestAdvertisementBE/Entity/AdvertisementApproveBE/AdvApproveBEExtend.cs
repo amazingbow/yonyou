@@ -13,6 +13,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE {
 
 	public partial class AdvApproveBE{
 
+        public override Base.Doc.DocType DocType
+        {
+            get { return this.AdvApproveDocType; }
+        }
+
 		#region Custom Constructor
 
 		#endregion

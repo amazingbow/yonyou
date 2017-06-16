@@ -51,6 +51,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
                         
                         
                         
+                        
+                                        knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData));
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -93,7 +95,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     							ApproveQty=0m; 
 	     			
 	     							IsClose=false; 
-	     							Flow4Bit= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 		
+	     							Flow4Bit= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 			     			
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -158,6 +161,24 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			set	
 			{	
 				m_advAboutBE = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 单据状态
+		/// 广告申请单.Misc.单据状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_docStatus;
+		public System.Int32 DocStatus
+		{
+			get	
+			{	
+				return m_docStatus ;
+			}
+			set	
+			{	
+				m_docStatus = value ;
 			}
 		}		
 
@@ -791,10 +812,57 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 		
+
+		
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advApplyDocType_SKey ;
+		/// <summary>
+		/// 单据类型 序列化Key属性。（传递跨组织序列列字段）
+		/// 广告申请单.Misc.单据类型
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvApplyDocType_SKey
+		{
+			get 
+			{
+				return m_advApplyDocType_SKey ;					
+			}
+			set
+			{
+				 m_advApplyDocType_SKey = value ;	
+			}
+		}
+		/// <summary>
+		/// 单据类型
+		/// 广告申请单.Misc.单据类型
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public System.Int64 AdvApplyDocType
+		{
+			get	
+			{	
+				if (AdvApplyDocType_SKey == null)
+					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
+				else
+					return AdvApplyDocType_SKey.ID ;
+			}
+			set	
+			{	
+				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
+					AdvApplyDocType_SKey = null ;
+				else
+				{
+					if (AdvApplyDocType_SKey == null )
+						AdvApplyDocType_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType") ;
+					else
+						AdvApplyDocType_SKey.ID = value ;
+				}
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																
+																																		
 		#endregion 		
 	}	
 

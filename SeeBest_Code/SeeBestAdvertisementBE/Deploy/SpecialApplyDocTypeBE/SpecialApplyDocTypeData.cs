@@ -7,7 +7,7 @@
 namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 {
 	/// <summary>
-	/// 专柜申请单单据类型 缺省DTO 
+	/// 广告单据类型 缺省DTO 
 	/// 
 	/// </summary>
 	[DataContract(Name = "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData", Namespace = "http://www.UFIDA.org/EntityData",IsReference=true)]	
@@ -19,7 +19,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 	    public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-
+            
+            
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -33,7 +34,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 		private void initData()
 		{
 			//设置默认值
-
+	     							AdvDocEnum= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -60,14 +61,32 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 
 		
 		#region Properties Inner Component
-	
+	        					/// <summary>
+		/// 广告单据对象
+		/// 广告单据类型.Misc.广告单据对象
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_advDocEnum;
+		public System.Int32 AdvDocEnum
+		{
+			get	
+			{	
+				return m_advDocEnum ;
+			}
+			set	
+			{	
+				m_advDocEnum = value ;
+			}
+		}		
+
+			
 		#endregion	
 
 		#region Properties Outer Component
 				#endregion	
 
 		#region Multi_Fields
-
+	
 		#endregion 		
 	}	
 

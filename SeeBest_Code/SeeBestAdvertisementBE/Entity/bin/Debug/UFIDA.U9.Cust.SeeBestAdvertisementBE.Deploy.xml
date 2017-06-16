@@ -4,6 +4,381 @@
         <name>UFIDA.U9.Cust.SeeBestAdvertisementBE.Deploy</name>
     </assembly>
     <members>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEventData">
+            <summary>
+            EntityData: 提交事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEventData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData">
+            <summary>
+            枚举值: 版面类型 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.H">
+            <summary>
+            横版版面
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.V">
+            <summary>
+            竖版版面
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.S">
+            <summary>
+            方形版面
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnumData">
+            <summary>
+            枚举值: 广告申请单状态枚举 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnumData.OpenL">
+            <summary>
+            开立
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnumData.Approving">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnumData.Approved">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnumData">
+            <summary>
+            枚举值: 专柜设计风格 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnumData.BlueSpecial">
+            <summary>
+            蓝色专柜方案
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnumData.WhiteSpecial">
+            <summary>
+            白色专柜方案
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData">
+            <summary>
+            枚举值: 专柜申请单状态枚举 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.OpenL">
+            <summary>
+            开立
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.Approving">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.Approved">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData">
+            <summary>
+            枚举值: 广告单据对象枚举 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.SpecialDoc">
+            <summary>
+            专柜申请单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.AdvApplyDoc">
+            <summary>
+            广告申请单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.AdvApproveDoc">
+            <summary>
+            广告核销单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData">
+            <summary>
+            广告体现项目子表 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_advApplyBE">
+            <summary>
+            广告申请单
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_iD">
+            <summary>
+            ID
+            广告体现项目子表.Key.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_createdOn">
+            <summary>
+            创建时间
+            广告体现项目子表.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_createdBy">
+            <summary>
+            创建人
+            广告体现项目子表.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_modifiedOn">
+            <summary>
+            修改时间
+            广告体现项目子表.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_modifiedBy">
+            <summary>
+            修改人
+            广告体现项目子表.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_sysVersion">
+            <summary>
+            事务版本
+            广告体现项目子表.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_code">
+            <summary>
+            编码
+            广告体现项目子表.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_name">
+            <summary>
+            名称
+            广告体现项目子表.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_isSelected">
+            <summary>
+            是否被选用
+            广告体现项目子表.Misc.是否被选用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_description">
+            <summary>
+            简码描述
+            广告体现项目子表.Misc.简码描述
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.AdvApplyBE_SKey">
+            <summary>
+            广告申请单 序列化Key属性。（传递跨组织序列列字段）
+            广告体现项目子表.Misc.广告申请单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData">
+            <summary>
+            广告单据类型 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.m_advDocEnum">
+            <summary>
+            广告单据对象
+            广告单据类型.Misc.广告单据对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData">
+            <summary>
+            专柜尺寸 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_specialApplyBE">
+            <summary>
+            专柜申请单
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_iD">
+            <summary>
+            ID
+            专柜尺寸.Key.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_createdOn">
+            <summary>
+            创建时间
+            专柜尺寸.Sys.创建时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_createdBy">
+            <summary>
+            创建人
+            专柜尺寸.Sys.创建人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_modifiedOn">
+            <summary>
+            修改时间
+            专柜尺寸.Sys.修改时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_modifiedBy">
+            <summary>
+            修改人
+            专柜尺寸.Sys.修改人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_sysVersion">
+            <summary>
+            事务版本
+            专柜尺寸.Sys.事务版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_width">
+            <summary>
+            宽
+            专柜尺寸.Misc.宽
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_hight">
+            <summary>
+            高
+            专柜尺寸.Misc.高
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_thick">
+            <summary>
+            厚
+            专柜尺寸.Misc.厚
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_qty">
+            <summary>
+            数量
+            专柜尺寸.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_area">
+            <summary>
+            面积
+            专柜尺寸.Misc.面积
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_memo">
+            <summary>
+            备注
+            专柜尺寸.Misc.备注
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.m_descFlexField">
+            <summary>
+            实体扩展字段
+            专柜尺寸.Misc.实体扩展字段
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.SpecialApplyBE_SKey">
+            <summary>
+            专柜申请单 序列化Key属性。（传递跨组织序列列字段）
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.DisplayProductType_SKey">
+            <summary>
+            展示产品类型 序列化Key属性。（传递跨组织序列列字段）
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData.DisplayProductType">
+            <summary>
+            展示产品类型
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEventData">
+            <summary>
+            EntityData: 提交事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEventData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData">
             <summary>
             广告申请单 缺省DTO 
@@ -27,40 +402,10 @@
             广告申请单.Misc.广告体现项目子表
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_iD">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_docStatus">
             <summary>
-            ID
-            广告申请单.Key.ID
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_createdOn">
-            <summary>
-            创建时间
-            广告申请单.Sys.创建时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_createdBy">
-            <summary>
-            创建人
-            广告申请单.Sys.创建人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_modifiedOn">
-            <summary>
-            修改时间
-            广告申请单.Sys.修改时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_modifiedBy">
-            <summary>
-            修改人
-            广告申请单.Sys.修改人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_sysVersion">
-            <summary>
-            事务版本
-            广告申请单.Sys.事务版本
+            单据状态
+            广告申请单.Misc.单据状态
             </summary>
         </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advCode">
@@ -219,6 +564,18 @@
             广告申请单.Misc.编号的4位流水
             </summary>
         </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_wFCurrentState">
+            <summary>
+            当前状态
+            广告申请单.StateMachine.当前状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_wFOriginalState">
+            <summary>
+            之前状态
+            广告申请单.StateMachine.之前状态
+            </summary>
+        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.SysEntityType">
             <summary>
              实体类型. 
@@ -248,92 +605,164 @@
             广告申请单.Misc.广告载体
             </summary>
         </member>
-        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvApplyDocType_SKey">
             <summary>
-            广告体现项目子表 缺省DTO 
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            广告申请单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvApplyDocType">
+            <summary>
+            单据类型
+            广告申请单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData">
+            <summary>
+            费用分摊比例档案 缺省DTO 
             
             </summary>
         </member>
-        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.#ctor">
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.#ctor">
             <summary>
             Default Constructor
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_advApplyBE">
-            <summary>
-            广告申请单
-            广告体现项目子表.Misc.广告申请单
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_iD">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_iD">
             <summary>
             ID
-            广告体现项目子表.Key.ID
+            费用分摊比例档案.Key.ID
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_createdOn">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_createdOn">
             <summary>
             创建时间
-            广告体现项目子表.Sys.创建时间
+            费用分摊比例档案.Sys.创建时间
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_createdBy">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_createdBy">
             <summary>
             创建人
-            广告体现项目子表.Sys.创建人
+            费用分摊比例档案.Sys.创建人
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_modifiedOn">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_modifiedOn">
             <summary>
             修改时间
-            广告体现项目子表.Sys.修改时间
+            费用分摊比例档案.Sys.修改时间
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_modifiedBy">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_modifiedBy">
             <summary>
             修改人
-            广告体现项目子表.Sys.修改人
+            费用分摊比例档案.Sys.修改人
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_sysVersion">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_sysVersion">
             <summary>
             事务版本
-            广告体现项目子表.Sys.事务版本
+            费用分摊比例档案.Sys.事务版本
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_code">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_ratio">
             <summary>
-            编码
-            广告体现项目子表.Misc.编码
+            总部与事业部费用分摊比例
+            费用分摊比例档案.Misc.总部与事业部费用分摊比例
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_name">
-            <summary>
-            名称
-            广告体现项目子表.Misc.名称
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_isSelected">
-            <summary>
-            是否被选用
-            广告体现项目子表.Misc.是否被选用
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.m_description">
-            <summary>
-            简码描述
-            广告体现项目子表.Misc.简码描述
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.SysEntityType">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.SysEntityType">
             <summary>
              实体类型. 
              </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData.AdvApplyBE_SKey">
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource">
             <summary>
-            广告申请单 序列化Key属性。（传递跨组织序列列字段）
-            广告体现项目子表.Misc.广告申请单
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData">
+            <summary>
+            广告核销单 缺省DTO 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_advApproveLine">
+            <summary>
+            广告核销单行
+            广告核销单.Misc.广告核销单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_month">
+            <summary>
+            月份
+            广告核销单.Misc.月份
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApplyCust_SKey">
+            <summary>
+            办事处 序列化Key属性。（传递跨组织序列列字段）
+            广告核销单.Misc.办事处
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApplyCust">
+            <summary>
+            办事处
+            广告核销单.Misc.办事处
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApproveDocType_SKey">
+            <summary>
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            广告核销单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApproveDocType">
+            <summary>
+            单据类型
+            广告核销单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEventData">
+            <summary>
+            EntityData: 弃审事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEventData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEventData">
+            <summary>
+            EntityData: 弃审事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEventData.#ctor">
+            <summary>
+            Default Constructor
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData">
@@ -347,40 +776,22 @@
             Default Constructor
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_iD">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_specialDesignStyle">
             <summary>
-            ID
-            专柜申请单.Key.ID
+            专柜设计风格
+            专柜申请单.Misc.专柜设计风格
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_createdOn">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_specialSizeBE">
             <summary>
-            创建时间
-            专柜申请单.Sys.创建时间
+            专柜尺寸
+            专柜申请单.Misc.专柜尺寸
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_createdBy">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_status">
             <summary>
-            创建人
-            专柜申请单.Sys.创建人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_modifiedOn">
-            <summary>
-            修改时间
-            专柜申请单.Sys.修改时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_modifiedBy">
-            <summary>
-            修改人
-            专柜申请单.Sys.修改人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_sysVersion">
-            <summary>
-            事务版本
-            专柜申请单.Sys.事务版本
+            状态
+            专柜申请单.Misc.状态
             </summary>
         </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advCode">
@@ -437,88 +848,16 @@
             专柜申请单.Misc.客户地址
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_totalArea">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_wFCurrentState">
             <summary>
-            总面积
-            专柜申请单.Misc.总面积
+            当前状态
+            专柜申请单.StateMachine.当前状态
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_qty">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_wFOriginalState">
             <summary>
-            数量
-            专柜申请单.Misc.数量
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_bMWidth">
-            <summary>
-            版面-宽
-            专柜申请单.Misc.版面-宽
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_bMHight">
-            <summary>
-            版面-高
-            专柜申请单.Misc.版面-高
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_bMThick">
-            <summary>
-            版面-厚
-            专柜申请单.Misc.版面-厚
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_bMArea">
-            <summary>
-            版面-面积
-            专柜申请单.Misc.版面-面积
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_dZWidth">
-            <summary>
-            店招-宽
-            专柜申请单.Misc.店招-宽
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_dZThick">
-            <summary>
-            店招-厚
-            专柜申请单.Misc.店招-厚
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_dZArea">
-            <summary>
-            店招-面积
-            专柜申请单.Misc.店招-面积
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advDisplayType">
-            <summary>
-            版面类型
-            专柜申请单.Misc.版面类型
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advDispInfo1">
-            <summary>
-            版面要求1
-            专柜申请单.Misc.版面要求1
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advDispInfo2">
-            <summary>
-            版面要求2
-            专柜申请单.Misc.版面要求2
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advAbout">
-            <summary>
-            广告体现项目
-            专柜申请单.Misc.广告体现项目
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.m_advMemo">
-            <summary>
-            客户排版文字信息
-            专柜申请单.Misc.客户排版文字信息
+            之前状态
+            专柜申请单.StateMachine.之前状态
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.SysEntityType">
@@ -538,98 +877,16 @@
             专柜申请单.Misc.办事处
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.AdvItem_SKey">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.SpecialApplyDocType_SKey">
             <summary>
-            广告载体 序列化Key属性。（传递跨组织序列列字段）
-            专柜申请单.Misc.广告载体
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            专柜申请单.Misc.单据类型
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData.SpecialApplyDocType">
             <summary>
-            广告载体
-            专柜申请单.Misc.广告载体
-            </summary>
-        </member>
-        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData">
-            <summary>
-            广告核销单 缺省DTO 
-            
-            </summary>
-        </member>
-        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.#ctor">
-            <summary>
-            Default Constructor
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_advApproveLine">
-            <summary>
-            广告核销单行
-            广告核销单.Misc.广告核销单行
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_iD">
-            <summary>
-            ID
-            广告核销单.Key.ID
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_createdOn">
-            <summary>
-            创建时间
-            广告核销单.Sys.创建时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_createdBy">
-            <summary>
-            创建人
-            广告核销单.Sys.创建人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_modifiedOn">
-            <summary>
-            修改时间
-            广告核销单.Sys.修改时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_modifiedBy">
-            <summary>
-            修改人
-            广告核销单.Sys.修改人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_sysVersion">
-            <summary>
-            事务版本
-            广告核销单.Sys.事务版本
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_month">
-            <summary>
-            月份
-            广告核销单.Misc.月份
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_docNo">
-            <summary>
-            单号
-            广告核销单.Misc.单号
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.SysEntityType">
-            <summary>
-             实体类型. 
-             </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApplyCust_SKey">
-            <summary>
-            办事处 序列化Key属性。（传递跨组织序列列字段）
-            广告核销单.Misc.办事处
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApplyCust">
-            <summary>
-            办事处
-            广告核销单.Misc.办事处
+            单据类型
+            专柜申请单.Misc.单据类型
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData">
@@ -826,106 +1083,6 @@
             <summary>
             广告核销单 序列化Key属性。（传递跨组织序列列字段）
             广告核销单行.Misc.广告核销单
-            </summary>
-        </member>
-        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData">
-            <summary>
-            费用分摊比例档案 缺省DTO 
-            
-            </summary>
-        </member>
-        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.#ctor">
-            <summary>
-            Default Constructor
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_iD">
-            <summary>
-            ID
-            费用分摊比例档案.Key.ID
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_createdOn">
-            <summary>
-            创建时间
-            费用分摊比例档案.Sys.创建时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_createdBy">
-            <summary>
-            创建人
-            费用分摊比例档案.Sys.创建人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_modifiedOn">
-            <summary>
-            修改时间
-            费用分摊比例档案.Sys.修改时间
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_modifiedBy">
-            <summary>
-            修改人
-            费用分摊比例档案.Sys.修改人
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_sysVersion">
-            <summary>
-            事务版本
-            费用分摊比例档案.Sys.事务版本
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.m_ratio">
-            <summary>
-            总部与事业部费用分摊比例
-            费用分摊比例档案.Misc.总部与事业部费用分摊比例
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData.SysEntityType">
-            <summary>
-             实体类型. 
-             </summary>
-        </member>
-        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData">
-            <summary>
-            枚举值: 版面类型 
-            
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.H">
-            <summary>
-            横版版面
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.V">
-            <summary>
-            竖版版面
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.S">
-            <summary>
-            方形版面
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvDisplayTypeEnumData.Empty">
-            <summary>
-            空值(-1)
-            </summary>
-        </member>
-        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource">
-            <summary>
-              强类型资源类，用于查找本地化字符串等。
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource.ResourceManager">
-            <summary>
-              返回此类使用的缓存 ResourceManager 实例。
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.Resource.Culture">
-            <summary>
-              为使用此强类型资源类的所有资源查找
-              重写当前线程的 CurrentUICulture 属性。
             </summary>
         </member>
     </members>

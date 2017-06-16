@@ -7,7 +7,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 {
 	
 	/// <summary>
-	/// 实体: 专柜申请单单据类型
+	/// 实体: 广告单据类型
 	/// 
 	/// </summary>
 	[Serializable]	
@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 		/// <returns>Instance</returns>
 		public  static SpecialApplyDocType Create() {
 			SpecialApplyDocType entity = (SpecialApplyDocType)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-			 
+						 
 			return entity;
 		}
 
@@ -389,7 +389,27 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 
 
 			#region member					
-	
+			
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 广告单据对象 (该属性不可为空,但有默认值)
+			/// 广告单据类型.Misc.广告单据对象
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum AdvDocEnum
+			{
+				get
+				{
+
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.GetFromValue(base.GetValue("AdvDocEnum"));
+					return value;
+				}
+			}
+		
+
+
+
+		
 
 			#endregion
 
@@ -412,6 +432,34 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 
 
 		#region member					
+		
+			/// <summary>
+		/// 广告单据对象 (该属性不可为空,但有默认值)
+		/// 广告单据类型.Misc.广告单据对象
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum AdvDocEnum
+		{
+			get
+			{
+
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.GetFromValue(base.GetValue("AdvDocEnum"));
+				return value;
+			}
+				set
+			{
+				
+				if (value == null)
+					base.SetValue("AdvDocEnum",UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Empty.Value);
+				else
+					base.SetValue("AdvDocEnum",value.Value);
+					 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -436,6 +484,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 		#endregion 		
 
 		#region ModelResource,这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource()内部类的方式取资源
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDocEnum")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvDocEnum　{ get { return EntityRes.GetResource("AdvDocEnum");　}　}
 		#endregion 
 
 
@@ -452,14 +505,19 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 			/// Entity　的全名. 
 			/// </summary>
 			public static string BE_FullName { get { return "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType";　}　}
-
+		
+			/// <summary>
+			/// 属性: 广告单据对象 的名称
+			/// </summary>
+			public static string AdvDocEnum　{ get { return "AdvDocEnum";　}　}
+		
 			/// <summary>
 			/// 获取显示名称资源方法
 			/// </summary>
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-
+		
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -616,6 +674,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 			this.exdMultiLangAttrs.Add("MasterSite","MasterSite");
 			this.exdMultiLangAttrs.Add("ApproveType","ApproveType");
 			this.exdMultiLangAttrs.Add("IsApprovingCanModify","IsApprovingCanModify");
+			this.exdMultiLangAttrs.Add("AdvDocEnum","AdvDocEnum");
         }
 	#endregion 
 
@@ -632,7 +691,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 			switch(propstr)
 			{
 			
-
+			
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -698,6 +757,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 
 			#region 组件内属性
 	
+					this.SetTypeValue("AdvDocEnum",data.AdvDocEnum);
+	     
+
 			#endregion 
 			this.NeedPersistable = m_isNeedPersistable ;
 			dict[data] = this;
@@ -728,6 +790,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
 	
+			{
+				object obj =this.GetValue("AdvDocEnum");
+				if (obj != null)
+					data.AdvDocEnum=System.Int32.Parse(obj.ToString());
+			}
+	
 
 			#endregion 
 			return data ;
@@ -744,6 +812,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
         private bool SelfEntityValidator()
         {
         
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -752,6 +821,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
 		{
 			base.SelfNullableVlidator();
 		
+			if (Convert.ToInt32(base.GetValue("AdvDocEnum")) == UFSoft.UBF.PL.Tool.Constant.Enum_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvDocEnum_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType","AdvDocEnum","6ca32be8-c557-4738-b926-41ad59997dcc");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvDocEnum_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvDocEnum_Exception);
+			}
+
 			
 		}
 			    

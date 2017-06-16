@@ -20,6 +20,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
     public partial class AdvApplyBE
     {
+        public override Base.Doc.DocType DocType
+        {
+            get { return this.AdvApplyDocType; }
+        }
 
         #region Custom Constructor
 

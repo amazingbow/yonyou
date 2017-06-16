@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// <returns>Instance</returns>
 		public  static AdvApplyBE Create() {
 			AdvApplyBE entity = (AdvApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																																																 
+																																																																																																						 
 			return entity;
 		}
 
@@ -1026,6 +1026,67 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 单据状态 (该属性可为空,但有默认值)
+			/// 广告申请单.Misc.单据状态
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum DocStatus
+			{
+				get
+				{
+
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.GetFromValue(base.GetValue("DocStatus"));
+					return value;
+				}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 单据类型 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.单据类型
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType AdvApplyDocType
+			{
+				get
+				{
+					if (AdvApplyDocTypeKey == null)
+						return null ;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType value =  (UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType)AdvApplyDocTypeKey.GetEntity();
+					return value ;
+				}
+			}
+		
+
+
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApplyDocTypeKey ;
+		/// <summary>
+		/// EntityKey 属性
+		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey AdvApplyDocTypeKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApplyDocType") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApplyDocTypeKey==null || m_AdvApplyDocTypeKey.ID != key )
+					m_AdvApplyDocTypeKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey(key); 
+				return m_AdvApplyDocTypeKey ;
+			}
+		}
+
 		
 
 			#endregion
@@ -1905,6 +1966,98 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 
 
+		
+			/// <summary>
+		/// 单据状态 (该属性可为空,但有默认值)
+		/// 广告申请单.Misc.单据状态
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum DocStatus
+		{
+			get
+			{
+
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.GetFromValue(base.GetValue("DocStatus"));
+				return value;
+			}
+				set
+			{
+				
+				if (value == null)
+					base.SetValue("DocStatus",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Empty.Value);
+				else
+					base.SetValue("DocStatus",value.Value);
+					 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 单据类型 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType AdvApplyDocType
+		{
+			get
+			{
+				object  obj = this.GetRelation("AdvApplyDocType");
+				if (obj == null)
+				{
+					return null ;
+				}
+				else
+				{
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType value  = (UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType)obj;
+					return value;
+				 }
+			}
+				set
+			{
+				
+				this.SetRelation("AdvApplyDocType", value);
+					 
+			}
+		}
+	
+
+
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApplyDocTypeKey ;
+		/// <summary>
+		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey AdvApplyDocTypeKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApplyDocType") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApplyDocTypeKey==null || m_AdvApplyDocTypeKey.ID != key )
+					m_AdvApplyDocTypeKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey(key); 
+				return m_AdvApplyDocTypeKey ;
+			}
+			set
+			{	
+				if (AdvApplyDocTypeKey==value)
+					return ;
+				this.SetRelation("AdvApplyDocType", null);
+				m_AdvApplyDocTypeKey = value ;
+				if (value != null) 
+				{
+					base.SetValue("AdvApplyDocType",value.ID);
+				}
+				else
+					base.SetValue("AdvApplyDocType",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
+
 	
 
 		#endregion
@@ -2108,6 +2261,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_WFOriginalState　{ get { return EntityRes.GetResource("WFOriginalState");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocStatus")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_DocStatus　{ get { return EntityRes.GetResource("DocStatus");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyDocType")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvApplyDocType　{ get { return EntityRes.GetResource("AdvApplyDocType");　}　}
 		#endregion 
 
 
@@ -2284,6 +2447,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// 属性: 之前状态 的名称
 			/// </summary>
 			public static string WFOriginalState　{ get { return "WFOriginalState";　}　}
+				
+			/// <summary>
+			/// 属性: 单据状态 的名称
+			/// </summary>
+			public static string DocStatus　{ get { return "DocStatus";　}　}
+				
+			/// <summary>
+			/// 属性: 单据类型 的名称
+			/// </summary>
+			public static string AdvApplyDocType　{ get { return "AdvApplyDocType";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2291,7 +2464,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																																
+																																																																				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2469,6 +2642,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("Flow4Bit","Flow4Bit");
 			this.exdMultiLangAttrs.Add("WFCurrentState","WFCurrentState");
 			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
+			this.exdMultiLangAttrs.Add("DocStatus","DocStatus");
+			this.exdMultiLangAttrs.Add("AdvApplyDocType","AdvApplyDocType");
         }
 	#endregion 
 
@@ -2485,7 +2660,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																																																																																													
+																																																																																																			
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2569,6 +2744,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			
 
 			
+
+			if (data.AdvApplyDocType == -1 && data.AdvApplyDocType_SKey!=null)
+				data.AdvApplyDocType = data.AdvApplyDocType_SKey.GetEntity().ID ;
+	
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -2671,6 +2850,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		
 								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
 		
+								this.SetTypeValue("AdvApplyDocType",data.AdvApplyDocType);
+		
 			#endregion 
 
 			#region 组件内属性
@@ -2707,6 +2888,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 						this.AdvAboutBE.Add(child);
 				}
 			}
+	     
+
+					this.SetTypeValue("DocStatus",data.DocStatus);
 	     
 
 			#endregion 
@@ -2945,6 +3129,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 					data.WFOriginalState=(System.Int32)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("AdvApplyDocType");
+				if (obj != null)
+					data.AdvApplyDocType=(System.Int64)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2967,6 +3158,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				}
 				data.AdvAboutBE = listAdvAboutBE;
 			}	
+			{
+				object obj =this.GetValue("DocStatus");
+				if (obj != null)
+					data.DocStatus=System.Int32.Parse(obj.ToString());
+			}
+	
 
 			#endregion 
 			return data ;
@@ -2985,6 +3182,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
+
 
 
 
