@@ -228,7 +228,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDocTypeUIModel
 
             //查找按钮设置
             string paramWhere = null;
-            PDFormMessage.ShowConfirmDialog(this.Page, "8dcb9af8-0bad-45d2-bff6-001388b09f77", "580", "408",
+            PDFormMessage.ShowConfirmDialog(this.Page, "6b3c72b7-be82-4edf-b617-eec7f7acb111", "580", "408",
                 Title, wpFindID.ClientID, this.BtnFind, paramWhere);
 
             //取得提示信息资源：是否删除当前记录
@@ -271,7 +271,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDocTypeUIModel
         
 		public void BeforeUIModelBinding()
 		{
-            this.BtnList.Visible = false;
+            //this.BtnList.Visible = false;
 		}
 
 		public void AfterUIModelBinding()

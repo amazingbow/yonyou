@@ -118,7 +118,7 @@ this.FindClick_DefaultImpl(sender,e);
 		private void ListClick_Extend(object sender, UIActionEventArgs e)
 		{
 			//List Click Code Demo...
-			//this.CurrentPart.NavigatePage("TestList", null);
+            this.CurrentPart.NavigatePage("UFIDA.U9.Cust.SpecialApplyListURI", null);
 			//this.ListClick_DefaultImpl(sender,e) ;	
 			
 

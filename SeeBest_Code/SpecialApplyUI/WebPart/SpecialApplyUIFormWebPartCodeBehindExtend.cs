@@ -45,6 +45,13 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                {
+                    throw new Exception("这张专柜申请单已经被审核，不能再做修改！");
+                }
+            }
 
             BtnSave_Click_DefaultImpl(sender,e);
 		}	
@@ -77,7 +84,14 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		private void BtnDelete_Click_Extend(object sender, EventArgs  e)
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-			
+
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                {
+                    throw new Exception("这张专柜申请单已经被审核，不能删除！");
+                }
+            }
 		
 			BtnDelete_Click_DefaultImpl(sender,e);
 
