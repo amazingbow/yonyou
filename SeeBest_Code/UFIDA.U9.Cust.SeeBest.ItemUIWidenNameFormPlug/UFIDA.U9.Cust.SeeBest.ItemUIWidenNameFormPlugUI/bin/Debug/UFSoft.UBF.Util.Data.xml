@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Util.Data</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Util.Data.BaseCollection`1">
+            <summary>
+            支持Linq查询机制
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Data.Constant.ID_NULL_Flag">
+            <summary>
+            ID为空的标志
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Data.Constant.DateTime_Null_Flag">
+            <summary>
+            时间为空标志
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Data.DTOData">
+            <summary>
+            数据传输对象数据基类,可序列化 
+            目前还没使用，主要原因。当使用Entity与Data相互转时，Data本身的强类型的基本数据初始值，使数据操作有一定的保证。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.GetValue(System.String)">
+            <summary>
+            获取属性值
+            </summary>
+            <param name="propName">属性名称</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.SetValue(System.String,System.Object)">
+            <summary>
+            设置属性值
+            </summary>
+            <param name="propName">属性名称</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.GetMultiLangProp(System.String)">
+            <summary>
+            返回多语属性的当前语言的值
+            </summary>
+            <param name="propName">多语属性名</param>
+            <returns>当前语种的值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.SetMultiLangProp(System.String,System.String)">
+            <summary>
+            设置多语属性的当前语言的值
+            </summary>
+            <param name="propName">多语属性名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.GetMultiLangPropDict(System.String)">
+            <summary>
+            获取多语属性的全部数据
+            </summary>
+            <param name="propName">多语属性名</param>
+            <returns>多语数据字典对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.DTOData.SetMultiLangPropDict(System.String,UFSoft.UBF.Util.Data.MultiLangDataDict)">
+            <summary>
+            获取多语属性的全部数据
+            </summary>
+            <param name="propName">多语属性名</param>
+            <returns>多语数据字典对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Data.KeyableCollection`2">
+            <summary>
+            提供按名称访问的能力
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.KeyableCollection`2.RebuildIndex">
+            <summary>
+            重建Key访问列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Data.KeyableCollection`2.IsKeyReadOnly">
+            <summary>
+            Keyable对象的Key是否是只读的，设置这个属性可以优化集合的性能
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Data.MultiLangDataDict">
+            <summary>
+            多语言属性集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.MultiLangDataDict.#ctor">
+            <summary>
+            构造函数	
+            </summary>
+            <param name="persistor">持久化接口</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.MultiLangDataDict.Remove(UFSoft.UBF.Util.Data.MultiLangData)">
+            <summary>
+            从_langs中移出对象,此时要处理状态问题,理解为不单是集合的移出对象，而是暗含对data删除的操作
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.MultiLangDataDict.Add(UFSoft.UBF.Util.Data.MultiLangData)">
+            <summary>
+            将data加入到_langs,需处理对象状态，暗含data状态为新建
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Data.MultiLangDataDict.DefaultLangValue">
+            <summary>
+            取系统上下文默认语种信息，注意，如果上下文没有默认语种或集合不含有这个默认语种，则返回null
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Data.MultiLangData">
+            <summary>
+            多语言属性数据,可序列化
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Data.MultiLangData.DealCulture">
+            <summary>
+            处理语种信息
+            </summary>
+            <param name="langType"></param>
+            <returns>如果langType有值，返回langType
+                    　如果没值，返回上下文默认语种
+            　　　　　如果上下文默认语种没有，取机器语种
+            </returns>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Data.MultiLangData._currentCulture">
+            <summary>
+            当前机器语种
+            </summary>
+        </member>
+    </members>
+</doc>

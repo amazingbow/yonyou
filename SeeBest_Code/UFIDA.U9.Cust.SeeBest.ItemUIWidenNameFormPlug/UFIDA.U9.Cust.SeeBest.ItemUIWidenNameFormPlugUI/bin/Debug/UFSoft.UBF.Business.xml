@@ -1,0 +1,3041 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Business</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Business.EntityContext">
+            <summary>
+            实体持久化的上下文
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityContext.Default">
+            <summary>
+            获取当前默认的上下文
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityContext.CurrentPersistor">
+            <summary>
+            获取或设置当前EntityPersistor
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityContext.CurrentSession">
+            <summary>
+            获取上下文的当前Session
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Entity">
+            <summary>
+            实体基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.IEntity">
+            <summary>
+            实体的接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.IEntityNotification">
+            <summary>
+            实体操作通知的接口
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Inserting">
+            <summary>
+            增加对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Inserted">
+            <summary>
+            增加对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Updating">
+            <summary>
+            修改对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Updated">
+            <summary>
+            修改对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Deleting">
+            <summary>
+            删除对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Deleted">
+            <summary>
+            删除对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.Validate">
+            <summary>
+            合法性检查
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.IEntityNotification.SetDefaultValue">
+            <summary>
+            设置默认值事件，如一些比较特殊的需要计算赋值的
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ICopyable">
+            <summary>
+            支持复制实体的数据的接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ICopyable.CopyTo(UFSoft.UBF.Business.Entity)">
+            <summary>
+            复制实体的数据
+            </summary>
+            <param name="target">目标实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnInserting">
+            <summary>
+            增加对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnInserted">
+            <summary>
+            增加对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnUpdating">
+            <summary>
+            修改对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnUpdated">
+            <summary>
+            修改对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnDeleting">
+            <summary>
+            删除对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnDeleted">
+            <summary>
+            删除对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.WriteLog(UFSoft.UBF.PL.Engine.ObjectState)">
+            <summary>
+            收集日志信息并创建AttributeLogInfo并启动后台线程写日志信息。
+            </summary>
+            <param name="state">当然操作的状态</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetImpressibleAttributes(UFSoft.UBF.MD.EntityModel.IAttributeCollection,System.String)">
+            <summary>
+            获取实体e的敏感字段集合
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#OnSetDefaultValue">
+            <summary>
+            设置默认值事件，如一些比较特殊的需要计算赋值的
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.UFSoft#UBF#PL#IObjectNotification#Validate">
+            <summary>
+            合法性检查
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.DoEventPublish(System.String)">
+            <summary>
+            进行事件发布.
+            </summary>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CheckRefObjectValid">
+            <summary>
+            新建和修改时检查引用的对象是不是在数据库存在
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CheckModSensitivePropertyField(UFSoft.UBF.MD.EntityModel.IAttribute,System.String)">
+            <summary>
+            验证属性类型上的敏感字段是否被改变，是返回true，不是，返回false
+            只处理简单类型和嵌套的属性类型
+            </summary>
+            <param name="attr">敏感的属性类型名</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.AssociationContains(UFSoft.UBF.MD.EntityModel.IAssociationCollection,UFSoft.UBF.MD.EntityModel.IAssociation)">
+            <summary>
+            判断关系集合中是否包含关系   xum  20100512  获取TopParentAssociations时，会重复获取关系，所以必须进一步比较
+            </summary>
+            <param name="assoColletion"></param>
+            <param name="that"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CheckModAtSensitiveField">
+            <summary>
+            一些特殊（敏感）字段修改时检查是不是被引用，如果被引用，则不能修改
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            only serialize key and type, the real data retrieve from DB
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.isGhost">
+            <summary>
+            是否Ghost对象
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.parentObjectKey">
+            <summary>
+            上级实体对象Key
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.needValidate">
+            <summary>
+            是否效验
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.isInPrepareData">
+            <summary>
+            是否数据准备完毕
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.isComponentChanged">
+            <summary>
+            对应一个主实体实例下的组建数据是否有变化，属于系统监控字段
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity._needPersistable">
+            <summary>
+            是否持久化
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity._attrExceptions">
+            <summary>
+            属性异常信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CreateMetadataKey">
+            <summary>
+            创建key
+            </summary>
+            <value></value>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.innerData">
+            <summary>
+            对象的持久化数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.innerRelation">
+            <summary>
+            对象的关联对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CreateOriginalData">
+            <summary>
+            创建key
+            </summary>
+            <value></value>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity._originalData">
+            <summary>
+             原始数据，主要是记录第一次从数据库装载的原始值
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetValue(System.Object)">
+            <summary>
+            获取对象的持久化数据
+            </summary>
+            <param name="propName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetValue(System.Object,System.Object)">
+            <summary>
+            设置对象的持久化数据
+            </summary> 
+            <param name="propName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetTypeValue(System.Object,System.Object)">
+            <summary>
+            设置强类型的值，主要为了ui转换，因为目前ui是弱类型的构造和传递，有些设值前后的效验需要通过下面的方式实现
+            </summary>
+            <param name="propName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetRelation(System.Object)">
+            <summary>
+            获取对象的关联属性
+            </summary>
+            <param name="key">属性的主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetRelation(System.Object,System.Object)">
+            <summary>
+            设置对象的关联属性
+            </summary>
+            <param name="key">属性的主键</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Create(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.Business.IEntity)">
+            <summary>
+            创建实体的实例
+            </summary>
+            <param name="classKey"></param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Create(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.Business.IEntity,System.Object,System.Boolean)">
+            <summary>
+            创建实体的实例
+            </summary>
+            <param name="classKey"></param>
+            <param name="parent"></param>
+            <param name="ID"></param>
+            <param name="needPersistable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Create(System.String,UFSoft.UBF.Business.IEntity)">
+            <summary>
+            创建实体的实例
+            </summary>
+            <param name="fullName">实体全名</param>
+            <param name="parent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CreateTransientObjWithKey(System.String,UFSoft.UBF.Business.IEntity,System.Object,System.Boolean)">
+            <summary>
+            创建游离态的对象，并可以赋id值，注意这个对象将不受Session控制，
+            如果parnet为空,永远不会持久化
+            如果parnet不为空,可以通过session.create/modify/delete 方法加入持久化控制
+            </summary>
+            <param name="fullName"></param>
+            <param name="parnet"></param>
+            <param name="ID"></param>
+            <param name="needPersistable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.BeforeCreate(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.Business.Entity,UFSoft.UBF.Business.IEntity,System.Object)">
+            <summary>
+            处理新建前的一些操作
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Create(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.Business.Entity,UFSoft.UBF.Business.IEntity,System.Object,System.Boolean)">
+            <summary>
+            创建实体
+            </summary>
+            <param name="classKey"></param>
+            <param name="entity"></param>
+            <param name="parent"></param>
+            <param name="ID"></param>
+            <param name="needPersistable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Remove">
+            <summary>
+            删除实体
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnInserting">
+            <summary>
+            增加对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnInserted">
+            <summary>
+            增加对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnUpdating">
+            <summary>
+            修改对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnUpdated">
+            <summary>
+            修改对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnDeleting">
+            <summary>
+            删除对象前的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnDeleted">
+            <summary>
+            删除对象后的处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnValidate">
+            <summary>
+            合法性检查
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.OnSetDefaultValue">
+            <summary>
+            合法性检查
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.RegisterSynchData">
+            <summary>
+            数据同步
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.DealException(System.Exception)">
+            <summary>
+            处理异常
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.ToString">
+            <summary>
+            转化为字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CopyTo(UFSoft.UBF.Business.Entity)">
+            <summary>
+            将数据复制给指定的实体，但是主键的值不复制
+            </summary>
+            <param name="target">目标实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.Clone">
+            <summary>
+            1 新建id
+            2 拷贝原子属性
+            3 拷贝关联的id
+            4 增加控制开关，决定是否递归拷贝组合的全部字实体（注意，子实体的拷贝需要新建一个id）
+            5 提供一个子实体的拷贝方法,注意需要提供parentEntity，其他的同主实体的规则
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.CopyTo(UFSoft.UBF.PL.IPersistableObject,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="po"></param>
+            <param name="isCopyKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Implementation Detail: just store MetadataKey as serialized form.
+            WARN: The semantics of serializing Entity should be deliberated
+            carefully!
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.m_classKey">
+            <summary>
+            EntityChangeEventEnabled 包括简单属性事件和关联事件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetMultiLangProp(System.String)">
+            <summary>
+            按实体属性取当前上下文语种的多语言的信息
+            </summary>
+            <param name="propName">实体属性名</param>
+            <returns>当前语种的多语言信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetMultiLangProp(System.String,System.String)">
+            <summary>
+            按实体属性取指定语种的多语言信息
+            </summary>
+            <param name="langType">指定的语种</param>
+            <param name="propName">实体属性名</param>
+            <returns>指定语种所对应的实体属性的多语言信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.DealCulture(System.String)">
+            <summary>
+            处理语种信息
+            </summary>
+            <param name="langType"></param>
+            <returns>如果langType有值，返回langType
+                    　如果没值，返回上下文默认语种
+            　　　　　如果上下文默认语种没有，取机器语种
+            </returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetMultiLangProp(System.String,System.String)">
+            <summary>
+            为属性设置当前上下文语种信息
+            </summary>
+            <param name="propName">实体属性名</param>
+            <param name="value">语种信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetMultiLangProp(System.String,System.String,System.String)">
+            <summary>
+            为属性设置指定语种的信息
+            </summary>
+            <param name="propName">实体属性名</param>
+            <param name="value">多语言信息</param>
+            <param name="langType">指定的语种</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetMultiLangPropDict(System.String)">
+            <summary>
+            获取实体属性名所对应的的多语言的全部信息
+            </summary>
+            <param name="propName">实体属性名</param>
+            <returns>多语言的信息对象，包含多个语种的信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.SetMultiLangPropDict(System.String,UFSoft.UBF.Util.Data.MultiLangDataDict)">
+            <summary>
+            设置实体属性名的多语种信息
+            </summary>
+            <param name="propName">实体属性名</param>
+            <param name="data">多语言的信息对象，包含多个语种的信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.GetChangedAttributes">
+            <summary>
+            取得变化的属性，只是修改，返回变化的集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.ObjectKey">
+            <summary>
+            实体对象Key,注意,这个key的赋值将直接影响到实体的id
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.IsMainEntity">
+            <summary>
+             The Entity 是否为主实体
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.SysState">
+            <summary>
+            entity对象状态
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Inserting">
+            <summary>
+            增加对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Inserted">
+            <summary>
+            增加对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Updating">
+            <summary>
+            修改对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Updated">
+            <summary>
+            修改对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Deleting">
+            <summary>
+            删除对象前的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Deleted">
+            <summary>
+            删除对象后的处理
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.Validate">
+            <summary>
+            合法性检查
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Business.Entity.SetDefaultValue">
+            <summary>
+            设置默认值事件，如一些比较特殊的需要计算赋值的
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Entity.EntityList`1">
+            <summary>
+            实体集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityList`1.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityList`1.#ctor(System.Collections.IList)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="list"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityList`1.AddNew">
+            <summary>
+            add a new Entity to List and return it ...
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.EntityList`1.IsMainEntity">
+            <summary>
+             The Entity 是否为主实体 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Entity.EntityFinder`1">
+            <summary>
+            实体查询模板类
+            </summary>
+            <typeparam name="T">实体的类型</typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Entity.EntityFinder`1.finder">
+            <summary>
+            查询选项
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.CreateQuery">
+            <summary>
+            创建EntityQuery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.CreateDataQuery">
+            <summary>
+            创建EntityDataQuery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.CreateParam(System.Object,System.String)">
+            <summary>
+            根据属性名创建符合该属性类型的输入参数
+            </summary>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">属性名</param>
+            <returns>输入参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.CreateParam(System.Object,System.String,System.Data.ParameterDirection)">
+            <summary>
+            根据属性名创建该属性相应类型的参数
+            </summary>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">参数名</param>
+            <param name="direction">参数方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.FindByID(System.Object)">
+            <summary>
+            根据主键查询对象
+            </summary>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.FindByID(System.Collections.IDictionary)">
+            <summary>
+            根据主键查询对象
+            </summary>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.Find(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象
+            </summary>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.FindFromDBDirectly(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            直接从数据库查询，包括其关联的对象也从数据库加载,注意２００７１００１号后版本，这个方法基本失去预案意义，
+            属于废弃方法
+            </summary>
+            <param name="opath"></param>
+            <param name="oqlParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.Find(UFSoft.UBF.PL.ObjectQueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象
+            </summary>
+            <param name="options">查询操作</param>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.FindAll(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象集合
+            </summary>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.FindAll(UFSoft.UBF.PL.ObjectQueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象集合
+            </summary>
+            <param name="options">查询操作</param>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder`1.IsExists(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            检查数据库是否存在满足oql条件的记录，将先从缓存找再从DB找
+            </summary>
+            <param name="opath">查询的oql语句</param>
+            <param name="oqlParameters">oql语句可选的参数，注意是params类型，如果不会使用，请参考《BE指南》</param>
+            <returns>返回bool型结果</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.EntityFinder`1.Finder">
+            <summary>
+            实体查询类
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Entity.EntityFinder">
+            <summary>
+            实体查询类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseKey">查询所基于的实体元数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseKey">查询所基于的实体元数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseKey">查询所基于的实体元数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.CreateDataQuery">
+            <summary>
+            创建EntityDataQuery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.CreateParam(System.Object,System.String)">
+            <summary>
+            根据属性名创建符合该属性类型的输入参数
+            </summary>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">属性名</param>
+            <returns>输入参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.CreateParam(System.Object,System.String,System.Data.ParameterDirection)">
+            <summary>
+            根据属性名创建该属性相应类型的参数
+            </summary>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">参数名</param>
+            <param name="direction">参数方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.FindByID(System.Object)">
+            <summary>
+            根据主键查询对象
+            </summary>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.FindByKey(System.Object)">
+            <summary>
+            根据主键查询对象
+            </summary>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.FindFromDBDirectly(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象
+            </summary>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.Find(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象
+            </summary>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.Find(UFSoft.UBF.PL.ObjectQueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象
+            </summary>
+            <param name="options">查询操作</param>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.FindAll(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象集合
+            </summary>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Entity.EntityFinder.FindAll(UFSoft.UBF.PL.ObjectQueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询对象集合
+            </summary>
+            <param name="options">查询操作</param>
+            <param name="opath">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.EntityFinder.classKey">
+            <summary>
+            查询所基于的实体元数据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Entity.EntityFinder.Persistor">
+            <summary>
+            查询选项
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessEntity">
+            <summary>
+            业务实体基类
+            </summary>
+            <summary>
+            业务实体基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.CreateEntityKey">
+            <summary>
+            创建key
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Implementation Detail: just store MetadataKey as serialized form.
+            WARN: The semantics of serializing Entity should be deliberated
+            carefully!
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BusinessEntity.Key">
+            <summary>
+            Key
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BusinessEntity.ID">
+            <summary>
+            获取或设置唯一标识
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessEntity.EntityKey">
+            <summary>
+            EntityKey 实体的唯一标识对象
+            当前实体Key直接使用值(属性)类型的代码生成框架.同时加入一个GetEntity的方法.
+            使用于通用实体,并且可内嵌于其它值(属性)类型中使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.EntityKey.#ctor">
+            <summary>
+            无参的构造，注意 ，这个构造专为UIRecord 转 EntityData 时反射调用（本为private，但由于Indigo,只能为public），
+            其他情况最好采用public EntityKey(long id, string entityType)方式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.EntityKey.#ctor(System.Int64,System.String)">
+            <summary>
+            EntityKey
+            </summary>
+            <param name="id">id</param>
+            <param name="entityType">实体类型全名</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntity.EntityKey.GetEntity">
+            <summary>
+            GetEntity 通过EntityKey加载数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityViewQuery">
+            <summary>
+            主要为报表写的专用类，请非报表场合避免使用
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.EntityViewQuery._conn">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.EntityViewQuery._queryCtx">
+            <summary>
+            QueryContext
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.EntityViewQuery._dataAdapterMap">
+            <summary>
+            DataAdapter和DataSet的映射，这样写不是很好，先这样做吧
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.DefineTempCollection(System.String,UFSoft.UBF.View.Query.Column[])">
+            <summary>
+            通过用户自定义的sql产成生临时表
+            </summary>
+            <param name="TempTableName"></param>
+            <param name="sql"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteTempCollection(System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql更新/删除临时表
+            </summary>
+            <param name="oql"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteReader(System.String,UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="conn">数据库连接,请使用者注意自己维护这个连接是open的，并在使用后注意自己关闭连接</param>
+            <param name="TempVariable">临时表表名</param>
+            <param name="query">查询对象ObjectQuery</param>
+            <param name="oqlParameters">查询参数列表</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteReader(UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="conn">数据库连接,请使用者注意自己维护这个连接是open的，并在使用后注意自己关闭连接</param>
+            <param name="query">查询对象ObjectQuery</param>
+            <param name="oqlParameters">查询参数列表</param>
+            <returns>IDataReader</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.AdjustForSupportIDListParam(System.String)">
+            <summary>
+            调整SQL语句，支持IDList作为查询参数
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteDataSet(UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteDataSet
+            </summary>
+            <param name="conn">数据库连接,请使用者注意自己维护这个连接是open的，并在使用后注意自己关闭连接</param>
+            <param name="TempVariable">临时表表名</param>
+            <param name="query">查询对象ObjectQuery</param>
+            <param name="oqlParameters">查询参数列表</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteDataSet(System.String,UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteDataSet
+            </summary>
+            <param name="conn">数据库连接,请使用者注意自己维护这个连接是open的，并在使用后注意自己关闭连接</param>
+            <param name="query">查询对象ObjectQuery</param>
+            <param name="oqlParameters">查询参数列表</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteNonQuery(System.String,UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteNonQuery,只返回受影响的行数
+            </summary>
+            <param name="conn"></param>
+            <param name="TempVariable"></param>
+            <param name="query"></param>
+            <param name="oqlParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.UpdateDataSet(System.Data.DataSet)">
+            <summary>
+            UpdateDataSet
+            </summary>
+            <param name="ds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.ExecuteAppendNonQuery(System.String,UFSoft.UBF.View.Query.ObjectQuery,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            ExecuteAppendNonQuery
+            </summary>
+            <param name="TempVariable"></param>
+            <param name="insertQuery"></param>
+            <param name="oqlParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.CreateQuery(System.String)">
+            <summary>
+            构造ObjectQuery
+            </summary>
+            <param name="name"></param>
+            <param name="oql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.BuildCommand(System.String,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            构造IDbCommand
+            </summary>
+            <param name="cmdText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityViewQuery.GetConnection">
+            <summary>
+            从当前线程取数据库的连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.AttrCannotNullException">
+            <summary>
+            实体不存在的异常
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessException">
+            <summary>
+            持久化异常基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessException.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="errMsg"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessException.#ctor(System.Exception,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="errMsg"></param>
+            <param name="inner"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttrCannotNullException.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttrCannotNullException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.AttributeLogInfo">
+            <summary>
+            敏感字段的日志信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessLog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessLog.bufferQueue">
+            <summary>
+            存放准备写入数据库的日志信息的队列
+            写日志的子线程总是从队列的头取出数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessLog.thread">
+            <summary>
+            用于写日志的子线程
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessLog.Debug(System.Collections.Generic.IList{UFSoft.UBF.Business.AttributeLogInfo})">
+            <summary>
+            写日志的方法
+            </summary>
+            <param name="infos"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessLog.Start">
+            <summary>
+            启动子线程将数据填写到数据库中。
+            并确保只有一个子线程在运行中。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessLog.CreateCommand(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            构造一个准备执行的Command对象，并进行预处理
+            </summary>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BusinessLog.Count">
+            <summary>
+            还有多少个数据在队列中。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessResource">
+            <summary>
+            资源
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ChangeInfo">
+            <summary>
+            变更信息的默认实现
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.IChangeInfo">
+            <summary>
+            变更信息的接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.IChangeInfo.CreatedOn">
+            <summary>
+            获取创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.IChangeInfo.CreatedBy">
+            <summary>
+            获取创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.IChangeInfo.ModifiedOn">
+            <summary>
+            获取修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.IChangeInfo.ModifiedBy">
+            <summary>
+            获取修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ChangeInfo.CREATEDON">
+            <summary>
+            创建时间属性名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ChangeInfo.CREATEDBY">
+            <summary>
+            创建人属性名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ChangeInfo.MODIFIEDON">
+            <summary>
+            修改时间属性名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ChangeInfo.MODIFIEDBY">
+            <summary>
+            修改人属性名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ChangeInfo.Empty">
+            <summary>
+            空的变更信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ChangeInfo.#ctor(UFSoft.UBF.PL.IObjectValue)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="values"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ChangeInfo.#ctor(UFSoft.UBF.PL.IPersistableObject)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.ModifiedOn">
+            <summary>
+            修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.ModifiedBy">
+            <summary>
+            修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ChangeInfo.EmptyInfo">
+            <summary>
+            空的变更信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.EmptyInfo.CreatedOn">
+            <summary>
+            创建时间 DateTime.MinValue
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.EmptyInfo.CreatedBy">
+            <summary>
+            创建人 null
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.EmptyInfo.ModifiedOn">
+            <summary>
+            修改时间 DateTime.MinValue
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ChangeInfo.EmptyInfo.ModifiedBy">
+            <summary>
+            修改人 null
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.IChangeInfoable">
+            <summary>
+            支持变更信息的接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.IChangeInfoable.Info">
+            <summary>
+            获取对象的变更信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityPersistor">
+            <summary>
+            实体的持久化管理器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.Flush">
+            <summary>
+            保存实体
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.FindByKey(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.Object)">
+            <summary>
+            根据主键查询实体
+            </summary>
+            <param name="metaData">实体元数据</param>
+            <param name="options">查询选项</param>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.Find(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql查询实体。这个实体是从数据库加载，但是他的关联对象是懒加载
+            </summary>
+            <param name="metadata">实体的元数据</param>
+            <param name="options">查询选项</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.FindFromDBDirectly(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql查询实体，这个对象和他的关联对象都是从数据库加载,注意这个方法非常特殊，只要是通过这个方法加载的对象，将全部为数据库加载
+            </summary>
+            <param name="metadata">实体的元数据</param>
+            <param name="options">查询选项</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.FindAll(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql查询实体的集合
+            </summary>
+            <param name="metadata">实体的元数据</param>
+            <param name="options">查询选项</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.GetValue(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            获取单个值
+            </summary>
+            <param name="oqlBase">查询的基对象的元数据</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询到的值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.GetDataSet(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            获取无连接的数据
+            </summary>
+            <param name="oqlBase">查询的基对象的元数据</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询到的对象集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.GetDataSet(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.QueryOptions,System.Int64,System.Int32,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            获取无连接的数据
+            </summary>
+            <param name="oqlBase">查询的基对象的元数据</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询到的对象集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.FindDataReaderByPage(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.QueryOptions,System.Int64,System.Int32,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            获取无连接的数据
+            </summary>
+            <param name="oqlBase">查询的基对象的元数据</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询到的对象集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityPersistor.GetDataReader(UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            获取保持连接的数据
+            </summary>
+            <param name="oqlBase">查询的基对象的元数据</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns>查询到的对象集合</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityPersistor.Current">
+            <summary>
+            当前的EntityPersistor对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityPersistor.Persistor">
+            <summary>
+            持久化接口
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.IEnterprise">
+            <summary>
+            Enterprise接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ISession">
+            <summary>
+            控制数据提交的会话（工作单元）接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.InList(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            将entity加入到session中
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.InListEntityTreeBaseOnComponent(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            基于组建将一个主实体实例下的所有对象加入session中，注意传入参数只能是主实体
+            </summary>
+            <param name="mainEntity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.DeList(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            将entity从session中删除
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Create(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            创建实体
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Modify(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Remove(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            删除实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Abort(UFSoft.UBF.Business.IEntity[])">
+            <summary>
+            取消保存指定实体
+            </summary>
+            <param name="entities">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Abort">
+            <summary>
+            取消实体的更新
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.Commit">
+            <summary>
+            提交更新并关闭Session
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.SetStatus(UFSoft.UBF.PL.Engine.ObjectState,UFSoft.UBF.Business.IEntity)">
+            <summary>
+            设置对象状态
+            </summary>
+            <param name="state"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.DealStatus(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            
+            </summary>
+            <param name="state"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.GetObjStatus(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            取得对象状态
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ISession.AddExceptions(UFSoft.UBF.Business.Entity)">
+            <summary>
+            封装异常
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.InheritPersistor">
+            <summary>
+            临时支持实体继承的持久化管理器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.InheritPersistor.FindByKey(UFSoft.UBF.PL.IPersistor,UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,System.Object)">
+            <summary>
+            根据主键查询实体
+            </summary>
+            <param name="persistor">持久化接口</param>
+            <param name="metaData">实体元数据</param>
+            <param name="options">查询选项</param>
+            <param name="key">主键</param>
+            <returns>查询结果，不存在返回null</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.InheritPersistor.FindAll(UFSoft.UBF.PL.IPersistor,UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql查询实体的集合
+            </summary>
+            <param name="persistor">持久化接口</param>
+            <param name="metadata">实体的元数据</param>
+            <param name="options">查询选项</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.InheritPersistor.FindByPage(UFSoft.UBF.PL.IPersistor,UFSoft.UBF.PL.IClassKey,UFSoft.UBF.PL.ObjectQueryOptions,UFSoft.UBF.PL.QueryOptions,System.Int64,System.Int32,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            根据oql查询实体的集合（分页）
+            </summary>
+            <param name="persistor">持久化接口</param>
+            <param name="metadata">实体的元数据</param>
+            <param name="options">查询选项</param>
+            <param name="oql">查询语句</param>
+            <param name="oqlParameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Collection`1">
+            <summary>
+             Collection 集合泛型实现。
+             内部使用List泛型来处理，就是为了能够增加对Add,Remove等相关的操作的 扩展，原List都是为非vritual.
+            </summary>
+            <typeparam name="T"></typeparam>
+            性能上的问题.? 
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.GetEnumerator">
+            <summary>
+            GetEnumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.Add(`0)">
+            <summary>
+            Add
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.Clear">
+            <summary>
+            Clear
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.Contains(`0)">
+            <summary>
+            Contains
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            CopyTo
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.Remove(`0)">
+            <summary>
+            Remove
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.IndexOf(`0)">
+            <summary>
+            IndexOf
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.Insert(System.Int32,`0)">
+            <summary>
+            Insert
+            </summary>
+            <param name="index"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Collection`1.RemoveAt(System.Int32)">
+            <summary>
+            RemoveAt
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Collection`1.Count">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Collection`1.IsReadOnly">
+            <summary>
+            IsReadOnly
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Collection`1.Item(System.Int32)">
+            <summary>
+            this[int index]
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Session">
+            <summary>
+            控制数据的提交（工作单元）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.#ctor">
+            <summary>
+            构造函数，拥有独立的ChangeSet
+            </summary>
+            <param name="persistor"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Active">
+            <summary>
+            将堆栈中第一个对象设置为当前session
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.DeActive">
+            <summary>
+            将堆栈
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Open">
+            <summary>
+            打开一个Session
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Commit">
+            <summary>
+            提交更新并关闭Session
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Save">
+            <summary>
+            立刻保存更新
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Abort(UFSoft.UBF.Business.IEntity[])">
+            <summary>
+            取消保存指定实体
+            </summary>
+            <param name="entities">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Abort">
+            <summary>
+            取消保存所有实体
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Create(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            创建实体的实例
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Modify(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            修改实体的实例
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.Remove(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            删除实体的实例
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.GetObjStatus(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            GetObjStatus
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.SetStatus(UFSoft.UBF.PL.Engine.ObjectState,UFSoft.UBF.Business.IEntity)">
+            <summary>
+            设置对象为状态
+            </summary>
+            <param name="state"></param>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.DealStatus(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.InList(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            将实体加入到session中
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.InListEntityTreeBaseOnComponent(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            将一个主实体下的所有变化的对象持久化加入到session
+            </summary>
+            <param name="mainEntity"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Session.DeList(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            将实体从session中移出
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Session.Context">
+            <summary>
+            所属的上下文
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Session.Current">
+            <summary>
+            获取当前的Session
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.Session._current">
+            <summary>
+            获取或设置当前的Session
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityChangeInfo">
+            <summary>
+            实体变更信息的处理器
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.EntityChangeInfo.Empty">
+            <summary>
+            空的变更信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.GetInfo(System.Object)">
+            <summary>
+            获取对象的变更信息
+            </summary>
+            <param name="obj">对象</param>
+            <returns>变更信息</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.Support(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            判断实体是否支持记录变更信息
+            </summary>
+            <param name="entity">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.Init(UFSoft.UBF.Business.IEntity)">
+            <summary>
+            初始实体变更信息
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.Record(UFSoft.UBF.PL.IObjectValue)">
+            <summary>
+            记录实体变更信息
+            </summary>
+            <param name="values">实体的数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.GetNow">
+            <summary>
+            取当前时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityChangeInfo.GetUser">
+            <summary>
+            取登陆用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertyGotEventHandler">
+            <summary>
+            实体属性获取后的事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertyGotEventArgs">
+            <summary>
+            实体属性获取后的事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.PropertyGotEventArgs.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="value">属性值</param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertyGotEventArgs.Value">
+            <summary>
+            属性值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertyGettingEventHandler">
+            <summary>
+            实体属性获取前的事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertyGettingEventArgs">
+            <summary>
+            实体属性获取后的事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.PropertyGettingEventArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertyGettingEventArgs.Accept">
+            <summary>
+            是否接受属性的获取
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertyGettingEventArgs.Value">
+            <summary>
+            如果不接受属性的获取，将返回的值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertySetEventHandler">
+            <summary>
+            实体属性设置后的事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertySetEventArgs">
+            <summary>
+            实体属性设置后的事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.PropertySetEventArgs.#ctor(System.Object,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertySetEventArgs.OldValue">
+            <summary>
+            旧值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertySetEventArgs.NewValue">
+            <summary>
+            新值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertySettingEventHandler">
+            <summary>
+            实体属性设置前的事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertySettingEventArgs">
+            <summary>
+            实体属性设置后的事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.PropertySettingEventArgs.#ctor(System.Object,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertySettingEventArgs.OldValue">
+            <summary>
+            旧值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertySettingEventArgs.NewValue">
+            <summary>
+            新值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.PropertySettingEventArgs.Accept">
+            <summary>
+            是否接受属性设置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BusinessEntityData">
+            <summary>
+            业务实体基类 的　EntityData ,专用于弱类型．为了一致性的将BusinessEntity作为系统的值类型来使用．
+            代码由代码生成器自动生成．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntityData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BusinessEntityData.#ctor(System.Int64,System.String)">
+            <summary>
+            Full Argument Constructor
+            </summary>
+            <param name="entityID">EntityID</param>
+            <param name="entityType">EntityType</param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BusinessEntityData.EntityID">
+            <summary>
+            实体ID
+            
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BusinessEntityData.EntityType">
+            <summary>
+            实体类型
+            
+            </summary>
+            <value>System.String</value>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Business.GenericCompareToCompare`1”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Business.EntityNotExistException">
+            <summary>
+            实体不存在的异常
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityNotExistException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityNotExistException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.BaseQuery">
+            <summary>
+            查询对象的基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BaseQuery.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classKey">查询所基于的类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BaseQuery.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classKey">查询所基于的类型</param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BaseQuery.qOptions">
+            <summary>
+            查询条件，目前只是多语言提取策略
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BaseQuery.selects">
+            <summary>
+            要查询的数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BaseQuery.orders">
+            <summary>
+            排序的属性
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BaseQuery.groups">
+            <summary>
+            分组的属性
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BaseQuery.Convert(System.String[])">
+            <summary>
+            将数组转化为逗号分隔的字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BaseQuery.GetOpath">
+            <summary>
+            获取OPath
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.BaseQuery.GetOpath(System.String)">
+            <summary>
+            获取OPath
+            </summary>
+            <param name="condition">条件</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BaseQuery.classKey">
+            <summary>
+            查询所基于的类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BaseQuery.FullName">
+            <summary>
+            查询所基于的类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Business.BaseQuery.Parameters">
+            <summary>
+            参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityDataReader">
+            <summary>
+            保持与资源连接的实体数据集,to be supported
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityDataQuery">
+            <summary>
+            定制对实体数据的查询类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseClass">查询所基于的类</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseClass">查询所基于的类</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.Select(System.String[])">
+            <summary>
+            查询返回的数据
+            </summary>
+            <param name="selectedData">需要查询的数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindValue">
+            <summary>
+            查询单个值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindValue(System.String)">
+            <summary>
+            查询单个值
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.IsExists(System.String)">
+            <summary>
+            是否存在符合条件的记录
+            </summary>
+            <param name="oql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.ExecOql(System.String)">
+            <summary>
+            直接执行oql语句，如修改，删除等操作,注意，此时参数为全oql表达式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.UniqueFind(System.String)">
+            <summary>
+            性能优化组的需求：支持返回给出OQL包含的条件的记录数，以及其中第一个Entity对应的ID
+            </summary>
+            <param name="oql"></param>
+            <returns>如果返回Int64.MinValue,表示无记录，如果返回Int64.MaxValue表示多条记录，如果只有一条记录，则返回该记录的ID</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataReader">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataReader(System.String)">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataSet">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataSet(System.String)">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataSetByPage(System.Int64,System.Int32,System.String)">
+            <summary>
+            实体分页查询
+            </summary>
+            <param name="entityfullName">实体属性全名</param>
+            <param name="pageIndex">页索引，注意如果索引是从0页起，如果索引为-1，表示取最后一页</param>
+            <param name="pageSize">页面大小，如果页面大小为-1，表示取全部数据</param>
+            <param name="oql">查询oql语句</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataReaderByPage(System.Int64,System.Int32,System.String)">
+            <summary>
+            实体分页查询
+            </summary>
+            <param name="entityfullName">实体属性全名</param>
+            <param name="pageIndex">页索引，注意如果索引是从0页起，如果索引为-1，表示取最后一页</param>
+            <param name="pageSize">页面大小，如果页面大小为-1，表示取全部数据</param>
+            <param name="oql">查询oql语句</param>
+            <returns>结果集</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindValue(UFSoft.UBF.PL.IClassKey,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询单个值
+            </summary>
+            <param name="classKey">查询基于的实体</param>
+            <param name="oql">查询语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataReader(UFSoft.UBF.PL.IClassKey,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <param name="classKey">查询基于的实体</param>
+            <param name="oql">查询语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataSet(UFSoft.UBF.PL.IClassKey,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            查询符合条件的所有数据
+            </summary>
+            <param name="classKey">查询基于的实体</param>
+            <param name="oql">查询语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityDataQuery.FindDataSet(UFSoft.UBF.PL.IClassKey,System.Int64,System.Int32,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+            分页查询，返回dataset
+            </summary>
+            <param name="classKey"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="oql"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityDataSet">
+            <summary>
+            与资源无连接的实体数据集,to be supported
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityParam">
+            <summary>
+            根据实体创建oql参数的工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityParam.CreateParam(UFSoft.UBF.PL.IClassKey,System.Object,System.String,System.Data.ParameterDirection)">
+            <summary>
+            根据属性名创建该属性相应类型的参数
+            </summary>
+            <param name="classKey">实体类</param>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">参数名</param>
+            <param name="direction">参数方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityParam.CreateParam(UFSoft.UBF.PL.IClassKey,System.Object,System.String)">
+            <summary>
+            根据属性名创建该属性相应类型的输入参数
+            </summary>
+            <param name="classKey">实体类</param>
+            <param name="paramValue">参数值</param>
+            <param name="propertyName">参数名</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityParam.CreateParam(UFSoft.UBF.MD.EntityModel.IAttribute,System.Object)">
+            <summary>
+            根据属性创建该属性相应类型的输入参数
+            </summary>
+            <param name="attr">属性</param>
+            <param name="paramValue">参数值</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityQuery">
+            <summary>
+            定制对实体的查询类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classKey">查询所基于的类</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classKey">查询所基于的类</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.FindAll">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.FindByID(System.Object)">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.FindAll(System.String)">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery.FindByPage(System.Int64,System.Int32,System.String)">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityQuery.Options">
+            <summary>
+            查询选项
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EntityQuery`1">
+            <summary>
+            定制对实体的查询模板类
+            </summary>
+            <typeparam name="T">实体的类型</typeparam>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery`1.#ctor(UFSoft.UBF.PL.IClassKey)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery`1.FindAll">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EntityQuery`1.FindAll(System.String)">
+            <summary>
+            查询符合条件的所有实体
+            </summary>
+            <param name="condition">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EntityQuery`1.Options">
+            <summary>
+            查询选项
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ObjectSourceResolver">
+            <summary>
+            获取数据源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ObjectSourceResolver.CreateInstance">
+            <summary>
+            创建实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Business.AttributeInValidException">
+            <summary>
+            持久化异常基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttributeInValidException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttributeInValidException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="attrName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttributeInValidException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="attrName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttributeInValidException.#ctor(System.String,System.String,System.String,System.Int64)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="attrName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.RefObjectInValidException">
+            <summary>
+            持久化异常基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.RefObjectInValidException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="attrName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.RefObjectInValidException.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.AttrsContainerException">
+            <summary>
+            持久化异常基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.AttrsContainerException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="entityFullName"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.InvalidOperatorException">
+            <summary>
+            非法操作的异常
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.InvalidOperatorException.#ctor">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.InvalidOperatorException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.DTODataBase">
+            <summary>
+            DTOData的基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.DataTransObjectBase">
+            <summary>
+            数据访问的基类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.SetMultiLangProp(System.String,System.String)">
+            <summary>
+            设置默认语种的值
+            </summary>
+            <param name="propName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.SetMultiLangProp(System.String,System.String,System.String)">
+            <summary>
+            设置指定语种的值
+            </summary>
+            <param name="propName"></param>
+            <param name="value"></param>
+            <param name="langType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.SetMultiLangPropDict(System.String,UFSoft.UBF.Util.Data.MultiLangDataDict)">
+            <summary>
+            设置多语集合
+            </summary>
+            <param name="propName"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.GetMultiLangProp(System.String)">
+            <summary>
+            取多语集合
+            </summary>
+            <param name="propName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.GetMultiLangProp(System.String,System.String)">
+            <summary>
+            取指定语种的多语字段
+            </summary>
+            <param name="langType"></param>
+            <param name="propName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.DataTransObjectBase.GetMultiLangPropDict(System.String)">
+            <summary>
+            取默认语种的多语字段
+            </summary>
+            <param name="propName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.DataTransObjectBase.SysState">
+            <summary>
+            实体状态.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.DataTransObjectBase.SysEntityType">
+            <summary>
+             实体类型. 
+             </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.DTOBase">
+            <summary>
+            DTO的基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ExtendableEnum">
+            <summary>
+            ExtendableEnum
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.#ctor(UFSoft.UBF.MD.EntityModel.IEnumType)">
+            <summary>
+            ExtendableEnum
+            </summary>
+            <param name="mdEnum"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.#ctor(System.String)">
+            <summary>
+            ExtendableEnum
+            </summary>
+            <param name="mdEnum"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.NewValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            NewValue
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.UpdateValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            UpdateValue
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.DeleteValue(System.String)">
+            <summary>
+            DeleteValue
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.CompareTo(System.Object)">
+            <summary>
+            CompareTo
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.Equals(System.Object)">
+            <summary>
+            Equals
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnum.ToString">
+            <summary>
+            ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ExtendableEnum.ID">
+            <summary>
+            枚举类型ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ExtendableEnum.Name">
+            <summary>
+            枚举类型名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ExtendableEnum.DisplayName">
+            <summary>
+            枚举类型显示名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ExtendableEnum.Discription">
+            <summary>
+            枚举类型描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ExtendableEnum.EnumValues">
+            <summary>
+            枚举值集
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EnumValue">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValue.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            EnumValue
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="displayName"></param>
+            <param name="description"></param>
+            <param name="isSystem"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValue.ToString">
+            <summary>
+            ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.Container">
+            <summary>
+            Container
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.Value">
+            <summary>
+            Value
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.DisplayName">
+            <summary>
+            DisplayName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValue.IsSystem">
+            <summary>
+            IsSystem
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.EnumValueCollection">
+            <summary>
+            枚举值集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValueCollection.#ctor">
+            <summary>
+            EnumValueCollection
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValueCollection.Add(UFSoft.UBF.Business.EnumValue)">
+            <summary>
+            Add
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValueCollection.Remove(System.String)">
+            <summary>
+            Remove
+            </summary>
+            <param name="valueName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValueCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            CopyTo
+            </summary>
+            <param name="from"></param>
+            <param name="i"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.EnumValueCollection.GetEnumerator">
+            <summary>
+            GetEnumerator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValueCollection.Item(System.Int32)">
+            <summary>
+            this[int index]
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValueCollection.Item(System.String)">
+            <summary>
+            his[string name]
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValueCollection.Count">
+            <summary>
+            Count
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValueCollection.IsSynchronized">
+            <summary>
+            IsSynchronized
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.EnumValueCollection.SyncRoot">
+            <summary>
+            SyncRoot
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ExtendableEnumManager">
+            <summary>
+            可扩展枚举管理门面(Facade)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnumManager.GetExtendAttributes(UFSoft.UBF.MD.Key)">
+            <summary>
+            加载所有的扩展枚举对象.
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnumManager.GetAllAttributes(UFSoft.UBF.MD.Key)">
+            <summary>
+            加载所有的扩展枚举对象.
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnumManager.AddNewEnumValue(UFSoft.UBF.Business.EnumValue)">
+            <summary>
+            增加新枚举值
+            </summary>
+            <param name="enumtype"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnumManager.DeleteEnumValue(UFSoft.UBF.Business.EnumValue)">
+            <summary>
+            删除枚举值
+            </summary>
+            <param name="enumtype"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ExtendableEnumManager.UpdateEnumValue(UFSoft.UBF.Business.EnumValue)">
+            <summary>
+            更新新枚举值
+            </summary>
+            <param name="enumtype"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Business.PropertyTypeBase">
+            <summary>
+            值对象基类.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Business.PropertyTypeBase.MDType">
+            <summary>
+            元数据访问
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForRead(System.Object)">
+            <summary>
+            对任意对象加读锁，默认加锁失败抛出异常
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForRead(System.Object,System.String)">
+            <summary>
+            对任意对象加读锁，默认加锁失败抛出异常
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="description">指定加锁的意图信息。</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForRead(System.Object,System.Boolean)">
+            <summary>
+            对任意对象加读锁
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForRead(System.Object,System.Boolean,System.String)">
+            <summary>
+            对任意对象加读锁
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <param name="description">指定加锁的意图信息。</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForWrite(System.Object)">
+            <summary>
+            对任意对象加写锁，默认加锁失败抛出异常
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForWrite(System.Object,System.String)">
+            <summary>
+            对任意对象加写锁，默认加锁失败抛出异常
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="description">指定加锁的意图信息。</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForWrite(System.Object,System.Boolean)">
+            <summary>
+            对任意对象加写锁
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.ObjectLockForWrite(System.Object,System.Boolean,System.String)">
+            <summary>
+            对任意对象加写锁
+            </summary>
+            <param name="obj">需要加锁的对象</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <param name="description">指定加锁的意图信息。</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.BatchLockForRead(System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey})">
+            <summary>
+            批量加读锁（默认加锁失败抛出异常）
+            </summary>
+            <param name="entityList">需要加锁的实体键值列表</param>
+            <returns>实体锁列表</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.BatchLockForRead(System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey},System.Boolean)">
+            <summary>
+            批量加读锁
+            </summary>
+            <param name="entityList">需要加锁的实体键值列表</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁列表</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.BatchLockForWrite(System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey})">
+            <summary>
+            批量加写锁
+            </summary>
+            <param name="entityList">加锁实体键值列表(默认加锁失败抛出异常)</param>
+            <returns>实体锁列表</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.BatchLockForWrite(System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey},System.Boolean)">
+            <summary>
+            批量加写锁
+            </summary>
+            <param name="entityList">加锁实体键值列表</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁列表</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.BatchUnlock(System.Collections.Generic.List{UFSoft.UBF.AopFrame.Lock.EntityLock})">
+            <summary>
+            批量解锁
+            </summary>
+            <param name="lockList">锁的列表</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.LockForRead(UFSoft.UBF.Business.BusinessEntity.EntityKey)">
+            <summary>
+            加读锁，默认情况加锁失败抛出异常。
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.LockForRead(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean)">
+            <summary>
+            加读锁，默认情况加锁失败抛出异常；
+            若设置不抛出异常，则返回null对象
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.LockForWrite(UFSoft.UBF.Business.BusinessEntity.EntityKey)">
+            <summary>
+            加写锁，默认情况加锁失败抛出异常。     
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <returns>实体锁</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.LockForWrite(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean)">
+            <summary>
+            加写锁，默认情况加锁失败抛出异常；
+            若设置不抛出异常，则返回null对象
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.Unlock(UFSoft.UBF.AopFrame.Lock.EntityLock)">
+            <summary>
+            解锁
+            </summary>
+            <param name="key">实体锁</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.QueryLockOwners(UFSoft.UBF.Business.BusinessEntity.EntityKey)">
+            <summary>
+            查询该实体对象的锁信息
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <returns>实体锁数组</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.QueryLockOwners(System.Object)">
+            <summary>
+            查询该对象的锁信息
+            </summary>
+            <param name="entityKey">任意对象</param>
+            <returns>锁数组</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManager.QueryLocks">
+            <summary>
+            查询当前用户的实体锁信息
+            </summary>
+            <returns>实体锁数组</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManagerForPL.LockForWrite(UFSoft.UBF.Business.BusinessEntity.EntityKey)">
+            <summary>
+            加写锁，默认情况加锁失败抛出异常。     
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <returns>实体锁</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManagerForPL.LockForWrite(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean)">
+            <summary>
+            加写锁，默认情况加锁失败抛出异常；
+            若设置不抛出异常，则返回null对象
+            </summary>
+            <param name="entityKey">实体对象的EntityKey</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Lock.EntityLockManagerForPL.Unlock(UFSoft.UBF.AopFrame.Lock.EntityLock)">
+            <summary>
+            解锁
+            </summary>
+            <param name="key">实体锁</param>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessConfigParm.NeedValidChangSet">
+            <summary>
+            是否需要效验在同一个session中不允许在inserting/inserted/updating/updated事件中改变changset中的数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessConfigParm.NeedExceptionWrap">
+            <summary>
+            标志是否需要封装Exception，默认为true
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessConfigParm.SupportImpressibleAttrLog">
+            <summary>
+            是否支持对敏感字段的变化记录日志
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessConfigParm.NeedCheckRefExist">
+            <summary>
+            效验是否跨组件关联对象存在，在Business层的 Validate基类方法中触发
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.BusinessConfigParm.SupportEntityAtrsInCache">
+            <summary>
+            字典表的配置，是否支持基础实体的部分属性cache
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetNewID">
+            <summary>
+            生成一个新的id，注意这个id是按数据库指定的分配长度取一批记录再递增产生ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetNewIDByStep">
+            <summary>
+            生成一个新的id,注意这个id是按一个分配长度产生ID，即随取随用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetGrantEntitys(System.String,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            返回有权限的ID集合，针对同一类型的实体
+            </summary>
+            <param name="EntityFullName"></param>
+            <param name="IDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetRefEntityList(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Boolean)">
+            <summary>
+             for CBO,检查当前实体是否被别人引用
+            </summary>
+            <param name="key">EntityKey key:需要查找引用关系的实体key</param>
+            <param name="IsFindAll">是否查找同一引用实体的全部实例,当为true时,
+            返回所有引用当前实体的实体key集合;false时,返回由各个引用类型下的一个
+            实例所组成的实体key集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.AssociationContains(UFSoft.UBF.MD.EntityModel.IAssociationCollection,UFSoft.UBF.MD.EntityModel.IAssociation)">
+            <summary>
+            判断关系集合中是否包含关系   xum  20100512  获取TopParentAssociations时，会重复获取关系，所以必须进一步比较
+            </summary>
+            <param name="assoColletion"></param>
+            <param name="that"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.CheckExistRefObj(UFSoft.UBF.Business.Entity)">
+            <summary>
+            检查当前实体是否被别人引用，返回第一个被同一类对象引用集合
+            </summary>
+            <param name="po"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(System.String)">
+            <summary>
+            取得实体的全名资源
+            </summary>
+            <param name="entityFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(System.String,System.String)">
+            <summary>
+            取实体普通属性资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetPropertyResource(System.String,System.String)">
+            <summary>
+            取实体属性类型资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEnumResource(System.String)">
+            <summary>
+            取枚举的名称资源
+            </summary>
+            <param name="EnumFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEnumResource(System.String,System.String)">
+            <summary>
+            取（可扩展）枚举的资源
+            </summary>
+            <param name="EnumFullName"></param>
+            <param name="enumItemName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetNameForEnumValue(System.String,System.Int32)">
+            <summary>
+            通过枚举全名和枚举项的ｖａｌｕｅ返回枚举项当前语种下该枚举项的Ｎａｍｅ
+            </summary>
+            <param name="EnumFullName"></param>
+            <param name="enumValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.CheckExistsByIDandVersion(System.Collections.Generic.List{UFSoft.UBF.Business.Tool.EntityWithVersion})">
+            <summary>
+            根据id，version 判断对象是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Tool.ExtendHelpAPI.ExecOql(UFSoft.UBF.View.Query.GlobalizationContext,System.String,UFSoft.UBF.PL.OqlParam[])">
+            <summary>
+             直接执行oql,无返回值,无主实体对象，需要完整的oql语句，应用一些比较特殊的场景：如用oql删除
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Tool.EntityWithVersion.id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Tool.EntityWithVersion.entityType">
+            <summary>
+            实体类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Tool.EntityWithVersion.sysVersion">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.Tool.EntityWithVersion.isExists">
+            <summary>
+            是否存在
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Business.ValidationResult">
+            <summary>
+            合法性检查的检查结果
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ValidationResult.Success">
+            <summary>
+            成功的检查结果
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Business.ValidationResult.Failed">
+            <summary>
+            失败的检查结果
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.ValidationResult.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="success">是否成功</param>
+        </member>
+        <member name="P:UFSoft.UBF.Business.ValidationResult.IsSuccess">
+            <summary>
+            是否成功
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Business.Validator">
+            <summary>
+            合法性检查器的抽象基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Validator.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Validator.Validate">
+            <summary>
+            合法性检查
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Validator.Validate(UFSoft.UBF.Business.IEntity,UFSoft.UBF.MD.EntityModel.IAttribute,System.Object,System.Object)">
+            <summary>
+            检查实体的属性
+            </summary>
+            <param name="entity">实体</param>
+            <param name="attribute">属性</param>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Validator.Validate(UFSoft.UBF.MD.EntityModel.IAttribute,System.Object,System.Object)">
+            <summary>
+            检查属性
+            </summary>
+            <param name="attr">属性</param>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Validator.CallValidate(UFSoft.UBF.MD.EntityModel.IValidator)">
+            <summary>
+            调用合法性检查
+            </summary>
+            <param name="validator"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

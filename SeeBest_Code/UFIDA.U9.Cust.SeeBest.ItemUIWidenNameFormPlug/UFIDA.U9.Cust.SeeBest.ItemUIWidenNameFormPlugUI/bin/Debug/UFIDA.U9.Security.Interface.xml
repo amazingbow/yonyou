@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Security.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.Security.Interface.IAuthorityService">
+            <summary>
+            BP服务接口类
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.GetBPListAuthority(System.Int64,System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            批量获取BP权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <param name="bpList">bpList</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.GetBPAuthority(System.Int64,System.Int64,System.String)">
+            <summary>
+            获取单个BP权限
+            </summary>
+            <param name="bpID">bpID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.GetAllBPAuthority(System.Int64,System.Int64)">
+            <summary>
+            获得用户所有BP权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.GetAllBEAuthority(System.Int64,System.Int64,System.String)">
+            <summary>
+            获得用户所有BP权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.GetBEAttributeAuthority(System.Int64,System.Int64,System.String)">
+            <summary>
+            获得用户BE属性权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <param name="context">上下文</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsTargetOrgUserEnabled(System.Int64)">
+            <summary>
+            判断目标组织下，当前用户是否可以使用.(新增接口)
+            </summary>
+            <param name="targetOrgID">目标组织ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsUrlValidata(System.String,System.Int64,System.Int64,System.String@)">
+            <summary>
+            检查url是否有效
+            </summary>
+            <param name="url">URL</param>
+            <param name="orgID">OrgID</param>
+            <param name="userID">UserID</param>
+            <param name="errorStr">errorStr</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsUrlValidata(System.String,System.Int64,System.Int64)">
+            <summary>
+            检查url是否有效
+            </summary>
+            <param name="url">URL</param>
+            <param name="orgID">OrgID</param>
+            <param name="userID">UserID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsFormValidata(System.String,System.Int64,System.Int64)">
+            <summary>
+            检查Form是否有效
+            </summary>
+            <param name="formUID">formUID</param>
+            <param name="orgID">OrgID</param>
+            <param name="userID">UserID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsActionValidata(System.String,System.Int64,System.Int64,System.String)">
+            <summary>
+            检查Action是否有权
+            </summary>
+            <param name="name">name</param>
+            <param name="orgID">OrgID</param>
+            <param name="userID">UserID</param>
+            <param name="modelID">ModelID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsUIModelObjValidata(System.String,System.Int64,System.Int64,System.String)">
+            <summary>
+            检查UIField或UIAction是否有权
+            </summary>
+            <param name="name">name</param>
+            <param name="orgID">OrgID</param>
+            <param name="userID">UserID</param>
+            <param name="modelID">ModelID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.AppIsStart(System.Int64)">
+            <summary>
+            应用被启用
+            </summary>
+            <param name="orgID">orgID</param>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.CheckLicense(System.Int64,System.String,System.String,System.String@)">
+            <summary>
+            检查License许可数
+            </summary>
+            <param name="appID">appID</param>
+            <param name="sessionID">sessionID</param>
+            <param name="ip">ip</param>
+            <returns>bool</returns>
+            <param name="errorStr">errorStr</param>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.CheckFormIndividuation(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            检查个性化权限
+            </summary>
+            <param name="orgID">orgID</param>
+            <param name="userID">userID</param>
+            <param name="formID">formID</param>
+            <returns>FormInvInfo</returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsAppStart(System.Int32,System.Int64)">
+            <summary>
+            APP是否启用
+            </summary>
+            <param name="AppID"></param>
+            <param name="orgID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsUserInRole(System.String,System.Int64,System.Int64)">
+            <summary>
+            检查用户是否具有角色
+            </summary>
+            <param name="roleCode"></param>
+            <param name="orgID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Security.Interface.IAuthorityService.IsNeedApproval(System.Int64,System.Int64,System.String,System.Int64)">
+            <summary>
+            是否可审核单据
+            </summary>
+            <param name="orgID"></param>
+            <param name="userID"></param>
+            <param name="entityFullName"></param>
+            <param name="entityID"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFIDA.U9.Security.Interface.ModelSecurityType.Empty">
+            <summary>
+            无权限
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Security.Interface.ModelSecurityType.NoVisible">
+            <summary>
+            不显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Security.Interface.ModelSecurityType.Visible_NoEnable">
+            <summary>
+            显示，不可编辑
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Security.Interface.ModelSecurityType.Visible_Enable">
+            <summary>
+            显示，可编辑
+            </summary>
+        </member>
+    </members>
+</doc>
