@@ -1109,12 +1109,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 				this.lblSpecialApplyDocType154 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblSpecialApplyDocType154", "", "True", "True", "Right", 150, 20, 4, 0, 1, 1, "100","aa348215-bed5-44e6-a81f-8f5629648e17","87a6d953-03d9-4dbb-868d-5ce26c1524cb");
 
-			UIControlBuilder.SetLabelFormReference(this.lblSpecialApplyDocType154,"dc378576-49be-43be-b4e5-577f0a1528ea",true,992, 504);
-			//foreach input parameter
-	    	ScriptBuilder.BuildFormLinkInScript(this.lblSpecialApplyDocType154,"lblSpecialApplyDocType154", new FormLinkInParam[]{new FormLinkInParam("ID","","Key","SpecialApplyDocType154",1), });
-			//foreach output set data
-	    	ScriptBuilder.BuildFormLinkOutScript(this.lblSpecialApplyDocType154,"lblSpecialApplyDocType154", new FormLinkOutParam[]{new FormLinkOutParam("ID","","Key","SpecialApplyDocType154"),new FormLinkOutParam("Code","","Value","SpecialApplyDocType154"),new FormLinkOutParam("Name","","Text","SpecialApplyDocType154"), });
-		
+
 								
 
 		
@@ -1126,7 +1121,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.SetReferenceControlRefInfo(this.SpecialApplyDocType154,"8dcb9af8-0bad-45d2-bff6-001388b09f77", 580,408, "Name","Code","ID", this.Model.SpecialApplyBE.FieldSpecialApplyDocType_Code,this.Model.SpecialApplyBE.FieldSpecialApplyDocType_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.SpecialApplyDocType154,"SpecialApplyDocType154",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","ShortName",""),new ReferenceOutputParam("","ConfirmType",""),new ReferenceOutputParam("","ApproveType",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.SpecialApplyDocType154,"SpecialApplyDocType154",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","Description",""),new ReferenceOutputParam("","ConfirmType",""),new ReferenceOutputParam("","ApproveType",""),});
 				
 
 		

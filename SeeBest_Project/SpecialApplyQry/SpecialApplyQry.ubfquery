@@ -1,7 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<QueryComponent id="ef4481b3-e2d6-477b-b74d-d7300d92672e" name="SpecialApplyQry" displayName="SpecialApplyQry" description="" help="" QueryType="List" QueryURI="32453245-3dab-4742-9c41-bd96f9a0032f" QuerySourceFullName="" UIViewDragType="DragUp" RefInfoLoadType="Cache">
-  <BasicInfo id="bb222e44-553f-40e0-b925-19dd7fd3b6dc" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
-  <BPRefInfo id="6ed24ce0-816b-4905-b037-d2f64150b155" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
-  <UIRefInfo id="54e231e5-8c4d-48ac-8efc-5ec33d3e5840" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="1a0e2da9-db21-4013-84a1-684428d2c6b3" UIFormItemID="1a5737b8-0b84-4a58-b48c-6748122b8147" UIModelID="9f37fe20-fd0b-4ed2-8f95-74090ef4df16" />
-  <DefaultCase />
+<QueryComponent id="506826d0-2ff8-43e4-9766-a1ef6351dabb" name="SpecialApplyQry" displayName="SpecialApplyQry" description="" help="" QueryType="List" QueryURI="a6e804b7-7d16-4c3b-aa42-ea8a40327629" QuerySourceFullName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE" UIViewDragType="DragDown" RefInfoLoadType="Cache">
+  <BasicInfo id="76e25612-4e2c-4b84-aa49-c989068e96ac" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="8ecabb01-29bb-4be5-932e-8d63fc105246" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
+  <UIRefInfo id="c4505dbc-2216-4232-8853-f8b9b21b804a" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="35298877-3d38-4d84-8865-cc9c3e2be385" UIFormItemID="5c5326a2-6e62-436e-a46d-c271ef9053fe" UIModelID="ded2757c-69de-4d0d-81ca-da47cf0e6866" />
+  <FilterDefines>
+    <FilterDefine id="6ac1821a-4476-4e05-a3ce-25d189d9c073" name="AdvCode" displayName="AdvCode" description="" help="" ParentName="" Alias="AdvCode" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="e70ea9f6-e290-40d8-b3f2-6d1966c0f3ca" name="ApplyDept" displayName="ApplyDept" description="" help="" ParentName="" Alias="ApplyDept" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="731a23d5-1339-42a2-9917-1ea8389f038c" name="ApplyDate" displayName="ApplyDate" description="" help="" ParentName="" Alias="ApplyDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="cd81885e-3dd3-4e28-8af9-7540cee930cd" name="SpecialDesignStyle" displayName="SpecialDesignStyle" description="" help="" ParentName="" Alias="SpecialDesignStyle" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="44741460-7148-45cd-8799-45d03568de27" name="SpecialSizeBE" displayName="SpecialSizeBE" description="" help="" ParentName="" Alias="SpecialSizeBE" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Catalog" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="80b8c775-a375-43e1-8245-0fd2ee878a88" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="36cf0874-c6a6-4375-859b-252e013ab14f" name="AdvCode" displayName="AdvCode" description="" help="" ParentName="" Alias="AdvCode" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="66dbe7ee-9808-44a3-918d-066af136fcd7" name="ApplyDept.Code" displayName="ApplyDept.Code" description="" help="" ParentName="ApplyDept" Alias="ApplyDept_Code" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="ad5f04ff-fde1-4f22-99ed-219e454c4daf" name="ApplyDept.Name" displayName="ApplyDept.Name" description="" help="" ParentName="ApplyDept" Alias="ApplyDept_Name" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="d8d920ba-bc12-4a2f-a45e-dbbd31c48b77" name="Applier" displayName="Applier" description="" help="" ParentName="" Alias="Applier" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="9d6c8c8d-364d-4141-92ca-be9555766bcd" name="ApplyDate" displayName="ApplyDate" description="" help="" ParentName="" Alias="ApplyDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="1a66eae4-e5d7-4543-a69b-976c644ac235" name="CustConterName" displayName="CustConterName" description="" help="" ParentName="" Alias="CustConterName" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="b3719c84-829f-4d6d-91d9-643ca1feadb1" name="CustName" displayName="CustName" description="" help="" ParentName="" Alias="CustName" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="967e7114-f41b-4f62-89d9-269ae57aebaa" name="CustPhone" displayName="CustPhone" description="" help="" ParentName="" Alias="CustPhone" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="ee37861b-6c3c-49fc-8e68-8f500ee273f1" name="CustAddress" displayName="CustAddress" description="" help="" ParentName="" Alias="CustAddress" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="5c64fc87-c43b-4354-8b1e-0512ac518834" name="SpecialDesignStyle" displayName="SpecialDesignStyle" description="" help="" ParentName="" Alias="SpecialDesignStyle" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="cd45fab7-d40c-4ef9-9b39-7828f88dcc1a" name="SpecialApplyDocType" displayName="SpecialApplyDocType" description="" help="" ParentName="" Alias="SpecialApplyDocType" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="8e3e7fff-727e-441b-b193-1ff50fdc79cf" name="Status" displayName="Status" description="" help="" ParentName="" Alias="Status" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="6972f6e8-db97-45ce-ab76-a2ce11872790" name="ApplyDept.Code" displayName="" description="" help="" ParentName="ApplyDept" Alias="ApplyDept_Code" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="dd13d35e-4cf1-49b9-b448-f4ca97cf804c" name="ApplyDate" displayName="" description="" help="" ParentName="" Alias="ApplyDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="1455a7b3-368c-422b-a935-dce6bb4a0841" name="AdvCode" displayName="编号" description="" help="" />
+      <BasicFilter id="5252335d-09a4-4bbc-9ef2-90c6a60b1e90" name="ApplyDept" displayName="办事处" description="" help="" />
+      <BasicFilter id="21ee82e1-ab99-4af4-9575-2984be224cba" name="ApplyDate" displayName="下单日期" description="" help="" />
+      <BasicFilter id="02c1817c-95f5-4245-8ff4-38e9c3990341" name="SpecialDesignStyle" displayName="专柜设计风格" description="" help="" />
+      <BasicFilter id="fe27df93-915e-4536-8d9b-faf3b5f83b8f" name="SpecialSizeBE" displayName="专柜尺寸" description="" help="" />
+      <BasicFilter id="e12d4060-b4dd-4174-85de-ed75d60be57f" name="Status" displayName="状态" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="85f19cf0-57e7-4535-a9d4-00dc224f17c3" name="AdvCode" displayName="编号" description="" help="" />
+      <Column id="ef57f58f-e160-41ee-8692-d146d151fe25" name="ApplyDept.Code" displayName="办事处.编码" description="" help="" />
+      <Column id="daea050c-3ef7-4801-b028-9f5393a3ba2b" name="ApplyDept.Name" displayName="办事处.名称" description="" help="" />
+      <Column id="9f1788bd-1c99-4412-836d-c567297248a3" name="Applier" displayName="下单人" description="" help="" />
+      <Column id="b2bbb7e5-fa35-42bd-8025-96efd8726315" name="ApplyDate" displayName="下单日期" description="" help="" />
+      <Column id="3efe82c0-1208-4f8d-83ae-ae669cace340" name="CustConterName" displayName="客户店名" description="" help="" />
+      <Column id="e09a04fe-7033-4763-8f14-2ad35efa7cab" name="CustName" displayName="客户名称" description="" help="" />
+      <Column id="036a7c94-960f-4d7b-8a33-6ba0db74eb47" name="CustPhone" displayName="客户电话" description="" help="" />
+      <Column id="b1f3f4e0-4bd4-4752-a79c-e39d30fe2c99" name="CustAddress" displayName="客户地址" description="" help="" />
+      <Column id="9a792722-cf6e-44d5-8097-9ed1dbf180fa" name="SpecialDesignStyle" displayName="专柜设计风格" description="" help="" />
+      <Column id="80733dbd-04fe-4d76-bbe0-bf51a9075e96" name="Status" displayName="状态" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="5e683572-eb17-4298-97e7-6ef42eb93284" name="ApplyDept.Code" displayName="" description="" help="" SortType="ASC" />
+      <Sort id="80261fc3-276b-41f8-86b5-8980862f9693" name="ApplyDate" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
 </QueryComponent>
