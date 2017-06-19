@@ -70,17 +70,17 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP
 				if (result == null)
 					return null ;
 		
-				List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDefData> listEntityList = new List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDefData>();
+				List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDefData> list = new List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDefData>();
 				foreach (UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDef obj in result)
 				{
 					if (obj == null)
 						continue;
 
 					UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.ReturnValueSetDefData resultdata = obj.ToEntityData();
-					listEntityList.Add(resultdata);
+					list.Add(resultdata);
 				}
-				DoSerializeKey(listEntityList, "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.GetValueSetInfo");
-				return listEntityList;
+				DoSerializeKey(list, "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.GetValueSetInfo");
+				return list;
 
 	        }
 			catch (System.Exception e)

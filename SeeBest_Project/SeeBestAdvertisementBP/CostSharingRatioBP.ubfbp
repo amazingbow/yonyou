@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="b5922268-b56d-4731-b2da-74e0c25153fa" name="CostSharingRatioBP" displayName="CostSharingRatioBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.SeeBestAdvertisementBP">
+  <Namespace id="55118111-4110-4a15-81a2-dda4e1e0acd0" name="UFIDA.U9.Cust.SeeBestAdvertisementBP.CostSharingRatioBP" displayName="UFIDA.U9.Cust.SeeBestAdvertisementBP.CostSharingRatioBP" description="" help="">
+    <PropertyType id="4fe6d41a-3b37-4911-afc0-1bd5458de1ce" name="CostSharingRationDTO" displayName="费用分摊比例DTO" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="58f54e8e-561d-421b-920a-9a91b7bfaf37" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="92574b19-9205-4339-badb-69f4a6ec9fe6" name="ID" displayName="ID" description="" help="费用分摊比例DTO.Misc.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="a1321866-48f5-42a7-978e-19fa018beecc" name="SysVersion" displayName="SysVersion" description="" help="费用分摊比例DTO.Misc.SysVersion" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="00b9681c-9dd8-45ce-9db8-9517d2da2d87" name="Ratio" displayName="总部与事业部费用分摊比例" description="" help="费用分摊比例DTO.Misc.总部与事业部费用分摊比例" dataTypeID="91031687-94bb-4988-a939-df7bf999ef4f" isKey="False" defaultValue="0" length="9" precise="24" scale="9" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <Operation id="809cfbe3-c425-483c-aa6a-2548fc221d22" name="GetFirstData" displayName="获取第一条数据" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="4fe6d41a-3b37-4911-afc0-1bd5458de1ce" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Implements>
+        <Operation id="fd6c38bf-ecdd-416f-8663-2547cb878322" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="378d45b4-375d-4b5d-8748-abc9575c26b3" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="87122527-fe9b-4aa8-8662-c848dac13643" name="CostSharingRatioBP" displayName="CostSharingRatioBP">
+      <Class Editable="True" ID="f87c6cc1-d9d3-491d-b0c3-292b2e74a57b" Type="Operation" ADID="809cfbe3-c425-483c-aa6a-2548fc221d22">
+        <Location X="92" Y="31" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="c32b7c19-f609-499c-917d-b1c71b009b59" Type="PropertyType" ADID="4fe6d41a-3b37-4911-afc0-1bd5458de1ce">
+        <Location X="252" Y="33" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

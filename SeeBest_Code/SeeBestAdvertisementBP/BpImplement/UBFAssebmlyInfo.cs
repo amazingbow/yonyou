@@ -13,4 +13,8 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 		
 		[assembly: UBFComponent("382425e5-8d7e-444a-b656-929ea6b704f2", "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP", "AdvApplyBP")]
 	
+ 
+		
+		[assembly: UBFComponent("b5922268-b56d-4731-b2da-74e0c25153fa", "UFIDA.U9.Cust.SeeBestAdvertisementBP.CostSharingRatioBP", "CostSharingRatioBP")]
+	
 

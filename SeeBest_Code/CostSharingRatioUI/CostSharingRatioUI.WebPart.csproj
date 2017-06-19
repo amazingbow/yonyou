@@ -31,7 +31,17 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-	<Import Project="CostSharingRatioUI.WebPart.target" />  
-
+  <ItemGroup>
+    <Reference Include="UFIDA.U9.Cust.SeeBestAdvertisementBP">
+      <HintPath>..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.SeeBestAdvertisementBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.SeeBestAdvertisementBP.Agent">
+      <HintPath>..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.SeeBestAdvertisementBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Cust.SeeBestAdvertisementBP.Deploy">
+      <HintPath>..\..\..\..\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Cust.SeeBestAdvertisementBP.Deploy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="CostSharingRatioUI.WebPart.target" />
 </Project>
