@@ -76,7 +76,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //this.CurrentPart.NavigatePage("TestList", null);
             //this.ListClick_DefaultImpl(sender,e) ;	
 
-
+            this.CurrentPart.NavigatePage("UFIDA.U9.Cust.AdvApplyList.AdvApplyListURI", null);
             //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
             this.ListClick_DefaultImpl(sender, e);
         }

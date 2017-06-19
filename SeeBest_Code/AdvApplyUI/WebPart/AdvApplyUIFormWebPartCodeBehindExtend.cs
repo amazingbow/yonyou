@@ -22,8 +22,8 @@ using UFSoft.UBF.UI.Engine;
 using UFSoft.UBF.UI.MD.Runtime;
 using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
-using UFIDA.U9.Cust.AdvApplyListBP.AdvApplyOp.Proxy;
 using UFIDA.U9.UI.PDHelper;
+using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.Proxy;
 
 
 
