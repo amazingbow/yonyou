@@ -1,0 +1,1436 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.DrawBill</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.DrawBill.CaseColumn">
+            <summary>
+            方案字段
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseColumn.GetDefaultDataColumn">
+            <summary>
+            当CCMapping为空时返回Null
+            当CCMapping非空时，返回第一个非空值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseColumn.MergeFrom(UFSoft.UBF.DrawBill.CaseColumn)">
+            <summary>
+            从元数据同步更新
+            </summary>
+            <param name="mdColumn"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSys">
+            <summary>
+            是否为系统字段。即：在由设计器自创建，且不能被删除的字段，
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsCustomField">
+            <summary>
+            是否为用户自定义字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsRuntime">
+            <summary>
+            是否为运行态创建的
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsQuickFilter">
+            <summary>
+            是否为快速过滤条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Sequence">
+            <summary>
+            列表显示的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Name">
+            <summary>
+            设计期显示用名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.AliasName">
+            <summary>
+            查询数据时统一使用的别名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.DisplayName">
+            <summary>
+            栏目显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.FilterDisplayName">
+            <summary>
+            共享条件显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsReadOnly">
+            <summary>
+            是否只读（不允许编辑数据）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFixed">
+            <summary>
+            是否固定列，固定列指列表中必须有的列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.DataType">
+            <summary>
+            原始的数据，如int64，实体……
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.FilterDataType">
+            <summary>
+            条件的数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.ColumnType">
+            <summary>
+            在拉式生单中控制控件类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsGlobalized">
+            <summary>
+            是否多语字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.NumericType">
+            <summary>
+            数值显示的类型，按百分比，小数，分数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Point">
+            <summary>
+            小数点位数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsMappingVisible">
+            <summary>
+            映射关系是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.DataColumnMapping">
+            <summary>
+            字段映射
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Item(System.Int32)">
+            <summary>
+            根据数据源位置index定位CaseDataColumn
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Item(System.Int64)">
+            <summary>
+            根据数据源ID来定位CaseDataColumn
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.Item(UFSoft.UBF.DrawBill.CaseDataSource)">
+            <summary>
+            根据数据源来定位CaseDataColumn
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSum">
+            <summary>
+            是否合计，在列表中显示合计值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFrozen">
+            <summary>
+            是否冻结列，列表中固定显示，靠前
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsDisplay">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsDisplayEnable">
+            <summary>
+            是否可以用于列表显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.AlwaysLoaded">
+            <summary>
+            是否为始终加载字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilter">
+            <summary>
+            该条件项是否启用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterEnable">
+            <summary>
+            是否可以选为条件项
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterMustExist">
+            <summary>
+            必须启用的条件项，即不可以勾掉的条件项
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterFixed">
+            <summary>
+            当前是否为固定条件（固定条件是指：其条件值是由开发人员从卡片画面转入，且不可修改其条件值）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterFixedEnable">
+            <summary>
+            是否可以为固定条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterShared">
+            <summary>
+            是否为共享条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterSharedEnable">
+            <summary>
+            是否可以作为共享条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterBuildWhereStr">
+            <summary>
+            是否参与生成查询数据的WHere子句
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.FilterSequence">
+            <summary>
+            查询条件中显示的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.FilterGroup">
+            <summary>
+            条件的分组信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsFilterNullable">
+            <summary>
+            是否允许录入空值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSort">
+            <summary>
+            是否已为排序项
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSortEnable">
+            <summary>
+            是否可以用于排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSortFixed">
+            <summary>
+            是否固定排序项，为True时，必定参与排序并在向导中显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsSortAsc">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.SortSequence">
+            <summary>
+            查询条件中排序项的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.GroupSummaryType">
+            <summary>
+            分组汇总类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.GroupSummaryEnable">
+            <summary>
+            是否充许做为分组汇总依据字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.GroupSummarySequence">
+            <summary>
+            汇总字段的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.GroupAlwaysLoad">
+            <summary>
+            汇总始终加载
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.IsGroupSumValue">
+            <summary>
+            汇总值栏目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumn.GroupFixColumn">
+            <summary>
+            汇总固定栏目
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseColumnFilter.Validate(UFSoft.UBF.DrawBill.CaseColumn,UFSoft.UBF.DrawBill.CaseDataColumn)">
+            <summary>
+            校验条件值合法性
+            </summary>
+            <param name="cc"></param>
+            <param name="dc"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnFilter.Values">
+            <summary>
+            值集
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnFilter.ValueType">
+            <summary>
+            条件值类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnFilter.IsEmpty">
+            <summary>
+            判断是否为空条件（只有一个条件值，并且为空串，也是空条件）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseFilterGroup.GetColumns">
+            <summary>
+            获取该分组下的条件，注意：是否共享条件与分组无关
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseFilterGroup.IsDefault">
+            <summary>
+            是否为默认分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseFilterGroup.Visible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.ID">
+            <summary>
+            UIReference的Container字段，用于参照控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.IDField">
+            <summary>
+            对应参照画面的ID的字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.CodeField">
+            <summary>
+            对应参照画面的Code的字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.NameField">
+            <summary>
+            对应参照画面的Name的字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.InputField">
+            <summary>
+            相对于UIGrid上参照控件绑定到View上InputField，也即该参照对应实体的CodeField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.DisplayField">
+            <summary>
+            相对于UIGrid上参照控件绑定到View上DisplayField，也即该参照对应实体的NameField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.QueryFieldType">
+            <summary>
+            用参照画面的哪个返回值字段做为拉单的查询条件，一般情况下是Code或Name
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.CustomInParams">
+            <summary>
+            自定义输入参数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnReference.RefConditions">
+            <summary>
+            参照画面的输入参数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.RefCondition">
+            <summary>
+            参照的条件参数（即输入参数）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.RefCondition.ParameterName">
+            <summary>
+            条件参照的参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.RefCondition.ParameterValue">
+            <summary>
+            当为关联参照时，为其他条件的名称;固定参照时为传入的参数值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.RefCondition.IsFixed">
+            <summary>
+            是否为固定条件参照
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.RefCondition.IsContext">
+            <summary>
+            是否采用“变量机制”，即系统上下文
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.RefCondition.QueryFieldType">
+            <summary>
+            用其他参照条件的哪个返回值字段，做为该参照参数的参数值，一般情况下是ID或Code
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseColumnValue.Type">
+            <summary>
+            包括常数和表达式两种
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.ID">
+            <summary>
+            动态生成的唯一值，可用于位置的键值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DataSourceID">
+            <summary>
+            数据源编号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Container">
+            <summary>
+            数据源对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.FilterDisplayName">
+            <summary>
+            条件项显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.AttributeName">
+            <summary>
+            属性名（相关于UIField.AttributeName，即取值表达式）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Expression">
+            <summary>
+            条件表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.WeakRefDSName">
+            <summary>
+            “弱引用”数据源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsReference">
+            <summary>
+            是否参照字段，todo:检查这个字段是否没用了
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.AliasName">
+            <summary>
+            别名，用于OQL中，如1+1 as x,则1+1为Expression属性，x为AliasName属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Filter">
+            <summary>
+            条件项，内有条件值及条件比较符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Enable">
+            <summary>
+            条件是否可用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.Visible">
+            <summary>
+            控制生单条件是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsNullable">
+            <summary>
+            是否允许为空，也即是否为“非改输项”
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DefaultValue">
+            <summary>
+            默认值，todo:检查这个属性已经没用了
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.ValueFromCreateBillFilter">
+            <summary>
+            是否从生单条件中取值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DataType">
+            <summary>
+            原始的数据，如int64，实体……
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DataTypeID">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.ReferenceInfo">
+            <summary>
+            如果本字段是一个参照字段，其参照信息在本属性中描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsFixCondition">
+            <summary>
+            todo:检查是否已经没用了
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DisplayFormat">
+            <summary>
+            显示日期字段时，使用DisplayFormat进行格式化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DynamicPrecisionType">
+            <summary>
+            动态精度控制方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DynamicPrecisionField">
+            <summary>
+            动态精度字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsRaiseFVCE">
+            <summary>
+            是否触发FilterValueChangedEvent（条件值变化事件）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsRaiseFOCE">
+            <summary>
+            是否触发FilterOperatorChangedEvent（条件比较符变化事件）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.IsFlexField">
+            <summary>
+            是否为弹性域字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumn.DefaultOperator">
+            <summary>
+            默认操作符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.CaseDataColumnCollection">
+            <summary>
+            字段映射关系集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataColumnCollection.Item(System.Int64)">
+            <summary>
+            根据数据源ID来定位
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.ID">
+            <summary>
+            ID号，唯一标识
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.DriverEntity">
+            <summary>
+            驱动实体
+            OQL的From部分，原则上只允许是实体的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.BizTypeName">
+            <summary>
+            数据来源的名称
+            业务大类的名称，用于界面上的显示本数据源的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.OriginalOPath">
+            <summary>
+            内置条件，可以在设计态指定，也可在运行态重新设定
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.FromOQLString">
+            <summary>
+            自定义的From子句，用于弱引用实体关联
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.ContinueOPath">
+            <summary>
+            继续选单条件，用于单拉的 再次选单时，保留前一次勾选的条件（一般为ID列表） v.CurrentFilter.OriginalOPath .OPath
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.ContinueType">
+            <summary>
+            继续选单类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.Hidden">
+            <summary>
+            隐藏数据源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.Visible">
+            <summary>
+            控制界面上是否要显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.Enable">
+            <summary>
+            在拉单元数据中已经不存在
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.FilterEnable">
+            <summary>
+            是否启用条件功能
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.Active">
+            <summary>
+            是否处于活动状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.OrgField">
+            <summary>
+            用于组织查询的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseDataSource.Sequence">
+            <summary>
+            数据源的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.WeakReferenceDataSource.MappingID">
+            <summary>
+            弱引用数据源的映射
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.WeakReferenceDataSource.Name">
+            <summary>
+            弱引用名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.WeakReferenceDataSource.TypeField">
+            <summary>
+            来源单据类型字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.WeakReferenceDataSource.IDField">
+            <summary>
+            来源单据ID字段
+            </summary>        
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.CaseObject">
+            <summary>
+            方案对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.GetFilterGroupByName(System.String)">
+            <summary>
+            根据名称得到条件分组
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.GetCreateBillGroupByName(System.String)">
+            <summary>
+            根据名称得到生单条件分组
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.GetAttribute(System.String)">
+            <summary>
+            获取附加信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.SetAttribute(System.String,System.Object)">
+            <summary>
+            设置附加信息
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.Clone">
+            <summary>
+            通过序列化与反序列化，来克隆CaseObject
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.MergeFrom(UFSoft.UBF.DrawBill.CaseObject)">
+            <summary>
+            从元数据同步更新
+            </summary>
+            <param name="mdObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.MergeFrom(UFSoft.UBF.DrawBill.CaseObject,System.String@)">
+            <summary>
+            从元数据同步更新
+            同步逻辑：
+            1、先同步Column中各DataColumns的位置，即按新模型（元数据）中数据源的位置，来重新排序该集合中元素的位置
+            2、同步DataSources
+            3、同步Colums(删除丢失映射关系的，并添加新的)，同时同步其中各CaseDataColumn的个性化信息
+            </summary>
+            <param name="mdObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseObject.CheckBeforeMerge(UFSoft.UBF.DrawBill.CaseObject,System.String@)">
+            <summary>
+            合并之的检查
+            </summary>
+            <param name="mdObject"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DefaultSharedFilterGroup">
+            <summary>
+            默认共享条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.UnSharedFilterGroup">
+            <summary>
+            非共享条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.MappingVersion">
+            <summary>
+            映射方案的版本号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.Version">
+            <summary>
+            拉单模型的版本号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.ID">
+            <summary>
+            数据库中的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.FilterTabVisible">
+            <summary>
+            选单条件页签是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.ColumnTabVisible">
+            <summary>
+            栏目页签是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.SortTabVisible">
+            <summary>
+            排序页签是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsDisplayCreateBillFilter">
+            <summary>
+            是否显示生单条件页签
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IncludedConditionTab">
+            <summary>
+            是否包含生单页签
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CreateBillFilterTabVisible">
+            <summary>
+            生单条件页签是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.MappingID">
+            <summary>
+            映射方案编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.MappingName">
+            <summary>
+            映射方案名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.MappingPath">
+            <summary>
+            映射方案所在组件的资源路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.SchemaID">
+            <summary>
+            个性化方案编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.SchemaName">
+            <summary>
+            个性化方案名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.MultiOrgFilter">
+            <summary>
+            跨组织条件字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CaseName">
+            <summary>
+            用户方案名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.OrgID">
+            <summary>
+            机构编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.UserID">
+            <summary>
+            用户编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsSystemCase">
+            <summary>
+            是否系统方案
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsDefault">
+            <summary>
+            是否当前用户的默认方案
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.SchemaType">
+            <summary>
+            用户方案类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CaseInfos">
+            <summary>
+            方案列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CaseSeq">
+            <summary>
+            用户方案的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.Title">
+            <summary>
+            方案名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.Columns">
+            <summary>
+            字段集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DataSources">
+            <summary>
+            数据源集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DataSourceMultiSelect">
+            <summary>
+            数据源是否为多选模式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CreateBillFilters">
+            <summary>
+            生意条件集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsGroupSummaryEnable">
+            <summary>
+            分组汇总是否可用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsDefaultFlexFixedFilterEnable">
+            <summary>
+            弹性域是否默认为固定条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.QuickFilter">
+             <summary>
+            二次过滤条件
+             </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.QuickFilterStatus">
+            <summary>
+            二次过滤条件状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.QuickSort">
+            <summary>
+            表头排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.QuickSortStatus">
+            <summary>
+            表头排序状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.IsFilterGroupsEnable">
+            <summary>
+            是否启用分组方式布局
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.FilterGroups">
+            <summary>
+            条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CreateBillFilterGroups">
+            <summary>
+            生单条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DefaultFilterGroup">
+            <summary>
+            基本条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DefaultCreateBillFilterGroup">
+            <summary>
+            默认生单条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.ContinueType">
+            <summary>
+            继续选单类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.ContinueColumn">
+            <summary>
+            按哪个字段做继续选单 ，即 拼接成 该字段 in (IDs)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.ContinueIDs">
+            <summary>
+            继续选单的 ID值 列表，之间用“逗号”分隔，如“10001,10002”
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.TempTable">
+            <summary>
+            存在临时表名时，表示已经创建数据表，为空时应该创建
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.UseTempTable">
+            <summary>
+            后台加载数据时，是否使用临时表的方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.PageInfo">
+            <summary>
+            分页加载相关信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.DataState">
+            <summary>
+            记录集状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseObject.CustomParams">
+            <summary>
+            用于存储BP后事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseInfo.GetAttribute(System.String)">
+            <summary>
+            获取附加信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CaseInfo.SetAttribute(System.String,System.Object)">
+            <summary>
+            设置附加信息
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.ID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.UserID">
+            <summary>
+            当前用户ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.UserCode">
+            <summary>
+            当前用户编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.UserName">
+            <summary>
+            当前用户名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.OrgID">
+            <summary>
+            组织ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.OrgCode">
+            <summary>
+            组织编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.OrgName">
+            <summary>
+            组织名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.SchemaType">
+            <summary>
+            方案类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.Title">
+            <summary>
+            方案标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CaseInfo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.Sequence">
+            <summary>
+            列表显示的顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.Name">
+            <summary>
+            设计期显示用名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.DataType">
+            <summary>
+            原始的数据，如int64，实体……
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.DataTypeID">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.ControlType">
+            <summary>
+            在拉式生单中控制控件类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.IsSplit">
+            <summary>
+            是否为分单条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.IsNullable">
+            <summary>
+            是否允许录入空值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.Enable">
+            <summary>
+            控制生单条件是否可用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.ValueType">
+            <summary>
+            条件值类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.Visible">
+            <summary>
+            控制生单条件是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilter.FilterGroup">
+            <summary>
+            生单条件分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilterGroup.IsDefault">
+            <summary>
+            是否为默认分组
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.CreateBillFilterGroup.Visible">
+            <summary>
+            是否可见
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetTodayValue">
+            <summary>
+            今天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetYesterdayValue">
+            <summary>
+            昨天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetTomorrowValue">
+            <summary>
+            明天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLast3DaysValue">
+            <summary>
+            前三天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNext3DaysValue">
+            <summary>
+            后三天
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLast1WeekValue">
+            <summary>
+            前一周
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNext1WeekValue">
+            <summary>
+            后一周
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLast2WeeksValue">
+            <summary>
+            前两周
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNext2WeeksValue">
+            <summary>
+            后两周
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLast1MonthValue">
+            <summary>
+            前一月
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNext1MonthValue">
+            <summary>
+            后一月
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLast1QuarterValue”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNext1QuarterValue">
+            <summary>
+            后一季
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetLastYearValue">
+            <summary>
+            上年度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.CreateBillFilterVariantDateConverter.GetNextYearValue">
+            <summary>
+            下年度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.FilterValueType">
+            <summary>
+            条件值类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.FilterValueType.InputValue">
+            <summary>
+            输入的条件值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.FilterValueType.Expression">
+            <summary>
+            字段之间的比较表达式
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.FilterValueType.Variable">
+            <summary>
+            条件变量，目前只处理日期型条件变量
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.FilterValueType.Context">
+            <summary>
+            上文条件值，V2.0新增
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.DynamicPrecisionType.StereoType">
+            <summary>
+            使用精度版型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.DynamicPrecisionType.Direct">
+            <summary>
+            直接指向精度控制字段
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.DynamicPrecisionType.LookUp">
+            <summary>
+            参考其他字段精度设置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.QuickFilterStatus">
+            <summary>
+            二次过滤条件状态
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.QuickSortStatus">
+            <summary>
+            表头排序状态
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.BatchType.All">
+            <summary>
+            返回全部数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.BatchType.Empty">
+            <summary>
+            返回空表
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.BatchType.None">
+            <summary>
+            默认方案，按页面大小返回数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.SchemaType.Private">
+            <summary>
+            0 - 私有方案
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DrawBill.SchemaType.Public">
+            <summary>
+            1 - 共享方案
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.PageSplitPolicy.PageSize">
+            <summary>
+            每页尺寸,默认20
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DrawBill.PageSplitPolicy.PageIndex">
+            <summary>
+            当前页号，从零起
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DrawBill.UtilXml">
+            <summary>
+            Utilities methods to simplify dealing with  DOM XML parsing
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.#ctor">
+            <summary>
+            Since this class provides only static methods, make the default constructor private to prevent 
+            instances from being created with "new UtilXml()"
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.AddText(System.IO.FileStream,System.String,System.Text.Encoding)">
+            <summary>
+            Write Xml text to file stream
+            </summary>
+            <param name="fs">FileString</param>
+            <param name="value">Xml Text</param>
+            <param name="encoding"></param>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.SearchString(System.String,System.String[])">
+            <summary>
+            Searching string between two separator
+            </summary>
+            <param name="text">searched string</param>
+            <param name="separator">separator array</param>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeBoolValue(System.Xml.XmlAttributeCollection,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeBoolValue(System.Xml.XmlAttributeCollection,System.String,System.Boolean)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeIntValue(System.Xml.XmlAttributeCollection,System.String,System.Int32)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <param name="defaultValue">defaultValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeLongValue(System.Xml.XmlAttributeCollection,System.String,System.Int32)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>
+            <param name="defaultValue">defaultValue</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeNumValue(System.Xml.XmlAttributeCollection,System.String)">
+            <summary>
+            Return the text (Attribute value) of the Attribute in Attribute Collection by key
+            , works best if normalized.
+            </summary>
+            <param name="attributes">Xml Attribute Collection</param>
+            <param name="key"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetElementNumValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Return the text (element value) 
+            </summary>        
+            <param name="element">XmlElement</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetElementStringValue(System.Xml.XmlElement,System.String)">
+            <summary>
+            Return the text (element value) 
+            </summary>        
+            <param name="element">XmlElement</param>
+            <param name="key"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetXmlFromString(System.String)">
+            <summary>
+            Format Xml String
+            </summary>
+            <param name="content"></param>
+            <param name="indent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.ReadXmlDocument(System.IO.Stream)">
+            <summary>
+            Get XmlDocument form stream
+            </summary>
+            <param name="stream">Xml file stream</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.ReadXmlDocument2(System.String)">
+            <summary>
+            Get XmlDocument form path
+            </summary>
+            <param name="path">Xml file full path</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.ReadXmlDocument(System.String)">
+            <summary>
+            Get XmlDocument form path
+            </summary>
+            <param name="path">Xml file full path</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetString(System.Object)">
+            <summary>
+            Get string of object content
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.UtilXml.GetAttributeXml(System.String,System.Object)">
+            <summary>
+            Get Xml attribute string
+            </summary>
+            <param name="name">Attribute name</param>
+            <param name="value">Attribute value</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.Decode(System.String)">
+            <summary>
+            解压成一个字符串数组
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.Encode(System.Collections.Generic.List{System.String})">
+            <summary>
+            压缩字符串数组 为 一个字符串
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.GetCompressString(UFSoft.UBF.DrawBill.CaseObject)">
+            <summary>
+            得到压缩串
+            </summary>
+            <param name="caseObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.GetCompressString(System.String)">
+            <summary>
+            将xml文件串压缩到内存中
+            </summary>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.GetDecompressString(System.String)">
+            <summary>
+            将xml文件串解压缩到内存中
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.Compress(System.Byte[])">
+            <summary>
+            使用Deflate算法压缩内存流
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DrawBill.XMLTransfer.Decompress(System.Byte[])">
+             <summary>
+            使用Deflate算法解压缩内存流
+             </summary>
+             <param name="source"></param>
+             <returns></returns>
+        </member>
+    </members>
+</doc>

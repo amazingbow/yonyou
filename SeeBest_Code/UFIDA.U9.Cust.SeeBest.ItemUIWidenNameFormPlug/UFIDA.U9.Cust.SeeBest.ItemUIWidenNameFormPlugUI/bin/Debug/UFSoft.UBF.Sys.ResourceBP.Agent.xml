@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Sys.ResourceBP.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.GetResourceValueProxy.LanguageName">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.GetResourceValueProxy.ComponentIDs">
+            <summary>
+            组件编号 (该属性可为空,且无默认值)
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.AppSessionResourceCache.IsActivityComponent(System.String,System.String)">
+            <summary>
+            判断一个Component是否是活跃的
+            </summary>
+            <param name="componentId">组件ID</param>
+            <param name="languageName">语种</param>
+            <returns>是否活跃</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceData.#ctor(System.String[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="datas">包含DisplayName,Description,ToolTip信息的数组，注意：一定要保证该数组Length等于AttributeCount的值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.VisitCounter.GetTimeSpan(System.Int32)">
+            <summary>
+            将秒转换为以100毫微秒为单位的数值
+            </summary>
+            <param name="seconds">秒数</param>
+            <returns>以100毫微秒为单位的数值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.IsInterned(System.Collections.Generic.IList{System.String},System.String,System.String,System.String)">
+            <summary>
+            只是简单的从缓存中加载资源，如果资源不在缓存中也不会进行加载，直接返回空
+            </summary>
+            <param name="componentIds">要加载的资源所在的组件guid集合</param>
+            <param name="languageName">语种</param>
+            <param name="elementId">要获取资源的元素guid</param>
+            <param name="attributeName">获取元素该属性的资源</param>
+            <returns>加载到的资源项，如果没有返回空值。（注意：找不到资源时返回null而不是空字符串）</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.Intern(System.Collections.Generic.IList{System.String},System.String,System.String,System.String)">
+            <summary>
+            从缓存中加载资源，如果资源不在缓存中则加载进来
+            </summary>
+            <param name="componentIds">要加载的资源所在的组件guid集合</param>
+            <param name="languageName">语种</param>
+            <param name="elementId">要获取资源的元素guid</param>
+            <param name="attributeName">获取元素该属性的资源</param>
+            <returns>加载到的资源项，如果没有返回空值。（注意：找不到资源时返回null而不是空字符串）</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.OnlyLoad(System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            仅仅是加载组件资源而不放入缓存
+            </summary>
+            <param name="componentIds">要加载的组件集合</param>
+            <param name="languageName">语种</param>
+            <returns>加载后的资源</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.Remove(System.Collections.Generic.IList{System.String},System.String)">
+             <summary>
+             手工清除某些资源（组件级，即是清除某组件下的所有资源）
+             </summary>
+             <param name="keys">要清除的资源项集合（组件标识集合）</param>
+            <param name="languageName">语种</param>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.CacheComponentCount">
+            <summary>
+            缓存的组件数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.iResoruceCacheCore.CacheItemCount">
+            <summary>
+            缓存的量体资源项数量
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.KeepActivity(System.Collections.Generic.List{System.String})">
+            <summary>
+            将某些监视项设为保持活跃状态
+            </summary>
+            <param name="itemKeys"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.Visit(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            访问某些监视项
+            </summary>
+            <param name="visiterName">访问者标识</param>
+            <param name="itemKeys">要访问的监视项的标识</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.IsWatching(System.String)">
+            <summary>
+            是否在对某项目对行监视
+            </summary>
+            <param name="itemKey">监视项目标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.IsActivity(System.String)">
+            <summary>
+            某一监视项是否活跃
+            </summary>
+            <param name="itemKey"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.Capacity">
+            <summary>
+            管理的监视项的最大数目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.ResourceBP.Proxy.iVisitWatcher.IngoreSeriesVist">
+            <summary>
+            是否忽略对同一个监视项的连续访问
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resource.Runtime.CustomerResourBase">
+            <summary>
+            自定义资源的基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceBPHelper">
+            <summary>
+            资源BP帮助类，封装了资源BP的调用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceCacheCore.Intern(System.Collections.Generic.IList{System.String},System.String,System.String,System.String)">
+            <summary>
+            获取资源值
+            </summary>
+            <param name="componentIds">组件ID组成的字符串数组（FormId, UIModelId等）</param>
+            <param name="elementId">元素ID</param>
+            <param name="attributeName">属性名称（displayName, description, help）</param>
+            <param name="languageName">语言名称（zh-CN等）</param>
+            <returns>资源值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceCacheCore.FindInCache(System.String,System.Collections.Generic.IList{System.String},System.String,System.String)">
+            <summary>
+            缓存中查找资源，如果没有返回null
+            </summary>
+            <param name="componentId"></param>
+            <param name="resKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceCacheCore.FindInCache(UFSoft.UBF.Sys.Resources.Runtime.Cache.ResourceCache,System.Collections.Generic.IList{System.String},System.String,System.String)">
+            <summary>
+            缓存中查找资源，如果没有返回null
+            </summary>
+            <param name="componentId"></param>
+            <param name="resKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceCacheCore.GetComponentResourceData(System.String,System.Collections.Generic.IList{System.String})">
+            <summary>
+            调用BP获取远程的资源
+            </summary>
+            <param name="languageName"></param>
+            <param name="componentIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.ResourceBP.Proxy.ResourceCacheCore.ConvertDTOToDatas(UFSoft.UBF.Sys.ResourceBP.ResourceDataDTOData,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="dtoData"></param>
+            <param name="languageName"></param>
+            <returns>返回一个不区分大小写的Hashtable</returns>
+        </member>
+    </members>
+</doc>

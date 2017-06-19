@@ -1,0 +1,1390 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Util.Expression</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Util.Expression.Compiler.GeneralEmitCompiler">
+            <summary>
+            Translate a general Expression as a .NET expression evaluation MSIL sequence,
+            of course this sequence is encapsulate in methods.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.ICoreVisitor">
+            <summary>
+            ICoreVisitor: IExpressionVisitor
+            	IntConstExpression
+            	RealConstExpression
+            	BoolConstExpression
+            	LiteralExpression
+            	PathExpression
+            	NullExpression
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor">
+            <summary>
+            IExpressionVisitor Visitor璁捐妯″紡锛?IExpression鏍戠粨鏋勭殑璁块棶鑰呮帴鍙ｃ€?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor.VisitBinaryExpression(UFSoft.UBF.Util.Expression.Framework.BinaryExpression)">
+            <summary>
+            璁块棶BinaryExpression, BinaryExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">BinaryExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor.VisitUnaryExpression(UFSoft.UBF.Util.Expression.Framework.UnaryExpression)">
+            <summary>
+            璁块棶UnaryExpression, UnaryExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">UnaryExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor.VisitConstExpression(UFSoft.UBF.Util.Expression.Framework.ConstExpression)">
+            <summary>
+            璁块棶ConstExpression, ConstExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">ConstExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor.VisitFunctionExpression(UFSoft.UBF.Util.Expression.Framework.FunctionExpression)">
+            <summary>
+            璁块棶FunctionExpression, FunctionExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">FunctionExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor.VisitVariableExpression(UFSoft.UBF.Util.Expression.Framework.VariableExpression)">
+            <summary>
+            璁块棶VariableExpression, VariableExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">VariableExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitIntConstExpression(UFSoft.UBF.Util.Expression.Core.IntConstExpression)">
+            <summary>
+            璁块棶鏁村瀷甯搁噺琛ㄨ揪寮忥紝IntConstExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">IntConstExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitRealConstExpression(UFSoft.UBF.Util.Expression.Core.RealConstExpression)">
+            <summary>
+            璁块棶瀹炲瀷甯搁噺琛ㄨ揪寮忥紝RealConstExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">RealConstExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitLiteralExpression(UFSoft.UBF.Util.Expression.Core.LiteralExpression)">
+            <summary>
+            璁块棶鏂囧瓧甯搁噺琛ㄨ揪寮忥紝LiteralExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">LiteralExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitBoolConstExpression(UFSoft.UBF.Util.Expression.Core.BoolConstExpression)">
+            <summary>
+            璁块棶甯冨皵甯搁噺琛ㄨ揪寮忥紝BoolConstExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">BoolConstExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitPathExpression(UFSoft.UBF.Util.Expression.Core.PathExpression)">
+            <summary>
+            璁块棶璺緞琛ㄨ揪寮忥紝PathExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">PathExpression寮曠敤</param>
+            <example>
+            	Order.Account.Address
+            </example>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitNullExpression(UFSoft.UBF.Util.Expression.Core.NullExpression)">
+            <summary>
+            璁块棶绌鸿〃杈惧紡锛孨ullExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="expr">NullExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitParenthesisExpression(UFSoft.UBF.Util.Expression.Core.ParenthesisExpression)">
+            <summary>
+            璁块棶鎷彿琛ㄨ揪寮?
+            </summary>
+            <param name="expr"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ICoreVisitor.VisitSetExpression(UFSoft.UBF.Util.Expression.Core.SetExpression)">
+            <summary>
+            璁块棶闆嗗悎琛ㄨ揪寮?
+            </summary>
+            <param name="set"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.AndExpression">
+            <summary>
+            AndExpression 逻辑与表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression">
+            <summary>
+            AbstractBinaryExpression
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression.leftExpr">
+            <summary>
+            左？
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression.rightExpr">
+            <summary>
+            右？
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression.#ctor(UFSoft.UBF.Util.Expression.Framework.IExpression,UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="left">左</param>
+            <param name="right">右</param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression.LeftExpression">
+            <summary>
+            左侧表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.AbstractBinaryExpression.RightExpression">
+            <summary>
+            右侧表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.ILogicExpression">
+            <summary>
+            逻辑表达式，计算结果一定是True或False
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpression">
+            <summary>
+            这个接口不能修改，很多人实现它了
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.AndExpression.#ctor(UFSoft.UBF.Util.Expression.Framework.IExpression,UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            构造一个逻辑与表达式
+            </summary>
+            <param name="left">左表达式</param>
+            <param name="right">右表达式</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.CoreVisitor">
+            <summary>
+            CoreVisitor: ICoreVisitor鎺ュ彛鐨勭己鐪佸疄鐜?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ExprHelper.IsLogicExpr(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            是否是逻辑表达式
+            如果Expr为Null时返回True
+            </summary>
+            <param name="expr"></param>
+            <returns>True有可能是，False一定不是</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.ExprHelper.IsLogicExpr(UFSoft.UBF.Util.Expression.Framework.IExpression,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="expr"></param>
+            <param name="IncludedNull">当参数Expr为Null时，返回IncludedNull的相反值</param>
+            <returns>True有可能是，False一定不是</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.GreaterThanExpression">
+            <summary>
+            GreaterThanExpression 澶т簬琛ㄨ揪寮?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.LiteralExpression.ToString">
+            <summary>
+            The problem is: ' or ", which one should use?
+            So this logic should be delegated to IExpressionStreamer.
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Util.Expression.Core.LongConstExpression”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.Expression.Core.LongConstExpression.Accept(UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor)">
+            <summary>
+            Visitor设计模式
+            </summary>
+            <param name="visitor"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.NotEqualExpression">
+            <summary>
+            NotEqualExpression 不等于表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.NotExpression">
+            <summary>
+            NotExpression 逻辑非表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.OrExpression">
+            <summary>
+            OrExpression 逻辑或表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.PathExpression">
+            <summary>
+            PathExpression 璺緞琛ㄨ揪寮?
+            </summary>
+            <example>
+            	Order.Account.Address
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Core.PowerExpression">
+            <summary>
+            PowerExpression 幂表达式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.CoreChecker.Coerce(System.Type,System.Type)">
+            The production level implementation should check the type of expr can be casted to the 
+            type parameter.
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpressionParser">
+            <summary>
+            IExpressionParser 表达式分析器的接口。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionParser.Parse(System.String)">
+            <summary>
+            IExpressionParser接口唯一的方法规定了所有表达式分析器的行为：
+            接受一个string, 执行词法语法分析, 若成功则返回建好的表达式树。
+            </summary>
+            <param name="content">表达式语言</param>
+            <returns>表达式树根节点</returns>
+            <exception cref="!:">LexerException</exception>
+            <exception cref="!:">SyntaxException</exception>		
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.IExpressionRoot">
+            <summary>
+            仅处于根级的表达式节点类型需要实现该接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IPoolItem.IsPoolItem">
+            <summary>
+            取得实现该接口的对象是否是正被池管理的对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IPoolItem.Hook">
+            <summary>
+            取得或设置池管理的挂钩对象.被池管理对象使用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.IPoolItem.Release">
+            <summary>
+            取得或设置回收方法。被池管理对象设置，当被管理的对象准备被放弃时调用该方法。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.EvaluatorFactory">
+            <summary>
+            EvaluatorFactory: 求值器工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.EvaluatorFactory.CreateIntEvaluator">
+            <summary>
+            创建整型求值器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.EvaluatorFactory.CreateRealEvaluator">
+            <summary>
+            创建实型求值器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.EvaluatorFactory.CreateLogicEvaluator">
+            <summary>
+            创建逻辑求值器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.AbstractTrinaryExpression">
+            <summary>
+            AbstractTrinaryExpression 涓轰笁鍏冭〃杈惧紡鎻愪緵涓€涓疄鐜扮户鎵跨殑鍩虹被锛?
+            鍏蜂綋鎿嶄綔绗︾敱瀛愮被鑷澶勭悊
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Framework.AbstractTrinaryExpression.targetExpr">
+            <summary>
+            鐩爣鎿嶄綔鏁?
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Expression.Framework.AbstractTrinaryExpression.#ctor(UFSoft.UBF.Util.Expression.Framework.IExpression,UFSoft.UBF.Util.Expression.Framework.IExpression,UFSoft.UBF.Util.Expression.Framework.IExpression)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.AbstractTrinaryExpression.TargetExpression">
+            <summary>
+            鍙灞炴€? 鐩爣鎿嶄綔鏁? 绫诲瀷涓鸿〃杈惧紡鎺ュ彛
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.ExpressionException">
+            <summary>
+            ExpressionException 鐨勬憳瑕佽鏄庛€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.FunctionExpression">
+            <summary>
+            </summary>
+            <example>
+            	max(5, 3 + 3, abs(5), X)
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IDynamicExecutor">
+            <summary>
+            IDynamicEvaluator, 用于函数与变量的动态求值，即在不同的执行环境中，同样的表达式
+            与变量会求出不同的值，标准求值引擎会将函数与变量求值委托给IDynamicEvaluator接口。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IDynamicExecutor.Execute(System.String,System.Object[],UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            求取名为name的函数的值
+            </summary>
+            <param name="name">函数名</param>
+            <param name="args">已求得的参数值数组(实参)</param>
+            <param name="context">求值上下文</param>
+            <returns>计算结果，统一用object表示</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IDynamicExecutor.Execute(System.String,UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            求取名为name的变量的值
+            </summary>
+            <param name="name">变量名</param>
+            <param name="context">求值上下文</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IEvaluationContext">
+            <summary>
+            IEvaluationContext求值上下文, 通常维护名值对的映射,
+            IDynamicEvaluator运行时需要从IEvaluationContext取值。
+            </summary>
+            <example>
+            	IEvaluationContext ctx;
+            	ctx["a"] = 5;
+            	ctx["b"] = "I am evaluating!";
+            	Console.WriteLine(ctx["a"]);
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.IEvaluationContext.Item(System.String)">
+            <summary>
+            读写索引器, 通过string类型的键获取值或改变值。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpressionEvaluator">
+            <summary>
+            IExpressionEvaluator, 表达式求值器接口。
+            Marker interface
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.IExpressionEvaluator.DynamicExecutor">
+            <summary>
+            函数与变量的动态求值器，这样同样的标准求值器
+            配以不同的IDynamicExecutor, 便于不同的应用配置不同
+            的内置函数列表，但又共享一个栈式虚拟机
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.IExpressionEvaluator.EvaluationContext">
+            <summary>
+            求值上下文, 通常求值之前在EvaluationContext中
+            初始化某些变量的值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpressionExecutor">
+            <summary>
+            In near future, All interface/class for access value should be 
+            unified into a single architecture.
+            
+            Stateful or Stateless?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionExecutor.Execute(UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context">The external (initial) value is stored in 
+            	IEvaluationContext.
+            </param>
+            <returns>any object calculated by </returns>		
+            Note: the nature of Compiled Emit Executor and Visitor based 
+            AST direct-executor make me only to design a One-to-One relationship
+            between IExpressionExecutor and IExression. That is to say, each
+            IExpressionExecutor will be tied to the only one IExpression. So
+            it's status. This is also the VSA's Scripting Host design decision.
+            In other words, an IExpression instance is a "program", while 
+            (compiled or interpreted) IExpressionExecutor is also "program" and
+            more specific "program text/code seg", the data seg, stack, heap(and
+            memory) will be related to each execution of a same "program".
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Framework.IExpressionList.IsLogic">
+            <summary>
+            列表中存在一个非Logic表达式，表达整个列表不是Logic表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IExpressionStreamer">
+            <summary>
+            IExpressionStreamer 将表达式树转换为文本表达的工具类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IExpressionStreamer.GetString(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            对一个IExpression，返回其文本描述
+            </summary>
+            <param name="expr">IExpression</param>
+            <returns>文本描述</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IIntEvaluator">
+            <summary>
+            IIntEvaluator 整型值求值器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IIntEvaluator.Evaluate(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            对IExpression求出整型值
+            </summary>
+            <param name="expr">IExpression引用</param>
+            <returns>求出的整型值</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.ILogicEvaluator">
+            <summary>
+            ILogicEvaluator布尔值求值器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.ILogicEvaluator.Evaluate(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            对IExpression求出布尔值
+            </summary>
+            <param name="expr">IExpression引用</param>
+            <returns>求出的布尔值</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.IRealEvaluator">
+            <summary>
+            IRealEvaluator 双精度值求值器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Framework.IRealEvaluator.Evaluate(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            对IExpression求出双精度值
+            </summary>
+            <param name="expr">IExpression引用</param>
+            <returns>求出的双精度值</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.NameList">
+            <summary>
+            NameList: 表示一个名称列表 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.SimpleOperator">
+            <summary>
+            SimpleOperator 琛ㄧず涓嬪垪绠€鍗曟搷浣滅锛?
+            +
+            -
+            *
+            /
+            ^
+            and
+            or
+            not
+            &lt;
+            &gt;
+            &lt;=
+            &gt;=
+            ==
+            !=
+            	
+            </summary>
+            <todo>
+            	Learn more enum technique to support more elegant code.
+            </todo>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Functor.Functor">
+            <summary>
+            Functor: 抽象的函数类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Functor.IFunctor">
+            <summary>
+            IFunctor 函数表项接口，实现此接口以扩展应用所支持的函数。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Functor.IFunctor.Execute(System.Object[],UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            运行时求取函数值. 不同的Function实现Execute方法以实现
+            不同的求值逻辑
+            </summary>
+            <param name="args">已求完值的函数参数数组</param>
+            <param name="ctx">求值上下文</param>
+            <returns>函数返回值，统一用object表示</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Functor.IFunctor.Name">
+            <summary>
+            函数名
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Functor.AbsFunctor.Execute(System.Object[],UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            计算绝对值
+            </summary>
+            <param name="args"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Functor.FunctionManager">
+            <summary>
+            FunctionManager, 鍑芥暟鍚嶅埌鍑芥暟瀵硅薄鐨勬槧灏勮〃
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Functor.FunctionManager.maps">
+            <summary>
+            瀹為檯鐨勬槧灏勮〃
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Functor.FunctionManager.AddFunctor(UFSoft.UBF.Util.Expression.Functor.IFunctor)">
+            <summary>
+            鍔犲叆鍑芥暟瀵硅薄
+            </summary>
+            <param name="functor">鍑芥暟瀵硅薄</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Functor.FunctionManager.#ctor">
+            <summary>
+            缂虹渷鏋勯€犲嚱鏁帮紝棰勮Max涓嶢bs涓や釜鍑芥暟
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Functor.FunctionManager.Item(System.String)">
+            <summary>
+            绱㈠紩鍣紝鏍规嵁鍚嶅瓨鍙栧嚱鏁板璞?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Functor.MaxFunctor">
+            <summary>
+            MaxFunctor 最大值函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Functor.MaxFunctor.Execute(System.Object[],UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            这一实现允许任意数目的参数
+            </summary>
+            <param name="args"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Framework.ISymbolTable">
+            <summary>
+            Symbol Table,
+            can function as SymbolStore, SymbolContext during Emit Compilation.
+            and SymbolResolver.
+            
+            A very important concept of Imperative compilation and late binding
+            is symbol resolution.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Imperative.FunctionDefinition">
+            <summary>
+            Function Definition
+            <example>
+            	function helloWorld(name)
+            	{
+            		return "Hello World! " + name;
+            	}
+            </example>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Core.IndexerExpression.Accept(UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor)">
+            <summary>
+            Does this IndexerExpression need to be IImperativeVisitor visible?
+            Not necessarily.
+            </summary>
+            <param name="visitor"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Imperative.ScriptExpression.Statements">
+            <summary>
+            脚本的所有表达式语句
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.GUI.GUILgPgParser">
+            <summary>
+            GUILgPgParser 鍩轰簬LexerGenerator, ParserGenerator 鐨凩ALR(1)鍒嗘瀽鍣紝
+            鐢ㄤ簬璇嗗埆MVC妯″潡鐨勫叕寮忋€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.Lalr1Parser">
+            <summary>
+            Lalr1Parser LALR(1) 分析器的抽象基类
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Expression.Parser.GUI.GUILgPgParser.Parse(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.LexerException">
+            <summary>
+            LexerException 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.LgPgParser">
+            <summary>
+            LgPgParser 基于LexerGenerator, ParserGenerator 的LALR(1)分析器,
+            提供一套基本的表达式语言，目前用于Report
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Parser.LgPgParser.Parse(System.String)">
+            <summary>
+            将一个标准表达式文本解析成表达式树
+            </summary>
+            <param name="content">表达式语言文本</param>
+            <returns>表达式树根节点</returns>
+            <exception cref="!:">LexerException</exception>
+            <exception cref="!:">SyntaxException</exception>		
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.OQL.OQLLgPgParser">
+            <summary>
+            OQLLgPgParser 鍩轰簬LexerGenerator, ParserGenerator 鐨凩ALR(1)鍒嗘瀽鍣紝
+            鐢ㄤ簬璇嗗埆OQL(Object Query Language)
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Expression.Parser.OQL.OQLLgPgParser.Parse(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.ParserException">
+            <summary>
+            ParserException 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.Imperative.ScriptParser">
+            <summary>
+            ScriptParser 基于LexerGenerator, ParserGenerator 的LALR(1)分析器，
+            用于解析通用脚本语言?
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.Expression.Parser.Imperative.ScriptParser.Parse(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Parser.SyntaxException">
+            <summary>
+            SyntaxException 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.ParserFactory">
+            <summary>
+            ParserFactory: Parser工厂, 根据Parser名返回IExpressionParser接口的实现类
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.ParserFactory.maps">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.ParserFactory.stdparser">
+            <summary>
+            缺省标准分析器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.ParserFactory.CreateParser">
+            <summary>
+            创建缺省标准分析器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.ParserFactory.CreateParser(System.String)">
+            <summary>
+            根据Parser名返回IExpressionParser接口的实现类
+            </summary>
+            <param name="name">Parser名</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Demo.Customer">
+            <summary>
+            Customer 的摘要说明。
+            </summary>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Util.Expression.Program.Demo.GetObjectFunctor”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Demo.GetPropertyFunctor">
+            <summary>
+            GetPropertyFunctor: getProperty函数实现， 用反射获取对象属性
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Demo.ObjectContainer">
+            <summary>
+            ObjectContainer 某一类的对象容器。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.Demo.ObjectContainer.className">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.Demo.ObjectContainer.container">
+            <summary>
+            对象主键到对象引用的映射表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Program.Demo.ObjectContainer.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Program.Demo.ObjectContainer.Item(System.String)">
+            <summary>
+            对象主键到对象引用的映射
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Demo.ObjectManager">
+            <summary>
+            ObjectManager 管理类名到对象容器的映射
+            Dummy implementation.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.Demo.ObjectManager.classMaps">
+            <summary>
+            类名到对象容器的映射表
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.Demo.ObjectManager.GetObject(System.String,System.String)">
+            <summary>
+            根据类名和主键查询对象
+            </summary>
+            <param name="className">类名</param>
+            <param name="PK">主键</param>
+            <returns>对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.IfExpression">
+            <summary>
+            IfExpression 
+            </summary>
+            <example>
+            	if (a == b) { ; }
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.IInterpreter">
+            <summary>
+            IInterpreter Program执行器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.IInterpreter.Interprete(UFSoft.UBF.Util.Expression.Framework.IExpressionList,UFSoft.UBF.Util.Expression.Program.Memory)">
+            <summary>
+            对一表达式列表("程序"), 在Memory中运行
+            </summary>
+            <param name="exprs">程序表达式语句列表，被看作一个"程序"</param>
+            <param name="memory">程序运行时的"内存"， 通常实现IEvaluationContext</param>
+            <returns>所有运行结果的集合，受return语句控制</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Interpreter">
+            <summary>
+            Interpreter 基于CoreEvaluator, 实现程序执行器接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator">
+            <summary>
+            CoreEvaluator类，执行算数、比较和逻辑元算
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.stack">
+            <summary>
+            鍦ㄦ爤椤惰绠?
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.executor">
+            <summary>
+            鏍囧噯鍑芥暟涓庡彉閲忔眰鍊煎櫒
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.context">
+            <summary>
+            鏍囧噯姹傚€间笂涓嬫枃
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.DoAnd(System.Object,System.Object)">
+            <summary>
+            Extremely ugly code, should be refactoried thoroughly.
+            </summary>
+            <param name="l"></param>
+            <param name="r"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.DynamicExecutor">
+            <summary>
+            鏍囧噯鍑芥暟涓庡彉閲忔眰鍊煎櫒
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Tool.CoreEvaluator.EvaluationContext">
+            <summary>
+            鏍囧噯姹傚€间笂涓嬫枃
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.IProgramVisitor">
+            <summary>
+            IProgramVisitor ICoreVisitor的直接扩展，用于Expression名空间中, 对应于
+            Core中扩展的表达式类型：
+            	ProgramExpression
+            	AssignExpression
+            	IfExpression
+            	ReturnExpression
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.IProgramVisitor.VisitProgram(UFSoft.UBF.Util.Expression.Program.Program)">
+            <summary>
+            访问程序对象，Program的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="program">Program引用</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.IProgramVisitor.VisitAssignExpression(UFSoft.UBF.Util.Expression.Program.AssignExpression)">
+            <summary>
+            访问赋值表达式，AssignExpression的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="assign">AssignExpression引用</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.IProgramVisitor.VisitIfExpression(UFSoft.UBF.Util.Expression.Program.IfExpression)">
+            <summary>
+            访问条件表达式，IfExpression的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="ifexpr">IfExpression引用</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.IProgramVisitor.VisitReturnExpression(UFSoft.UBF.Util.Expression.Program.ReturnExpression)">
+            <summary>
+            访问返回表达式，ReturnExpression的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="ret">ReturnExpression引用</param>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.Interpreter.result">
+            <summary>
+            运行结果
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.Interpreter.exe">
+            <summary>
+            标准函数与变量动态求值器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.Interpreter.VisitProgram(UFSoft.UBF.Util.Expression.Program.Program)">
+            <summary>
+            All IProgramVisitor member don't care for pop stack, since all the effects
+            are done by set them in memory.
+            </summary>
+            <param name="program"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.Interpreter.VisitIfExpression(UFSoft.UBF.Util.Expression.Program.IfExpression)">
+            <summary>
+            We always let visitor to control the iterate part.
+            </summary>
+            <param name="ifexpr"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.Interpreter.VisitReturnExpression(UFSoft.UBF.Util.Expression.Program.ReturnExpression)">
+            <summary>
+            We find all these 
+            </summary>
+            <param name="ret"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.Interpreter.Interprete(UFSoft.UBF.Util.Expression.Framework.IExpressionList,UFSoft.UBF.Util.Expression.Program.Memory)">
+            <summary>
+            利用IExpression 的Accept实现求值器
+            </summary>
+            <param name="exprs"></param>
+            <param name="memory"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Program.Interpreter.RegisteredFunctions">
+            <summary>
+            访问所有注册到Interpreter的函数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Program.Interpreter.Memory">
+            <summary>
+            求值上下文
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Memory">
+            <summary>
+            Memory 求值上下文，用以读写变量
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StandardContext">
+            <summary>
+            StandardContext: 标准求值上下文, 提供IEvaluationContext接口的缺省实现
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.StandardContext.maps">
+            <summary>
+            Key-Value存储
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Tool.StandardContext.Keys">
+            <summary>
+            返回所有键值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.ProgramStreamer">
+            <summary>
+            ProgramStreamer 将程序转换为文本表达的工具类，具有自动换行功能
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StackStreamer">
+            <summary>
+            StackStreamer 鍩轰簬鏍堝疄鐜扮殑灏嗚〃杈惧紡鏍戣浆鎹负鏂囨湰琛ㄨ揪鐨勫伐鍏风被銆?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Tool.StackStreamer.GetOperator(UFSoft.UBF.Util.Expression.Framework.SimpleOperator)">
+            <summary>
+            return the string representation of SimpleOperator enum.
+            it's declared as virtual, to let child class to override this method and to return
+            different string representation of operator.
+            </summary>
+            <param name="oper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.ProgramStreamer.VisitIfExpression(UFSoft.UBF.Util.Expression.Program.IfExpression)">
+            <summary>
+            VisitIfExpression, which need the visitor to control the iteration.
+            </summary>
+            <param name="ifexpr"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.Result">
+            <summary>
+            Result 存取计算结果
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Program.VirtualMachine">
+            <summary>
+            VirtualMachine		Facade 设计模式
+            作为Program, Interpreter, Parser 等对象的外观。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Program.VirtualMachine.functions">
+            <summary>
+            虚拟机内置的系统函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.VirtualMachine.Run(UFSoft.UBF.Util.Expression.Program.Program,UFSoft.UBF.Util.Expression.Program.Memory)">
+            <summary>
+            针对一个内存对象，执行一段程序
+            </summary>
+            <param name="program">程序文本</param>
+            <param name="memory">内存对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.VirtualMachine.Run(System.String,UFSoft.UBF.Util.Expression.Program.Memory)">
+            <summary>
+            针对一个内存对象，执行一段程序文本
+            </summary>
+            <param name="program">程序文本</param>
+            <param name="memory">内存对象</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.VirtualMachine.Run(UFSoft.UBF.Util.Expression.Program.Program)">
+            <summary>
+            执行一段程序
+            </summary>
+            <param name="program">程序对象</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.VirtualMachine.Run(System.String)">
+            <summary>
+            直接执行一段程序文本
+            </summary>
+            <param name="program">程序文本</param>
+            <returns>执行结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Program.VirtualMachine.Compile(System.String)">
+            <summary>
+            将一段程序文本编译成程序对象
+            </summary>
+            <param name="prog">程序文本</param>
+            <returns>程序对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.BetweenAndPredicate">
+            <summary>
+            BetweenAndPredicate Between ... And ...
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.TrinaryPredicate">
+            <summary>
+            TrinaryPredicate 三元表达式
+            </summary>
+            <example>
+            	a between c and d
+            	a not between c and d
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.ExistsPredicate">
+            <summary>
+            ExistsPredicate 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.FromExpression">
+            <summary>
+            The data structure for FromExpression is: 
+            exprs is a list of IExpressionList, which represents a A join B join C,
+            and is separated by "," in from clause. Then each IExpressionList[0] is 
+            a path expression, such as VariableExpression, AliasExpression, then 
+            followed by JoinExpression list.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.InPredicate">
+            <summary>
+            InPredicate		In 
+            </summary>
+            <example>
+            a in ('a', 'b', 'c')
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.IOQLVisitor">
+            <summary>
+            IOQLVisitor: IQueryVisitor鐨勭洿鎺ユ墿灞曪紝鐢ㄤ簬Query鍚嶇┖闂翠腑, 瀵瑰簲浜?
+            OQL涓墿灞曠殑琛ㄨ揪寮忕被鍨嬶細
+            	VisitOPathExpression
+            	RefineExpression	
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.IQueryVisitor">
+            <summary>
+            IQueryVisitor: ICoreVisitor
+            	BinaryPredicate
+            	TrinaryPredicate
+            	ParameterExpression	
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.IOQLVisitor.VisitOPathExpression(UFSoft.UBF.Util.Expression.Query.OPathExpression)">
+            <summary>
+            璁块棶OPath琛ㄨ揪寮忥紝OPathExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="opath">OPathExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.IOQLVisitor.VisitRefineExpression(UFSoft.UBF.Util.Expression.Query.RefineExpression)">
+            <summary>
+            璁块棶闄愬畾琛ㄨ揪寮? RefineExpression鐨凙ccept鏂规硶瀹炵幇璋冪敤姝ゆ帴鍙ｆ柟娉曘€?
+            </summary>
+            <param name="refine">RefineExpression寮曠敤</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.IOQLVisitor.VisitOQLExpression(UFSoft.UBF.Util.Expression.Query.OQLExpression)">
+            <summary>
+            
+            </summary>
+            <param name="query"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.IsNotNullPredicate">
+            <summary>
+            IsNotNullPredicate 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.IsNullPredicate">
+            <summary>
+            IsNullPredicate 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.JoinExpression.Accept(UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor)">
+            <summary>
+            This JoinExpression is of course should be treated as just a "structured data holder",
+            so it can choose to not to implement any behavior.
+            </summary>
+            <param name="visitor"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.LikePredicate">
+            <summary>
+            LikePredicate 
+            </summary>
+            a like '%32435%'
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.NotBetweenAndPredicate">
+            <summary>
+            NotBetweenAndPredicate  A not between '1993' and '2000'
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.NotInPredicate">
+            <summary>
+            NotInPredicate: A not in ('a', 'b', 'c')
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.OPathExpression">
+            <summary>
+            OPathExpression: OPath琛ㄨ揪寮? 瀵硅薄璺緞琛ㄨ揪寮?
+            </summary>
+            <example>
+            	Orders[Freight > 1000].OrderDetailsEx.Quantity
+            	
+            </example>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Query.OPathExpression.paths">
+            <summary>
+            OPath璺緞鎴愬垎琛ㄨ揪寮忓垪琛?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.OPathExpression.#ctor(UFSoft.UBF.Util.Expression.Framework.IExpressionList)">
+            <summary>
+            鏋勯€犲嚱鏁?
+            </summary>
+            <param name="lists"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.OPathExpression.#ctor(System.String,UFSoft.UBF.Util.Expression.Framework.IExpressionList)">
+            <summary>
+            浠呯敤鍦↙ALR(1)Parser 涓?
+            </summary>		
+            <param name="main"></param>
+            <param name="lists"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.OPathExpression.Accept(UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor)">
+            <summary>
+            鐢变簬OPath閬嶅巻绠楁硶杩囦簬澶嶆潅锛孫PathExpression涓嶅湪Accept涓疄鐜板OPath璺緞鍒楄〃鐨勯亶鍘嗭紝
+            IOQLVisitor瀹炵幇搴斿綋鑷繁绠＄悊OPath璺緞鍒楄〃鐨勯亶鍘?
+            </summary>
+            <param name="visitor"></param>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Util.Expression.Query.OPathExpression.Path”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Query.OQLStreamer">
+            <summary>
+            OQLStreamer 鍩轰簬鏍堝疄鐜扮殑灏哋QL琛ㄨ揪寮忔爲杞崲涓烘枃鏈〃杈剧殑宸ュ叿绫汇€?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.QueryStreamer">
+            <summary>
+            QueryStreamer 鍩轰簬鏍堝疄鐜扮殑灏嗘煡璇㈣〃杈惧紡鏍戣浆鎹负鏂囨湰琛ㄨ揪鐨勫伐鍏风被銆?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.QueryStreamer.VisitInsertExpression(UFSoft.UBF.Util.Expression.Query.InsertExpression)">
+            <summary>
+            璁块棶 INSERT 琛ㄨ揪寮?(Added by yangyang 2007.7.12)
+            </summary>
+            <param name="insert"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.OQLTranslator">
+            <summary>
+            Note: This OQLTranslator assume we will reuse the most parts of 
+            Expression reference, only OQLExpression total structure need a 
+            new one.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Query.QueryTranslator.VisitInsertExpression(UFSoft.UBF.Util.Expression.Query.InsertExpression)">
+            <summary>
+            访问 INSERT 表达式,(Added by yangyang 2007.7.12) 该虚拟函数由 QueryRelationalTranslator实现
+            </summary>
+            <param name="insert"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.ParameterExpression">
+            <summary>
+            ParameterExpression 
+            </summary>
+            <example>
+            	a > @b
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.PredicateOperator">
+            <summary>
+            PredicateOperator 谓词
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Query.RefineExpression">
+            <summary>
+            RefineExpression: 闄愬畾琛ㄨ揪寮忥紝瀵瑰簲浜嶰Path涓柟鎷彿鐨勯儴鍒?
+            </summary>
+            <example>
+            	Orders[Freight > 1000].OrderDetailsEx.Quantity
+            	涓紝Freight > 1000鏄疪efineExpression.RefineCondition
+            </example>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Query.RefineExpression.cond">
+            <summary>
+            鏂规嫭鍙蜂腑鐨勮〃杈惧紡
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.FunctionBinding">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.FunctionBinding.Assemblies">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.AssemblyDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.AssemblyDescriptor.Types">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.AssemblyDescriptor.Name">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.TypeDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.TypeDescriptor.Functions">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.TypeDescriptor.Name">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.FunctionDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.FunctionDescriptor.Name">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Scripting.FunctionDescriptor.Method">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.XMethodInfo">
+            <summary>
+            函数使用方法
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter">
+            <summary>
+            TODO: 
+            1. How to model (with Expresson Object Model) the Variable Block Scope behavior?
+            	(It seems at present I don't support BlockScope.)
+            2. The step to implement a full ImperativeInterpreter: 
+            	a). O
+            	What I should consider is the "share" of "program code" and "running 
+            	instance data". Of course since CoreEvaluator contains instance and 
+            	state, so ImperativeInterpreter couldn't be shared across serveral 
+            	IExpression. But for the inner working of some 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.expr">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.Execute(UFSoft.UBF.Util.Expression.Framework.IEvaluationContext)">
+            <summary>
+            The difference between 
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.DoEvaluate(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            Execute the (sub)expression within the current expression evalution
+            context (including sharing stack instace, IEvaluationContext, etc)
+            </summary>
+            <param name="expr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.VisitVariableDeclaration(UFSoft.UBF.Util.Expression.Imperative.VariableDeclaration,System.String)">
+            <summary>
+            Scope consideration?
+            </summary>
+            <param name="varDecl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.VisitVariableStatement(UFSoft.UBF.Util.Expression.Imperative.VariableStatement)">
+            <summary>
+            Scope Consideration?
+            </summary>
+            <param name="varStmt"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.VisitAccessExpression(UFSoft.UBF.Util.Expression.Core.AccessExpression)">
+            <summary>
+            It's very apparent that VisitAccessExpression logic here is only applicable
+            when AccessExpression is used as rvalue. If AccessExpression is used as 
+            lvalue, the processing logic is quite different.
+            
+            In fact the computation process of AccessExpression rvalue is the process of 
+            computing "relative address" iteratively.
+            </summary>
+            <param name="access"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Scripting.ImperativeInterpreter.RebuildArgs(System.Object[],UFSoft.UBF.Util.Expression.Scripting.XMethodInfo)">
+            <summary>
+            根据调用函数的 MethodInfo，判断该函数的参数列表是否与 ScriptParser 解析
+            出的参数列表匹配，如果不匹配，进行类型转换
+            </summary>
+            <param name="oldArg"></param>
+            <param name="inf"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Util.Expression.Scripting.Script”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Util.Expression.Scripting.ScriptEvaluator">
+            <summary>
+            A batch script evaluator, it's not thread safe. 
+            It should be regarded as a ScriptSession.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.StreamerFactory">
+            <summary>
+            StreamerFactory: 流化器工厂,  根据Streamer名返回IExpressionStreamer接口的实现类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.StreamerFactory.CreateStreamer">
+            <summary>
+            返回缺省的IExpressionStreamer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.StreamerFactory.CreateStreamer(System.String)">
+            <summary>
+            根据streamer名，返回相应的IExpressionStreamer实现
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.BracketHelper.innerData">
+            <summary>
+            运算符优先级字典表
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Tool.BracketHelper.Compare(UFSoft.UBF.Util.Expression.Framework.SimpleOperator,UFSoft.UBF.Util.Expression.Framework.SimpleOperator)">
+            <summary>
+            比较两个操作符的优先级
+            </summary>
+            <param name="op1">第一个操作符</param>
+            <param name="op2">第二个操作符</param>
+            <returns>相等=0; op1>op2=1;op2>op1=-1;不知道时返回-2</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.Calculator">
+            <summary>
+            Calculator: 
+             IExpression, IExpressionParser, IExpressionVisitor, IExpressionEvaluator
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Tool.Calculator.Calculate(System.String)">
+            <summary>
+            Calculate the arbitary object value. User should cast it to the type
+            what one want.
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Tool.Calculator.CalcText(System.String)">
+            <summary>
+            Calculate the string value
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.Script2OQLTranslator">
+            <summary>
+            Now the Script Expression subset has nuiance difference with OQL Expression
+            subset. This is an extremely bad design. The best solution should modify the
+            script.parser and oql.select.parser, to make them really share a same set 
+            expression tree nodes. This need to obsolete the OPathExpression, and all of
+            them share the same AccessExpression.
+            
+            The following is a dirty hack.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StackIntEvaluator">
+            <summary>
+            StackIntEvaluator: 整型求值器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StackLogicEvaluator">
+            <summary>
+            StackLogicEvaluator: 布尔型求值器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StackRealEvaluator">
+            <summary>
+            StackRealEvalautor:  实型求值器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.StandardExecutor">
+            <summary>
+            StandardExecutor: 标准函数与变量求值器
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.Expression.Tool.StandardExecutor.manager">
+            <summary>
+            注册的函数集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.Expression.Tool.StandardExecutor.RegisteredFunctions">
+            <summary>
+            注册的函数集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Tool.SymbolTable">
+            <summary>
+            SymbolTable 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.Expression.Util.StackHelper">
+            <summary>
+            StackHelper: 栈帮助类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.Expression.Util.StackHelper.ReversePop(System.Collections.Stack,System.Int32)">
+            <summary>
+            从栈顶弹出n个元素，逆序构成一个数组
+            </summary>
+            <param name="stack"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

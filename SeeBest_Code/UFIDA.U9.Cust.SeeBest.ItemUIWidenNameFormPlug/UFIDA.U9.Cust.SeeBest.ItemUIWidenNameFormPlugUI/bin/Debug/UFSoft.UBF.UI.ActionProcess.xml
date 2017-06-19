@@ -1,0 +1,1042 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.ActionProcess</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition">
+            <summary>
+            抽象的Locate导航对象
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.indexList">
+            <summary>
+            ID列表
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.current">
+            <summary>
+            当前索引位置
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.view">
+            <summary>
+            当前视图
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="view">UIView对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.GetCondition">
+            <summary>
+            获得过滤条件
+            </summary>
+            <returns>OQL过滤条件</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Locate">
+            <summary>
+            根据当前条件创建IndexList，记录定位的ID信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.First">
+            <summary>
+            移动到首行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Last">
+            <summary>
+            最后一行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Previous">
+            <summary>
+            前一行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Next">
+            <summary>
+            下一行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Mark(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            打上定位标志
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.NonFoucs">
+            <summary>
+            空焦点
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.FilterExpression">
+            <summary>
+            过滤表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Defines">
+            <summary>
+            取得条件的条件项集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Values">
+            <summary>
+            取得条件的条件项对应的表达式和值集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Count">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.Foucs">
+            <summary>
+            焦点
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.AbstractLocateByCondition.FocusID">
+            <summary>
+            当前焦点
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ActionException.#ctor">
+            <summary>
+            Overloaded. Default Constructor.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ActionException.#ctor(System.String)">
+            <summary>
+            Overloaded. Initializes a new ActionException with the specified message.
+            </summary>
+            <param name="msg">Exception message.</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ActionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Overloaded. Initializes a new ActionException with the specified message and inner exception.
+            </summary>
+            <param name="msg">Exception message.</param>
+            <param name="inner">Inner exception.</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ActionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Deserialization constructor.
+            </summary>
+            <param name="info">Holds all of the data needed to serialize or deserialize an object.</param>
+            <param name="context">The source and destination of a given serialized stream.</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ActionException.GetFirstExceptionMessage(System.Exception)">
+            <summary>
+            Returns the first exception information in an exception's stack trace.
+            </summary>
+            <param name="e">The exception.</param>
+            <returns>The first line in the stack trace.</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.CommonActionHelper">
+            <summary>
+            CommonAction公共方法类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.CreateQueryView(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.String,System.String,System.String,System.Int32,System.String[])">
+            <summary>
+            创建一个用于查询的视图
+            </summary>
+            <param name="model"></param>
+            <param name="entityFullName"></param>
+            <param name="fields">字段名[:类型名称]，默认类型名称为String。例如ID:Int64 或 Code</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.BuildCondtionByList(System.String,System.Collections.IList)">
+            <summary>
+            
+            </summary>
+            <param name="fieldName"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.CreateCommonAction(UFSoft.UBF.UI.IController.IAction)">
+            <summary>
+            创建一个ICommonAction,使用CommonActionImp
+            当Action为空时，使用RealAction对象
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.CreateCommonAction(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            创建一个ICommonAction,使用CommonActionImp
+            并根据参数为ICommonAction创建IAction参数(使用RealAction)
+            </summary>
+            <param name="model"></param>
+            <param name="part"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.QueryUIModel(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            执行QueryBP，查询一个UIModel的数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.UpdateUIModel(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            更新一个UIModel
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.LoadRecordCount(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            计算记录的数目根据View对象。
+            注意：计算记录的数目的开销是很大的，特别是当数据库
+            数据量较大时，可能会耗用大量的时间。
+            </summary>
+            <param name="view">准备参与计算的View对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.LoadUIModelFromCache(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Boolean)">
+            <summary>
+            重新从Cache中回读UIModel的数据，并加到UIModel中
+            </summary>
+            <param name="model"></param>
+            <param name="isClear"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.GetParentFilter(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            根据上级视图，产生一个OPath子句，限制下级视图的数据
+            </summary>
+            <param name="view">下级视图</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.GetIndexByID(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int64,System.Boolean)">
+            <summary>
+            根据某记录的ID查询某记录在数据集中的序号，从1开始
+            </summary>
+            <param name="view">View对象</param>
+            <param name="id">记录的ID</param>
+            <param name="useCache">是否使用Cache中的Index</param>
+            <returns>在数据集中的序号</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.GetIndexByID(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int64)">
+            <summary>
+            根据某记录的ID查询某记录在数据集中的序号，从1开始
+            </summary>
+            <param name="view">View对象</param>
+            <param name="id">记录的ID</param>
+            <returns>在数据集中的序号</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.CloneOptimizeUIModel(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Boolean)">
+            <summary>
+            将强类型的UIModel转为一个弱类型的UIModel并返回
+            主要供通用CRUD在使用INDIGO传输时使用．
+            约束：在Clone时，IsBindingEntity为False的View和Link将被忽略
+            <param name="model">被复制的强类型UIModel</param>
+            <param name="isCloneRecord">是否复制记录</param>
+            <returns>复制后的弱类型UIModel</returns>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.GetPageNoByIndex(System.Int64,System.Int32)">
+            <summary>
+            根据索引号计算所在的页号，索引号小于等于0时，返回0
+            </summary>
+            <param name="index">从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <returns>所在的页号，从0开始</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.GetCurrentRecordIndex(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            获得当前记录的索引号
+            </summary>
+            <param name="view"></param>
+            <returns>当前记录的索引号，从1起</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            TODO:补注释
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            TODO:补注释
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.FindIDListByPage(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            返回的DataTable对象包含新分页算法需要到ID及RowNumber等数据
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.CommonActionHelper.Instance">
+            <summary>
+            获得CommonActionHelper的实例
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.CommonActionImp">
+            <summary>
+            公共Action实现类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.ICommonAction">
+            <summary>
+            通用处理Action 接口.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load">
+             <summary>
+            加载当前Part的全部UIView的首页数据，支持延迟加载
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+             <summary>
+            加载指定的Model的数据.
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Boolean)">
+             <summary>
+            加载指定的Model的数据.
+             </summary>
+             <param name="model">要加载的model</param>
+             <param name="isClearData">是否清除数据</param>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Boolean)">
+            <summary>
+            加载指定的View的数据.
+            </summary>
+            <param name="view">要加载的View</param>
+            <param name="isFilterWithParent">是否依据父View来过滤</param>
+            <returns>加载返回的view</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load(UFSoft.UBF.UI.MD.Runtime.IUIView[])">
+            <summary>
+            通过指定的视图列表来进行数据加载
+            （此处所指定的视图列表，若为主视图,则同时加载其子视图，若非主视图，则仅加载其自身．）
+            </summary>
+            <param name="views"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Load(UFSoft.UBF.UI.MD.Runtime.IUIFieldAttributeCollection)">
+            <summary>
+            加载IUIFieldAttribute对象，包括IUIFlexField和UIRRField
+            </summary>
+            <param name="attrs"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.LoadChildViews(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            加载指定View的全部子View的数据加载.
+            </summary>
+            <param name="view">指定的View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Save">
+            <summary>
+            保存当前IUIModel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.Save(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            保存指定的UIModel
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            对该Model应用版型.-目前CU版型,将导致UIModel进行字段的填充和完善.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.ICommonAction.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            对该View应用版型.-目前CU版型,将导致UIModel进行字段的填充和完善.
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.ICommonAction.CurrentModel">
+            <summary>
+             操作的模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.ICommonAction.CurrentPart">
+            <summary>
+             当前操作的抽象Form,可能为null
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.ICommonAction.FillOption">
+            <summary>
+            指定通用Action的数据添充方式,(目前有效于所有Load的方法)
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.BeforeLoad">
+            <summary>
+            即将删除
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.BeforeModelLoad">
+            <summary>
+            通用Action数据加载前事件.
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.AfterLoad">
+            <summary>
+            通用Action数据加载后事件.
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.BeforeSave">
+            <summary>
+            通用Action数据保存之前
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.BeforeModelSave">
+            <summary>
+            保存前事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.ICommonAction.AfterSave">
+            <summary>
+            通用Action数据保存之后
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.#ctor(UFSoft.UBF.UI.IController.IAction)">
+            <summary>
+            构造 
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Save">
+            <summary>
+            保存Action操作的当前Model
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Save(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            保存指定的UIModel，参数Model将会被修改。
+            修改内容
+            1. 成功时：复制
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadTotalData(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            加载汇总数据存入Total对象中
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadTotalDataFromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            从当前View的记录集中计算Total数据
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadSelectedTotalData(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            汇总参数视图中IsSelected为True的IUIRecord
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIFieldAttributeCollection)">
+            <summary>
+            加载UIFieldRRAttribute类型的版型
+            </summary>
+            <param name="attrs"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIView@,UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute)">
+            <summary>
+            根据IDFields加载LoadFields字段，并填充到View中
+            警告：填充数据时，将会绕过View本身的Filter设置
+            </summary>
+            <param name="view"></param>
+            <param name="attr"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIView@,UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute,System.Boolean)">
+            <summary>
+            根据IDFields加载LoadFields字段，并填充到View中
+            警告：填充数据时，将会绕过View本身的Filter设置
+            </summary>
+            <param name="view">等待填充数据</param>
+            <param name="attr"></param>
+            <param name="isKeepChangeStatus">是否保持数据的Unchanged状态</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadAttrCollection(System.Collections.Generic.IList{UFSoft.UBF.UI.MD.Runtime.IUIView},System.Collections.Generic.IList{UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute},System.Boolean)">
+            <summary>
+            加载多个版型，1次BP调用
+            </summary>
+            <param name="stuffViews">回填的视图对象</param>
+            <param name="readyAttr">待加载的版型</param>
+            <param name="isKeepChangeStatus">是否保持数据的Unchanged状态</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Boolean)">
+            <summary>
+            加载指定的View的数据.
+            </summary>
+            <param name="view">要加载的View</param>
+            <param name="isFilterWithParent">是否依据父View来过滤</param>
+            <returns>加载返回的view</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load">
+            <summary>
+            Load
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            加载整个UIModel .(该Model可为非当前Action依赖的Model，但加载的参照将有问题)
+            注：新New出来的UIModel，其相应的参照是没有注册过的，那会导致加载后的参照Code和Name列的数据不正确．
+            使用BaseAction的方法ImmitReferecnceInfo可以注入相应的信息．
+            </summary>
+            <param name="model">指定的Model</param>
+            <returns>加载完成后的Model</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Boolean)">
+             <summary>
+            加载指定的Model的数据.
+             </summary>
+             <param name="model">要加载的model</param>
+             <param name="isClearData">是否清除数据</param>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.MD.Runtime.IUIView[])">
+            <summary>
+            通过指定的视图列表来进行数据加载
+            （此处所指定的视图列表，若为主视图,则同时加载其子视图，若非主视图，则仅加载其自身．）
+            </summary>
+            <param name="views">View列表(可 viewA,viewB,viewC的方法传参)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.GetParentFilter(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            根据上级视图产生条件
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.GetLinkFilterAllData(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.IUILink,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            TODO:补注释
+            </summary>
+            <param name="childView"></param>
+            <param name="link"></param>
+            <param name="MasterView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.Load(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl[])">
+            <summary>
+             通过指定的容器来进行数据加载．
+            </summary>
+            <param name="containers">容器列表</param>
+            <returns>加载完成的IUIModel</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadChildViews(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            加载指定View的全部子View的数据加载.
+            </summary>
+            <param name="view">当前指定的View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.CopyResultModelToModel(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Boolean)">
+            <summary>
+            复制保存的Model的返回值到当前Model中
+            约定:
+            1. ToModel的记录的ID和fromModel的TempKey是一致的
+            2. fromModel的Views是大于或等于toModel的
+            </summary>
+            <param name="fromModel"></param>
+            <param name="toModel"></param>
+            <param name="isSyncDeletedRecord">是否删除fromModel中没有的记录</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadStereoType(UFSoft.UBF.UI.MD.Runtime.IUIView,System.String)">
+            <summary>
+            对IUIView添加指定的版型
+            </summary>
+            <param name="view"></param>
+            <param name="stereoType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.FindEnumType(System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            获得可扩展枚举列表
+            </summary>
+            <param name="enumTypeIds"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadExtEnumValue(System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IList{System.Int32}})">
+            <summary>
+            查询可扩展枚举的Code，Name，并以IEnumUIView的形式返回
+            </summary>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.LoadFromDB(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Collections.Generic.ICollection{UFSoft.UBF.UI.MD.Runtime.IUIView})">
+            <summary>
+            参数化加载,进行标志位处理，调用通用CRUD加载．
+            </summary>
+            <param name="model">当前处理的Model</param>
+            <param name="views">View集</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.OnlyLoadFromDB(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.Collections.Generic.ICollection{UFSoft.UBF.UI.MD.Runtime.IUIView})">
+            <summary>
+            从数据库中加载数据
+            </summary>
+            <param name="model">装数据的Model</param>
+            <param name="views">要加载数据的View</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.GetOptiomizeChangesUIModel(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            创建一个优化的UIModel变化的UIModel．用于CRUD处理．
+            同时,为了通用CRUD的按组件或者是按主实体提交,要将当前Model主实体也置修改状态.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            TODO:补注释
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonActionImp.ApplyUIModelStereotype(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            TODO:补注释
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.BeforeLoad">
+            <summary>
+            数据加载前事件.
+            sender为当前的Action.
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.BeforeModelLoad">
+            <summary>
+            加载前事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.AfterLoad">
+            <summary>
+            数据加载后事件.
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.BeforeSave">
+            <summary>
+            通用Action数据保存之前
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.BeforeModelSave">
+            <summary>
+            保存前事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ActionProcess.CommonActionImp.AfterSave">
+            <summary>
+            通用Action数据保存之后
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.CommonActionImp.CurrentModel">
+            <summary>
+            当前Model
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.CommonActionImp.CurrentPart">
+            <summary>
+            当前的Webpart,可为空,目前来说，通用Action不会操作该属性．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.CommonActionImp.FillOption">
+            <summary>
+            指定通用Action的数据添充方式,(目前有效于所有Load的方法)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.INavigateAction">
+            <summary>
+            容器导航Action接口．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.FirstPage(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            第一页
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.LastPage(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            最后一页
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.NextPage(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            下一个页面
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.PrevPage(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            上一个页面．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.MovePageAt(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.Int64)">
+            <summary>
+            移动到指定的ID
+            </summary>
+            <param name="container">指定Form展示数据的容量对象，如果为Null则使用Form的主容器</param>
+            <param name="id">记录的ID值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.MovePageByIndex(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.Int64)">
+            <summary>
+            移动到指定的索引序号记录
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.Refresh(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            从数据库中重新加载当前索引位置的数据
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.Refresh(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.Boolean)">
+            <summary>
+            从数据库中重新加载当前索引位置的数据
+            </summary>
+            <param name="container"></param>
+            <param name="keepSelected">保持选中或未选中状态</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.INavigateAction.SpecialPage(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.Int32)">
+            <summary>
+            不使用
+            </summary>
+            <param name="container"></param>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonNavigateAction.GetCurrentRecordID(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            获得UIView当前记录的ID
+            </summary>
+            <param name="view"></param>
+            <returns>当前记录的ID</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonNavigateAction.MovePageByIndex(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.Int64)">
+            <summary>
+            从Container中获取PageNo，PageSize
+            </summary>
+            <param name="container"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonNavigateAction.CloneViewAndChildView(UFSoft.UBF.UI.MD.Runtime.IUIModel@,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            Clone SourceUIView以及其子VIew到Model中
+            </summary>
+            <param name="model"></param>
+            <param name="sourceUIView"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonNavigateAction.CloneLightedPageUIModel(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            得到一个分页算法使用的轻量级UIModel，只包含一个ContainerUIView
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CommonNavigateAction.GetVaildIndex(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int64)">
+            <summary>
+            获得一个有效Index值。当Index大于记录总数时，Index为记录总数值
+            </summary>
+            <param name="cView"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.ActionLoadDelegate">
+            <summary>
+            即将删除
+            </summary>
+            <param name="loadModel"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.UIActionLoadDelegate">
+            <summary>
+            ActionLoad的代理类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.ActionSaveDelegate">
+            <summary>
+            ActionSave的代理类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.UIActionSaveDelegate">
+            <summary>
+            保存事件
+            </summary>
+            <param name="saveModel"></param>
+            <param name="isCancel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.UIModelUtil">
+            <summary>
+            模型处理的Util方法．（暂设．可移入UIRuntime中．）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIModelUtil.ConvertStateFromUIToPL(System.Data.DataRowState)">
+            <summary>
+            数据状态的UI->PL的转换．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIModelUtil.GetMasterUIViews(System.Collections.Generic.ICollection{UFSoft.UBF.UI.MD.Runtime.IUIView})">
+            <summary>
+            得到要处理的View列表．(包含：没有上级View存在列表中的View．)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIModelUtil.CheckLoadUIViews(System.Collections.Generic.ICollection{UFSoft.UBF.UI.MD.Runtime.IUIView})">
+            <summary>
+            过滤掉非绑定的View和重复的View
+            </summary>
+            <param name="views"></param>
+            <returns>过滤后的结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIModelUtil.IsViewInParent(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            是否viewa 为　viewb的父或父．．级view.
+            </summary>
+            <param name="viewa">viewa</param>
+            <param name="viewb">viewb</param>
+            <returns>是否</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.NavigateActionImpl">
+            <summary>
+            页面导航Action实现．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.LocateByCondition">
+            <summary>
+            UIView的条件定位器实现类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.LocateByCondition.CreateInstanceToView(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            获得一个Locate对象实例
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.LocateByCondition.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造一个Locate对象
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIModelLoader.Load(UFSoft.UBF.UI.MD.Runtime.IUIModel@,System.Boolean)">
+             <summary>
+            加载指定的Model的数据.
+             </summary>
+             <param name="model">要加载的model</param>
+             <param name="isClearData">是否清除数据</param>
+             <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.CustomActionFacatory">
+            <summary>
+            公用Action工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CustomActionFacatory.GetCommonActionInstance(UFSoft.UBF.UI.IController.IAction)">
+            <summary>
+            获取通用Action的实例
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.CustomActionFacatory.GetNavigateActionInstance(UFSoft.UBF.UI.IController.IAction)">
+            <summary>
+            获取导航Action的实例
+            </summary>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.ActionDelegate">
+            <summary>
+             ACTION 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.BaseAction">
+            <summary>
+            抽象Action基类．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ActionProcess.BaseAction.Symbol_AddCustomFilter">
+            <summary>
+            自定义过滤String的参数名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ActionProcess.BaseAction.Symbol_MovePageFilter">
+            <summary>
+            ID字段的字段名
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数(仅提供给非自动代码生的Form使用)
+            </summary>
+            <param name="model">当前Action操作的Model</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.#ctor(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="part">当前操作的IPart</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.ImmitReferecnceInfo(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            对指定的UIModel注入相应的IPart中的参照信息．
+            改变映射绑定UIView中的参照策略所对应的属性：Code、Name 目前由于参照的设计方案做法．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.OnInitAction">
+            <summary>
+            自定义初始化Action.
+            可用于注册事件.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.OnLoadData">
+            <summary>
+             加载.??目前用途.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.BaseAction.InvokeAction(System.Object,UFSoft.UBF.UI.ActionProcess.UIActionEventArgs,UFSoft.UBF.UI.ActionProcess.ActionDelegate)">
+            <summary>
+            ACTION INVOKE .
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="actionExtend"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.CommonAction">
+            <summary>
+            通用Action对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.NavigateAction">
+            <summary>
+            导航Action对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.CurrentModel">
+            <summary>
+            当前Action处理的Model.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.CurrentPart">
+            <summary>
+            当前Action处理的Part.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.MainView">
+            <summary>
+            当前主容器所对应的视图。
+            --目前是通过容器所绑定的View来自动理出里面的主子关系,并且将最头的返回.
+            --可能的问题:如果开发人员希望操作的主View并非这种思路,就需要手工代码.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.BaseAction.CurrentState">
+            <summary>
+            当前的State.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.EmptyUIModelAction">
+            <summary>
+            用于空UIModel下的Action .（为了统一生成的框架）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.EmptyUIModelAction.#ctor(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="part">所操作的IPart</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.EmptyUIModelAction.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.EmptyUIModelAction.OnLoadData(System.Object,UFSoft.UBF.UI.ActionProcess.UIActionEventArgs)">
+            <summary>
+            Help: 数据加载(发生在Form的初始化加载时)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.EmptyUIModelAction.OnDataCollect(System.Object,UFSoft.UBF.UI.ActionProcess.UIActionEventArgs)">
+            <summary>
+            Help: 数据收集(发生在Form的CallBack或者是PostBack时)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.Resource">
+            <summary>
+            Resource信息（暂无用）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.Resource.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.Resource.GetStream(System.String)">
+            <summary>
+            Gets a resource stream with the messages used by the UIP classes.
+            </summary>
+            <param name="name">The resource key.</param>
+            <returns>A resource stream.</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.Resource.FormatMessage(System.String,System.Object[])">
+            <summary>
+            Formats a message stored in the UIP assembly resource file.
+            </summary>
+            <param name="key">The resource key.</param>
+            <param name="format">The format arguments.</param>
+            <returns>A formatted string.</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.Resource.ResourceManager">
+            <summary>
+            Gets a resource manager for the assembly resource file.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.Resource.Item(System.String)">
+            <summary>
+            Gets the message with the specified key from the assembly resource file.
+            </summary>
+            <param name="key">Key of the item to retrieve from the resource file.</param>
+            <returns>Value from the resource file identified by the key.</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.Resource.Exceptions">
+            <summary>
+            Class used to expose constants that represent keys in the resource file.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ActionProcess.UIActionEventArgs">
+            <summary>
+            UI Action 事件参数类型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ActionProcess.UIActionEventArgs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.UIActionEventArgs.Tag">
+            <summary>
+            扩展传递对象．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ActionProcess.UIActionEventArgs.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Approval.ApprovalBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.Approval.Operations.WFDataTransferDTOData">
+            <summary>
+            工作流对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.#ctor(System.Guid,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.m_instantID">
+            <summary>
+            工作流ID
+            工作流对象.Misc.工作流ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.m_workflowName">
+            <summary>
+            工作流名称
+            工作流对象.Misc.工作流名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.m_workflowState">
+            <summary>
+            工作流状态
+            工作流对象.Misc.工作流状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.m_effectiveTime">
+            <summary>
+            生效时间
+            工作流对象.Misc.生效时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.WFDataTransferDTOData.m_expirationTime">
+            <summary>
+            失效时间
+            工作流对象.Misc.失效时间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalResultDTOData">
+            <summary>
+            审批结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.#ctor(System.Int64,System.Int32,System.Collections.Generic.List{System.Int64},System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.m_actionId">
+            <summary>
+            活动标识
+            审批结果DTO.Misc.活动标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.m_actionType">
+            <summary>
+            动作标识
+            审批结果DTO.Misc.动作标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.m_forwardToUserIds">
+            <summary>
+            转交人
+            审批结果DTO.Misc.转交人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.m_opinion">
+            <summary>
+            意见
+            审批结果DTO.Misc.意见
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalResultDTOData.m_userId">
+            <summary>
+            用户Id
+            审批结果DTO.Misc.用户Id
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData">
+            <summary>
+            审批链传输DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.#ctor(System.Int64,System.Collections.Generic.List{System.Int64},System.Collections.Generic.List{System.Int64},System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.m_assignmentFeatureID">
+            <summary>
+            分配子表ID
+            审批链传输DTO.Misc.分配子表ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.m_addList">
+            <summary>
+            增加结果集
+            审批链传输DTO.Misc.增加结果集
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.m_delList">
+            <summary>
+            删除结果集
+            审批链传输DTO.Misc.删除结果集
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalOrderDTOData.m_assignmentID">
+            <summary>
+            审批分配ID
+            审批链传输DTO.Misc.审批分配ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.DocTypeDTOData">
+            <summary>
+            DocTypeDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.DocTypeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.DocTypeDTOData.#ctor(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DocTypeDTOData.m_responType">
+            <summary>
+            责任类型
+            DocTypeDTO.Misc.责任类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DocTypeDTOData.m_entityType">
+            <summary>
+            实体全名
+            DocTypeDTO.Misc.实体全名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DocTypeDTOData.m_template">
+            <summary>
+            模板内容
+            DocTypeDTO.Misc.模板内容
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DocTypeDTOData.m_timeLimite">
+            <summary>
+            审批时限天数
+            DocTypeDTO.Misc.审批时限天数
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalInfoData">
+            <summary>
+            审批信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalInfoData.#ctor(System.Int64,System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalInfoData.m_entityID">
+            <summary>
+            实体ID
+            审批信息.Misc.实体ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalInfoData.m_approvalInfos">
+            <summary>
+            审批信息
+            审批信息.Misc.审批信息
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalDocInfoData">
+            <summary>
+            审批单据信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.#ctor(System.String,System.Int64,System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.m_docUri">
+            <summary>
+            docUri
+            审批单据信息DTO.Misc.docUri
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.m_docID">
+            <summary>
+            docID
+            审批单据信息DTO.Misc.docID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.m_docBizOrg">
+            <summary>
+            docBizOrg
+            审批单据信息DTO.Misc.docBizOrg
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocInfoData.m_docEntityType">
+            <summary>
+            docEntityType
+            审批单据信息DTO.Misc.docEntityType
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ActionInfoDTOData">
+            <summary>
+            AtionDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ActionInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ActionInfoDTOData.#ctor(System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ActionInfoDTOData.m_hRName">
+            <summary>
+            岗位名称
+            AtionDTO.Misc.岗位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ActionInfoDTOData.m_approvalGroupName">
+            <summary>
+            职责名称
+            AtionDTO.Misc.职责名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData">
+            <summary>
+            审批打印信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData.#ctor(System.Int64,System.Collections.Generic.List{UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData.m_entityID">
+            <summary>
+            实体ID
+            审批打印信息.Misc.实体ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData.m_infos">
+            <summary>
+            打印信息明细
+            审批打印信息.Misc.打印信息明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData">
+            <summary>
+            审批打印审批链明细信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.#ctor(UFIDA.U9.Approval.Operations.ApprovalPrintInfoDTOData,System.Int64,System.String,System.String,System.Int64,System.DateTime,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalPrintInfoDTO">
+            <summary>
+            审批打印信息
+            审批打印审批链明细信息.Misc.审批打印信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalUserID">
+            <summary>
+            审批人ID
+            审批打印审批链明细信息.Misc.审批人ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalUserName">
+            <summary>
+            审批人名称
+            审批打印审批链明细信息.Misc.审批人名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalDocName">
+            <summary>
+            审批单据名称
+            审批打印审批链明细信息.Misc.审批单据名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalDocID">
+            <summary>
+            审批单据ID
+            审批打印审批链明细信息.Misc.审批单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalTime">
+            <summary>
+            审批时间
+            审批打印审批链明细信息.Misc.审批时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalPrintChainInfoDTOData.m_approvalOpinion">
+            <summary>
+            审批意见
+            审批打印审批链明细信息.Misc.审批意见
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData">
+            <summary>
+            维度子表DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.#ctor(System.String,System.Int64,System.Int64,System.Boolean,System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.m_approvalColumn">
+            <summary>
+            维度列
+            维度子表DTO.Misc.维度列
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.m_isPreSet">
+            <summary>
+            是否预置
+            维度子表DTO.Misc.是否预置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.m_iD">
+            <summary>
+            ID
+            维度子表DTO.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.m_oPType">
+            <summary>
+            操作类型
+            维度子表DTO.Misc.操作类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.Dimension_SKey">
+            <summary>
+            审批维度 序列化Key属性。（传递跨组织序列列字段）
+            维度子表DTO.Misc.审批维度
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.Dimension">
+            <summary>
+            审批维度
+            维度子表DTO.Misc.审批维度
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.DocumentType_SKey">
+            <summary>
+            审批对象 序列化Key属性。（传递跨组织序列列字段）
+            维度子表DTO.Misc.审批对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.DimensionFeatureDTOData.DocumentType">
+            <summary>
+            审批对象
+            维度子表DTO.Misc.审批对象
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData">
+            <summary>
+            审批流单据信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.#ctor(System.String,System.String,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.m_uri">
+            <summary>
+            Uri
+            审批流单据信息.Misc.Uri
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.m_entityType">
+            <summary>
+            实体类型
+            审批流单据信息.Misc.实体类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.m_objectID">
+            <summary>
+            单据ID
+            审批流单据信息.Misc.单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApprovalDocumentInfoDTOData.m_docBizOrg">
+            <summary>
+            单据来源组织
+            审批流单据信息.Misc.单据来源组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Operations.ApproveAssignDTOData">
+            <summary>
+            审批委托DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.#ctor(System.DateTime,System.Int64,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.m_approveDate">
+            <summary>
+            日期
+            审批委托DTO.Misc.日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.m_entityType">
+            <summary>
+            实体类型
+            审批委托DTO.Misc.实体类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.ApproveUser_SKey">
+            <summary>
+            委派人 序列化Key属性。（传递跨组织序列列字段）
+            审批委托DTO.Misc.委派人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.ApproveUser">
+            <summary>
+            委派人
+            审批委托DTO.Misc.委派人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.ApproveFor_SKey">
+            <summary>
+            被委托人 序列化Key属性。（传递跨组织序列列字段）
+            审批委托DTO.Misc.被委托人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Operations.ApproveAssignDTOData.ApproveFor">
+            <summary>
+            被委托人
+            审批委托DTO.Misc.被委托人
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Approval.ApprovalBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.ApprovalBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.ApprovalBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

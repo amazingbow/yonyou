@@ -1,0 +1,3073 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.WebControls.UFDataGrid</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            显示表头
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.RenderRowsData(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现表格中各行的数据
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.IsEmptyDataSource(System.Object)">
+            <summary>
+            是否为空数据行
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableBodyRenderHelper.RenderRowHtml(System.Web.UI.HtmlTextWriter,System.String)">
+            <summary>
+            展现行内容
+            </summary>
+            <param name="writer"></param>
+            <param name="rowHtml"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            显示表尾
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.RenderColunmSumCell(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn,System.Collections.Hashtable)">
+            <summary>
+            输出列合计单元
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.GetDataValue(System.String,System.Collections.Hashtable,UFSoft.UBF.UI.WebControls.GridNumberColumn)">
+            <summary>
+            取得数据值
+            </summary>
+            <param name="key"></param>
+            <param name="dataLine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.RenderLeftControlCell(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出最左面的控制列
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.RenderString(System.Web.UI.HtmlTextWriter,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.CalculateColumnsSum(UFSoft.UBF.UI.WebControls.ColumnCollection,System.Object)">
+            <summary>
+            计算列的合计值
+            </summary>
+            <param name="columns"></param>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.BuiltHashTable(System.Collections.Hashtable,UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.calculateItems)">
+            <summary>
+            构造哈稀表
+            </summary>
+            <param name="sumData"></param>
+            <param name="aggregates"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.CreateCalculateItems(UFSoft.UBF.UI.WebControls.ColumnCollection,UFSoft.UBF.UI.WebControls.UFDataTable)">
+            <summary>
+            创建计算项
+            </summary>
+            <param name="columns"></param>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.CanCalculate(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            判断是否能用于计算
+            </summary>
+            <param name="column"></param>
+            <param name="dataColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.GetDataColumnIndex(System.String,System.Data.DataColumnCollection)">
+            <summary>
+            取得列索引
+            </summary>
+            <param name="name"></param>
+            <param name="dataColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.Calculating(UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.calculateItems,UFSoft.UBF.UI.WebControls.UFDataTable)">
+            <summary>
+            数据计算
+            </summary>
+            <param name="aggregates"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.CalculatingColumn(UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.calculatedItem,System.Object)">
+            <summary>
+            计算列内容
+            </summary>
+            <param name="item"></param>
+            <param name="data"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.calculateItems">
+            <summary>
+            计算项目集合描述
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ActiveTableFootRenderHelper.calculatedItem">
+            <summary>
+            需要计算的项目描述
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出表头对象
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.RenderUserDefineTableHead(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            显示用户自定义的表头
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.CalculateColumnIndex(System.Int32,System.Int32,System.Web.UI.WebControls.TableCell,System.Int32)">
+            <summary>
+            计算当前单元对应的列索引
+            </summary>
+            <param name="rowIndex">行索引</param>
+            <param name="rowCount"></param>
+            <param name="cell"></param>
+            <param name="startColumnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.GetColumnOfCell(UFSoft.UBF.UI.WebControls.ColumnCollection,System.Int32)">
+            <summary>
+            取得Cell单元对应的列
+            </summary>
+            <param name="bottomTitle"></param>
+            <param name="columnIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.GetColumnTitle(UFSoft.UBF.UI.WebControls.GridColumn,System.Web.UI.WebControls.TableCell)">
+            <summary>
+            取得默认列标题
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.RenderDefaultTableHead(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            显示默认的表头
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.RenderLeftControlCell(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            输出最左面的控制列
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.RenderLeftControlCell(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出最左面的控制列
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.GetColumnTitle(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            取得默认列标题
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.SetMultiCellAttributes(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn,System.Web.UI.WebControls.TableCell)">
+            <summary>
+            设置单元格属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+            <param name="bottomTitle"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.SetCellAttributes(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn,System.Web.UI.WebControls.TableCell)">
+            <summary>
+            设置单元格属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+            <param name="bottomTitle"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.SetCellAttributes(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            设置列属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.UI.WebControls.ActiveTableHeadRenderHelper.RenderString(System.Web.UI.HtmlTextWriter,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.PropertyDisabled(System.String)">
+            <summary>
+            属性名禁止使用断言
+            </summary>
+            <param name="property"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.PropertyNullOrEmpty(System.Boolean,System.String,System.String)">
+            <summary>
+            断言属性必须设置
+            </summary>
+            <param name="condition"></param>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.ArgumentNullOrEmpty(System.Boolean,System.String)">
+            <summary>
+            断言参数不能为空
+            </summary>
+            <param name="ok"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.ArgumentColumnExist(System.Boolean,System.String)">
+            <summary>
+            断言同名列已经存在
+            </summary>
+            <param name="ok"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.VerifyDynamicPricision(UFSoft.UBF.UI.WebControls.GridColumn,UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            动态精度控制设置校验
+            </summary>
+            <param name="column"></param>
+            <param name="gird"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Asserts.VerifyDataSourceField(System.Data.DataColumnCollection,System.String)">
+            <summary>
+            动态精度控制数据源校验
+            </summary>
+            <param name="grid"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.GetInstance">
+            <summary>
+            取得对象实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterEventsHandler(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            注册各种回调事件
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterHTCControl(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设置客户端控件注册属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterCallBackEventHandler(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            注册CallBack事件方法
+            </summary>
+            <param name="grid"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterPostBackEventHandler(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            注册客户端激活PostBack事件方法
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterScript(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            注册客户端脚本
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterCallBackScript(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            注册数据回调脚本  
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.GetCallBackJavascript(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得CallbackJavascrpit 
+            </summary>
+            <param name="grid"></param> s
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterStaticObject(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            注册静态脚本对象
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RegisterScriptBlock(UFSoft.UBF.UI.WebControls.UFGrid,System.String,System.String)">
+            <summary>
+            注册指定的脚本
+            </summary>
+            <param name="grid"></param>
+            <param name="key"></param>
+            <param name="script"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.GetMenuResources">
+            <summary>
+            取得菜单资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.AddCollectDataScript(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            用于数据收集
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.RenderHtmlElement(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现内联的Html元素
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientJavascriptBuildHelper.CreateHideHtmlElement(UFSoft.UBF.UI.WebControls.UFGrid,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            创建隐藏域，回传数据
+            </summary>
+            <param name="writer">系统输出对象</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ClientReferenceParameters">
+            <summary>
+            自定义参数集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientReferenceParameters.ToString">
+            <summary>
+            输出到字符串变量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ClientReferenceParameter">
+            <summary>
+            带参参照描述
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientReferenceParameter.#ctor(System.String,System.String,UFSoft.UBF.UI.WebControls.enumRefParameterAttribute)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="paraName"></param>
+            <param name="columnName"></param>
+            <param name="attribute"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ClientReferenceParameter.ToString">
+            <summary>
+            转换成字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ClientReferenceParameter.ParameterName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ClientReferenceParameter.ColumnName">
+            <summary>
+             参照列名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ClientReferenceParameter.Style">
+            <summary>
+            参照列样式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColReferenceParameters">
+            <summary>
+            自定义参数集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColReferenceParameter">
+            <summary>
+            带参参照描述
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColReferenceParameter.#ctor(System.String,System.String,UFSoft.UBF.UI.WebControls.enumRefParameterAttribute)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="paraName"></param>
+            <param name="columnName"></param>
+            <param name="attribute"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColReferenceParameter.ParameterName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColReferenceParameter.ColumnName">
+            <summary>
+             参照列名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColReferenceParameter.Style">
+            <summary>
+            参照列样式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection">
+            <summary>
+            表格列枚举参照集合定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Add(System.String,System.String)">
+            <summary>
+            增加对象 
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Add(System.String,System.String,System.Boolean)">
+            <summary>
+            增加对象 
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Add(UFSoft.UBF.UI.WebControls.ColumnEnumValue)">
+            <summary>
+            增加对象 
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.GetItemIndex(System.String)">
+            <summary>
+            取得指定项目的索引
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Insert(System.Int32,UFSoft.UBF.UI.WebControls.ColumnEnumValue)">
+            <summary>
+            插入对象 
+            </summary>
+            <param name="index"></param>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Remove(UFSoft.UBF.UI.WebControls.ColumnEnumValue)">
+            <summary>
+            删除对象 
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Contains(UFSoft.UBF.UI.WebControls.ColumnEnumValue)">
+            <summary>
+            判断对象是否存在 
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Clone">
+            <summary>
+            复制对象自身 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Item(System.Int32)">
+            <summary>
+            索引器 
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection.Item(System.String)">
+            <summary>
+            健名索引器
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColumnEnumValue">
+            <summary>
+            列枚举参照定义 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnEnumValue.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            列参照值选择
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="select"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnEnumValue.Key">
+            <summary>
+            枚举键值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnEnumValue.Value">
+            <summary>
+            枚举值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnEnumValue.Select">
+            <summary>
+            true CheckBox选种时的值 false CheckBox未被选种时的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.Used">
+            <summary>
+            描述约束属性是否被使用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.InhibitUnique">
+            <summary>
+            列唯一性约束
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.InputFilterCharts">
+            <summary>
+            字符输入过滤条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.EndDate">
+            <summary>
+            终止日期
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.StartDate">
+            <summary>
+            开始日期
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.DateRange">
+            <summary>
+            日期区间约束
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.DataLength">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.ValueRange">
+            <summary>
+            使用值区间约束
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.Max">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnInhibit.Min">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocateFirst">
+            <summary>
+            取得定位首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocateNext">
+            <summary>
+            取得定位下页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocatEnd">
+            <summary>
+            取得末页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocatePrevious">
+            <summary>
+            定位上页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterToolBarRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterToolBarRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.SetRowStyle(System.Int32,System.String,System.String)">
+            <summary>
+            设置行的背景色和前景色
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="color"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.SetColVisible(System.String,System.Boolean)">
+            <summary>
+             设置列是否隐藏
+            </summary>
+            <param name="colName"></param>
+            <param name="visible"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.SetColEnable(System.String,System.Boolean)">
+            <summary>
+            设置列是否可用属性
+            </summary>
+            <param name="colName"></param>
+            <param name="enable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnInit(System.EventArgs)">
+            <summary>
+            初始化事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnPreRender(System.EventArgs)">
+            <summary>
+            页面提交前准备 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            提交页面主要内容
+            </summary>
+            <param name="writer">输出</param>		
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RaisePostBackEvent(System.String)">
+            <summary>
+            激活PostBack的页面回传事件
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetPageAction(System.String)">
+            <summary>
+            取得页面动作类型
+            </summary>
+            <param name="actionTag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetCustomFilterAction(System.String)">
+            <summary>
+            取得客户端查询的动作类型
+            </summary>
+            <param name="actionTag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RaisePostDataChangedEvent">
+            <summary>
+            提交数据改变后的事件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            加载提交的数据
+            </summary>
+            <param name="postDataKey">key</param>
+            <param name="postCollection">提交集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetEventNode">
+            <summary>
+            获取Post事件节点
+            </summary>
+            <returns>GridEventNode 可能返回null值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RecoverDataSource(System.String)">
+            <summary>
+            根据回传的xml文档重新构建datasource
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RestoreSessionBuffer">
+            <summary>
+            恢复现场,在LoadPostData之前恢复内容
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RestoreSessionBufferAfterLoadPostData">
+            <summary>
+            恢复现场，在LoadPostData之后恢复内容
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetCallbackResult">
+            <summary>
+            返回数据结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.System#Web#UI#ICallbackEventHandler#RaiseCallbackEvent(System.String)">
+            <summary>
+            恢复CallBackEvent
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetContentOutPut">
+            <summary>
+            取得CallBack回复数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.CreateDataContent(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            创建DataTable输出的内容
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.ReplaceDefaultValueFromDataSource(UFSoft.UBF.UI.WebControls.ColumnCollection,System.Object)">
+            <summary>
+            更新列的初始值
+            </summary>
+            <param name="columns"></param>
+            <param name="dataSource"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.SetColumnDefaultValue(UFSoft.UBF.UI.WebControls.GridColumn,System.Data.DataColumnCollection)">
+            <summary>
+            设置列的默认属性
+            </summary>
+            <param name="column"></param>
+            <param name="sourceColumns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetColumnDefaultValue(System.String,System.Data.DataColumnCollection)">
+            <summary>
+            取得列的默认值
+            </summary>
+            <param name="fieldName"></param>
+            <param name="columns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.InitGridColumnAttributes(UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            校验控件列的初始属性设置
+            </summary>
+            <param name="columns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.CreateHtmlColControl">
+            <summary>
+            负责展现客户端的行编辑对象
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetSelectedRowKeys(System.Xml.XmlDocument)">
+            <summary>
+            取得被选择行关键字集合
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetSortedSelectIDs(System.Xml.XmlDocument)">
+            <summary>
+            读取客户端收集的合计行数据
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetUnSelectIDs(System.Xml.XmlDocument)">
+            <summary>
+            读取返回的数据总条数信息
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetPostBackEvent(System.Xml.XmlDocument)">
+            <summary>
+            取得PostBack事件,有事件返回,返回true否则为false
+            </summary>
+            <param name="document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.CreatePostBackData(System.Xml.XmlElement)">
+            <summary>
+            为PostBack创建数据行
+            </summary>
+            <param name="dataTableXml"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetIsDBSelectAll(System.Xml.XmlDocument)">
+            <summary>
+            取XML中取得，是否所有页全选中
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetSelectCell(System.Xml.XmlDocument)">
+            <summary>
+            取得当前焦点所在位置
+            </summary>
+            <param name="document"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.BuildSelectCell(System.Int64,System.Int64)">
+            <summary>
+            标记单元行列所在位置
+            </summary>
+            <param name="rowIndex"></param>
+            <param name="colIndex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.AutoFillDataSource">
+            <summary>
+            表格分页时自动补空行
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetColumnValue(System.Data.DataRow,System.String)">
+            <summary>
+            获取单元格的数据s
+            </summary>
+            <param name="row"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.GetRowClass">
+            <summary>
+            取得行样式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnGridRowClickedHandler(UFSoft.UBF.UI.WebControls.GridCallBackEventArgs)">
+            <summary>
+            行单击事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnGridMakePageEventHandler(UFSoft.UBF.UI.WebControls.GridMakePageEventArgs)">
+            <summary>
+            触发页面跳转
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnGridCustomFilterEventHandler(UFSoft.UBF.UI.WebControls.GridCustomFilterArgs)">
+            <summary>
+            触发客户化筛选
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.ClearGridCustomFilterEvent">
+            <summary>
+            清除客户化筛选
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnGridRowChangeHandler(UFSoft.UBF.UI.WebControls.GridCallBackEventArgs)">
+            <summary>
+            行改变 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.OnGridBeforeCellFocusEnterHandler(UFSoft.UBF.UI.WebControls.GridCallBackEventArgs)">
+            <summary>
+            指定列行改变 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.RenderHtml(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            向客户端输出初始的表格脚本
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.SetClientAttribute(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            设置输出到客户端的属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.CreateMainContainer(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.IRenderHelper,UFSoft.UBF.UI.WebControls.IRenderHelper)">
+            <summary>
+            创建控件基本布局
+            </summary>
+            <param name="writer"></param>
+            <param name="activeTableRender"></param>
+            <param name="paggingToolbarRender"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGrid.CreateMainCols(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出表格基本布局:表格基本布局为一列两行布局
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DisplayName">
+            <summary>
+            控件的显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DefaultValueColums">
+            <summary>
+            设置默认值列，行为：携带上一行对应cell的值作为当前cell的默认值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DefaultValueColumsOrder">
+            <summary>
+            设置默认值列，设置顺序列表
+            与Column上的 Defaultvalue4P同时使用，设置默认值时按照顺序设置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.IsSumAllData">
+            <summary>
+            是否合计所有行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.IsSumSelectedData">
+            <summary>
+            是否合计所有行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SumDatas">
+            <summary>
+            合计值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DynamicColumnEnabled">
+            <summary>
+            是否需要支持动态列调整
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AlwaysCollectData">
+            <summary>
+            是否要总是收集数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.Culture">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ReadOnly">
+            <summary>
+            页面是否只读属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.FocusRow">
+            <summary>
+            焦点所在行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.FocusCol">
+            <summary>
+            焦点所在列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ColumnCollection">
+            <summary>
+            表格列的Schema描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.EditStatus">
+            <summary>
+            编辑状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SelectOption">
+            <summary>
+            选择的方式 单选、多选 ,默认只有Browse模式有效
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowSelectAll">
+            <summary>
+            当Grid处于多选状态时，是否允许表头的checkbox控件输出
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.Head">
+            <summary>
+            多表头属性
+            </summary>        
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CurPageIndex">
+            <summary>
+            当前的页码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SelectRowIndexs">
+            <summary>
+            被选中的行集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowSort">
+            <summary>
+            是否允许排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.HasMenu">
+            <summary>
+            是否显示编辑菜单
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ShowAllMenuButton">
+            <summary>
+            属性为真：显示编辑菜单中的所有按钮
+            属性为假：只显示编辑菜单中的可用按钮，隐藏不可用按钮
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowAddRow">
+            <summary>
+            是否允许增加行  
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DisableDefaultCopyRowAction">
+            <summary>
+            是否禁用默认的复制行逻辑
+            <remarks>默认为false; 如果禁用，需开发自己完成复制View数据的功能</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowDeleteRow">
+            <summary>
+            是否允许删除行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowInsertRow">
+            <summary>
+            是否允许插入行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowCopyRow">
+            <summary>
+            是否允许复制行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AutoEditModel">
+            <summary>
+            是否启动自动增行模式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.HasSum">
+            <summary>
+            是否有合计行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SumRowWithDynamicPricision">
+            <summary>
+            合计行取动态精度信息
+            取第一行数据的精度信息，包括精度、RoundType、RoundValue
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.StartRowIndex">
+            <summary>
+            当前页的开始行索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.Pageing">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.PageRows">
+            <summary>
+            每页的grid数据行数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.TotalRows">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ShowTotalRows">
+            <summary>
+            是否显示总行数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ShowGotoPage">
+            <summary>
+            是否显示GoToPage输入框和goto按钮
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ShowPaggingToolbar">
+            <summary>
+            是否显示分页工具条，不分页也可以显示，值显示总数据条数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ShowCustomFilterToolBar">
+            <summary>
+            是否显示客户化筛选工具条(Grid定位功能)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CustomFilterQueryHasData">
+            <summary>
+            客户化筛选 是否筛选出了数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CustomFilterShowDialog">
+            <summary>
+            快速定位，是否要直接弹出条件窗口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.FrozenControlColumn">
+            <summary>
+            是否冻结控制列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AllowAlternatingStyle">
+            <summary>
+            启用交替行样式支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SortExpression">
+            <summary>
+            表格排序属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.FilterExpression">
+            <summary>
+            条件表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SelTable">
+            <summary>
+            获取选中的数据集合        
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SelectedRowKeys">
+            <summary>
+            被选择行的关键字列表（使用ID列的值）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.HasFocus">
+            <summary>
+            判断是否需要设置焦点 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.HelpId">
+            <summary>
+            帮助ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.EventFlag">
+            <summary>
+            用来记录事件隐藏域的名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ClientInfor">
+            <summary>
+            客户端辅助信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DataContentId">
+            <summary>
+            数据内容编号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.PageHeight">
+            <summary>
+            分页工具条高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ScrollTop">
+            <summary>
+            用来记录主div滚动条的位置。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.ScrollLeft">
+            <summary>
+            记录左滚动条的相对位置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.RowHeight">
+            <summary>
+            记录表体行高
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.RowStyles">
+            <summary>
+            处理行样式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.DisabledCells">
+            <summary>
+            只读单元格列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CellsStyle">
+            <summary>
+            需设置单元格背景色的单元格列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.FrozenRows">
+            <summary>
+            需要锁定的行的Index列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CurrentUpdatePanel">
+            <summary>
+            当前控件所属的UpdatePanel
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.RowClickedEvent">
+            <summary>
+            行的点击事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.IsSortSelectRecords">
+            <summary>
+            是否按选择顺序返回结果集
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.SortedSelectIDs">
+            <summary>
+            客户端选中ID的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.UnSelectIDs">
+            <summary>
+            客户端反选ID集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.MaxSelectIndex">
+            <summary>
+            记录选中记录中最大顺序号，用户继续按顺序新增选中项
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.AlwaysPagging">
+            <summary>
+            是否强制翻页，默认编辑状态下不翻页
+            </summary>        
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGrid.CanStoreColumnInfo">
+            <summary>
+            是否允许输出列索引备份信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridInputValidDelegate">
+            <summary>
+            表格输入校验委托
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridRowChangeDelegate">
+            <summary>
+            表格当前行位置改变事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridBeforeCellFocusEnterDelegate">
+            <summary>
+            表格指定列当前行位置改变事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridChangeDelegate">
+            <summary>
+            表格行改变事件委托，暂时未用到
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridRowClickedDelegate">
+            <summary>
+            鼠标单击表格行事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridClolumnSortDelegate">
+            <summary>
+            Grid列排序事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridDataBackDelegate">
+            <summary>
+            表格数据回传事件委托 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridCustomerPostBackDelegate">
+            <summary>
+            表格数据回传事件委托 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridRowDBClickedDelegate">
+            <summary>
+            表格行被双击事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridMakePageDelegate">
+            <summary>
+            翻页事件委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridExtendClicked">
+            <summary>
+            GridExtend点击事件代理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridHeadClicked">
+            <summary>
+            GridHead点击事件代理。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridFootRenderDelegate">
+            <summary>
+            GridFoot Render之前的处理事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridCustomFilterDelegate">
+            <summary>
+            Grid 定位功能，即客户化筛选
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridGotoErrorRecordDelegate">
+            <summary>
+            Grid定位错误行处理事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs">
+            <summary>
+            用户自定义PostBack事件参数定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs.#ctor(System.Int32,System.Int32,System.Int32,System.Collections.Specialized.NameValueCollection,System.Object,System.Object)">
+            <summary>
+            构造函数定义
+            </summary>
+            <param name="rowNumber"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs.LastRowIndex">
+            <summary>
+            上次选中的行索引 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs.RowIndex">
+            <summary>
+            当前选中的行索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs.ColIndex">
+            <summary>
+            当前选中的列索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCustomerPostBackEventArgs.SrcColumnName">
+            <summary>
+            触发列名
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridDBClickEventArgs">
+            <summary>
+            鼠标双击事件参数定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDBClickEventArgs.#ctor(System.Int32)">
+            <summary>
+            构造函数定义
+            </summary>
+            <param name="rowNumber"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridDBClickEventArgs.RowIndex">
+            <summary>
+            当前选中的行索引
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridDataBackEventArgs">
+            <summary>
+            数据回传事件定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBackEventArgs.#ctor(System.Data.DataTable)">
+            <summary>
+            构造函数定义
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridDataBackEventArgs.ClientData">
+            <summary>
+            ClientData
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridColumnSortEventArgs">
+            <summary>
+            列排序 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridCallBackEventArgs">
+            <summary>
+            客户端CallBack参数回调 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCallBackEventArgs.ClientData">
+            <summary>
+            回调数据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridCallBackEventArgs.RowIndex">
+            <summary>
+            赋值索引
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridMakePageEventArgs">
+            <summary>
+            翻页事件参数事件类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridMakePageEventArgs.Action">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridHeadClickEventArgs">
+            <summary>
+            表头点击事件参数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridExtendEventArgs">
+            <summary>
+            表头扩展事件定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColumnTextAlign">
+            <summary>
+            列对齐方式枚举定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.PagerPosition">
+            <summary>
+            分页栏目位置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.EditStatus">
+            <summary>
+            表格编辑摸 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.RenderType">
+            <summary>
+            控件战线的方式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.enuBindingType">
+            <summary>
+            连接参数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.FormatHelper">
+            <summary>
+            格式化辅助类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormatHelper.#ctor(System.String)">
+            <summary>
+            格式化构造函数
+            </summary>
+            <param name="culture"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormatHelper.FormatDateTime(System.String,System.String,UFSoft.UBF.UI.Controls.DateTimeType)">
+            <summary>
+            日期和时间的格式化
+            </summary>
+            <param name="value"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.LinkParameter.Name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.LinkParameter.BindingName">
+            <summary>
+            绑定参数名称，如果绑定列则为列名，如果绑定环境变量则为变量名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.LinkParameter.BindingType">
+            <summary>
+            绑定类型定义column绑定列，context绑定环境变量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.LinkParameter.BindingProperty">
+            <summary>
+            绑定属性类型默认为Value
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.FormReference">
+            <summary>
+            Form引用设置  
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormReference.GetBindingCombox(System.String)">
+            <summary>
+            识别动态枚举
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormReference.GetPropertyString">
+            <summary>
+            取得主要属性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormReference.GetParameters(System.Collections.Generic.List{UFSoft.UBF.UI.WebControls.LinkParameter})">
+            <summary>
+            取得参数集合
+            </summary>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormReference.GetParameter(UFSoft.UBF.UI.WebControls.LinkParameter)">
+            <summary>
+            取得参数串
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.FormId">
+            <summary>
+            FormID号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.CodeField">
+            <summary>
+            编码字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.NameField">
+            <summary>
+            名称字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.FormCaption">
+            <summary>
+            Form标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.Width">
+            <summary>
+            Form宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.Height">
+            <summary>
+            Form高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.HideStatusBar">
+            <summary>
+            弹出窗口是否隐藏状态栏
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.Parameters">
+            <summary>
+            查询参数描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.FormReference.Result">
+            <summary>
+            返回值描述
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn.allowSort">
+            <summary>
+            允许排序
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn.allowFilter">
+            <summary>
+            允许过滤
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn._AggregateSelectedData">
+             <summary>
+            是否合计选择行
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn._AggregateAllData">
+            <summary>
+            是否合计所有行
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn._enumStyle">
+            <summary>
+            列排序
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn.visibleEx">
+            <summary>
+            列是否可见
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn.enableEx">
+            <summary>
+            列是否允许编辑
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumn.toolTip">
+            <summary>
+            列的提示信息 tooltip
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumn.Clone">
+            <summary>
+            ICloneable 成员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            设置控件的属性
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumn.VerifyAttributes(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            校验控件的初始属性设置
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumn.SetDefaultAlignment(UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            设置列默认的对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.IsPersonal">
+            <summary>
+            是否已经被个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.PersonalGridColumnEditControl">
+            <summary>
+            指定个性化跨页签移动产生列的列编辑器。目前新产生列的编辑器使用移动前的原控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.LoadPostBack">
+            <summary>
+            列FieldId名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.FieldId">
+            <summary>
+            列FieldId名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.EnumValues">
+            <summary>
+            列参照枚举值列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DataType">
+            <summary>
+            列的数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DefaultValue">
+            <summary>
+            列的默认值
+            </summary>        
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DefaultValue4P">
+            <summary>
+            列的默认值，客户端应用，此默认值优先
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.IsFormula">
+            <summary>
+            是否计算列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Formula">
+            <summary>
+            列计算公式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.HasEvent">
+            <summary>
+            列是否定点击事件
+            </summary>        
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.FormReference">
+            <summary>
+            Form引用属性设计
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DisplayFormat">
+            <summary>
+            列的数据显示格式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.IsNull">
+            <summary>
+            列中的数据是否可以空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DisplayName">
+            <summary>
+            列的显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.TextAlign">
+            <summary>
+            列的数据对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Point">
+            <summary>
+            列小数点后保留数据的位数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Width">
+            <summary>
+            列的宽度
+            </summary>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.UI.WebControls.GridColumn.ZeroIsNull”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:UFSoft.UBF.UI.WebControls.GridColumn.DynamicPricision”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ScaleField">
+            <summary>
+            小数精度绑定字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.RoundTypeField">
+            <summary>
+            舍入类型绑定字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.RoundValueField">
+            <summary>
+            舍入值绑定字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.MaskChars">
+            <summary>
+            输入屏蔽字符串
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.MaxLength">
+            <summary>
+            文本宽度设置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DisplayLine">
+            <summary>
+            列边线是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Sequence">
+            <summary>
+            列自动客户端产生序列号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.SequenceStart">
+            <summary>
+            开始行号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.SequenceStep">
+            <summary>
+            步长定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Visible">
+            <summary>
+            列是否可见
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.HasSum">
+            <summary>
+            列是否需要合计
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.SumValueFrom">
+            <summary>
+            合计值，数据来源
+            如果是Default则为Grid计算
+            如果是Custom 则，Grid客户端不计算
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Enable">
+            <summary>
+            列是否允许编辑
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ControlType">
+            <summary>
+            列的控件类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ColControl">
+            <summary>
+            当前列控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.EnumID">
+            <summary>
+            列的枚举id值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ExtEnumID">
+            <summary>
+            列的枚举id值，Guid值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Inhibit">
+            <summary>
+            列的约束属性定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.RefID">
+            <summary>
+            参照对应的Guid编号  
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.IDField">
+            <summary>
+            参照的IDValue
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.CodeField">
+            <summary>
+            参照的CodeField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.NameField">
+            <summary>
+            参照的NameField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.SelectOption">
+            <summary>
+            参照的选择方式,单选、多选
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.PopUpID">
+            <summary>
+            参照的弹出窗口ID号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.RuntimeCodeField">
+            <summary>
+            参照的RunTime CodeField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.RuntimeNameField">
+            <summary>
+            参照的RunTime NameField		
+            </summary>		
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ReferenceRelations">
+            <summary>
+            定义参照列的隐射关系
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ReferenceRelations4P">
+            <summary>
+            定义参照列的隐射关系
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.ReferenceParameters">
+            <summary>
+            参照参数列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.Frozen">
+            <summary>
+            冻结列，此属性为真时列在表格横向滚动时保持绝对位置不变
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.DescContextValue">
+            <summary>
+            上下文值，用于扩展字段
+            </summary>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.UI.WebControls.GridColumn.ExpandedSegmentsKey”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.IsFirePostBackByExpandedSegment">
+            <summary>
+            用于弹性域个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.AllowSort">
+            <summary>
+            允许排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumn.AllowFilter">
+            <summary>
+            允许过滤
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridCheckBoxColumn.VerifyAttributes(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            校验属性设置
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridCheckBoxColumn.SetDefaultEnumValues">
+            <summary>
+            设置默认的枚举表定义  
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridCheckBoxColumn.InvalidEnumValues(UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection)">
+            <summary>
+            追加参照值
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="select"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridCheckBoxColumn.GetEnumValueBySelect(UFSoft.UBF.UI.WebControls.ColumnEnumValueCollection,System.Boolean)">
+            <summary>
+            取得选择成员
+            </summary>
+            <param name="enumvalues"></param>
+            <param name="select"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Clear">
+            <summary>
+            清除集合元素 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Contains(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            判断元素是否存在
+            </summary>
+            <param name="MenuItem1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.IndexOf(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            取得对象在集合中的索引
+            </summary>
+            <param name="MenuItem1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.IndexOf(System.String)">
+            <summary>
+            取得指定名称对象的位置
+            </summary>
+            <param name="inputValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Remove(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            删除指定的对象
+            </summary>
+            <param name="MenuItem1"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.RemoveAt(System.Int32)">
+            <summary>
+            删除指定位置的对象
+            </summary>
+            <param name="i"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.InsertAt(System.Int32,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            把对象插入到指定位置
+            </summary>
+            <param name="index"></param>
+            <param name="MenuItem1"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Add(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            追加对象方法
+            </summary>
+            <param name="MenuItem1"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Copy(UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            集合拷贝
+            </summary>
+            <param name="columns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnCollection.Clone">
+            <summary>
+            ICloneable 成员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnCollection.IsReadOnly">
+            <summary>
+            集合是否只读
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnCollection.Count">
+            <summary>
+            集合元素数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnCollection.IsFixedSize">
+            <summary>
+            是否是固定宽度集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnCollection.Item(System.Int32)">
+            <summary>
+            集合索引器定义
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.GetInstance">
+            <summary>
+             取得对象实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.GridSchemaChange(System.Xml.XmlDocument,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            根据客户端表格的改变,修改列信息
+            </summary>
+            <param name="xml"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.resolveClientID(System.Web.UI.Control,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+             改变客户端数据列的参照窗口对象ID
+            </summary>
+            <param name="inputControl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.RenderHtmTag(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            输出表表格的Html脚本
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.RenderControlCol(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出控制列
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetColumnProperty(System.Xml.XmlElement,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            重新设置列的属性
+            </summary>
+            <param name="xmlNode"></param>
+            <param name="columns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.GetInteger(System.String,System.Int32)">
+            <summary>
+            取得列宽度
+            </summary>
+            <param name="width"></param>
+            <param name="defaultWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.RenderColumnHtmlTag(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            创建列的Html属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.RenderBasicHtmlTag(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            创建列的基础Html属性
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetFormReferenceAttribute(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            设置Form引用属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetDynamicPricisionAttribute(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            设置数据动态精度绑定属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetColumnReferenceAttribute(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            设置参照列描述属性
+            </summary>
+            <param name="writer"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetAttribute(System.Web.UI.HtmlTextWriter,System.Boolean,System.String,System.String)">
+            <summary>
+            设置列属性
+            </summary>
+            <param name="writer"></param>
+            <param name="enable"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.SetStyleAttribute(System.Web.UI.HtmlTextWriter,System.Boolean,System.String,System.String)">
+            <summary>
+            设置列样式属性
+            </summary>
+            <param name="writer"></param>
+            <param name="enable"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridColumnHtmlHelper.GetCheckBoxValueReference(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            设置文本值参照列表
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridColumnSessionAdapter.m_cultures">
+            <summary>
+            多语列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridColumnSessionAdapter.CustomInParams">
+            <summary>
+            参照参数带入
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="enumValues"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType,UFSoft.UBF.UI.WebControls.UFDropDownList)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="combox"></param>
+            <param name="enumValues"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            设置控件属性
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.SetColControl(UFSoft.UBF.UI.WebControls.UFDropDownList)">
+            <summary>
+            设置列控件
+            </summary>
+            <param name="combox"></param>
+            <param name="enumValues"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.CreateComboxItem(UFSoft.UBF.UI.WebControls.ColumnEnumValue)">
+            <summary>
+            创建控件项目
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.Initialization(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            出事化Combox列
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridComboxColumn.CreateDefaultComboxControl">
+            <summary>
+            创建默认的Combox控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.CreateDataTable(UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            根据Column的定义生成空表格结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.AddIdentityColumn(System.Data.DataTable,System.String,System.Type)">
+            <summary>
+            追加唯一列名
+            </summary>
+            <param name="tableSchema"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.CreateDataColumn(System.String,System.Type)">
+            <summary>
+            创建数据列
+            </summary>
+            <param name="fieldName"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.CreateDataTableInfor(System.Xml.XmlElement,System.Data.DataTable,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            根据xml文件产生datagrid数据源,这是下一步改进的重点
+            </summary>
+            <param name="inputXml"></param>
+            <param name="inputTable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.SetDataRowRefAttribute(UFSoft.UBF.UI.WebControls.UFDataRow,UFSoft.UBF.UI.WebControls.GridColumn,System.String)">
+            <summary>
+            设置表格行的参照属性
+            </summary>
+            <param name="dataRow"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDataBuildHelper.SetDataRowStates(System.Data.DataTable,System.Collections.Generic.List{System.String})">
+            <summary>
+            设置行属性
+            </summary>
+            <param name="dataRow"></param>
+            <param name="rowElement"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType,UFSoft.UBF.UI.WebControls.UFDateTimePicker)">
+            <summary>
+            创建日期控件列
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="datePicker"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            设置控件的运行期属性
+            </summary>
+            <param name="page"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.VerifyAttributes(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            校验列属性设置
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.CreateDefaultControl">
+            <summary>
+            创建默认的控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.InitDateControl(UFSoft.UBF.UI.WebControls.UFDateTimePicker,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            初始化日历控件
+            </summary>
+            <param name="control"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridDateColumn.Initialization(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary> 
+            初始化列的基本属性
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.RowIndex">
+            <summary>
+            行索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.ColumnIndex">
+            <summary>
+            列索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.LastRowIndex">
+            <summary>
+            前一行索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.EventName">
+            <summary>
+            事件名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.Style">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.PostTag">
+            <summary>
+            PostBack标志
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridEventNode.DataNode">
+            <summary>
+            事件所需数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridFormulaColumn.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            公式列定义构造函数
+            </summary>
+            <param name="fieldname"></param>
+            <param name="formula"></param>
+            <param name="enable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridFormulaColumn.#ctor(System.String,System.String,System.Boolean,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            公式列定义构造函数
+            </summary>
+            <param name="fieldName"></param>
+            <param name="formula"></param>
+            <param name="enable"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridFormulaColumn.Initialization(System.String,System.String,System.Boolean,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            出事化公式列的基本设置
+            </summary>
+            <param name="fieldname"></param>
+            <param name="formula"></param>
+            <param name="enable"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridMultinputColumn.m_multiline">
+            <summary>
+            是否多行文本输入控制
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.GridMultinputColumn.m_cultures">
+            <summary>
+            国际化枚举定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            多语言信息输入列
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType,UFSoft.UBF.UI.WebControls.UFGlobalInput)">
+            <summary>
+            多语言信息输入列
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.ClearCultures">
+            <summary>
+            清除多语言定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.AddCultures(System.String,System.String)">
+            <summary>
+            追加国际化语言定义
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            设置控件属性
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.InitMultinputControl(UFSoft.UBF.UI.WebControls.UFGlobalInput)">
+            <summary>
+            初始化输出列
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.Initialization(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            数据初始化
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridMultinputColumn.CreateDefaultControl">
+            <summary>
+            创建默认的控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridMultinputColumn.MultiLine">
+            <summary>
+            多行文本输入控制
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridNumberColumn.#ctor(System.String,UFSoft.UBF.UI.WebControls.UFNumberic)">
+            <summary>
+            构造函数初始化
+            </summary>
+            <param name="fieldName"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridNumberColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            设置控件属性
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridNumberColumn.Initialization(System.String)">
+            <summary>
+            列格式初始化
+            </summary>
+            <param name="fieldName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridNumberColumn.InitColumnControl(UFSoft.UBF.UI.WebControls.UFNumberic)">
+            <summary>
+            初始化列控件
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridNumberColumn.CreateDefaultNumberic">
+            <summary>
+            创建默认的数字控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            参照控件列定义
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.#ctor(System.String,UFSoft.UBF.UI.Controls.DataType,UFSoft.UBF.UI.WebControls.UFReference)">
+            <summary>
+            参照控件定义
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.ClearReferenceParameters">
+            <summary>
+            清除参照参数集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AddReferenceParameter(System.String,System.String,UFSoft.UBF.UI.WebControls.enumRefParameterAttribute)">
+            <summary>
+            增加参照参数定义  
+            </summary>
+            <param name="paraName"></param>
+            <param name="columnName"></param>
+            <param name="att"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.ClearReferenceRelations">
+            <summary>
+            清除参照填充关联信息 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AddReferenceRelation(System.String,System.String)">
+            <summary>
+            增加参照值回写关联信息（回写普通列）
+            </summary>
+            <param name="gridKeyField">grid上被填充值的列名</param>
+            <param name="referenceExpression">参照控件上的列名或由多列组合而成的表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AddReferenceRelation(System.String,System.String,System.String,System.String)">
+            <summary>
+            增加参照值回写关联信息（回写普通列）
+            </summary>
+            <param name="gridKeyField">grid上被填充值的列名</param>
+            <param name="refKeyField">用于回写ID值的参照列上的列名</param>
+            <param name="refCodeField">用于回写Code值的参照列上的列名</param>
+            <param name="refNameField">用于回写Name值的参照列上的列名</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.RemoveReferenceRelation(System.String)">
+            <summary>
+            删除关联
+            </summary>
+            <param name="gridKeyField"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AssertPropertyNullOrEmpty(System.Boolean,System.String,System.String)">
+            <summary>
+            断言属性必须设置
+            </summary>
+            <param name="condition"></param>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AssertArgumentNullOrEmpty(System.Boolean,System.String)">
+            <summary>
+            参数为空断言
+            </summary>
+            <param name="ok"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.AssertArgumentColumnExist(System.Boolean,System.String)">
+            <summary>
+            同名列断言
+            </summary>
+            <param name="ok"></param>
+            <param name="argumentName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.SetControlAttributes(System.Web.UI.Page,System.String)">
+            <summary>
+            SetControlAttributes
+            </summary>
+            <param name="page"></param>
+            <param name="culture"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.VerifyAttributes(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            校验参照属性设置
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.Initialization(System.String,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            初始化属性
+            </summary>
+            <param name="fieldName"></param>
+            <param name="dataType"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.CreateDefaultControl">
+            <summary>
+            创建默认的控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridReferenceColumn.InitReferenceControl(UFSoft.UBF.UI.WebControls.UFReference)">
+            <summary>
+            初始化参照控件
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridReferenceColumn.CustomInParams">
+            <summary>
+            参照参数带入
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetColumnDefaultText(System.Int32,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            取得列的默认显示值
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetDefaultFormatedValue(UFSoft.UBF.UI.WebControls.GridColumn)">
+            <summary>
+            格式化默认字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetColumnDefaultValue(System.Int32,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            取得列的默认值
+            </summary>
+            <param name="index"></param>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetColumnDefaultCode(System.Int32,UFSoft.UBF.UI.WebControls.ColumnCollection)">
+            <summary>
+            取得参照列的Code值
+            </summary>
+            <param name="columnIndex"></param>
+            <param name="columns"></param>
+            <returns>Code值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridRowHtmlRenderHelper.GetCellValue(System.String,System.Data.DataRow,UFSoft.UBF.UI.Controls.DataType)">
+            <summary>
+            取得单元值
+            </summary>
+            <param name="fieldName"></param>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.GetInstance(System.Web.UI.Page,System.String)">
+            <summary>
+            取得实例
+            </summary>
+            <param name="page"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.Save(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            把列信息缓存
+            </summary>
+            <param name="gridColumns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.SaveColControlInfoToColumnAdapter(UFSoft.UBF.UI.WebControls.GridColumnSessionAdapter,System.Web.UI.WebControls.WebControl)">
+            <summary>
+            将控件上的信息写入列缓存专用适配器
+            </summary>
+            <param name="col"></param>
+            <param name="cT"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.CreateBuffer(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            创建缓存
+            </summary>
+            <param name="columns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.SaveDataToSession(System.String,UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection)">
+            <summary>
+            保存数据到Session中,在Adpter中实现，存储在CurrentState中
+            </summary>
+            <param name="key"></param>
+            <param name="values"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.GetDataFromSession(System.String)">
+            <summary>
+            取得Session中存储的数据
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.RestoreAfterLoadPostData(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            用Session中的内容恢复列定义
+            </summary>
+            <param name="gridColumns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.Restore(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            用Session中的内容恢复列定义
+            </summary>
+            <param name="gridColumns"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.Read">
+            <summary>
+            取得列集合对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridSessionManager.ReplaceColumnData(UFSoft.UBF.UI.WebControls.UFGrid,UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection)">
+            <summary>
+            替换列数据的内容
+            </summary>
+            <param name="columns"></param>
+            <param name="sesssion"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColumnSessionBuffer">
+            <summary>
+            列在Session中的存储结构
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnSessionBuffer.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary> 
+            <param name="fieldName"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnSessionBuffer.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnSessionBuffer.EnumValues">
+            <summary>
+            枚举列集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection">
+            <summary>
+            用余在Session中存储的列集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection.Contain(System.String)">
+            <summary>
+            对象是否包含
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection.GetEnumValues(System.String)">
+            <summary>
+            GetEnumValues
+            </summary>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection.Columns">
+            <summary>
+            列集合存储
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ColumnSessionBufferCollection.SumDatas">
+            <summary>
+            合计值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.GridErrorMessage">
+            <summary>
+            表格错误信息定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.MessageCollection">
+            <summary>
+            错误信息集合类。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MessageCollection.Exist(System.Int32)">
+            <summary>
+            判断指定行的元素是否存在
+            </summary>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MessageCollection.AddErrorStyle(System.Int32,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            增加错误样式
+            </summary>
+            <param name="rows"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MessageCollection.JudageError(System.Int32,System.Web.UI.HtmlTextWriter)">
+            <summary>
+            判断错误
+            </summary>
+            <param name="i"></param>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetFirstPage">
+            <summary>
+            取得首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetNextPage">
+            <summary>
+            取得下页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetEndPage">
+            <summary>
+            取得末页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetPrevious">
+            <summary>
+            上页
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.UI.WebControls.PageResource.GetPageMessage”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetTotalRowsMessage">
+            <summary>
+            取得数据总条数信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PageResource.GetNotNullErrorMessage">
+            <summary>
+            取得必须输入项目控制
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            表格展现表格
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.ReplacePageNumber(System.String)">
+            <summary>
+            更新页面信息
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.CountPagingInfo">
+            <summary>
+            计算分页相关信息，页码，总页数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PaggingToolbarRenderHelper.RenderPageMoveButton(System.Web.UI.HtmlTextWriter,System.String,System.String)">
+            <summary>
+            展现分页按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="key"></param>
+            <param name="imgsrc"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ReferenceRelation">
+            <summary>
+            参照关系描述
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelation.#ctor(System.String,System.String)">
+            <summary>
+            创建普通列关系描述
+            </summary>
+            <param name="gridKeyField"></param>
+            <param name="referenceExpression"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelation.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            创建参照列关系描述 
+            </summary>
+            <param name="gridKeyField"></param>
+            <param name="refKeyField"></param>
+            <param name="refCodeField"></param>
+            <param name="refNameField"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelation.ToString">
+            <summary>
+            输出类内容的字符串描述
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ReferenceRelation.GridKeyField">
+            <summary>
+            表格上的关键列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ReferenceRelation.ReferenceExpression">
+            <summary>
+            参照表达式属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ReferenceRelation.refCodeField">
+            <summary>
+            参照编码字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ReferenceRelation.refNameField">
+            <summary>
+            参照名称字段
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection">
+            <summary>
+            参照关系集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.Contains(System.String)">
+            <summary>
+            判断指定名称成员是否存在
+            </summary>
+            <param name="gridKeyField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.Remove(System.String)">
+            <summary>
+            删除关联定义
+            </summary>
+            <param name="gridKeyField"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.ToString">
+            <summary>
+            toString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.SearchItem(System.String)">
+            <summary>
+            搜索指定名称的项目
+            </summary>
+            <param name="gridkeyfield"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.GetItemIndex(System.String)">
+            <summary>
+            取得项目的索引号
+            </summary>
+            <param name="gridkeyfield"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ReferenceRelationCollection.Item(System.String)">
+            <summary>
+            索引器定义
+            </summary>
+            <param name="gridKeyField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.SelectedRowKeys.ToString">
+            <summary>
+            把列表转换成字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.SelectedRowKeys.FromString(System.String)">
+            <summary>
+            从字符串得到关键字列表
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.SelectedRowKeys.AppendfFromString(System.String)">
+            <summary>
+            从字符串格式中追加列表 
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.Global">
+            <summary>
+            全局常量定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.Schema">
+            <summary>
+            表格样式描述
+            </summary>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.UI.WebControls.SymbolDefines.PostTag”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.PostTag.Schema">
+            <summary>
+            XML格式化标记
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.HtmlTag">
+            <summary>
+            Html标记定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.HtmlStyle">
+            <summary>
+            Html样式标记定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.Css">
+            <summary>
+            默认样式名称定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SymbolDefines.Script">
+            <summary>
+            脚本代码片段 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.SymbolDefines.Script.MenuResObjectName">
+            <summary>
+            菜单资源定义
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.SymbolDefines.Script.CallBackFunctionNameKey">
+            <summary>
+            定义数据回调脚本
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.SymbolDefines.Script.PostBakcKey">
+            <summary>
+            客户端PostBack句柄程序执行
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.SymbolDefines.Script.ColumnIsNotNullPattern_ForMultiLineHead">
+            <summary>
+            列不允许为空显示模式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            构造函数 
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableRenderHelper.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现表格主体
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ActiveTableRenderHelper.RenderMainTable(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出表格主体
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFDataTable">
+            <summary>
+            表格信息集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFDataRow">
+            <summary>
+            行数据容器，用来添加记录
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDataRow.IsSelected">
+            <summary>
+            获取或设置当前行是否是选中行。属于UFDataRow的特有属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDataRow.IsMarked">
+            <summary>
+            获取或设置当前行是否被标记，用于定位记录
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.RowLanguageCollection">
+            <summary>
+            UFDataRow附加语言信息集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.RowLanguageCollection.RenderXml(System.String,UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            创建多语言数据表
+            </summary>
+            <param name="cultures"></param>
+            <param name="fieldid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.RowLanguageCollection.CreateMultiLangDataDict(System.String,UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            根据返回的数值表创建对象
+            </summary>
+            <param name="inputXml"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

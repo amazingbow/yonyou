@@ -1,0 +1,1976 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Execution</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Execution.Configuration.AspectConfiguration">
+            <summary>
+            This class can be promoted to UFSoft.UBF.Configuration namespace.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Configuration.StateGroup">
+            <summary>
+            This should be the basis for future StateGroup's 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Configuration.QueueConfiguration">
+            <summary>
+            State Group, used to describe the state group which is grouped together into
+            a single ExecutionQueue.
+            
+            QualitySerivce, just like the C++ template metaprogramming, use C++ traits to
+            describle the configuration.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Configuration.QueueConfiguration.MessageQueue">
+            <summary>
+            eXtensible enumeration patterns for eXtensible configuration option.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Configuration.QueueConfiguration.DatabaseTable">
+            <summary>
+            If I need more parameters to control the precise definition of database 
+            table name, message queue name, how to support them? 
+            
+            This question is asked in place of a general multi-dimentional framework
+            architecture, in which the configuration plays an important role.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Configuration.QueueConfiguration.#ctor(System.Type)">
+            <summary>
+            QueueConfiguration should expose a Xml-friendly short name, such as:
+            message-queue, database-table, null, transient, mainly used in Xml 
+            configuration file and this is registration-capable and eXtensible.
+            
+            And more, 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Configuration.SchedulingConfiguration">
+            <summary>
+            use template programming technique is better to solve these repeated task.
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Configuration.PolicyConfiguration">
+            <summary>
+            An interesting design trick: Public as Configuration object,
+            Internal as Factory (method) pattern. Extentensible enumeration.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IExecutable">
+            <summary>
+            TODO:
+            1. Transparently Adapt (Synchronous)Delegate to IExecutable.
+            2. Persistent Delegate?
+            3. Parameter Management.
+            	In/Out parameter passing, Ref parameter passing, and how to
+            	return result for Delegate?
+            4. Executable Information Management.
+            	i.e. Registration of all kinds of Executable. Mainly For Job.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Engine.Executables.DelegateExecutable.Delegate">
+            <summary>
+            The text style serialization of delegate is much complex than simple text 
+            presentation. so just use reflection to test XmlSerialization.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Engine.Executables.ExecutableCategory">
+            <summary>
+            This auxiliary class should be 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Engine.Executables.ExecutableCategory.Categories">
+            <summary>
+            TODO:
+            change IList with IList&lt;ExecutableCategory&gt;
+            </summary>		
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Engine.Executables.Parameter">
+            <summary>
+            This is the test bench for general Parameter architecture.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Engine.Executables.ReflectionExecutable.name">
+            <summary>
+            This field is mainly used for management. And it should be 
+            globalized in future version.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Engine.Executables.ReflectionExecutable.#ctor">
+            <summary>
+            Never use this constructor directly in your code, this is only
+            indended used by XmlSerializer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Engine.Executables.ReflectionExecutable.Method">
+            <summary>
+            Now due to the lazy-loading behavior of this property, 
+            ReflectonExecutable is not a thread-safe guy, watch out!
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IRequestInfo">
+            <summary>
+            Marker interface? Should expose a general API for display of all the members.
+            All the information managed by Execution Engine should composed two parts,
+            or three parts:
+            1. The original information provided and maintained by Execution Requester.
+            2. The bookkeeping information maintained by ExecutionEngine.
+            3. Information which algorithm needs.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.RequestInfo">
+            <summary>	
+            For strong-typed version, the strong-typed engine configuration should expose
+            a factory method to create a concrete AsyncRequest and summit it into 
+            IExecutionEngine, and the internal scheduler which require the corresponding 
+            info should require this one. And the internal scheduler will downcast it to
+            internal structure.
+            
+            The most obvious example of this design is: For basic FIFO Scheduler, the 
+            request info we need to provide is: RequestInfo, and for advanced Priority
+            Scheduler, we may need PrioritedRequest, which has Priority bit. 
+            
+            For UBF's current requirements, I should develop a strong typed facade to 
+            ease the general Tool GUI developer and end-developer (Web)UI 's task.
+            
+            For example, RequestInfo is external to this execution framework.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.RequestInfo.SetID(System.Int32)">
+            <summary>
+            used internally.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IRequestInfoProvider">
+            <summary>
+            maybe used as the RequestInfo factory.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.SubscriptionFilterAttribute">
+            <summary>
+            In fact, for subscription filter, the only possible hook point is
+            ILogicPredicate, so this attribute has already provided the necessary
+            configuration ability.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.PersistentAttribute">
+            <summary>
+            Persistence is not and couldn't be implemented as an interception 
+            mechanism.
+            
+            How to use 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute">
+            <summary>
+            The dynamic nature of feature model.
+            I model this class direcly follow the xmlized feature model. 
+            so in future, this kind of configuration class can be generated directly
+            from feature xml model.
+            
+            About the dimension and the interception order problem: 
+            dimension is fixed within the 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.ISubscriberBehavior">
+            <summary>
+            At present I don't differentiate the subscriber and subscription.
+            here this behavior description interface should also function as
+            a policy factory which to create 
+            
+            In fact 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute.SubscriptionFilter">
+            <summary>
+            SubscriptionFilter dimension.-默认不任何条件.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute.SynchronousBehavior">
+            <summary>
+            同步异常特征.　－默认是同步执行．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute.ErrorBehavior">
+            <summary>
+            是否异常出错容错的特征．－默认不容错
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute.TransBehavior">
+            <summary>
+            是否事务支持性特征－默认支持事务
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberAttribute.PersistentBehavior">
+            <summary>
+            持久化特征－默认不持久化
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.MethodDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.MethodDescriptor.MethodName">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.MethodDescriptor.TypeName">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.SubscriptionModel">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriptionModel.Subscriptions">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.Subscription">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.Subscription.Delegations">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.Subscription.Reflections">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.Subscription.Subscribers">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.Subscription.EventName">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberFeature.Synchronous">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberFeature.Tolerant">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberFeature.Persistent">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberFeature.Filter">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.DelegationDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.DelegationDescriptor.Method">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.DelegationDescriptor.DelegateType">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.ReflectionDescriptor">
+            <remarks/>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.ReflectionDescriptor.Method">
+            <remarks/>		
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.SubscriberDescriptor">
+            <remarks/>    
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.Configuration.SubscriberDescriptor.Type">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.SynchronousAttribute">
+            <summary>
+            同步执行．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.AsynchronousAttribute">
+            <summary>
+            异步执行
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.ITranscationAttribute">
+            <summary>
+            事务标签．
+            对于一些发布和取消事件订阅的情况．
+                当其有事务支持时．需要在事务回滚时也要回滚相应的发布和取消的操作．
+                无事务支持时，不需要回滚．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.TranscationSupportAttribute">
+            <summary>
+            事务支持特性标签－－标准的．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.TranscationNoAttribute">
+            <summary>
+            事务不支持特性标签.－选配
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Event">
+            <summary>
+            Event has many subscriptions.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventBrokerAsyncTrans">
+            <summary>
+            由数据库事务调用的异步数据库事务执行的发布器.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.DelayDataTransAsynchronousInterceptor">
+            <summary>
+            依赖于数据库事务提交的异步装饰器．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Interceptor.SubscriberInterceptor">
+            <summary>
+            Now I will adopt a new design for Decorator design pattern. and 
+            use Decorator pattern to implement Interceptor design pattern.
+            The elegance of this design is that your couldn't differentiate 
+            the true IEventSubscriber and intercepted IEventSubscriber, they 
+            all look like the same, so you can easily 
+            
+            Decorator pattern for code-generation? This chain of responsiblity 
+            should be "modelized" and used in AOP-ed template engine and code-
+            generator.
+            
+            IEventSubscriber
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.IEventSubscriber">
+            <summary>
+            IEventSubscriber expose a general callable interface.
+            
+            The concrete (strong-typed delegate, interface callback)
+            can be unified by this one(use delegate or reflection).
+            
+            What's the requirements?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.IEventSubscriber.Notify(System.Object[])">
+            <summary>
+            The whole semantics of Subscriber is to function as 
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.ISubscriberInterceptor">
+            <summary>
+            or use ISubscriberInterceptor ?
+            Where is IPublisherInterceptor?
+            
+            or: Interceptor Pattern. so I introduce the strong-typed interceptor
+            pattern, which is not JBoss/Spring AOP Framework or AspectJ language
+            which emphasize the 
+            
+            So This is the true AOP Spirits while not only the Policy-based design,
+            in other words, I use AOP method to implement Policy-based design.
+            
+            For AOP style, this is a "strong typed AOP framework architecture style",
+            i.e. I will not intercept the generic or any signature of method, but 
+            just for some specific methods, so I can develop a strong typed 
+            interceptor just as decorator to be placed before the 
+            
+            The essence of here applying strong-typed AOP is: there is a fixed typed
+            method signature, All behaviors can be implemented by decorating this
+            method signature.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.Interceptor.SubscriberInterceptor.Notify(System.Object[])">
+            <summary>
+            default implementation just 
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Configuration.DelayDataTransAsynchronousAttribute">
+            <summary>
+            依赖于数据库事务提交的异步版本．(2008-12-10 增加)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventRepository">
+            <summary>
+            How to configure the lock behavior of this EventRepository and in
+            general, how to configure the whole data structure container. 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventPersitenceHelper">
+            <summary>
+            没有走标准原来写的Persistence中的类，却直接写了个方法来进行数据库持久化．－不同人改代码，瞎改．
+            正常内存事件Chain中添的对象为SubscriberEntry 
+            而通过EventPersitenceHelper写和加载的对象缺不是，而是IEventSubscriber的对象实例是SubscriberFilter类型．
+            不明白．目前只能先接着改．在SubscriberEntry　和　IEventSubscriber其它实例搞不清．？？？
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventTransContainer">
+            <summary>
+            由于持久类和内存本身Event处理上的类型不一致一个是SubscriberEntry.一个为SubscriberFilter．
+            所以目前EventEntry中使用IEventSubscriber．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventTransContainer.RegisteUnsubscribeEvent(System.String,UFSoft.UBF.Eventing.SubscriberEntry)">
+            <summary>
+            注册取消事件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventTransContainer.RegisteSubscribeEvent(System.String,UFSoft.UBF.Eventing.SubscriberEntry)">
+            <summary>
+            注册订阅事件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Filters.ExpressionPredicate">
+            <summary>
+            usine UFSoft.UBF Expression Framework as the ILogicPredicate 
+            default implementation. User can optimize it with hard-coded
+            implementation.
+            </summary>	
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.Filters.ExpressionPredicate.Evaluate(System.Object[])">
+            <summary>
+            What is the context of this script?
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.ISubscriptionPersister">
+            <summary>
+            Now I enter the strong-typed persistence architecture era.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Interceptor.SubscriberFilter">
+            <summary>
+            What is the behavior after we chained these different kinds of 
+            ISubscriberInterceptor, is it possible to chain them or chainning
+            them is meaningful?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Interceptor.SynchronousInterceptor">
+            <summary>
+            It seems that I must implement Chain of Responsibility style's 
+            Interceptor/Decorator chain.
+            
+            This style do nothing SubscriberInterceptor can be optimized to 
+            not to disturb the chain of subscriber at all by an eXtensible 
+            manner.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Engine.AsyncExecutionResult.AsyncState">
+            <summary>
+            At present we don't support state parameter
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Engine.AsyncExecutionResult.CompletedSynchronously">
+            <summary>
+            Never Synchronously fullfill the scheduled task.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Context.ContextSwitcher">
+            <summary>
+            
+            Always switch a new Context value into the current calling thread.
+            And then restore.
+            
+            TODO:
+            
+            Utilize the C# using(){} construct to set and restore context.
+            
+            Not yet finished.
+            	
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.AsyncInvoker">
+            <summary>
+            The counterpart of .NET asynchronous delegate.
+            So programmer use thie API just as use a weak type delegate 
+            asynchronization invocation.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.AsyncInvoker.EndInvoke(System.IAsyncResult)">
+            <summary>
+            TODO:
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Engine.ExecutionEngine">
+            <summary>
+            This class should be refactoried to a Policy Mixer, i.e. A parameterized
+            class with different interface implementation as parameter.
+            
+            TODO:
+            1. Move Thread Creation/Monitoring Code into ThreadedPolicy base class, which
+            	is the base class of PollPolicy and EventDrivenPolicy.
+            
+            2. Use State Pattern to implement the state management of ExecutionEngine.
+            
+            </summary>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Execution.IExecutionEngine”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.IExecutionEngine.Schedule(UFSoft.UBF.Execution.IExecutable,UFSoft.UBF.Execution.IRequestInfo,System.AsyncCallback)">
+            <summary>
+            As (at least) exercise, I should use .NET Remoting to make this interface
+            remotable, but IFuture (as Token) should be marshaled by value, since it is
+            only a data object and a handle.
+            </summary>
+            <param name="exe"></param>
+            <param name="callback"></param>
+            <param name="request">to represent the information submitted by client</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Execution.IExecutionEngine.Start”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.IExecutionEngine.Stop">
+            <summary>
+            The basic engine state transition model is: 
+            			Start()		Stop()
+            stopped		running		error?
+            running		error?		stopped.
+            
+            And this state transition model is public to external world and should be
+            documented.
+            
+            And we should note the state machine of engine is totally different with
+            the state machine of execution item.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.IExecutionEngine.ExecutionState">
+            <summary>
+            Readonly State Snapshot.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Engine.ExecutionEngine.Start">
+            <summary>
+            Use state patterns to implement it? overkill?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Engine.ExecutionItem">
+            <summary>
+            执行对象,同步时不使用.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IExecutionItem">
+            <summary>
+            Note: IExecutionItem will have a CorrelationID, which is the "natural key"
+            of IFuture or IExecutionItem, they may not be unique, but they are meaningful.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IFuture">
+            <summary>
+            IFuture is almost equal to the IAsyncResult, but here I also use it as the 
+            "Handle" or "Token" of communication occured between caller of IExecutionEngine
+            and the kernel of engine. (i.e. Asynchronous Completion Token Pattern).
+            
+            Another important task of IFuture and engine architecture is to associcate the
+            each request's mgmt information together with IFuture. In essence, we need an
+            eXtensible mechanism to register all kinds of management info (and scheduling 
+            related info) into engine. How can we achieve this goal?
+            
+            The internal passing of IFuture item should be an internal data structure which
+            implement IFuture interface and can take extra information for configured mgmt
+            info.
+            
+            </summary>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Execution.IFuture.Result”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Execution.IFuture.Request">
+            <summary>
+            The description information of 
+            </summary>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Execution.IFuture.State”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.IExecutionItem.Execute(System.Object)">
+            <summary>
+            We can utilize some persistence mechanism to associate
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Engine.ExecutionItem.ubfContext">
+            <summary>
+            UBF上下文,在进行异步执行时,需要专门将上下文暂存,执行时回复.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Engine.ExecutionItem.Execute(System.Object)">
+            <summary>
+            This is always called from a Thread Pool thread.
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.ExecutionManager">
+            <summary>
+            Manage multiple instance of Execution Engine with different engine type.
+            This ExecutionManager can act as a facade to isolate the remoting boundary.
+            
+            Customized ServiceLocator Pattern.
+            
+            TODO:
+            1. Implement ExecutionConfiguration. Use PolicyConfiguration to
+            	configure different policy into ExecutionEngine.
+            
+            2. Implement Site/Deploy Configuration. When 
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.ExecutionManager.GetExecutionEngine(UFSoft.UBF.Execution.Configuration.EngineConfiguration)">
+            <summary>
+            complex, feature-model based builder style factory pattern.
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Configuration.EngineConfiguration">
+            <summary>
+            This is the configuration information for micro-kernel configuration
+            policy.
+            
+            TODO:
+            1. A general Policy Based Configuration Architecture.
+            2. How to incorporate site deployment based configuration?
+            	A separate class?
+            3. The relationship between this Configuration pattern and 
+            	a general(data-driven) Factory pattern?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventBroker">
+            <summary>
+            The facade for all programming access.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventBroker.PopulateRegistry">
+            <summary>
+             获取配置文件中的事件注册.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventBroker.Subscribe(System.String,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            Since this is the facade, it should 
+            </summary>
+            <param name="eventName"></param>
+            <param name="subscriber"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventBroker.Subscribe(System.String,System.Delegate)">
+            <summary>
+            
+            </summary>
+            <param name="eventName"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventBroker.Subscribe(UFSoft.UBF.Eventing.Event,System.Delegate)">
+            <summary>
+            
+            </summary>
+            <param name="eventName"></param>
+            <param name="callback"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventBroker.Unsubscribe(System.String)">
+            <summary>
+            该方法将移除所有名称为eventName的侦听器
+            </summary>
+            <param name="eventName"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Eventing.EventBroker.Dispatch">
+            <summary>
+            获取Dispath．用于取得IEventTranscation接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.EventDispatcher">
+            <summary>
+            If we want to use this EventBroker architecture both in Deskop and Server,
+            maybe I should publish this class as publicly accessible.
+            
+            Yet another dimension: The synchronize and lock behavior of this event
+            dispathcer, i.e. from C++ template 
+            
+            This class is not thread-safe, so it is always used by wrapping it with SyncrhonizedBroker.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.IEventBorker.Subscribe(System.String,UFSoft.UBF.Eventing.IEventSubscriber,UFSoft.UBF.Eventing.ISubscriberBehavior)">
+            <summary>
+            Can I allw one subscriber been subscirbed into publisher with
+            different behavior? no! If the same IEventSubscriber been 
+            registered, the old one should replaced with the newly added
+            subscription. (This behavior is still configurable? if there is
+            a requirement need me to allow this configurability).
+            
+            Do I need to differentiate the subscriber and subscription?
+            one occurence of one subscriber registered into a topic is 
+            a subscription. one subscriber can function as many subscription.
+            
+            Let it determined by implemenation. 
+            </summary>
+            <param name="eventName"></param>
+            <param name="subscriber"></param>
+            <param name="behavior">null as default value, which means: 		
+            	follow the default behavior, don't try to change the calculated
+            	behavior.
+            </param>
+            
+            
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.IEventBorker.Unsubscribe(System.String)">
+            <summary>
+            remove all subscribers of this.eventName;
+            </summary>
+            <param name="eventName"></param>
+            <param name="subscriber"></param>
+        </member>
+        <member name="F:UFSoft.UBF.Eventing.EventDispatcher.registry">
+            <summary>
+            Soon this Dictionary should be refactoried into Repository pattern,
+            which will load the persistent ones from persistent media.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.Publish(System.String,System.Object[])">
+            <summary>
+            Soon I should agument this method with publish-side behavior, i.e. the standard
+            Subscriber behavior as a default behavior of all those behaviors.
+            </summary>
+            <param name="eventName"></param>
+            <param name="args"></param>		
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.Unsubscribe(System.String)">
+            <summary>
+            从内存和持久层清除所有名称为eventName的侦听
+            </summary>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.Unsubscribe(System.String,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            从内存和持久层清除所有名称为eventName的侦听
+            </summary>
+            <param name="eventName"></param>
+            <param name="subscriber"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.DecorateSubscriber(UFSoft.UBF.Eventing.IEventSubscriber,UFSoft.UBF.Eventing.ISubscriberBehavior)">
+            <summary>
+            The true weaving point. Maybe I can further refactoried it into 
+            
+            </summary>
+            <param name="subscriber"></param>
+            <param name="behavior"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.GetSubscriberAttribute(UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            Soon refactoried to 
+            </summary>
+            <param name="subscriber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.GetSubscriberAttribute(System.Reflection.ICustomAttributeProvider)">
+            <summary>		
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.Rollback(System.String)">
+            <summary>
+            Event　事务回滚方法
+            </summary>
+            <param name="transID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.EventDispatcher.Commit(System.String)">
+            <summary>
+            Event　事务提交方法.
+            </summary>
+            <param name="transID"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.IEventPublisher">
+            <summary>
+            It seems this design mimic the Mark Clifton's one publisher one
+            subscriber design. which is the simplist and 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.Interceptor.FailfastInterceptor">
+            <summary>
+            Since the elegant of Decorator and Chain of Responsibility, We need 
+            do nothing. (Can this extra indirection can be optimized?)
+            Or some behaviors are meaningful only in configuration. and its function
+            is naturally 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.SubscriberChain">
+            <summary>
+            use EventBroker framework to implement Mediator? as a general Mediator 
+            implementation. Each SubscriberChain should be runned in a synchronized context.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.SubscriberChain.GetSubscriber(UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            借助SubscriberEntry的Equals的方法从list中取出原先加入的SubscriberEntry
+            </summary>
+            <param name="subscriber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.Subscribers.ReflectionSubscriber.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            used for static method.
+            </summary>
+            <param name="method"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Eventing.Subscribers.ReflectionSubscriber.Notify(System.Object[])">
+            <summary>
+            Problematic implementation.
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Eventing.SynchronizedBroker">
+            <summary>
+            A generalizable trick: use AOP style to implement thread-safe.
+            here is to use decorate style inteception.
+            
+            This is a simple thread-safe, more performant solution should be based on
+            the internal thread-scope partion of underlying IEventBroker.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Persistence.ExecutablePersister">
+            <summary>
+            This class try to persist the whole executable tree group by 
+            category and used for 
+            
+            There is no lazy loading, just load all at once. Because this 
+            should not be a huge storage.
+            
+            Persist all the executable definition into and from a Xml file.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Persistence.IObjectPersister">
+            <summary>
+            This interface is based on the Mapper spirits.
+            
+            As architectural design exercise, I will develop a XmlPersister for 
+            Executable(Category and Parameter Schema), and develop a TablePersister
+            for Job Definition.
+            
+            Database-affinitive CRUD style Persister, but I also can have Load/Save
+            a.k.a. Serialization style (Serialize/Deserialize) API for Desktop file
+            style persister.
+            
+            
+            </summary>
+            <remarks>
+            lesson learned from this practice of an independent Task/ExecutionItem 
+            persistence layer: 
+            
+            I should always reuse an Object/Relational Persistence Layer or a pure
+            in-memory object persistence layer, To implement/hand-write some repeated
+            persistence code is boring, BUT, the most important deficitioncy is 
+            Query!!!! I couldn't use OQL to form free-form query, and must use old
+            limited enumeration style to write hand-coded query: A series FindXXX
+            method. The problem of this solution is that the component developer 
+            doesn't very clear about what is the Requirements.
+            
+            On the other hand, if requriements is clear, explicit FindXXX is also
+            "Explicit Reuse"
+            </remarks>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Persistence.ExecutablePersister.Load">
+            <summary>
+            The Load and Save is mutual exclusive, and in single threaded 
+            desktop environment, these codes are enough. But if it used in
+            a multiple-threaded environment, it must be wrapped with a 
+            thread-safe wrapper.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IEngineFactory">
+            <summary>
+            Since imcompatible policy couldn't be mixed together. 
+            It seems reasonable to let the user of micro-kernel to
+            define their own Engine Factory, to assure the policy combination 
+            is valid.
+            
+            TODO:
+            1. Overlapping with ExecutionConfiguration?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IStateView">
+            <remark>	
+            Why I introduce the IStateSpace and IStateView? 
+            In one word, We couldn't expose the IExecutionContainer/IExecutionQueue 
+            directly to the caller! 
+            
+            TODO:
+            
+            1. A more general State View of State Machine?
+            </remark>	
+        </member>
+        <member name="P:UFSoft.UBF.Execution.IStateView.StateItems">
+            <remark>
+            The objects in StateItems Collection should be IFuture,
+            which is all the mgmt info goes. such as CreateTime, CreateUser,
+            UniqueID(generated by ExecutionEngine), but the problem is:
+            1. 
+            	How to make the mgmt info exetensible? use weaked type?
+            2. 
+            	
+            </remark>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IStateSpace">
+            <remark>
+            The importance of mgmt info item. Since different Engine require different
+            mgmt info item. I should let the client of 
+            </remark>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.IStateSpace.Find(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="oid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.IStateSpace.States">
+            <summary>
+            return all possible states of current configuration for engine.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.IStateSpace.StateViews">
+            <summary>
+            ICollection&lt;IStateView&gt;
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IExecutionCoordinator">
+            <summary>
+            Used in future for distributed execution framework.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IExecutionPolicy">
+            <summary>
+            The execution strategy of the scheduling thread.
+            For example, it is spin-lock based? OS Event Object Based?
+            Server Timer based? etc.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IExecutionQueue">
+            <summary>
+            <alias>
+            	IRequestQueue
+            	IExecutionRequestQueue
+            </alias>
+            
+            TODO:
+            1. It seems the RequestQueue used to accept input asynchronous
+            	request should use a different data structure with other
+            	bookkeeping queue, e.g. running, journal, inactive.
+            
+            2. Now the most important design impovement is I should avoid the
+            direct exposition of this interface to outside world, I should use
+            the IExecutionContainer as the whole data structure, and let the 
+            all kinds of IExecutionQueue implementation to be used by container.
+            So it's possible to ignore the 
+            </summary>	
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IQueueNotifyPolicy">
+            <summary>
+            Optimized for "Request Arrival" Notification.
+            
+            When a new execution request available in PendingQueue,
+            Ths implementation may not wake up EventDrivenPolicy,
+            since there maybe no worker available.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IWorkNotifyPolicy">
+            <summary>
+            Optimized for "Work have done" notification.
+            
+            When a work item has been fulfilled, We may not notify or wakeup 
+            ExecutionPolicy, since there maybe no request to schedule. So wakeup 
+            is unnecessary.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IScheduler">
+            <summary>
+            To modeling the different scheduling algorithm, such as
+            Round-Robin, FIFO, Priority, etc.
+            
+            This class is Thread-agnostic. i.e. It's just running in the 
+            calling thread.
+            
+            <alias>
+            	IScheduleAlgorithm
+            </alias>
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.State">
+            <summary>
+            used to model the state space of Item transtion during the execution process
+            within 
+            
+            I still need a full state machine description, used to document the engine's
+            internal working mechanism? 
+            
+            TODO: 
+            utilize the standard state machine implementation?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IStateContainer">
+            <summary>
+            Now this is the most important data structure. Now I will emphasize the important
+            difference between IStateContainer.
+            
+            The different data structure (i.e. mainly the persistence dimension will require
+            different internal implementation).
+            
+            The second design option: use IStateContainer.StateSpace to get a 
+            state spanshot.
+            </summary>	
+        </member>
+        <member name="M:UFSoft.UBF.Execution.IStateContainer.Enqueue(UFSoft.UBF.Execution.IExecutable,UFSoft.UBF.Execution.IRequestInfo,System.AsyncCallback)">
+            <summary>
+            The same Enqueue operation, but for durable QoS, it must be inserted into
+            persistent medium. So IStateContainer require a different implementation.
+            </summary>
+            <param name="exe"></param>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.IStateContainer.Dequeue(UFSoft.UBF.Execution.State)">
+            <summary>
+            The data structure of StateContainer implement this method to return the 
+            next waited execution request. 
+            </summary>
+            <param name="toState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.IStateContainer.TransitState(UFSoft.UBF.Execution.IExecutionItem,UFSoft.UBF.Execution.State,UFSoft.UBF.Execution.State)">
+            <summary>
+            
+            </summary>
+            <param name="item"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Execution.IStateContainer.RequestQueue”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Execution.Persistence.ItemPersister">
+            <summary>
+            This is the test case for using strong-typed mapper PEAA pattern.
+            All these boring code can and should be code-generated. And this hard-
+            coded version is also used as a test bench and sample for template.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Persistence.ItemPersister.Update(System.Object)">
+            <summary>
+            These direct ADO.NET code is just for clarity. It may be better to
+            rewrite them use DataAccess Block like infrastructure.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Persistence.ItemPersister.SelectObject(System.String)">
+            <summary>
+            Should use some ad hoc query method, such as Query Object pattern, mainly 
+            the Finder method. Heavily code-generation for Data Access Component.
+            
+            "Load" with condition finding version.
+            </summary>
+            <param name="select"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Persistence.TablePersister">
+            <summary>
+            As a simple solution, Here I only support TablePersister.
+            
+            TablePersister also 
+            
+            PEAA Metadata Mapper pattern.
+            
+            This is almost useless for any non-trivial case.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Persistence.TablePersister.Update(System.Object)">
+            <summary>
+            For optimized version, we should only save the changed part.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.QueuedContainer">
+            <summary>
+            This is the data-driven version of IStateContainer implementation.
+            Here I assume QueuedContainer is not thread-safe.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.QueuedContainer.AssertValidState(UFSoft.UBF.Execution.State,UFSoft.UBF.Execution.IExecutionQueue)">
+            <summary>
+            alias configuration pattern? 
+            </summary>
+            <param name="state"></param>
+            <param name="queue"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.QueuedContainer.Dequeue(UFSoft.UBF.Execution.State)">
+            <summary>
+            Temporarily this is a very inefficient implementation. in future I should
+            optimize it heavily. The data structure abstraction used for this general
+            s
+            </summary>
+            <param name="toState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.QueuedContainer.TransitState(UFSoft.UBF.Execution.IExecutionItem,UFSoft.UBF.Execution.State,UFSoft.UBF.Execution.State)">
+            <summary>
+            Serious problem: what is the threading and concurrency model of 
+            ExecutionEngine? Lock which one?
+            </summary>
+            <param name="item"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.QueuedContainer.StateViews">
+            <summary>
+            Copy ICollection as a Marshal by Value (maybe very huge). or a 
+            Marshal by Reference ? This collection should be a read-only view.
+            The Java/.NET Collection Framework, may need more details and insight.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.States.IStateController">
+            <summary>
+            This should not be a traditional StateMachine. Since itself will not hold any
+            state, it just control the state transition of ExecutionItem. The state is held
+            in ExecutionItem and IStateController just has the logic of transitting them.
+            
+            For standard AsyncEngine, what is its Item State Transition, and how this can
+            be unified? It seems should to expose its whole StateTransition Graph with a 
+            standard API.
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.States.StateController">
+            <summary>
+            Data-driven version of IStateController implementation, it should expose the 
+            whole state transition graph to the outside world.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.States.StateController.TransitState(UFSoft.UBF.Execution.IExecutionItem,UFSoft.UBF.Execution.State,UFSoft.UBF.Execution.State)">
+            <summary>
+            let the IStateController implementation to call the underlying 
+            IStateContainer to fulfill this task.
+            </summary>
+            <param name="item"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.StateRepository">
+            <summary>
+            provide a repository for 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.States.QueuedStateView">
+            <summary>
+            Assume each IExecutionQueue has a reasonable size.
+            
+            For large scale scheduling, such as database based queue,
+            should optimize some implementation detail.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.States.QueuedStateView.queue">
+            <summary>
+            since IExecutionQueue is a dynamic changed data structure. a.k.a. 
+            a dynamic, concurrent changing structure, we couldn't make a snapshot
+            every time. 
+            
+            So there maybe Lock Manager to cordinate these changes. How to accomondate
+            these complex configurable behavior?
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.States.QueuedStateView.Count">
+            <summary>
+            The complex data structure, such as this IExecutionQueue, 
+            QueuedContainer, how to lock them? A simple and stupid method is to 
+            add a synchronized wrapper.
+            
+            Concurrent data structure, lock manager? too complex.
+            
+            The complexity of this algorithm is O(n). Is there a more performant 
+            algorithm?
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Tasks.ITask.TaskID">
+            <summary>
+            The Task Handle, i.e. The Persistence ID, or OID(Object ID, 
+            Primary Key)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Tasks.ITask.Executable">
+            <summary>
+            The true execution logic.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Tasks.ITask.Timing">
+            <summary>
+            The timing policy to decide when the engine should execute it.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Tasks.ITask.RequestInfo">
+            <summary>
+            The bookkeeping information used by management tool.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.IWorkManager">
+            <summary>
+            TODO:
+            1. Implement my own ThreadPool(Does't support IO Completing Port?)
+            2. Idle Worker management, based on 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Policy.EventDrivenPolicy">
+            <summary>
+            Push Model.(.NET Delegate and OS Event Kernel Object based)
+            
+            Using underlying Operation System Event Object, i.e.
+            AutoResetEvent to coordinate/synchronize the execution of
+            scheduler thread(this one) and WorkManager threads(ThreadPool)
+            and (calling thread, i.e. Client Thread)
+            	
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Policy.EventDrivenPolicy.Run">
+            <summary>
+            always executed by Monitor Thread
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Policy.EventDrivenPolicy.OnRequestArrival(System.Object,UFSoft.UBF.Execution.QueueChangedEventArgs)">
+            <summary>
+            Called from Client Thread
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Policy.EventDrivenPolicy.OnWorkerAvailable(System.Object,UFSoft.UBF.Execution.ExecutionCompletedEventArgs)">
+            <summary>
+            Called from Thread-pool Thread.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Policy.PollPolicy">
+            <summary>
+            Pull Model.
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Policy.ThreadlessPolicy">
+            <summary>
+            ThreadlessPolicy will not spawn any new thread to execute ISheduler.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Policy.ThreadlessPolicy.Start">
+            <summary>
+            Do nothing
+            
+            TODO:
+            1. Shall we implement state machine to make State/Stop/Run in correct state?
+            	e.g. Repeated invocation of Start/Run/Stop are not allowed.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Properties.Resources">
+            <summary>
+               A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Properties.Resources.ResourceManager">
+            <summary>
+               Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Properties.Resources.Culture">
+            <summary>
+               Overrides the current thread's CurrentUICulture property for all
+               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.Enqueue(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            Template Method pattern.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.Dequeue">
+            <summary>
+            Template method pattern.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.DoDequeue">
+            <summary>
+            Since subclass can override Dequeue, so make this one as abstract 
+            is not subclass writer friendly.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.CommitChange(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            Default implementation of CommitChange do nothing. For NullQueue and
+            TransientQueue, the default behavior is suitable.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.Remove(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            storage related, so subclass must override it.		
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.ExecutionQueue.GetEnumerator">
+            <summary>
+            Storage-related, so every subclass should override it.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Queues.ExecutionQueue.Count">
+            <summary>
+            subclass should always override this one, since it reflects the 
+            underlying storage.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Queues.MessageBasedQueue">
+            <summary>
+            System.Messaging i.e. MSMQ Based Persistent Queue.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Queues.MessageBasedQueue.Count">
+            <summary>
+            Problematic interface member. Error designed?
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.NullQueue.Enqueue(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            Always discard the enqueued item.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Queues.NullQueue.Count">
+            <summary>
+            There is always nothing in NullQueue, a.k.a. Garbage Sink.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Queues.TableBasedQueue">
+            <summary>
+            ADO.NET i.e. Database Table Based Queue.
+            
+            The intension of TableBasedQueue and MessageBasedQueue want to 
+            provide a persistent Queue, i.e. To keep the state of schedule engine
+            durable. 
+            
+            But usually persistence should be considered as an Orgonthonal dimension.
+            
+            Now trouble appears: How to support multiple engine configuration and 
+            instance? must use discriminator to 
+            
+            The key design choice is: Do I should implement this TableBasedQueue as 
+            an extension of standard PEAA Repository pattern? Repository use Persister
+            .i.e. A simple Metadata Mapper as the underlying data access component.
+            
+            As an exercise, just do it! For your first try, just do it! Never Architecture.
+            Rapid Prototype. Lesson learned from Rapid prototype.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.TableBasedQueue.GetEnumerator">
+            <summary>
+            The true implementation should be a paging-based solution.
+            a.k.a. the "Repository" PEAA pattern.
+            
+            Does this one really needed to be called?
+            
+            usually when one try to call this method, people always try to 
+            iterate this collection. So here I should develop a general 
+            paging-based solution. And I should develop a general paging 
+            framework. All the paging based solution should be automatically
+            solved with this framework and auto-generation tool.
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Execution.Queues.TransientQueue”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.Queues.TransientQueue.DoEnqueue(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            Note after refactory, the subclass's responsibility is to only
+            consider the functionality of pure storage-related, and the 
+            separation of concern make the event-notification is external to
+            itself. Maybe this can be achieved with AOP not template method.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.TransientQueue.Remove(UFSoft.UBF.Execution.IExecutionItem)">
+            <summary>
+            Because Remove is a book-keeping operation, it shouldn't throw
+            any event to indicate it.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Queues.TransientQueue.GetEnumerator">
+            <summary>
+            Since this data structure is heavily contended. So what's the 
+            meaning during iteration while others are inserting items into
+            queue or remove them? 
+            
+            Simply this will not be the truth. Since it's synchronized. and
+            all access are synchronized(i.e. serialized)??? IEnumerator is
+            still lock the whole queue? if it is, when to release lock?
+            if it isn't, 
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:UFSoft.UBF.Execution.Schedulers.FIFOScheduler”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.Schedulers.FIFOScheduler.Schedule">
+            <summary>
+            always called from Monitor Thread.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Schedulers.FIFOScheduler.OnExecutionCompleted(System.Object,UFSoft.UBF.Execution.ExecutionCompletedEventArgs)">
+            <summary>
+            Always called from ThreadPool Thraed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Schedulers.PriorityScheduler">
+            <summary>
+            This is intentionally left to blank. Because It may require the complex
+            priority queue implementation and other data structure, by the means of 
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Tasks.TaskFileRepository">
+            <summary>
+            PEAA Repository pattern? never seen a clear picture and what
+            effect it will generate.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Tasks.TaskFileRepository.path">
+            <summary>
+            I should develop a EngineHost mechanism to host this class in a
+            server environment(or all kinds of Hosting Environment)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.TaskFileRepository.Save(UFSoft.UBF.Execution.Tasks.ITask)">
+            <summary>
+            Maybe this class and this method should be exposed to outside, e.g. UI.
+            Because I can use 
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Tasks.TaskScheduler">
+            <summary>
+            TaskScheduler programming facade. One can transparently use TaskScheduler
+            whatever the underlying ITaskScheduler, maybe It can be LocalScheduler,
+            or RemotingProxy of LocalScheduler, or other ITaskScheduler implementation,
+            such as Microsoft Windows 2k or SQL Server 2k 's TaskScheduler adapter.
+            
+            Note:
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Tasks.TaskScheduler.scheduler">
+            <summary>
+            TODO: How about thread safety?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.TaskScheduler.Schedule(UFSoft.UBF.Execution.IExecutable,UFSoft.UBF.Execution.Timing.ITimingPolicy)">
+            <summary>
+            TODO: To add support for direct IRequestInfo support. ITask should
+            provide 
+            
+            </summary>
+            <param name="exe"></param>
+            <param name="timing"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.TaskScheduler.Schedule(UFSoft.UBF.Execution.IExecutable)">
+            <summary>
+            Execute IExecutable  immediately
+            </summary>
+            <param name="exe"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.TaskScheduler.SimulateSchedulingPlan(System.DateTime,System.DateTime)">
+            <summary>
+            To simulate the whole scheduling plan.
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Tasks.Task">
+            <summary>
+            Task need some more information such as 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Tasks.TaskPersister">
+            <summary>
+            Because Task definition is relatively small, I can define it 
+            A third try: Use Binary Serializer Format to store the Task List,
+            just treat it as 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Tasks.LocalScheduler">
+            <summary>
+            The local-remoting pattern: can I automatically generate a remoting
+            proxy for a local interface and local implementation? How to implement 
+            this with Template Engine?
+            
+            TODO: 
+            very important two problems need to be solved.
+            1. How are these classes's thread-safe? lock plus async. 
+            2. How to test thread safe.
+            
+            Note: 
+            TaskScheduler architecture is totally indepedent with standard 
+            Execution Engine. Because Task just as a kind of RequestGenerator
+            (together with TimingGenerator). (a.k.a. Yet another frontend of 
+            Execution Engine Request Queue). So all the Task concept, its Executable
+            category management and persistence, is totally independent with 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.LocalScheduler.Schedule(UFSoft.UBF.Execution.Tasks.ITask)">
+            <summary>
+            The first design choice: share the common asynchronous execution 
+            engine or create a new instance?
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Tasks.LocalScheduler.GetSchedulePlan(System.DateTime,System.DateTime)">
+            <summary>
+            This implementation will use the simulation ability of TimingGenerator,
+            of course I can use pure algorithmic approach. 
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.ITimingGenerator">
+            <summary>
+            More complex timing generation algorithm, such as some algorithms in queue 
+            theory should implement this interface. 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.ITimingPolicy">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.ITimingPolicy.GetNextTime(System.DateTime)">
+            <summary>
+            This is the more accurate solution. Because all the computation of the
+            next firing time point is based on the passed argument - baseline, which
+            is calculated by caller in a unified manner.
+            </summary>
+            <param name="baseline"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.MonthEndType">
+            <summary>
+            时间区间类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.MonthEndType.Year">
+            <summary>
+            按年末调度
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.MonthEndType.Month">
+            <summary>
+            按月末调度
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.MonthEndPolicy">
+            <summary>
+            月度或年度末执行策略
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.MonthEndPolicy.m_Interval">
+            <summary>
+            月或年的调度间隔值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.MonthEndPolicy.m_type">
+            <summary>
+            调度类型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.MonthEndPolicy.#ctor(System.Int32,UFSoft.UBF.Execution.Timing.MonthEndType)">
+            <summary>
+            用调度间隔和时间区间类型
+            </summary>
+            <param name="interval">间隔年或月的数量</param>
+            <param name="type">指定按年或按月</param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.MonthEndPolicy.GetNextTime(System.DateTime)">
+            <summary>
+            计算下次运行时间
+            </summary>
+            <param name="baseline">当前时间</param>
+            <returns>下次运行时间</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.MonthEndPolicy.CalcTimeWithYearEnd(System.DateTime)">
+            <summary>
+            按年度末计算调度时间。
+            </summary>
+            <param name="baseline">当前时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.MonthEndPolicy.CalcTimeWithMonthEnd(System.DateTime)">
+            <summary>
+            按月度末计算调度时间。
+            </summary>
+            <param name="baseline">当前时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.MonthEndPolicy.CalcNextTime(System.DateTime)">
+            <summary>
+            计算下一个调度时间。假设baseline是一个合法的调度时间
+            </summary>
+            <param name="baseline">一个合法的调度时间</param>
+            <returns>如果没有下一次则返回时间的最大值</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.PeriodicPolicy">
+            <summary>
+            The most difficult and complex thing about PeriodicPolicy is to model the 
+            periodic datetime data structure. Now I need a unified structure to model
+            the Unix-Cron like periodic description. Which include three manners:
+            
+            1. actual point.
+            2. every semantics.
+            3. discrete enum.
+            4. range.
+            
+            In fact, these are pure rules to specify the concrete time, mainly the 
+            "every semantics", all three kinds of information is traditional means to 
+            specify the concrete value.	
+            
+            The spirits of computing is: at a base point(should be modulus by radix), 
+            follow the radix rule to compute the next occurence point. The most important
+            thing is: it seems to form a radix just like time radix.
+            
+            Thinking from a single radix perspective to simplify this thinking! 
+            
+            TODO: This class can be refacotried into a more simple and uniform class:
+            RadixPolicy, how deal with RadixTrigger? Now RadixTrigger mainly used to 
+            model Week timing pattern.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.#ctor(UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger)">
+            <summary>
+            Problem:
+            1. Null Trigger, if one don't specify some hour, or minute, 
+            	what's the semantics.
+            2. Mix the DayOfMonth, DayOfWeek, etc, and WeekOfMonth
+            </summary>
+            <param name="day"></param>
+            <param name="hour"></param>
+            <param name="minute"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.#ctor(System.Int32,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger)">
+            <summary>
+            Every day policy. The calculation of days is relative to the 
+            ITimingPolicy.StartTime
+            </summary>
+            <param name="dayInterval">每隔多少天</param>
+            <param name="hour"></param>
+            <param name="minute"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.#ctor(System.Int32,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger)">
+            <summary>
+            Every Week Policy. The calculation of days is relative to the 
+            ITimingPolicy.StartTime
+            </summary>
+            <param name="weekInterval">每隔多少周</param>
+            <param name="dayInWeek">在该周中的哪些天</param>
+            <param name="hour"></param>
+            <param name="minute"></param>
+            <param name="second"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.CreateEveryWeekPolicy(System.Int32,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger)">
+            <summary>
+            Must set StartTime after creation.
+            </summary>
+            <param name="weekInterval"></param>
+            <param name="dayInWeek"></param>
+            <param name="hour"></param>
+            <param name="minute"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.CreateEveryDayPolicy(System.Int32,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger,UFSoft.UBF.Execution.Timing.Trigger)">
+            <summary>
+            Must set StartTime after creation.
+            </summary>
+            <param name="dayInterval"></param>
+            <param name="hour"></param>
+            <param name="minute"></param>
+            <param name="second"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.PeriodicPolicy.GetNextTime(System.DateTime)">
+            <summary>
+            rewrite by building it on top of 
+            </summary>
+            <param name="baseline"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.SystemTimer">
+            <summary>
+            This class is almost useless for our enterprise-level scheduler, 
+            since the Int32.MaxValue limitation. I must support the true double
+            precision level: 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.LongRunningTimer">
+            <summary>
+            This LongRunningTimer seems have two kinds of status: one is for interval
+            greater than Int32.MaxValue, this is auto-convergin status, the other is
+            normal status.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.TimingInfo">
+            <summary>
+            When timer elapsed, this class provide information of who need this
+            timing? 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Execution.Timing.TimingInfo.Data">
+            <summary>
+            Here is always used for ITask
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.TimingPoint">
+            <summary>
+            One TimingPoint can contain several TimingInfo, which should occur at this
+            simultaneous time point.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.TimingCalculator">
+            <summary>
+            A pure algorithmic class, its only intention is to 
+            compute the timing schedule, And don't consider any
+            Timer setup details. So it can be tested separatedly!
+            
+            The task of TimingCalculator is to maintain an ordered
+            list of the next-run time of each policy.
+            
+            And TimingGenerator will drive this TimingCalculator,
+            
+            
+            Always separate that all those algorithmic parts, these algorithmic
+            parts can be easily tested by Unit Test Practice. While System/Runtime
+            /Threading related code should be separated as possible as one can!
+            
+            So there will be Concept of Mock Test!
+            
+            So here I need TimingGenerator to provide separate API to calcuate
+            the independent sequence.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.TimingCalculator.nextLists">
+            <summary>
+            At the head of this SortedList it is always the next timing to be run.
+            DateTime ---> TimingPoint
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Execution.Timing.TimingCalculator.Register(UFSoft.UBF.Execution.Timing.ITimingPolicy,System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingCalculator.Register(UFSoft.UBF.Execution.Timing.ITimingPolicy,System.Object,System.DateTime)">
+            <summary>
+            Added By Yangyang 2007-06-23
+            </summary>
+            <param name="policy"></param>
+            <param name="extra"></param>
+            <param name="?"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Execution.Timing.TimingCalculator.Deregister(UFSoft.UBF.Execution.Timing.ITimingPolicy,System.Object)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingCalculator.RunToEnd(System.DateTime,System.Int32)">
+            <summary>
+            This helper is just simly used to check the algorithmic correctness.
+            And can be used to mock the TimingCalculator, 
+            But for check the correctness of the whole TimingGenerator, I must 
+            mock the timer and test the whole TimingGenerator. And this method
+            is never used.
+            </summary>
+            <param name="end"></param>
+            <param name="capacity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingCalculator.ScheduleNextRun">
+            <summary>
+            This method has side-effect, it will change the next running
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingCalculator.ScheduleNextRun(System.DateTime)">
+            <summary>
+            Added By Yangyang 2007-06-23
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.TimingGenerator">
+            <summary>
+            This class is a general "Pulse Generator", which can be used in any 
+            discrete event system simulation as "Pulse Simulator". The complex timing 
+            policy and algorithm can be specified in the sequence of ITimingPolicy.
+            
+            TODO:
+            3. TimingPlan.
+            	A ITimingGenerator should generate a concrete datetime timing plan. 
+            	Which details the concrete schedule. So I can check and assert the 
+            	correctness of the calculation.
+            
+            What is the Host Running environment of this TimingGenerator? It behaves
+            like an Active Object.
+            
+            Is this class thread-safe? Always one thread can access this class? only
+            the timer thread?
+            
+            
+            ITimer ? 
+            
+            SynchroTimer? 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingGenerator.#ctor(UFSoft.UBF.Execution.Timing.ITimingPolicy[])">
+            <summary>
+            TODO: This constructor can be refactoried into only setup timer,
+            since when it used by LocalScheduler, it's never been provided
+            ITimingPolicy during construction.
+            </summary>
+            <param name="policies"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingGenerator.GetSchedulePlan(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            To create a special configuration of 
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="capacity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingGenerator.ScheduleNextRun(System.DateTime)">
+            <summary>
+            Added By Yangyang 2007-06-23
+            </summary>
+            <param name="now"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.TimingGenerator.OnTimerElapsed(System.Object,UFSoft.UBF.Execution.Timing.TimingEventArgs)">
+            <summary>
+            This method is usually called by other thread-pool thread, so it
+            should be thread safe.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.Trigger.ToString(System.String)">
+            <summary>
+            Todo: study carefully the ugly .NET Formatting architecture, and 
+            introduce a more elegant design which can support Globalization.
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.ActualTrigger.Null">
+            <summary>
+            This means: never consider me in computing timing point.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.Timing.RadixTrigger">
+            <summary>
+            RadixTrigger supports five cases:
+            
+            Standard, (Old style, each dimension is trimmed by the natural range).
+            Every Day
+            Every Week
+            Every Month
+            Every Year.
+            
+            Every Month and every year will associate the irregular month day case,
+            that is, wehn month trigger calcualted a new value other than the baselines
+            value, the next day in month trigger will be affected!
+            
+            For example, current baselines[month] will be 2006-10, and day trigger is
+            actual 31, while month trigger calculated the next one: 2006-11, while if
+            we don't do context switch, we got 2006-11-31, this is definitely error!
+            
+            So I must separate the ComputeNextTime into two kinds of cases:
+            1. The regular case, such as Every Day, Every Week. Traditional algorithms
+            	apply.
+            2. The irregular case with irregular day of month, I must switch context
+            	between first parts and second parts: The first parts: [Month], 
+            	[Year, Month]. Here [Year, Month] includes two cases: Every Year and
+            	Old Year.Month. (The difference is that former case is calculated based
+            	on a starting point, while the latter is specificed directly by trigger)
+            	
+            A new algorithm for the special case 2: 
+            
+            I still apply the traditional algorithm to calculate the second parts(i.e.
+            regular parts), but in current context(month or year/month), when the second
+            parts return Trigger.Never, i.e. Not found a valid solution, then I compute 
+            next valid first part value, setup the correct current context, and again 
+            compute next valid second part value in the current context, util I found a 
+            valid solution! Yeah!
+            
+            Now this method has became a pure calculational routine, it will share the
+            same baselines and ranges array. For case 2, the ranges is changed every
+            time by a caller. For regular case, this method should be called only once
+            and it will alreays return a valid result.(in case 1, 
+            
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Execution.Timing.RadixTrigger.MaxValue">
+            <summary>
+            This is just a flag used to specify the Maximum available values.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.RadixTrigger.#ctor(UFSoft.UBF.Execution.Timing.Trigger[])">
+            <summary>
+            TODO:
+            It seems I should consider the range check for the validation of
+            range of each Trigger here, or maybe in the process of computing.
+            </summary>
+            <param name="triggers"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.RadixTrigger.GetMinimumFire">
+            <summary>
+            Not be regarded as true Trigger, just a Radix calculator for trigger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.RadixTrigger.GetNextTimeStandard(System.DateTime,System.DateTime)">
+            <summary>
+            Note the time-unit range problem: 
+            for month, we means: [1, 12]
+            for day, we means: [1, 31] or [1, 28], [1, 30]
+            for hour, we means: [0, 24)
+            for minute, we means: [0, 60)
+            for seconds, we means: [0, 60)
+            
+            left is close range, right is open range
+            </summary>
+            <param name="baseline"></param>
+            <param name="start"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.Timing.RadixTrigger.ComputeNextTime(System.Int32[],System.Int32[])">
+            <summary>
+            This is the Case 1 algorithm, for regular trigger (context-insensitive)
+            </summary>
+            <param name="baselines"></param>
+            <param name="ranges"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Execution.Timing.RadixTrigger.ComputeNextTime(System.Int32[],System.Int32[],System.Int32,System.Int32)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Execution.Timing.RadixTrigger.ComputeNextMinimum(System.Int32[],System.Int32,System.Int32,System.Int32)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Execution.Timing.WeekDayInMonthTrigger.GetMinimumFire">
+            <summary>
+            Now I must aware this Trigger is a context-sensitive one:
+            Any Tigger should be a Context-Sensivtive One when it's used as 
+            day of Month! Since there is no 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Execution.WorkManagers.SyncThreadWorker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Execution.WorkManagers.SyncThreadWorker.ScheduleToRun(System.Threading.WaitCallback)">
+            <summary>
+            This method will block until the WaitCallback run complete.
+            </summary>
+            <param name="run"></param> 
+        </member>
+        <member name="T:UFSoft.UBF.Execution.WorkManagers.SystemThreadPool">
+            <summary>
+            TODO:
+            
+            1. Implement the blocked Single Thread Worker.(Executing in the calling thread)
+            	(Solved): SyncThreadWorker.
+            2. Implement the asynchronous Single Thread Workder. (Only One Workder Thread is avaliable)
+            </summary>
+        </member>
+    </members>
+</doc>
