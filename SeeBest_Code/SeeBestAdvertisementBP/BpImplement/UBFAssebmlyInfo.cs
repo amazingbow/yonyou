@@ -9,4 +9,8 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 		
 		[assembly: UBFComponent("0812368a-db6b-4082-b8e4-8f17bbe67e66", "UFIDA.U9.Cust.SeeBestAdvertisementBP.SpecialApplyBP", "SpecialApplyBP")]
 	
+ 
+		
+		[assembly: UBFComponent("382425e5-8d7e-444a-b656-929ea6b704f2", "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP", "AdvApplyBP")]
+	
 

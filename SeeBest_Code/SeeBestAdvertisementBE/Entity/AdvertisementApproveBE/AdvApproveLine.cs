@@ -679,11 +679,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 广告核销单行.ApplyInfo.广告载体
 			/// </summary>
 			/// <value></value>
-			public  System.String AdvItemName
+			public  System.String AdvCarrier
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("AdvItemName");
+					System.String value  = (System.String)base.GetValue("AdvCarrier");
 					return value;
 						}
 			}
@@ -855,6 +855,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				get
 				{
 					System.Decimal value  = (System.Decimal)base.GetValue("ApproveMoney");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 广告项目 (该属性可为空,且无默认值)
+			/// 广告核销单行.ApplyInfo.广告项目
+			/// </summary>
+			/// <value></value>
+			public  System.String AdvItem
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("AdvItem");
 					return value;
 						}
 			}
@@ -1388,17 +1407,17 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// 广告核销单行.ApplyInfo.广告载体
 		/// </summary>
 		/// <value></value>
-			public  System.String AdvItemName
+			public  System.String AdvCarrier
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("AdvItemName");
+				System.String value  = (System.String)base.GetValue("AdvCarrier");
 				return value;
 				}
 				set
 			{
 				
-								base.SetValue("AdvItemName", value);
+								base.SetValue("AdvCarrier", value);
 						 
 			}
 		}
@@ -1622,6 +1641,30 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 广告项目 (该属性可为空,且无默认值)
+		/// 广告核销单行.ApplyInfo.广告项目
+		/// </summary>
+		/// <value></value>
+			public  System.String AdvItem
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("AdvItem");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("AdvItem", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1742,10 +1785,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		[Obsolete("")]
 		public string Res_ApplyAdvCode　{ get { return EntityRes.GetResource("ApplyAdvCode");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItemName")的方式取资源
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvCarrier")的方式取资源
 		/// </summary>
 		[Obsolete("")]
-		public string Res_AdvItemName　{ get { return EntityRes.GetResource("AdvItemName");　}　}
+		public string Res_AdvCarrier　{ get { return EntityRes.GetResource("AdvCarrier");　}　}
 		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApplyQty")的方式取资源
 		/// </summary>
@@ -1791,6 +1834,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_ApproveMoney　{ get { return EntityRes.GetResource("ApproveMoney");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItem")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvItem　{ get { return EntityRes.GetResource("AdvItem");　}　}
 		#endregion 
 
 
@@ -1906,7 +1954,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// <summary>
 			/// 属性: 广告载体 的名称
 			/// </summary>
-			public static string AdvItemName　{ get { return "AdvItemName";　}　}
+			public static string AdvCarrier　{ get { return "AdvCarrier";　}　}
 				
 			/// <summary>
 			/// 属性: 数量 的名称
@@ -1952,6 +2000,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 核销金额 的名称
 			/// </summary>
 			public static string ApproveMoney　{ get { return "ApproveMoney";　}　}
+				
+			/// <summary>
+			/// 属性: 广告项目 的名称
+			/// </summary>
+			public static string AdvItem　{ get { return "AdvItem";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1959,7 +2012,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																										
+																																																												
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2018,7 +2071,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("Height","Height");
 			this.exdMultiLangAttrs.Add("Area","Area");
 			this.exdMultiLangAttrs.Add("ApplyAdvCode","ApplyAdvCode");
-			this.exdMultiLangAttrs.Add("AdvItemName","AdvItemName");
+			this.exdMultiLangAttrs.Add("AdvCarrier","AdvCarrier");
 			this.exdMultiLangAttrs.Add("ApplyQty","ApplyQty");
 			this.exdMultiLangAttrs.Add("Price","Price");
 			this.exdMultiLangAttrs.Add("TotalMoney","TotalMoney");
@@ -2028,6 +2081,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("ActualPrice","ActualPrice");
 			this.exdMultiLangAttrs.Add("Discount","Discount");
 			this.exdMultiLangAttrs.Add("ApproveMoney","ApproveMoney");
+			this.exdMultiLangAttrs.Add("AdvItem","AdvItem");
         }
 	#endregion 
 
@@ -2044,7 +2098,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																																																																																							
+																																																																																										
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2065,6 +2119,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void DeSerializeKey(AdvApproveLineData data)
 		{
 		
+			
+
 			
 
 			
@@ -2201,7 +2257,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		
 								this.SetTypeValue("ApplyAdvCode",data.ApplyAdvCode);
 		
-								this.SetTypeValue("AdvItemName",data.AdvItemName);
+								this.SetTypeValue("AdvCarrier",data.AdvCarrier);
 		
 								this.SetTypeValue("ApplyQty",data.ApplyQty);
 		
@@ -2220,6 +2276,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 								this.SetTypeValue("Discount",data.Discount);
 		
 								this.SetTypeValue("ApproveMoney",data.ApproveMoney);
+		
+								this.SetTypeValue("AdvItem",data.AdvItem);
 		
 			#endregion 
 
@@ -2400,9 +2458,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     
 	    
 			{
-				object obj =this.GetValue("AdvItemName");
+				object obj =this.GetValue("AdvCarrier");
 				if (obj != null)
-					data.AdvItemName=(System.String)obj;
+					data.AdvCarrier=(System.String)obj;
 			}
 	     
 	    
@@ -2468,6 +2526,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 					data.ApproveMoney=(System.Decimal)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("AdvItem");
+				if (obj != null)
+					data.AdvItem=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2499,6 +2564,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

@@ -30,7 +30,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
         private static void InitData()
         {
             innerEnums = new System.Collections.Generic.Dictionary<System.Int32,AdvDisplayTypeEnum>();
-            h = new AdvDisplayTypeEnum(1,"h") ;
+            h = new AdvDisplayTypeEnum(1,"H") ;
             innerEnums.Add(1,h) ;
             v = new AdvDisplayTypeEnum(2,"V") ;
             innerEnums.Add(2,v) ;
@@ -204,7 +204,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>
         [Obsolete("")]
-		public string Res_H　{ get {return EnumRes.GetResource("h");}　}
+		public string Res_H　{ get {return EnumRes.GetResource("H");}　}
 		/// <summary>
 		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
 		/// </summary>

@@ -10,3 +10,5 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 
 [assembly: UBFComponent("b8bfae89-9037-45da-b7a9-3de49c5fe31d", "AdvApplyUIRef", "AdvApplyUIRef")]
 
+[assembly: UBFComponent("11ab3eef-9012-47dd-8cc2-f377e148a2c1", "AdvApplyDocTypeRef", "AdvApplyDocTypeRef")]
+
