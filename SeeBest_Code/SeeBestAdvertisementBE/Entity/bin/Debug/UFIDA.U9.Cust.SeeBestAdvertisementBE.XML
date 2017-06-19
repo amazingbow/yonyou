@@ -114,65 +114,23 @@
             当前实体对象的旧数据对象(为上次更新后的数据)
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.ID">
-            <summary>
-            ID (该属性不可为空,且无默认值)
-            广告申请单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.CreatedOn">
-            <summary>
-            创建时间 (该属性可为空,且无默认值)
-            广告申请单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.CreatedBy">
-            <summary>
-            创建人 (该属性可为空,且无默认值)
-            广告申请单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.ModifiedOn">
-            <summary>
-            修改时间 (该属性可为空,且无默认值)
-            广告申请单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.ModifiedBy">
-            <summary>
-            修改人 (该属性可为空,且无默认值)
-            广告申请单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.SysVersion">
-            <summary>
-            事务版本 (该属性可为空,但有默认值)
-            广告申请单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.AdvCode">
             <summary>
-            编号 (该属性不可为空,且无默认值)
+            编号 (该属性可为空,且无默认值)
             广告申请单.Misc.编号
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.ApplyDept">
             <summary>
-            办事处 (该属性不可为空,且无默认值)
+            办事处 (该属性可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.ApplyDeptKey">
             <summary>
-            办事处 的Key (该属性不可为空,且无默认值)
+            办事处 的Key (该属性可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -270,7 +228,7 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Qty">
             <summary>
-            数量 (该属性不可为空,但有默认值)
+            数量 (该属性可为空,但有默认值)
             广告申请单.Misc.数量
             </summary>
             <value></value>
@@ -373,6 +331,41 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.WFCurrentState">
+            <summary>
+            当前状态 (该属性不可为空,但有默认值)
+            广告申请单.StateMachine.当前状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.WFOriginalState">
+            <summary>
+            之前状态 (该属性不可为空,但有默认值)
+            广告申请单.StateMachine.之前状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.DocStatus">
+            <summary>
+            单据状态 (该属性可为空,但有默认值)
+            广告申请单.Misc.单据状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.AdvApplyDocType">
+            <summary>
+            单据类型 (该属性可为空,且无默认值)
+            广告申请单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.AdvApplyDocTypeKey">
+            <summary>
+            单据类型 的Key (该属性可为空,且无默认值)
+            广告申请单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.AdvAboutBE">
             <summary>
             广告体现项目子表 (该属性可为空,且无默认值)
@@ -388,36 +381,6 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_EntityNameS">
             <summary>
             Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_ID">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_CreatedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_CreatedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_ModifiedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_ModifiedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_SysVersion">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_AdvCode">
@@ -570,6 +533,26 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Flow4Bit")的方式取资源
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_WFCurrentState">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFCurrentState")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_WFOriginalState">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFOriginalState")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_DocStatus">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocStatus")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.Res_AdvApplyDocType">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyDocType")的方式取资源
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityKey">
             <summary>
             Strong Class AdvApplyBE EntityKey 
@@ -583,6 +566,36 @@
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder">
             <summary>
             Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization.EntityKey,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.FindByBusinessKeyIndex(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApplyBE_AdvApplyBE_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApplyBE_AdvApplyBE_BusinessKey_Index索引查询参数类型
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityList">
@@ -609,58 +622,10 @@
             <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
             <param name="list">list </param>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ID">
-            <summary>
-             OrginalData属性。只可读。
-            ID (该属性不可为空,且无默认值)
-            广告申请单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.CreatedOn">
-            <summary>
-             OrginalData属性。只可读。
-            创建时间 (该属性可为空,且无默认值)
-            广告申请单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.CreatedBy">
-            <summary>
-             OrginalData属性。只可读。
-            创建人 (该属性可为空,且无默认值)
-            广告申请单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ModifiedOn">
-            <summary>
-             OrginalData属性。只可读。
-            修改时间 (该属性可为空,且无默认值)
-            广告申请单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ModifiedBy">
-            <summary>
-             OrginalData属性。只可读。
-            修改人 (该属性可为空,且无默认值)
-            广告申请单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.SysVersion">
-            <summary>
-             OrginalData属性。只可读。
-            事务版本 (该属性可为空,但有默认值)
-            广告申请单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvCode">
             <summary>
              OrginalData属性。只可读。
-            编号 (该属性不可为空,且无默认值)
+            编号 (该属性可为空,且无默认值)
             广告申请单.Misc.编号
             </summary>
             <value></value>
@@ -668,7 +633,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ApplyDept">
             <summary>
              OrginalData属性。只可读。
-            办事处 (该属性不可为空,且无默认值)
+            办事处 (该属性可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -676,7 +641,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.ApplyDeptKey">
             <summary>
             EntityKey 属性
-            办事处 的Key (该属性不可为空,且无默认值)
+            办事处 的Key (该属性可为空,且无默认值)
             广告申请单.Misc.办事处
             </summary>
             <value></value>
@@ -788,7 +753,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.Qty">
             <summary>
              OrginalData属性。只可读。
-            数量 (该属性不可为空,但有默认值)
+            数量 (该属性可为空,但有默认值)
             广告申请单.Misc.数量
             </summary>
             <value></value>
@@ -905,6 +870,46 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.WFCurrentState">
+            <summary>
+             OrginalData属性。只可读。
+            当前状态 (该属性不可为空,但有默认值)
+            广告申请单.StateMachine.当前状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.WFOriginalState">
+            <summary>
+             OrginalData属性。只可读。
+            之前状态 (该属性不可为空,但有默认值)
+            广告申请单.StateMachine.之前状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.DocStatus">
+            <summary>
+             OrginalData属性。只可读。
+            单据状态 (该属性可为空,但有默认值)
+            广告申请单.Misc.单据状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvApplyDocType">
+            <summary>
+             OrginalData属性。只可读。
+            单据类型 (该属性可为空,且无默认值)
+            广告申请单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvApplyDocTypeKey">
+            <summary>
+            EntityKey 属性
+            单据类型 的Key (该属性可为空,且无默认值)
+            广告申请单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityOriginal.AdvAboutBE">
             <summary>
             广告体现项目子表 (该属性可为空,且无默认值)
@@ -925,36 +930,6 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.BE_FullName">
             <summary>
             Entity　的全名. 
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.ID">
-            <summary>
-            属性: ID 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.CreatedOn">
-            <summary>
-            属性: 创建时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.CreatedBy">
-            <summary>
-            属性: 创建人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.ModifiedOn">
-            <summary>
-            属性: 修改时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.ModifiedBy">
-            <summary>
-            属性: 修改人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.SysVersion">
-            <summary>
-            属性: 事务版本 的名称
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.AdvCode">
@@ -1106,6 +1081,35 @@
             <summary>
             属性: 编号的4位流水 的名称
             </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.WFCurrentState">
+            <summary>
+            属性: 当前状态 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.WFOriginalState">
+            <summary>
+            属性: 之前状态 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.DocStatus">
+            <summary>
+            属性: 单据状态 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE.EntityRes.AdvApplyDocType">
+            <summary>
+            属性: 单据类型 的名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.ServiceOrderSubscriber">
+            TODO:在状态机代码的方法使用，如果该状态机不需要侦听事件，则该类可以删除
+            用法： ServiceOrderSubscriber subscriber = new ServiceOrderSubscriber();
+                   subscriber.EntityKey = this.Entity.Key;//this是指状态机实例
+                   UFSoft.UBF.Eventing.EventBroker.Subscribe("UFIDA.UBF.GeneralEvents.ApprovalResultEvent", subscriber);
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.ServiceOrderSubscriber.Notify(System.Object[])">
+            事件处理方法
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBE">
             <summary>
@@ -1643,6 +1647,152 @@
             枚举全名: FullName 
             </summary>
         </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum">
+            <summary>
+            可扩展枚举: 广告申请单状态枚举 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get AdvApplyStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.GetFromValue(System.Object)">
+            <summary>
+            Get AdvApplyStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.GetFromName(System.String)">
+            <summary>
+            Get AdvApplyStatusEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.OpenL">
+            <summary>
+            枚举值: 开立  Value:0  
+            广告申请单状态枚举.Misc.开立
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Approving">
+            <summary>
+            枚举值: 审核中  Value:1  
+            广告申请单状态枚举.Misc.审核中
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Approved">
+            <summary>
+            枚举值: 审核  Value:2  
+            广告申请单状态枚举.Misc.审核
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Values">
+            <summary>
+            Get AdvApplyStatusEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Res_TypeName">
+            <summary>
+            广告申请单状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Res_TypeNameS">
+            <summary>
+            广告申请单状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Res_OpenL">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Res_Approving">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.Res_Approved">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent">
+            <summary>
+            Event 类型: 提交事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent.FromEventData(UFSoft.UBF.Eventing.EventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent.ToEventData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEvent.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.SubmitEventData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent">
+            <summary>
+            Event 类型: 弃审事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent.FromEventData(UFSoft.UBF.Eventing.EventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent.ToEventData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEvent.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.UndoApproveEventData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE">
             <summary>
             实体: 专柜申请单
@@ -1753,48 +1903,6 @@
             当前实体对象的旧数据对象(为上次更新后的数据)
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.ID">
-            <summary>
-            ID (该属性不可为空,且无默认值)
-            专柜申请单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CreatedOn">
-            <summary>
-            创建时间 (该属性可为空,且无默认值)
-            专柜申请单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CreatedBy">
-            <summary>
-            创建人 (该属性可为空,且无默认值)
-            专柜申请单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.ModifiedOn">
-            <summary>
-            修改时间 (该属性可为空,且无默认值)
-            专柜申请单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.ModifiedBy">
-            <summary>
-            修改人 (该属性可为空,且无默认值)
-            专柜申请单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.SysVersion">
-            <summary>
-            事务版本 (该属性可为空,但有默认值)
-            专柜申请单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvCode">
             <summary>
             编号 (该属性可为空,且无默认值)
@@ -1804,14 +1912,14 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.ApplyDept">
             <summary>
-            办事处 (该属性可为空,且无默认值)
+            办事处 (该属性不可为空,且无默认值)
             专柜申请单.Misc.办事处
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.ApplyDeptKey">
             <summary>
-            办事处 的Key (该属性可为空,且无默认值)
+            办事处 的Key (该属性不可为空,且无默认值)
             专柜申请单.Misc.办事处
             </summary>
             <value></value>
@@ -1846,141 +1954,78 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustConterName">
             <summary>
-            客户店名 (该属性可为空,且无默认值)
+            客户店名 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户店名
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustName">
             <summary>
-            客户名称 (该属性可为空,且无默认值)
+            客户名称 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户名称
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustPhone">
             <summary>
-            客户电话 (该属性可为空,且无默认值)
+            客户电话 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户电话
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustAddress">
             <summary>
-            客户地址 (该属性可为空,且无默认值)
+            客户地址 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户地址
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.SpecialDesignStyle">
             <summary>
-            广告载体 (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告载体
+            专柜设计风格 (该属性不可为空,但有默认值)
+            专柜申请单.Misc.专柜设计风格
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvItemKey">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.SpecialApplyDocType">
             <summary>
-            广告载体 的Key (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告载体
+            单据类型 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.单据类型
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.TotalArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.SpecialApplyDocTypeKey">
             <summary>
-            总面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.总面积
+            单据类型 的Key (该属性不可为空,且无默认值)
+            专柜申请单.Misc.单据类型
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Qty">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Status">
             <summary>
-            数量 (该属性可为空,但有默认值)
-            专柜申请单.Misc.数量
+            状态 (该属性可为空,但有默认值)
+            专柜申请单.Misc.状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.BMWidth">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.WFCurrentState">
             <summary>
-            版面-宽 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-宽
+            当前状态 (该属性不可为空,但有默认值)
+            专柜申请单.StateMachine.当前状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.BMHight">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.WFOriginalState">
             <summary>
-            版面-高 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-高
+            之前状态 (该属性不可为空,但有默认值)
+            专柜申请单.StateMachine.之前状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.BMThick">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.SpecialSizeBE">
             <summary>
-            版面-厚 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-厚
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.BMArea">
-            <summary>
-            版面-面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-面积
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.DZWidth">
-            <summary>
-            店招-宽 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-宽
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.DZThick">
-            <summary>
-            店招-厚 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-厚
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.DZArea">
-            <summary>
-            店招-面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-面积
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvDisplayType">
-            <summary>
-            版面类型 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面类型
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvDispInfo1">
-            <summary>
-            版面要求1 (该属性可为空,且无默认值)
-            专柜申请单.Misc.版面要求1
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvDispInfo2">
-            <summary>
-            版面要求2 (该属性可为空,且无默认值)
-            专柜申请单.Misc.版面要求2
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvAbout">
-            <summary>
-            广告体现项目 (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告体现项目
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.AdvMemo">
-            <summary>
-            客户排版文字信息 (该属性可为空,且无默认值)
-            专柜申请单.Misc.客户排版文字信息
+            专柜尺寸 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.专柜尺寸
             </summary>
             <value></value>
         </member>
@@ -1992,36 +2037,6 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_EntityNameS">
             <summary>
             Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_ID">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_CreatedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_CreatedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_ModifiedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_ModifiedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_SysVersion">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvCode">
@@ -2074,79 +2089,34 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustAddress")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_SpecialDesignStyle">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItem")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SpecialDesignStyle")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_TotalArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_SpecialSizeBE">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("TotalArea")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SpecialSizeBE")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_Qty">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_SpecialApplyDocType">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Qty")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SpecialApplyDocType")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_BMWidth">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_Status">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BMWidth")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Status")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_BMHight">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_WFCurrentState">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BMHight")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFCurrentState")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_BMThick">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_WFOriginalState">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BMThick")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_BMArea">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BMArea")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_DZWidth">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DZWidth")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_DZThick">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DZThick")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_DZArea">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DZArea")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvDisplayType">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDisplayType")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvDispInfo1">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDispInfo1")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvDispInfo2">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDispInfo2")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvAbout">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvAbout")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_AdvMemo">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvMemo")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFOriginalState")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityKey">
@@ -2162,6 +2132,36 @@
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder">
             <summary>
             Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization.EntityKey,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.FindByBusinessKeyIndex(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyBE_SpecialApplyBE_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyBE_SpecialApplyBE_BusinessKey_Index索引查询参数类型
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityList">
@@ -2188,54 +2188,6 @@
             <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
             <param name="list">list </param>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.ID">
-            <summary>
-             OrginalData属性。只可读。
-            ID (该属性不可为空,且无默认值)
-            专柜申请单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CreatedOn">
-            <summary>
-             OrginalData属性。只可读。
-            创建时间 (该属性可为空,且无默认值)
-            专柜申请单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CreatedBy">
-            <summary>
-             OrginalData属性。只可读。
-            创建人 (该属性可为空,且无默认值)
-            专柜申请单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.ModifiedOn">
-            <summary>
-             OrginalData属性。只可读。
-            修改时间 (该属性可为空,且无默认值)
-            专柜申请单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.ModifiedBy">
-            <summary>
-             OrginalData属性。只可读。
-            修改人 (该属性可为空,且无默认值)
-            专柜申请单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SysVersion">
-            <summary>
-             OrginalData属性。只可读。
-            事务版本 (该属性可为空,但有默认值)
-            专柜申请单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvCode">
             <summary>
              OrginalData属性。只可读。
@@ -2247,7 +2199,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.ApplyDept">
             <summary>
              OrginalData属性。只可读。
-            办事处 (该属性可为空,且无默认值)
+            办事处 (该属性不可为空,且无默认值)
             专柜申请单.Misc.办事处
             </summary>
             <value></value>
@@ -2255,7 +2207,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.ApplyDeptKey">
             <summary>
             EntityKey 属性
-            办事处 的Key (该属性可为空,且无默认值)
+            办事处 的Key (该属性不可为空,且无默认值)
             专柜申请单.Misc.办事处
             </summary>
             <value></value>
@@ -2295,7 +2247,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustConterName">
             <summary>
              OrginalData属性。只可读。
-            客户店名 (该属性可为空,且无默认值)
+            客户店名 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户店名
             </summary>
             <value></value>
@@ -2303,7 +2255,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustName">
             <summary>
              OrginalData属性。只可读。
-            客户名称 (该属性可为空,且无默认值)
+            客户名称 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户名称
             </summary>
             <value></value>
@@ -2311,7 +2263,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustPhone">
             <summary>
              OrginalData属性。只可读。
-            客户电话 (该属性可为空,且无默认值)
+            客户电话 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户电话
             </summary>
             <value></value>
@@ -2319,136 +2271,63 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustAddress">
             <summary>
              OrginalData属性。只可读。
-            客户地址 (该属性可为空,且无默认值)
+            客户地址 (该属性不可为空,且无默认值)
             专柜申请单.Misc.客户地址
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SpecialDesignStyle">
             <summary>
              OrginalData属性。只可读。
-            广告载体 (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告载体
+            专柜设计风格 (该属性不可为空,但有默认值)
+            专柜申请单.Misc.专柜设计风格
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvItemKey">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SpecialApplyDocType">
+            <summary>
+             OrginalData属性。只可读。
+            单据类型 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SpecialApplyDocTypeKey">
             <summary>
             EntityKey 属性
-            广告载体 的Key (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告载体
+            单据类型 的Key (该属性不可为空,且无默认值)
+            专柜申请单.Misc.单据类型
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.TotalArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.Status">
             <summary>
              OrginalData属性。只可读。
-            总面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.总面积
+            状态 (该属性可为空,但有默认值)
+            专柜申请单.Misc.状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.Qty">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.WFCurrentState">
             <summary>
              OrginalData属性。只可读。
-            数量 (该属性可为空,但有默认值)
-            专柜申请单.Misc.数量
+            当前状态 (该属性不可为空,但有默认值)
+            专柜申请单.StateMachine.当前状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.BMWidth">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.WFOriginalState">
             <summary>
              OrginalData属性。只可读。
-            版面-宽 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-宽
+            之前状态 (该属性不可为空,但有默认值)
+            专柜申请单.StateMachine.之前状态
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.BMHight">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SpecialSizeBE">
             <summary>
-             OrginalData属性。只可读。
-            版面-高 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-高
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.BMThick">
-            <summary>
-             OrginalData属性。只可读。
-            版面-厚 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-厚
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.BMArea">
-            <summary>
-             OrginalData属性。只可读。
-            版面-面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面-面积
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.DZWidth">
-            <summary>
-             OrginalData属性。只可读。
-            店招-宽 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-宽
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.DZThick">
-            <summary>
-             OrginalData属性。只可读。
-            店招-厚 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-厚
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.DZArea">
-            <summary>
-             OrginalData属性。只可读。
-            店招-面积 (该属性可为空,但有默认值)
-            专柜申请单.Misc.店招-面积
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvDisplayType">
-            <summary>
-             OrginalData属性。只可读。
-            版面类型 (该属性可为空,但有默认值)
-            专柜申请单.Misc.版面类型
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvDispInfo1">
-            <summary>
-             OrginalData属性。只可读。
-            版面要求1 (该属性可为空,且无默认值)
-            专柜申请单.Misc.版面要求1
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvDispInfo2">
-            <summary>
-             OrginalData属性。只可读。
-            版面要求2 (该属性可为空,且无默认值)
-            专柜申请单.Misc.版面要求2
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvAbout">
-            <summary>
-             OrginalData属性。只可读。
-            广告体现项目 (该属性可为空,且无默认值)
-            专柜申请单.Misc.广告体现项目
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.AdvMemo">
-            <summary>
-             OrginalData属性。只可读。
-            客户排版文字信息 (该属性可为空,且无默认值)
-            专柜申请单.Misc.客户排版文字信息
+            专柜尺寸 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.专柜尺寸
             </summary>
             <value></value>
         </member>
@@ -2465,36 +2344,6 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.BE_FullName">
             <summary>
             Entity　的全名. 
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.ID">
-            <summary>
-            属性: ID 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.CreatedOn">
-            <summary>
-            属性: 创建时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.CreatedBy">
-            <summary>
-            属性: 创建人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.ModifiedOn">
-            <summary>
-            属性: 修改时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.ModifiedBy">
-            <summary>
-            属性: 修改人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.SysVersion">
-            <summary>
-            属性: 事务版本 的名称
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvCode">
@@ -2547,79 +2396,1244 @@
             属性: 客户地址 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.SpecialDesignStyle">
             <summary>
-            属性: 广告载体 的名称
+            属性: 专柜设计风格 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.TotalArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.SpecialSizeBE">
             <summary>
-            属性: 总面积 的名称
+            属性: 专柜尺寸 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.Qty">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.SpecialApplyDocType">
+            <summary>
+            属性: 单据类型 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.Status">
+            <summary>
+            属性: 状态 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.WFCurrentState">
+            <summary>
+            属性: 当前状态 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.WFOriginalState">
+            <summary>
+            属性: 之前状态 的名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.ServiceOrderSubscriber">
+            TODO:在状态机代码的方法使用，如果该状态机不需要侦听事件，则该类可以删除
+            用法： ServiceOrderSubscriber subscriber = new ServiceOrderSubscriber();
+                   subscriber.EntityKey = this.Entity.Key;//this是指状态机实例
+                   UFSoft.UBF.Eventing.EventBroker.Subscribe("UFIDA.UBF.GeneralEvents.ApprovalResultEvent", subscriber);
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.ServiceOrderSubscriber.Notify(System.Object[])">
+            事件处理方法
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE">
+            <summary>
+            实体: 专柜尺寸
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Create(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.CreateDefault(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBEData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            专柜尺寸.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            专柜尺寸.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.DisplayProductType">
+            <summary>
+            展示产品类型 (该属性不可为空,且无默认值)
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.DisplayProductTypeKey">
+            <summary>
+            展示产品类型 的Key (该属性不可为空,且无默认值)
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Width">
+            <summary>
+            宽 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.宽
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Hight">
+            <summary>
+            高 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.高
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Thick">
+            <summary>
+            厚 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.厚
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Qty">
+            <summary>
+            数量 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Area">
+            <summary>
+            面积 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.面积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Memo">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.SpecialApplyBE">
+            <summary>
+            专柜申请单 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.SpecialApplyBEKey">
+            <summary>
+            专柜申请单 的Key (该属性可为空,且无默认值)
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.DescFlexField">
+            <summary>
+            实体扩展字段 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.实体扩展字段
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_DisplayProductType">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DisplayProductType")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Width">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Width")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Hight">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Hight")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Thick">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Thick")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Qty">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Qty")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Area">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Area")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_Memo">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Memo")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_SpecialApplyBE">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SpecialApplyBE")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.Res_DescFlexField">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DescFlexField")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityKey">
+            <summary>
+            Strong Class SpecialSizeBE EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            专柜尺寸.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            专柜尺寸.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            专柜尺寸.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.DisplayProductType">
+            <summary>
+             OrginalData属性。只可读。
+            展示产品类型 (该属性不可为空,且无默认值)
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.DisplayProductTypeKey">
+            <summary>
+            EntityKey 属性
+            展示产品类型 的Key (该属性不可为空,且无默认值)
+            专柜尺寸.Misc.展示产品类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Width">
+            <summary>
+             OrginalData属性。只可读。
+            宽 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.宽
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Hight">
+            <summary>
+             OrginalData属性。只可读。
+            高 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.高
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Thick">
+            <summary>
+             OrginalData属性。只可读。
+            厚 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.厚
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Qty">
+            <summary>
+             OrginalData属性。只可读。
+            数量 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Area">
+            <summary>
+             OrginalData属性。只可读。
+            面积 (该属性可为空,但有默认值)
+            专柜尺寸.Misc.面积
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.Memo">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.SpecialApplyBE">
+            <summary>
+             OrginalData属性。只可读。
+            专柜申请单 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.SpecialApplyBEKey">
+            <summary>
+            EntityKey 属性
+            专柜申请单 的Key (该属性可为空,且无默认值)
+            专柜尺寸.Misc.专柜申请单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityOriginal.DescFlexField">
+            <summary>
+             OrginalData属性。只可读。
+            实体扩展字段 (该属性可为空,且无默认值)
+            专柜尺寸.Misc.实体扩展字段
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DisplayProductType">
+            <summary>
+            属性: 展示产品类型 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Width">
+            <summary>
+            属性: 宽 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Hight">
+            <summary>
+            属性: 高 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Thick">
+            <summary>
+            属性: 厚 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Qty">
             <summary>
             属性: 数量 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.BMWidth">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Area">
             <summary>
-            属性: 版面-宽 的名称
+            属性: 面积 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.BMHight">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.Memo">
             <summary>
-            属性: 版面-高 的名称
+            属性: 备注 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.BMThick">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.SpecialApplyBE">
             <summary>
-            属性: 版面-厚 的名称
+            属性: 专柜申请单 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.BMArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField">
             <summary>
-            属性: 版面-面积 的名称
+            属性类型属性: DescFlexField 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.DZWidth">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_TypeFullName">
             <summary>
-            属性: 店招-宽 的名称
+            属性类型属性: DescFlexField 的类型全名
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.DZThick">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg1">
             <summary>
-            属性: 店招-厚 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg1的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.DZArea">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg2">
             <summary>
-            属性: 店招-面积 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg2的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvDisplayType">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg3">
             <summary>
-            属性: 版面类型 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg3的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvDispInfo1">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg4">
             <summary>
-            属性: 版面要求1 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg4的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvDispInfo2">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg5">
             <summary>
-            属性: 版面要求2 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg5的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvAbout">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg6">
             <summary>
-            属性: 广告体现项目 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg6的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.AdvMemo">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg7">
             <summary>
-            属性: 客户排版文字信息 的名称
+            属性类型属性展开:DescFlexField.PubDescSeg7的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg8">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg8的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg9">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg9的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg10">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg10的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg11">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg11的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg12">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg12的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg13">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg13的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg14">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg14的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg15">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg15的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg16">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg16的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg17">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg17的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg18">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg18的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg19">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg19的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg20">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg20的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg21">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg21的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg22">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg22的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg23">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg23的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg24">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg24的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg25">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg25的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg26">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg26的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg27">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg27的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg28">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg28的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg29">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg29的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg30">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg30的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg31">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg31的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg32">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg32的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg33">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg33的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg34">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg34的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg35">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg35的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg36">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg36的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg37">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg37的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg38">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg38的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg39">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg39的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg40">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg40的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg41">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg41的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg42">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg42的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg43">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg43的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg44">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg44的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg45">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg45的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg46">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg46的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg47">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg47的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg48">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg48的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg49">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg49的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PubDescSeg50">
+            <summary>
+            属性类型属性展开:DescFlexField.PubDescSeg50的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_ContextValue">
+            <summary>
+            属性类型属性展开:DescFlexField.ContextValue的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg1">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg1的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg2">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg2的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg3">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg3的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg4">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg4的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg5">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg5的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg6">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg6的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg7">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg7的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg8">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg8的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg9">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg9的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg10">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg10的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg11">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg11的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg12">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg12的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg13">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg13的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg14">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg14的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg15">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg15的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg16">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg16的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg17">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg17的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg18">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg18的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg19">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg19的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg20">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg20的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg21">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg21的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg22">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg22的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg23">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg23的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg24">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg24的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg25">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg25的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg26">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg26的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg27">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg27的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg28">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg28的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg29">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg29的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_PrivateDescSeg30">
+            <summary>
+            属性类型属性展开:DescFlexField.PrivateDescSeg30的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE.EntityRes.DescFlexField_CombineName">
+            <summary>
+            属性类型属性展开:DescFlexField.CombineName的名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum">
+            <summary>
+            可扩展枚举: 专柜设计风格 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get SpecialDesignStyleEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.GetFromValue(System.Object)">
+            <summary>
+            Get SpecialDesignStyleEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.GetFromName(System.String)">
+            <summary>
+            Get SpecialDesignStyleEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.BlueSpecial">
+            <summary>
+            枚举值: 蓝色专柜方案  Value:1  
+            专柜设计风格.Misc.蓝色专柜方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.WhiteSpecial">
+            <summary>
+            枚举值: 白色专柜方案  Value:2  
+            专柜设计风格.Misc.白色专柜方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.Values">
+            <summary>
+            Get SpecialDesignStyleEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.Res_TypeName">
+            <summary>
+            专柜设计风格的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.Res_TypeNameS">
+            <summary>
+            专柜设计风格的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.Res_BlueSpecial">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.Res_WhiteSpecial">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum">
+            <summary>
+            可扩展枚举: 专柜申请单状态枚举 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get SpecialApplyStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.GetFromValue(System.Object)">
+            <summary>
+            Get SpecialApplyStatusEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.GetFromName(System.String)">
+            <summary>
+            Get SpecialApplyStatusEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.OpenL">
+            <summary>
+            枚举值: 开立  Value:0  
+            专柜申请单状态枚举.Misc.开立
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Approving">
+            <summary>
+            枚举值: 审核中  Value:1  
+            专柜申请单状态枚举.Misc.审核中
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Approved">
+            <summary>
+            枚举值: 审核  Value:2  
+            专柜申请单状态枚举.Misc.审核
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Values">
+            <summary>
+            Get SpecialApplyStatusEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_TypeName">
+            <summary>
+            专柜申请单状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_TypeNameS">
+            <summary>
+            专柜申请单状态枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_OpenL">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_Approving">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_Approved">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent">
+            <summary>
+            Event 类型: 提交事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent.FromEventData(UFSoft.UBF.Eventing.EventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent.ToEventData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEvent.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SubmitEventData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent">
+            <summary>
+            Event 类型: 弃审事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent.FromEventData(UFSoft.UBF.Eventing.EventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent.ToEventData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEventData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEvent.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.UndoApproveEventData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE">
@@ -2732,48 +3746,6 @@
             当前实体对象的旧数据对象(为上次更新后的数据)
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.ID">
-            <summary>
-            ID (该属性不可为空,且无默认值)
-            广告核销单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.CreatedOn">
-            <summary>
-            创建时间 (该属性可为空,且无默认值)
-            广告核销单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.CreatedBy">
-            <summary>
-            创建人 (该属性可为空,且无默认值)
-            广告核销单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.ModifiedOn">
-            <summary>
-            修改时间 (该属性可为空,且无默认值)
-            广告核销单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.ModifiedBy">
-            <summary>
-            修改人 (该属性可为空,且无默认值)
-            广告核销单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.SysVersion">
-            <summary>
-            事务版本 (该属性可为空,但有默认值)
-            广告核销单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.AdvApplyCust">
             <summary>
             办事处 (该属性可为空,但有默认值)
@@ -2795,10 +3767,17 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.DocNo">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.AdvApproveDocType">
             <summary>
-            单号 (该属性可为空,且无默认值)
-            广告核销单.Misc.单号
+            单据类型 (该属性可为空,且无默认值)
+            广告核销单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.AdvApproveDocTypeKey">
+            <summary>
+            单据类型 的Key (该属性可为空,且无默认值)
+            广告核销单.Misc.单据类型
             </summary>
             <value></value>
         </member>
@@ -2819,36 +3798,6 @@
             Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_ID">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_CreatedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_CreatedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_ModifiedOn">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_ModifiedBy">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_SysVersion">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
-            </summary>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_AdvApplyCust">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApplyCust")的方式取资源
@@ -2859,14 +3808,14 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Month")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_DocNo">
-            <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocNo")的方式取资源
-            </summary>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_AdvApproveLine">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveLine")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.Res_AdvApproveDocType">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveDocType")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityKey">
@@ -2882,6 +3831,36 @@
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder">
             <summary>
             Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization.EntityKey,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Base.Organization.Organization,System.String)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.FindByBusinessKey(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.FindByBusinessKeyIndex(UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApproveBE_AdvApproveBE_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            UFIDA_U9_Cust_SeeBestAdvertisementBE_AdvertisementApproveBE_AdvApproveBE_BusinessKey_Index索引查询参数类型
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityList">
@@ -2908,54 +3887,6 @@
             <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
             <param name="list">list </param>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.ID">
-            <summary>
-             OrginalData属性。只可读。
-            ID (该属性不可为空,且无默认值)
-            广告核销单.Key.ID
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.CreatedOn">
-            <summary>
-             OrginalData属性。只可读。
-            创建时间 (该属性可为空,且无默认值)
-            广告核销单.Sys.创建时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.CreatedBy">
-            <summary>
-             OrginalData属性。只可读。
-            创建人 (该属性可为空,且无默认值)
-            广告核销单.Sys.创建人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.ModifiedOn">
-            <summary>
-             OrginalData属性。只可读。
-            修改时间 (该属性可为空,且无默认值)
-            广告核销单.Sys.修改时间
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.ModifiedBy">
-            <summary>
-             OrginalData属性。只可读。
-            修改人 (该属性可为空,且无默认值)
-            广告核销单.Sys.修改人
-            </summary>
-            <value></value>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.SysVersion">
-            <summary>
-             OrginalData属性。只可读。
-            事务版本 (该属性可为空,但有默认值)
-            广告核销单.Sys.事务版本
-            </summary>
-            <value></value>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.AdvApplyCust">
             <summary>
              OrginalData属性。只可读。
@@ -2980,11 +3911,19 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.DocNo">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.AdvApproveDocType">
             <summary>
              OrginalData属性。只可读。
-            单号 (该属性可为空,且无默认值)
-            广告核销单.Misc.单号
+            单据类型 (该属性可为空,且无默认值)
+            广告核销单.Misc.单据类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.AdvApproveDocTypeKey">
+            <summary>
+            EntityKey 属性
+            单据类型 的Key (该属性可为空,且无默认值)
+            广告核销单.Misc.单据类型
             </summary>
             <value></value>
         </member>
@@ -3010,36 +3949,6 @@
             Entity　的全名. 
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.ID">
-            <summary>
-            属性: ID 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.CreatedOn">
-            <summary>
-            属性: 创建时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.CreatedBy">
-            <summary>
-            属性: 创建人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.ModifiedOn">
-            <summary>
-            属性: 修改时间 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.ModifiedBy">
-            <summary>
-            属性: 修改人 的名称
-            </summary>
-        </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.SysVersion">
-            <summary>
-            属性: 事务版本 的名称
-            </summary>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.AdvApplyCust">
             <summary>
             属性: 办事处 的名称
@@ -3050,14 +3959,14 @@
             属性: 月份 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.DocNo">
-            <summary>
-            属性: 单号 的名称
-            </summary>
-        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.AdvApproveLine">
             <summary>
             属性: 广告核销单行 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityRes.AdvApproveDocType">
+            <summary>
+            属性: 单据类型 的名称
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine">
@@ -3298,7 +4207,7 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.AdvItemName">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.AdvCarrier">
             <summary>
             广告载体 (该属性可为空,且无默认值)
             广告核销单行.ApplyInfo.广告载体
@@ -3365,6 +4274,13 @@
             <summary>
             核销金额 (该属性可为空,但有默认值)
             广告核销单行.AuditInfo.核销金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.AdvItem">
+            <summary>
+            广告项目 (该属性可为空,且无默认值)
+            广告核销单行.ApplyInfo.广告项目
             </summary>
             <value></value>
         </member>
@@ -3473,9 +4389,9 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApplyAdvCode")的方式取资源
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.Res_AdvItemName">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.Res_AdvCarrier">
             <summary>
-            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItemName")的方式取资源
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvCarrier")的方式取资源
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.Res_ApplyQty">
@@ -3521,6 +4437,11 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.Res_ApproveMoney">
             <summary>
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApproveMoney")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.Res_AdvItem">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItem")的方式取资源
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityKey">
@@ -3722,7 +4643,7 @@
             </summary>
             <value></value>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityOriginal.AdvItemName">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityOriginal.AdvCarrier">
             <summary>
              OrginalData属性。只可读。
             广告载体 (该属性可为空,且无默认值)
@@ -3799,6 +4720,14 @@
              OrginalData属性。只可读。
             核销金额 (该属性可为空,但有默认值)
             广告核销单行.AuditInfo.核销金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityOriginal.AdvItem">
+            <summary>
+             OrginalData属性。只可读。
+            广告项目 (该属性可为空,且无默认值)
+            广告核销单行.ApplyInfo.广告项目
             </summary>
             <value></value>
         </member>
@@ -3912,7 +4841,7 @@
             属性: 广告编号 的名称
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityRes.AdvItemName">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityRes.AdvCarrier">
             <summary>
             属性: 广告载体 的名称
             </summary>
@@ -3960,6 +4889,11 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityRes.ApproveMoney">
             <summary>
             属性: 核销金额 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLine.EntityRes.AdvItem">
+            <summary>
+            属性: 广告项目 的名称
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBE">
@@ -4309,6 +5243,319 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBE.EntityRes.Ratio">
             <summary>
             属性: 总部与事业部费用分摊比例 的名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType">
+            <summary>
+            实体: 广告单据类型
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnSetDefaultValue">
+            <summary>
+            设置默认值
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.CreateDefaultComponent_Extend">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.FromEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.ToEntityData(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.AdvDocEnum">
+            <summary>
+            广告单据对象 (该属性不可为空,但有默认值)
+            广告单据类型.Misc.广告单据对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.Res_AdvDocEnum">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvDocEnum")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey">
+            <summary>
+            Strong Class SpecialApplyDocType EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.FindByBusinessKey(System.String,UFIDA.U9.Base.Organization.Organization.EntityKey)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.FindByBusinessKey(System.String,UFIDA.U9.Base.Organization.Organization)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.FindByBusinessKey(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.FindByBusinessKeyIndex(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyDocTypeBE_SpecialApplyDocType_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyDocTypeBE_SpecialApplyDocType_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityOriginal.AdvDocEnum">
+            <summary>
+             OrginalData属性。只可读。
+            广告单据对象 (该属性不可为空,但有默认值)
+            广告单据类型.Misc.广告单据对象
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityRes.AdvDocEnum">
+            <summary>
+            属性: 广告单据对象 的名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum">
+            <summary>
+            可扩展枚举: 广告单据对象枚举 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get AdvDocEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.GetFromValue(System.Object)">
+            <summary>
+            Get AdvDocEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.GetFromName(System.String)">
+            <summary>
+            Get AdvDocEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.SpecialDoc">
+            <summary>
+            枚举值: 专柜申请单单据  Value:0  
+            广告单据对象枚举.Misc.专柜申请单单据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.AdvApplyDoc">
+            <summary>
+            枚举值: 广告申请单单据  Value:1  
+            广告单据对象枚举.Misc.广告申请单单据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.AdvApproveDoc">
+            <summary>
+            枚举值: 广告核销单单据  Value:2  
+            广告单据对象枚举.Misc.广告核销单单据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Values">
+            <summary>
+            Get AdvDocEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Res_TypeName">
+            <summary>
+            广告单据对象枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Res_TypeNameS">
+            <summary>
+            广告单据对象枚举的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Res_SpecialDoc">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Res_AdvApplyDoc">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.Res_AdvApproveDoc">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
             </summary>
         </member>
     </members>

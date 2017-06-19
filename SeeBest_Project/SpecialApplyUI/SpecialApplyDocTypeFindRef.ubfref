@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="6b3c72b7-be82-4edf-b617-eec7f7acb111" name="SpecialApplyDocTypeFindRef" displayName="广告单据类型" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDocTypeFindRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="1e5219c8-f672-451a-bc83-5e4fdd0a21ea" name="cRef" displayName="cRef" description="" help="广告单据类型" refEntityId="0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a" refEntityName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="43609151-13e9-4aa8-8992-9634a9ab7e93" name="ID" displayName="ID" description="" help="单据类型基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:ID" displayNameIndexStr="2" />
+        <RefField id="a55b6a63-ad7f-4077-b8aa-50c1f5ef4d8c" name="AdvDocEnum" displayName="广告单据对象" description="" help="广告单据类型.Misc.广告单据对象" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:AdvDocEnum" displayNameIndexStr="2" />
+        <RefField id="8dc82fcb-a8e3-4b75-8659-956551e4b5cc" name="Code" displayName="编码" description="" help="单据类型基类.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:Code" displayNameIndexStr="2" />
+        <RefField id="16c7797f-9647-44d0-9d0a-3243bfb161cc" name="Name" displayName="名称" description="" help="单据类型基类.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="120" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:Name" displayNameIndexStr="2" />
+        <RefField id="0fd3c288-0578-49e4-b516-7523fa071ed8" name="Description" displayName="描述" description="" help="单据类型基类.Misc.描述" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:Description" displayNameIndexStr="2" />
+        <RefField id="856fc2a9-7450-407b-bee6-710c5fea02af" name="ConfirmType" displayName="确认方式" description="" help="单据类型基类.流程.确认方式" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:ConfirmType" displayNameIndexStr="2" />
+        <RefField id="3cfc7baf-2905-4999-a0a7-4c9ae430fdb5" name="ApproveType" displayName="审批方式" description="" help="单据类型基类.Misc.审批方式" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:ApproveType" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="868a963d-9fa4-4bbd-a716-77acd7e4753e" name="AdvDocEnum" displayName="广告单据对象" description="" help="广告单据类型.Misc.广告单据对象" direction="0" sequence="0" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:AdvDocEnum" />
+        <OrderField id="ce7e33b7-3635-4af8-8ded-6070d5504875" name="Code" displayName="编码" description="" help="单据类型基类.Misc.编码" direction="0" sequence="0" refAttributeName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType:Code" />
+      </OrderFields>
+      <Filter>UFIDA::U9::Cust::SeeBestAdvertisementBE::SpecialApplyDocTypeBE::SpecialApplyDocType.Org.ID=#Context.OrgID#</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

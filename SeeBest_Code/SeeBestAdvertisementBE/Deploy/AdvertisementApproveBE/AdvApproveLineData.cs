@@ -48,6 +48,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -90,6 +91,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     							ActualPrice=0m; 
 	     							Discount=0m; 
 	     							ApproveMoney=0m; 
+	     			
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -505,16 +507,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// 广告核销单行.ApplyInfo.广告载体
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.String m_advItemName ;
-		public System.String AdvItemName
+		private System.String m_advCarrier ;
+		public System.String AdvCarrier
 		{
 			get	
 			{	
-				return m_advItemName  ;
+				return m_advCarrier  ;
 			}
 			set	
 			{	
-				m_advItemName = value ;	
+				m_advCarrier = value ;	
 			}
 		}
 		
@@ -689,10 +691,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 广告项目
+		/// 广告核销单行.ApplyInfo.广告项目
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_advItem ;
+		public System.String AdvItem
+		{
+			get	
+			{	
+				return m_advItem  ;
+			}
+			set	
+			{	
+				m_advItem = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																													
+																														
 		#endregion 		
 	}	
 

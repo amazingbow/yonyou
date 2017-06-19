@@ -112,9 +112,9 @@ namespace SpecialApplyDocTypeRef
 		{
 			get { return this.Fields["Name"]; }
 		}
-		public IUIField FieldShortName
+		public IUIField FieldDescription
 		{
-			get { return this.Fields["ShortName"]; }
+			get { return this.Fields["Description"]; }
 		}
 		public IUIField FieldConfirmType
 		{
@@ -136,12 +136,12 @@ namespace SpecialApplyDocTypeRef
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","3be65ab8-c949-4dc0-b18d-10b8e0927bfb");
-			UIModelRuntimeFactory.AddNewUIField(this,"Code", typeof(String), false,"","System.String", "Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5b3f1e12-fd04-40ea-a2d8-3976a5b949d9");
-			UIModelRuntimeFactory.AddNewUIField(this,"Name", typeof(String), true,"","System.String", "Name", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1760aba7-6564-40dd-8821-a1594d48885c");
-			UIModelRuntimeFactory.AddNewUIField(this,"ShortName", typeof(String), true,"","System.String", "ShortName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ed3a8c80-61ee-4e38-b298-03282c55f563");
-			UIModelRuntimeFactory.AddNewUIField(this,"ConfirmType", typeof(Int32), false,"","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "ConfirmType", true,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","394cf8e6-b1f1-4cb7-af99-fdbe13471083");
-			UIModelRuntimeFactory.AddNewUIField(this,"ApproveType", typeof(Int32), true,"","UFIDA.U9.Base.Doc.ApproveTypeEnum", "ApproveType", true,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","92a367fa-b6e1-4818-a795-8d3e61511582");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","a43d382c-0851-4ecb-93fd-e4a127a638ef");
+			UIModelRuntimeFactory.AddNewUIField(this,"Code", typeof(String), false,"","System.String", "Code", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a60df798-a338-47e9-b0b6-1e9a372d4bfd");
+			UIModelRuntimeFactory.AddNewUIField(this,"Name", typeof(String), true,"","System.String", "Name", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6e3d4862-7dfa-4e9f-9308-fd234459889a");
+			UIModelRuntimeFactory.AddNewUIField(this,"Description", typeof(String), true,"","System.String", "Description", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","213023d1-ffb4-4c18-9769-9c50e40a1e8c");
+			UIModelRuntimeFactory.AddNewUIField(this,"ConfirmType", typeof(Int32), false,"","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "ConfirmType", true,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","c2a47f49-9b99-46d0-b966-5dd1a485eedb");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApproveType", typeof(Int32), true,"","UFIDA.U9.Base.Doc.ApproveTypeEnum", "ApproveType", true,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","a519ac18-f140-4d02-b3bf-10afd27cf417");
 
 
 			this.CurrentFilter = new cRefDefaultFilterFilter(this);
@@ -232,15 +232,15 @@ namespace SpecialApplyDocTypeRef
 		}
 		
 		
-		public  String ShortName
+		public  String Description
 		{
 			get{
-				//object value = this[this.uiviewcRef.FieldShortName] ;
+				//object value = this[this.uiviewcRef.FieldDescription] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewcRef.FieldShortName);
+				return GetValue<String>(this.uiviewcRef.FieldDescription);
 			}
 			set{
-				this[this.uiviewcRef.FieldShortName] = value;
+				this[this.uiviewcRef.FieldDescription] = value;
 			}
 		}
 		
@@ -277,7 +277,7 @@ namespace SpecialApplyDocTypeRef
 	{
 		#region Constructor
 		public cRefDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"Org.ID=#Context.OrgID#",@" order by Code asc")
+			: base("DefaultFilter",view,@"Org.ID=#Context.OrgID# and AdvDocEnum=0",@" order by Code asc")
 		{
 			InitClass();
 		}

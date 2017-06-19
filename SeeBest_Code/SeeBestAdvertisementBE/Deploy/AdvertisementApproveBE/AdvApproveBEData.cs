@@ -22,6 +22,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                             knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Customer.CustomerData));
                         
                                         knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData>));
+                                        knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData));
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -37,6 +38,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		{
 			//设置默认值
 	     							     			
+	     			
 	     			
 
 
@@ -158,10 +160,57 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+		
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advApproveDocType_SKey ;
+		/// <summary>
+		/// 单据类型 序列化Key属性。（传递跨组织序列列字段）
+		/// 广告核销单.Misc.单据类型
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvApproveDocType_SKey
+		{
+			get 
+			{
+				return m_advApproveDocType_SKey ;					
+			}
+			set
+			{
+				 m_advApproveDocType_SKey = value ;	
+			}
+		}
+		/// <summary>
+		/// 单据类型
+		/// 广告核销单.Misc.单据类型
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public System.Int64 AdvApproveDocType
+		{
+			get	
+			{	
+				if (AdvApproveDocType_SKey == null)
+					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
+				else
+					return AdvApproveDocType_SKey.ID ;
+			}
+			set	
+			{	
+				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
+					AdvApproveDocType_SKey = null ;
+				else
+				{
+					if (AdvApproveDocType_SKey == null )
+						AdvApproveDocType_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType") ;
+					else
+						AdvApproveDocType_SKey.ID = value ;
+				}
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-			
+				
 		#endregion 		
 	}	
 

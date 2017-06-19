@@ -111,3 +111,31 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	}
 }
 
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE
+{
+	/// <summary>
+	/// 枚举值: 广告单据对象枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum AdvDocEnumData
+	{
+		/// <summary>
+		/// 专柜申请单单据
+		/// </summary>
+		SpecialDoc = 0,
+		/// <summary>
+		/// 广告申请单单据
+		/// </summary>
+		AdvApplyDoc = 1,
+		/// <summary>
+		/// 广告核销单单据
+		/// </summary>
+		AdvApproveDoc = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+

@@ -1,4 +1,4 @@
-<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="5" GridTopMargin="0" Height="728" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1024" X="8" Y="8">
+<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="5" GridTopMargin="0" Height="728" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1024" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="1000" />
   </Columns>
@@ -160,6 +160,10 @@
         <Events />
         <RelationControls />
       </TextBox>
+      <FlexFieldPicker ID="ccc188f9-ce70-4c88-aea0-17a1bb029e9b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="26" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="100" X="10" Y="160">
+        <Events />
+        <RelationControls />
+      </FlexFieldPicker>
     </TabPage>
     <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
@@ -474,15 +478,19 @@
     </TabPage>
     <Events />
   </TabControl>
-  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="7" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="30" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
+  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="30" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
-      <Column Fixed="True" Name="Column2" Width="180" />
-      <Column Fixed="True" Name="Column3" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="120" />
+      <Column Fixed="True" Name="Column3" Width="20" />
       <Column Fixed="True" Name="Column4" Width="100" />
       <Column Fixed="True" Name="Column5" Width="10" />
-      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column6" Width="120" />
+      <Column Fixed="True" Name="Column7" Width="20" />
+      <Column Fixed="True" Name="Column8" Width="100" />
+      <Column Fixed="True" Name="Column9" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="120" />
     </Columns>
     <Rows>
       <Row Fixed="False" Height="20" Name="Row0" />
@@ -492,10 +500,38 @@
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="e695f198-0b25-453a-98b7-7adbad1458a9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="AdvCode476" RelationControl="lblAdvCode476" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvCode" UIViewID="AdvApplyBE" Visible="True" Width="180" X="115" Y="5">
+    <TextBox ID="e695f198-0b25-453a-98b7-7adbad1458a9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="AdvCode476" RelationControl="lblAdvCode476" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvCode" UIViewID="AdvApplyBE" Visible="True" Width="120" X="115" Y="5">
       <Events />
       <RelationControls />
     </TextBox>
+    <Label ID="a593540c-c3b9-45da-8a0e-37402c1ac30e" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblAdvApplyDocType216" RelationControl="AdvApplyDocType216" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="255" Y="5">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Reference ID="f83243d4-3e34-4ac1-b584-8acde1e5caea" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AdvApplyDocType_Code" CodeFieldUIViewID="AdvApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvApplyDocType216" NameAttributeName="Name" NameFieldUIFieldID="AdvApplyDocType_Name" NameFieldUIViewID="AdvApplyBE" PkeyField="ID" RefType="11ab3eef-9012-47dd-8cc2-f377e148a2c1" RelationControl="lblAdvApplyDocType216" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvApplyDocType" UIViewID="AdvApplyBE" Visible="True" Width="120" WindowHeight="408" WindowWidth="580" X="365" Y="5">
+      <Events />
+      <RelationControls />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Text" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="广告单据对象" ColumnID="AdvDocEnum" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Text" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织机构" ColumnID="Org_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="581051b7-097c-4e4c-a928-d94e1a7e9779" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocStatus162" RelationControl="DocStatus162" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="505" Y="5">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="bb776121-f32c-40d7-b9d3-2e08030e639d" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum" EnumID="20babf0c-275e-4cb2-a9b5-a751bb8152bf" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocStatus162" RelationControl="lblDocStatus162" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocStatus" UIViewID="AdvApplyBE" Visible="True" Width="120" X="615" Y="5">
+      <Events />
+      <RelationControls />
+    </DropDownList>
   </Card>
   <Toolbar ID="1a0cbde8-2380-48aa-ac79-c2fc2d76340b" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar5" TabIndex="1" TabStop="True" Width="1000" X="0" Y="0">
     <Button ID="2ecf3169-b8b7-470b-bfde-5480a79415b6" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
@@ -603,12 +639,12 @@
         </Menu>
       </Menus>
     </DropDownButton>
-    <Button ID="3f1deba7-31a7-4c81-bee9-c776a77c2b56" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="Button52" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+    <Button ID="3f1deba7-31a7-4c81-bee9-c776a77c2b56" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOK" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
       <Events>
         <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
       </Events>
     </Button>
-    <Button ID="47ffa862-a5d6-4560-81a1-6beb5d803a8d" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="Button53" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+    <Button ID="47ffa862-a5d6-4560-81a1-6beb5d803a8d" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnGiveUp" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
       <Events>
         <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
       </Events>

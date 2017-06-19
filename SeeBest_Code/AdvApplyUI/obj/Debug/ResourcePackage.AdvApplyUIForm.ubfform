@@ -1,99 +1,17 @@
-<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" Height="800" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1216" X="10" Y="10">
+<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="5" GridTopMargin="0" Height="728" IsAutoSize="False" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1024" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="1000" />
   </Columns>
   <Rows>
     <Row Fixed="True" Height="28" Name="Row0" />
     <Row Fixed="False" Height="30" Name="Row3" />
-    <Row Fixed="False" Height="692" Name="Row1" />
+    <Row Fixed="False" Height="611" Name="Row1" />
+    <Row Fixed="False" Height="32" Name="Row4" />
   </Rows>
   <Providers />
   <InParameters />
-  <Toolbar ID="69a4ddb1-b01d-405a-adfc-4593fe5af394" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="1000" X="0" Y="0">
-    <Button ID="2576257d-6bcd-435e-8f04-e9b40dec8665" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
-      <Events>
-        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="24dacb6f-e263-40e1-be53-991d780f66dd" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
-      <Events>
-        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="aa2cba32-ec5a-4b4f-a589-306d25e7cea8" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
-      <Events>
-        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="412949bb-84bf-46b7-949d-3798bf7b689c" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
-      <Events>
-        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Separator ID="8e0d6315-3a43-4b2b-863e-99bcbc0069b8" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
-    <Button ID="3d69a949-1238-438c-9c81-fe0c0689809e" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
-      <Events>
-        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Separator ID="cb6250f6-22f8-438c-a744-919a7c5bf539" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
-    <Separator ID="faf40994-9d04-47ea-9bce-a25b9137f7cf" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="191" Y="0" />
-    <Button ID="9a65aeda-abd5-414a-99b7-b9d2092d822d" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="199" Y="0">
-      <Events>
-        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="86a6ecc9-b1eb-419d-8329-df859df244e5" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="234" Y="0">
-      <Events>
-        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Separator ID="493705f1-9092-44cb-8bc8-f3f544309615" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="269" Y="0" />
-    <Button ID="429f936e-4062-4ad0-a45c-03a22a10d18d" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="277" Y="0">
-      <Events>
-        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="83db09dc-55b9-4f65-8d45-819160bedc58" DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="312" Y="0">
-      <Events>
-        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="233a570f-a00d-4141-9aba-2ad6816c45ac" DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="347" Y="0">
-      <Events>
-        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="70ec5075-12fc-4dc5-9819-b2fb49586b82" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="382" Y="0">
-      <Events>
-        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Separator ID="a6dd3baa-52ba-46f0-84e2-5fbe274eecd7" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="417" Y="0" />
-    <Button ID="2a9104e7-8341-4bcf-b143-ab3d32cc9eb3" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="425" Y="0">
-      <Events>
-        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="12811315-bd8d-4f9b-99d2-a503652a615e" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="460" Y="0">
-      <Events>
-        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Separator ID="658fc526-3c23-4d86-8f83-04b560e31d1d" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="495" Y="0" />
-    <Button ID="b5170e32-18e6-4ac4-ad46-1f10499db999" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="503" Y="0">
-      <Events>
-        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-    <Button ID="3f149fef-75be-43f3-a7ef-2747122f0cb2" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="538" Y="0">
-      <Events>
-        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
-      </Events>
-    </Button>
-  </Toolbar>
-  <TabControl ID="1ff87d76-f72b-4339-8399-3680cbeeffb6" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="692" Name="TabControl6" TabIndex="3" TabStop="True" Width="1000" X="0" Y="68">
-    <TabPage ID="3b4f3759-9fe7-45de-9467-c38efbeea061" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="相关资料" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="16" GridRowSpace="5" GridTopMargin="10" Height="662" Name="TabPage25" TabIndex="1" TabStop="False" Width="992" X="0" Y="0">
+  <TabControl ID="1ff87d76-f72b-4339-8399-3680cbeeffb6" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="611" Name="TabControl6" TabIndex="3" TabStop="True" Width="1000" X="0" Y="68">
+    <TabPage ID="3b4f3759-9fe7-45de-9467-c38efbeea061" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="相关资料" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="16" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage25" TabIndex="1" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -183,7 +101,7 @@
         <RelationControls />
         <Events />
       </Label>
-      <DatePicker ID="a9dde658-d7d6-49c0-a7db-2a08b41b3db9" DisplayFormat="10" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate268" RelationControl="lblApplyDate268" TabIndex="12" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="AdvApplyBE" Visible="True" Width="120" X="600" Y="35">
+      <DatePicker ID="a9dde658-d7d6-49c0-a7db-2a08b41b3db9" DisplayFormat="10" Enabled="False" GridHeight="1" GridWidth="1" GridX="10" GridY="1" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyDate268" RelationControl="lblApplyDate268" TabIndex="12" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDate" UIViewID="AdvApplyBE" Visible="True" Width="120" X="600" Y="35">
         <Events />
         <RelationControls />
       </DatePicker>
@@ -242,8 +160,12 @@
         <Events />
         <RelationControls />
       </TextBox>
+      <FlexFieldPicker ID="ccc188f9-ce70-4c88-aea0-17a1bb029e9b" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" Name="FlexFieldPicker0" TabIndex="26" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="100" X="10" Y="160">
+        <Events />
+        <RelationControls />
+      </FlexFieldPicker>
     </TabPage>
-    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="662" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
+    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -503,7 +425,7 @@
       <Image ID="370eb641-6b70-4bf0-9d17-b542d33bd366" DisplayName="竖版版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="11" GridWidth="1" GridX="6" GridY="7" Height="270" ImageUrl="/Images/CusU9/2.bmp" Name="Image13" TabIndex="42" TabStop="True" Width="120" X="360" Y="185" />
       <Image ID="d7381f91-0dc3-4d96-85c0-e16e2d33cb35" DisplayName="方形版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="10" GridWidth="4" GridX="8" GridY="7" Height="245" ImageUrl="/Images/CusU9/3.bmp" Name="Image14" TabIndex="43" TabStop="True" Width="240" X="490" Y="185" />
     </TabPage>
-    <TabPage ID="036fb0c2-cef8-43eb-88da-2f78d09f64fb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="客户排版文字信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="20" GridRowSpace="5" GridTopMargin="10" Height="662" Name="TabPage33" TabStop="False" Width="992" X="0" Y="0">
+    <TabPage ID="036fb0c2-cef8-43eb-88da-2f78d09f64fb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="客户排版文字信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="20" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage33" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="120" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -556,15 +478,19 @@
     </TabPage>
     <Events />
   </TabControl>
-  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="7" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="30" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
+  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="30" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
-      <Column Fixed="True" Name="Column2" Width="180" />
-      <Column Fixed="True" Name="Column3" Width="10" />
+      <Column Fixed="True" Name="Column2" Width="120" />
+      <Column Fixed="True" Name="Column3" Width="20" />
       <Column Fixed="True" Name="Column4" Width="100" />
       <Column Fixed="True" Name="Column5" Width="10" />
-      <Column Fixed="True" Name="Column6" Width="100" />
+      <Column Fixed="True" Name="Column6" Width="120" />
+      <Column Fixed="True" Name="Column7" Width="20" />
+      <Column Fixed="True" Name="Column8" Width="100" />
+      <Column Fixed="True" Name="Column9" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="120" />
     </Columns>
     <Rows>
       <Row Fixed="False" Height="20" Name="Row0" />
@@ -574,19 +500,155 @@
       <RelationControls />
       <Events />
     </Label>
-    <TextBox ID="e695f198-0b25-453a-98b7-7adbad1458a9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="AdvCode476" RelationControl="lblAdvCode476" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvCode" UIViewID="AdvApplyBE" Visible="True" Width="180" X="115" Y="5">
+    <TextBox ID="e695f198-0b25-453a-98b7-7adbad1458a9" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="AdvCode476" RelationControl="lblAdvCode476" TabIndex="1" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvCode" UIViewID="AdvApplyBE" Visible="True" Width="120" X="115" Y="5">
       <Events />
       <RelationControls />
     </TextBox>
-    <Label ID="c3efb35e-a27f-4446-a732-bc98f7c76e8a" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblIsClose1250" RelationControl="IsClose1250" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="305" Y="5">
+    <Label ID="a593540c-c3b9-45da-8a0e-37402c1ac30e" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblAdvApplyDocType216" RelationControl="AdvApplyDocType216" TabIndex="2" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="255" Y="5">
       <Events />
       <RelationControls />
       <Events />
     </Label>
-    <CheckBox ID="9dafff01-cc38-4304-8194-ef0c090336e3" DisplayFormat="1" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="IsClose1250" RelationControl="lblIsClose1250" TabIndex="3" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="IsClose" UIViewID="AdvApplyBE" Visible="True" Width="100" X="415" Y="5">
+    <Reference ID="f83243d4-3e34-4ac1-b584-8acde1e5caea" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AdvApplyDocType_Code" CodeFieldUIViewID="AdvApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvApplyDocType216" NameAttributeName="Name" NameFieldUIFieldID="AdvApplyDocType_Name" NameFieldUIViewID="AdvApplyBE" PkeyField="ID" RefType="11ab3eef-9012-47dd-8cc2-f377e148a2c1" RelationControl="lblAdvApplyDocType216" TabIndex="3" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvApplyDocType" UIViewID="AdvApplyBE" Visible="True" Width="120" WindowHeight="408" WindowWidth="580" X="365" Y="5">
       <Events />
       <RelationControls />
-    </CheckBox>
+      <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Text" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="广告单据对象" ColumnID="AdvDocEnum" TargetControlType="" TargetID="" TargetProperty="" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Value" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="ReferenceModel" TargetID="AdvApplyDocType216" TargetProperty="Text" />
+      <ReferenceRelation Action="Clear" ColumnDisplayName="组织机构" ColumnID="Org_Code" TargetControlType="" TargetID="" TargetProperty="" />
+      <RefNameFields>
+        <RefNameField UIFieldID="Name" />
+      </RefNameFields>
+      <UIFilterBar Name="ReferenceFilter" />
+      <Events />
+    </Reference>
+    <Label ID="581051b7-097c-4e4c-a928-d94e1a7e9779" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblDocStatus162" RelationControl="DocStatus162" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="505" Y="5">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="bb776121-f32c-40d7-b9d3-2e08030e639d" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyStatusEnum" EnumID="20babf0c-275e-4cb2-a9b5-a751bb8152bf" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DocStatus162" RelationControl="lblDocStatus162" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocStatus" UIViewID="AdvApplyBE" Visible="True" Width="120" X="615" Y="5">
+      <Events />
+      <RelationControls />
+    </DropDownList>
+  </Card>
+  <Toolbar ID="1a0cbde8-2380-48aa-ac79-c2fc2d76340b" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar5" TabIndex="1" TabStop="True" Width="1000" X="0" Y="0">
+    <Button ID="2ecf3169-b8b7-470b-bfde-5480a79415b6" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="4d9245bb-39f0-4661-9572-79dc4690fd7f" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="d1daf3b6-8fd7-4176-958f-fb1ca78b5b01" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnNew" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="9fd61183-361f-44c8-8d5a-b6b8ace89c9c" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="4327aeec-f37a-4fe4-9d1d-3c12556a1f07" Height="28" Name="Separator12" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
+    <Button ID="f529687b-3db2-4032-87d0-b9159f07cdb7" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="51e72db7-a2b2-4267-8ce2-cee1f6eb4b38" Height="28" Name="Separator13" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
+    <Button ID="8c54df9b-3cbe-4f2a-8a91-6ee505c4422e" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f72d6282-921d-4b69-a832-454d92bc3474" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="f1cf1b21-82ca-40ac-808f-8325b9c80c49" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="UndoApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Separator ID="069479d4-00ac-4fb6-be3a-614ce3bc695c" Height="28" Name="Separator14" TabIndex="11" TabStop="True" Width="8" X="296" Y="0" />
+    <Button ID="6c5dd351-dd23-4833-8885-e09c634df51a" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="c4c35dc4-1327-4a93-b9d9-d54b6834f3f7" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="feb509cd-69a6-42eb-bf6d-05145fbbed2a" Height="28" Name="Separator15" TabIndex="14" TabStop="True" Width="8" X="374" Y="0" />
+    <Separator ID="346a3df0-272c-48d6-9184-59ed0117554e" Height="28" Name="Separator16" TabIndex="19" TabStop="True" Width="8" X="382" Y="0" />
+    <Button ID="053679c5-f3bd-46cb-b408-6957fc498bfe" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="390" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Separator ID="7b969e19-b59d-474e-bd1a-8716bbf74d5e" Height="28" Name="Separator17" TabIndex="22" TabStop="True" Width="8" X="425" Y="0" />
+    <Button ID="196ebaa9-4b49-4569-b010-29d24a89bc8f" AccessKey="P" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="433" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="615fb65d-1a69-4a22-bc25-7c3b8ec96b02" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="3" Height="32" LayoutType="GridBag" Name="Card8" TabIndex="3" TabStop="False" Width="1000" X="0" Y="684">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column9" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column19" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column18" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column17" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column21" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column22" Type="Value" Width="71" />
+      <Column Fixed="True" Name="Column16" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column15" Type="Spacing" Width="80" />
+      <Column Fixed="True" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Type="Spacing" Width="80" />
+      <Column Fixed="False" Name="Column8" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <DropDownButton ID="22fef3a6-0357-4095-ae57-70a35de485b5" DisplayName="" DisplayNameIndexStr="" DisplayNameResourceID="c4e31736-3819-479a-9f0a-2a306ba44bec" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="DropDownButton0" TabIndex="1" TabStop="True" Width="80" X="10" Y="3">
+      <Events />
+      <Menus>
+        <Menu ID="ce7f99a7-4e6e-4032-9b09-bc8da8d273b1" AccessKey="" DisplayName="关闭" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Height="24" IsAuthorization="True" Name="CloseClick" TabStop="True" Width="35">
+          <Events>
+            <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+          </Events>
+        </Menu>
+      </Menus>
+    </DropDownButton>
+    <Button ID="3f1deba7-31a7-4c81-bee9-c776a77c2b56" AccessKey="" DisplayNameResourceID="626ebf9b-f65a-4dd5-8f32-96f84919878c" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="18" GridY="0" Height="20" Name="BtnOK" TabIndex="9" TabStop="True" Width="80" X="811" Y="3">
+      <Events>
+        <Event ActionName="OnOk" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OKClick" Template=".\UITpls\WebPart\RefCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
+    <Button ID="47ffa862-a5d6-4560-81a1-6beb5d803a8d" AccessKey="Z" DisplayNameResourceID="020a5365-8f12-4970-b8df-17ce3ae60a68" DisplaySrcType="PublicResource" GridHeight="1" GridWidth="1" GridX="20" GridY="0" Height="20" Name="BtnGiveUp" TabIndex="10" TabStop="True" Width="80" X="901" Y="3">
+      <Events>
+        <Event ActionName="OnClose" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
+    </Button>
   </Card>
   <Events />
 </View>

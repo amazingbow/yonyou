@@ -349,6 +349,19 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 	  
 		}
+		/// <summary>
+		/// Help: 
+		/// </summary>
+		public void UndoApproveClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.UndoApproveClick_Extend);
+		}
+		private void UndoApproveClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

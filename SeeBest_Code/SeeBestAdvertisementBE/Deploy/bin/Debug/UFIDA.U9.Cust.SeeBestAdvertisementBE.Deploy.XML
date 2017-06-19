@@ -27,6 +27,12 @@
             广告申请单.Misc.广告体现项目子表
             </summary>
         </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_docStatus">
+            <summary>
+            单据状态
+            广告申请单.Misc.单据状态
+            </summary>
+        </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advCode">
             <summary>
             编号
@@ -222,6 +228,18 @@
             <summary>
             广告载体
             广告申请单.Misc.广告载体
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvApplyDocType_SKey">
+            <summary>
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            广告申请单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvApplyDocType">
+            <summary>
+            单据类型
+            广告申请单.Misc.单据类型
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvAboutBEData">
@@ -638,6 +656,18 @@
             广告核销单.Misc.办事处
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApproveDocType_SKey">
+            <summary>
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            广告核销单.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.AdvApproveDocType">
+            <summary>
+            单据类型
+            广告核销单.Misc.单据类型
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData">
             <summary>
             广告核销单行 缺省DTO 
@@ -763,7 +793,7 @@
             广告核销单行.ApplyInfo.广告编号
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData.m_advItemName">
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData.m_advCarrier">
             <summary>
             广告载体
             广告核销单行.ApplyInfo.广告载体
@@ -821,6 +851,12 @@
             <summary>
             核销金额
             广告核销单行.AuditInfo.核销金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData.m_advItem">
+            <summary>
+            广告项目
+            广告核销单行.ApplyInfo.广告项目
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData.SysEntityType">
@@ -894,13 +930,19 @@
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData">
             <summary>
-            专柜申请单单据类型 缺省DTO 
+            广告单据类型 缺省DTO 
             
             </summary>
         </member>
         <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.#ctor">
             <summary>
             Default Constructor
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.m_advDocEnum">
+            <summary>
+            广告单据对象
+            广告单据类型.Misc.广告单据对象
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData.SysEntityType">
@@ -1003,6 +1045,32 @@
             </summary>
         </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData">
+            <summary>
+            枚举值: 广告单据对象枚举 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.SpecialDoc">
+            <summary>
+            专柜申请单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.AdvApplyDoc">
+            <summary>
+            广告申请单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.AdvApproveDoc">
+            <summary>
+            广告核销单单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.AdvDocEnumData.Empty">
             <summary>
             空值(-1)
             </summary>

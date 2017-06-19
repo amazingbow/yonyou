@@ -20,6 +20,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
     public partial class AdvApplyBE
     {
+        public override Base.Doc.DocType DocType
+        {
+            get { return this.AdvApplyDocType; }
+        }
 
         #region Custom Constructor
 
@@ -91,6 +95,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             temp = temp.TrimEnd('/');
 
             this.AdvCode = this.ApplyDept.DescFlexField.PrivateDescSeg11 + this.Flow4Bit.ToString().PadLeft(4, '0') + temp + DateTime.Now.ToString("yyMMdd");
+
         }
 
         /// <summary>

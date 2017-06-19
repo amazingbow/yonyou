@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <returns>Instance</returns>
 		public  static AdvApproveBE Create() {
 			AdvApproveBE entity = (AdvApproveBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-									 
+												 
 			return entity;
 		}
 
@@ -452,6 +452,47 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 单据类型 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.单据类型
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType AdvApproveDocType
+			{
+				get
+				{
+					if (AdvApproveDocTypeKey == null)
+						return null ;
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType value =  (UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType)AdvApproveDocTypeKey.GetEntity();
+					return value ;
+				}
+			}
+		
+
+
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApproveDocTypeKey ;
+		/// <summary>
+		/// EntityKey 属性
+		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey AdvApproveDocTypeKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApproveDocType") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApproveDocTypeKey==null || m_AdvApproveDocTypeKey.ID != key )
+					m_AdvApproveDocTypeKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey(key); 
+				return m_AdvApproveDocTypeKey ;
+			}
+		}
+
 		
 
 			#endregion
@@ -591,6 +632,70 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 单据类型 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType AdvApproveDocType
+		{
+			get
+			{
+				object  obj = this.GetRelation("AdvApproveDocType");
+				if (obj == null)
+				{
+					return null ;
+				}
+				else
+				{
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType value  = (UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType)obj;
+					return value;
+				 }
+			}
+				set
+			{
+				
+				this.SetRelation("AdvApproveDocType", value);
+					 
+			}
+		}
+	
+
+
+   		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApproveDocTypeKey ;
+		/// <summary>
+		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.单据类型
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey AdvApproveDocTypeKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvApproveDocType") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvApproveDocTypeKey==null || m_AdvApproveDocTypeKey.ID != key )
+					m_AdvApproveDocTypeKey = new UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey(key); 
+				return m_AdvApproveDocTypeKey ;
+			}
+			set
+			{	
+				if (AdvApproveDocTypeKey==value)
+					return ;
+				this.SetRelation("AdvApproveDocType", null);
+				m_AdvApproveDocTypeKey = value ;
+				if (value != null) 
+				{
+					base.SetValue("AdvApproveDocType",value.ID);
+				}
+				else
+					base.SetValue("AdvApproveDocType",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
+
 	
 
 		#endregion
@@ -649,6 +754,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvApproveLine　{ get { return EntityRes.GetResource("AdvApproveLine");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveDocType")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvApproveDocType　{ get { return EntityRes.GetResource("AdvApproveDocType");　}　}
 		#endregion 
 
 
@@ -680,6 +790,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 广告核销单行 的名称
 			/// </summary>
 			public static string AdvApproveLine　{ get { return "AdvApproveLine";　}　}
+				
+			/// <summary>
+			/// 属性: 单据类型 的名称
+			/// </summary>
+			public static string AdvApproveDocType　{ get { return "AdvApproveDocType";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -687,7 +802,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-						
+								
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -836,6 +951,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("FlowInstance","FlowInstance");
 			this.exdMultiLangAttrs.Add("AdvApplyCust","AdvApplyCust");
 			this.exdMultiLangAttrs.Add("Month","Month");
+			this.exdMultiLangAttrs.Add("AdvApproveDocType","AdvApproveDocType");
         }
 	#endregion 
 
@@ -852,7 +968,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-						
+									
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -878,6 +994,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	
 
 			
+
+			if (data.AdvApproveDocType == -1 && data.AdvApproveDocType_SKey!=null)
+				data.AdvApproveDocType = data.AdvApproveDocType_SKey.GetEntity().ID ;
+	
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -923,6 +1043,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 								this.SetTypeValue("AdvApplyCust",data.AdvApplyCust);
 		
 								this.SetTypeValue("Month",data.Month);
+		
+								this.SetTypeValue("AdvApproveDocType",data.AdvApproveDocType);
 		
 			#endregion 
 
@@ -999,6 +1121,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 					data.Month=(System.DateTime)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("AdvApproveDocType");
+				if (obj != null)
+					data.AdvApproveDocType=(System.Int64)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1033,6 +1162,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

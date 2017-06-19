@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Component id="97f06111-d028-4b99-bade-a1b89ed2988e" name="SpecialApplyDocTypeBE" displayName="SpecialApplyDocTypeBE" description="" help="" type="BE" assemblyName="UFIDA.U9.Cust.SeeBestAdvertisementBE">
   <Namespace id="1e2d6fcf-050d-4fee-9bb6-e8c6fee0cf5e" name="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE" displayName="UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE" description="" help="">
-    <Entity id="0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a" name="SpecialApplyDocType" displayName="专柜申请单单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="Cust_SeeBest_SpecialApplyDocType" isMain="True" inheritanceMapKind="0" discriminator="SpecialApplyDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
+    <Entity id="0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a" name="SpecialApplyDocType" displayName="广告单据类型" description="" help="" mD_ParentClass_ID="009a5f75-27f1-484d-bf96-7305a7aaf7dd" isFactEntity="True" defaultTable="Cust_SeeBest_SpecialApplyDocType" isMain="True" inheritanceMapKind="0" discriminator="SpecialApplyDocType" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="True" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
+      <Groups>
+        <Group id="5a1d5c3a-2424-4d23-b9c2-4dd8cf149ec4" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="6ca32be8-c557-4738-b926-41ad59997dcc" name="AdvDocEnum" displayName="广告单据对象" description="" help="广告单据类型.Misc.广告单据对象" dataTypeID="5b384422-00ff-4599-9ae5-e1d3f50cfcbe" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="False" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+      </Attributes>
       <BEIndecs>
         <BEIndex id="ac112ac8-f199-44cb-ac91-14fcd155e49d" name="UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyDocTypeBE_SpecialApplyDocType_BusinessKey_Index" displayName="UFIDA_U9_Cust_SeeBestAdvertisementBE_SpecialApplyDocTypeBE_SpecialApplyDocType_BusinessKey_Index" description="" help="" isUnique="True" isClustered="False" isForBusinessKeys="True">
           <BEIndexAttributes>
@@ -11,13 +17,24 @@
         </BEIndex>
       </BEIndecs>
     </Entity>
+    <Enum id="5b384422-00ff-4599-9ae5-e1d3f50cfcbe" name="AdvDocEnum" displayName="广告单据对象枚举" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isExtend="False">
+      <Attributes>
+        <Attribute id="585f0e51-78f4-4586-8de6-639524d2b77d" name="SpecialDoc" displayName="专柜申请单单据" description="" help="广告单据对象枚举.Misc.专柜申请单单据" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="0" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="b1655b00-b4e7-4508-a836-659c3a3a9a44" name="AdvApplyDoc" displayName="广告申请单单据" description="" help="广告单据对象枚举.Misc.广告申请单单据" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="1" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="44faa3d8-e87b-4c8e-861e-9d59f0e63e61" name="AdvApproveDoc" displayName="广告核销单单据" description="" help="广告单据对象枚举.Misc.广告核销单单据" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="2" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </Enum>
     <Diagram id="35ada1ce-898b-4013-9c3a-048407139626" name="SpecialApplyDocTypeBE" displayName="SpecialApplyDocTypeBE">
       <Class Editable="True" ID="9c4d6624-0b32-4bd6-8f12-0d451e84c152" Type="Entity" ADID="0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a">
-        <Location X="191" Y="175" />
+        <Location X="191" Y="172" />
         <Size width="120" height="58" />
       </Class>
       <Class Editable="False" ID="7998219c-327d-4e53-99c7-8504b06c7403" Type="Entity" ADID="009a5f75-27f1-484d-bf96-7305a7aaf7dd">
         <Location X="190" Y="50" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="2ddc1ce6-9ff1-4e75-83f6-2a9b31686ca0" Type="EnumType" ADID="5b384422-00ff-4599-9ae5-e1d3f50cfcbe">
+        <Location X="417" Y="65" />
         <Size width="120" height="58" />
       </Class>
     </Diagram>
