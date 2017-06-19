@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <returns>Instance</returns>
 		public  static AdvApproveBE Create() {
 			AdvApproveBE entity = (AdvApproveBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-												 
+																					 
 			return entity;
 		}
 
@@ -392,7 +392,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 办事处 (该属性可为空,但有默认值)
+			/// 办事处 (该属性可为空,且无默认值)
 			/// 广告核销单.Misc.办事处
 			/// </summary>
 			/// <value></value>
@@ -412,7 +412,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
    		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_AdvApplyCustKey ;
 		/// <summary>
 		/// EntityKey 属性
-		/// 办事处 的Key (该属性可为空,但有默认值)
+		/// 办事处 的Key (该属性可为空,且无默认值)
 		/// 广告核销单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -493,6 +493,64 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 当前状态 (该属性不可为空,但有默认值)
+			/// 广告核销单.StateMachine.当前状态
+			/// </summary>
+			/// <value></value>
+			public  System.Int32 WFCurrentState
+			{
+				get
+				{
+					System.Int32 value  = (System.Int32)base.GetValue("WFCurrentState");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 之前状态 (该属性不可为空,但有默认值)
+			/// 广告核销单.StateMachine.之前状态
+			/// </summary>
+			/// <value></value>
+			public  System.Int32 WFOriginalState
+			{
+				get
+				{
+					System.Int32 value  = (System.Int32)base.GetValue("WFOriginalState");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 单据状态 (该属性可为空,但有默认值)
+			/// 广告核销单.Misc.单据状态
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum DocStatus
+			{
+				get
+				{
+
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum.GetFromValue(base.GetValue("DocStatus"));
+					return value;
+				}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -545,7 +603,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		#region member					
 		
 			/// <summary>
-		/// 办事处 (该属性可为空,但有默认值)
+		/// 办事处 (该属性可为空,且无默认值)
 		/// 广告核销单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -576,7 +634,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
    		private UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey m_AdvApplyCustKey ;
 		/// <summary>
-		/// 办事处 的Key (该属性可为空,但有默认值)
+		/// 办事处 的Key (该属性可为空,且无默认值)
 		/// 广告核销单.Misc.办事处
 		/// </summary>
 		/// <value></value>
@@ -696,6 +754,82 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 
+		
+			/// <summary>
+		/// 当前状态 (该属性不可为空,但有默认值)
+		/// 广告核销单.StateMachine.当前状态
+		/// </summary>
+		/// <value></value>
+			public  System.Int32 WFCurrentState
+		{
+			get
+			{
+				System.Int32 value  = (System.Int32)base.GetValue("WFCurrentState");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("WFCurrentState", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 之前状态 (该属性不可为空,但有默认值)
+		/// 广告核销单.StateMachine.之前状态
+		/// </summary>
+		/// <value></value>
+			public  System.Int32 WFOriginalState
+		{
+			get
+			{
+				System.Int32 value  = (System.Int32)base.GetValue("WFOriginalState");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("WFOriginalState", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 单据状态 (该属性可为空,但有默认值)
+		/// 广告核销单.Misc.单据状态
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum DocStatus
+		{
+			get
+			{
+
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum.GetFromValue(base.GetValue("DocStatus"));
+				return value;
+			}
+				set
+			{
+				
+				if (value == null)
+					base.SetValue("DocStatus",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum.Empty.Value);
+				else
+					base.SetValue("DocStatus",value.Value);
+					 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -759,6 +893,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvApproveDocType　{ get { return EntityRes.GetResource("AdvApproveDocType");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFCurrentState")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_WFCurrentState　{ get { return EntityRes.GetResource("WFCurrentState");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("WFOriginalState")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_WFOriginalState　{ get { return EntityRes.GetResource("WFOriginalState");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("DocStatus")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_DocStatus　{ get { return EntityRes.GetResource("DocStatus");　}　}
 		#endregion 
 
 
@@ -795,6 +944,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 单据类型 的名称
 			/// </summary>
 			public static string AdvApproveDocType　{ get { return "AdvApproveDocType";　}　}
+				
+			/// <summary>
+			/// 属性: 当前状态 的名称
+			/// </summary>
+			public static string WFCurrentState　{ get { return "WFCurrentState";　}　}
+				
+			/// <summary>
+			/// 属性: 之前状态 的名称
+			/// </summary>
+			public static string WFOriginalState　{ get { return "WFOriginalState";　}　}
+				
+			/// <summary>
+			/// 属性: 单据状态 的名称
+			/// </summary>
+			public static string DocStatus　{ get { return "DocStatus";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -802,7 +966,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-								
+														
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -952,6 +1116,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("AdvApplyCust","AdvApplyCust");
 			this.exdMultiLangAttrs.Add("Month","Month");
 			this.exdMultiLangAttrs.Add("AdvApproveDocType","AdvApproveDocType");
+			this.exdMultiLangAttrs.Add("WFCurrentState","WFCurrentState");
+			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
+			this.exdMultiLangAttrs.Add("DocStatus","DocStatus");
         }
 	#endregion 
 
@@ -968,7 +1135,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-									
+																		
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -998,6 +1165,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			if (data.AdvApproveDocType == -1 && data.AdvApproveDocType_SKey!=null)
 				data.AdvApproveDocType = data.AdvApproveDocType_SKey.GetEntity().ID ;
 	
+
+			
+
+			
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -1046,6 +1217,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		
 								this.SetTypeValue("AdvApproveDocType",data.AdvApproveDocType);
 		
+								this.SetTypeValue("WFCurrentState",data.WFCurrentState);
+		
+								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
+		
 			#endregion 
 
 			#region 组件内属性
@@ -1079,6 +1254,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 						this.AdvApproveLine.Add(child);
 				}
 			}
+	     
+
+					this.SetTypeValue("DocStatus",data.DocStatus);
 	     
 
 			#endregion 
@@ -1128,6 +1306,20 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 					data.AdvApproveDocType=(System.Int64)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("WFCurrentState");
+				if (obj != null)
+					data.WFCurrentState=(System.Int32)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("WFOriginalState");
+				if (obj != null)
+					data.WFOriginalState=(System.Int32)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1144,6 +1336,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				}
 				data.AdvApproveLine = listAdvApproveLine;
 			}	
+			{
+				object obj =this.GetValue("DocStatus");
+				if (obj != null)
+					data.DocStatus=System.Int32.Parse(obj.ToString());
+			}
+	
 
 			#endregion 
 			return data ;
@@ -1166,6 +1364,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+
+
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -1174,6 +1375,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		{
 			base.SelfNullableVlidator();
 		
+
+
 			
 		}
 			    

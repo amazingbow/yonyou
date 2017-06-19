@@ -23,6 +23,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                         
                                         knownTypes.Add(typeof(List<UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveLineData>));
                                         knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData));
+                        
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -37,10 +40,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void initData()
 		{
 			//设置默认值
-	     							     			
 	     			
 	     			
-
+	     			
+	     			
+	     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -87,6 +91,24 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			set	
 			{	
 				m_advApproveLine = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 单据状态
+		/// 广告核销单.Misc.单据状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_docStatus;
+		public System.Int32 DocStatus
+		{
+			get	
+			{	
+				return m_docStatus ;
+			}
+			set	
+			{	
+				m_docStatus = value ;
 			}
 		}		
 
@@ -207,10 +229,48 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 当前状态
+		/// 广告核销单.StateMachine.当前状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_wFCurrentState ;
+		public System.Int32 WFCurrentState
+		{
+			get	
+			{	
+				return m_wFCurrentState  ;
+			}
+			set	
+			{	
+				m_wFCurrentState = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 之前状态
+		/// 广告核销单.StateMachine.之前状态
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_wFOriginalState ;
+		public System.Int32 WFOriginalState
+		{
+			get	
+			{	
+				return m_wFOriginalState  ;
+			}
+			set	
+			{	
+				m_wFOriginalState = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-				
+							
 		#endregion 		
 	}	
 

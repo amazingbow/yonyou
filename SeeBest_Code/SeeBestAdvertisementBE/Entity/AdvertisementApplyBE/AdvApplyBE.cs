@@ -649,37 +649,37 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// 广告申请单.Misc.广告载体
 			/// </summary>
 			/// <value></value>
-			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvItem
+			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvCarrier
 			{
 				get
 				{
-					if (AdvItemKey == null)
+					if (AdvCarrierKey == null)
 						return null ;
-					UFIDA.U9.CBO.SCM.Item.ItemMaster value =  (UFIDA.U9.CBO.SCM.Item.ItemMaster)AdvItemKey.GetEntity();
+					UFIDA.U9.CBO.SCM.Item.ItemMaster value =  (UFIDA.U9.CBO.SCM.Item.ItemMaster)AdvCarrierKey.GetEntity();
 					return value ;
 				}
 			}
 		
 
 
-   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvItemKey ;
+   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
 		/// <summary>
 		/// EntityKey 属性
 		/// 广告载体 的Key (该属性可为空,且无默认值)
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
-		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvItemKey
+		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvCarrierKey
 		{
 			get 
 			{
-				object obj = base.GetValue("AdvItem") ;
+				object obj = base.GetValue("AdvCarrier") ;
 				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
 					return null ;
 				Int64 key = (System.Int64)obj ;
-				if (m_AdvItemKey==null || m_AdvItemKey.ID != key )
-					m_AdvItemKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
-				return m_AdvItemKey ;
+				if (m_AdvCarrierKey==null || m_AdvCarrierKey.ID != key )
+					m_AdvCarrierKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
+				return m_AdvCarrierKey ;
 			}
 		}
 
@@ -877,17 +877,18 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 版面要求1 (该属性可为空,且无默认值)
+			/// 版面要求1 (该属性可为空,但有默认值)
 			/// 广告申请单.Misc.版面要求1
 			/// </summary>
 			/// <value></value>
-			public  System.String AdvDispInfo1
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum AdvDispInfo1
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("AdvDispInfo1");
+
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum.GetFromValue(base.GetValue("AdvDispInfo1"));
 					return value;
-						}
+				}
 			}
 		
 
@@ -896,17 +897,18 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 版面要求2 (该属性可为空,且无默认值)
+			/// 版面要求2 (该属性可为空,但有默认值)
 			/// 广告申请单.Misc.版面要求2
 			/// </summary>
 			/// <value></value>
-			public  System.String AdvDispInfo2
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum AdvDispInfo2
 			{
 				get
 				{
-					System.String value  = (System.String)base.GetValue("AdvDispInfo2");
+
+					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum.GetFromValue(base.GetValue("AdvDispInfo2"));
 					return value;
-						}
+				}
 			}
 		
 
@@ -1472,11 +1474,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
-			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvItem
+			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvCarrier
 		{
 			get
 			{
-				object  obj = this.GetRelation("AdvItem");
+				object  obj = this.GetRelation("AdvCarrier");
 				if (obj == null)
 				{
 					return null ;
@@ -1490,43 +1492,43 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				set
 			{
 				
-				this.SetRelation("AdvItem", value);
+				this.SetRelation("AdvCarrier", value);
 					 
 			}
 		}
 	
 
 
-   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvItemKey ;
+   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
 		/// <summary>
 		/// 广告载体 的Key (该属性可为空,且无默认值)
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
-		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvItemKey
+		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvCarrierKey
 		{
 			get 
 			{
-				object obj = base.GetValue("AdvItem") ;
+				object obj = base.GetValue("AdvCarrier") ;
 				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
 					return null ;
 				Int64 key = (System.Int64)obj ;
-				if (m_AdvItemKey==null || m_AdvItemKey.ID != key )
-					m_AdvItemKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
-				return m_AdvItemKey ;
+				if (m_AdvCarrierKey==null || m_AdvCarrierKey.ID != key )
+					m_AdvCarrierKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
+				return m_AdvCarrierKey ;
 			}
 			set
 			{	
-				if (AdvItemKey==value)
+				if (AdvCarrierKey==value)
 					return ;
-				this.SetRelation("AdvItem", null);
-				m_AdvItemKey = value ;
+				this.SetRelation("AdvCarrier", null);
+				m_AdvCarrierKey = value ;
 				if (value != null) 
 				{
-					base.SetValue("AdvItem",value.ID);
+					base.SetValue("AdvCarrier",value.ID);
 				}
 				else
-					base.SetValue("AdvItem",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+					base.SetValue("AdvCarrier",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
 			}
 		}
 
@@ -1776,22 +1778,26 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 版面要求1 (该属性可为空,且无默认值)
+		/// 版面要求1 (该属性可为空,但有默认值)
 		/// 广告申请单.Misc.版面要求1
 		/// </summary>
 		/// <value></value>
-			public  System.String AdvDispInfo1
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum AdvDispInfo1
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("AdvDispInfo1");
+
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum.GetFromValue(base.GetValue("AdvDispInfo1"));
 				return value;
-				}
+			}
 				set
 			{
 				
-								base.SetValue("AdvDispInfo1", value);
-						 
+				if (value == null)
+					base.SetValue("AdvDispInfo1",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1Enum.Empty.Value);
+				else
+					base.SetValue("AdvDispInfo1",value.Value);
+					 
 			}
 		}
 	
@@ -1800,22 +1806,26 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 版面要求2 (该属性可为空,且无默认值)
+		/// 版面要求2 (该属性可为空,但有默认值)
 		/// 广告申请单.Misc.版面要求2
 		/// </summary>
 		/// <value></value>
-			public  System.String AdvDispInfo2
+			public  UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum AdvDispInfo2
 		{
 			get
 			{
-				System.String value  = (System.String)base.GetValue("AdvDispInfo2");
+
+				UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum.GetFromValue(base.GetValue("AdvDispInfo2"));
 				return value;
-				}
+			}
 				set
 			{
 				
-								base.SetValue("AdvDispInfo2", value);
-						 
+				if (value == null)
+					base.SetValue("AdvDispInfo2",UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2Enum.Empty.Value);
+				else
+					base.SetValue("AdvDispInfo2",value.Value);
+					 
 			}
 		}
 	
@@ -2162,10 +2172,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		[Obsolete("")]
 		public string Res_CustAddress　{ get { return EntityRes.GetResource("CustAddress");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvItem")的方式取资源
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvCarrier")的方式取资源
 		/// </summary>
 		[Obsolete("")]
-		public string Res_AdvItem　{ get { return EntityRes.GetResource("AdvItem");　}　}
+		public string Res_AdvCarrier　{ get { return EntityRes.GetResource("AdvCarrier");　}　}
 		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("TotalArea")的方式取资源
 		/// </summary>
@@ -2351,7 +2361,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// <summary>
 			/// 属性: 广告载体 的名称
 			/// </summary>
-			public static string AdvItem　{ get { return "AdvItem";　}　}
+			public static string AdvCarrier　{ get { return "AdvCarrier";　}　}
 				
 			/// <summary>
 			/// 属性: 总面积 的名称
@@ -2623,7 +2633,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("RelPeople","RelPeople");
 			this.exdMultiLangAttrs.Add("CustPhone","CustPhone");
 			this.exdMultiLangAttrs.Add("CustAddress","CustAddress");
-			this.exdMultiLangAttrs.Add("AdvItem","AdvItem");
+			this.exdMultiLangAttrs.Add("AdvCarrier","AdvCarrier");
 			this.exdMultiLangAttrs.Add("TotalArea","TotalArea");
 			this.exdMultiLangAttrs.Add("Qty","Qty");
 			this.exdMultiLangAttrs.Add("BMWidth","BMWidth");
@@ -2707,13 +2717,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 			
 
-			if (data.AdvItem == -1 && data.AdvItem_SKey!=null)
-				data.AdvItem = data.AdvItem_SKey.GetEntity().ID ;
+			if (data.AdvCarrier == -1 && data.AdvCarrier_SKey!=null)
+				data.AdvCarrier = data.AdvCarrier_SKey.GetEntity().ID ;
 	
-
-			
-
-			
 
 			
 
@@ -2814,7 +2820,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		
 								this.SetTypeValue("CustAddress",data.CustAddress);
 		
-								this.SetTypeValue("AdvItem",data.AdvItem);
+								this.SetTypeValue("AdvCarrier",data.AdvCarrier);
 		
 								this.SetTypeValue("TotalArea",data.TotalArea);
 		
@@ -2833,10 +2839,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 								this.SetTypeValue("DZThick",data.DZThick);
 		
 								this.SetTypeValue("DZArea",data.DZArea);
-		
-								this.SetTypeValue("AdvDispInfo1",data.AdvDispInfo1);
-		
-								this.SetTypeValue("AdvDispInfo2",data.AdvDispInfo2);
 		
 								this.SetTypeValue("AdvMemo",data.AdvMemo);
 		
@@ -2857,6 +2859,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			#region 组件内属性
 	
 					this.SetTypeValue("AdvDisplayType",data.AdvDisplayType);
+	     
+
+					this.SetTypeValue("AdvDispInfo1",data.AdvDispInfo1);
+	     
+
+					this.SetTypeValue("AdvDispInfo2",data.AdvDispInfo2);
 	     
 
 					if (data.AdvAboutBE != null)
@@ -3005,9 +3013,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     
 	    
 			{
-				object obj =this.GetValue("AdvItem");
+				object obj =this.GetValue("AdvCarrier");
 				if (obj != null)
-					data.AdvItem=(System.Int64)obj;
+					data.AdvCarrier=(System.Int64)obj;
 			}
 	     
 	    
@@ -3075,20 +3083,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     
 	    
 			{
-				object obj =this.GetValue("AdvDispInfo1");
-				if (obj != null)
-					data.AdvDispInfo1=(System.String)obj;
-			}
-	     
-	    
-			{
-				object obj =this.GetValue("AdvDispInfo2");
-				if (obj != null)
-					data.AdvDispInfo2=(System.String)obj;
-			}
-	     
-	    
-			{
 				object obj =this.GetValue("AdvMemo");
 				if (obj != null)
 					data.AdvMemo=(System.String)obj;
@@ -3144,6 +3138,18 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				object obj =this.GetValue("AdvDisplayType");
 				if (obj != null)
 					data.AdvDisplayType=System.Int32.Parse(obj.ToString());
+			}
+	
+			{
+				object obj =this.GetValue("AdvDispInfo1");
+				if (obj != null)
+					data.AdvDispInfo1=System.Int32.Parse(obj.ToString());
+			}
+	
+			{
+				object obj =this.GetValue("AdvDispInfo2");
+				if (obj != null)
+					data.AdvDispInfo2=System.Int32.Parse(obj.ToString());
 			}
 	
 			if (this.AdvAboutBE != null)

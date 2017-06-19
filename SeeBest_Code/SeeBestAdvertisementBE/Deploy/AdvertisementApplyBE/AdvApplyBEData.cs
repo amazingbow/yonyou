@@ -89,9 +89,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     							DZWidth=0m; 
 	     							DZThick=0m; 
 	     							DZArea=0m; 
-	     							AdvDisplayType= 0; 			     			
-	     			
-	     			
+	     							AdvDisplayType= 0; 			     							AdvDispInfo1= 0; 			     							AdvDispInfo2= 0; 			     			
 	     							ApproveQty=0m; 
 	     			
 	     							IsClose=false; 
@@ -138,6 +136,42 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			set	
 			{	
 				m_advDisplayType = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 版面要求1
+		/// 广告申请单.Misc.版面要求1
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_advDispInfo1;
+		public System.Int32 AdvDispInfo1
+		{
+			get	
+			{	
+				return m_advDispInfo1 ;
+			}
+			set	
+			{	
+				m_advDispInfo1 = value ;
+			}
+		}		
+
+			        					/// <summary>
+		/// 版面要求2
+		/// 广告申请单.Misc.版面要求2
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int32 m_advDispInfo2;
+		public System.Int32 AdvDispInfo2
+		{
+			get	
+			{	
+				return m_advDispInfo2 ;
+			}
+			set	
+			{	
+				m_advDispInfo2 = value ;
 			}
 		}		
 
@@ -444,21 +478,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		
 
 		
-		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advItem_SKey ;
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advCarrier_SKey ;
 		/// <summary>
 		/// 广告载体 序列化Key属性。（传递跨组织序列列字段）
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvItem_SKey
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvCarrier_SKey
 		{
 			get 
 			{
-				return m_advItem_SKey ;					
+				return m_advCarrier_SKey ;					
 			}
 			set
 			{
-				 m_advItem_SKey = value ;	
+				 m_advCarrier_SKey = value ;	
 			}
 		}
 		/// <summary>
@@ -466,25 +500,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		public System.Int64 AdvItem
+		public System.Int64 AdvCarrier
 		{
 			get	
 			{	
-				if (AdvItem_SKey == null)
+				if (AdvCarrier_SKey == null)
 					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
 				else
-					return AdvItem_SKey.ID ;
+					return AdvCarrier_SKey.ID ;
 			}
 			set	
 			{	
 				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
-					AdvItem_SKey = null ;
+					AdvCarrier_SKey = null ;
 				else
 				{
-					if (AdvItem_SKey == null )
-						AdvItem_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.CBO.SCM.Item.ItemMaster") ;
+					if (AdvCarrier_SKey == null )
+						AdvCarrier_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.CBO.SCM.Item.ItemMaster") ;
 					else
-						AdvItem_SKey.ID = value ;
+						AdvCarrier_SKey.ID = value ;
 				}
 			}
 		}
@@ -657,44 +691,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			set	
 			{	
 				m_dZArea = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面要求1
-		/// 广告申请单.Misc.版面要求1
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advDispInfo1 ;
-		public System.String AdvDispInfo1
-		{
-			get	
-			{	
-				return m_advDispInfo1  ;
-			}
-			set	
-			{	
-				m_advDispInfo1 = value ;	
-			}
-		}
-		
-
-				/// <summary>
-		/// 版面要求2
-		/// 广告申请单.Misc.版面要求2
-		/// </summary>
-		[DataMember(IsRequired=false)]
-		private System.String m_advDispInfo2 ;
-		public System.String AdvDispInfo2
-		{
-			get	
-			{	
-				return m_advDispInfo2  ;
-			}
-			set	
-			{	
-				m_advDispInfo2 = value ;	
 			}
 		}
 		

@@ -59,6 +59,54 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	}
 }
 
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
+{
+	/// <summary>
+	/// 枚举值: 版面要求1 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum AdvPageReq1EnumData
+	{
+		/// <summary>
+		/// 客户内容与公司广告融合
+		/// </summary>
+		Content1 = 0,
+		/// <summary>
+		/// 客户内容与公司广告不融合
+		/// </summary>
+		Content2 = 1,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
+{
+	/// <summary>
+	/// 枚举值: 版面要求2 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum AdvPageReq2EnumData
+	{
+		/// <summary>
+		/// 客户内容与公司广告上下分割
+		/// </summary>
+		UpContent = 0,
+		/// <summary>
+		/// 客户内容与公司广告左右分割
+		/// </summary>
+		LeftContent = 1,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
 namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 {
 	/// <summary>
@@ -91,6 +139,34 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	/// </summary>
 	//枚举可以考虑加基类，目前不改也没影响。
 	public enum SpecialApplyStatusEnumData
+	{
+		/// <summary>
+		/// 开立
+		/// </summary>
+		OpenL = 0,
+		/// <summary>
+		/// 审核中
+		/// </summary>
+		Approving = 1,
+		/// <summary>
+		/// 审核
+		/// </summary>
+		Approved = 2,
+		/// <summary>
+		/// 空值(-1)
+		/// </summary>
+		Empty  = -1 
+	}
+}
+
+namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
+{
+	/// <summary>
+	/// 枚举值: 广告核销单状态枚举 
+	/// 
+	/// </summary>
+	//枚举可以考虑加基类，目前不改也没影响。
+	public enum AdvAppStatusEnumData
 	{
 		/// <summary>
 		/// 开立

@@ -21,6 +21,18 @@
             广告申请单.Misc.版面类型
             </summary>
         </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advDispInfo1">
+            <summary>
+            版面要求1
+            广告申请单.Misc.版面要求1
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advDispInfo2">
+            <summary>
+            版面要求2
+            广告申请单.Misc.版面要求2
+            </summary>
+        </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advAboutBE">
             <summary>
             广告体现项目子表
@@ -153,18 +165,6 @@
             广告申请单.Misc.店招-面积
             </summary>
         </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advDispInfo1">
-            <summary>
-            版面要求1
-            广告申请单.Misc.版面要求1
-            </summary>
-        </member>
-        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advDispInfo2">
-            <summary>
-            版面要求2
-            广告申请单.Misc.版面要求2
-            </summary>
-        </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.m_advMemo">
             <summary>
             客户排版文字信息
@@ -218,13 +218,13 @@
             广告申请单.Misc.办事处
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvItem_SKey">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvCarrier_SKey">
             <summary>
             广告载体 序列化Key属性。（传递跨组织序列列字段）
             广告申请单.Misc.广告载体
             </summary>
         </member>
-        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvItem">
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBEData.AdvCarrier">
             <summary>
             广告载体
             广告申请单.Misc.广告载体
@@ -633,10 +633,28 @@
             广告核销单.Misc.广告核销单行
             </summary>
         </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_docStatus">
+            <summary>
+            单据状态
+            广告核销单.Misc.单据状态
+            </summary>
+        </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_month">
             <summary>
             月份
             广告核销单.Misc.月份
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_wFCurrentState">
+            <summary>
+            当前状态
+            广告核销单.StateMachine.当前状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.m_wFOriginalState">
+            <summary>
+            之前状态
+            广告核销单.StateMachine.之前状态
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBEData.SysEntityType">
@@ -870,6 +888,28 @@
             广告核销单行.Misc.广告核销单
             </summary>
         </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.SubmitEventData">
+            <summary>
+            EntityData: 提交事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.SubmitEventData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.UndoApproveEventData">
+            <summary>
+            EntityData: 弃审事件
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.UndoApproveEventData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.CostSharingRatio.CostSharingRatioBEData">
             <summary>
             费用分摊比例档案 缺省DTO 
@@ -1002,6 +1042,48 @@
             空值(-1)
             </summary>
         </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1EnumData">
+            <summary>
+            枚举值: 版面要求1 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1EnumData.Content1">
+            <summary>
+            客户内容与公司广告融合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1EnumData.Content2">
+            <summary>
+            客户内容与公司广告不融合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq1EnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2EnumData">
+            <summary>
+            枚举值: 版面要求2 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2EnumData.UpContent">
+            <summary>
+            客户内容与公司广告上下分割
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2EnumData.LeftContent">
+            <summary>
+            客户内容与公司广告左右分割
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvPageReq2EnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnumData">
             <summary>
             枚举值: 专柜设计风格 
@@ -1045,6 +1127,32 @@
             </summary>
         </member>
         <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnumData.Empty">
+            <summary>
+            空值(-1)
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnumData">
+            <summary>
+            枚举值: 广告核销单状态枚举 
+            
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnumData.OpenL">
+            <summary>
+            开立
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnumData.Approving">
+            <summary>
+            审核中
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnumData.Approved">
+            <summary>
+            审核
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnumData.Empty">
             <summary>
             空值(-1)
             </summary>

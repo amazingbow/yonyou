@@ -4,12 +4,16 @@
     <Entity id="f1d91c11-fb12-49af-b6a4-c52297a1fd77" name="AdvApproveBE" displayName="广告核销单" description="" help="" mD_ParentClass_ID="35ca30b7-f9dd-410b-acda-6190361b6f79" isFactEntity="True" defaultTable="Cust_SeeBest_AdvApprove" isMain="True" inheritanceMapKind="0" discriminator="AdvApproveBE" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="True" hasImpressibleAttribute="False" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
       <Groups>
         <Group id="8c2cd346-51e8-485e-af8a-fe8ae6ab3725" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="83eec598-d482-40d7-906b-623281c5a8df" name="StateMachine" displayName="StateMachine" description="" help="" />
       </Groups>
       <Attributes>
-        <Attribute id="bc9567dd-c7b1-4673-8855-450fab492b94" name="AdvApplyCust" displayName="办事处" description="" help="广告核销单.Misc.办事处" dataTypeID="8508f308-9d66-4b1d-abf4-e28dab8e926d" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="bc9567dd-c7b1-4673-8855-450fab492b94" name="AdvApplyCust" displayName="办事处" description="" help="广告核销单.Misc.办事处" dataTypeID="8508f308-9d66-4b1d-abf4-e28dab8e926d" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
         <Attribute id="68251cf2-4b60-4489-a018-ead658624bc6" name="Month" displayName="月份" description="" help="广告核销单.Misc.月份" dataTypeID="c9e6bc50-2e39-4f27-9519-da0c7859d37e" isKey="False" defaultValue="" length="10" precise="0" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="4" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
         <Attribute id="b09d4c16-3433-40bc-addf-0f347c289ff6" name="AdvApproveLine" displayName="广告核销单行" description="" help="广告核销单.Misc.广告核销单行" isCollection="True" dataTypeID="78fec805-1bfa-4d86-80cf-eca5f04e783c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
         <Attribute id="be195051-6202-44ef-8195-928668bea73f" name="AdvApproveDocType" displayName="单据类型" description="" help="广告核销单.Misc.单据类型" dataTypeID="0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="70712cb0-3053-44e8-bcdd-33d2e85587d9" name="WFCurrentState" displayName="当前状态" description="" help="广告核销单.StateMachine.当前状态" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="-1" length="0" precise="0" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="StateMachine" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="6094f7c8-7108-45f8-9a46-c330737dbab1" name="WFOriginalState" displayName="之前状态" description="" help="广告核销单.StateMachine.之前状态" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="-1" length="0" precise="0" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="StateMachine" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
+        <Attribute id="00640d58-874d-47eb-807d-d3cfe20e12fe" name="DocStatus" displayName="单据状态" description="" help="广告核销单.Misc.单据状态" dataTypeID="c597484c-846b-48f0-8c05-49caf9820a86" isKey="False" defaultValue="0" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="5" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
       </Attributes>
       <Associations>
         <Association id="c3113fa4-83c3-46fc-b761-1d6dad00f388" name="AdvApproveBE_bc9567dd-c7b1-4673-8855-450fab492b94_Customer" displayName="广告核销单.办事处--&gt;客户" description="" help="" parent_Class_ID="f1d91c11-fb12-49af-b6a4-c52297a1fd77" parent_Attribute_ID="bc9567dd-c7b1-4673-8855-450fab492b94" child_Class_ID="8508f308-9d66-4b1d-abf4-e28dab8e926d" child_Attribute_ID="00000000-0000-0000-0000-000000000000" parentCardinality="1" childCardinality="0" kind="0" direction="0" isCascadeDelete="False" cascadeDeleteRule="0" isCascadeUpdate="False" isEnableCascadeValidation="True" cascadeUpdateRule="0" />
@@ -24,6 +28,37 @@
           </BEIndexAttributes>
         </BEIndex>
       </BEIndecs>
+      <StateMachine id="690e4b6d-1fe1-4cd2-a2f8-ba5fe2507cba" name="AdvApproveBEStateMachine" displayName="广告核销单状态机" description="" help="" initialState="fe89d85f-e7c7-4e0b-83d2-1cce1e275a05" completedState="72d38686-af19-4bf6-8a92-4171a3c81f4b">
+        <States>
+          <State id="fe89d85f-e7c7-4e0b-83d2-1cce1e275a05" name="OpenLState" displayName="开立" description="" help="" isCompletedState="False" location="148,39" size="120,66">
+            <EventDrivens>
+              <EventDriven id="995a6ce5-1ff4-4f40-8cbe-dbbcc80980fd" name="SubmitEventDriven" displayName="提交" description="" help="" event="b2011f75-4a25-4b16-bc14-b44cf4b499ec">
+                <SetStates>
+                  <SetState id="fdc34b94-0035-4396-bd71-23701985d988" name="SetState" displayName="SetState" description="" help="" sourceID="fe89d85f-e7c7-4e0b-83d2-1cce1e275a05" targetID="8b38a45c-9cd2-4a47-b329-fcd335e8718e" />
+                </SetStates>
+              </EventDriven>
+            </EventDrivens>
+          </State>
+          <State id="8b38a45c-9cd2-4a47-b329-fcd335e8718e" name="ApprovingState" displayName="审核中" description="" help="" isCompletedState="False" location="387,40" size="120,66">
+            <EventDrivens>
+              <EventDriven id="3e2c4d4a-be46-4d56-a72a-4851448b690e" name="ApprovedEventDriven" displayName="审核" description="" help="" event="1c0fa765-5351-4912-bd05-56dff0f24f9f">
+                <SetStates>
+                  <SetState id="3557dc65-2943-4392-9777-fe98cf1dcc5f" name="SetState" displayName="SetState" description="" help="" sourceID="8b38a45c-9cd2-4a47-b329-fcd335e8718e" targetID="72d38686-af19-4bf6-8a92-4171a3c81f4b" />
+                </SetStates>
+              </EventDriven>
+            </EventDrivens>
+          </State>
+          <State id="72d38686-af19-4bf6-8a92-4171a3c81f4b" name="ApprovedState" displayName="审核" description="" help="" isCompletedState="True" location="206,247" size="120,66">
+            <EventDrivens>
+              <EventDriven id="7de893c8-a194-4d97-b3e5-77d5a0f2c4fb" name="UndoApproveEventDriven" displayName="弃审" description="" help="" event="a9465ab3-1d20-4279-9640-26e663866a77">
+                <SetStates>
+                  <SetState id="12e2c88a-8cb8-4b0f-96cb-0b537dc99d38" name="SetState" displayName="SetState" description="" help="" sourceID="72d38686-af19-4bf6-8a92-4171a3c81f4b" targetID="fe89d85f-e7c7-4e0b-83d2-1cce1e275a05" />
+                </SetStates>
+              </EventDriven>
+            </EventDrivens>
+          </State>
+        </States>
+      </StateMachine>
     </Entity>
     <Entity id="78fec805-1bfa-4d86-80cf-eca5f04e783c" name="AdvApproveLine" displayName="广告核销单行" description="" help="" mD_ParentClass_ID="" isFactEntity="True" defaultTable="Cust_SeeBest_AdvApproveLine" isMain="False" inheritanceMapKind="0" discriminator="AdvApproveLine" isQuery="True" isAbstract="False" isSealed="False" isModifyControl="False" hasImpressibleAttribute="False" isInCache="False" isAuthorization="True" isPKClustered="True" forOBAImport="True">
       <Groups>
@@ -32,7 +67,7 @@
         <Group id="73dce7e3-16bd-4d74-81ad-5c280c001056" name="ApplyInfo" displayName="ApplyInfo" description="" help="" />
         <Group id="bc879cce-f247-4ca0-aea3-2a0afc54d6c0" name="ApproveInfo" displayName="ApproveInfo" description="" help="" />
         <Group id="1d5af60a-e602-49fb-bb3f-38c152e752b8" name="AuditInfo" displayName="AuditInfo" description="" help="" />
-        <Group id="82d71706-0aee-4f8f-a2e9-445ccb04e1a1" name="Misc" displayName="Misc" description="" help="" />
+        <Group id="2d2ec20e-2a68-4296-9c46-573ce57dc14f" name="Misc" displayName="Misc" description="" help="" />
       </Groups>
       <Attributes>
         <Attribute id="3f93e1a5-76bd-402c-8711-3ce841dd573b" name="ID" displayName="ID" description="" help="广告核销单行.Key.ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="True" defaultValue="" length="8" precise="19" scale="0" isNullable="False" isReadOnly="False" isHide="True" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="db" groupName="Key" isEntityKey="False" isEntityData="True" isSystem="True" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
@@ -67,6 +102,13 @@
         <Attribute id="cf18e8b2-a2b9-4e45-abbb-99109af1d32b" name="AdvItem" displayName="广告项目" description="" help="广告核销单行.ApplyInfo.广告项目" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="23" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="ApplyInfo" isEntityKey="True" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="True" />
       </Attributes>
     </Entity>
+    <Enum id="c597484c-846b-48f0-8c05-49caf9820a86" name="AdvAppStatusEnum" displayName="广告核销单状态枚举" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isExtend="False">
+      <Attributes>
+        <Attribute id="4aa332bc-3aff-4822-b936-e84db14dd371" name="OpenL" displayName="开立" description="" help="广告核销单状态枚举.Misc.开立" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="0" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="11b048e5-b6c7-4c2a-aa07-1fa575813ed1" name="Approving" displayName="审核中" description="" help="广告核销单状态枚举.Misc.审核中" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="1" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="ef3ed056-401d-4350-ba49-8dd722ec9539" name="Approved" displayName="审核" description="" help="广告核销单状态枚举.Misc.审核" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="2" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </Enum>
     <Diagram id="00000000-0000-0000-0000-000000000000" name="AdvertisementApproveBE" displayName="AdvertisementApproveBE">
       <Class Editable="True" ID="3a59438d-5a4d-44f8-8b21-02d4eae1ba3e" Type="Entity" ADID="f1d91c11-fb12-49af-b6a4-c52297a1fd77">
         <Location X="78" Y="165" />
@@ -80,6 +122,20 @@
         <Location X="83" Y="46" />
         <Size width="120" height="58" />
       </Class>
+      <Class Editable="True" ID="efc303bc-0e84-4f2b-b89f-63bbe15f4121" Type="Event" ADID="b2011f75-4a25-4b16-bc14-b44cf4b499ec">
+        <Location X="284" Y="44" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="f37ea052-0ea1-4610-b9e3-53081711ac6e" Type="Event" ADID="a9465ab3-1d20-4279-9640-26e663866a77">
+        <Location X="280" Y="145" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="d75f49f6-0784-4934-a893-8f709e26d080" Type="EnumType" ADID="c597484c-846b-48f0-8c05-49caf9820a86">
+        <Location X="551" Y="49" />
+        <Size width="120" height="58" />
+      </Class>
     </Diagram>
+    <Event id="b2011f75-4a25-4b16-bc14-b44cf4b499ec" name="SubmitEvent" displayName="提交事件" description="" help="" eventType="3" mD_ParentClass_ID="" isFactEntity="False" />
+    <Event id="a9465ab3-1d20-4279-9640-26e663866a77" name="UndoApproveEvent" displayName="弃审事件" description="" help="" eventType="3" mD_ParentClass_ID="" isFactEntity="False" />
   </Namespace>
 </Component>
