@@ -100,6 +100,14 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
         IUFFldNumberControl ID148;
         IUFLabel lblSysVersion160;
         IUFFldNumberControl SysVersion160;
+        IUFLabel lblCreatedOn0;
+        IUFFldDatePicker CreatedOn0;
+        IUFLabel lblCreatedBy0;
+        IUFFldTextBox CreatedBy0;
+        IUFLabel lblModifiedOn0;
+        IUFFldDatePicker ModifiedOn0;
+        IUFLabel lblModifiedBy0;
+        IUFFldTextBox ModifiedBy0;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -124,6 +132,12 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
         private void EventBind()
         {
 			//事件绑定模板
+				//Button控件事件
+			this.BtnSave.Click += new EventHandler(BtnSave_Click);		
+						
+				//Button控件事件
+			this.BtnDelete.Click += new EventHandler(BtnDelete_Click);		
+						
 
 	
             AfterEventBind();
@@ -269,16 +283,16 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
             this.Toolbar2 = _Toolbar;
             
             ///foreach Toolbar下的所有控件，增加到此容器
-                            this.BtnSave = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSave", "True", "True", 35, 28,"1", "",true,false,"8288c5a3-3b19-48d3-b139-f7018d2782ee","8288c5a3-3b19-48d3-b139-f7018d2782ee","7798c2ee-d7c1-45c7-b56d-6807df5e98d1");
+                            this.BtnSave = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSave", "True", "True", 35, 28,"1", "S",true,false,"8288c5a3-3b19-48d3-b139-f7018d2782ee","8288c5a3-3b19-48d3-b139-f7018d2782ee","7798c2ee-d7c1-45c7-b56d-6807df5e98d1");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnSave);
             this.BtnSave.UIModel = this.Model.ElementID;
-            this.BtnSave.Action = "";
-	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"4", "",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","bde9d4ad-e63a-40ac-8f1b-4ca6eedb93cb");
+            this.BtnSave.Action = "SaveClick";
+	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"4", "R",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","bde9d4ad-e63a-40ac-8f1b-4ca6eedb93cb");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnDelete);
             this.BtnDelete.UIModel = this.Model.ElementID;
-            this.BtnDelete.Action = "";
+            this.BtnDelete.Action = "DeleteClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
 			                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
 			                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
@@ -359,8 +373,78 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
 			UIControlBuilder.BuilderUFControl(this.SysVersion160, "5");		
 		 
 
+				this.lblCreatedOn0 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblCreatedOn0", "", "False", "True", "Right", 160, 20, 0, 0, 1, 1, "100","7284161f-7248-4ec9-a3c2-ac4f96a77373","e08f8456-8551-41ca-91bf-8ecbca7ab425");
 
-						
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblCreatedOn0, "6");		
+
+
+				this.CreatedOn0 = UIControlBuilder.BuilderDatePicker(_UFCard, "CreatedOn0", true, false, true, "DateTime","Left", 5, 60, 0, 160, 20, 0, 0, 1, 1, "100",true,false,"lblCreatedOn0","7284161f-7248-4ec9-a3c2-ac4f96a77373","d071eb35-aee7-405c-ba25-24dfa04df649");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CreatedOn0, "False", "CreatedOn", this.Model.CostSharingRatioBE, this.Model.CostSharingRatioBE.FieldCreatedOn, "CostSharingRatioBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.CreatedOn0, "7");		
+		 
+
+				this.lblCreatedBy0 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblCreatedBy0", "", "False", "True", "Right", 160, 20, 0, 0, 1, 1, "100","1ec34f0b-ee0c-4f6c-9562-35973823d642","3b6f1d90-fce0-44f4-9a60-fe2f97f491b7");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblCreatedBy0, "8");		
+
+
+				this.CreatedBy0 = UIControlBuilder.BuilderTextBox(_UFCard, "CreatedBy0", "True", "False", "True", "False", "Left", 0, 60, 0, 160, 20, 0, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblCreatedBy0","","50","1ec34f0b-ee0c-4f6c-9562-35973823d642","d16c63c4-791e-4b9d-ac75-1d761d6142ff");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CreatedBy0, "False", "CreatedBy", this.Model.CostSharingRatioBE, this.Model.CostSharingRatioBE.FieldCreatedBy, "CostSharingRatioBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.CreatedBy0, "9");		
+		 
+
+				this.lblModifiedOn0 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblModifiedOn0", "", "False", "True", "Right", 160, 20, 0, 0, 1, 1, "100","5731bc3e-f0a9-4f53-9b93-ce740745f043","cc860a4c-5103-48d6-a58f-4e06a2a97142");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblModifiedOn0, "10");		
+
+
+				this.ModifiedOn0 = UIControlBuilder.BuilderDatePicker(_UFCard, "ModifiedOn0", true, false, true, "DateTime","Left", 5, 60, 0, 160, 20, 0, 0, 1, 1, "100",true,false,"lblModifiedOn0","5731bc3e-f0a9-4f53-9b93-ce740745f043","685b8c41-16e4-4a45-9cd3-d0243847d8ef");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ModifiedOn0, "False", "ModifiedOn", this.Model.CostSharingRatioBE, this.Model.CostSharingRatioBE.FieldModifiedOn, "CostSharingRatioBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.ModifiedOn0, "11");		
+		 
+
+				this.lblModifiedBy0 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblModifiedBy0", "", "False", "True", "Right", 160, 20, 0, 0, 1, 1, "100","de9a0e37-29a5-4bfd-bdb1-c6a5d2f55387","6bf3c96d-6298-4c5b-bcb0-e25a1fb5cc88");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblModifiedBy0, "12");		
+
+
+				this.ModifiedBy0 = UIControlBuilder.BuilderTextBox(_UFCard, "ModifiedBy0", "True", "False", "True", "False", "Left", 0, 60, 0, 160, 20, 0, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblModifiedBy0","","50","de9a0e37-29a5-4bfd-bdb1-c6a5d2f55387","5fdbe4da-959e-4452-8c5c-302d3791c16e");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ModifiedBy0, "False", "ModifiedBy", this.Model.CostSharingRatioBE, this.Model.CostSharingRatioBE.FieldModifiedBy, "CostSharingRatioBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.ModifiedBy0, "13");		
+		 
+
+
+														
 
             
             container.Controls.Add(_UFCard);

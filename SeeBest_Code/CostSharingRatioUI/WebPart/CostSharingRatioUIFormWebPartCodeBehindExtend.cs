@@ -36,26 +36,44 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
     public partial class CostSharingRatioUIFormWebPart
     {
         #region Custome eventBind
+	
+		 
+				//BtnSave_Click...
+		private void BtnSave_Click_Extend(object sender, EventArgs  e)
+		{
+			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+			
+		
+			BtnSave_Click_DefaultImpl(sender,e);
+		}	
+		 
+				//BtnDelete_Click...
+		private void BtnDelete_Click_Extend(object sender, EventArgs  e)
+		{
+			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+			
+		
+			BtnDelete_Click_DefaultImpl(sender,e);
+		}
 
+		
+            
+            
 
+		#region 自定义数据初始化加载和数据收集
+		private void OnLoadData_Extend(object sender)
+		{	
+			OnLoadData_DefaultImpl(sender);
+		}
+		private void OnDataCollect_Extend(object sender)
+		{	
+			OnDataCollect_DefaultImpl(sender);
+		}
+		#endregion  
 
-
-
-
-        #region 自定义数据初始化加载和数据收集
-        private void OnLoadData_Extend(object sender)
-        {
-            OnLoadData_DefaultImpl(sender);
-        }
-        private void OnDataCollect_Extend(object sender)
-        {
-            OnDataCollect_DefaultImpl(sender);
-        }
-        #endregion
-
-        #region 自己扩展 Extended Event handler
-        public void AfterOnLoad()
-        {
+        #region 自己扩展 Extended Event handler 
+		public void AfterOnLoad()
+		{
             GetFirstDataProxy proxy = new GetFirstDataProxy();
             CostSharingRationDTOData data = proxy.Do();
             if (data != null)
@@ -68,34 +86,34 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
                 this.Model.CostSharingRatioBE.FocusedRecord.SysVersion = data.SysVersion;
                 this.Model.CostSharingRatioBE.FocusedRecord.Ratio = data.Ratio;
             }
-        }
+		}
 
         public void AfterCreateChildControls()
         {
 
 
-
+		
         }
-
+        
         public void AfterEventBind()
         {
         }
+        
+		public void BeforeUIModelBinding()
+		{
 
-        public void BeforeUIModelBinding()
-        {
+		}
 
-        }
-
-        public void AfterUIModelBinding()
-        {
-
-
-        }
+		public void AfterUIModelBinding()
+		{
 
 
-        #endregion
+		}
+
 
         #endregion
-
+		
+        #endregion
+		
     }
 }

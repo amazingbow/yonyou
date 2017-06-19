@@ -10,11 +10,15 @@
   <Providers />
   <InParameters />
   <Toolbar ID="2388afbf-8d68-44cd-9840-6b8c118785b1" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="992">
-    <Button ID="7798c2ee-d7c1-45c7-b56d-6807df5e98d1" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
-      <Events />
+    <Button ID="7798c2ee-d7c1-45c7-b56d-6807df5e98d1" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="bde9d4ad-e63a-40ac-8f1b-4ca6eedb93cb" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="35" Y="0">
-      <Events />
+    <Button ID="bde9d4ad-e63a-40ac-8f1b-4ca6eedb93cb" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="c0062f89-57f2-4aff-ae66-b4d3e1d6d46b" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="70" Y="0" />
     <Separator ID="6dddbe0c-8c3d-49e7-942e-8f517d16ce48" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="78" Y="0" />
@@ -23,7 +27,7 @@
     <Separator ID="9ba6c134-82f6-49fe-8d17-3a4bdbf0cb9a" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="102" Y="0" />
     <Separator ID="a74db868-3d0e-4f37-8df6-f3d5ef844179" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="110" Y="0" />
   </Toolbar>
-  <Card ID="52d99dd3-6a99-4233-b4bf-b3271c07d216" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
+  <Card ID="52d99dd3-6a99-4233-b4bf-b3271c07d216" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="Misc" DisplayNameIndex="0" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="0" GridColumnCount="12" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="17" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" GroupDisplayName="Misc" Height="421" LayoutType="GridBag" Name="Card2" TabIndex="2" TabStop="False" Width="992" X="0" Y="38">
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Title" Width="153" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="5" />
@@ -96,6 +100,42 @@
       <ValueOfRoundByValueBind />
       <CurrencyType />
     </NumberControl>
+    <Label ID="e08f8456-8551-41ca-91bf-8ecbca7ab425" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCreatedOn0" RelationControl="CreatedOn0" TabIndex="6" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="d071eb35-aee7-405c-ba25-24dfa04df649" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="CreatedOn0" RelationControl="lblCreatedOn0" TabIndex="7" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="CreatedOn" UIViewID="CostSharingRatioBE" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="3b6f1d90-fce0-44f4-9a60-fe2f97f491b7" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblCreatedBy0" RelationControl="CreatedBy0" TabIndex="8" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="d16c63c4-791e-4b9d-ac75-1d761d6142ff" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="CreatedBy0" RelationControl="lblCreatedBy0" TabIndex="9" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="CreatedBy" UIViewID="CostSharingRatioBE" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+    </TextBox>
+    <Label ID="cc860a4c-5103-48d6-a58f-4e06a2a97142" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblModifiedOn0" RelationControl="ModifiedOn0" TabIndex="10" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DatePicker ID="685b8c41-16e4-4a45-9cd3-d0243847d8ef" DisplayFormat="8" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ModifiedOn0" RelationControl="lblModifiedOn0" TabIndex="11" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="ModifiedOn" UIViewID="CostSharingRatioBE" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+    </DatePicker>
+    <Label ID="6bf3c96d-6298-4c5b-bcb0-e25a1fb5cc88" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblModifiedBy0" RelationControl="ModifiedBy0" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <TextBox ID="5fdbe4da-959e-4452-8c5c-302d3791c16e" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="ModifiedBy0" RelationControl="lblModifiedBy0" TabIndex="13" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="ModifiedBy" UIViewID="CostSharingRatioBE" Visible="False" Width="160">
+      <Events />
+      <RelationControls />
+    </TextBox>
   </Card>
   <Events />
 </View>

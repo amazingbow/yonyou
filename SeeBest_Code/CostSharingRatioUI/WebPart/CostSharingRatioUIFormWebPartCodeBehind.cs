@@ -34,6 +34,72 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
     public partial class CostSharingRatioUIFormWebPart
     {
         #region eventBind
+		 
+				//MethodName:BtnSave_Click ActionName:SaveClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnSave_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnSave_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnSave_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			if (adjust.DoRequireCheck())
+			{
+			//Template (tpl) Code here...
+			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:SaveClick
+
+	
+		Action.SaveClick(sender,new UIActionEventArgs());
+
+		
+			
+
+			}
+        }
+		 
+				//MethodName:BtnDelete_Click ActionName:DeleteClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnDelete_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnDelete_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnDelete_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:DeleteClick
+
+	
+		Action.DeleteClick(sender,new UIActionEventArgs());
+
+		
+			
+        }
 		#region  数据初始化加载和数据收集方法
 		public void OnLoadData(object sender)
 		{	
