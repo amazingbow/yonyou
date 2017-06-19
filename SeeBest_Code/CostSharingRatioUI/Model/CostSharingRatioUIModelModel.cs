@@ -70,7 +70,7 @@ namespace UFIDA.U9.Cust.CostSharingRatioUIModel
 
 		public override string AssemblyName
 		{
-			get { return "CostSharingRatioUI"; }
+			get { return "UFIDA.U9.Cust.CostSharingRatioUI"; }
 		}
 		
 		#endregion

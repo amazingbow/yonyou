@@ -4,8 +4,8 @@ echo iisreset
 
 echo beging copy UI dll to portal
 
-copy .\bin\Debug\CostSharingRatioUI.WebPart.dll  D:\yonyou\U9V50\Portal\UILib
-copy .\bin\Debug\CostSharingRatioUI.WebPart.pdb  D:\yonyou\U9V50\Portal\UILib
+copy .\bin\Debug\UFIDA.U9.Cust.CostSharingRatioUI.WebPart.dll  D:\yonyou\U9V50\Portal\UILib
+copy .\bin\Debug\UFIDA.U9.Cust.CostSharingRatioUI.WebPart.pdb  D:\yonyou\U9V50\Portal\UILib
 
 echo begin run build UI Script
 echo 目录：.\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Other\\u_ui\UIScript\

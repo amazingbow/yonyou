@@ -195,8 +195,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private void CloseClick_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
-
+            
             CloseClick_Click_DefaultImpl(sender, e);
         }
 
