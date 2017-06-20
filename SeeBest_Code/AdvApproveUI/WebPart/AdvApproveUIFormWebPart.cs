@@ -151,6 +151,60 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         {
 			//事件绑定模板
 				//Button控件事件
+			this.BtnSave.Click += new EventHandler(BtnSave_Click);		
+						
+				//Button控件事件
+			this.BtnCancel.Click += new EventHandler(BtnCancel_Click);		
+						
+				//Button控件事件
+			this.BtnAdd.Click += new EventHandler(BtnAdd_Click);		
+						
+				//Button控件事件
+			this.BtnDelete.Click += new EventHandler(BtnDelete_Click);		
+						
+				//Button控件事件
+			this.BtnCopy.Click += new EventHandler(BtnCopy_Click);		
+						
+				//Button控件事件
+			this.BtnSubmit.Click += new EventHandler(BtnSubmit_Click);		
+						
+				//Button控件事件
+			this.BtnApprove.Click += new EventHandler(BtnApprove_Click);		
+						
+				//Button控件事件
+			this.BtnUndoApprove.Click += new EventHandler(BtnUndoApprove_Click);		
+						
+				//Button控件事件
+			this.BtnFind.Click += new EventHandler(BtnFind_Click);		
+						
+				//Button控件事件
+			this.BtnList.Click += new EventHandler(BtnList_Click);		
+						
+				//Button控件事件
+			this.BtnFirstPage.Click += new EventHandler(BtnFirstPage_Click);		
+						
+				//Button控件事件
+			this.BtnPrevPage.Click += new EventHandler(BtnPrevPage_Click);		
+						
+				//Button控件事件
+			this.BtnNextPage.Click += new EventHandler(BtnNextPage_Click);		
+						
+				//Button控件事件
+			this.BtnLastPage.Click += new EventHandler(BtnLastPage_Click);		
+						
+				//Button控件事件
+			this.BtnAttachment.Click += new EventHandler(BtnAttachment_Click);		
+						
+				//Button控件事件
+			this.BtnFlow.Click += new EventHandler(BtnFlow_Click);		
+						
+				//Button控件事件
+			this.BtnOutput.Click += new EventHandler(BtnOutput_Click);		
+						
+				//Button控件事件
+			this.BtnPrint.Click += new EventHandler(BtnPrint_Click);		
+						
+				//Button控件事件
 			this.BtnGetApplyInfo.Click += new EventHandler(BtnGetApplyInfo_Click);		
 						
 
@@ -305,102 +359,102 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             this.Toolbar2 = _Toolbar;
             
             ///foreach Toolbar下的所有控件，增加到此容器
-                            this.BtnSave = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSave", "True", "True", 35, 28,"1", "",true,false,"8288c5a3-3b19-48d3-b139-f7018d2782ee","8288c5a3-3b19-48d3-b139-f7018d2782ee","9e47da67-8390-486a-9510-a62aab90e3a5");
+                            this.BtnSave = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSave", "True", "True", 35, 28,"1", "S",true,false,"8288c5a3-3b19-48d3-b139-f7018d2782ee","8288c5a3-3b19-48d3-b139-f7018d2782ee","9e47da67-8390-486a-9510-a62aab90e3a5");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnSave);
             this.BtnSave.UIModel = this.Model.ElementID;
-            this.BtnSave.Action = "";
-	                            this.BtnCancel = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnCancel", "True", "True", 35, 28,"2", "",true,false,"f35cb480-9e8f-4689-aaac-3e9fc9a0c65e","f35cb480-9e8f-4689-aaac-3e9fc9a0c65e","3ac0d522-56dd-4a91-9edf-730d4407f89a");
+            this.BtnSave.Action = "SaveClick";
+	                            this.BtnCancel = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnCancel", "True", "True", 35, 28,"2", "Z",true,false,"f35cb480-9e8f-4689-aaac-3e9fc9a0c65e","f35cb480-9e8f-4689-aaac-3e9fc9a0c65e","3ac0d522-56dd-4a91-9edf-730d4407f89a");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnCancel);
             this.BtnCancel.UIModel = this.Model.ElementID;
-            this.BtnCancel.Action = "";
-	                            this.BtnAdd = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnAdd", "True", "True", 35, 28,"3", "",true,false,"19478b02-d2a9-4d7e-b7af-00070c61ff2d","19478b02-d2a9-4d7e-b7af-00070c61ff2d","8cede890-8e96-44c7-99dc-5323801e1c6e");
+            this.BtnCancel.Action = "CancelClick";
+	                            this.BtnAdd = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnAdd", "True", "True", 35, 28,"3", "N",true,false,"19478b02-d2a9-4d7e-b7af-00070c61ff2d","19478b02-d2a9-4d7e-b7af-00070c61ff2d","8cede890-8e96-44c7-99dc-5323801e1c6e");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnAdd);
             this.BtnAdd.UIModel = this.Model.ElementID;
-            this.BtnAdd.Action = "";
-	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"4", "",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","ccb992bf-9514-4e7b-b8a1-a4278c6ab85c");
+            this.BtnAdd.Action = "NewClick";
+	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"4", "R",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","ccb992bf-9514-4e7b-b8a1-a4278c6ab85c");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnDelete);
             this.BtnDelete.UIModel = this.Model.ElementID;
-            this.BtnDelete.Action = "";
+            this.BtnDelete.Action = "DeleteClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnCopy = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnCopy", "True", "True", 35, 28,"6", "",true,false,"be9f8d20-e484-464b-9818-a2c1b599b967","be9f8d20-e484-464b-9818-a2c1b599b967","1680d5ab-7ba4-4460-8b65-941612d0077c");
+			                            this.BtnCopy = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnCopy", "True", "True", 35, 28,"6", "C",true,false,"be9f8d20-e484-464b-9818-a2c1b599b967","be9f8d20-e484-464b-9818-a2c1b599b967","1680d5ab-7ba4-4460-8b65-941612d0077c");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnCopy);
             this.BtnCopy.UIModel = this.Model.ElementID;
-            this.BtnCopy.Action = "";
+            this.BtnCopy.Action = "CopyClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnSubmit = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSubmit", "True", "True", 35, 28,"8", "",true,false,"c42c0f21-2fd7-49b2-ac54-62f811747b18","c42c0f21-2fd7-49b2-ac54-62f811747b18","fade0ee7-10de-430c-a958-14c65ebee526");
+			                            this.BtnSubmit = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnSubmit", "True", "True", 35, 28,"8", "T",true,false,"c42c0f21-2fd7-49b2-ac54-62f811747b18","c42c0f21-2fd7-49b2-ac54-62f811747b18","fade0ee7-10de-430c-a958-14c65ebee526");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnSubmit);
             this.BtnSubmit.UIModel = this.Model.ElementID;
-            this.BtnSubmit.Action = "";
-	                            this.BtnApprove = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnApprove", "True", "True", 35, 28,"9", "",true,false,"eb678a04-c7e1-44f1-b175-8f90f9903862","eb678a04-c7e1-44f1-b175-8f90f9903862","ada78297-df0b-471e-a076-02b810aeb7e1");
+            this.BtnSubmit.Action = "SubmitClick";
+	                            this.BtnApprove = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnApprove", "True", "True", 35, 28,"9", "Y",true,false,"eb678a04-c7e1-44f1-b175-8f90f9903862","eb678a04-c7e1-44f1-b175-8f90f9903862","ada78297-df0b-471e-a076-02b810aeb7e1");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnApprove);
             this.BtnApprove.UIModel = this.Model.ElementID;
-            this.BtnApprove.Action = "";
+            this.BtnApprove.Action = "ApproveClick";
 	                            this.BtnUndoApprove = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnUndoApprove", "True", "True", 35, 28,"10", "",true,false,"ae796775-bce3-4aed-89a9-20eaa4648a67","ae796775-bce3-4aed-89a9-20eaa4648a67","a33bf9e3-bf10-45bb-a1c0-b5d43114ede0");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnUndoApprove);
             this.BtnUndoApprove.UIModel = this.Model.ElementID;
-            this.BtnUndoApprove.Action = "";
+            this.BtnUndoApprove.Action = "UndoApproveClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnFind = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFind", "True", "True", 35, 28,"12", "",true,false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","705701cb-c354-4512-8c66-7b4b4d3464e1");
+			                            this.BtnFind = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFind", "True", "True", 35, 28,"12", "F",true,false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","705701cb-c354-4512-8c66-7b4b4d3464e1");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnFind);
             this.BtnFind.UIModel = this.Model.ElementID;
-            this.BtnFind.Action = "";
-	                            this.BtnList = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnList", "True", "True", 35, 28,"13", "",true,false,"c639596b-5a8c-4fc1-88bb-a3d670cda992","c639596b-5a8c-4fc1-88bb-a3d670cda992","5a9197af-dd28-4ac7-a0b6-a45b5d6434a9");
+            this.BtnFind.Action = "FindClick";
+	                            this.BtnList = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnList", "True", "True", 35, 28,"13", "L",true,false,"c639596b-5a8c-4fc1-88bb-a3d670cda992","c639596b-5a8c-4fc1-88bb-a3d670cda992","5a9197af-dd28-4ac7-a0b6-a45b5d6434a9");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnList);
             this.BtnList.UIModel = this.Model.ElementID;
-            this.BtnList.Action = "";
+            this.BtnList.Action = "ListClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnFirstPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFirstPage", "True", "True", 35, 28,"15", "",true,false,"f229e163-fcd1-4f6a-a645-df86c0efd8ec","f229e163-fcd1-4f6a-a645-df86c0efd8ec","318d93a9-a4e9-4b6f-bdc7-5f71b4cee032");
+			                            this.BtnFirstPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFirstPage", "True", "True", 35, 28,"15", "[",true,false,"f229e163-fcd1-4f6a-a645-df86c0efd8ec","f229e163-fcd1-4f6a-a645-df86c0efd8ec","318d93a9-a4e9-4b6f-bdc7-5f71b4cee032");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnFirstPage);
             this.BtnFirstPage.UIModel = this.Model.ElementID;
-            this.BtnFirstPage.Action = "";
-	                            this.BtnPrevPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrevPage", "True", "True", 35, 28,"16", "",true,false,"5ed368d8-7616-4696-b671-3f1c895f3b43","5ed368d8-7616-4696-b671-3f1c895f3b43","94ac4ddd-5f16-4398-af5e-0bc9f97f4554");
+            this.BtnFirstPage.Action = "FirstPage";
+	                            this.BtnPrevPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrevPage", "True", "True", 35, 28,"16", ",",true,false,"5ed368d8-7616-4696-b671-3f1c895f3b43","5ed368d8-7616-4696-b671-3f1c895f3b43","94ac4ddd-5f16-4398-af5e-0bc9f97f4554");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnPrevPage);
             this.BtnPrevPage.UIModel = this.Model.ElementID;
-            this.BtnPrevPage.Action = "";
-	                            this.BtnNextPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnNextPage", "True", "True", 35, 28,"17", "",true,false,"36afec41-957c-493a-97a4-eddb136af5b4","36afec41-957c-493a-97a4-eddb136af5b4","80f0be4d-c91c-4862-8095-48e6d81098fc");
+            this.BtnPrevPage.Action = "PrevPage";
+	                            this.BtnNextPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnNextPage", "True", "True", 35, 28,"17", ".",true,false,"36afec41-957c-493a-97a4-eddb136af5b4","36afec41-957c-493a-97a4-eddb136af5b4","80f0be4d-c91c-4862-8095-48e6d81098fc");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnNextPage);
             this.BtnNextPage.UIModel = this.Model.ElementID;
-            this.BtnNextPage.Action = "";
-	                            this.BtnLastPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnLastPage", "True", "True", 35, 28,"18", "",true,false,"dc4a37d1-35de-4016-81dd-582aef3cdeb0","dc4a37d1-35de-4016-81dd-582aef3cdeb0","9e80405b-2d25-404c-8bac-943168b6da0d");
+            this.BtnNextPage.Action = "NextPage";
+	                            this.BtnLastPage = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnLastPage", "True", "True", 35, 28,"18", "]",true,false,"dc4a37d1-35de-4016-81dd-582aef3cdeb0","dc4a37d1-35de-4016-81dd-582aef3cdeb0","9e80405b-2d25-404c-8bac-943168b6da0d");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnLastPage);
             this.BtnLastPage.UIModel = this.Model.ElementID;
-            this.BtnLastPage.Action = "";
+            this.BtnLastPage.Action = "LastPage";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnAttachment = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnAttachment", "True", "True", 35, 28,"20", "",true,false,"92ccef79-ad54-438c-a16e-20a4fd407b97","92ccef79-ad54-438c-a16e-20a4fd407b97","6d5ebd61-b56c-44c4-ab54-4d1683003fb3");
+			                            this.BtnAttachment = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnAttachment", "True", "True", 35, 28,"20", "A",true,false,"92ccef79-ad54-438c-a16e-20a4fd407b97","92ccef79-ad54-438c-a16e-20a4fd407b97","6d5ebd61-b56c-44c4-ab54-4d1683003fb3");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnAttachment);
             this.BtnAttachment.UIModel = this.Model.ElementID;
-            this.BtnAttachment.Action = "";
-	                            this.BtnFlow = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFlow", "True", "True", 35, 28,"21", "",true,false,"e222698c-ae3c-470a-8053-1b69905c510a","e222698c-ae3c-470a-8053-1b69905c510a","6b84977c-e680-4774-86fc-a1373ed089b1");
+            this.BtnAttachment.Action = "AttachmentClick";
+	                            this.BtnFlow = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnFlow", "True", "True", 35, 28,"21", "F",true,false,"e222698c-ae3c-470a-8053-1b69905c510a","e222698c-ae3c-470a-8053-1b69905c510a","6b84977c-e680-4774-86fc-a1373ed089b1");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnFlow);
             this.BtnFlow.UIModel = this.Model.ElementID;
-            this.BtnFlow.Action = "";
+            this.BtnFlow.Action = "FlowClick";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnOutput = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnOutput", "True", "True", 35, 28,"23", "",true,false,"688fd549-5a92-49cc-8072-6d5377f6409a","688fd549-5a92-49cc-8072-6d5377f6409a","09996dd6-a396-4783-89f2-1301d48580bd");
+			                            this.BtnOutput = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnOutput", "True", "True", 35, 28,"23", "O",true,false,"688fd549-5a92-49cc-8072-6d5377f6409a","688fd549-5a92-49cc-8072-6d5377f6409a","09996dd6-a396-4783-89f2-1301d48580bd");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnOutput);
             this.BtnOutput.UIModel = this.Model.ElementID;
-            this.BtnOutput.Action = "";
-	                            this.BtnPrint = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrint", "True", "True", 35, 28,"24", "",true,false,"27b5c615-cde5-458c-be74-833317249568","27b5c615-cde5-458c-be74-833317249568","74811945-bcf9-4359-99ca-fbc59dca4ef2");
+            this.BtnOutput.Action = "OutputClick";
+	                            this.BtnPrint = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrint", "True", "True", 35, 28,"24", "P",true,false,"27b5c615-cde5-458c-be74-833317249568","27b5c615-cde5-458c-be74-833317249568","74811945-bcf9-4359-99ca-fbc59dca4ef2");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnPrint);
             this.BtnPrint.UIModel = this.Model.ElementID;
-            this.BtnPrint.Action = "";
+            this.BtnPrint.Action = "PrintClick";
 	
             
             ((UFWebToolbarAdapter)_Toolbar).RemoveControls();
@@ -476,7 +530,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApplyCust95,"d6428416-2436-4ab4-af0f-1464119d76e7", 580,408, "Name","Code","ID", this.Model.AdvApproveBE.FieldAdvApplyCust_Code,this.Model.AdvApproveBE.FieldAdvApplyCust_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvApplyCust95,"AdvApplyCust95",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","Department_ID",""),new ReferenceOutputParam("","Department_Code",""),new ReferenceOutputParam("","Department_Name",""),new ReferenceOutputParam("","Saleser_ID",""),new ReferenceOutputParam("","Saleser_Code",""),new ReferenceOutputParam("","Saleser_Name",""),new ReferenceOutputParam("","TradeCurrency_ID",""),new ReferenceOutputParam("","TradeCurrency_Code",""),new ReferenceOutputParam("","TradeCurrency_Name",""),new ReferenceOutputParam("","ShortName",""),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Territory_Name",""),new ReferenceOutputParam("","TradeCurrency_Symbol",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundType",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundType",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvApplyCust95,"AdvApplyCust95",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvApplyCust95","ID","Key"),new ReferenceOutputParam("AdvApplyCust95","Code","Value"),new ReferenceOutputParam("AdvApplyCust95","Name","Text"),new ReferenceOutputParam("","Department_ID",""),new ReferenceOutputParam("","Department_Code",""),new ReferenceOutputParam("","Department_Name",""),new ReferenceOutputParam("","Saleser_ID",""),new ReferenceOutputParam("","Saleser_Code",""),new ReferenceOutputParam("","Saleser_Name",""),new ReferenceOutputParam("","TradeCurrency_ID",""),new ReferenceOutputParam("","TradeCurrency_Code",""),new ReferenceOutputParam("","TradeCurrency_Name",""),new ReferenceOutputParam("","ShortName",""),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Territory_Name",""),new ReferenceOutputParam("","TradeCurrency_Symbol",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundType",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundType",""),});
 				
 
 		

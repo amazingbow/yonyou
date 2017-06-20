@@ -42,16 +42,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
         protected override void OnSetDefaultValue()
         {
             base.OnSetDefaultValue();
-            User user = User.Finder.FindByID(Context.LoginUserID);
-            if (user != null)
-            {
-                this.ApplyDept = Customer.Finder.Find("DescFlexField.PrivateDescSeg14='" + user.Code + "'");
-            }
             if (this.Org == null)
             {
                 this.Org = Context.LoginOrg;
             }
-            this.ApplyDate = DateTime.Now;
             if (this.StateMachineInstance.CurrentState == AdvApplyBEStateMachine.State.Empty)
             {
                 this.StateMachineInstance.Initialize();

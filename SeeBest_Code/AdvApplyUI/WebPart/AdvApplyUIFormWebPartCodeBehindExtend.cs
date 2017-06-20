@@ -24,6 +24,7 @@ using UFSoft.UBF.UI.ActionProcess;
 using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.Proxy;
+using UFSoft.UBF.Util.DataAccess;
 
 
 
@@ -83,8 +84,17 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private void BtnSave_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
-
+            foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
+            {
+                if (item.IsSelected.Value)
+                {
+                    var newRecord = this.Model.AdvApplyBE_AdvAboutBE.AddNewUIRecord();
+                    newRecord.Code = item.Code;
+                    newRecord.Name = item.Name;
+                    newRecord.Description = item.Description;
+                    newRecord.IsSelected = true;
+                }
+            }
             BtnSave_Click_DefaultImpl(sender, e);
         }
 
@@ -113,6 +123,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnDelete_Click_DefaultImpl(sender, e);
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 2)
+                {
+                    throw new Exception("这张专柜申请单已经被审核，不能删除！");
+                }
+            }
         }
 
         //BtnCopy_Click...
@@ -122,6 +139,14 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnCopy_Click_DefaultImpl(sender, e);
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                this.Model.AdvApplyBE.FocusedRecord.AdvCode = "";
+                this.Model.AdvApplyBE.FocusedRecord.ApplyDate = System.DateTime.Now;
+                this.Model.AdvApplyBE.FocusedRecord.DocNo = "";
+                this.Model.AdvApplyBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+                this.Model.AdvApplyBE.FocusedRecord.DocStatus = 0;
+            }
         }
 
         //BtnSubmit_Click...
@@ -195,7 +220,12 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private void CloseClick_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-            
+            CloseAdvApplyProxy proxy = new CloseAdvApplyProxy();
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                proxy.ID = this.Model.AdvApplyBE.FocusedRecord.ID;
+                proxy.Do();
+            }
             CloseClick_Click_DefaultImpl(sender, e);
         }
 
@@ -205,7 +235,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
 
-            BtnOK_Click_DefaultImpl(sender, e);
+            //BtnOK_Click_DefaultImpl(sender, e);
         }
 
         //BtnGiveUp_Click...
@@ -214,7 +244,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
 
-            BtnGiveUp_Click_DefaultImpl(sender, e);
+            //BtnGiveUp_Click_DefaultImpl(sender, e);
         }
 
         #region 自定义数据初始化加载和数据收集
@@ -236,18 +266,19 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             this.CurrentState[strIsAFKey] = new SetIsApprovalDoc(SetIsApprovalDoc);
             #endregion
             #region 列表默认值
-            if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount == 0)
+            if (this.Model.AdvCarrierList.RecordCount == 0)
             {
                 GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
                 proxy.ValueCode = "Z106";
                 var data = proxy.Do();
                 foreach (var item in data)
                 {
-                    var newRecord = this.Model.AdvApplyBE_AdvAboutBE.AddNewUIRecord();
+                    var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
                     newRecord.Code = item.Code;
                     newRecord.Name = item.Name;
                     newRecord.Description = item.Description;
                     newRecord.IsSelected = false;
+                    //this.Model.AdvApplyBE_AdvAboutBE.Records.Add(newRecord);
                 }
             }
             #endregion
@@ -263,6 +294,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //绑定注册弹出对话框到删除按钮
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
             PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
+            AssignDefaultValues();
         }
         internal static bool SetIsApprovalDoc(IUIModel model)
         {
@@ -274,6 +306,52 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 isAF = record.AdvApplyDocType_ConfirmType == Convert.ToInt32(UFIDA.U9.Base.Doc.ConfirmTypeEnumData.ApproveFlow);
             }
             return isAF;
+        }
+
+        private void AssignDefaultValues()
+        {
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                //下单日期赋默认值
+                if (this.Model.AdvApplyBE.FocusedRecord.ApplyDate == null || this.Model.AdvApplyBE.FocusedRecord.ApplyDate == System.DateTime.MinValue)
+                {
+                    this.Model.AdvApplyBE.FocusedRecord.ApplyDate = System.DateTime.Now;
+                }
+
+                //办事处赋默认值
+                if (this.Model.AdvApplyBE.FocusedRecord.ApplyDept <= 0L)
+                {
+                    DataParamList lst1 = new DataParamList();
+                    lst1.Add(DataParamFactory.CreateInput("@UserCode", UFIDA.U9.UI.PDHelper.PDContext.Current.UserCode, System.Data.DbType.String));
+                    lst1.Add(DataParamFactory.CreateInput("@OrgID", UFIDA.U9.UI.PDHelper.PDContext.Current.OrgID, System.Data.DbType.Int64));
+                    System.Data.DataSet ds1 = new System.Data.DataSet();
+
+                    DataAccessor.RunSQL(DataAccessor.GetConn(), "select top 1 A1.ID as CustomerID,A1.Code as CustomerCode,A2.Name as CustomerName from CBO_Customer A1 left join CBO_Customer_Trl A2 on A1.ID=A2.ID where A1.DescFlexField_PrivateDescSeg14=@UserCode and A1.Org=@OrgID order by A1.Code", lst1, out ds1);
+
+                    if (ds1 != null && ds1.Tables.Count > 0)
+                    {
+                        if (ds1.Tables[0].Rows.Count > 0)
+                        {
+                            if (Convert.ToInt64(ds1.Tables[0].Rows[0]["CustomerID"].ToString()) > 0L)
+                            {
+                                this.Model.AdvApplyBE.FocusedRecord.ApplyDept = Convert.ToInt64(ds1.Tables[0].Rows[0]["CustomerID"].ToString());
+                                this.Model.AdvApplyBE.FocusedRecord.ApplyDept_Code = ds1.Tables[0].Rows[0]["CustomerCode"].ToString();
+                                this.Model.AdvApplyBE.FocusedRecord.ApplyDept_Name = ds1.Tables[0].Rows[0]["CustomerName"].ToString();
+                            }
+                        }
+                    }
+                }
+                //业务日期赋默认值
+                if (this.Model.AdvApplyBE.FocusedRecord.BusinessDate == null || this.Model.AdvApplyBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
+                {
+                    this.Model.AdvApplyBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+                }
+                //单号赋默认值
+                if (string.IsNullOrEmpty(this.Model.AdvApplyBE.FocusedRecord.DocNo))
+                {
+                    this.Model.AdvApplyBE.FocusedRecord.DocNo = System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                }
+            }
         }
 
         public void AfterCreateChildControls()

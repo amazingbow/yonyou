@@ -38,6 +38,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		#region views
 		private AdvApproveBEView viewAdvApproveBE;			
 		private AdvApproveBE_AdvApproveLineView viewAdvApproveBE_AdvApproveLine;			
+		private AdvApproveLinesView viewAdvApproveLines;			
 		#endregion
 		
 		#region links
@@ -57,6 +58,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return (AdvApproveBE_AdvApproveLineView)this["AdvApproveBE_AdvApproveLine"]; }
 		}
+		public AdvApproveLinesView AdvApproveLines
+		{
+			get { return (AdvApproveLinesView)this["AdvApproveLines"]; }
+		}
 		
 		#region RealViews
 		#endregion
@@ -73,6 +78,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			this.viewAdvApproveBE_AdvApproveLine = new AdvApproveBE_AdvApproveLineView(this);
 			this.viewAdvApproveBE_AdvApproveLine.SetResourceInfo("e9f2f37f-9c28-4be5-950a-5036e6e17e4e");
 			this.Views.Add(this.viewAdvApproveBE_AdvApproveLine);			
+			this.viewAdvApproveLines = new AdvApproveLinesView(this);
+			this.viewAdvApproveLines.SetResourceInfo("8a99f4d2-8dda-42c9-864c-df3802be3743");
+			this.Views.Add(this.viewAdvApproveLines);			
 
 			//this.linkAdvApproveBE__AdvApproveBE_AdvApproveLine
 			{
@@ -2510,13 +2518,13 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["AdvApproveBE"]; }
 		}
-		public IUIField FieldAdvAppCustName
-		{
-			get { return this.Fields["AdvAppCustName"]; }
-		}
 		public IUIField FieldLocation
 		{
 			get { return this.Fields["Location"]; }
+		}
+		public IUIField FieldAdvAppCustName
+		{
+			get { return this.Fields["AdvAppCustName"]; }
 		}
 		public IUIField FieldCountry
 		{
@@ -2604,6 +2612,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		}
 
 
+		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
+		public AdvApproveBE_AdvApproveLineDefaultFilterFilter DefaultFilter
+		{
+			get { return (AdvApproveBE_AdvApproveLineDefaultFilterFilter)this.CurrentFilter; }
+		}
 		#endregion
 
 		#region Init
@@ -2616,8 +2629,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), true,"","System.String", "ModifiedBy", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3cea3780-133d-4d7c-a1cd-78c365a99f4e");
 			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), true,"0","System.Int64", "SysVersion", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","326949eb-5fde-471b-b198-06b6b9a0272e");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveBE", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE", "AdvApproveBE", true,true, false, "",false,(UIFieldType)4,"f1d91c11-fb12-49af-b6a4-c52297a1fd77","f7fb3fa7-c525-4d9f-8565-a2eb82eff849");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvAppCustName", typeof(String), true,"","System.String", "AdvAppCustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","983c42d1-3efe-457b-b921-22e7d7bf0fcb");
 			UIModelRuntimeFactory.AddNewUIField(this,"Location", typeof(String), true,"","System.String", "Location", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d0270885-cd3c-43f8-a3c1-12542e5bf66a");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvAppCustName", typeof(String), true,"","System.String", "AdvAppCustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","983c42d1-3efe-457b-b921-22e7d7bf0fcb");
 			UIModelRuntimeFactory.AddNewUIField(this,"Country", typeof(String), true,"","System.String", "Country", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8c0e33ca-10bc-4d6f-adaf-8dbc4037f3f1");
 			UIModelRuntimeFactory.AddNewUIField(this,"CustCounterName", typeof(String), true,"","System.String", "CustCounterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","56beb045-b2fa-4356-9c6d-6b78c80318b6");
 			UIModelRuntimeFactory.AddNewUIField(this,"RelPeople", typeof(String), true,"","System.String", "RelPeople", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1a3e001b-e629-4f73-88b9-1a3eb58aaf4f");
@@ -2641,6 +2654,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvItem", typeof(String), true,"","System.String", "AdvItem", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","195843a5-0a6a-4207-9749-749470b7ae99");
 
 
+			this.CurrentFilter = new AdvApproveBE_AdvApproveLineDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -2780,19 +2794,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		}
 		
 		
-		public  String AdvAppCustName
-		{
-			get{
-				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName);
-			}
-			set{
-				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName] = value;
-			}
-		}
-		
-		
 		public  String Location
 		{
 			get{
@@ -2802,6 +2803,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			}
 			set{
 				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldLocation] = value;
+			}
+		}
+		
+		
+		public  String AdvAppCustName
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName);
+			}
+			set{
+				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvAppCustName] = value;
 			}
 		}
 		
@@ -3080,6 +3094,258 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		#endregion
 	}
 	
+	[Serializable]
+	public class AdvApproveBE_AdvApproveLineDefaultFilterFilter : UIFilter
+	{
+		#region Constructor
+		public AdvApproveBE_AdvApproveLineDefaultFilterFilter(IUIView view) 
+			: base("DefaultFilter",view,@"",@"")
+		{
+			InitClass();
+		}
+		//for Clone Constructor
+		private AdvApproveBE_AdvApproveLineDefaultFilterFilter()
+			: base("DefaultFilter",null,"","")
+		{}
+		protected override IUIFilter CreateCloneInstance()
+		{
+			return new AdvApproveBE_AdvApproveLineDefaultFilterFilter();
+		}
+		#endregion
+
+		#region property
+		#endregion
+		
+		#region function
+		private void InitClass()
+		{
+		}
+		#endregion
+
+	}
+
+
+
+	[Serializable]
+	public partial class AdvApproveLinesView : UIView
+	{
+		#region Constructor
+		public AdvApproveLinesView(IUIModel model) : base(model,"AdvApproveLines","", true)
+		{
+			InitClass();
+		}
+		//构造空实例,不进行初始化.目前为Clone使用.
+		private AdvApproveLinesView():base(null,"AdvApproveLines","", true)
+		{
+		}
+		protected override IUIView CreateCloneInstance()
+		{
+			return new AdvApproveLinesView();
+		}
+		#endregion
+
+		#region fiels property filter
+		public IUIField FieldID
+		{
+			get { return this.Fields["ID"]; }
+		}
+		public IUIField FieldCreatedOn
+		{
+			get { return this.Fields["CreatedOn"]; }
+		}
+		public IUIField FieldCreatedBy
+		{
+			get { return this.Fields["CreatedBy"]; }
+		}
+		public IUIField FieldModifiedOn
+		{
+			get { return this.Fields["ModifiedOn"]; }
+		}
+		public IUIField FieldModifiedBy
+		{
+			get { return this.Fields["ModifiedBy"]; }
+		}
+		public IUIField FieldSysVersion
+		{
+			get { return this.Fields["SysVersion"]; }
+		}
+
+
+		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
+		public AdvApproveLinesDefaultFilterFilter DefaultFilter
+		{
+			get { return (AdvApproveLinesDefaultFilterFilter)this.CurrentFilter; }
+		}
+		#endregion
+
+		#region Init
+		private void InitClass()
+		{
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","c6d6389d-d036-4075-b378-e9a1d4226777");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedOn", typeof(DateTime), false,"","System.DateTime", "", false,false, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","0bc2e1c3-5c22-4c5e-85f3-1bed796b841f");
+			UIModelRuntimeFactory.AddNewUIField(this,"CreatedBy", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7dc6f92e-079b-4e78-a296-e86e83427d3b");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), false,"","System.DateTime", "", false,false, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","3a2d6153-9666-4423-acfc-6b4262fbbc1c");
+			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9cf5266e-383e-44df-a0de-e1728f19bd2a");
+			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), false,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","07168452-4a2f-4b4f-9203-5ff8627998de");
+
+
+			this.CurrentFilter = new AdvApproveLinesDefaultFilterFilter(this);
+		}
+		#endregion
+		
+		#region override method
+		protected override IUIRecord BuildNewRecord(IUIRecordBuilder builder)
+		{
+			return new AdvApproveLinesRecord(builder);
+		}
+		#endregion
+
+		#region new method
+		public new AdvApproveLinesRecord FocusedRecord
+		{
+			get { return (AdvApproveLinesRecord)base.FocusedRecord ; }
+			set { base.FocusedRecord = value ; }
+		}
+		public new AdvApproveLinesRecord AddNewUIRecord()
+		{	
+			return (AdvApproveLinesRecord)base.AddNewUIRecord();
+		}
+		public new AdvApproveLinesRecord NewUIRecord()
+		{	
+			return (AdvApproveLinesRecord)base.NewUIRecord();
+		}
+		#endregion 
+
+	}
+
+	[Serializable]
+	public class AdvApproveLinesRecord : UIRecord
+	{
+		#region Constructor
+		public AdvApproveLinesRecord(IUIRecordBuilder builder):base(builder)
+		{
+		}
+		private AdvApproveLinesView uiviewAdvApproveLines
+		{
+			get { return (AdvApproveLinesView)this.ContainerView; }
+		}
+		protected override IUIRecord CreateCloneInstance(IUIRecordBuilder builder)
+		{
+			return new AdvApproveLinesRecord(builder);
+		}
+		#endregion
+
+		#region property
+		
+		
+		public  Int64 ID
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldID] ;
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewAdvApproveLines.FieldID);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldID] = value;
+			}
+		}
+		
+		
+		public  DateTime CreatedOn
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldCreatedOn] ;
+				//return (DateTime)value;
+				return GetValue<DateTime>(this.uiviewAdvApproveLines.FieldCreatedOn);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldCreatedOn] = value;
+			}
+		}
+		
+		
+		public  String CreatedBy
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldCreatedBy] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldCreatedBy);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldCreatedBy] = value;
+			}
+		}
+		
+		
+		public  DateTime ModifiedOn
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldModifiedOn] ;
+				//return (DateTime)value;
+				return GetValue<DateTime>(this.uiviewAdvApproveLines.FieldModifiedOn);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldModifiedOn] = value;
+			}
+		}
+		
+		
+		public  String ModifiedBy
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldModifiedBy] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldModifiedBy);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldModifiedBy] = value;
+			}
+		}
+		
+		
+		public new Int64 SysVersion
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldSysVersion] ;
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewAdvApproveLines.FieldSysVersion);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldSysVersion] = value;
+			}
+		}
+		#endregion
+	}
+	
+	[Serializable]
+	public class AdvApproveLinesDefaultFilterFilter : UIFilter
+	{
+		#region Constructor
+		public AdvApproveLinesDefaultFilterFilter(IUIView view) 
+			: base("DefaultFilter",view,@"",@"")
+		{
+			InitClass();
+		}
+		//for Clone Constructor
+		private AdvApproveLinesDefaultFilterFilter()
+			: base("DefaultFilter",null,"","")
+		{}
+		protected override IUIFilter CreateCloneInstance()
+		{
+			return new AdvApproveLinesDefaultFilterFilter();
+		}
+		#endregion
+
+		#region property
+		#endregion
+		
+		#region function
+		private void InitClass()
+		{
+		}
+		#endregion
+
+	}
 
 
 

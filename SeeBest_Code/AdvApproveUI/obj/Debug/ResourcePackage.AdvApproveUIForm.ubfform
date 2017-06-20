@@ -10,65 +10,101 @@
   <Providers />
   <InParameters />
   <Toolbar ID="f98f6214-fbb8-48c5-a887-698a9f103a2b" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar2" TabIndex="1" TabStop="True" Width="1000">
-    <Button ID="9e47da67-8390-486a-9510-a62aab90e3a5" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
-      <Events />
+    <Button ID="9e47da67-8390-486a-9510-a62aab90e3a5" AccessKey="S" DisplayNameResourceID="8288c5a3-3b19-48d3-b139-f7018d2782ee" DisplaySrcType="PublicResource" Height="28" Name="BtnSave" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="SaveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SaveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="3ac0d522-56dd-4a91-9edf-730d4407f89a" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
-      <Events />
+    <Button ID="3ac0d522-56dd-4a91-9edf-730d4407f89a" AccessKey="Z" DisplayNameResourceID="f35cb480-9e8f-4689-aaac-3e9fc9a0c65e" DisplaySrcType="PublicResource" Height="28" Name="BtnCancel" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="CancelClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CancelClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="8cede890-8e96-44c7-99dc-5323801e1c6e" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
-      <Events />
+    <Button ID="8cede890-8e96-44c7-99dc-5323801e1c6e" AccessKey="N" DisplayNameResourceID="19478b02-d2a9-4d7e-b7af-00070c61ff2d" DisplaySrcType="PublicResource" Height="28" Name="BtnAdd" TabIndex="3" TabStop="True" Width="35" X="70" Y="0">
+      <Events>
+        <Event ActionName="NewClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NewClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="ccb992bf-9514-4e7b-b8a1-a4278c6ab85c" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
-      <Events />
+    <Button ID="ccb992bf-9514-4e7b-b8a1-a4278c6ab85c" AccessKey="R" DisplayNameResourceID="0467218f-229b-4954-b2d4-3c5976467f76" DisplaySrcType="PublicResource" Height="28" Name="BtnDelete" TabIndex="4" TabStop="True" Width="35" X="105" Y="0">
+      <Events>
+        <Event ActionName="DeleteClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="DeleteClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="2ddc1868-55fd-445d-a844-78df4b874666" Height="28" Name="Separator0" TabIndex="5" TabStop="True" Width="8" X="140" Y="0" />
-    <Button ID="1680d5ab-7ba4-4460-8b65-941612d0077c" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
-      <Events />
+    <Button ID="1680d5ab-7ba4-4460-8b65-941612d0077c" AccessKey="C" DisplayNameResourceID="be9f8d20-e484-464b-9818-a2c1b599b967" DisplaySrcType="PublicResource" Height="28" Name="BtnCopy" TabIndex="6" TabStop="True" Width="35" X="148" Y="0">
+      <Events>
+        <Event ActionName="CopyClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="CopyClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="d95cc660-5887-4c72-a2d6-9975845f4d51" Height="28" Name="Separator1" TabIndex="7" TabStop="True" Width="8" X="183" Y="0" />
-    <Button ID="fade0ee7-10de-430c-a958-14c65ebee526" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
-      <Events />
+    <Button ID="fade0ee7-10de-430c-a958-14c65ebee526" AccessKey="T" DisplayNameResourceID="c42c0f21-2fd7-49b2-ac54-62f811747b18" DisplaySrcType="PublicResource" Height="28" Name="BtnSubmit" TabIndex="8" TabStop="True" Width="35" X="191" Y="0">
+      <Events>
+        <Event ActionName="SubmitClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="SubmitClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="ada78297-df0b-471e-a076-02b810aeb7e1" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
-      <Events />
+    <Button ID="ada78297-df0b-471e-a076-02b810aeb7e1" AccessKey="Y" DisplayName="" DisplayNameResourceID="eb678a04-c7e1-44f1-b175-8f90f9903862" DisplaySrcType="PublicResource" Height="28" Name="BtnApprove" TabIndex="9" TabStop="True" Width="35" X="226" Y="0">
+      <Events>
+        <Event ActionName="ApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ApproveClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="a33bf9e3-bf10-45bb-a1c0-b5d43114ede0" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
-      <Events />
+    <Button ID="a33bf9e3-bf10-45bb-a1c0-b5d43114ede0" AccessKey="" DisplayName="" DisplayNameResourceID="ae796775-bce3-4aed-89a9-20eaa4648a67" DisplaySrcType="PublicResource" Height="28" Name="BtnUndoApprove" TabIndex="10" TabStop="True" Width="35" X="261" Y="0">
+      <Events>
+        <Event ActionName="UndoApproveClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
     </Button>
     <Separator ID="63bd4f8c-0278-468b-809d-ba8c422a4c11" Height="28" Name="Separator2" TabIndex="11" TabStop="True" Width="8" X="296" Y="0" />
-    <Button ID="705701cb-c354-4512-8c66-7b4b4d3464e1" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
-      <Events />
+    <Button ID="705701cb-c354-4512-8c66-7b4b4d3464e1" AccessKey="F" DisplayNameResourceID="27621430-7bc7-4c0e-979e-f0108439d13e" DisplaySrcType="PublicResource" Height="28" Name="BtnFind" TabIndex="12" TabStop="True" Width="35" X="304" Y="0">
+      <Events>
+        <Event ActionName="FindClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FindClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="5a9197af-dd28-4ac7-a0b6-a45b5d6434a9" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
-      <Events />
+    <Button ID="5a9197af-dd28-4ac7-a0b6-a45b5d6434a9" AccessKey="L" DisplayNameResourceID="c639596b-5a8c-4fc1-88bb-a3d670cda992" DisplaySrcType="PublicResource" Height="28" Name="BtnList" TabIndex="13" TabStop="True" Width="35" X="339" Y="0">
+      <Events>
+        <Event ActionName="ListClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="ListClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="d755b9ba-28a9-4bd0-9076-e2f0d5b4e813" Height="28" Name="Separator3" TabIndex="14" TabStop="True" Width="8" X="374" Y="0" />
-    <Button ID="318d93a9-a4e9-4b6f-bdc7-5f71b4cee032" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="382" Y="0">
-      <Events />
+    <Button ID="318d93a9-a4e9-4b6f-bdc7-5f71b4cee032" AccessKey="[" DisplayNameResourceID="f229e163-fcd1-4f6a-a645-df86c0efd8ec" DisplaySrcType="PublicResource" Height="28" Name="BtnFirstPage" TabIndex="15" TabStop="True" Width="35" X="382" Y="0">
+      <Events>
+        <Event ActionName="FirstPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FirstPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="94ac4ddd-5f16-4398-af5e-0bc9f97f4554" DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="417" Y="0">
-      <Events />
+    <Button ID="94ac4ddd-5f16-4398-af5e-0bc9f97f4554" AccessKey="," DisplayNameResourceID="5ed368d8-7616-4696-b671-3f1c895f3b43" DisplaySrcType="PublicResource" Height="28" Name="BtnPrevPage" TabIndex="16" TabStop="True" Width="35" X="417" Y="0">
+      <Events>
+        <Event ActionName="PrevPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrevPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="80f0be4d-c91c-4862-8095-48e6d81098fc" DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="452" Y="0">
-      <Events />
+    <Button ID="80f0be4d-c91c-4862-8095-48e6d81098fc" AccessKey="." DisplayNameResourceID="36afec41-957c-493a-97a4-eddb136af5b4" DisplaySrcType="PublicResource" Height="28" Name="BtnNextPage" TabIndex="17" TabStop="True" Width="35" X="452" Y="0">
+      <Events>
+        <Event ActionName="NextPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="NextPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="9e80405b-2d25-404c-8bac-943168b6da0d" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="487" Y="0">
-      <Events />
+    <Button ID="9e80405b-2d25-404c-8bac-943168b6da0d" AccessKey="]" DisplayNameResourceID="dc4a37d1-35de-4016-81dd-582aef3cdeb0" DisplaySrcType="PublicResource" Height="28" Name="BtnLastPage" TabIndex="18" TabStop="True" Width="35" X="487" Y="0">
+      <Events>
+        <Event ActionName="LastPage" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="LastPage" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="77e869d4-1b36-4eb1-b4dc-b3a1461e094e" Height="28" Name="Separator4" TabIndex="19" TabStop="True" Width="8" X="522" Y="0" />
-    <Button ID="6d5ebd61-b56c-44c4-ab54-4d1683003fb3" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="530" Y="0">
-      <Events />
+    <Button ID="6d5ebd61-b56c-44c4-ab54-4d1683003fb3" AccessKey="A" DisplayNameResourceID="92ccef79-ad54-438c-a16e-20a4fd407b97" DisplaySrcType="PublicResource" Height="28" Name="BtnAttachment" TabIndex="20" TabStop="True" Width="35" X="530" Y="0">
+      <Events>
+        <Event ActionName="AttachmentClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="AttachmentClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="6b84977c-e680-4774-86fc-a1373ed089b1" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="565" Y="0">
-      <Events />
+    <Button ID="6b84977c-e680-4774-86fc-a1373ed089b1" AccessKey="F" DisplayNameResourceID="e222698c-ae3c-470a-8053-1b69905c510a" DisplaySrcType="PublicResource" Height="28" Name="BtnFlow" TabIndex="21" TabStop="True" Width="35" X="565" Y="0">
+      <Events>
+        <Event ActionName="FlowClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="FlowClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
     <Separator ID="0cb06e33-aff8-47ae-af9f-db6978fd908a" Height="28" Name="Separator5" TabIndex="22" TabStop="True" Width="8" X="600" Y="0" />
-    <Button ID="09996dd6-a396-4783-89f2-1301d48580bd" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="608" Y="0">
-      <Events />
+    <Button ID="09996dd6-a396-4783-89f2-1301d48580bd" AccessKey="O" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutput" TabIndex="23" TabStop="True" Width="35" X="608" Y="0">
+      <Events>
+        <Event ActionName="OutputClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="OutputClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
-    <Button ID="74811945-bcf9-4359-99ca-fbc59dca4ef2" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="643" Y="0">
-      <Events />
+    <Button ID="74811945-bcf9-4359-99ca-fbc59dca4ef2" AccessKey="P" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="24" TabStop="True" Width="35" X="643" Y="0">
+      <Events>
+        <Event ActionName="PrintClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="PrintClick" Template=".\UITpls\WebPart\ViewCodeBehindCommon.tpl" />
+      </Events>
     </Button>
   </Toolbar>
   <Card ID="ebadcadd-0caf-427e-9df3-f397f136a7b4" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card4" TabIndex="2" TabStop="False" Width="1000" X="0" Y="38">
@@ -110,9 +146,9 @@
       <Reference ID="04702be2-013d-4d06-bc5a-f104df943d8c" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="AdvApplyCust_Code" CodeFieldUIViewID="AdvApproveBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvApplyCust95" NameAttributeName="Name" NameFieldUIFieldID="AdvApplyCust_Name" NameFieldUIViewID="AdvApproveBE" PkeyField="ID" RefType="d6428416-2436-4ab4-af0f-1464119d76e7" RelationControl="lblAdvApplyCust95" TabIndex="1" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="AdvApplyCust" UIViewID="AdvApproveBE" Visible="True" Width="140" WindowHeight="408" WindowWidth="580" X="110" Y="0">
         <Events />
         <RelationControls />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="AdvApplyCust95" TargetProperty="Key" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="ReferenceModel" TargetID="AdvApplyCust95" TargetProperty="Value" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="ReferenceModel" TargetID="AdvApplyCust95" TargetProperty="Text" />
         <ReferenceRelation Action="Clear" ColumnDisplayName="部门ID" ColumnID="Department_ID" TargetControlType="" TargetID="" TargetProperty="" />
         <ReferenceRelation Action="Clear" ColumnDisplayName="部门编码" ColumnID="Department_Code" TargetControlType="" TargetID="" TargetProperty="" />
         <ReferenceRelation Action="Clear" ColumnDisplayName="部门名称" ColumnID="Department_Name" TargetControlType="" TargetID="" TargetProperty="" />
@@ -164,10 +200,10 @@
       <NumberControl ID="2e10b39f-433b-4119-a642-ee4ce56c7599" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="False" IsProperty="False" IsSequence="True" MultiLine="False" Name="ID167" RelationControl="lblID167" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ID" UIViewID="AdvApproveBE" Visible="False" Width="140" X="380" Y="0">
         <Events />
         <RelationControls />
-        <PrecisionBind />
-        <RoundRuleBind />
-        <ValueOfRoundByValueBind />
-        <CurrencyType />
+        <PrecisionBind Name="PrecisionBind0" />
+        <RoundRuleBind Name="RoundRuleBind0" />
+        <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind0" />
+        <CurrencyType Name="CurrencyType0" />
       </NumberControl>
       <Label ID="da3ed156-3495-4601-a8c9-d1087b3e8c6a" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsSequence="False" Name="lblSysVersion257" RelationControl="SysVersion257" TabIndex="12" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="False" Width="100" X="270" Y="25">
         <Events />
@@ -177,10 +213,10 @@
       <NumberControl ID="ae58f1d0-f3c1-43a8-b40d-f88556f3664b" DisplayFormat="8.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" MultiLine="False" Name="SysVersion257" RelationControl="lblSysVersion257" TabIndex="13" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="SysVersion" UIViewID="AdvApproveBE" Visible="False" Width="140" X="380" Y="25">
         <Events />
         <RelationControls />
-        <PrecisionBind />
-        <RoundRuleBind />
-        <ValueOfRoundByValueBind />
-        <CurrencyType />
+        <PrecisionBind Name="PrecisionBind1" />
+        <RoundRuleBind Name="RoundRuleBind1" />
+        <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind1" />
+        <CurrencyType Name="CurrencyType1" />
       </NumberControl>
       <Label ID="bc86fd42-7b8a-4b3f-b3a6-25f6f7eceb38" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblDocStatus224" RelationControl="DocStatus224" TabIndex="14" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="270" Y="25">
         <Events />
@@ -229,17 +265,17 @@
       <UIFilterBar Name="LocateBar" />
       <Columns>
         <NumberColumn ID="fd90fd33-b5db-46ca-93a2-4c2e7d11acad" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="广告核销单行.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID168" NPos="1" Point="0" UIFieldID="ID" UIViewID="AdvApproveBE_AdvApproveLine" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind2" />
+          <RoundRuleBind Name="RoundRuleBind2" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind2" />
+          <CurrencyType Name="CurrencyType2" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="b2de0f1b-c5aa-4fbd-9364-039df8a8c421" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="广告核销单行.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion258" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="AdvApproveBE_AdvApproveLine" Visible="False">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind3" />
+          <RoundRuleBind Name="RoundRuleBind3" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind3" />
+          <CurrencyType Name="CurrencyType3" />
           <Events />
         </NumberColumn>
         <TextBoxColumn ID="d54b0ff7-2602-4548-b354-760eb6e7f679" DefaultValue="" DisplayFormat="50" Enabled="False" Help="广告核销单行.ApplyInfo.办事处名称" IsNull="True" IsProperty="False" IsSequence="False" Name="AdvAppCustName0" NPos="3" Point="0" TextAlign="Left" UIFieldID="AdvAppCustName" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
@@ -264,31 +300,31 @@
           <Events />
         </TextBoxColumn>
         <NumberColumn ID="fd814915-7377-4b0d-ac4f-3bfd9e7c5a8a" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="广告核销单行.ApplyInfo.宽" IsNull="True" IsProperty="False" IsSequence="False" Name="Width0" NPos="10" Point="0" UIFieldID="Width" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind4" />
+          <RoundRuleBind Name="RoundRuleBind4" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
+          <CurrencyType Name="CurrencyType4" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="1d88cb86-17ee-46ef-9207-a15954fe1cbd" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="广告核销单行.ApplyInfo.厚" IsNull="True" IsProperty="False" IsSequence="False" Name="Thick0" NPos="11" Point="0" UIFieldID="Thick" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind5" />
+          <RoundRuleBind Name="RoundRuleBind5" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
+          <CurrencyType Name="CurrencyType5" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="8181243c-954a-431b-be7b-2e2af88b62c9" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="广告核销单行.ApplyInfo.高" IsNull="True" IsProperty="False" IsSequence="False" Name="Height0" NPos="12" Point="0" UIFieldID="Height" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind6" />
+          <RoundRuleBind Name="RoundRuleBind6" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
+          <CurrencyType Name="CurrencyType6" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="a97663dc-5ed1-45a3-8f02-7408d5236b1c" DefaultValue="0" DisplayFormat="24.9" Enabled="False" Help="广告核销单行.ApplyInfo.面积" IsNull="True" IsProperty="False" IsSequence="False" Name="Area0" NPos="13" Point="0" UIFieldID="Area" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind7" />
+          <RoundRuleBind Name="RoundRuleBind7" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
+          <CurrencyType Name="CurrencyType7" />
           <Events />
         </NumberColumn>
         <TextBoxColumn ID="57ff2321-c9b1-4201-ac3b-5878c5ae57bd" DefaultValue="" DisplayFormat="50" Enabled="False" Help="广告核销单行.ApplyInfo.广告编号" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyAdvCode0" NPos="14" Point="0" TextAlign="Left" UIFieldID="ApplyAdvCode" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
