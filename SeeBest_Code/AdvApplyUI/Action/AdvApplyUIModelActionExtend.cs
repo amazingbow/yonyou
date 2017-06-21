@@ -61,7 +61,14 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         }
         private void ApproveClick_Extend(object sender, UIActionEventArgs e)
         {
-            UpDocStatus();
+            if (this.CurrentModel.AdvApplyBE.FocusedRecord.AdvApplyDocType_ApproveType.Value == Convert.ToInt32(UFIDA.U9.Base.Doc.ApproveTypeEnumData.WorkFlow))
+            {
+                //UFIDA.U9.UI.PDHelper.PDPopWebPart.ApproveFlow_ApproveBatchUIWebPart(this);//工作流审批
+            }
+            else
+            {
+                UpDocStatus();
+            }
             //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
             this.ApproveClick_DefaultImpl(sender, e);
         }

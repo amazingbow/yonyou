@@ -1028,8 +1028,21 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		{
 			get { return this.Fields["AdvApplyDocType_Name"]; }
 		}
+		public IUIField FieldAdvApplyDocType_ConfirmType
+		{
+			get { return this.Fields["AdvApplyDocType_ConfirmType"]; }
+		}
+		public IUIField FieldAdvApplyDocType_ApproveType
+		{
+			get { return this.Fields["AdvApplyDocType_ApproveType"]; }
+		}
 
 
+		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
+		public AdvApplyBEDefaultFilterFilter DefaultFilter
+		{
+			get { return (AdvApplyBEDefaultFilterFilter)this.CurrentFilter; }
+		}
 		#endregion
 
 		#region Init
@@ -1187,8 +1200,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType", "AdvApplyDocType", true,true, false, "",false,(UIFieldType)4,"0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a","a3a90268-cecf-429a-ba35-1cb4c309cb2d");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_Code", typeof(String), false,"","System.String", "AdvApplyDocType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0cbfb334-a513-4e1b-9581-12ca6b9cd385");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_Name", typeof(String), true,"","System.String", "AdvApplyDocType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b2325f25-4127-4ac8-8b54-a2a85a4676b6");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "AdvApplyDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","a3c563d4-337a-4ee9-9269-62bc777ba442");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "AdvApplyDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","be38d181-4a6b-4767-9188-5f75a7f0920c");
 
 
+			this.CurrentFilter = new AdvApplyBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -3211,9 +3227,64 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 				this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_Name] = value;
 			}
 		}
+		
+		
+		public  Int32 AdvApplyDocType_ConfirmType
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_ConfirmType] ;
+				//return (Int32)value;
+				return GetValue<Int32>(this.uiviewAdvApplyBE.FieldAdvApplyDocType_ConfirmType);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_ConfirmType] = value;
+			}
+		}
+		
+		
+		public  Int32? AdvApplyDocType_ApproveType
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_ApproveType] ;
+				//return (Int32?)value;
+				return GetValue<Int32?>(this.uiviewAdvApplyBE.FieldAdvApplyDocType_ApproveType);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_ApproveType] = value;
+			}
+		}
 		#endregion
 	}
 	
+	[Serializable]
+	public class AdvApplyBEDefaultFilterFilter : UIFilter
+	{
+		#region Constructor
+		public AdvApplyBEDefaultFilterFilter(IUIView view) 
+			: base("DefaultFilter",view,@"",@"")
+		{
+			InitClass();
+		}
+		//for Clone Constructor
+		private AdvApplyBEDefaultFilterFilter()
+			: base("DefaultFilter",null,"","")
+		{}
+		protected override IUIFilter CreateCloneInstance()
+		{
+			return new AdvApplyBEDefaultFilterFilter();
+		}
+		#endregion
+
+		#region property
+		#endregion
+		
+		#region function
+		private void InitClass()
+		{
+		}
+		#endregion
+
+	}
 
 
 

@@ -3169,6 +3169,94 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["SysVersion"]; }
 		}
+		public IUIField FieldLocation
+		{
+			get { return this.Fields["Location"]; }
+		}
+		public IUIField FieldAdvAppCustName
+		{
+			get { return this.Fields["AdvAppCustName"]; }
+		}
+		public IUIField FieldCountry
+		{
+			get { return this.Fields["Country"]; }
+		}
+		public IUIField FieldCustCounterName
+		{
+			get { return this.Fields["CustCounterName"]; }
+		}
+		public IUIField FieldRelPeople
+		{
+			get { return this.Fields["RelPeople"]; }
+		}
+		public IUIField FieldRelPhone
+		{
+			get { return this.Fields["RelPhone"]; }
+		}
+		public IUIField FieldCustAddress
+		{
+			get { return this.Fields["CustAddress"]; }
+		}
+		public IUIField FieldWidth
+		{
+			get { return this.Fields["Width"]; }
+		}
+		public IUIField FieldThick
+		{
+			get { return this.Fields["Thick"]; }
+		}
+		public IUIField FieldHeight
+		{
+			get { return this.Fields["Height"]; }
+		}
+		public IUIField FieldApplyAdvCode
+		{
+			get { return this.Fields["ApplyAdvCode"]; }
+		}
+		public IUIField FieldAdvCarrier
+		{
+			get { return this.Fields["AdvCarrier"]; }
+		}
+		public IUIField FieldAdvItem
+		{
+			get { return this.Fields["AdvItem"]; }
+		}
+		public IUIField FieldApplyQty
+		{
+			get { return this.Fields["ApplyQty"]; }
+		}
+		public IUIField FieldPrice
+		{
+			get { return this.Fields["Price"]; }
+		}
+		public IUIField FieldTotalMoney
+		{
+			get { return this.Fields["TotalMoney"]; }
+		}
+		public IUIField FieldReceiptNum
+		{
+			get { return this.Fields["ReceiptNum"]; }
+		}
+		public IUIField FieldMemo
+		{
+			get { return this.Fields["Memo"]; }
+		}
+		public IUIField FieldActualApproveQty
+		{
+			get { return this.Fields["ActualApproveQty"]; }
+		}
+		public IUIField FieldActualPrice
+		{
+			get { return this.Fields["ActualPrice"]; }
+		}
+		public IUIField FieldDiscount
+		{
+			get { return this.Fields["Discount"]; }
+		}
+		public IUIField FieldApproveMoney
+		{
+			get { return this.Fields["ApproveMoney"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -3187,6 +3275,28 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedOn", typeof(DateTime), false,"","System.DateTime", "", false,false, false, "",false,(UIFieldType)1,"3834a958-120f-4ac9-8d60-1a7be6d3f12f","3a2d6153-9666-4423-acfc-6b4262fbbc1c");
 			UIModelRuntimeFactory.AddNewUIField(this,"ModifiedBy", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9cf5266e-383e-44df-a0de-e1728f19bd2a");
 			UIModelRuntimeFactory.AddNewUIField(this,"SysVersion", typeof(Int64), false,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","07168452-4a2f-4b4f-9203-5ff8627998de");
+			UIModelRuntimeFactory.AddNewUIField(this,"Location", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e5442bd3-5f3b-4024-8b52-d5e6caddde84");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvAppCustName", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","52f650b2-be2b-4f07-a2ba-a9866858eaa3");
+			UIModelRuntimeFactory.AddNewUIField(this,"Country", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f51adc28-57f3-4265-b9ec-9c75c130c711");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustCounterName", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3b8de051-f11a-43dc-9a78-e612e4d4aa56");
+			UIModelRuntimeFactory.AddNewUIField(this,"RelPeople", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2c3d37a4-ac19-4097-88ae-4bb0c1271e50");
+			UIModelRuntimeFactory.AddNewUIField(this,"RelPhone", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0c71d715-2609-4e4b-8340-4e5663cb1df6");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustAddress", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","14b47e94-c684-4abc-a056-dec0b24cc933");
+			UIModelRuntimeFactory.AddNewUIField(this,"Width", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a5885778-653b-42f1-8f9d-09a7e68cf5cf");
+			UIModelRuntimeFactory.AddNewUIField(this,"Thick", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","369869ac-74b4-4ea7-ab00-a3ff632fb0ea");
+			UIModelRuntimeFactory.AddNewUIField(this,"Height", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","57b91559-4297-494a-bb33-7e7cf6831a4d");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyAdvCode", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","80d56148-fece-4eb7-a0b9-c5d6b7f37d21");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCarrier", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","e2ae78ce-939c-4ada-94f2-0cde5a9205d6");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvItem", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","779db0e7-761f-4374-84b8-3bf498656c4a");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyQty", typeof(Decimal), false,"0","System.Decimal", "", false,false, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","45623d25-3459-4e22-94be-f3fd20ca0397");
+			UIModelRuntimeFactory.AddNewUIField(this,"Price", typeof(Decimal), false,"0","System.Decimal", "", false,false, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","9e06be44-d17b-49ec-8927-75f7322fef23");
+			UIModelRuntimeFactory.AddNewUIField(this,"TotalMoney", typeof(Decimal), false,"0","System.Decimal", "", false,false, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","c2975d29-b2d5-437c-b3d9-1621051163c7");
+			UIModelRuntimeFactory.AddNewUIField(this,"ReceiptNum", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","1f01752d-80c2-4683-bab2-7e5666ec2e61");
+			UIModelRuntimeFactory.AddNewUIField(this,"Memo", typeof(String), false,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","59bf41d9-8f27-44ef-9d1c-9194824555da");
+			UIModelRuntimeFactory.AddNewUIField(this,"ActualApproveQty", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5b32c9fa-1e45-4185-8fd5-373f1410961b");
+			UIModelRuntimeFactory.AddNewUIField(this,"ActualPrice", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6ad5c75a-37ff-4dba-91eb-a30d2578eb8b");
+			UIModelRuntimeFactory.AddNewUIField(this,"Discount", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f7089323-3fed-438b-be71-79768a5264cf");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApproveMoney", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","76fec1fc-8d18-4bbd-ad2c-a976b324e50d");
 
 
 			this.CurrentFilter = new AdvApproveLinesDefaultFilterFilter(this);
@@ -3312,6 +3422,292 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			}
 			set{
 				this[this.uiviewAdvApproveLines.FieldSysVersion] = value;
+			}
+		}
+		
+		
+		public  String Location
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldLocation] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldLocation);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldLocation] = value;
+			}
+		}
+		
+		
+		public  String AdvAppCustName
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldAdvAppCustName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldAdvAppCustName);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldAdvAppCustName] = value;
+			}
+		}
+		
+		
+		public  String Country
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldCountry] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldCountry);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldCountry] = value;
+			}
+		}
+		
+		
+		public  String CustCounterName
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldCustCounterName] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldCustCounterName);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldCustCounterName] = value;
+			}
+		}
+		
+		
+		public  String RelPeople
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldRelPeople] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldRelPeople);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldRelPeople] = value;
+			}
+		}
+		
+		
+		public  String RelPhone
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldRelPhone] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldRelPhone);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldRelPhone] = value;
+			}
+		}
+		
+		
+		public  String CustAddress
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldCustAddress] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldCustAddress);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldCustAddress] = value;
+			}
+		}
+		
+		
+		public  Decimal Width
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldWidth] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldWidth);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldWidth] = value;
+			}
+		}
+		
+		
+		public  Decimal Thick
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldThick] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldThick);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldThick] = value;
+			}
+		}
+		
+		
+		public  Decimal Height
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldHeight] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldHeight);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldHeight] = value;
+			}
+		}
+		
+		
+		public  String ApplyAdvCode
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldApplyAdvCode] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldApplyAdvCode);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldApplyAdvCode] = value;
+			}
+		}
+		
+		
+		public  String AdvCarrier
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldAdvCarrier] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldAdvCarrier);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldAdvCarrier] = value;
+			}
+		}
+		
+		
+		public  String AdvItem
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldAdvItem] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldAdvItem);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldAdvItem] = value;
+			}
+		}
+		
+		
+		public  Decimal ApplyQty
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldApplyQty] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldApplyQty);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldApplyQty] = value;
+			}
+		}
+		
+		
+		public  Decimal Price
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldPrice] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldPrice);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldPrice] = value;
+			}
+		}
+		
+		
+		public  Decimal TotalMoney
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldTotalMoney] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldTotalMoney);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldTotalMoney] = value;
+			}
+		}
+		
+		
+		public  String ReceiptNum
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldReceiptNum] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldReceiptNum);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldReceiptNum] = value;
+			}
+		}
+		
+		
+		public  String Memo
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldMemo] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveLines.FieldMemo);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldMemo] = value;
+			}
+		}
+		
+		
+		public  Decimal ActualApproveQty
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldActualApproveQty] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldActualApproveQty);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldActualApproveQty] = value;
+			}
+		}
+		
+		
+		public  Decimal ActualPrice
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldActualPrice] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldActualPrice);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldActualPrice] = value;
+			}
+		}
+		
+		
+		public  Decimal Discount
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldDiscount] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldDiscount);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldDiscount] = value;
+			}
+		}
+		
+		
+		public  Decimal ApproveMoney
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldApproveMoney] ;
+				//return (Decimal)value;
+				return GetValue<Decimal>(this.uiviewAdvApproveLines.FieldApproveMoney);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldApproveMoney] = value;
 			}
 		}
 		#endregion

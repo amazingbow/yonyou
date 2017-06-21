@@ -88,6 +88,21 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             {
                 if (item.IsSelected.Value)
                 {
+                    if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 0)
+                    {
+                        bool hasFlag = false;
+                        foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                        {
+                            if (about.Code == item.Code)
+                            {
+                                hasFlag = true;
+                            }
+                        }
+                        if (hasFlag)
+                        {
+                            continue;
+                        }
+                    }
                     var newRecord = this.Model.AdvApplyBE_AdvAboutBE.AddNewUIRecord();
                     newRecord.Code = item.Code;
                     newRecord.Name = item.Name;

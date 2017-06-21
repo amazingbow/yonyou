@@ -123,8 +123,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         IUFFldNumberControl SysVersion257;
         IUFLabel lblDocStatus224;
         IUFFldDropDownList DocStatus224;
-        IUFLabel lblAdvApproveDocType585;
-        IUFFldReference AdvApproveDocType585;
+        IUFLabel lblAdvApproveDocType803;
+        IUFFldReference AdvApproveDocType803;
         IUFDataGrid DataGrid5;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
@@ -630,24 +630,25 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.DocStatus224, "15");		
 		 
 
-				this.lblAdvApproveDocType585 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApproveDocType585", "", "True", "True", "Right", 100, 20, 4, 0, 1, 1, "100","752fe996-c5b0-4f32-ad7c-448cd4edde2e","1437c66d-8757-4a15-bd57-a55464831c83");
+				this.lblAdvApproveDocType803 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApproveDocType803", "", "True", "True", "Right", 100, 20, 4, 0, 1, 1, "100","752fe996-c5b0-4f32-ad7c-448cd4edde2e","fad3fc78-1156-452d-a357-b3654c64fc60");
 
 
 								
 
 		
-			UIControlBuilder.BuilderUFControl(this.lblAdvApproveDocType585, "16");		
+			UIControlBuilder.BuilderUFControl(this.lblAdvApproveDocType803, "16");		
 
 
-				this.AdvApproveDocType585 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"AdvApproveDocType585",true,true, true,140, 20, 6, 0, 1, 1, "100","17",false,false,true,"lblAdvApproveDocType585","752fe996-c5b0-4f32-ad7c-448cd4edde2e","941a9736-3bce-443f-9647-42b000d6f657");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApproveDocType585, "False", "AdvApproveDocType", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldAdvApproveDocType, "AdvApproveBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApproveDocType585,"", 580,408, "","","", null,null);
+				this.AdvApproveDocType803 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"AdvApproveDocType803",true,true, true,140, 20, 6, 0, 1, 1, "100","17",false,false,true,"lblAdvApproveDocType803","752fe996-c5b0-4f32-ad7c-448cd4edde2e","c7a53813-d2fc-4116-9e46-3ad45f681c43");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApproveDocType803, "False", "AdvApproveDocType", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldAdvApproveDocType, "AdvApproveBE");
+			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApproveDocType803,"741bf694-2ccf-4255-bc49-c3c5a0c067e1", 580,408, "","","ID", this.Model.AdvApproveBE.FieldAdvApproveDocType_Code,this.Model.AdvApproveBE.FieldAdvApproveDocType_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvApproveDocType803,"AdvApproveDocType803",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvApproveDocType803","ID","Key"),new ReferenceOutputParam("AdvApproveDocType803","Code","Value"),new ReferenceOutputParam("AdvApproveDocType803","Name","Text"),new ReferenceOutputParam("","ConfirmType",""),new ReferenceOutputParam("","ApproveType",""),new ReferenceOutputParam("","AdvDocEnum",""),});
 				
 
 		
-			UIControlBuilder.BuilderUFControl(this.AdvApproveDocType585, "17");		
+			UIControlBuilder.BuilderUFControl(this.AdvApproveDocType803, "17");		
 		 
 
 
@@ -656,8 +657,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			this.lblAdvApplyCust95.SetMultiOrgInfo(this.AdvApplyCust95,false);
 			
 												
-			this.AdvApproveDocType585.IsMultiOrg  = false ;
-			this.lblAdvApproveDocType585.SetMultiOrgInfo(this.AdvApproveDocType585,false);
+			this.AdvApproveDocType803.IsMultiOrg  = false ;
+			this.lblAdvApproveDocType803.SetMultiOrgInfo(this.AdvApproveDocType803,false);
 			
 
 
@@ -682,7 +683,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid5", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, true,true,true,true,true,20,false, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "2");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 972, 339, 0, 1, 2, 2, "100");
-			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvApproveBE_AdvApproveLine, "AdvApproveBE_AdvApproveLine", "", null, 20, "广告核销单.Misc.广告核销单行");
+			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvApproveLines, "AdvApproveLines", "", null, 20, "");
 			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
 			_UFGrid.AllowSelectAllPage=false;
 			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
@@ -695,82 +696,112 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			IUFDataGridColumn column ;
 			GridColumn gridColumn ;
 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID168","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, false, 7, 100, "19.0",true, false,"","cd4f706b-cf8a-4f08-91e7-040297e1d4d8","cd4f706b-cf8a-4f08-91e7-040297e1d4d8","fd90fd33-b5db-46ca-93a2-4c2e7d11acad");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvAppCustName0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["AdvAppCustName"]/*AdvAppCustName*/,"AdvAppCustName", false, true, false, false, false, true, 0, 100, "50",true, false,"","52f650b2-be2b-4f07-a2ba-a9866858eaa3","52f650b2-be2b-4f07-a2ba-a9866858eaa3","35c53dac-700e-4009-898e-f187f53b03c7");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Location0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["Location"]/*Location*/,"Location", false, true, false, false, false, true, 0, 100, "50",true, false,"","e5442bd3-5f3b-4024-8b52-d5e6caddde84","e5442bd3-5f3b-4024-8b52-d5e6caddde84","689d7ea3-a5ac-41c2-a53e-1f813a06837e");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Country0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["Country"]/*Country*/,"Country", false, true, false, false, false, true, 0, 100, "50",true, false,"","f51adc28-57f3-4265-b9ec-9c75c130c711","f51adc28-57f3-4265-b9ec-9c75c130c711","7f7aab0f-4747-4824-8d55-a8959a79aaf1");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustCounterName0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["CustCounterName"]/*CustCounterName*/,"CustCounterName", false, true, false, false, false, true, 0, 100, "50",true, false,"","3b8de051-f11a-43dc-9a78-e612e4d4aa56","3b8de051-f11a-43dc-9a78-e612e4d4aa56","c2654cb2-e7af-4c0e-b7c5-d975dca1d89d");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RelPeople0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["RelPeople"]/*RelPeople*/,"RelPeople", false, true, false, false, false, true, 0, 100, "50",true, false,"","2c3d37a4-ac19-4097-88ae-4bb0c1271e50","2c3d37a4-ac19-4097-88ae-4bb0c1271e50","e1552e33-8718-4cc4-8fd7-040570ed757b");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RelPhone0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["RelPhone"]/*RelPhone*/,"RelPhone", false, true, false, false, false, true, 0, 100, "50",true, false,"","0c71d715-2609-4e4b-8340-4e5663cb1df6","0c71d715-2609-4e4b-8340-4e5663cb1df6","2b63307c-33f1-4354-ad86-3e6498fe9f26");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustAddress0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["CustAddress"]/*CustAddress*/,"CustAddress", false, true, false, false, false, true, 0, 100, "50",true, false,"","14b47e94-c684-4abc-a056-dec0b24cc933","14b47e94-c684-4abc-a056-dec0b24cc933","3c1663e8-b2ce-4c3f-a053-bcbd3b10cd91");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 2,this.Model.AdvApproveLines.Fields["Width"]/*Width*/,"Width", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","a5885778-653b-42f1-8f9d-09a7e68cf5cf","a5885778-653b-42f1-8f9d-09a7e68cf5cf","0fb25681-bcfb-4d24-b7e8-befa658b13e8");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SysVersion258","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["SysVersion"]/*SysVersion*/,"SysVersion", false, false, true, false, false, true, 7, 100, "19.0",true, false,"0","326949eb-5fde-471b-b198-06b6b9a0272e","326949eb-5fde-471b-b198-06b6b9a0272e","b2de0f1b-c5aa-4fbd-9364-039df8a8c421");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 2,this.Model.AdvApproveLines.Fields["Thick"]/*Thick*/,"Thick", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","369869ac-74b4-4ea7-ab00-a3ff632fb0ea","369869ac-74b4-4ea7-ab00-a3ff632fb0ea","11f77c7a-af91-48d8-a9ae-86c39701963a");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvAppCustName0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["AdvAppCustName"]/*AdvAppCustName*/,"AdvAppCustName", false, true, false, false, false, true, 0, 100, "50",true, false,"","983c42d1-3efe-457b-b921-22e7d7bf0fcb","983c42d1-3efe-457b-b921-22e7d7bf0fcb","d54b0ff7-2602-4548-b354-760eb6e7f679");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Location0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Location"]/*Location*/,"Location", false, true, false, false, false, true, 0, 100, "50",true, false,"","d0270885-cd3c-43f8-a3c1-12542e5bf66a","d0270885-cd3c-43f8-a3c1-12542e5bf66a","2a57e32b-1808-49bd-8847-c60e37da96bf");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Country0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Country"]/*Country*/,"Country", false, true, false, false, false, true, 0, 100, "50",true, false,"","8c0e33ca-10bc-4d6f-adaf-8dbc4037f3f1","8c0e33ca-10bc-4d6f-adaf-8dbc4037f3f1","59aa4551-dedc-48d0-98d3-e2df512cf8e2");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustCounterName0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["CustCounterName"]/*CustCounterName*/,"CustCounterName", false, true, false, false, false, true, 0, 100, "50",true, false,"","56beb045-b2fa-4356-9c6d-6b78c80318b6","56beb045-b2fa-4356-9c6d-6b78c80318b6","a861464b-838e-4639-9366-8ee5d78fdfe3");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RelPeople0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["RelPeople"]/*RelPeople*/,"RelPeople", false, true, false, false, false, true, 0, 100, "50",true, false,"","1a3e001b-e629-4f73-88b9-1a3eb58aaf4f","1a3e001b-e629-4f73-88b9-1a3eb58aaf4f","5923453b-e8f0-426d-a685-f90ff7efd2ed");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"RelPhone0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["RelPhone"]/*RelPhone*/,"RelPhone", false, true, false, false, false, true, 0, 100, "50",true, false,"","45baf65d-d4c2-4a87-9877-cee830c95473","45baf65d-d4c2-4a87-9877-cee830c95473","898391ef-0124-4d91-9886-f9fdf87f5b88");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustAddress0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["CustAddress"]/*CustAddress*/,"CustAddress", false, true, false, false, false, true, 0, 100, "50",true, false,"","a45f2c53-bd89-427c-9702-43db83290d1f","a45f2c53-bd89-427c-9702-43db83290d1f","7d5bae4b-a9b7-4bfe-9b37-93809a91546a");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Width"]/*Width*/,"Width", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","87ba5af0-8208-4aa7-b2cd-71b1bd7857aa","87ba5af0-8208-4aa7-b2cd-71b1bd7857aa","fd814915-7377-4b0d-ac4f-3bfd9e7c5a8a");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Height0","NumberColumnModel", "", 2,this.Model.AdvApproveLines.Fields["Height"]/*Height*/,"Height", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","57b91559-4297-494a-bb33-7e7cf6831a4d","57b91559-4297-494a-bb33-7e7cf6831a4d","429c3a08-5e33-47d1-9ab2-ec2bb71ca573");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Thick"]/*Thick*/,"Thick", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","1d88cb86-17ee-46ef-9207-a15954fe1cbd");
-			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
-			,true,"",false,"1","1");
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Height0","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Height"]/*Height*/,"Height", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","555af42c-6726-45e4-b51c-e051f66f3cd9","555af42c-6726-45e4-b51c-e051f66f3cd9","8181243c-954a-431b-be7b-2e2af88b62c9");
-			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
-			,true,"",false,"1","1");
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Area0","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["Area"]/*Area*/,"Area", false, true, false, false, false, true, 8, 100, "24.9",true, false,"0","448b2763-2815-4bfd-9790-67152e6ea0b4","448b2763-2815-4bfd-9790-67152e6ea0b4","a97663dc-5ed1-45a3-8f02-7408d5236b1c");
-			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
-			,true,"",false,"1","1");
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApplyAdvCode0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["ApplyAdvCode"]/*ApplyAdvCode*/,"ApplyAdvCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","49c26963-1dc0-4523-ae55-00c31dd23c1d","49c26963-1dc0-4523-ae55-00c31dd23c1d","57ff2321-c9b1-4201-ac3b-5878c5ae57bd");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApplyAdvCode0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ApplyAdvCode"]/*ApplyAdvCode*/,"ApplyAdvCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","80d56148-fece-4eb7-a0b9-c5d6b7f37d21","80d56148-fece-4eb7-a0b9-c5d6b7f37d21","d739aa5d-e5a2-448d-a695-f71ab57317a2");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvCarrier0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["AdvCarrier"]/*AdvCarrier*/,"AdvCarrier", false, true, false, false, false, true, 0, 100, "50",true, false,"","43420188-bde0-46d6-8af5-09ccb88795e5","43420188-bde0-46d6-8af5-09ccb88795e5","6a92896e-52f2-4208-87b3-1ad2a494218a");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvCarrier0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["AdvCarrier"]/*AdvCarrier*/,"AdvCarrier", false, true, false, false, false, true, 0, 100, "50",true, false,"","e2ae78ce-939c-4ada-94f2-0cde5a9205d6","e2ae78ce-939c-4ada-94f2-0cde5a9205d6","a86809fb-6e8a-45dd-b05b-ffab380de977");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvItem0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["AdvItem"]/*AdvItem*/,"AdvItem", false, true, false, false, false, true, 0, 100, "50",true, false,"","195843a5-0a6a-4207-9749-749470b7ae99","195843a5-0a6a-4207-9749-749470b7ae99","5417606a-3f78-4d9e-b631-60b0882aeea6");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvItem0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["AdvItem"]/*AdvItem*/,"AdvItem", false, true, false, false, false, true, 0, 100, "50",true, false,"","779db0e7-761f-4374-84b8-3bf498656c4a","779db0e7-761f-4374-84b8-3bf498656c4a","a00695a1-6173-4084-98ae-3338f62e3de5");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApplyQty0","NumberColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ApplyQty"]/*ApplyQty*/,"ApplyQty", false, true, true, false, false, false, 8, 100, "24,9",true, false,"0","45623d25-3459-4e22-94be-f3fd20ca0397","45623d25-3459-4e22-94be-f3fd20ca0397","315cd6d9-0f76-452d-a843-54c753b98190");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Price0","NumberColumnModel", "", 0,this.Model.AdvApproveLines.Fields["Price"]/*Price*/,"Price", false, true, true, false, false, false, 8, 100, "24,9",true, false,"0","9e06be44-d17b-49ec-8927-75f7322fef23","9e06be44-d17b-49ec-8927-75f7322fef23","243e30ec-4002-4fd3-8ea2-45e3242b93e4");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"TotalMoney0","NumberColumnModel", "", 0,this.Model.AdvApproveLines.Fields["TotalMoney"]/*TotalMoney*/,"TotalMoney", false, true, true, false, false, false, 8, 100, "24,9",true, false,"0","c2975d29-b2d5-437c-b3d9-1621051163c7","c2975d29-b2d5-437c-b3d9-1621051163c7","57804e3f-2cb8-474a-a593-4f3ed0705ab1");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ReceiptNum0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ReceiptNum"]/*ReceiptNum*/,"ReceiptNum", false, true, true, false, false, false, 0, 100, "50",true, false,"","1f01752d-80c2-4683-bab2-7e5666ec2e61","1f01752d-80c2-4683-bab2-7e5666ec2e61","17bbebcf-5609-4b5b-8ba8-f27eaa2ae320");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Memo0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["Memo"]/*Memo*/,"Memo", false, true, true, false, false, false, 0, 100, "500",true, false,"","59bf41d9-8f27-44ef-9d1c-9194824555da","59bf41d9-8f27-44ef-9d1c-9194824555da","faa2bb55-dcc3-47bd-b121-5dbfaffdfa87");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","500") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ActualApproveQty0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ActualApproveQty"]/*ActualApproveQty*/,"ActualApproveQty", false, true, true, false, false, false, 8, 100, "50",true, false,"","5b32c9fa-1e45-4185-8fd5-373f1410961b","5b32c9fa-1e45-4185-8fd5-373f1410961b","1ec7c576-171e-49b3-9221-eeac2cce5663");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ActualPrice0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ActualPrice"]/*ActualPrice*/,"ActualPrice", false, true, true, false, false, false, 8, 100, "50",true, false,"","6ad5c75a-37ff-4dba-91eb-a30d2578eb8b","6ad5c75a-37ff-4dba-91eb-a30d2578eb8b","485dd0b9-437d-4836-b61d-ab79c15b72a2");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Discount0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["Discount"]/*Discount*/,"Discount", false, true, true, false, false, false, 8, 100, "50",true, false,"","f7089323-3fed-438b-be71-79768a5264cf","f7089323-3fed-438b-be71-79768a5264cf","a9cc07a5-9354-40a4-a6d2-3dd9ca69277f");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApproveMoney0","TextBoxColumnModel", "", 0,this.Model.AdvApproveLines.Fields["ApproveMoney"]/*ApproveMoney*/,"ApproveMoney", false, true, true, false, false, false, 8, 100, "50",true, false,"","76fec1fc-8d18-4bbd-ad2c-a976b324e50d","76fec1fc-8d18-4bbd-ad2c-a976b324e50d","5a228092-1d59-4fdd-9570-1306a474b299");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
