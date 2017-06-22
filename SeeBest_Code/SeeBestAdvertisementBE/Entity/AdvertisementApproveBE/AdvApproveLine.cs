@@ -881,6 +881,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 用于定位行 (该属性可为空,但有默认值)
+			/// 广告核销单行.Misc.用于定位行
+			/// </summary>
+			/// <value></value>
+			public  System.Int64 OtherInfo
+			{
+				get
+				{
+					System.Int64 value  = (System.Int64)base.GetValue("OtherInfo");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1665,6 +1684,30 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 用于定位行 (该属性可为空,但有默认值)
+		/// 广告核销单行.Misc.用于定位行
+		/// </summary>
+		/// <value></value>
+			public  System.Int64 OtherInfo
+		{
+			get
+			{
+				System.Int64 value  = (System.Int64)base.GetValue("OtherInfo");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("OtherInfo", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1839,6 +1882,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvItem　{ get { return EntityRes.GetResource("AdvItem");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("OtherInfo")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_OtherInfo　{ get { return EntityRes.GetResource("OtherInfo");　}　}
 		#endregion 
 
 
@@ -2005,6 +2053,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 广告项目 的名称
 			/// </summary>
 			public static string AdvItem　{ get { return "AdvItem";　}　}
+				
+			/// <summary>
+			/// 属性: 用于定位行 的名称
+			/// </summary>
+			public static string OtherInfo　{ get { return "OtherInfo";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2012,7 +2065,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																												
+																																																														
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2082,6 +2135,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("Discount","Discount");
 			this.exdMultiLangAttrs.Add("ApproveMoney","ApproveMoney");
 			this.exdMultiLangAttrs.Add("AdvItem","AdvItem");
+			this.exdMultiLangAttrs.Add("OtherInfo","OtherInfo");
         }
 	#endregion 
 
@@ -2098,7 +2152,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																																																																																										
+																																																																																													
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2119,6 +2173,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void DeSerializeKey(AdvApproveLineData data)
 		{
 		
+			
+
 			
 
 			
@@ -2278,6 +2334,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 								this.SetTypeValue("ApproveMoney",data.ApproveMoney);
 		
 								this.SetTypeValue("AdvItem",data.AdvItem);
+		
+								this.SetTypeValue("OtherInfo",data.OtherInfo);
 		
 			#endregion 
 
@@ -2533,6 +2591,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 					data.AdvItem=(System.String)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("OtherInfo");
+				if (obj != null)
+					data.OtherInfo=(System.Int64)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2564,6 +2629,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

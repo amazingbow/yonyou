@@ -2610,6 +2610,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["AdvItem"]; }
 		}
+		public IUIField FieldOtherInfo
+		{
+			get { return this.Fields["OtherInfo"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -2652,6 +2656,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"Discount", typeof(Decimal), true,"0","System.Decimal", "Discount", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","d57cac96-8aec-496c-9db9-a194b96c778a");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApproveMoney", typeof(Decimal), true,"0","System.Decimal", "ApproveMoney", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","b46a26a9-0c4c-4a2f-ad3b-5d3bdf261601");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvItem", typeof(String), true,"","System.String", "AdvItem", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","195843a5-0a6a-4207-9749-749470b7ae99");
+			UIModelRuntimeFactory.AddNewUIField(this,"OtherInfo", typeof(Int64), true,"0","System.Int64", "OtherInfo", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","b40a0df2-028f-4a85-9bfd-48e50b81fa3d");
 
 
 			this.CurrentFilter = new AdvApproveBE_AdvApproveLineDefaultFilterFilter(this);
@@ -3091,6 +3096,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvItem] = value;
 			}
 		}
+		
+		
+		public  Int64? OtherInfo
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldOtherInfo] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewAdvApproveBE_AdvApproveLine.FieldOtherInfo);
+			}
+			set{
+				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldOtherInfo] = value;
+			}
+		}
 		#endregion
 	}
 	
@@ -3257,6 +3275,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["ApproveMoney"]; }
 		}
+		public IUIField FieldApplyID
+		{
+			get { return this.Fields["ApplyID"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -3297,6 +3319,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ActualPrice", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6ad5c75a-37ff-4dba-91eb-a30d2578eb8b");
 			UIModelRuntimeFactory.AddNewUIField(this,"Discount", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f7089323-3fed-438b-be71-79768a5264cf");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApproveMoney", typeof(Decimal), false,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","76fec1fc-8d18-4bbd-ad2c-a976b324e50d");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyID", typeof(Int64), true,"","System.Int64", "", false,false, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","738988ab-09d8-4597-ac64-659285330875");
 
 
 			this.CurrentFilter = new AdvApproveLinesDefaultFilterFilter(this);
@@ -3708,6 +3731,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			}
 			set{
 				this[this.uiviewAdvApproveLines.FieldApproveMoney] = value;
+			}
+		}
+		
+		
+		public  Int64? ApplyID
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveLines.FieldApplyID] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewAdvApproveLines.FieldApplyID);
+			}
+			set{
+				this[this.uiviewAdvApproveLines.FieldApplyID] = value;
 			}
 		}
 		#endregion

@@ -49,6 +49,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -92,7 +93,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     							Discount=0m; 
 	     							ApproveMoney=0m; 
 	     			
-
+	     							OtherInfo= 0; 		
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -710,10 +711,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 用于定位行
+		/// 广告核销单行.Misc.用于定位行
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Int64 m_otherInfo ;
+		public System.Int64 OtherInfo
+		{
+			get	
+			{	
+				return m_otherInfo  ;
+			}
+			set	
+			{	
+				m_otherInfo = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																														
+																															
 		#endregion 		
 	}	
 
