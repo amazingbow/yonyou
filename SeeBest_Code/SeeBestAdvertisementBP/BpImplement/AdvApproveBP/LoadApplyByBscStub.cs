@@ -36,7 +36,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-        List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 custBscID, System.DateTime month);
+        List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context ,out IList<MessageBase> outMessages ,System.Int64 custBscID, System.DateTime startDate, System.DateTime endDate);
     }
 
     [UFSoft.UBF.Service.ServiceImplement]
@@ -46,24 +46,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
         #region ILoadApplyByBsc Members
 
         //[OperationBehavior]
-        public List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 custBscID, System.DateTime month)
+        public List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context ,out IList<MessageBase> outMessages, System.Int64 custBscID, System.DateTime startDate, System.DateTime endDate)
         {
 			
 			ICommonDataContract commonData = CommonDataContractFactory.GetCommonData(context, out outMessages);
-			return DoEx(commonData, custBscID, month);
+			return DoEx(commonData, custBscID, startDate, endDate);
         }
         
         //[OperationBehavior]
-        public List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> DoEx(ICommonDataContract commonData, System.Int64 custBscID, System.DateTime month)
+        public List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> DoEx(ICommonDataContract commonData, System.Int64 custBscID, System.DateTime startDate, System.DateTime endDate)
         {
 			this.CommonData = commonData ;
             try
             {
                 BeforeInvoke("UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.LoadApplyByBsc");                
                 LoadApplyByBsc objectRef = new LoadApplyByBsc();
-		
+			
 				objectRef.CustBscID = custBscID;
-				objectRef.Month = month;
+				objectRef.StartDate = startDate;
+				objectRef.EndDate = endDate;
 
 				//处理返回类型.
 				List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDto> result = objectRef.Do();
@@ -71,17 +72,17 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 				if (result == null)
 					return null ;
 		
-				List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> listEntityList = new List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData>();
+				List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> list = new List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData>();
 				foreach (UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDto obj in result)
 				{
 					if (obj == null)
 						continue;
 
 					UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData resultdata = obj.ToEntityData();
-					listEntityList.Add(resultdata);
+					list.Add(resultdata);
 				}
-				DoSerializeKey(listEntityList, "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.LoadApplyByBsc");
-				return listEntityList;
+				DoSerializeKey(list, "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.LoadApplyByBsc");
+				return list;
 
 	        }
 			catch (System.Exception e)

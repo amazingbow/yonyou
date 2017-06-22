@@ -589,10 +589,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["AdvApplyCust_Name"]; }
 		}
-		public IUIField FieldMonth
-		{
-			get { return this.Fields["Month"]; }
-		}
 		public IUIField FieldAdvApproveDocType
 		{
 			get { return this.Fields["AdvApproveDocType"]; }
@@ -624,6 +620,14 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		public IUIField FieldAdvApproveDocType_ApproveType
 		{
 			get { return this.Fields["AdvApproveDocType_ApproveType"]; }
+		}
+		public IUIField FieldStartDate
+		{
+			get { return this.Fields["StartDate"]; }
+		}
+		public IUIField FieldEndDate
+		{
+			get { return this.Fields["EndDate"]; }
 		}
 
 
@@ -753,7 +757,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust", typeof(Int64), true,"","UFIDA.U9.CBO.SCM.Customer.Customer", "AdvApplyCust", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","54043f33-6248-4fda-9b0f-be0e8c952b0b");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Code", typeof(String), false,"","System.String", "AdvApplyCust.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","87458380-ad30-4b0f-bdbd-ec61521d3606");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Name", typeof(String), true,"","System.String", "AdvApplyCust.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f11c2809-6327-456b-8287-79c0d8cdc83d");
-			UIModelRuntimeFactory.AddNewUIField(this,"Month", typeof(DateTime), true,"","System.Date", "Month", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","75e91312-415e-4e70-9688-3281c52722f5");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType", "AdvApproveDocType", true,true, false, "",false,(UIFieldType)4,"0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a","752fe996-c5b0-4f32-ad7c-448cd4edde2e");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_Code", typeof(String), false,"","System.String", "AdvApproveDocType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3cb163a4-b559-4847-a7f3-09770c054044");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_Name", typeof(String), true,"","System.String", "AdvApproveDocType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","536dc124-3662-4d65-8953-382e2b2abd20");
@@ -762,6 +765,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"DocStatus", typeof(Int32), true,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum", "DocStatus", true,true, false, "",false,(UIFieldType)2,"c597484c-846b-48f0-8c05-49caf9820a86","e4e595ff-3cfc-4af7-9acc-31c85fc245fe");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "AdvApproveDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","547c8d10-2426-4f02-a3a3-3689b8535530");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "AdvApproveDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","a86c50ca-11fb-4a2b-8fc7-fd50245883fc");
+			UIModelRuntimeFactory.AddNewUIField(this,"StartDate", typeof(DateTime), true,"","System.Date", "StartDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","9b570f72-15f3-422c-a0be-8279b33ffc80");
+			UIModelRuntimeFactory.AddNewUIField(this,"EndDate", typeof(DateTime), true,"","System.Date", "EndDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","e71c4f9c-74aa-401c-a523-66e4dcfa6c2a");
 
 
 			this.CurrentFilter = new AdvApproveBEDefaultFilterFilter(this);
@@ -2321,19 +2326,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		}
 		
 		
-		public  DateTime? Month
-		{
-			get{
-				//object value = this[this.uiviewAdvApproveBE.FieldMonth] ;
-				//return (DateTime?)value;
-				return GetValue<DateTime?>(this.uiviewAdvApproveBE.FieldMonth);
-			}
-			set{
-				this[this.uiviewAdvApproveBE.FieldMonth] = value;
-			}
-		}
-		
-		
 		public  Int64? AdvApproveDocType
 		{
 			get{
@@ -2434,6 +2426,32 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			}
 			set{
 				this[this.uiviewAdvApproveBE.FieldAdvApproveDocType_ApproveType] = value;
+			}
+		}
+		
+		
+		public  DateTime? StartDate
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE.FieldStartDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewAdvApproveBE.FieldStartDate);
+			}
+			set{
+				this[this.uiviewAdvApproveBE.FieldStartDate] = value;
+			}
+		}
+		
+		
+		public  DateTime? EndDate
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE.FieldEndDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewAdvApproveBE.FieldEndDate);
+			}
+			set{
+				this[this.uiviewAdvApproveBE.FieldEndDate] = value;
 			}
 		}
 		#endregion

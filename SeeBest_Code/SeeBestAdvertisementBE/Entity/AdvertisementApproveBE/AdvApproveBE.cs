@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// <returns>Instance</returns>
 		public  static AdvApproveBE Create() {
 			AdvApproveBE entity = (AdvApproveBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																					 
+																								 
 			return entity;
 		}
 
@@ -433,15 +433,15 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 月份 (该属性可为空,且无默认值)
-			/// 广告核销单.Misc.月份
+			/// 开始日期 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.开始日期
 			/// </summary>
 			/// <value></value>
-			public  System.DateTime Month
+			public  System.DateTime StartDate
 			{
 				get
 				{
-					object obj = base.GetValue("Month");
+					object obj = base.GetValue("StartDate");
 					if (obj == null)
 						return System.DateTime.MinValue;
 					else
@@ -545,6 +545,28 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 					UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum value  = UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum.GetFromValue(base.GetValue("DocStatus"));
 					return value;
+				}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 结束日期 (该属性可为空,且无默认值)
+			/// 广告核销单.Misc.结束日期
+			/// </summary>
+			/// <value></value>
+			public  System.DateTime EndDate
+			{
+				get
+				{
+					object obj = base.GetValue("EndDate");
+					if (obj == null)
+						return System.DateTime.MinValue;
+					else
+					       return (System.DateTime)obj;
 				}
 			}
 		
@@ -667,22 +689,22 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 		
 			/// <summary>
-		/// 月份 (该属性可为空,且无默认值)
-		/// 广告核销单.Misc.月份
+		/// 开始日期 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.开始日期
 		/// </summary>
 		/// <value></value>
-			public  System.DateTime Month
+			public  System.DateTime StartDate
 		{
 			get
 			{
-				System.DateTime value  = (System.DateTime)base.GetValue("Month");
+				System.DateTime value  = (System.DateTime)base.GetValue("StartDate");
 				return value.Date ;
 				}
 				set
 			{
 				
 				
-				base.SetValue("Month", value.Date);
+				base.SetValue("StartDate", value.Date);
 						 
 			}
 		}
@@ -830,6 +852,31 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 结束日期 (该属性可为空,且无默认值)
+		/// 广告核销单.Misc.结束日期
+		/// </summary>
+		/// <value></value>
+			public  System.DateTime EndDate
+		{
+			get
+			{
+				System.DateTime value  = (System.DateTime)base.GetValue("EndDate");
+				return value.Date ;
+				}
+				set
+			{
+				
+				
+				base.SetValue("EndDate", value.Date);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -879,10 +926,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		[Obsolete("")]
 		public string Res_AdvApplyCust　{ get { return EntityRes.GetResource("AdvApplyCust");　}　}
 		/// <summary>
-		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Month")的方式取资源
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("StartDate")的方式取资源
 		/// </summary>
 		[Obsolete("")]
-		public string Res_Month　{ get { return EntityRes.GetResource("Month");　}　}
+		public string Res_StartDate　{ get { return EntityRes.GetResource("StartDate");　}　}
 		/// <summary>
 		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvApproveLine")的方式取资源
 		/// </summary>
@@ -908,6 +955,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_DocStatus　{ get { return EntityRes.GetResource("DocStatus");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("EndDate")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_EndDate　{ get { return EntityRes.GetResource("EndDate");　}　}
 		#endregion 
 
 
@@ -931,9 +983,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string AdvApplyCust　{ get { return "AdvApplyCust";　}　}
 				
 			/// <summary>
-			/// 属性: 月份 的名称
+			/// 属性: 开始日期 的名称
 			/// </summary>
-			public static string Month　{ get { return "Month";　}　}
+			public static string StartDate　{ get { return "StartDate";　}　}
 				
 			/// <summary>
 			/// 属性: 广告核销单行 的名称
@@ -959,6 +1011,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 单据状态 的名称
 			/// </summary>
 			public static string DocStatus　{ get { return "DocStatus";　}　}
+				
+			/// <summary>
+			/// 属性: 结束日期 的名称
+			/// </summary>
+			public static string EndDate　{ get { return "EndDate";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -966,7 +1023,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-														
+																
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1114,11 +1171,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
 			this.exdMultiLangAttrs.Add("FlowInstance","FlowInstance");
 			this.exdMultiLangAttrs.Add("AdvApplyCust","AdvApplyCust");
-			this.exdMultiLangAttrs.Add("Month","Month");
+			this.exdMultiLangAttrs.Add("StartDate","StartDate");
 			this.exdMultiLangAttrs.Add("AdvApproveDocType","AdvApproveDocType");
 			this.exdMultiLangAttrs.Add("WFCurrentState","WFCurrentState");
 			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
 			this.exdMultiLangAttrs.Add("DocStatus","DocStatus");
+			this.exdMultiLangAttrs.Add("EndDate","EndDate");
         }
 	#endregion 
 
@@ -1135,7 +1193,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																		
+																					
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1165,6 +1223,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			if (data.AdvApproveDocType == -1 && data.AdvApproveDocType_SKey!=null)
 				data.AdvApproveDocType = data.AdvApproveDocType_SKey.GetEntity().ID ;
 	
+
+			
 
 			
 
@@ -1213,13 +1273,15 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			#region 组件外属性
 								this.SetTypeValue("AdvApplyCust",data.AdvApplyCust);
 		
-								this.SetTypeValue("Month",data.Month);
+								this.SetTypeValue("StartDate",data.StartDate);
 		
 								this.SetTypeValue("AdvApproveDocType",data.AdvApproveDocType);
 		
 								this.SetTypeValue("WFCurrentState",data.WFCurrentState);
 		
 								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
+		
+								this.SetTypeValue("EndDate",data.EndDate);
 		
 			#endregion 
 
@@ -1294,9 +1356,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     
 	    
 			{
-				object obj =this.GetValue("Month");
+				object obj =this.GetValue("StartDate");
 				if (obj != null)
-					data.Month=(System.DateTime)obj;
+					data.StartDate=(System.DateTime)obj;
 			}
 	     
 	    
@@ -1318,6 +1380,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				object obj =this.GetValue("WFOriginalState");
 				if (obj != null)
 					data.WFOriginalState=(System.Int32)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("EndDate");
+				if (obj != null)
+					data.EndDate=(System.DateTime)obj;
 			}
 	     
 			#endregion 
@@ -1360,6 +1429,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

@@ -38,14 +38,15 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy
 		[FaultContract(typeof(ExceptionBase))]
 		[FaultContract(typeof(Exception))]
 		[OperationContract()]
-		List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 custBscID, System.DateTime month);
+		List<UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.ApplyInfoDtoData> Do(IContext context, out IList<MessageBase> outMessages ,System.Int64 custBscID, System.DateTime startDate, System.DateTime endDate);
     }
 	[Serializable]    
     public class LoadApplyByBscProxy : OperationProxyBase//, UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy.ILoadApplyByBsc
     {
 	#region Fields	
 				private System.Int64 custBscID ;
-						private System.DateTime month ;
+						private System.DateTime startDate ;
+						private System.DateTime endDate ;
 			
 	#endregion	
 		
@@ -73,20 +74,39 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy
 						
 
 		/// <summary>
-		/// 月份 (该属性可为空,且无默认值)
-		/// 根据办事处拉取申请单.Misc.月份
+		/// 开始日期 (该属性可为空,且无默认值)
+		/// 根据办事处拉取申请单.Misc.开始日期
 		/// </summary>
 		/// <value>System.Date</value>
-		public System.DateTime Month
+		public System.DateTime StartDate
 		{
 			get	
 			{	
-				return this.month;
+				return this.startDate;
 			}
 
 			set	
 			{	
-				this.month = value;	
+				this.startDate = value;	
+			}
+		}		
+						
+
+		/// <summary>
+		/// 结束日期 (该属性可为空,且无默认值)
+		/// 根据办事处拉取申请单.Misc.结束日期
+		/// </summary>
+		/// <value>System.Date</value>
+		public System.DateTime EndDate
+		{
+			get	
+			{	
+				return this.endDate;
+			}
+
+			set	
+			{	
+				this.endDate = value;	
 			}
 		}		
 			
@@ -116,7 +136,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy
             ILoadApplyByBsc channel = oChannel as ILoadApplyByBsc;
             if (channel != null)
             {
-				return channel.Do(context, out returnMsgs, custBscID, month);
+				return channel.Do(context, out returnMsgs, custBscID, startDate, endDate);
 	    }
             return  null;
         }
@@ -132,7 +152,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy
 		private void InitKeyList()
 		{
 			System.Collections.Hashtable dict = new System.Collections.Hashtable() ;
-										
+															
 		}
 		#endregion 
 

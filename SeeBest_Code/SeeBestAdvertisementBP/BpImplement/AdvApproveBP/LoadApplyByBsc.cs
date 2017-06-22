@@ -21,7 +21,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 	{
 	    #region Fields
 		private System.Int64 custBscID;
-		private System.DateTime month;
+		private System.DateTime startDate;
+		private System.DateTime endDate;
 		
 	    #endregion
 		
@@ -49,19 +50,35 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			}
 		}
 		/// <summary>
-		/// 月份	
-		/// 根据办事处拉取申请单.Misc.月份
+		/// 开始日期	
+		/// 根据办事处拉取申请单.Misc.开始日期
 		/// </summary>
 		/// <value></value>
-		public System.DateTime Month
+		public System.DateTime StartDate
 		{
 			get
 			{
-				return this.month;
+				return this.startDate;
 			}
 			set
 			{
-				month = value;
+				startDate = value;
+			}
+		}
+		/// <summary>
+		/// 结束日期	
+		/// 根据办事处拉取申请单.Misc.结束日期
+		/// </summary>
+		/// <value></value>
+		public System.DateTime EndDate
+		{
+			get
+			{
+				return this.endDate;
+			}
+			set
+			{
+				endDate = value;
 			}
 		}
 	    #endregion

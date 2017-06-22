@@ -44,56 +44,56 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         private void BtnSave_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
-
-
-            foreach (AdvApproveLinesRecord item in this.Model.AdvApproveLines.Records)
-            {
-                bool hasFlag = false;
-                if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount > 0)
-                {
-                    foreach (AdvApproveBE_AdvApproveLineRecord about in this.Model.AdvApproveBE_AdvApproveLine.Records)
-                    {
-                        if (about.OtherInfo == item.ApplyID)
-                        {
-                            about.ApplyQty = item.ApplyQty;
-                            about.Price = item.Price;
-                            about.TotalMoney = item.TotalMoney;
-                            about.ReceiptNum = item.ReceiptNum;
-                            about.Momo = item.Memo;
-                            about.ActualApproveQty = item.ActualApproveQty;
-                            about.ActualPrice = item.ActualPrice;
-                            about.Discount = item.Discount;
-                            about.ApproveMoney = item.ApproveMoney;
-                        }
-                    }
-                }
-                else
-                {
-                    var record = this.Model.AdvApproveBE_AdvApproveLine.AddNewUIRecord();
-                    record.Location = item.Location;
-                    record.AdvAppCustName = item.AdvAppCustName;
-                    record.Country = item.Country;
-                    record.CustCounterName = item.CustCounterName;
-                    record.RelPeople = item.RelPeople;
-                    record.RelPhone = item.RelPeople;
-                    record.CustAddress = item.CustAddress;
-                    record.Width = item.Width;
-                    record.Thick = item.Thick;
-                    record.Height = item.Height;
-                    record.ApplyAdvCode = item.ApplyAdvCode;
-                    record.AdvCarrier = item.AdvCarrier;
-                    record.ApplyQty = item.ApplyQty;
-                    record.Price = item.Price;
-                    record.TotalMoney = item.TotalMoney;
-                    record.ReceiptNum = item.ReceiptNum;
-                    record.Momo = item.Memo;
-                    record.ActualApproveQty = item.ActualApproveQty;
-                    record.ActualPrice = item.ActualPrice;
-                    record.Discount = item.Discount;
-                    record.ApproveMoney = item.ApproveMoney;
-                    record.OtherInfo = item.ApplyID;
-                }
-            }
+            #region not used
+            //foreach (AdvApproveLinesRecord item in this.Model.AdvApproveLines.Records)
+            //{
+            //    bool hasFlag = false;
+            //    if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount > 0)
+            //    {
+            //        foreach (AdvApproveBE_AdvApproveLineRecord about in this.Model.AdvApproveBE_AdvApproveLine.Records)
+            //        {
+            //            if (about.OtherInfo == item.ApplyID)
+            //            {
+            //                about.ApplyQty = item.ApplyQty;
+            //                about.Price = item.Price;
+            //                about.TotalMoney = item.TotalMoney;
+            //                about.ReceiptNum = item.ReceiptNum;
+            //                about.Momo = item.Memo;
+            //                about.ActualApproveQty = item.ActualApproveQty;
+            //                about.ActualPrice = item.ActualPrice;
+            //                about.Discount = item.Discount;
+            //                about.ApproveMoney = item.ApproveMoney;
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        var record = this.Model.AdvApproveBE_AdvApproveLine.AddNewUIRecord();
+            //        record.Location = item.Location;
+            //        record.AdvAppCustName = item.AdvAppCustName;
+            //        record.Country = item.Country;
+            //        record.CustCounterName = item.CustCounterName;
+            //        record.RelPeople = item.RelPeople;
+            //        record.RelPhone = item.RelPeople;
+            //        record.CustAddress = item.CustAddress;
+            //        record.Width = item.Width;
+            //        record.Thick = item.Thick;
+            //        record.Height = item.Height;
+            //        record.ApplyAdvCode = item.ApplyAdvCode;
+            //        record.AdvCarrier = item.AdvCarrier;
+            //        record.ApplyQty = item.ApplyQty;
+            //        record.Price = item.Price;
+            //        record.TotalMoney = item.TotalMoney;
+            //        record.ReceiptNum = item.ReceiptNum;
+            //        record.Momo = item.Memo;
+            //        record.ActualApproveQty = item.ActualApproveQty;
+            //        record.ActualPrice = item.ActualPrice;
+            //        record.Discount = item.Discount;
+            //        record.ApproveMoney = item.ApproveMoney;
+            //        record.OtherInfo = item.ApplyID;
+            //    }
+            //}
+            #endregion
             BtnSave_Click_DefaultImpl(sender, e);
         }
 
@@ -258,17 +258,24 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         private void BtnGetApplyInfo_Click_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount > 0)
+            {
+                this.Model.AdvApproveBE_AdvApproveLine.Records.Clear();
+            }
             if (this.Model.AdvApproveBE.FocusedRecord != null)
             {
-                if (this.Model.AdvApproveBE.FocusedRecord.AdvApplyCust != null && this.Model.AdvApproveBE.FocusedRecord.Month != null)
+                if (this.Model.AdvApproveBE.FocusedRecord.AdvApplyCust != null
+                    && this.Model.AdvApproveBE.FocusedRecord.StartDate != null
+                    && this.Model.AdvApproveBE.FocusedRecord.EndDate != null)
                 {
                     LoadApplyByBscProxy proxy = new LoadApplyByBscProxy();
                     proxy.CustBscID = this.Model.AdvApproveBE.FocusedRecord.AdvApplyCust.Value;
-                    proxy.Month = this.Model.AdvApproveBE.FocusedRecord.Month.Value;
+                    proxy.StartDate = this.Model.AdvApproveBE.FocusedRecord.StartDate.Value;
+                    proxy.EndDate = this.Model.AdvApproveBE.FocusedRecord.EndDate.Value;
                     List<ApplyInfoDtoData> result = proxy.Do();
                     foreach (var item in result)
                     {
-                        AdvApproveLinesRecord record = this.Model.AdvApproveLines.AddNewUIRecord();
+                        AdvApproveBE_AdvApproveLineRecord record = this.Model.AdvApproveBE_AdvApproveLine.AddNewUIRecord();
                         record.Location = item.Location;
                         record.Location = item.Location;
                         record.AdvAppCustName = item.AdvAppCustName;
@@ -282,12 +289,12 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                         record.Height = item.Height;
                         record.ApplyAdvCode = item.ApplyAdvCode;
                         record.AdvCarrier = item.AdvCarrier;
-                        record.ApplyID = item.ApplyId;
+                        record.OtherInfo = item.ApplyId;
                     }
                 }
                 else
                 {
-                    throw new Exception("请输入办事处和月份！");
+                    throw new Exception("请输入办事处，开始日期，结束日期！");
                 }
             }
             BtnGetApplyInfo_Click_DefaultImpl(sender, e);
@@ -322,7 +329,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
             PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
             #region 根据单据状态控制页面控件可用
-
+            if (this.Model.AdvApproveBE.FocusedRecord.DocStatus.Value != 0)
+            {
+                this.BtnGetApplyInfo.Enabled = false;
+            }
             #endregion
         }
         internal static bool SetIsApprovalDoc(IUIModel model)

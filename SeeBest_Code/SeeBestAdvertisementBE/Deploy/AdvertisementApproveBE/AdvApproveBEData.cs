@@ -26,6 +26,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -44,7 +45,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     			
 	     			
 	     			
-	     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 		
+	     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 			     			
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -165,20 +167,20 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		
 
 				/// <summary>
-		/// 月份
-		/// 广告核销单.Misc.月份
+		/// 开始日期
+		/// 广告核销单.Misc.开始日期
 		/// </summary>
 		[DataMember(IsRequired=false)]
-		private System.DateTime m_month ;
-		public System.DateTime Month
+		private System.DateTime m_startDate ;
+		public System.DateTime StartDate
 		{
 			get	
 			{	
-				return m_month  ;
+				return m_startDate  ;
 			}
 			set	
 			{	
-				m_month = value ;	
+				m_startDate = value ;	
 			}
 		}
 		
@@ -267,10 +269,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 结束日期
+		/// 广告核销单.Misc.结束日期
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.DateTime m_endDate ;
+		public System.DateTime EndDate
+		{
+			get	
+			{	
+				return m_endDate  ;
+			}
+			set	
+			{	
+				m_endDate = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-							
+								
 		#endregion 		
 	}	
 

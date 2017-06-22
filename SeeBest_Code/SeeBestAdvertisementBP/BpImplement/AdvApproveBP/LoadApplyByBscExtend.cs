@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Text;
     using UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE;
+    using UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Util.Context;
 
@@ -31,11 +32,10 @@
         {
             LoadApplyByBsc bpObj = (LoadApplyByBsc)obj;
             List<ApplyInfoDto> appDtoLst = new List<ApplyInfoDto>();
-            DateTime d1 = new DateTime(bpObj.Month.Year, bpObj.Month.Month, 1);
-            DateTime d2 = d1.AddMonths(1).AddDays(-1);
             AdvApplyBE.EntityList applyLst = AdvApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
-                + " and (ApplyDate>='" + d1.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + d2.ToString("yyyy-MM-dd") + "'");
-
+                + " and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd") + "'");
+            SpecialApplyBE.EntityList speLst = SpecialApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
+                + " and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd") + "'");
             foreach (var app in applyLst)
             {
                 //app.ApplyDate
@@ -46,7 +46,7 @@
                     Country = app.LocationXZ,
                     CustCounterName = app.CustConterName,
                     RelPeople = app.RelPeople,
-                    RelPhone = app.RelPeople,
+                    RelPhone = app.Phone,
                     CustAddress = app.CustAddress,
                     Width = app.BMWidth,
                     Thick = app.BMThick,
@@ -61,6 +61,26 @@
                 }
                 appDto.AdvItem = appDto.AdvItem.TrimEnd('/');
                 appDtoLst.Add(appDto);
+            }
+            foreach (var spe in speLst)
+            {
+                foreach (var item in spe.SpecialSizeBE)
+                {
+                    ApplyInfoDto appDto = new ApplyInfoDto
+                    {
+                        AdvAppCustName = spe.ApplyDept.Name,
+                        CustCounterName = spe.CustConterName,
+                        RelPhone = spe.Phone,
+                        CustAddress = spe.CustAddress,
+                        Width = item.Width,
+                        Thick = item.Thick,
+                        Height = item.Hight,
+                        ApplyAdvCode = spe.AdvCode,
+                        AdvItem = item.DisplayProductType.Code,
+                        ApplyId = spe.ID
+                    };
+                    appDtoLst.Add(appDto);
+                }
             }
             return appDtoLst;
         }
