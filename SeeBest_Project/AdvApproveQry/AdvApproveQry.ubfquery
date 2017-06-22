@@ -3,5 +3,37 @@
   <BasicInfo id="a068f6c3-481e-4a82-aa9c-622824a3777d" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
   <BPRefInfo id="632c91ad-8d3c-4141-b4e8-501f82f35ac3" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" BPItemID="" BPOperationID="" DTOID="" BPAgentDll="" BPAgentProxy="" />
   <UIRefInfo id="2ad20478-bc59-428b-97e8-fcb0cd47e07c" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="04d5d4b6-f665-49b5-ae1f-c379a282b7e9" UIFormItemID="966f57c5-8dcc-448d-b72b-10dafd8e32ce" UIModelID="ad4510ac-fc93-48b9-9794-e41df54aac1a" />
-  <DefaultCase />
+  <FilterDefines>
+    <FilterDefine id="bf2e99b9-a0d8-4816-94ba-25aaa837f607" name="StartDate" displayName="StartDate" description="" help="" ParentName="" Alias="StartDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="8a6bfc16-1876-4484-97bd-42463015aec1" name="AdvApproveDocType" displayName="AdvApproveDocType" description="" help="" ParentName="" Alias="AdvApproveDocType" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="f5bcbec0-c83b-4683-97f6-7592350d2dd9" name="EndDate" displayName="EndDate" description="" help="" ParentName="" Alias="EndDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="DateTime" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="0400df1c-ce0c-48bf-8cfb-00060a259854" name="AdvApplyCust" displayName="AdvApplyCust" description="" help="" ParentName="" Alias="AdvApplyCust" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="94f4230f-84ed-44d7-822d-73fc0240869a" name="AdvApplyCust" displayName="AdvApplyCust" description="" help="" ParentName="" Alias="AdvApplyCust" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="b353498b-5556-4167-ac92-cd2267f27a6d" name="StartDate" displayName="StartDate" description="" help="" ParentName="" Alias="StartDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="4daef501-2f0c-4145-9a31-72267edee9dc" name="AdvApproveDocType" displayName="AdvApproveDocType" description="" help="" ParentName="" Alias="AdvApproveDocType" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="f0ee8bb6-7709-47bd-bcfb-476a525a4188" name="DocStatus" displayName="DocStatus" description="" help="" ParentName="" Alias="DocStatus" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="93a868be-aa3a-49a8-9e4b-31264bd38289" name="EndDate" displayName="EndDate" description="" help="" ParentName="" Alias="EndDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="a31f0f8a-824d-4d45-a278-c59c886a8ca9" name="StartDate" displayName="" description="" help="" ParentName="" Alias="StartDate" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="69d29c2c-4457-4dd0-9c04-97f53aff6193" name="AdvApplyCust" displayName="办事处" description="" help="" />
+      <BasicFilter id="d02b330f-6a14-4a49-9165-3f49a9efa0b0" name="StartDate" displayName="开始日期" description="" help="" />
+      <BasicFilter id="1b540daf-cec0-452f-bc5b-258cb5f69745" name="AdvApproveDocType" displayName="单据类型" description="" help="" />
+      <BasicFilter id="0bc25ed3-fc45-449d-8fe9-b97b2a57112f" name="EndDate" displayName="结束日期" description="" help="" />
+      <BasicFilter id="a71f7210-a0a3-4023-b456-64bd02f7ca00" name="DocStatus" displayName="单据状态" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="605f8bda-6634-465f-88d1-04f5ae577abc" name="StartDate" displayName="开始日期" description="" help="" />
+      <Column id="8ecb66b8-a1c0-4f63-ab4c-78c80e713b75" name="DocStatus" displayName="单据状态" description="" help="" />
+      <Column id="52802546-4662-4ae9-8cb0-3e3391d099cf" name="EndDate" displayName="结束日期" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="f83179d1-2732-4992-8f2a-511d8aeee996" name="StartDate" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
 </QueryComponent>
