@@ -21,4 +21,8 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 		
 		[assembly: UBFComponent("34e9dd9a-8712-49ec-88de-63330dd9503e", "UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP", "AdvApproveBP")]
 	
+ 
+		
+		[assembly: UBFComponent("8648543d-1369-4b64-b363-af388399e030", "UFIDA.U9.Cust.SeeBestAdvertisementBP.ARBillRelationBP", "ARBillRelationBP")]
+	
 
