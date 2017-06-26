@@ -1,11 +1,10 @@
-<View ID="8167d4d5-c646-47b4-8ac0-570732c35302" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="8" GridTopMargin="0" Height="536" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="AdvApproveUIForm" Namespace="UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel" TabStop="False" TemplateCode="UI_SingleCardAndSingleGrid" TemplateType="CustomTemplate" UIModelID="a199cae1-0e41-473e-a8d2-3d3fc3ec5bc1" URI=".UI_单卡单表WebPart" ViewID="4983" Width="1200" X="8" Y="8">
+<View ID="8167d4d5-c646-47b4-8ac0-570732c35302" AllowPersonalization="False" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="2" GridRowSpace="8" GridTopMargin="0" Height="504" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="AdvApproveUIForm" Namespace="UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel" TabStop="False" TemplateCode="UI_SingleCardAndSingleGrid" TemplateType="CustomTemplate" UIModelID="a199cae1-0e41-473e-a8d2-3d3fc3ec5bc1" URI=".UI_单卡单表WebPart" ViewID="4983" Width="1032" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="1000" />
   </Columns>
   <Rows>
     <Row Fixed="True" Height="28" Name="Row0" />
     <Row Fixed="False" Height="441" Name="Row4" />
-    <Row Fixed="False" Height="25" Name="Row5" />
   </Rows>
   <Providers />
   <InParameters />
@@ -107,15 +106,14 @@
       </Events>
     </Button>
   </Toolbar>
-  <Card ID="ebadcadd-0caf-427e-9df3-f397f136a7b4" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="441" LayoutType="GridBag" Name="Card4" TabIndex="2" TabStop="False" Width="1000" X="0" Y="36">
+  <Card ID="ebadcadd-0caf-427e-9df3-f397f136a7b4" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="2" GridRowSpace="10" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="441" LayoutType="GridBag" Name="Card4" TabIndex="2" TabStop="False" Width="1000" X="0" Y="36">
     <Columns>
-      <Column Fixed="True" Name="Column0" Type="Title" Width="971" />
-      <Column Fixed="False" Name="Column1" Width="1" />
+      <Column Fixed="False" Name="Column0" Type="Title" Width="971" />
+      <Column Fixed="True" Name="Column1" Width="1" />
     </Columns>
     <Rows>
       <Row Fixed="True" Height="83" Name="Row0" />
-      <Row Fixed="True" Height="328" Name="Row1" />
-      <Row Fixed="False" Height="1" Name="Row2" />
+      <Row Fixed="False" Height="328" Name="Row1" />
     </Rows>
     <Card ID="037ee0af-a2d2-4b48-b3c7-5b13c96444db" BorderStyle="True" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="Sys" DisplayNameIndex="0" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="0" GridColumnCount="13" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" GridWidth="2" GridX="0" GridY="0" GroupDisplayName="Sys" Height="83" LayoutType="GridBag" Name="Card2" TabIndex="1" TabStop="False" Width="972" X="10" Y="0">
       <Columns>
@@ -361,24 +359,24 @@
           <Events />
         </TextBoxColumn>
         <NumberColumn ID="8637447a-0505-4de0-b154-b904a3c38d5d" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.ApproveInfo.数量" IsNull="True" IsProperty="False" IsSequence="False" Name="ApplyQty0" NPos="17" Point="2" UIFieldID="ApplyQty" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind8" />
+          <RoundRuleBind Name="RoundRuleBind8" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
+          <CurrencyType Name="CurrencyType8" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="ca196746-04ce-4314-859d-409dc856f96a" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.ApproveInfo.单价" IsNull="True" IsProperty="False" IsSequence="False" Name="Price0" NPos="18" Point="2" UIFieldID="Price" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind9" />
+          <RoundRuleBind Name="RoundRuleBind9" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind9" />
+          <CurrencyType Name="CurrencyType9" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="ab417bd1-b33a-4a15-8963-393d137c65f9" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.ApproveInfo.金额" IsNull="True" IsProperty="False" IsSequence="False" Name="TotalMoney0" NPos="19" Point="2" UIFieldID="TotalMoney" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind10" />
+          <RoundRuleBind Name="RoundRuleBind10" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind10" />
+          <CurrencyType Name="CurrencyType10" />
           <Events />
         </NumberColumn>
         <TextBoxColumn ID="14436134-4e5a-4bbf-912a-40e947290b8d" DefaultValue="" DisplayFormat="50" Enabled="True" Help="广告核销单行.ApproveInfo.收据编号" IsNull="True" IsProperty="False" IsSequence="False" Name="ReceiptNum0" NPos="20" Point="0" TextAlign="Left" UIFieldID="ReceiptNum" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
@@ -388,31 +386,31 @@
           <Events />
         </TextBoxColumn>
         <NumberColumn ID="ba6fc16e-9088-46c9-8dcb-84689dfbb287" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.AuditInfo.实际核销数量" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualApproveQty0" NPos="22" Point="2" UIFieldID="ActualApproveQty" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind11" />
+          <RoundRuleBind Name="RoundRuleBind11" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind11" />
+          <CurrencyType Name="CurrencyType11" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="a1da3ce7-c671-408e-a8d2-e1f353a728b8" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.AuditInfo.核销单价" IsNull="True" IsProperty="False" IsSequence="False" Name="ActualPrice0" NPos="23" Point="2" UIFieldID="ActualPrice" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind12" />
+          <RoundRuleBind Name="RoundRuleBind12" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind12" />
+          <CurrencyType Name="CurrencyType12" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="bc24bc92-9f22-4f8e-9264-4e15fff15c09" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.AuditInfo.折扣率" IsNull="True" IsProperty="False" IsSequence="False" Name="Discount0" NPos="24" Point="2" UIFieldID="Discount" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind13" />
+          <RoundRuleBind Name="RoundRuleBind13" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind13" />
+          <CurrencyType Name="CurrencyType13" />
           <Events />
         </NumberColumn>
         <NumberColumn ID="76ff531f-ea59-4ff8-96f9-9310bdabea6c" DefaultValue="" DisplayFormat="24.9" Enabled="True" Help="广告核销单行.AuditInfo.核销金额" IsNull="True" IsProperty="False" IsSequence="False" Name="ApproveMoney0" NPos="25" Point="2" UIFieldID="ApproveMoney" UIViewID="AdvApproveBE_AdvApproveLine" Visible="True">
-          <PrecisionBind />
-          <RoundRuleBind />
-          <ValueOfRoundByValueBind />
-          <CurrencyType />
+          <PrecisionBind Name="PrecisionBind14" />
+          <RoundRuleBind Name="RoundRuleBind14" />
+          <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind14" />
+          <CurrencyType Name="CurrencyType14" />
           <Events />
         </NumberColumn>
       </Columns>

@@ -17,7 +17,7 @@ namespace AdvApproveFindRef
 		public AdvApproveFindRefModel() : base("AdvApproveFindRef")
 		{
 			InitClass();
-			this.SetResourceInfo("78407942-ea91-4f9f-b0a1-88f35f666f02");
+			this.SetResourceInfo("038f82f5-97ce-4aab-a61f-01b02bffc951");
             try{
 			    AfterInitModel();
             }catch(Exception exception){
@@ -62,7 +62,7 @@ namespace AdvApproveFindRef
 		private void InitClass()
 		{
 			this.viewcRef = new cRefView(this);
-			this.viewcRef.SetResourceInfo("07076fa9-e42e-445c-b39c-b3701184ffde");
+			this.viewcRef.SetResourceInfo("63008f0c-8431-41c4-9eee-9b55aa46da97");
 			this.Views.Add(this.viewcRef);			
 
 			
@@ -104,25 +104,25 @@ namespace AdvApproveFindRef
 		{
 			get { return this.Fields["ID"]; }
 		}
-		public IUIField FieldAdvApplyCust_Code
+		public IUIField FieldDocNo
 		{
-			get { return this.Fields["AdvApplyCust_Code"]; }
-		}
-		public IUIField FieldAdvApplyCust_Name
-		{
-			get { return this.Fields["AdvApplyCust_Name"]; }
-		}
-		public IUIField FieldMonth
-		{
-			get { return this.Fields["Month"]; }
+			get { return this.Fields["DocNo"]; }
 		}
 		public IUIField FieldDocStatus
 		{
 			get { return this.Fields["DocStatus"]; }
 		}
-		public IUIField FieldAdvApproveDocType_Code
+		public IUIField FieldStartDate
 		{
-			get { return this.Fields["AdvApproveDocType_Code"]; }
+			get { return this.Fields["StartDate"]; }
+		}
+		public IUIField FieldAdvApplyCust_Code
+		{
+			get { return this.Fields["AdvApplyCust_Code"]; }
+		}
+		public IUIField FieldEndDate
+		{
+			get { return this.Fields["EndDate"]; }
 		}
 
 
@@ -136,12 +136,12 @@ namespace AdvApproveFindRef
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","c59ed6dd-6482-4cbd-803d-d7674611ee49");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Code", typeof(String), false,"","System.String", "AdvApplyCust.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5569c7d8-267a-4e62-9455-2366345ccaa3");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Name", typeof(String), true,"","System.String", "AdvApplyCust.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ec97753c-13b9-468b-ad70-8c16851cefed");
-			UIModelRuntimeFactory.AddNewUIField(this,"Month", typeof(DateTime), true,"","System.Date", "Month", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","e5b71c5b-7ce0-4c82-8927-5e32ca5ceb96");
-			UIModelRuntimeFactory.AddNewUIField(this,"DocStatus", typeof(Int32), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum", "DocStatus", true,true, false, "",false,(UIFieldType)2,"c597484c-846b-48f0-8c05-49caf9820a86","b8f6ae0b-9ed6-4f7b-8a38-2d72c09feea3");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_Code", typeof(String), false,"","System.String", "AdvApproveDocType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","45ad10b1-23b8-4b92-bb1a-cbdc1794ecc9");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","0ed180eb-5663-4bcf-9f13-0a6580bf67a7");
+			UIModelRuntimeFactory.AddNewUIField(this,"DocNo", typeof(String), false,"","System.String", "DocNo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fe8e9fb4-e4b9-40ab-9076-a11bac35dbb5");
+			UIModelRuntimeFactory.AddNewUIField(this,"DocStatus", typeof(Int32), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum", "DocStatus", true,true, false, "",false,(UIFieldType)2,"c597484c-846b-48f0-8c05-49caf9820a86","40913b1f-105f-4058-926f-97901aff7e30");
+			UIModelRuntimeFactory.AddNewUIField(this,"StartDate", typeof(DateTime), true,"","System.Date", "StartDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","9c9d4280-0eba-4230-8437-c51e034151cc");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Code", typeof(String), false,"","System.String", "AdvApplyCust.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","c14a6b3f-7a46-466c-96f8-93ba927bcf7c");
+			UIModelRuntimeFactory.AddNewUIField(this,"EndDate", typeof(DateTime), true,"","System.Date", "EndDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","0aa4126e-107d-4231-b617-3e4d8095cd0b");
 
 
 			this.CurrentFilter = new cRefDefaultFilterFilter(this);
@@ -206,41 +206,15 @@ namespace AdvApproveFindRef
 		}
 		
 		
-		public  String AdvApplyCust_Code
+		public  String DocNo
 		{
 			get{
-				//object value = this[this.uiviewcRef.FieldAdvApplyCust_Code] ;
+				//object value = this[this.uiviewcRef.FieldDocNo] ;
 				//return (String)value;
-				return GetValue<String>(this.uiviewcRef.FieldAdvApplyCust_Code);
+				return GetValue<String>(this.uiviewcRef.FieldDocNo);
 			}
 			set{
-				this[this.uiviewcRef.FieldAdvApplyCust_Code] = value;
-			}
-		}
-		
-		
-		public  String AdvApplyCust_Name
-		{
-			get{
-				//object value = this[this.uiviewcRef.FieldAdvApplyCust_Name] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewcRef.FieldAdvApplyCust_Name);
-			}
-			set{
-				this[this.uiviewcRef.FieldAdvApplyCust_Name] = value;
-			}
-		}
-		
-		
-		public  DateTime? Month
-		{
-			get{
-				//object value = this[this.uiviewcRef.FieldMonth] ;
-				//return (DateTime?)value;
-				return GetValue<DateTime?>(this.uiviewcRef.FieldMonth);
-			}
-			set{
-				this[this.uiviewcRef.FieldMonth] = value;
+				this[this.uiviewcRef.FieldDocNo] = value;
 			}
 		}
 		
@@ -258,15 +232,41 @@ namespace AdvApproveFindRef
 		}
 		
 		
-		public  String AdvApproveDocType_Code
+		public  DateTime? StartDate
 		{
 			get{
-				//object value = this[this.uiviewcRef.FieldAdvApproveDocType_Code] ;
-				//return (String)value;
-				return GetValue<String>(this.uiviewcRef.FieldAdvApproveDocType_Code);
+				//object value = this[this.uiviewcRef.FieldStartDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewcRef.FieldStartDate);
 			}
 			set{
-				this[this.uiviewcRef.FieldAdvApproveDocType_Code] = value;
+				this[this.uiviewcRef.FieldStartDate] = value;
+			}
+		}
+		
+		
+		public  String AdvApplyCust_Code
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldAdvApplyCust_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewcRef.FieldAdvApplyCust_Code);
+			}
+			set{
+				this[this.uiviewcRef.FieldAdvApplyCust_Code] = value;
+			}
+		}
+		
+		
+		public  DateTime? EndDate
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldEndDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewcRef.FieldEndDate);
+			}
+			set{
+				this[this.uiviewcRef.FieldEndDate] = value;
 			}
 		}
 		#endregion

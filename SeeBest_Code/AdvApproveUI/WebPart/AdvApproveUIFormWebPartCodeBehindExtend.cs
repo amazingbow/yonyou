@@ -26,6 +26,7 @@ using UFIDA.U9.UI.PDHelper;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP;
 using System.Collections.Generic;
+using UFSoft.UBF.UI.FormProcess;
 
 
 
@@ -321,7 +322,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             FlexFieldHelper.SetDescFlexField(new DescFlexFieldParameter[] { new DescFlexFieldParameter(this.FlexFieldPicker0, this.Model.AdvApproveBE) });
             //查找按钮设置
             string paramWhere = null;
-            PDFormMessage.ShowConfirmDialog(this.Page, "78407942-ea91-4f9f-b0a1-88f35f666f02", "580", "408",
+            PDFormMessage.ShowConfirmDialog(this.Page, "038f82f5-97ce-4aab-a61f-01b02bffc951", "580", "408",
                 Title, wpFindID.ClientID, this.BtnFind, paramWhere);
             //取得提示信息资源：是否删除当前记录
             string message = PDResource.GetDeleteConfirmInfo();
@@ -334,6 +335,16 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                 this.BtnGetApplyInfo.Enabled = false;
             }
             #endregion
+            //业务日期赋默认值
+            if (this.Model.AdvApproveBE.FocusedRecord.BusinessDate == null || this.Model.AdvApproveBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
+            {
+                this.Model.AdvApproveBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+            }
+            //单号赋默认值
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "AdvApprove" + System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
+            }
         }
         internal static bool SetIsApprovalDoc(IUIModel model)
         {
@@ -348,10 +359,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         }
         public void AfterCreateChildControls()
         {
-
-
-
-        }
+            //开启个性化
+            UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
+       }
 
         public void AfterEventBind()
         {
@@ -365,6 +375,43 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         public void AfterUIModelBinding()
         {
 
+            if (this.Model.AdvApproveBE.FocusedRecord != null)
+            {
+                this.BtnSubmit.Enabled = true;
+                this.BtnApprove.Enabled = true;
+                this.BtnUndoApprove.Enabled = true;
+                switch (this.Model.AdvApproveBE.FocusedRecord.DocStatus.Value)
+                {
+                    case 0:
+                        this.BtnApprove.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 1:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 2:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnApprove.Enabled = false;
+                        break;
+                }
+
+                if (this.Model.AdvApproveBE.FocusedRecord.ID > 0L)
+                {
+                    this.BtnDelete.Enabled = true;
+                    this.BtnCopy.Enabled = true;
+                }
+                else
+                {
+                    this.BtnDelete.Enabled = false;
+                    this.BtnCopy.Enabled = false;
+                }
+            }
+            else
+            {
+                this.BtnDelete.Enabled = false;
+                this.BtnCopy.Enabled = false;
+            }
 
         }
 

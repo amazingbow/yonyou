@@ -1,16 +1,16 @@
 ﻿
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.dll  C:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.pdb  C:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.dll  C:\yonyou\U9V50\Portal\ApplicationLib
-copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.pdb  C:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationLib
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationLib
 
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.dll  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.pdb  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.dll  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.pdb  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.dll  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.pdb  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
-copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.ubfsvc  C:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Deploy.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpAgent\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.Agent.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.dll  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.pdb  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
+copy .\BpImplement\bin\Debug\UFIDA.U9.Cust.SpecialApplyDocTypeListBP.ubfsvc  D:\yonyou\U9V50\Portal\ApplicationServer\Libs
 
 
 

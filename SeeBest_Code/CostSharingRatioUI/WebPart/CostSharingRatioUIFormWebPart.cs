@@ -45,7 +45,7 @@ using System.Collections.Specialized;
  ***********************************************************************************************/
 namespace UFIDA.U9.Cust.CostSharingRatioUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.CostSharingRatioUI","UFIDA.U9.Cust.CostSharingRatioUIModel.CostSharingRatioUIFormWebPart", "UFIDA.U9.Cust.CostSharingRatioUI.WebPart", "94469911-71d3-4bf9-b9e9-7a108e459150","WebPart", "False", 992, 504)] 
+	[FormRegister("UFIDA.U9.Cust.CostSharingRatioUI","UFIDA.U9.Cust.CostSharingRatioUIModel.CostSharingRatioUIFormWebPart", "UFIDA.U9.Cust.CostSharingRatioUI.WebPart", "94469911-71d3-4bf9-b9e9-7a108e459150","WebPart", "True", 992, 504)] 
 	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.CostSharingRatioUI', 'UFIDA.U9.Cust.CostSharingRatioUIModel.CostSharingRatioUIFormWebPart', 'UFIDA.U9.Cust.CostSharingRatioUI.WebPart', '94469911-71d3-4bf9-b9e9-7a108e459150')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=94469911-71d3-4bf9-b9e9-7a108e459150" title="CostSharingRatioUIForm"/>
     public partial class CostSharingRatioUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm

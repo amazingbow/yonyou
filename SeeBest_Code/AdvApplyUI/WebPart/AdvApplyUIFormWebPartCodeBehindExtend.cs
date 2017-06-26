@@ -25,6 +25,7 @@ using UFSoft.UBF.UI.WebControls.ClientCallBack;
 using UFIDA.U9.UI.PDHelper;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.Proxy;
 using UFSoft.UBF.Util.DataAccess;
+using UFSoft.UBF.UI.FormProcess;
 
 
 
@@ -364,16 +365,15 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 //单号赋默认值
                 if (string.IsNullOrEmpty(this.Model.AdvApplyBE.FocusedRecord.DocNo))
                 {
-                    this.Model.AdvApplyBE.FocusedRecord.DocNo = System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
+                    this.Model.AdvApplyBE.FocusedRecord.DocNo = "AdvApply" + System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
                 }
             }
         }
 
         public void AfterCreateChildControls()
         {
-
-
-
+            //开启个性化
+            UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
         }
 
         public void AfterEventBind()
@@ -388,6 +388,43 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         public void AfterUIModelBinding()
         {
 
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                this.BtnSubmit.Enabled = true;
+                this.BtnApprove.Enabled = true;
+                this.BtnUndoApprove.Enabled = true;
+                switch (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value)
+                {
+                    case 0:
+                        this.BtnApprove.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 1:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        break;
+                    case 2:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnApprove.Enabled = false;
+                        break;
+                }
+
+                if (this.Model.AdvApplyBE.FocusedRecord.ID > 0L)
+                {
+                    this.BtnDelete.Enabled = true;
+                    this.BtnCopy.Enabled = true;
+                }
+                else
+                {
+                    this.BtnDelete.Enabled = false;
+                    this.BtnCopy.Enabled = false;
+                }
+            }
+            else
+            {
+                this.BtnDelete.Enabled = false;
+                this.BtnCopy.Enabled = false;
+            }
 
         }
 

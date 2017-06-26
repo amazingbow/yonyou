@@ -45,7 +45,7 @@ using System.Collections.Specialized;
  ***********************************************************************************************/
 namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.AdvApproveUI","UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart", "UFIDA.U9.Cust.AdvApproveUI.WebPart", "8167d4d5-c646-47b4-8ac0-570732c35302","WebPart", "True", 1200, 536)] 
+	[FormRegister("UFIDA.U9.Cust.AdvApproveUI","UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart", "UFIDA.U9.Cust.AdvApproveUI.WebPart", "8167d4d5-c646-47b4-8ac0-570732c35302","WebPart", "True", 1032, 504)] 
 	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.AdvApproveUI', 'UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart', 'UFIDA.U9.Cust.AdvApproveUI.WebPart', '8167d4d5-c646-47b4-8ac0-570732c35302')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=8167d4d5-c646-47b4-8ac0-570732c35302" title="AdvApproveUIForm"/>
     public partial class AdvApproveUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
@@ -310,10 +310,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         #region view Create Contorls
         private void CreateFormChildControls()
         {
-            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApproveUIForm",true,1200,536);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 3, 0, 8, 0, 0, 0, 5);
+            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApproveUIForm",true,1032,504);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 2, 0, 8, 0, 0, 0, 5);
 			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),new GridRowDef(25,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -469,9 +469,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         {
             IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "2","","ebadcadd-0caf-427e-9df3-f397f136a7b4");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 1000, 441, 0, 1, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 3, 0, 10, 10, 0, 10, 0);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 2, 0, 10, 10, 0, 10, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 10,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(83,bool.Parse("True")),new GridRowDef(328,bool.Parse("True")),new GridRowDef(1,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 10,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("False")),new GridColumnDef(1,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(83,bool.Parse("True")),new GridRowDef(328,bool.Parse("False")),});
             this.Card4 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
