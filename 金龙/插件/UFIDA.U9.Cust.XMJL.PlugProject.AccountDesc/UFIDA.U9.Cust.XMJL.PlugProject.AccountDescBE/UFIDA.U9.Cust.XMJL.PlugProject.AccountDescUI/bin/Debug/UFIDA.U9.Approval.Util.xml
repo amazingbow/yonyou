@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Approval.Util</name>
+    </assembly>
+    <members>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.SubmitApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            提交审批
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.KillApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            放弃审批，仅当审批结束时能执行该动作
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.TerminateApproval(System.Int64)">
+            <summary>
+            终止审批，仅当审批未结束时能执行该动作
+            </summary>
+            <param name="resultId">对象ID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.TerminateApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            终止审批，仅当审批未结束时能执行该动作
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.ExecuteAction(System.Int64,System.Int64,System.Int32,System.String,System.Int64)">
+            <summary>
+            审批
+            </summary>
+            <param name="userid">UserID</param>
+            <param name="actionId">动作ID</param>
+            <param name="actionType">动作类型</param>
+            <param name="opinion">意见</param>
+            <param name="forwordPositionId">转交港ID</param>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.IsApprovalCanSubmit(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            检查单据是否可以提交审批流
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.IsConditionMatch(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            检查条件是否匹配
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.GetApprovalUserChain(System.Int64)">
+            <summary>
+            获得审批链信息
+            </summary>
+            <param name="entityID">entityID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.IsApprovingCanModify(UFIDA.U9.Base.Doc.DocType)">
+            <summary>
+            是否可审核中修改
+            </summary>
+            <param name="doc">单据类型</param>
+            <returns>是否可审核中修改</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.IApprovalService.ApprovingModify(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            核准中修改
+            </summary>
+            <param name="entity">业务实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.SubmitApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            提交审批
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>long</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.IsApprovalCanSubmit(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            检查单据是否可以提交审批流
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.IsConditionMatch(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            检查条件是否匹配
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.KillApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            放弃审批，仅当审批结束时能执行该动作
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.TerminateApproval(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            终止审批，仅当审批未结束时能执行该动作
+            </summary>
+            <param name="entity">审批对象</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.TerminateApproval(System.Int64)">
+            <summary>
+            终止审批，仅当审批未结束时能执行该动作
+            </summary>
+            <param name="resultId">对象ID</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.ExecuteAction(System.Int64,System.Int64,System.Int32,System.String,System.Int64)">
+            <summary>
+            审批
+            </summary>
+            <param name="userid">UserID</param>
+            <param name="actionId">动作ID</param>
+            <param name="actionType">动作类型</param>
+            <param name="opinion">意见</param>
+            <param name="forwordPositionId">转交港ID</param>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.GetApprovalUserChain(System.Int64)">
+            <summary>
+            获得审批链信息
+            </summary>
+            <param name="entityID">entityID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.IsApprovingCanModify(UFIDA.U9.Base.Doc.DocType)">
+            <summary>
+            是否可审核中修改
+            </summary>
+            <param name="doc">单据类型</param>
+            <returns>是否可审核中修改</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.ApprovalService.ApprovingModify(UFSoft.UBF.Business.BusinessEntity)">
+            <summary>
+            核准中修改
+            </summary>
+            <param name="entity">业务实体</param>
+            <param name="userID">用户ID</param>
+            <returns>是否执行成功</returns>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.EventHelper.SubscribeApprovalResultEvent(UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            订阅审批流结束事件
+            </summary>
+            <param name="entityKey">提交审批的实体Key</param>
+            <param name="subscriber">事件订阅器</param>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.EventHelper.SubscribeStateMachineEvent(UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Eventing.Event,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            订阅状态机事件
+            </summary>
+            <param name="entityKey">引发状态机事件的实体Key</param>
+            <param name="fromEvent">引发状态机事件的业务事件</param>
+            <param name="subscriber">事件订阅器</param>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.EventHelper.UnsubscribeApprovalResultEvent(UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            退订审批流结束事件
+            </summary>
+            <param name="entityKey">提交审批的实体Key</param>
+            <param name="subscriber">事件订阅器</param>
+        </member>
+        <member name="M:UFIDA.U9.Approval.Util.EventHelper.UnsubscribeStateMachineEvent(UFSoft.UBF.Business.BusinessEntity.EntityKey,UFSoft.UBF.Eventing.Event,UFSoft.UBF.Eventing.IEventSubscriber)">
+            <summary>
+            退订状态机事件
+            </summary>
+            <param name="entityKey">引发状态机事件的实体Key</param>
+            <param name="fromEvent">引发状态机事件的业务事件</param>
+            <param name="subscriber">事件订阅器</param>
+        </member>
+        <member name="T:UFIDA.U9.Approval.Util.Resources.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Util.Resources.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Util.Resources.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Approval.Util.Resources.Resource.Msg_ApprovalSeviceNotRegister">
+            <summary>
+              Looks up a localized string similar to 审批流服务没有注册！.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.View.Query</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.Business.Adapter.MetadataAccessor.IsComposition(UFSoft.UBF.UQL.XMD.IXEntity,UFSoft.UBF.UQL.XMD.IXEntity,System.String)">
+            <summary>
+            是否强组合关系，所谓强组合，是指不允许为0. 
+            </summary>
+            <param name="fromClass"></param>
+            <param name="toClass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Business.Adapter.MetadataAccessor.DoGetTableRelationship(System.String,System.String,System.String)">
+            <summary>
+            Now this method is directly calling the Metadata's Native API.
+            </summary>
+            <param name="fromClass"></param>
+            <param name="toClass"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.Adapter.MetadataTranslator">
+            <summary>
+            About the alias naming system:
+            traditionaly OQL has no intrisinc alias. So the generated SQL alias is based on the position when the same class
+            occored at different place within different path expression, our algorithm assign it with different aliases.
+            For the same Path segments, the alias is assumed the same. 
+            
+            Following the same spirits about "same symbol apprearance should be regarded as the same one, or later reference 
+            to them will be ambiguous". For example, SQL alias require the same table when treated as different instance must
+            be assigned with different alias. So our OPathExpression, if it denotes different instance family(search path family),
+            we require it must be aliased with different alias, or it will be treated as the same OPath instance.
+            
+            That is to say, our SQL target generator's alias naming system will also need to consider the alias provided by
+            OQL itself. So when retrieving OPathExpression/VariableExpression's corresponding table alias, I should also consider
+            the prefix provided by OQL alias.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.IDomainTranslator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.TranslateFrom(UFSoft.UBF.Util.Expression.Query.FromExpression,UFSoft.UBF.View.Query.ITranslatorContext)">
+            <summary>
+            VariableExpression will only be used in FromoExpression, which can be treated as a "class denotation",
+            
+            </summary>
+            <param name="from"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.TranslateOQL(UFSoft.UBF.Util.Expression.Query.OQLExpression,System.String,UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.JoinType,UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            	if this is called, it will always used in from clause, since other usage will not pass through this 
+            	trace. 
+            	
+            	And the lessons learned from using subquery in from clause can be used to direct the temporary table
+            	solution.
+            </summary>
+            <param name="oql"></param>
+            
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.TranslateSymbol(UFSoft.UBF.Util.Expression.Framework.IExpression,UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.JoinType,UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            Only VariableExpression and OPathExpression is a valid symbol to denote query path expression.
+            </summary>
+            <param name="symbol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.TranslatePath(UFSoft.UBF.Util.Expression.Query.OPathExpression,UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.JoinType,System.Boolean)">
+            <summary>
+            Now I need to associate alias in OQL with some OPath segment, and with the support of alias,
+            now serveral OPaths can be concated into a bigger one. (alias is used to denote an OPath)
+            
+            And all the alias-directed connection is treated as inner join, outer join can only be used in
+            from clause.
+            </summary>
+            <param name="opath"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.TranslatePath(UFSoft.UBF.Util.Expression.Query.OPathExpression,UFSoft.UBF.View.Query.ITranslatorContext)">
+            <summary>
+            Now This method is a State Machine based solution.
+            
+            TODO: This will base on another TranslatePath to be refactoried.
+            
+            </summary>
+            <param name="opath"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.ContributeColumn(UFSoft.UBF.View.Query.ColumnInfo)">
+            <summary>
+            Note: All these ColumnInfo I will regard as the TableName is the Aliased name,
+            such as A1, A2. There is no difference between true name and alias.
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.GetColumnExpression(UFSoft.UBF.View.Query.ColumnInfo)">
+            <summary>
+            The difference between this method and ContributeColumn is this one will not push the
+            result onto the result stack, and both will contribute join information to SelectBuilder.
+            </summary>
+            <param name="info"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.Adapter.MetadataTranslator.CompiledOPath">
+            <summary>
+            What an OPath can begin with?
+            1. Full entity name, as old one.
+            2. Alias, the newly added one.
+            
+            (And I can say that such as "from Order o, o.Customer c" o and c should always be connected
+            with an inner join, since the semantics of alias as part of OPath, which is quite different
+            with "from Order o, Customer c", this is cross join.)
+            
+            And this "inner join" / concatination can be regarded as some "type checking".
+            
+            What an OPath can end with?
+            1. property as atomic type, 
+            	as old one, can be used directly in SQL.
+            2. property as entity type.
+            	represent reference. can be compared with null literal and another entity type path end
+            3. property as collection type.
+            	can be used in collection function, which is usually translated into subquery, 
+            	nested scalar subquery or correlated subquery.
+            4. property as property type.
+            	can be used in compared with another property type? translated into 
+            
+            2/3/4 can be used to append more path segments, 1/2/3/4 can be used to assign an alias.
+            
+            Which state an OPath fragment can have?
+            1. Last is end 
+            // Internal structure used in contextual analysis. type checking, just like Attrbute or XXDescriptor.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.ITranslatorCreator">
+            <summary>
+            If the IDomainTranslator is stateless, the implementation of ITranslator
+            Creator can keep a unique IDomainTranslator reference for memory optimization.
+            If 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.GlobalizationOption.Non">
+            <summary>
+            No globalization related information will be provided
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.GlobalizationOption.Auto">
+            <summary>
+            Automaticly join data globalization table, return the content from globalized table 
+            based on the culture specified in culture.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.GlobalizationOption.Manual">
+            <summary>
+            Only join data globalization table, and return globalization discriminator column.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.GlobalizationOption.Parameter">
+            <summary>
+            The Extension of Auto option, which can let caller specify the 
+            culture collection.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Concurrency.LockManager">
+            <summary>
+             Facade design pattern.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.CompiledQuery.Promote">
+            <summary>
+            This is the extremely ugly, dirty, bad smell code to solve the performance 
+            problem of query paging when there are so many joins. The algorithm itself
+            is WRONG. 
+            </summary>
+            <example>
+            select  A.[Org], A1.[Code] as [OrgCode], A2.[Name] as [OrgName], A.[SrcOrg], 
+            A3.[Code] as [SrcOrgCode], A4.[Name] as [SrcOrgName], 
+            A.[AccrueDate] as [DocDate], A.[PostPeriod], 
+            A5.[Number] as [PostPeriodNumber], 0 as [DocKind], A.[BusinessType], 
+            A7.[Name] as [DocTypeName], A.[DocNo], A.[AC] as [DC], A8.[Code] as [DCCode], 
+            A9.[Name] as [DCName], A.[AccrueCust_Customer] as [ACID], 
+            A.[AccrueCust_Code] as [ACCode], A10.[AccrueCust_Name] as [ACName], 
+            A.[AccrueCust_ShortName] as [ACShortName], 
+            A.[AccrueCustSite_CustomerSite] as [ACSID], 
+            A.[AccrueCustSite_Code] as [ACSCode], A10.[AccrueCustSite_Name] as [ACSName], 
+            A.[PayCust_Customer] as [PCID], A.[PayCust_Code] as [PCCode], 
+            A10.[PayCust_Name] as [PCName], A.[PayCust_ShortName] as [PCShortName], 
+            A.[PayCustSite_CustomerSite] as [PCSID], A.[PayCustSite_Code] as [PCSCode], 
+            A10.[PayCustSite_Name] as [PCSName], A.[AROCMoney_TotalMoney] as [TotalMoney], 
+            A.[DocStatus] 
+            from  AR_ARBillHead as A  
+            left join [Base_Organization] as A1 on (A.[Org] = A1.[ID])  
+            left join [Base_Organization_Trl] as A2 on (A2.SysMlFlag = 'zh-CN') and (A1.[ID] = A2.[ID])  
+            left join [Base_Organization] as A3 on (A.[SrcOrg] = A3.[ID])  
+            left join [Base_Organization_Trl] as A4 on (A4.SysMlFlag = 'zh-CN') and (A3.[ID] = A4.[ID])  
+            left join [Base_SOBAccountingPeriod] as A5 on (A.[PostPeriod] = A5.[ID])  
+            left join [AR_ARDocType] as A6 on (A.[DocumentType] = A6.[ID])  
+            left join [AR_ARDocType_Trl] as A7 on (A7.SysMlFlag = 'zh-CN') and (A6.[ID] = A7.[ID])  
+            left join [Base_Currency] as A8 on (A.[AC] = A8.[ID])  
+            left join [Base_Currency_Trl] as A9 on (A9.SysMlFlag = 'zh-CN') and (A8.[ID] = A9.[ID])  
+            left join [AR_ARBillHead_Trl] as A10 on (A10.SysMlFlag = 'zh-CN') and (A.[ID] = A10.[ID])
+            </example>
+            
+            <returns></returns>
+            
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.ObjectQuery.CreateTempCollection(System.String)">
+            <summary>
+            Without previous experience to design a new API is much more difficult than imagination.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.QueryBuilder">
+            <summary>
+            The Builder for Query Object Model: 
+            It seems that QOM(Query Object Model) is always Tree Structure Based. 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryCompiler.Compile(System.String,System.String,UFSoft.UBF.View.Query.GlobalizationContext)">
+            <summary>
+            Designed to be used only by BE engine,		
+            </summary>
+            <param name="className"></param>
+            <param name="oql"></param>
+            <param name="option"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryCompiler.TransContext(UFSoft.UBF.View.Query.GlobalizationContext)">
+            <summary>
+            Now this is the hard-coded aspect-weaved Compile implementation.
+            Cache should be implemented with Aspect Oriented in mind.
+            </summary>
+            <param name="className"></param>
+            <param name="expr"></param>
+            <param name="option"></param>
+            <param name="ctx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryCompiler.CheckFilter(System.Type,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="filter"></param>
+            <returns>non null means error, null means correct</returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryContext.BuildIntoSQL(System.String,System.String,UFSoft.UBF.View.Query.GlobalizationContext)">
+            <summary>
+            将一个Select OQL转换为select * into ＃tempTable from( OQL )的形式
+            </summary>
+            <param name="tempTable"></param>
+            <param name="oql"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.QueryRelationalTranslator">
+            <summary>
+            Convert the OQL Expression Tree to SQL Expression Tree,
+            On the Stack is the converted SQL Expression Tree, all the
+            elements on the Stack is a valid SQL Expression, although some
+            OQL share the same primitive SQL Expression, such as Literal/Const, etc.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.QueryRelationalTranslator.translator">
+            <summary>
+            Once again, the refactory of introducing IDomainTranslator prove the Common-
+            Variablity approach, i.e. Separate the apt-change part code into separate code
+            , i.e. interface and its implementation is outside the core and is delegated from
+            core.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.QueryRelationalTranslator.current">
+            <summary>
+            Used to simulate stack for recursion of subquery expression visition..
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.QueryRelationalTranslator.refineConditions">
+            <summary>
+            Note: At present I don't support Refinement in OQL. It just can be parsed, but 
+            the generated SQL hasn't yet been tested.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.#cctor">
+            <summary>
+            TODO: 
+            1. To utilize the standard SQL 99 Standard Function set. 
+            2. To support SQL dialect.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.VisitOQLExpression(UFSoft.UBF.Util.Expression.Query.OQLExpression)">
+            <summary>
+            Link stack trick?
+            </summary>
+            <param name="oql"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.VisitInsertExpression(UFSoft.UBF.Util.Expression.Query.InsertExpression)">
+            <summary>
+            访问 INSERT 表达式,(Added by yangyang 2007.7.12)
+            
+            将
+            </summary>
+            <param name="insert"></param>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.TranslateEnum(UFSoft.UBF.Util.Expression.Framework.FunctionExpression)">
+            <summary>
+            For pre-defined function 
+            </summary>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.TranslateDateFunc(UFSoft.UBF.Util.Expression.Framework.FunctionExpression)">
+            <summary>
+            For dateadd/datediff/datename/datepart
+            </summary>
+            <param name="func"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.QueryRelationalTranslator.VisitFunctionExpression(UFSoft.UBF.Util.Expression.Framework.FunctionExpression)">
+            <summary>
+            TODO: expr.Function should be mapped to the underlying Standard SQL Function
+            Manager, to get or bypass the SQL Dialect.
+            </summary>
+            <param name="expr"></param>
+        </member>
+        <member name="F:UFSoft.UBF.View.Query.QueryConfiguration.creator">
+            <summary>
+            Just used for cache.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.View.Query.UsageFinder">
+            <summary>
+            The Wrong, Ugly, Bad Smell Utility to find the alias usage	
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.View.Query.SQLJoinDecorator.VisitVariableExpression(UFSoft.UBF.Util.Expression.Framework.VariableExpression)">
+            <summary>
+            This will be called only on SQLJoin lists, so we can safely do transformation
+            </summary>
+            <param name="expr"></param>
+        </member>
+        <member name="T:udfbinding">
+            <remarks/>
+        </member>
+        <member name="P:udfbinding.Items">
+            <remarks/>
+        </member>
+        <member name="T:udfbindingUdf">
+            <remarks/>
+        </member>
+        <member name="P:udfbindingUdf.function">
+            <remarks/>
+        </member>
+        <member name="P:udfbindingUdf.owner">
+            <remarks/>
+        </member>
+        <member name="T:UFSoft.UBF.UQL.XMD.VEEntry">
+            <summary>
+            虚拟实体档案
+            </summary>
+        </member>
+    </members>
+</doc>

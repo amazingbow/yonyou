@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.DistributedCache</name>
+    </assembly>
+    <members>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultThreadTimems">
+            <summary>
+            默认设置，在MemoryCacheStateProvider中会从web.config中读取并配置值。
+            线程处理每30秒一次.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultMemoryStateHoldTime">
+            <summary>
+            内存中State存活时间.--不访问超过此时间，从内存中淘汰.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultMemorySessionHoldTime">
+            <summary>
+            默认内存Session存活时间.--如果有ping会触发Session存活期.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultPersistenceNoActiveStateTime">
+            <summary>
+            对State 进行ping时，如果State不活动超过指定时间，则进行持久.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultPersistenceSessionTime">
+            <summary>
+            对Session每次持久化的间隔时间，在此时间内，不持久。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultDStateSeconds">
+            <summary>
+            Redis State默认超时时间， 页面的Ping时间需要在此时间内进行. 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.DefaultDSessionSeconds">
+            <summary>
+            Redis Session 默认超时时间,
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.BatchCommitEntity">
+            <summary>
+            批量提交实体的数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.Configuration.DCacheConfiguration.MaxCacheEntityCount">
+            <summary>
+             最大缓存的实体数量,也就是实体有超过此数量的数据,则不进行缓存.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DistributedCache.IDistributedCache">
+            <summary>
+            分布式缓存接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.IDistributedCache.Get``1(System.String)">
+            <summary>
+            获取缓存Value 范型接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.IDistributedCache.Expire(System.String,System.Int32)">
+            <summary>
+            设置缓存对象过期时间(当前时间+seconds)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.GetDCacheUseable">
+            <summary>
+             当前主数据服务的分布式缓存是否可用状态。--不可用状态可能正在初始化中导致。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.GetEntityValues(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+             按 实体:ID   属性组的 接口方式获取 其值。
+            </summary>
+            <param name="eCacheKeys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.SetEntityToRedisHash(System.Collections.Generic.IList{UFSoft.UBF.Business.Entity})">
+            <summary>
+            以 Entity:ID 为 Key，  PropName为HashKey 写入 Redis Hash. --目前使用方法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.SetEntityToRedis(System.Collections.Generic.IList{UFSoft.UBF.Business.Entity})">
+            <summary>
+            直接以 Entity:ID:PropName 方式写入Redis  --废弃方式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.CombineCacheEntityKey(System.String,System.String)">
+            <summary>
+            拼接实体缓存的Key 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.DistributedCache.MasterDataService.CombineCacheEntityPropKey(System.String,System.String,System.String)">
+            <summary>
+            拼接实体缓存的Key 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.MasterDataService.IsUsing">
+            <summary>
+             配置是否启用主数据服务
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.DistributedCache.UISessionStateItem.isDirty">
+            <summary>
+            目前仅用于Session标识，不进行持久。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.UISessionStateItem.SType">
+            <summary>
+            SessionState 的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.UISessionStateItem.LastActivateTime">
+            <summary>
+            最后内存活动时间
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.DistributedCache.UISessionStateItem.LastPersistenceTime">
+            <summary>
+             最后纯化时间
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.DistributedCache.SessionStatePersistence">
+            <summary>
+            用于UI Session 与SessionState 的Cache 实现
+            </summary>
+        </member>
+    </members>
+</doc>

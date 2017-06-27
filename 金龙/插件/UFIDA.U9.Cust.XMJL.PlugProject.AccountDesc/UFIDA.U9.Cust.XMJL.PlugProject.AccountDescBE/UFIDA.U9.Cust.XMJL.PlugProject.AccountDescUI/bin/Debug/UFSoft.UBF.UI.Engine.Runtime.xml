@@ -1,0 +1,975 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.Engine.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.ButtonModelBuilder">
+            <summary>
+            Button模型生成器，可以生成各种Button控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.ButtonModelBuilder.BuilderToolbarButton(System.String,UFSoft.UBF.UI.ControlModel.IUFToolbar,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            生成Toolbar中Button控件
+            </summary>
+            <param name="container">被生成的Button控件的父控件</param>
+            <param name="controlID">Button控件ID</param>
+            <param name="TitleResourceID">Button控件资源ID</param>
+            <param name="visible">Button控件是否可见</param>
+            <param name="width">Button控件的宽度</param>
+            <param name="height">Button控件的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.ButtonModelBuilder.BuilderUFButton(System.String,UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成网格布局中的按钮控件
+            </summary>
+            <param name="container">被生成的Button控件的父控件</param>
+            <param name="controlID">Button控件ID</param>
+            <param name="TitleResourceID">Button控件资源ID</param>
+            <param name="visible">Button控件是否可见</param>
+            <param name="width">Button控件的宽度</param>
+            <param name="height">Button控件的高度</param>
+            <param name="gridX">Button控件在网格中的X坐标</param>
+            <param name="gridY">Button控件在网格中的Y坐标</param>
+            <param name="gridWidth">Button控件在网格中的宽度</param>
+            <param name="gridHeight">Button控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.CheckBoxModelBuilder">
+            <summary>
+            CheckBox模型生成器，可以生成各种CheckBox控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.ImageButtonModelBuilder">
+            <summary>
+            ImageButton模型生成器，可以生成各种ImageButton控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.ImageButtonModelBuilder.BuilderWebPartToolbarButton(System.String,System.Web.UI.Control,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            生成Toolbar中ImageButton控件
+            </summary>
+            <param name="container">被生成的ImageButton控件的父控件</param>
+            <param name="controlID">控件ID</param>
+            <param name="TitleResourceID">控件资源ID</param>
+            <param name="visible">控件是否可见</param>
+            <param name="width">控件的宽度</param>
+            <param name="height">控件的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.ImageButtonModelBuilder.BuilderWebPartToolbarButton(System.String,System.Web.UI.Control,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成网格布局中的ImageButton控件
+            </summary>
+            <param name="container">被生成的ImageButton控件的父控件</param>
+            <param name="controlID">控件ID</param>
+            <param name="TitleResourceID">控件资源ID</param>
+            <param name="visible">控件是否可见</param>
+            <param name="width">控件的宽度</param>
+            <param name="height">控件的高度</param>
+            <param name="gridX">控件在网格中的X坐标</param>
+            <param name="gridY">控件在网格中的Y坐标</param>
+            <param name="gridWidth">控件在网格中的宽度</param>
+            <param name="gridHeight">控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.SourceLabelModelBuilder">
+            <summary>
+            SourceLabelModel模型生成器，可以生成各种SourceLabelModel控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.SourceLabelModelBuilder.BuilderSourceLabel(System.String,UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成网格布局中的SourceLabelModel控件
+            </summary>
+            <param name="container">被生成的SourceLabelModel控件的父控件</param>
+            <param name="controlID">SourceLabelModel控件ID</param>
+            <param name="TitleResourceID">SourceLabelModel控件资源ID</param>
+            <param name="isNull">SourceLabelModel控件是否允许为空</param>
+            <param name="visible">SourceLabelModel控件是否可见</param>
+            <param name="enabled">SourceLabelModel控件是否有效</param>
+            <param name="titleAlign">SourceLabelModel控件的标题对齐方式</param>
+            <param name="dataType">SourceLabelModel控件的数据类型</param>
+            <param name="x">SourceLabelModel控件的宽度x坐标</param>
+            <param name="y">SourceLabelModel控件的高度y坐标</param>
+            <param name="width">SourceLabelModel控件的宽度</param>
+            <param name="height">SourceLabelModel控件的高度</param>
+            <param name="gridX">SourceLabelModel控件在网格中的X坐标</param>
+            <param name="gridY">SourceLabelModel控件在网格中的Y坐标</param>
+            <param name="gridWidth">SourceLabelModel控件在网格中的宽度</param>
+            <param name="gridHeight">SourceLabelModel控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.FlexFieldPickerModelBuilder">
+            <summary>
+            FlexFieldPicker模型生成器，可以生成各种FlexFieldPicker控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.FileUploadModelBuilder">
+            <summary>
+            FileUpload模型生成器，可以生成各种FileUpload控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.FileUploadModelBuilder.BuilderFileUpload(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成网格布局中的FileUpload控件
+            </summary>
+            <param name="container">被生成的FileUpload控件的父控件</param>
+            <param name="controlID">FileUpload控件ID</param>
+            <param name="visible">FileUpload控件是否可见</param>
+            <param name="width">FileUpload控件的宽度</param>
+            <param name="height">FileUpload控件的高度</param>
+            <param name="gridX">FileUpload控件在网格中的X坐标</param>
+            <param name="gridY">FileUpload控件在网格中的Y坐标</param>
+            <param name="gridWidth">FileUpload控件在网格中的宽度</param>
+            <param name="gridHeight">FileUpload控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.LineModelBuilder">
+            <summary>
+            Line模型生成器，可以生成各种Line控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.LineModelBuilder.BuilderWebPartUFLine(System.Web.UI.Control,System.String,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成网格布局中的Line控件
+            </summary>
+            <param name="container">被生成的Line控件的父控件</param>
+            <param name="controlID">Line控件ID</param>
+            <param name="visible">Line控件是否可见</param>
+            <param name="width">Line控件的宽度</param>
+            <param name="height">Line控件的高度</param>
+            <param name="gridX">Line控件在网格中的X坐标</param>
+            <param name="gridY">Line控件在网格中的Y坐标</param>
+            <param name="gridWidth">Line控件在网格中的宽度</param>
+            <param name="gridHeight">Line控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.MessageBoxModelBuilder">
+            <summary>
+            MessageBox模型生成器，可以生成各种MessageBox控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.MessageBoxModelBuilder.BuilderWebPartMessageBox(System.String,System.Web.UI.Control,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            生成MessageBox控件
+            </summary>
+            <param name="container">被生成的MessageBox控件的父控件</param>
+            <param name="controlID">MessageBox控件ID</param>
+            <param name="EnableID">使能的控件ID</param>
+            <param name="EnabledID">被使能的控件ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.LabelModelBuilder">
+            <summary>
+            Label模型生成器，可以生成各种Label控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.LabelModelBuilder.BuilderUFLabel(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成网格布局中的Label控件
+            </summary>
+            <param name="container">被生成的Label控件的父控件</param>
+            <param name="controlID">Label控件ID</param>
+            <param name="TitleResourceID">Label控件资源ID</param>
+            <param name="visible">Label控件是否可见</param>
+            <param name="enabled">Label控件是否有效</param>
+            <param name="titleAlign">Label控件的标题对齐方式</param>
+            <param name="x">Label控件的宽度x坐标</param>
+            <param name="y">Label控件的高度y坐标</param>
+            <param name="width">Label控件的宽度</param>
+            <param name="height">Label控件的高度</param>
+            <param name="gridX">Label控件在网格中的X坐标</param>
+            <param name="gridY">Label控件在网格中的Y坐标</param>
+            <param name="gridWidth">Label控件在网格中的宽度</param>
+            <param name="gridHeight">Label控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.TextBoxModelBuilder">
+            <summary>
+            TextBox模型生成器，可以生成各种TextBox控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.TextBoxModelBuilder.BuilderTextBox(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            生成网格布局中的TextBox控件
+            </summary>
+            <param name="container">被生成的TextBox控件的父控件</param>
+            <param name="controlID">TextBox控件ID</param>
+            <param name="TitleResourceID">TextBox控件资源ID</param>
+            <param name="isNull">TextBox控件是否允许为空</param>
+            <param name="visible">TextBox控件是否可见</param>
+            <param name="enabled">TextBox控件是否有效</param>
+            <param name="titleAlign">TextBox控件的标题对齐方式</param>
+            <param name="dataType">TextBox控件的数据类型</param>
+            <param name="x">TextBox控件的宽度x坐标</param>
+            <param name="y">TextBox控件的高度y坐标</param>
+            <param name="width">TextBox控件的宽度</param>
+            <param name="height">TextBox控件的高度</param>
+            <param name="gridX">TextBox控件在网格中的X坐标</param>
+            <param name="gridY">TextBox控件在网格中的Y坐标</param>
+            <param name="gridWidth">TextBox控件在网格中的宽度</param>
+            <param name="gridHeight">TextBox控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.ReferenceModelBuilder">
+            <summary>
+            Reference模型生成器，可以生成各种Reference控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.DropDownListModelBuilder">
+            <summary>
+            DropDownList模型生成器，可以生成各种DropDownList控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.DatePickerModelBuilder">
+            <summary>
+            DatePicker模型生成器，可以生成各种DatePicker控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.CommonBuilder">
+            <summary>
+            公用模型生成器，可以生成各种控件的局部代码，以减少View的代码量
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Engine.PageStatusEnum.Edit">
+            新增
+        </member>
+        <member name="F:UFSoft.UBF.UI.Engine.PageStatusEnum.Refresh">
+            编辑
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.QueryStringService">
+            <summary>
+            CodeBehind类中的QueryString服务，把QueryString转换为我们需要的形式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.QueryStringService.GetSubViewFilter(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            取得子视图从主视图关联的参数信息 如 ID=***
+            </summary>
+            <param name="view">子View</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIEngineHelper.ShowWindowStatus(UFSoft.UBF.UI.IView.IPart,System.String)">
+            <summary>
+            在客户端的状态栏中显示指定的信息
+            </summary>
+            <param name="page">用户控件页面</param>
+            <param name="message">在客户端状态栏中要显示的信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIEngineHelper.IsBindEnum(System.Int32,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            判断是否进行枚举数据绑定
+            </summary>
+            <param name="pageStatus">页面状态</param>
+            <param name="page">用户控件页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIEngineHelper.IsDataBind(UFSoft.UBF.UI.IView.PartStateType,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            判断是否进行数据绑定
+            </summary>
+            <param name="pageStatus">页面状态</param>
+            <param name="page">用户控件页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIEngineHelper.FindControl(System.Web.UI.Control,System.String)">
+            <summary>
+            在容器控件中递归查找控件
+            </summary>
+            <param name="container">容器控件</param>
+            <param name="uniqueID">控件ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIEngineHelper.RefreshPage(System.String,System.Web.UI.Page,System.String)">
+            <summary>
+            刷新当前页面
+            </summary>
+            <param name="url">URL</param>
+            <param name="page">用户控件页面</param>
+            <param name="message">信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.UIValidation.IsNull(System.Boolean,System.String,System.String)">
+            <summary>
+            是否为空
+            </summary>
+            <param name="isNull">是否为空</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFReport">
+            <summary>
+            报表控件模型接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Authorization.WebPartAuthorization.DisableForbiddingResource(UFSoft.UBF.UI.FormProcess.BaseWebForm,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            对于没有权限的资源进行Disable处理
+            </summary>
+            <param name="webPart">当前处理的页面</param>
+            <param name="userID">用户ID</param>
+            <param name="uimlID">FormID</param>
+            <param name="orgID">组织ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Authorization.WebPartAuthorization.DisableControl(System.String,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            让受限制的控件失效
+            </summary>
+            <param name="controlID">控件ID</param>
+            <param name="uc">当前页面</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.WebPartRuntimeHelper.ShowErrorMessage(System.String,System.String,System.String,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            显示错误信息对话框
+            </summary>
+            <param name="errMessage">要显示的错误信息</param>
+            <param name="stackInfo">要显示的堆栈信息</param>
+            <param name="title">对话框标题</param>
+            <param name="page">当前页面</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFImageButton#add_ButtonClick(UFSoft.UBF.UI.WebControls.ToolbarItemEventHandler)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFImageButton#remove_ButtonClick(UFSoft.UBF.UI.WebControls.ToolbarItemEventHandler)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#get_Text">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#set_Text(System.String)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#get_EnableNotNullVerify">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#set_EnableNotNullVerify(System.Boolean)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#get_AutoPostBack">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#set_AutoPostBack(System.Boolean)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#get_TopPanelClientID">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.UFSoft#UBF#UI#ControlModel#IUFButton#set_TopPanelClientID(System.String)">
+            <summary>
+            Toolbar中的ImageButton
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButtonAdapter.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.FormRegisterAttribute">
+            <summary>
+            Form注册信息属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.PublishPath">
+            <summary>
+            最终发布的相对路径，就是命名空间
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.TypeName">
+            <summary>
+            生成的Form的类型名称的fullname
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.AssemblyName">
+            <summary>
+            程序集名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.FormID">
+            <summary>
+            FormID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.Catalog">
+            <summary>
+            类型：webpart，winform
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.IsMainForm">
+            <summary>
+            是否主Form
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.DefaultWidth">
+            <summary>
+            是否主Form
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.FormRegisterAttribute.DefaultHeight">
+            <summary>
+            是否主Form
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter.RegisterGridBatchModifyEvent(UFSoft.UBF.UI.Engine.Runtime.GridEdit.GridBatchModifyDelegate,System.Collections.Generic.List{System.String})">
+            <summary>
+            注册批量修改事件
+            <remarks>如果没有为Grid的UIViw上的所有字段实现批量修改，则需要指定触发列。V3后将不再支持指定触发列，必须全部实现</remarks>
+            </summary>
+            <param name="handler">事件处理方法代理</param>
+            <param name="fireCols">触发列，可空。为空时，表示所有列都触发事件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter.OnGridBatchModify(UFSoft.UBF.UI.WebControls.GridEventNode)">
+            <summary>
+            触发批量修改事件
+            </summary>
+            <param name="eNode"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter.LastParentRecordID">
+            <summary>
+            开关量，记录主视图中记录的ID，当ID发生变化时，重算数据。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter.PageIndex">
+            <summary>
+            页号，从0开始
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter.CurrentRecords">
+            <summary>
+            当前Grid操作的记录集,绑定到Grid上的数据. ．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebTreeControlAdapter.BindSpecifyNode(Telerik.WebControls.RadTreeNode)">
+            <summary>
+            在指定节点绑定其子节点，懒加载指定节点的所有直接子节点
+            </summary>
+            <param name="inputNode"></param>
+            <param name="curValue"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebTreeControlAdapter.GetNodeValue(UFSoft.UBF.UI.MD.Runtime.IUIField,Telerik.WebControls.RadTreeNode)">
+            <summary>
+            转换树结点的Value为IUIField的值类型对应的值
+            </summary>
+            <param name="parentField"></param>
+            <param name="treeNode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownButtonAdapter.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownButtonAdapter.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebMenuAdapter.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebMenuAdapter.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.InParameterAttribute">
+            <summary>
+            Consumer信息属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.InParameterAttribute.Name">
+            <summary>
+            消费者的参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.InParameterAttribute.IsConsumer">
+            <summary>
+            是否是消费者
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderUFButton(UFSoft.UBF.UI.ControlModel.IUFContainer,System.Boolean,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            生成网格布局中的按钮控件
+            </summary>
+            <param name="container">被生成的Button控件的父控件</param>
+            <param name="controlID">Button控件ID</param>
+            <param name="TitleResourceID">Button控件资源ID</param>
+            <param name="visible">Button控件是否可见</param>
+            <param name="width">Button控件的宽度</param>
+            <param name="height">Button控件的高度</param>
+            <param name="gridX">Button控件在网格中的X坐标</param>
+            <param name="gridY">Button控件在网格中的Y坐标</param>
+            <param name="gridWidth">Button控件在网格中的宽度</param>
+            <param name="gridHeight">Button控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderImageButton(UFSoft.UBF.UI.ControlModel.IUFContainer,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            生成网格布局中的ImageButton控件
+            </summary>
+            <param name="container">被生成的ImageButton控件的父控件</param>
+            <param name="controlID">控件ID</param>
+            <param name="TitleResourceID">控件资源ID</param>
+            <param name="visible">控件是否可见</param>
+            <param name="width">控件的宽度</param>
+            <param name="height">控件的高度</param>
+            <param name="gridX">控件在网格中的X坐标</param>
+            <param name="gridY">控件在网格中的Y坐标</param>
+            <param name="gridWidth">控件在网格中的宽度</param>
+            <param name="gridHeight">控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderUFLabel(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            生成网格布局中的Label控件
+            </summary>
+            <param name="container">被生成的Label控件的父控件</param>
+            <param name="controlID">Label控件ID</param>
+            <param name="TitleResourceID">Label控件资源ID</param>
+            <param name="visible">Label控件是否可见</param>
+            <param name="enabled">Label控件是否有效</param>
+            <param name="titleAlign">Label控件的标题对齐方式</param>
+            <param name="x">Label控件的宽度x坐标</param>
+            <param name="y">Label控件的高度y坐标</param>
+            <param name="width">Label控件的宽度</param>
+            <param name="height">Label控件的高度</param>
+            <param name="gridX">Label控件在网格中的X坐标</param>
+            <param name="gridY">Label控件在网格中的Y坐标</param>
+            <param name="gridWidth">Label控件在网格中的宽度</param>
+            <param name="gridHeight">Label控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderFlexFieldPicker(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Char,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,UFSoft.UBF.UI.Controls.FlexFieldType,System.Boolean,System.Boolean,System.String,System.String,System.String,System.String)">
+            <summary>
+            生成网格布局中的FlexFieldPicker控件
+            </summary>
+            <param name="container">被生成的FlexFieldPicker控件的父控件</param>
+            <param name="controlID">FlexFieldPicker控件ID</param>
+            <param name="TitleResourceID">FlexFieldPicker控件资源ID</param>
+            <param name="isNull">FlexFieldPicker控件是否允许为空</param>
+            <param name="visible">FlexFieldPicker控件是否可见</param>
+            <param name="enabled">FlexFieldPicker控件是否有效</param>
+            <param name="titleAlign">FlexFieldPicker控件的标题对齐方式</param>
+            <param name="dataType">FlexFieldPicker控件的数据类型</param>
+            <param name="FlexFieldPickerInfo">FlexFieldPicker控件的详细信息</param>
+            <param name="x">FlexFieldPicker控件的宽度x坐标</param>
+            <param name="y">FlexFieldPicker控件的高度y坐标</param>
+            <param name="width">FlexFieldPicker控件的宽度</param>
+            <param name="height">FlexFieldPicker控件的高度</param>
+            <param name="gridX">FlexFieldPicker控件在网格中的X坐标</param>
+            <param name="gridY">FlexFieldPicker控件在网格中的Y坐标</param>
+            <param name="gridWidth">FlexFieldPicker控件在网格中的宽度</param>
+            <param name="gridHeight">FlexFieldPicker控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderSourceLabel(System.String,UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            生成网格布局中的SourceLabelModel控件
+            </summary>
+            <param name="container">被生成的SourceLabelModel控件的父控件</param>
+            <param name="controlID">SourceLabelModel控件ID</param>
+            <param name="TitleResourceID">SourceLabelModel控件资源ID</param>
+            <param name="isNull">SourceLabelModel控件是否允许为空</param>
+            <param name="visible">SourceLabelModel控件是否可见</param>
+            <param name="enabled">SourceLabelModel控件是否有效</param>
+            <param name="titleAlign">SourceLabelModel控件的标题对齐方式</param>
+            <param name="dataType">SourceLabelModel控件的数据类型</param>
+            <param name="x">SourceLabelModel控件的宽度x坐标</param>
+            <param name="y">SourceLabelModel控件的高度y坐标</param>
+            <param name="width">SourceLabelModel控件的宽度</param>
+            <param name="height">SourceLabelModel控件的高度</param>
+            <param name="gridX">SourceLabelModel控件在网格中的X坐标</param>
+            <param name="gridY">SourceLabelModel控件在网格中的Y坐标</param>
+            <param name="gridWidth">SourceLabelModel控件在网格中的宽度</param>
+            <param name="gridHeight">SourceLabelModel控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.UIControlBuilder.BuilderFileUpload(UFSoft.UBF.UI.ControlModel.IUFContainer,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            生成网格布局中的FileUpload控件
+            </summary>
+            <param name="container">被生成的FileUpload控件的父控件</param>
+            <param name="controlID">FileUpload控件ID</param>
+            <param name="visible">FileUpload控件是否可见</param>
+            <param name="width">FileUpload控件的宽度</param>
+            <param name="height">FileUpload控件的高度</param>
+            <param name="gridX">FileUpload控件在网格中的X坐标</param>
+            <param name="gridY">FileUpload控件在网格中的Y坐标</param>
+            <param name="gridWidth">FileUpload控件在网格中的宽度</param>
+            <param name="gridHeight">FileUpload控件在网格中的高度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.BuilderHelper.GetControlToolTip2(UFSoft.UBF.UI.IView.IPart,System.String,System.String)">
+            <summary>
+            For 前端动态修改多语词条
+            </summary>
+            <param name="part"></param>
+            <param name="tooltipResID"></param>
+            <param name="controlGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.HyperLinkModelBuilder">
+            <summary>
+            HyperLink模型生成器，可以生成各种HyperLink控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Builder.ExpressionModelBuilder">
+            <summary>
+            TextBox模型生成器，可以生成各种TextBox控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIMDRuntimeBuilder.BuildUIViewField(UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.Type,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.String,UFSoft.UBF.UI.MD.Runtime.UIFieldType,System.String)">
+            <summary>
+            构造UIVIEW的字段
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.HandoutBusinessException(UFSoft.UBF.UI.IView.IPart,System.Exception)">
+            <summary>
+            处理BusinessException，把异常信息显示在其对应的控件上
+            </summary>
+            <param name="currentForm"></param>
+            <param name="Ex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.HandlerAttrsException(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.ExceptionBase)">
+            <summary>
+            处理AttrsContainerException
+            </summary>
+            <param name="currentForm"></param>
+            <param name="attrsEx"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.HandoutBusinessExceptions(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.ExceptionBase)">
+            <summary>
+            处理BusinessExceptions，把异常信息显示在其对应的控件上
+            </summary>
+            <param name="currentForm"></param>
+            <param name="notExistEx"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.HandlerFieldControlException(UFSoft.UBF.UI.IView.IPart,System.String,System.String,System.String)">
+            <summary>
+            处理UIField绑定到控件的异常
+            </summary>
+            <param name="currentForm"></param>
+            <param name="entityFullName"></param>
+            <param name="attributeName"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.HandlerViewContainerException(UFSoft.UBF.UI.IView.IPart,System.String,System.String)">
+            <summary>
+            处理UIView绑定到容器的异常
+            </summary>
+            <param name="currentForm"></param>
+            <param name="entityFullName"></param>
+            <param name="attributeName"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.AddExceptionMessageToTopLevelContainer(UFSoft.UBF.UI.IView.IPart,System.String)">
+            <summary>
+            把异常信息放到顶级容器
+            </summary>
+            <param name="currentForm"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.AddExceptionMessageToContainer(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,System.String)">
+            <summary>
+            把异常信息放到容器控件中
+            </summary>
+            <param name="control"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.ExceptionDistribute.AddExceptionMessageToControl(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,System.String)">
+            <summary>
+            把异常信息放到控件中
+            </summary>
+            <param name="control"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.Runtime.Interface.ICondition">
+            <summary>
+            批量修改条件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Runtime.Interface.ICondition.isMatch(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            判断指定IUIRecord是否满足条件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Runtime.Interface.ICondition.GetEffectedData">
+            <summary>
+            获取指定受影响的记录集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Interface.ICondition.Option">
+            <summary>
+            修改选项
+            <remarks>将会影响受影响的记录数</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.GridEditCondition.Option">
+            <summary>
+            修改选项
+            <remarks>将会影响受影响的记录数</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Interface.IBatchEditOption.IsEditAllData">
+            <summary>
+            修改所有页数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Interface.IBatchEditOption.IsEditCurrentPageData">
+            <summary>
+            修改当前页数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Interface.IBatchEditOption.IsEditCheckedData">
+            <summary>
+            修改勾选行数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.EditItem.FieldID">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.EditItem.Value">
+            <summary>
+            字段值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.GridBatchModifyArgs.HasCondition">
+            <summary>
+            是否有条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.GridBatchModifyArgs.Values">
+            <summary>
+            修改的项目集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.GridEdit.GridBatchModifyArgs.Condition">
+            <summary>
+            修改条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Helper.GridCopyRowEventAction.CopyRowArg.ReferenceRowKey">
+            <summary>
+            被复制行的Key
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.Runtime.Helper.GridCopyRowEventAction.CopyRowArg.NeedRewriteNewRow">
+            <summary>
+            是否需要回写新行数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.OutParameterAttribute">
+            <summary>
+            Provider信息属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.OutParameterAttribute.Name">
+            <summary>
+            提供者的参数名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Engine.OutParameterAttribute.IsProvider">
+            <summary>
+            是否是提供者
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Engine.RuntimeEngineLog">
+            <summary>
+            RuntimeEngine日志
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Engine.RuntimeEngineLog.logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebGridSessionManagerAdapter.CurrentState">
+            <summary>
+            获取UIState
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridColumnWrapper.AllowSort">
+            <summary>
+            允许排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridColumnWrapper.AllowFilter">
+            <summary>
+            允许过滤
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownListColumnWrapper.IsRefSelected">
+            <summary>
+            是否参照选择
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownListColumnWrapper.StartItemValue">
+            <summary>
+            起始枚举项值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownListColumnWrapper.EndItemValue">
+            <summary>
+            结束枚举项值
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebContainerDoubleDataBindHelper.BindData(UFSoft.UBF.UI.ControlModel.IUFContainer)">
+             <summary>
+            容器没有绑定UIView时，仅绑定子容器数据
+            容器绑定UIView时，绑定子控件和子容器数据
+             </summary>
+             <param name="container"></param>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebContainerDoubleDataBindHelper.BindData(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+             <summary>
+            容器没有绑定UIView时，仅绑定子容器数据
+            容器绑定UIView时，绑定子控件和子容器数据
+            为Clear操作提供的绑定空数据方法．
+             </summary>
+             <param name="container"></param>
+             <param name="record"></param>
+             <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebContainerDoubleDataBindHelper.GetFocusedRecord(UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            取焦点记录
+            </summary>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebContainerDoubleDataBindHelper.Clear(UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            清除数据
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebControlDoubleDataBindHelper.GetValue(UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取、设置对应数据模型字段值，控制权限
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebControlDoubleDataBindHelper.GetValue(UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取、设置对应数据模型字段值，控制权限
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebControlDoubleDataBindHelper.GetObject(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.String)">
+            <summary>
+            返回字段名所对应的数据。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebControlDoubleDataBindHelper.GetString(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            返回字段名所对应的数据,不控制权限。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceColumnWrapper.RefPkField">
+            <summary>
+            使用默认的ID字符串
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceColumnWrapper.AllowClientCache">
+            <summary>
+            是否允许客户端缓存参照结果
+            <remarks>默认为false</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebDropDownListAdapter.IsCodeKeyField">
+            <summary>
+            是否Code为关键字段
+            <remarks>内部使用，慎用</remarks>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter.AddTypeParams(System.Object,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            增加类型化的参照参数.-UIField类型.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter.AddTypeParams(System.Object,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            增加类型化的参照参数.-UIControlOrUIField类型.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter.AddTypeParams(System.Object,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            增加类型化的参照参数.-UIControlOrUIField类型.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebReferenceAdapter.RefPkField">
+            <summary>
+            使用默认的ID字符串
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButton2Adapter">
+            <summary>
+            容器中的ImageButton
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButton2Adapter.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControlAdapter.UFWebImageButton2Adapter.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.WebPartBuilder.CreateConsumerSchema(System.String[])">
+            <summary>
+            创建WebPart 消费Schema信息
+            </summary>
+            <param name="inParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Engine.Builder.WebPartBuilder.CreateProviderRowData(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.Engine.Builder.ProviderData[])">
+            <summary>
+            创建WebPart Provider DataRowView信息.
+            </summary>
+            <param name="model"></param>
+            <param name="providers"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

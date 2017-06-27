@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.FormProcess</name>
+    </assembly>
+    <members>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseController.CurrentModel">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetUseQueryCaseFromRequestParam">
+            <summary>
+            是否使用查询方案，给参照个性化用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.TrackRefreshState">
+            <summary>
+            更新页面 refresh tickets
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.NavigateForm(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            弹出的Form之间的导航
+            </summary>
+            <param name="partId"></param>
+            <param name="querystrings"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.ShowAlertMessagesAtClient(System.String)">
+            <summary>
+            客户端加载页面后，以alert的形式弹出警告。请谨慎使用此方法(gct)。
+            </summary>
+            <param name="clientMessages"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.OnDataCollect(System.Object)">
+            <summary>
+            便于平台控制并调用开发部WebPart中的OnDataCollect
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.Clear">
+            <summary>
+            清除数据.(只是针对Part进行界面数据清除，不实际删除View中数据)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetControlDisplayName(System.String,System.String,System.String)">
+            <summary>
+            取Form中自己定义的资源,DisplayName
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetControlDisplayName(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            取Form中自己定义的资源,DisplayName
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetControlToolTip(System.String,System.String,System.String)">
+            <summary>
+            取Form中自己定义的资源,tooltip
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetResource(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            取资源,DisplayName or description
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.InitViewBindingContainer(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.String,UFSoft.UBF.UI.ControlModel.IViewContainer,System.Int32)">
+            <summary>
+            初始化UIView绑定的容器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.InitViewBindingContainer(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.String,UFSoft.UBF.UI.ControlModel.IViewContainer,System.Int32,System.String)">
+            <summary>
+            初始化UIView绑定的容器，带Tooltip
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsDataBind(UFSoft.UBF.UI.IView.PartStateType,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            判断是否进行数据绑定
+            </summary>
+            <param name="pageStatus">页面状态</param>
+            <param name="page">用户控件页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.SetUIRecordDefaultValue(System.Collections.Generic.IList{UFSoft.UBF.UI.MD.Runtime.IUIRecord})">
+            <summary>
+            为指定记录集合里的所有记录设置默认值
+            [注：应该在BeforeUIModelBinding()里调用]
+            </summary>
+            <param name="rcds">记录集合</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.SetUIRecordDefaultValue(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            为指定记录设置默认值
+            [注：应该在BeforeUIModelBinding()里调用]
+            </summary>
+            <param name="rcds">记录</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.SetUIModelDefaultValue(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            为Model里已经设置了默认值的字段的DefaultValue属性赋值
+            [注：应该在BeforeUIModelBinding()里调用]
+            </summary>
+            <param name="model">前台Model模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.CallbackDataCollect(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs)">
+            <summary>
+            收集Callback全部参数到当前的UIModel中．
+            </summary>
+            <param name="args">callback参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.CallbackDataCollect(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            收集Callback指定的Control到Control对应的UIModel中．Control可为DataGrid．
+            </summary>
+            <param name="args">callback参数</param>
+            <param name="control">指定的控件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.CallbackDataCollect(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs,UFSoft.UBF.UI.ControlModel.IUFControl,System.Boolean)">
+            <summary>
+            收集Callback指定的Control到Control对应的UIModel中．Control可为DataGrid．
+            </summary>
+            <param name="control">控件</param>
+            <param name="isLightCollect">是否进行轻量收集，目前是针对Grid，轻量收集只收集当前行</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.InvokeFormCallback(System.String)">
+            <summary>
+            进行FormCallback回调.-如弹出Form，回调原form上的一个静态方法.
+            </summary>
+            <param name="eventName"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.MoveErrorSign(UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControls.UFTabControl,UFSoft.UBF.UI.WebControls.UFTabPage,UFSoft.UBF.UI.WebControls.UFTabPage)">
+            <summary>
+            用于个性化跨页签移动控件后，异常信息提示位置调整
+            </summary>
+            <param name="targetControl">控件</param>
+            <param name="TC">页签控件</param>
+            <param name="TabFrom">源页签</param>
+            <param name="TabTo">目标页签</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.BaseWebForm.GetFormOPathManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.CurrentState">
+            <summary>
+            当前缓存对象,Page级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.CurrentSessionState">
+            <summary>
+            当前缓存对象,Session级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.JavaScriptExecQueue">
+            <summary>
+            js中不能直接使用双引号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsClientReturn">
+            <summary>
+            参照是否使用客户端返回
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.DialogNoPersonalization">
+            <summary>
+            默认不可个性化为false，也就是可个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsDataBinding">
+            <summary>
+            控制整个DataBinding的全部过程，包括BeforeDataBinding和AfterDataBinding
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsOnlyDataBinding">
+            <summary>
+            仅仅控制数据部分是否绑定，不包括BeforeDataBinding和AfterDataBinding。注意该属性依赖于IsDataBinding，只有在IsDataBinding为true的时候才生效，才有意义。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.Model">
+            <summary>
+            View需要Model,联系紧密,要求的.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.FlexFieldGridCollection">
+            <summary>
+            为Grid上的弹性域扩展段收集绑定数据使用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsDirtyData">
+            <summary>
+            获取或设置当前Form是否是数据，默认为false。如果是『赋值』数据会认为是脏数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.IsCheckDirtyData">
+            <summary>
+            获取或设置当前Form离开时是否检查脏数据，默认为True。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.DialogNoSetDefaultValue">
+            <summary>
+            对于非弹出窗体,默认不可设置默认值为false，也就是可设置默认值
+            对于弹出窗体,默认不可设置默认值为true，也就是不可设置默认值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.BaseWebForm.SetDefaultValueOnShow">
+            <summary>
+            对于弹出的子窗体，弹出时默认不应用默认值
+            </summary>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.UI.FormProcess.BaseWebForm.NoSetDefaultValueFieldList”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:UFSoft.UBF.UI.FormProcess.BaseWebForm.SpecSource4SndLoad”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.UI.FormProcess.FormUtil.InitReferenceDropDownList(UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            初始化参照查找栏目，移到这里是为了和查询方案的Grid栏目保持一致
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.FormUtil.GetSubViewFilter(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            取得子视图从主视图关联的参数信息 如 ID=***
+            </summary>
+            <param name="view">子View</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.FormProcess.CaseType">
+            <summary>
+            方案类型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.FormNavigateCase.SetOpathWithIds(System.Int64[])">
+            <summary>
+             设置当前Opath 为id集合 
+            </summary>
+            <param name="ids"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.FormNavigateCase.FormID">
+            <summary>
+            这个导航所对应的列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.FormNavigateCase.SourceType">
+            <summary>
+             来源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.FormNavigateHelper.GetByForm(UFSoft.UBF.UI.IView.IPart,System.String)">
+            <summary>
+            导航信息存在CurrentState中，CurrentSessionState中存着最新当前操作的一份，只要页面导航走，就会改变这个对象。
+            </summary>
+            <param name="form">操作的Form</param>
+            <param name="listPartID">相应List页面PartID</param>
+            如果找不到，则返回空.
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.FormNavigateHelper.SaveToState(UFSoft.UBF.UI.IView.IPart,System.String,UFSoft.UBF.UI.FormProcess.FormNavigateCase)">
+            <summary>
+            将导航内容存到Session和State中.
+            </summary>
+            <param name="form"></param>
+            <param name="fnc"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.BindErrorInfo(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            绑定错误消息到IPart上
+            </summary>
+            <param name="part"></param>
+                    
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.BindCardErrorInfo(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            绑定错误信息到Container的控件上
+            </summary>
+            <param name="container">待绑定的Container</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.IsTopContainer(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            判断Container是否是View的顶级Container
+            </summary>
+            <param name="container"></param>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.AddExceptionMessageToContainer(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,System.String)">
+            <summary>
+            把异常信息放到容器控件中
+            </summary>
+            <param name="control"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.AddExceptionMessageToControl(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,System.String)">
+            <summary>
+            把异常信息放到控件中
+            </summary>
+            <param name="control"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.AddExceptionMessageToControl(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,System.String,System.Int64,System.String)">
+            <summary>
+            把异常信息放到控件中
+            </summary>
+            <param name="control"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.AddExceptionMessageToTopLevelContainer(UFSoft.UBF.UI.IView.IPart,System.String,System.Int64,System.String)">
+            <summary>
+            把异常信息放到顶级容器
+            </summary>
+            <param name="currentForm"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.AddExceptionMessageToTopLevelContainer(UFSoft.UBF.UI.IView.IPart,System.String)">
+            <summary>
+            把异常信息放到顶级容器
+            </summary>
+            <param name="currentForm"></param>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.ErrorMessageHandler.ProcessExceptionMessageMoveTab(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControls.UFTabControl,UFSoft.UBF.UI.WebControls.UFTabPage,UFSoft.UBF.UI.WebControls.UFTabPage)">
+            <summary>
+            用于个性化控件跨页签移动后，异常信息提示位置调整
+            </summary>
+            <param name="currentForm">当前From</param>
+            <param name="targetControl">控件</param>
+            <param name="TC">页签控件</param>
+            <param name="FromTab">源页签</param>
+            <param name="ToTab">目标页签</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.Resource.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.Resource.GetStream(System.String)">
+            <summary>
+            Gets a resource stream with the messages used by the UIP classes.
+            </summary>
+            <param name="name">The resource key.</param>
+            <returns>A resource stream.</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.Resource.FormatMessage(System.String,System.Object[])">
+            <summary>
+            Formats a message stored in the UIP assembly resource file.
+            </summary>
+            <param name="key">The resource key.</param>
+            <param name="format">The format arguments.</param>
+            <returns>A formatted string.</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.Resource.ResourceManager">
+            <summary>
+            Gets a resource manager for the assembly resource file.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.FormProcess.Resource.Item(System.String)">
+            <summary>
+            Gets the message with the specified key from the assembly resource file.
+            </summary>
+            <param name="key">Key of the item to retrieve from the resource file.</param>
+            <returns>Value from the resource file identified by the key.</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.FormProcess.Resource.Exceptions">
+            <summary>
+            Class used to expose constants that represent keys in the resource file.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.IsMonikerValid(System.String)">
+            <summary>
+            Tests a moniker retrieved from context to see if it matches the NavGraphName:CurrentViewName:TaskGuid pattern.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.GetFromSession(System.Guid)">
+            <summary>
+            Gets the session moniker related to the specified task.
+            </summary>
+            <param name="taskId">The task identifier (a GUID associated with the task). The session moniker for this task will be retrieved.</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.GetAllFromSession">
+            <summary>
+            Gets all session monikers actually stored in the user session.
+            </summary>
+            <returns>An array of session monikers.</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.StoreInSession">
+            <summary>
+            Stores the session moniker in the user session.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Sys.Resources</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.ICacheAccessor.Push(System.Object,System.Object)">
+            <summary>
+            准备缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.ICacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.ICacheAccessor.Refresh(System.Object)">
+            <summary>
+            刷新缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.ICacheAccessor.Flush">
+            <summary>
+            清除所有缓存对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.ICacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="mdobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.Push(System.Object,System.Object)">
+            <summary>
+            准备缓存对象
+            </summary>
+            <param name="key"></param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.Find(System.Object)">
+            <summary>
+            获取缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.Refresh(System.Object)">
+            <summary>
+            刷新缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.Flush">
+            <summary>
+            清除所有缓存对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.Remove(System.Object)">
+            <summary>
+            清除缓存对象
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.LoadCache">
+            <summary>
+            加载缓存
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Cache.BaseCacheAccessor.FindObjectByID(System.Object)">
+            <summary>
+            获取数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Cache.Key">
+            <summary>
+            Cache Key
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.CompositeStrFlyweight.#ctor(System.String,System.String)">
+            <summary>
+            构造函数，注意：使用InternStrFlyweight对象
+            </summary>
+            <param name="content"></param>
+            <param name="spliter"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IRESElement.State">
+            <summary>
+            持久化状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseRESElement.Equals(System.Object)">
+            <summary>
+            判断对象是否相等
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseRESElement.Load">
+            <summary>
+            数据加载
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.Values">
+            <summary>
+            存储了资源项中所有的子项的名值对
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.ComponentID">
+            <summary>
+            资源所属组件编号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.ComponentName">
+            <summary>
+            资源所属组件名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.LanguageCode">
+            <summary>
+            资源项对应的语言编码
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.Type">
+            <summary>
+            所抽取的资源节点的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.ParentResourceName">
+            <summary>
+            显示名称上级资源名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.ParentHelpResourceName">
+            <summary>
+            帮助的上级资源名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IData.IsSync">
+            <summary>
+            是否和父资源同步
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.Contains(System.Object)">
+            <summary>
+            判断对象是否在集合中存在
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.Clear">
+            <summary>
+            清除集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.RemoveAt(System.Int32)">
+            <summary>
+            根据索引删除集合中的对象
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.Remove(UFSoft.UBF.Sys.Resources.IRESElement)">
+            <summary>
+            删除
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.Add(UFSoft.UBF.Sys.Resources.IRESElement)">
+            <summary>
+            增加
+            </summary>
+            <param name="elm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.IsSameName(System.String)">
+            <summary>
+            是否有同名类型
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IRESMDCollection.CopyFrom(System.Collections.ICollection)">
+            <summary>
+            复制集合
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.FindByName(System.String)">
+            <summary>
+            根据名称获取实例
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.FindByID(System.Guid)">
+            <summary>
+            根据ID获取实例
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.Add(UFSoft.UBF.Sys.Resources.IRESElement)">
+            <summary>
+            增加
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.Remove(UFSoft.UBF.Sys.Resources.IRESElement)">
+            <summary>
+            删除
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.IsSameName(System.String)">
+            <summary>
+            是否有同名类型
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.IsNameInCollection(System.String)">
+            <summary>
+            判断集合中是否有同名对象
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.Contains(System.Object)">
+            <summary>
+            判断对象是否在集合中存在
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.BaseCollection.CopyFrom(System.Collections.ICollection)">
+            <summary>
+            复制
+            </summary>
+            <param name="col"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.DataCollection">
+            <summary>
+            引用元模型集合实现
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.IDataCollection">
+            <summary>
+            引用资源集合interface
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IDataCollection.GetItemByID(System.Guid)">
+            <summary>
+            根据ID获取引用元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IDataCollection.Item(System.Int32)">
+            <summary>
+            根据index获取引用元信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.IDataCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Sys.Resources.DataCollection.GetItemByID(System.Guid)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Sys.Resources.DataCollection.Item(System.Int32)">
+            <summary>
+            根据index获取引用元数据信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.DataCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Sys.Resources.LanguageCollection">
+            <summary>
+            引用元模型集合实现
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.ILanguageCollection">
+            <summary>
+            引用资源集合interface
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.ILanguageCollection.GetItemByID(System.Guid)">
+            <summary>
+            根据ID获取引用元信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.ILanguageCollection.Item(System.Int32)">
+            <summary>
+            根据index获取引用元信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.ILanguageCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Sys.Resources.LanguageCollection.GetItemByID(System.Guid)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Sys.Resources.LanguageCollection.Item(System.Int32)">
+            <summary>
+            根据index获取引用元数据信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.LanguageCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Sys.Resources.ILanguageComponent.Languages">
+            <summary>
+            语言定义组件中的所有语言
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.ILanguageComponent.DefaultLanguage">
+            <summary>
+            语言定义组件中的缺省语言
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.LanguageComponent.DefaultLanguage">
+            <summary>
+            语言定义组件中的缺省语言
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.ResourceCollection">
+            <summary>
+            引用元模型集合实现
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.IResourceCollection">
+            <summary>
+            引用资源集合interface
+            </summary>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Sys.Resources.IResourceCollection.GetItemByID(System.Guid)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.IResourceCollection.Item(System.Int32)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.IResourceCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Sys.Resources.ResourceCollection.GetItemByID(System.Guid)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Sys.Resources.ResourceCollection.Item(System.Int32)">
+            <summary>
+            根据index获取引用元数据信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.Sys.Resources.ResourceCollection.Item(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceComponent.GetDataByID(System.String)">
+            <summary>
+            查找缺省语言的资源项
+            </summary>
+            <param name="resourceID">资源编号</param>
+            <returns>资源项</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceComponent.GetDataByID(System.String,UFSoft.UBF.Sys.Resources.ILanguage)">
+            <summary>
+            查找指定语言的资源项
+            </summary>
+            <param name="resourceID">资源编号</param>
+            <param name="language">语言对象</param>
+            <returns>资源项</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceComponent.InsertData(System.String,System.String,System.String,System.String)">
+            <summary>
+            在所有语言中加入资源项
+            </summary>
+            <param name="dataID">资源项编号</param>
+            <param name="resourceName">资源名称</param>
+            <param name="name">资源子项的名称</param>
+            <param name="value">资源子项的值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceComponent.InsertData(UFSoft.UBF.Sys.Resources.IData)">
+            <summary>
+            在所有语言中加入资源项
+            </summary>
+            <param name="data">资源项</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceComponent.DeleteData(System.String)">
+            <summary>
+            删除数据项
+            </summary>
+            <param name="dataID">数据项编号</param>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IResourceComponent.Resources">
+            <summary>
+            资源组件中所有的资源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceMapping.GetResourceID(System.String)">
+            <summary>
+            获取资源ID
+            </summary>
+            <param name="resourceName">资源名称=属性名称+元素ID</param>
+            <returns>资源ID</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceMapping.AddMappingItem(System.String,System.String)">
+            <summary>
+            加入一个资源映射项
+            </summary>
+            <param name="resourceName">资源名称=属性名称+元素ID</param>
+            <param name="resourceID">资源ID</param>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.IResourceMapping.Name">
+            <summary>
+            存放资源信息映射的dll名称
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.IResourceMappingWrap">
+            <summary>
+            所有资源映射封包都必须实现的接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.IResourceMappingWrap.LoadResourceMapping">
+            <summary>
+            在打包的dll中装载资源映射信息
+            </summary>
+            <returns>资源映射对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.ResourceModelFactory">
+            <summary>
+            资源模型创建工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.ResourceModelFactory.Create(System.Type)">
+            <summary>
+            创建资源对象,产生ID
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.ResourceModelFactory.CreateNull(System.Type)">
+            <summary>
+            创建资源对象,不产生ID
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.StrFlyweightPool.IsInStrFlyweightPool(System.String)">
+            <summary>
+            如果在享元池中则返回享元否则返回content字符串
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Key">
+            <summary>
+            元数据Key
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Key.Guid">
+            <summary>
+            元数据设计期唯一标识
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Key.ID">
+            <summary>
+            元数据运行期唯一标识
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Key.Name">
+            <summary>
+            元数据运行期唯一标识
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Key.Type">
+            <summary>
+            元数据类型信息
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

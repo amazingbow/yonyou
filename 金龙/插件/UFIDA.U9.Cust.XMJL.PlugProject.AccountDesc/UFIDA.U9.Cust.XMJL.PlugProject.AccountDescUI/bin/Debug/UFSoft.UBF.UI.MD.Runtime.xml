@@ -1,0 +1,4451 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.MD.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Common.QuickCoding">
+            <summary>
+            内部测试，外人勿用，用了自己倒霉，平台不管
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ExpressionOperator">
+            <summary>
+            LocateExpression专用
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.LogicOperator">
+            <summary>
+            逻辑运算符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ILocateExpression">
+            <summary>
+            Locate Expression
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateExpression.GetOQLExpression(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            返回OQL表达式
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateExpression.Calc(System.Object)">
+            <summary>
+            使用值Variable代入表达式计算，并返回计算结果
+            当ILocateExpression为Collection类型时，variable可以带Key的集合对象，如IUIRecord
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.LocateExpression">
+            <summary>
+            Locate支持的表示式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.LocateExpression.SimpleOQLExpression(UFSoft.UBF.UI.MD.Runtime.IUIField,System.String,System.Object)">
+            <summary>
+            普通连接的OQL表达式还原
+            </summary>
+            <param name="field"></param>
+            <param name="op"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.LocateExpression.Calc(System.Object)">
+            <summary>
+            使用值Variable代入表达式计算，并返回计算结果
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.LocateExpression.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.LocateExpression.Operator">
+            <summary>
+            逻辑运算符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.LocateExpressionCollection">
+            <summary>
+            Locate Expr Collection
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.LocateExpressionCollection.GetOQLExpression(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            建立OQLExpr
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.LocateExpressionCollection.Calc(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="variable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.Clear">
+            <summary>
+            清空PageBuffer缓冲区
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.Fill(System.Data.DataTable)">
+            <summary>
+            依据传递的IDList，填充PageBuffer
+            </summary>
+            <param name="idList"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.GetIDList(System.Int64)">
+            <summary>
+            根据页号，获取在PageBuffer中命中的IDList
+            </summary>
+            <param name="pageNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.GetMasterIDList(System.Int64)">
+            <summary>
+            根据页号，获取在PageBuffer中MasterKey对应的IDList
+            </summary>
+            <param name="pageNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.GetUniqueIDList(System.Int64)">
+            <summary>
+            根据页号，获取在PageBuffer中UniqueKey对应的IDList
+            </summary>
+            <param name="pageNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IPageBuffer.GetPageQueryRange(System.Int64,System.Int64@,System.Int64@)">
+            <summary>
+             返回页号对应的记录的查询范围
+            </summary>
+            <param name="pageNo"></param>
+            <param name="startRowNumber"></param>
+            <param name="endRowNumber"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.PageBufferImpl.Fill(System.Data.DataTable)">
+            <summary>
+            依据传递的IDList，填充内部数据结构
+            </summary>
+            <param name="idList"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.PageBufferImpl.GetIDList(System.Int64)">
+            <summary>
+            根据页号，获取在PageBuffer中命中的IDList
+            </summary>
+            <param name="pageNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.PageBufferImpl.GetPageQueryRange(System.Int64,System.Int64@,System.Int64@)">
+            <summary>
+            返回的查询范围不是仅指定页号对应的记录返回，要按BufferSize做预读取
+            </summary>
+            <param name="pageNo"></param>
+            <param name="startRowNumber"></param>
+            <param name="endRowNumber"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFieldAttribute.AttributeType">
+            <summary>
+            当前Attribute的类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldAttribute.ROOT_UIFIELD">
+            <summary>
+            根字段，指定是谁的版形，是UIFieldName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UIFieldAttribute.RootField">
+            <summary>
+            根字段，指定是谁的版形，是UIFieldName
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection">
+            <summary>
+            IUIRecordCollection元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.AddWithoutCheck(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            增加(不检查ID冲突.)
+            目前主要用于内部的数据拷贝,初始数据加载.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.Contains(System.Int64)">
+            <summary>
+            判断对象的ID是否在集合中存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.Sort(System.Collections.Generic.IComparer{UFSoft.UBF.UI.MD.Runtime.IUIRecord})">
+            <summary>
+            排序
+            </summary>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.Insert(System.Int32,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            在指定的索引位置插入对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.IndexOf(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取指定对象的索引号
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.GetRecordByKey(System.Int64)">
+            <summary>
+            根据主键查找记录.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindByKey(System.Int64)">
+            <summary>
+            根据ID获取实例, 推荐使用
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindAll(UFSoft.UBF.UI.MD.Runtime.ILocateExpression)">
+            <summary>
+            查找所有符合条件的Record并返回
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindAll(UFSoft.UBF.UI.MD.Runtime.ILocateExpression,System.Data.DataRowState[])">
+            <summary>
+            查找所有符合条件的Record并返回
+            并且Record的
+            </summary>
+            <param name="condition"></param>
+            <param name="states"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindAll(System.String,System.Object)">
+            <summary>
+            查找所有符合条件的Record并返回
+            </summary>
+            <param name="fieldName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindValue(UFSoft.UBF.UI.MD.Runtime.ILocateExpression)">
+            <summary>
+            找到第一个符合条件的记录并返回
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.FindValue(System.String,System.Object)">
+            <summary>
+            找到第一个符合条件的记录并返回
+            </summary>
+            <param name="uifieldname"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.Item(System.Int32)">
+            <summary>
+            索引器. 序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.FindByKey(System.Int64)">
+            <summary>
+            根据ID获取实例, 快速定位算法
+            </summary>
+            <param name="key">主键ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.FindAll(UFSoft.UBF.UI.MD.Runtime.ILocateExpression)">
+            <summary>
+            查找所有符合条件的Record并返回
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.FindAll(UFSoft.UBF.UI.MD.Runtime.ILocateExpression,System.Data.DataRowState[])">
+            <summary>
+            查找所有符合条件的Record并返回
+            并且Record的
+            </summary>
+            <param name="condition"></param>
+            <param name="states"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.FindAll(System.String,System.Object)">
+            <summary>
+            查找所有符合条件的Record并返回
+            </summary>
+            <param name="fieldName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.FindValue(UFSoft.UBF.UI.MD.Runtime.ILocateExpression)">
+            <summary>
+            找到第一个符合条件的记录并返回
+            </summary>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.IDChanged(System.Int64,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            ID变化事件
+            </summary>
+            <param name="oldID"></param>
+            <param name="newID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uiv">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.AddWithoutCheck(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            增加(不检查ID冲突.)
+            目前主要用于内部的数据拷贝,初始数据加载.
+            </summary>
+            <param name="rec"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Remove(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Clear">
+            <summary>
+            清除集合数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.CopyTo(UFSoft.UBF.UI.MD.Runtime.IUIRecord[],System.Int32)">
+            <summary>
+            将整个集合复制到兼容的一维数组中，从目标数组的指定索引位置开始放置。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Insert(System.Int32,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            在指定的索引位置插入对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Contains(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            判断对象是否在集合中存在
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Contains(System.Int64)">
+            <summary>
+            判断唯一标识名称是否在集合中存在
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.IndexOf(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取指定对象的索引号
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.GetEnumerator">
+            <summary>
+            返回循环访问 范型集合 的枚举数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+             返回一个循环访问集合的枚举数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.IsReadOnly">
+            <summary>
+            是否只读集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Item(System.Int32)">
+            <summary>
+            索引器 - 序号索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordCollectionDoubleListImp.Count">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIView">
+            <summary>
+            UIView元数据 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement">
+            <summary>
+            UI运行期带资源数据基类型．
+            具有资源信息的访问加载功能．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement">
+            <summary>
+            UI运行期的元数据基类，以Name作为唯一标识．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIElement">
+            <summary>
+            UI元数据基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIElement.Clone">
+            <summary>
+            复制
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIElement.ElementName">
+            <summary>
+            局部唯一标识:Element名称
+            目前是只读，一般在构造时才会创建.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIElement.Name">
+            <summary>
+            局部唯一标识:名称
+            目前是只读，一般在构造时才会创建.
+            </summary>		
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIElement.ElementID">
+            <summary>
+            设计期的GUID,目前只为加载资源使用.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIElement.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIElement.Tag">
+            <summary>
+            存储与UIElement密切关联的数据，不能通过Indigo的传递。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.#ctor(System.String)">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.#ctor">
+            <summary>
+            无参构造函数（for序列化）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.Clone">
+            <summary>
+            克隆
+            </summary>
+            <returns>克隆对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.Equals(System.Object)">
+            <summary>
+            判断对象是否相等
+            </summary>
+            <returns>对象是否相等</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.ToString">
+            <summary>
+            数据转换
+            </summary>
+            <returns>数据转换成字符串</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.ElementID">
+            <summary>
+            设计期的GUID,目前只为加载资源使用.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.Tag">
+            <summary>
+            存储与UIElement密切关联的数据，不能通过Indigo的传递。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIElement.ElementName">
+            <summary>
+            局部唯一标识 : 已经废弃.仍使用Name
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIResourceElement">
+            <summary>
+            UI带资源信息的基类．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo">
+            <summary>
+            UI资源信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo.SetResourceInfo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            设置资源方面内容方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo.DisplayName">
+            <summary>
+            显示名称--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo.Description">
+            <summary>
+            描述--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo.Help">
+            <summary>
+            帮助--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIResourceInfo.Tooltip">
+            <summary>
+            提示--多语言支持
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.DisplayName">
+            <summary>
+            显示名称--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.Description">
+            <summary>
+            描述--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.Help">
+            <summary>
+            帮助--多语言支持
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIResourceElement.Tooltip">
+            <summary>
+            提示--多语言支持
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIView">
+            <summary>
+            IUIView元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.AcceptChanges">
+            <summary>
+            提交自上次调用 AcceptChanges 以来对该视图进行的所有更改。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChanges">
+            <summary>
+            获取当前View自上次提交更改后的所有更改的副本
+            </summary>
+            <returns>返回数据变化后的副本View对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChanges(System.Boolean)">
+            <summary>
+            获取当前View自上次提交更改后的所有更改的副本
+            </summary>
+            <param name="isReturnStrongType">是否返回强类型对象</param>
+            <returns>返回数据变化后的副本View对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Clear">
+            <summary>
+            清除所有记录.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetSelectRecords">
+            <summary>
+            当前页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetSelectedRecordIDs">
+            <summary>
+            所有记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetSelectedRecordIDs(System.Boolean)">
+            <summary>
+            所有记录
+            </summary>
+            <param name="isSort"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetSelectRecordIndex(System.Int64)">
+            <summary>
+            获得选中记录的索引
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.ClearErrorMessage">
+            <summary>
+            递归清除当前UIView的所有ErrorMessage信息，到属于UIView的UIRecord信息。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.NewUIRecord">
+            <summary>
+            对当前的View产生一个新的记录对象．（不增加到当前对象的记录集中）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.AddNewUIRecord">
+            <summary>
+            对当前的View产生一个新的记录对象并加入View的记录集中．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.ClearCache">
+            <summary>
+            清除ViewCache和PageBuffer信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FindRecordByFieldValue(System.String,System.Object)">
+            <summary>
+            返回第一条符合数据相等的记录.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FindRecordsByFieldValue(System.String,System.Object)">
+            <summary>
+            返回符合数据相等的记录集.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetFieldByAttribute(System.String)">
+            <summary>
+            通过属性名获取Field.
+            </summary>
+            <param name="attributeName">属性名</param>
+            <returns>UIField</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChildLink(System.String)">
+            <summary>
+            通过视图名取得子关联
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChildLink(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            通过视图取得子关联
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetParentRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            当前UIView的某个记录相关联的某个父UIView的记录
+            目前的规则决定了不可能有多个父记录（这与DataTable不一样.主子View与主外键不是一定对应的）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUILink)">
+            <summary>
+            得到关系记录子行数据。
+            </summary>
+            <param name="parentRecord">主记录</param>
+            <param name="link">关系Link</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            当前UIView某行的某个子关联的子UIRecord集合组成的子UIRecord集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.String)">
+            <summary>
+            当前UIView某行的某个子关联的子UIRecord集合组成的子UIRecord集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.LoadMultLangDataFromDataTable(System.Data.DataTable)">
+            <summary>
+            从多语言表中加载多语言数据
+            </summary>
+            <param name="multiTable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromDataTable(System.Data.DataTable)">
+            <summary>
+            从一个DataTable加载数据
+            </summary>
+            <param name="dataTable">DataTable</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromDataTable(System.Data.DataTable,UFSoft.UBF.UI.MD.Runtime.DataFillOption)">
+            <summary>
+            从一个DataTable加载数据
+            </summary>
+            <param name="dataTable">DataTable</param>
+            <param name="option">数据添充策略</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.DataFillOption)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+            <param name="option">数据添充策略</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.DataFillOption,System.Int32)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+            <param name="option">数据添充策略</param>
+            <param name="insertIndex">添加记录时的从指定的索引号开始插入数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.ToDataTable">
+            <summary>
+            将View的数据写入DataTable中
+            </summary>
+            <returns>转换的DataTable</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetFieldOQLString">
+            <summary>
+            取得UIField集合的OQL型的SELECT字符串
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Clone(System.Boolean)">
+            <summary>
+            UIView的Clone操作
+            </summary>
+            <param name="isCloneRecord">是否Clone记录</param>
+            <returns>Clone的UIView对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Clone(System.Boolean,System.Boolean)">
+            <summary>
+            UIView的Clone操作
+            </summary>
+            <param name="isCloneRecord">是否Clone记录</param>
+            <param name="isCloneStrongType">是否强类型Clone对象</param>
+            <returns>Clone的UIView对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetDisplayRecords">
+            <summary>
+            获取当前处理（可显示的）的记录集．
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.GetDisplayRecords(System.Boolean)">
+            <summary>
+            获取当前处理（可显示的）的记录集．
+            </summary>
+            <param name="isIncludeDeleted">是否包含已经标记删除的</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Sort(UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.RecordOrderType)">
+            <summary>
+            按字段排序
+            </summary>
+            <param name="sortField">排序UIField</param>
+            <param name="orderType">排序方式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Sort(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            按字段排序(默认升序)
+            </summary>
+            <param name="sortField">排序UIField</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Sort(System.String,UFSoft.UBF.UI.MD.Runtime.RecordOrderType)">
+            <summary>
+            按字段名称排序　
+            </summary>
+            <param name="sortFieldName">排序UIField名称</param>
+            <param name="orderType">排序方式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Sort(System.String)">
+            <summary>
+            按字段名称排序(默认升序)
+            </summary>
+            <param name="sortFieldName">排序UIField名称</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.Sort(System.Collections.Generic.IComparer{UFSoft.UBF.UI.MD.Runtime.IUIRecord})">
+            <summary>
+            按指定的Comparer对象进行比较
+            </summary>
+            <param name="comparer">comparer比较器</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.BuildFieldIndexes">
+            <summary>
+            重新构造字段索引(UIView的字段发生变化后，一定要调用该方法)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIView.FromUIViewRef(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            直接使用引用方式复制数据，两个UIView的Records将指向同一个集合
+            1. 当来源UIView将不再使用时
+            2. 当目标UIView原Records不再使用时
+            用本方法最为高效
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ContainerView">
+            <summary>
+            所属于的View (对于虚View是其容器View,对于实际View就是自身)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.SelectRecords">
+            <summary>
+            获得操作的选择的记录集.对于多选时返回多条，单选则为焦点记录.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.KeepSelectedSort">
+            <summary>
+            返回选中记录时，保持选中记录的顺序，默认为False
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.FocusedRecord">
+            <summary>
+            获得当前操作的焦点记录.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.FocusedIndex">
+            <summary>
+             获得当前操作的焦点记录的索引.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.FocusedField">
+            <summary>
+            获取选择的列.
+            目前绑定是Grid时，有效，Panel直接返回ID列。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ParentLink">
+            <summary>
+            主关联对象(对UIView来讲只能有一个．不是DataTable的Link可以是多个．)
+            目前仅提供取．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ParentView">
+            <summary>
+            上级View.(跟据ParentLink来走的。)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ChildLinks">
+            <summary>
+            子关联集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.GetMulitSelfLinks">
+            <summary>
+            取得一对多自关联的Link集合．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ContainerModel">
+            <summary>
+            容器界面模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.Builder">
+            <summary>
+            UIRecord记录构造器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.EntityFullName">
+            <summary>
+            每个UIView对应的主entity的fullName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.BindingKind">
+            <summary>
+            绑定类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.IsBindingEntity">
+            <summary>
+            是否是绑定实体的UIView.（可持久化）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.Fields">
+            <summary>
+            字段集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.Properties">
+            <summary>
+            属性集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.CurrentFilter">
+            <summary>
+            当前过滤条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.Records">
+            <summary>
+            取得记录集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.RecordCount">
+            <summary>
+            当前View的记录总数量(不含已经标记删除的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.PrimaryKeyField">
+            <summary>
+            指示当前记录的主关键字的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.SysVersionField">
+            <summary>
+            指示当前记录的版本号字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.IsMainView">
+            <summary>
+            是否主视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ConditionLocate">
+            <summary>
+            取得或设置条件定位器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.ViewDealFlag">
+            <summary>
+            （新增属性)通用处理的标志．用于通用CRUD时，跟据标志来进行相应的存删改等处理．
+             通用Action 自动处理．不需开发人员操作．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.QueryGlobalizationOption">
+            <summary>
+            查询的多语设置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.PageStrategy">
+            <summary>
+            分页加载方式．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIView.DisplayFilter">
+            <summary>
+            显示的过滤条件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.OUT_OF_ORDER_INDEX">
+            <summary>
+            无限的索引编号。
+            用于记录选中顺序，当没有顺序信息时，记录为无序编号
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.mvarSelectRecords">
+            <summary>
+            选中记录的集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetSelectedRecordIDs">
+            <summary>
+            返回选中记录的ID集合(是否保持顺序根据KeepSelectedSort)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetSelectedRecordIDs(System.Boolean)">
+            <summary>
+            获得选中记录的ID集合，并根据索引进行排序
+            </summary>
+            <param name="isSort">是否正行排序</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetSelectRecordIndex(System.Int64)">
+            <summary>
+            获得选中记录的索引
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="containerModel">容器Model</param>
+            <param name="viewName">视图名</param>
+            <param name="isMainView">是否是主视图</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.AcceptChanges">
+            <summary>
+            提交自上次调用 AcceptChanges 以来对该视图进行的所有更改。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChanges">
+            <summary>
+            获取当前View自上次提交更改后的所有更改的副本
+            </summary>
+            <returns>返回数据变化后的副本View对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChanges(System.Boolean)">
+            <summary>
+            获取当前View自上次提交更改后的所有更改的副本
+            </summary>
+            <param name="isReturnStrongType">是否返回强类型对象</param>
+            <returns>返回数据变化后的副本View对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Clear">
+            <summary>
+            清除View中的数据，当Locked属性为True时，Clear方法将
+            直接退出，而不被执行。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.BuildFieldIndexes">
+            <summary>
+            重新构造字段索引(UIView的字段发生变化后，一定要调用该方法)
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.mvarIsNeedLoadDataFromCache">
+            <summary>
+            默认情况下，UIView.Records即当前视图的所有数据，但，有时则不同，如，在支持翻页的GRID中，
+            Cache中的数据才是UIView中的所有数据。
+            当这个标志为True时，表示Cache中的数据才是UIView中的所有数据。否则，表示
+            UIView.Records即当前视图的所有数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.NewUIRecordForLoad">
+            <summary>
+            仅供Load方法使用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.NewUIRecord">
+            <summary>
+            对当前的View产生一个新的记录对象．（不增加到当前对象的记录集中）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.AddNewUIRecord">
+            <summary>
+            对当前的View产生一个新的记录对象并加入View的记录集中．
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.BuildNewRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder)">
+            <summary>
+            构造Record.子类继承后，覆盖该方法。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetRecordType">
+            <summary>
+            获取View中记录的类型。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FindByFieldValue(System.String,System.Object)">
+            <summary>
+            返回第一条符合数据相等的记录.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FindRecordByFieldValue(System.String,System.Object)">
+            <summary>
+            返回第一条符合数据相等的记录.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FindRecordsByFieldValue(System.String,System.Object)">
+            <summary>
+            返回符合数据相等的记录集.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FindRecordsByFieldValue(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.Object})">
+            <summary>
+            返回符合数据相等的记录集
+            </summary>
+            <param name="fields">字段集</param>
+            <param name="values">数据集</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ClearCache">
+            <summary>
+            清除ViewCache和PageBuffer信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.BuildConditionByField(System.Collections.Generic.IList{UFSoft.UBF.UI.MD.Runtime.IUIParameter}@,UFSoft.UBF.UI.MD.Runtime.RRItem[])">
+            <summary>
+            根据记录和字段创建条件
+            如：有两条记录，字段F1的值分别为1,2，使用BuildConditionByField方法返回
+            F1 in ('1','2')
+            当值为NULL时不会产生在in语句中。
+            如果有多个字段，用and连接
+            如F1 in ('1','2') and F2 in ('1','2')
+            如果记录数为0时，返回string.Empty
+            </summary>
+            <param name="fields"></param>
+            <param name="outParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChildLink(System.String)">
+            <summary>
+            通过子视图名取得子关联
+            </summary>
+            <param name="childViewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChildLink(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            通过子视图取得子关联
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetParentRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            当前UIView的某个记录相关联的某个父UIView的记录
+            目前的规则决定了不可能有多个父记录（这与DataTable不一样.主子View与主外键不是一定对应的）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUILink)">
+            <summary>
+            得到关系记录子行数据。
+            </summary>
+            <param name="parentRecord">主记录</param>
+            <param name="link">关系Link</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            当前UIView某行的某个子关联的子UIRecord集合组成的子UIRecord集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.String)">
+            <summary>
+            当前UIView某行的某个子关联的子UIRecord集合组成的子UIRecord集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetSameEntityRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取同一Entity映射的子记录.(可能是多个View中的Record)
+            同一实体划分后,会在View上以一对一组合的方式来进行保存...
+            </summary>
+            <param name="parentRecord">主View的记录</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetFromOQLString">
+            <summary>
+            判断FromOQLString是否为空，如果是则返回EntityFullName，否则返回FromOQLString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetFieldOQLString">
+            <summary>
+            取得UIField集合的OQL型的SELECT字符串
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.LoadDataFromDataTable(System.Data.DataTable)">
+            <summary>
+            从一个DataTable加载数据
+            旧代码，已经有新的实现.
+            </summary>
+            <param name="dt">DataTable</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromDataTable(System.Data.DataTable)">
+            <summary>
+            从DataTable加载数据到当前View
+            </summary>
+            <param name="dataTable">DataTable</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.BuildMappingUIFields(System.Data.DataTable)">
+            <summary>
+            从一个DataTable加载数据
+            </summary>
+            <param name="dataTable">DataTable</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.LoadMultLangDataFromDataTable(System.Data.DataTable)">
+            <summary>
+            从多语言表中加载多语言数据
+            ?没有处理数据合并还是忽略的问题.?
+            </summary>
+            <param name="multiTable"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            (数据添充策略为通过ID的来进行覆盖．)
+            </summary>
+            <param name="fromView">源View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.DataFillOption)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+            <param name="option">数据添充策略</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIViewRef(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            直接使用引用方式复制数据，两个UIView的Records将指向同一个集合
+            </summary>
+            <param name="fromView"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIView(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.DataFillOption,System.Int32)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+            <param name="option">数据添充策略</param>
+            <param name="insertIndex">添加记录时的从指定的索引号开始插入数据 (-1表示从最后面添加)</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIViewEx(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">源View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIViewEx_QuickEdition(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            当目标视图没有数据时，可以进行更快的复制
+            </summary>
+            <param name="fromView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIViewEx(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.DataFillOption,System.Int32)">
+            <summary>
+            从另一个同结构的UIView中加载数据．
+            </summary>
+            <param name="fromView">来源View</param>
+            <param name="option">选项</param>
+            <param name="insertIndex">插入的位置，为-1时，表示追加</param>
+            <returns>更新或新增记录的集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.DataFillOption,System.Int32@)">
+            <summary>
+            加载一条记录到当前视图中，这条记录的ContainerView必须与当前视图相同
+            </summary>
+            <param name="fromRec"></param>
+            <param name="option"></param>
+            <param name="insertIndex"></param>
+            <returns>加载后的记录</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIRecord_QuickEdition(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.Int32@)">
+            <summary>
+            要确保目标视图没有相同ID的记录
+            </summary>
+            <param name="fromRec"></param>
+            <param name="insertIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FromUIRecordRef(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.DataFillOption,System.Int32@)">
+            <summary>
+            加载一条记录到当前视图中，这条记录的ContainerView必须与当前视图相同
+            用引用的关系添加
+            </summary>
+            <param name="fromRec"></param>
+            <param name="option"></param>
+            <param name="insertIndex"></param>
+            <returns>加载后的记录</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ToDataTable">
+            <summary>
+            将View的数据写入DataTable中
+            </summary>
+            <returns>写入的DataTable</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.CreateCloneInstance">
+            <summary>
+            View Clone实例创建的模版方法.//--目前有代码生成的具体继承类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetDisplayRecords(System.Boolean)">
+            <summary>
+            获取当前处理（可显示的）的记录集．
+            </summary>
+            <param name="isIncludeDeleted">是否包含已经标记删除的</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Locked">
+            <summary>
+            设置Locked为True后，调用Clear()方法，该View将不会被Clear()，
+            但仍然可以添加或修改数据。
+            注意：Locked属性只对Clear()方法有效
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+            <param name="index">索引</param>
+            <returns>记录</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.SelectRecords">
+            <summary>
+            获得操作的选择的记录集.对于多选时返回多条，单选则为焦点记录.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FocusedRecord">
+            <summary>
+            获得当前操作的焦点记录
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FocusedIndex">
+            <summary>
+             获得当前操作的焦点记录的索引.
+            没有记录或没有焦点行时，返回是-1
+            </summary>.
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FocusedField">
+            <summary>
+            获取选择的列.
+            目前绑定是Grid时，有效，Panel时将直接返回ID列。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.FocusedData">
+            <summary>
+            获取当前的焦点数据.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ContainerModel">
+            <summary>
+            模型容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Fields">
+            <summary>
+            Field字段集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.CurrentFilter">
+            <summary>
+            当前过滤条件
+            目前设计上只提供单过滤条件．想法在此进行处理，能让开发人员比较容易的处理条件参数．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Records">
+            <summary>
+            取得记录集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.Properties">
+            <summary>
+            属性集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.EntityFullName">
+            <summary>
+            每个UIView对应的主entity的fullName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.BindingKind">
+            <summary>
+            绑定类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.IsBindingEntity">
+            <summary>
+            是否是绑定实体的UIView.（BindingKind为实体，并且EntityFullName不为空）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.EntityFullNameToOQL">
+            <summary>
+            为拼oql准备的entityFullName --暂无用，设internal.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.PrimaryKeyField">
+            <summary>
+            指示当前记录的主关键字的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.SysVersionField">
+            <summary>
+            指示当前记录的版本号字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.RecordCount">
+            <summary>
+            当前View的记录数量(不含已经标记删除的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.IsMainView">
+            <summary>
+            是否主UIView
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ConditionLocate">
+            <summary>
+            取得或设置条件定位器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ParentLink">
+            <summary>
+            主关联对象．（自关联对象不是其主关联Link.）
+            对于关联是否允许一个子View被多个主View关系上．(目前结论是不允许．)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.ChildLinks">
+            <summary>
+            子关联对象集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.GetMulitSelfLinks">
+            <summary>
+            取得一对多自关联的Link集合．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.QueryGlobalizationOption">
+            <summary>
+            查询的多语设置 -- 对于参照，可以将其设置成单个语种
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIView.DisplayFilter">
+            <summary>
+            View的数据展示的过滤条件。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UIFieldSTAttrInfo">
+            <summary>
+            创建UIField所需要的相关Attribute信息.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag">
+            <summary>
+            通用处理标签．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag.None">
+            <summary>
+            无处理标志
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag.Load">
+            <summary>
+            进行加载
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag.Save">
+            <summary>
+            进行保存
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag.ReturnAll">
+            <summary>
+            返回全部View数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.CommonDealFlag.ReturnId">
+            <summary>
+            返回View中的主键数据．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.DataFillOption">
+            <summary>
+            数据填充的设置
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.DataFillOption.Update">
+            <summary>
+            对相同的记录进行更新刚加载的数据。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.DataFillOption.Ignore">
+            <summary>
+            对相同的记录保持不变。(其它原没有记录添充)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.PageQueryMode">
+            <summary>
+            数据填充的设置
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.PageQueryMode.Auto">
+            <summary>
+            若可以自动设置UniqueKey，则走新分页算法，否则走老算法
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.PageQueryMode.New">
+            <summary>
+            使用新分页算法(需要手工指定UniqueKey)
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.PageQueryMode.Traditional">
+            <summary>
+            使用老分页算法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.DataTranslation.ToPLValueTrans(System.Object,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            将UIModel中的数据转换为持久层需要的值的形式
+            **NULL值转换规则**
+            FieldType为EnumField或RefField时，转换为-1
+            数字型时，转换为0
+            日期型、Byte、Char时，转换为对象的MinValue值
+            字符型时，转换为""
+            Bool型时，转换为False
+            ******************************************
+            警告:假设value对象为非空时，值总是正常的类型
+            ******************************************
+            </summary>
+            <param name="value">准备转换的值</param>
+            <param name="field">对应的field对象</param>
+            <returns>转换后的装箱的值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.DataTranslation.FromPresentationValueTrans(System.Object,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            接受界面的值转换为可以存入UIModel的值
+            将Value转换为Field对应的类型，当不能转换时，返回Null值
+            </summary>
+            <param name="v">外部传入的值</param>
+            <param name="field">对应的Field对象</param>
+            <returns>转换后的装箱的值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.DataTranslation.TryParseDecimal(System.String,System.Decimal@)">
+            <summary>
+            将s转换为decimal类型
+            首先尝试使用Decimal.TryParse方法将s转换，如果不成功，
+            检查s是否采用的科学计数法，如果是，手工分解科学计数法，进行转换。
+            </summary>
+            <param name="s"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.EnumUIRecord">
+            <summary>
+            可扩展枚举的记录类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord">
+            <summary>
+            UI数据模型的记录类型 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIRecord">
+            <summary>
+            IUIRecord元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Clone">
+            <summary>
+            深度Clone
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Delete">
+            <summary>
+            删除改行.
+            (当数据为新增状态时，直接删除，其它状态时仅置状态为删除)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.ClearErrorMessage">
+            <summary>
+            递归清除当前UIRecord的错误信息。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Delete(System.Boolean)">
+            <summary>
+            删除改行.
+            (当数据为新增状态时，直接删除，其它状态时仅置状态为删除)
+            </summary>
+            <param name="isCascade">是否级联删除</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.AcceptChanges">
+            <summary>
+            提交自上次调用 AcceptChanges 以来对该记录进行的所有更改。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.ContainsOriginalValue(System.String)">
+            <summary>
+            初始值中是否包含某一字段
+            </summary>
+            <param name="fieldName">字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetBusinessEntityValue(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            获取当前Record指定的Field的数据，并将数据转换为持久层需要的数据格式
+            </summary>
+            <param name="field">指定的field</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.ToDataRow(System.Data.DataTable)">
+            <summary>
+            将Record的数据转换成DataRow.数据结构一致.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUILink)">
+            <summary>
+            通过link关系得到关系子行数据．
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            通过关系view得到关系View子行数据．
+            </summary>
+            <param name="view">关系的View</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.SetParentRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            设置父记录对象.
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetParentRecord">
+            <summary>
+            获取父记录对象. -- 对于自关联，是个问题．要不要做为其父．
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetFieldMLData(System.String)">
+            <summary>
+            多语种数据获取方法．
+            若不是多语字段,则返回空．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.GetFieldMLData(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            多语种数据获取方法．
+            若不是多语字段,则返回空．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.WriteToEntityData(System.Object)">
+            <summary>
+            将当前的记录转换为相应的EnityData.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.FromEntityData(System.Object)">
+            <summary>
+            将EnityData中的数据写入当前的记录中.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Clone(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            带Viwe参的Clone操作
+            </summary>
+            <param name="cView">所属的新的View</param>
+            <returns>克隆对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.CopyTo(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            复制除ID以外的数据到另一条记录．
+            </summary>
+            <param name="record">复制到的记录</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecord.CopyTo(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.Boolean)">
+            <summary>
+            复制除ID以外的数据到记录．
+            深度复制,将会把所有的组合关系的子记录Clone一遍,级联处理上,并且将记录关系处理上.
+            </summary>
+            <param name="toRecord">复制到的记录</param>
+            <param name="isDeepCopy">是否深度Copy</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.IsLoadedChild">
+            <summary>
+            是否已经加载过子记录．这决定于翻页时，针对改记录是否做子View的加载．
+            考虑一下是否真需要．--需要．
+            (数据加载的目前策略是：主View有分页和翻页，子View只做翻页没有分页加载)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.OriginalValue">
+            <summary>
+            初始值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.IsUnbindDataChanged">
+            <summary>
+            非绑定值是否发生变化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.PrimaryKey">
+            <summary>
+            主关键字的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.SysVersion">
+            <summary>
+            版本号字段-时间戳的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.IsExpend">
+            <summary>
+            当前数据行是否展开(为Tree结点使用)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.DataRecordState">
+            <summary>
+            数据状态的字段: Add/Delete/Change/Insert/Unchange
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.TempKey">
+            <summary>
+            临时主键的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.IsSelected">
+            <summary>
+            当前记录是否选择的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.IsFocused">
+            <summary>
+            当前记录是否是获得焦点的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.LocateMark">
+            <summary>
+            取得或设置定位标记。由条件定位器将满足条件的记录设置定位标记，Form的Grid将读取该标记。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Item(System.String)">
+            <summary>
+            属性索引器-FieldName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecord.Item(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            属性索引器-Field
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetChangedValues">
+            <summary>
+            获取与默认值变化的字段列表－调用获取，性能不好。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder)">
+            <summary>
+            构造函数
+            </summary> //本构造较特殊，通过覆盖Name的方法来达到唯一Name.
+            <param name="builder">DataRowBuilder</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.SetMulitLangValue(System.Int32,UFSoft.UBF.UI.MD.Runtime.IUIField,System.Object)">
+            <summary>
+            value对象支持两种类型。
+            1. MultiLangDataDict类。直接赋给innerData
+            2. String类。赋给当前多语对象的Default language
+            </summary>
+            <param name="fieldIndex"></param>
+            <param name="field"></param>
+            <param name="value"></param>
+            <returns>数据是否发生的Changed</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetBusinessEntityValue(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            获取当前Record指定的Field的数据，并将数据转换为持久层需要的数据格式
+            </summary>
+            <param name="field">指定的field</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetValue``1(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            返回IUIfield对应的值，这个方法和this[IUIField]的区别在于
+            1. 返回接口采用了泛型，而不是Object
+            2. 检查Field是否允许为空，如果允许则返回Null，否则返回IUIField.NullValue，
+            this[IUIField]则直接返回Record的innerData中的数据
+            </summary>
+            <typeparam name="T">返回值的类型</typeparam>
+            <param name="field">取值的Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Delete">
+            <summary>
+            删除改行.(非实际删除，仅置状态为删除)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Delete(System.Boolean)">
+            <summary>
+            删除改行.
+            (当数据为新增状态时，直接删除，其它状态时仅置状态为删除)
+            </summary>
+            <param name="isCascade">是否级联删除</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Remove">
+            <summary>
+            实际的删除操作
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.AcceptChanges">
+            <summary>
+            提交自上次调用 AcceptChanges 以来对该记录进行的所有更改。 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUILink)">
+            <summary>
+            通过link关系得到关系子行数据．
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetChildRecords(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            通过关系view得到关系View子行数据．
+            </summary>
+            <param name="view">关系的View</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetParentRecord">
+            <summary>
+            获取父记录对象.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.SetParentRecord(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            设置父记录对象。
+            </summary>
+            <param name="pRecord"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.ToDataRow(System.Data.DataTable)">
+            <summary>
+            将Record的数据转换成DataRow.数据结构一致.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.FromDataRow(System.Data.DataRow)">
+            <summary>
+            将DataRow中的数据赋到当前的Record上来(仅拷贝Field与Cloumn一致的数据,不抛错)
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.CopyTo(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            复制除ID以外的数据到另一条记录．
+            </summary>
+            <param name="record">复制到的记录</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.CopyToWithOutCustomField(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            复制记录，但不复制自定义字段的数据
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.CopyTo(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.Boolean)">
+            <summary>
+            复制除ID以外的数据到记录．
+            深度复制,将会把所有的组合关系的子记录复制一遍,级联处理上,并且将记录关系处理上.
+            </summary>
+            <param name="toRecord">复制到的记录</param>
+            <param name="isDeepCopy">是否深度Copy</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.CreateCloneInstance(UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder)">
+            <summary>
+            Record实例创建的模版方法.//--目前有代码生成的具体继承类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Clone(System.Boolean)">
+            <summary>
+            克隆 新Record,所有数据均复制,包含ID. //--目前有代码生成的具体继承类.
+            </summary>
+            <returns>克隆对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Clone(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            带View参数的Clone操作
+            </summary>
+            <param name="cView">所属的新的View</param>
+            <returns>克隆对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Equals(System.Object)">
+            <summary>
+            判断对象是否相等
+            </summary>
+            <returns>对象是否相等</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetFieldMLData(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+             <summary>
+             多语种数据集合属性．通过字段或字段名来访问多语种数据信息.
+             </summary>
+            <param name="field">字段</param>
+             <returns>若不是多语字段则返回空．</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.GetFieldMLData(System.String)">
+            <summary>
+            多语种数据集合属性．通过字段或字段名来访问多语种数据信息.
+            </summary>
+            <param name="fieldName">字段名</param>
+            <returns>若不是多语字段则返回空．</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.WriteToEntityData(System.Object)">
+            <summary>
+            将当前的记录转换为相应的EnityData.
+            可以将当前记录的数据转换到该EnityData的本身的简单类型和所有的值类型的数据.
+            EntityData中的EntityData类型不能自动写入,需要手工的编码赋值.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.FromEntityData(System.Object)">
+            <summary>
+            将EnityData中的数据写入当前的记录中.
+            可以将EntityData中的简单类型和值类型的数据都赋到当前的记录上来.
+            并且能够将EnitityData中的EntityData类型的数据的ID赋到当前记录的关联对象的值上.(无法处理参照Code,Name列的形式.)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Hidden">
+            <summary>
+            在GetDisplayRecord时起作用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.IsLoadedChild">
+            <summary>
+            是否已经加载过子记录．这决定于翻页时，针对改记录是否做子View的加载．
+            考虑一下是否真需要．--需要．
+            (数据加载的目前策略是：主View有分页和翻页，子View只做翻页没有分页加载)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.PrimaryKey">
+            <summary>
+            记录的主键数据 
+            </summary>
+            使用了临时数据记录,来提升了性能.
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.SysVersion">
+            <summary>
+            版本号字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.TempKey">
+            <summary>
+            临时Key的字段 -- 在UIModel提交数据时，将新增的临时ID放在此处．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.IsExpend">
+            <summary>
+            当前数据行是否展开(为Tree结点使用)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.DataRecordState">
+            <summary>
+            数据状态的字段: Add/Delete/Change/Unchange
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.IsSelected">
+            <summary>
+            当前记录是否选择的记录．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.IsFocused">
+            <summary>
+            当前记录是否是获得焦点的记录．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Item(UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            返回或设置IUIfield对应的值。
+            返回时：
+            1. 使用Object对真实类型进行装箱操作
+            2. 当InnerData中为Null时，直接返回Null值
+            设置时：
+            1. 转换为Field对应的类型
+            2. 不能转换时存入Null
+            3. 存入时检查数据是否发生变化，变化时将Unchanged状态修改为Modified状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.IsDataChanged">
+            <summary>
+            数据是否发生变化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecord.Item(System.String)">
+            <summary>
+            返回或设置IUIfield对应的值。
+            返回时：
+            1. 使用Object对真实类型进行装箱操作
+            2. 当InnerData中为Null时，直接返回Null值
+            设置时：
+            1. 转换为Field对应的类型
+            2. 不能转换时存入Null
+            3. 存入时检查数据是否发生变化，变化时将Unchanged状态修改为Modified状态
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IEnumUIRecord">
+            <summary>
+            可扩展枚举的记录接口.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.EnumUIRecord.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder)">
+            <summary>
+            构造函数
+            </summary> //本构造较特殊，通过覆盖Name的方法来达到唯一Name.
+            <param name="builder">DataRowBuilder</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.EnumUIView">
+            <summary>
+            Description of EnumUIView.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IEnumUIView">
+            <summary>
+            Description of IEnumUIView.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IEnumUIView.AfterDataFill">
+            <summary>
+            数据填充后处理方法.(发生在通用Load数据填充后.)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IEnumUIView.GetEnumRecordsByType(System.String)">
+            <summary>
+            获取指定枚举类型名的枚举记录集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.EnumUIView.GetEnumRecordsByType(System.String)">
+            <summary>
+            获取指定枚举类型的枚举记录集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldDPAttribute.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ITotal.Zero">
+            <summary>
+            全部置0
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIAction">
+            <summary>
+            UIAction 对象．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIAction">
+            <summary>
+            IUIAction元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIAction.ContainerModel">
+            <summary>
+            容器模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIAction.ContainerModel">
+            <summary>
+            容器模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIActionCollection">
+            <summary>
+            UIActionCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1">
+            <summary>
+            UI元数据集合基类型 -- lstData+Hash表实现 .
+            </summary>
+            <typeparam name="T">IUIElement限定类型</typeparam>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUICollectionBase`1">
+            <summary>
+            UI元数据范型集合基类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUICollectionBase`1.Contains(System.String)">
+            <summary>
+            判断对象的name是否在集合中存在(这要求name是唯一的)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUICollectionBase`1.IndexOf(`0)">
+            <summary>
+            获取指定对象的索引号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUICollectionBase`1.Item(System.String)">
+            <summary>
+            索引器．名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUICollectionBase`1.Item(System.Int32)">
+            <summary>
+            索引器. 序号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Add(`0)">
+            <summary>
+            添加一个IUIElement
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Remove(`0)">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Clear">
+            <summary>
+            清除集合数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            将整个集合复制到兼容的一维数组中，从目标数组的指定索引位置开始放置。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Contains(`0)">
+            <summary>
+            判断对象是否在集合中存在
+            目前就用唯一标识Name来区别。(与范型集合处理不一样.)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Contains(System.String)">
+            <summary>
+            判断唯一标识名称是否在集合中存在
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.GetEnumerator">
+            <summary>
+            返回循环访问 范型集合 的枚举数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+             返回一个循环访问集合的枚举数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.IndexOf(`0)">
+            <summary>
+             获取指定对象的索引号 .
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.IsReadOnly">
+            <summary>
+            是否只读集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Item(System.String)">
+            <summary>
+            索引器 - 名称索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Item(System.Int32)">
+            <summary>
+            索引器 - 序号索引 --由于HashTable不提供序号索引器.用下法实现.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UICollectionBase`1.Count">
+            <summary>
+            记录总数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIActionCollection">
+            <summary>
+            IUIActionCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIActionCollection.ContainerModel">
+            <summary>
+            容器模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIActionCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uif">父模型</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIActionCollection.ContainerModel">
+            <summary>
+            UIModel容器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIField">
+            <summary>
+            UI元数据基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIField.GetAttributes">
+            <summary>
+            返回该 字段所有版型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIField.GetDPAttribute">
+            <summary>
+            返回动态精度版型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIField.ToDataColumn">
+            <summary>
+            将UIFiled转换成DataColumn.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.Name">
+            <summary>
+            字段名称(直接取ElementName)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.ContainerView">
+            <summary>
+            容器视图 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.EntityFullName">
+            <summary>
+            该字段对应的类型全名(实体,枚举,基本数据类型...)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.AttributeName">
+            <summary>
+            对应的属性名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.NullValue">
+            <summary>
+            Null值，当前Field的空值的表示值，对Ref类型的Null为-1等等
+            <seealso cref="T:UFSoft.UBF.UI.MD.Runtime.DataTranslation"/>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsSelfLink">
+            <summary>
+            是否是自关连字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsLink">
+            <summary>
+            是否是连接字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsReference">
+            <summary>
+            是否是参照扩展字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsDirectAttribute">
+            <summary>
+            是否对应实体的直接属性，对直接属性需要Save处理（例如参照的Name、Code就不是直接属性）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsCustomField">
+            <summary>
+            是否自定义字段，默认为False，可以修改，但是
+            当以下情况之一存立时，IsCustomField一定为True：
+            当IsLoadable为False时，
+            string.IsNullOrEmpty(AttributeName)为True时
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsLoadable">
+            <summary>
+            是否能加载的字段．(如自由字段就不可加载（目前通过Design期的IsMap来判断）)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.DefaultValue">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.IsMulitLangRecord">
+            <summary>
+            是否多语种记录
+            由代码生成子类直接覆盖．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.FieldType">
+            <summary>
+            字段类型-(仅为动态List使用,目前不自动赋值,运行期动态赋值)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIField.FieldTypeID">
+            <summary>
+            字段类型的元数据ID-(仅为动态List使用,目前不自动赋值,运行期动态赋值)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.Type,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="view">视图容器</param>
+            <param name="fieldName">字段名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">确省值</param>
+            <param name="entityFullName">实体全名</param>
+            <param name="attributeName">属性名</param>
+            <param name="isDirectAttribute">是否是直接属性</param>
+            <param name="isLoadable">是否进行自动数据加载(目前无用)</param>
+            <param name="isReference">是否是参照</param>
+            <param name="expression">字段表达式</param>
+            <param name="isMulitLangField">是否语言字段</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.Type,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,UFSoft.UBF.UI.MD.Runtime.UIFieldType,System.String,System.String)">
+             <summary>
+             构造函数
+             </summary>
+             <param name="view">视图容器</param>
+             <param name="fieldName">字段名</param>
+             <param name="dataType">数据类型</param>
+             <param name="isNullable">是否可空</param>
+             <param name="defaultValue">确省值</param>
+             <param name="entityFullName">实体全名</param>
+             <param name="attributeName">属性名</param>
+             <param name="isDirectAttribute">是否是直接属性</param>
+             <param name="isLoadable">是否进行自动数据加载(目前无用)</param>
+             <param name="isReference">是否是参照</param>
+             <param name="expression">字段表达式</param>
+             <param name="isMulitLangField">是否语言字段</param>
+            <param name="uiFieldType">字段对应的实体字段类型</param>
+            <param name="uiFieldTypeID">字段对应的实体字段类型的GUID</param>
+            <param name="elementID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.GetAttributes">
+            <summary>
+            返回所有当前字段的版形
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.GetDPAttribute">
+            <summary>
+            返回动态精度字段
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.StrEquals(System.String,System.String)">
+            <summary>
+            检查两个字符串是否相等
+            </summary>
+            <param name="v1"></param>
+            <param name="v2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.ToDataColumn">
+            <summary>
+            将UIFiled转换成DataColumn.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.CreateCloneInstance">
+            <summary>
+            Field Clone实例创建的模版方法.不需要.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.EntityFullName">
+            <summary>
+            对应的实体全名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.AttributeName">
+            <summary>
+            对应的属性名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsReference">
+            <summary>
+            是否是参照扩展字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsLink">
+            <summary>
+            是否是关联字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsSelfLink">
+            <summary>
+            是否是自关联的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsDirectAttribute">
+            <summary>
+            是否对应实体的直接属性.
+            对直接属性需要Save处理（例如参照的Name、Code就不是直接属性）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsLoadable">
+            <summary>
+            是否可读字段.(如自由字段就不可加载（目前通过Design期的IsMap来判断）)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.DefaultValue">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsMulitLangRecord">
+            <summary>
+            是否多语种记录
+            由代码生成子类直接覆盖．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.IsUpdate">
+            <summary>
+            是否需要更新（一个UIView中可能不是全部UIField都有有效数据（－－指在UI上呈现的可能被修改的UIField）
+            只对有效数据才需要更新
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIField.Expression">
+            <summary>
+            数据表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIFieldCollection">
+            <summary>
+            UIFieldCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIFieldCollection">
+            <summary>
+            IUIFieldCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFieldCollection.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFieldCollection.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFieldCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uiv">视图容器模型</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFieldCollection.ContainerView">
+            <summary>
+            视图容器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldInnerData.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldInnerData.#ctor(System.String,System.String,System.Boolean,System.Object,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.Boolean,System.String,UFSoft.UBF.UI.MD.Runtime.UIFieldType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="fieldName">字段名</param>
+            <param name="dataTypeName">数据类型名称</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">确省值</param>
+            <param name="entityFullName">实体全名</param>
+            <param name="attributeName">属性名</param>
+            <param name="isDirectAttribute">是否是直接属性</param>
+            <param name="isLoadable">是否进行自动数据加载(目前无用)</param>
+            <param name="isReference">是否是参照</param>
+            <param name="expression">字段表达式</param>
+            <param name="isMulitLangField">是否语言字段</param>
+            <param name="isUpdate">是否更新</param>
+            <param name="fieldType"></param>
+            <param name="fieldTypeID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldInnerData.CreateUIFieldData(System.String,System.String,System.Boolean,System.Object,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.String,System.Boolean,System.Boolean,System.String,UFSoft.UBF.UI.MD.Runtime.UIFieldType)">
+            <summary>
+            创建一个UIFieldData对象。首先到Cache中寻找，是否有相同的对象，
+            如果有，直接取出，
+            如果没有，则创建一个
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.RRItem.Instance(System.String)">
+            <summary>
+            来源字段即目标字段时
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.RRItem.ObjectUIField">
+            <summary>
+            目标实体的字段名字，区别于SourceUIField，SourceUIField是AttributeName，ObjectUIField是FieldName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.RRItem.SourceUIField">
+            <summary>
+            来源实体的Attribute名称, ，区别于ObjectUIField，SourceUIField是AttributeName，ObjectUIField是FieldName
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.GetExtendUIField(System.Int32)">
+            <summary>
+            Index数据过大时，会巨慢咯
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.GetValidExtendUIField">
+            <summary>
+            这儿返回的扩展字段，将经过有效性校验，校验项目如下：
+            1. ContainerUIView是否存在
+            2. RRItem不允许为空
+            3. RRItem.ObjectUIField必须存在于ContainerUIView中
+            4. RRItem.SourceUIField不允许为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.BuildView(UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            根据版型，创建用来加载数据的视图
+            </summary>
+            <param name="model">视图所属的Model</param>
+            <param name="objectUIView">准备填充数据的视图</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.ExtendUIField">
+            <summary>
+            KeyValuePair记录了来源字段和目标字段
+            Key=目标字段
+            Value=来源字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UIFieldRRAttribute.SourceRootField">
+            <summary>
+            指定本源实体的Attribute Name。
+            注意：不是UIFieldName。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter">
+            <summary>
+            Filter元数据
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIFilter">
+            <summary>
+            Filter元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.OPath">
+            <summary>
+            OPath过滤条件表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.OriginalOPath">
+            <summary>
+            原始的OPath过滤条件表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.OrderBy">
+            <summary>
+            OPath过滤条件表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.IsUsing">
+            <summary>
+            该过滤条件是否使用．．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilter.Parameters">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.#ctor(System.String,UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">过滤条件名</param>
+            <param name="view">所属视图</param>
+            <param name="oPath">OPath过滤条件表达式</param>
+            <param name="orderBy">排序字段</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.Clear">
+            <summary>
+            清空所有过滤条件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.Clone">
+            <summary>
+            Clone
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.CreateCloneInstance">
+            <summary>
+            Filter Clone实例创建的模版方法. --目前有代码生成的具体继承类.
+            此处接口有问题,要改代码tpl.才能改成UIFilter
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.OPath">
+            <summary>
+            OPath过滤条件表达式+Order
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.OrderBy">
+            <summary>
+            OrderBy表达式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.Parameters">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.Item(System.String)">
+            <summary>
+            参数索引
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilter.IsUsing">
+            <summary>
+            是否使用．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilterCollection">
+            <summary>
+            UIFilterCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIFilterCollection">
+            <summary>
+            IUIFilterCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIFilterCollection.ContainerView">
+            <summary>
+            容器视图
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIFilterCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIFieldFlexAttribute.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UIFieldFlexAttribute.CodeUIField">
+            <summary>
+            设置和返回均为AttributeName
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UILink">
+            <summary>
+            UILink元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUILink">
+            <summary>
+            IUILink元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ContainerModel">
+            <summary>
+            容器UI模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ParentView">
+            <summary>
+            父视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ParentField">
+            <summary>
+            关系对应的父方字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ParentAttributeName">
+             <summary>
+            关系对应的父方的实体属性名．仅对一对多关系有效．一对一时，返回ParentField.AttributeName.
+             </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ChildView">
+            <summary>
+            子视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ChildField">
+            <summary>
+            关系对应的子方字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.IsMultiSelfLink">
+            <summary>
+            是否一对多自关联Link.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.IsSameEntityLink">
+            <summary>
+            是否同实体的分组View的Link.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ParentCardinality">
+            <summary>
+            父方的基数 
+            一般没有用.父多还是一意义不大.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.ChildCardinality">
+            <summary>
+            子方的基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILink.Association">
+            <summary>
+            关联关系
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.#ctor(System.String,UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.EnumAssociationKind,UFSoft.UBF.UI.MD.Runtime.EnumAssociationDirection,UFSoft.UBF.UI.MD.Runtime.EnumCardinality,UFSoft.UBF.UI.MD.Runtime.EnumCardinality)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="linkName">连接名</param>
+            <param name="uimodel">所属的UIModel</param>
+            <param name="parentField">父字段名</param>
+            <param name="childField">子字段名</param>
+            <param name="association">关系类型</param>
+            <param name="direction">关联方向</param>
+            <param name="parentCardinality">父关系基数</param>
+            <param name="childCardinality">子关系基数</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.#ctor(System.String,UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.EnumAssociationKind,UFSoft.UBF.UI.MD.Runtime.EnumAssociationDirection,UFSoft.UBF.UI.MD.Runtime.EnumCardinality,UFSoft.UBF.UI.MD.Runtime.EnumCardinality,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="linkName">连接名</param>
+            <param name="uimodel">所属的UIModel</param>
+            <param name="parentField">父字段名</param>
+            <param name="childField">子字段名</param>
+            <param name="association">关系类型</param>
+            <param name="direction">关联方向</param>
+            <param name="parentCardinality">父关系基数</param>
+            <param name="childCardinality">子关系基数</param>
+            <param name="parentAttributeName">父关系对应属性名(实体上名称)</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.CreateCloneInstance">
+            <summary>
+            Field实例创建的模版方法.不需要.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ContainerModel">
+            <summary>
+            容器模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ParentView">
+            <summary>
+            父视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ChildView">
+            <summary>
+            子视图
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ChildField">
+            <summary>
+            关系对应的子方字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ParentAttributeName">
+             <summary>
+            关系对应的父方的实体属性名．仅对一对多关系有效．一对一时，返回ParentField.AttributeName.
+             </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ParentField">
+            <summary>
+            关系对应的父方字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.Association">
+            <summary>
+            关系类型．　
+            目前可能没有用．对于UI这块，关系只分n对n.不分组合和关联的问题．?考虑是否可去除．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.Direction">
+            <summary>
+            关联方向. --无用．目前UBF关系方向都是single，没有双向（组合和一对多是但没有用到）．还是double没有任何影响.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ParentCardinality">
+            <summary>
+            父集基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.ChildCardinality">
+            <summary>
+            子集基数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.IsMultiSelfLink">
+            <summary>
+            是否自关联Link.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UILink.IsSameEntityLink">
+            <summary>
+            是否同实体的分组View的Link.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UILinkCollection">
+            <summary>
+            UILinkCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUILinkCollection">
+            <summary>
+            IUILinkCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUILinkCollection.ContainerModel">
+            <summary>
+            容器UI模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILinkCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uim">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UILinkCollection.#ctor">
+            <summary>
+            私有构造函数 －for indigo 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel">
+            <summary>
+            UIModel元数据
+            </summary>
+            <summary>
+             UIModel 增加CRUD方法。 2007-1-20
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIModel">
+            <summary>
+            IUIModel元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetSubViewModel(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            获取指定View的子树的Model. 剔除了非相关的View及父View的内容.
+            </summary>
+            <param name="view">指定的view</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetSubViewModel(System.String)">
+            <summary>
+            获取指定View的子树的Model. 剔除了非相关的View及父View的内容.
+            </summary>
+            <param name="viewName">指定的viewName</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetMainViews">
+            <summary>
+            得到所有主视图的集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.AcceptChanges">
+            <summary>
+            设置View的状态为None，并且调用View的AcceptChanges方法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetViewByEntity(System.String)">
+            <summary>
+            通过实体名称取视图
+            </summary>
+            <param name="entityFullName">实体名称</param>
+            <returns>视图</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetViewsByEntity(System.String)">
+            <summary>
+            通过实体名称取视图集
+            </summary>
+            <param name="entityFullName">实体名称</param>
+            <returns>可能的视图集</returns>		
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.Clone(System.Boolean)">
+            <summary>
+            IUIModel的Clone操作
+            </summary>
+            <param name="isCloneRecord">是否Clone记录</param>
+            <returns>Clone的IUIModel</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetChanges">
+            <summary>
+            获取当前Model自上次提交更改后的所有更改的副本
+            </summary>
+            <returns>返回数据变化后的副本Model对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.GetChanges(System.Boolean)">
+            <summary>
+            获取当前Model自上次提交更改后的所有更改的副本
+            </summary>
+            <param name="isReturnStrongType">是否返回强类型的Changes对象(用于通用CRUD传递弱类型对象)</param>
+            <returns>返回数据变化后的副本Model对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.Clear">
+            <summary>
+            清空Model中的数据．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIModel.ClearErrorMessage">
+            <summary>
+            递归清除当前UIModel的所有ErrorMessage信息，到属于UIModel的UIView和UIRecord信息。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.Views">
+            <summary>
+            视图集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.IsSyncRecordState">
+            <summary>
+            状态联动锁
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.Item(System.String)">
+            <summary>
+            索引器 - 取视图View.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.IsNeedDataCollect">
+            <summary>
+            指示当前的Model是否要进行数据收集?
+            (默认为true,当弹出Form返回时,要将主Form的该Model设为False.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.Links">
+            <summary>
+            连接集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.Properties">
+            <summary>
+            属性集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModel.AssemblyName">
+            <summary>
+            获取生成代码dll名称.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetSubViewModel(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            获取指定View的子树的Model. 剔除了非相关的View及父View的内容.
+            </summary>
+            <param name="view">指定的view</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetSubViewModel(System.String)">
+            <summary>
+            获取指定View的子树的Model. 剔除了非相关的View及父View的内容.
+            </summary>
+            <param name="viewName">指定的viewName</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.#ctor">
+            <summary>
+            无参构造函数（for Indigo）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetMainViews">
+            <summary>
+            得到所有主视图的集合
+            (理应UIModel仅应有一个主View,目前支持多主View的情况,但不推荐使用.)
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetViewByEntity(System.String)">
+            <summary>
+            通过实体名称取视图 －－要废弃．
+            </summary>
+            <param name="entityFullName">实体名称</param>
+            <returns>视图</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetViewsByEntity(System.String)">
+            <summary>
+            通过实体名称取视图集
+            </summary>
+            <param name="entityFullName">实体名称</param>
+            <returns>可能的视图集</returns>		
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.AcceptChanges">
+            <summary>
+            设置View的状态为None，并且调用View的AcceptChanges方法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetChanges">
+            <summary>
+            获取当前Model自上次提交更改后的所有更改的副本
+            </summary>
+            <returns>返回数据变化后的副本Model对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.GetChanges(System.Boolean,System.Boolean)">
+            <summary>
+            获取当前Model自上次提交更改后的所有更改的副本
+            </summary>
+            <param name="isReturnStrongType">是否返回强类型的Changes对象(用于通用CRUD传递弱类型对象)</param>
+            <param name="isIncludedResourceInfo">是否复制资源信息</param>
+            <returns>返回数据变化后的副本Model对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.Clear">
+            <summary>
+            清空Model中的数据．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.ClearEx(System.Boolean)">
+            <summary>
+            清空Model中的数据
+            </summary>
+            <param name="isIncludedCustomView">是否包含自定义视图</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.Clone(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            IUIModel的Clone操作
+            </summary>
+            <param name="IsCloneRecord">是否Clone记录</param>
+            <param name="isCloneStrongType">用于通用CRUD传递弱类型MODEL 2007-1-18（目前相关强类型仅有UIView,UIRecord,UIFilter有相关调整）</param>
+            <param name="isIncludedResourceInfo">是否复制资源信息</param>
+            <returns>Clone的IUIModel</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.CreateCloneInstance">
+            <summary>
+            Field Clone实例创建的模版方法.不需要.//--目前有代码生成的具体继承类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.AfterInitModel">
+            <summary>
+            UIMODEL初始化后的自定义初始化方法
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.OnValidate">
+            <summary>
+            UIModel自扩展校验方法。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.IsNeedDataCollect">
+            <summary>
+            指示当前的Model是否要进行数据收集.(?有问题的属性，不应该提供．)
+            (默认为true,当弹出Form返回时,要将主Form的该Model设为False.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.Item(System.String)">
+            <summary>
+            View索引器 - 名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModel.AssemblyName">
+            <summary>
+            获取生成代码dll名称.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelCollection">
+            <summary>
+            UIModelCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIModelCollection">
+            <summary>
+            IUIModelCollection元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelCollection.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty">
+            <summary>
+            UIModelProperty元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty">
+            <summary>
+            UIProperty元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIProperty">
+            <summary>
+            UI元数据基类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.Container">
+            <summary>
+            容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.DefaultValue">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.Value">
+            <summary>
+            当前值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIProperty.Expression">
+            <summary>
+            数据表达式
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.#ctor(System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">字段名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">确省值</param>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.GetContainerAssembly">
+            <summary>
+            获取所属程序集.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.Container">
+            <summary>
+            IUIElement
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.CurrentModel">
+            <summary>
+            新增．分离属性的资源访问视角．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.DefaultValue">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.Value">
+            <summary>
+            缺省值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIProperty.Expression">
+            <summary>
+            数据表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIModelProperty">
+            <summary>
+            UIModel属性元数据基类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModelProperty.ContainerModel">
+            <summary>
+            容器界面模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.#ctor(System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">字段名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">确省值</param>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            构造函数(已废弃)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.Clone">
+            <summary>
+            Clone
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.CreateCloneInstance">
+            <summary>
+            IUIModelProperty Clone实例创建的模版方法.不需要.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.Container">
+            <summary>
+            所属容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelProperty.ContainerModel">
+            <summary>
+            Model容器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelPropertyCollection">
+            <summary>
+            UIModelPropertyCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIModelPropertyCollection">
+            <summary>
+            IUIModelPropertyCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIModelPropertyCollection.ContainerModel">
+            <summary>
+            容器Model
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelPropertyCollection.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelPropertyCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uim">父模型</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIModelPropertyCollection.ContainerModel">
+            <summary>
+            容器Model
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter">
+            <summary>
+            Parameter元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIParameter">
+            <summary>
+            IUIParameter元数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameter.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameter.DataValue">
+            <summary>
+            数据值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameter.SourceField">
+            <summary>
+            绑定源 -- 用途?是不可以按非顺序方法赋参数值？这样支持比较麻烦．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameter.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameter.Direction">
+            <summary>
+            参数方向
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.#ctor(System.String,System.Data.DbType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="dataType">数据类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.#ctor(System.String,System.Data.DbType,System.Object,System.String,System.Boolean,System.Data.ParameterDirection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="dataType">数据类型</param>
+            <param name="dataValue">数据值</param>
+            <param name="sourceField">绑定源</param>
+            <param name="isNullable">可空否</param>
+            <param name="direction">参数方向</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.CreateCloneInstance">
+            <summary>
+            IUIModelProperty Clone实例创建的模版方法.不需要.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.DataValue">
+            <summary>
+            数据值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.SourceField">
+            <summary>
+            绑定源 -- 用处??
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.IsNullable">
+            <summary>
+            是否可空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameter.Direction">
+            <summary>
+            参数方向
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameterCollection">
+            <summary>
+            UIParameterCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIParameterCollection">
+            <summary>
+            IUIParameterCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIParameterCollection.ContainerFilter">
+            <summary>
+            容器过滤
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameterCollection.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIParameterCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIFilter)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uif">父过滤条件</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIPropertyCollection">
+            <summary>
+            UIPropertyCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIPropertyCollection">
+            <summary>
+            IUIPropertyCollection元数据接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIPropertyCollection.#ctor">
+            <summary>
+            for indigo
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIPropertyCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIElement)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uiv">父模型</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordBuilder">
+            <summary>
+            构造UIRecord的构造参数器。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder">
+            <summary>
+            Recordy记录构造器.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder.Clone">
+            <summary>
+            Clone操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder.RecordNum">
+            <summary>
+            记录号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIRecordBuilder.View">
+            <summary>
+            所属View
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIRecordBuilder.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache">
+            <summary>
+            UIView的Cache对象
+            隐喻：
+            a. Index从0开始，0表示第一条记录
+            b. UIViewCache总是从属于某一个View，而不会单独存在
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.mvarIsFull">
+            <summary>
+            数据加载是否完成？
+            IsFull=True时，UIModel认为，数据库中的数据和当前Cache中的数据是一致的
+            IsFull=False时，UIModel认为，Cache中只存放了数据库中的一部份数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.mvarRecords">
+            <summary>
+            Cache对象
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.LoadRecordFromCache(System.Int32,System.Int32)">
+            <summary>
+            返回Record对象
+            按引用返回
+            当读不到数据时，返回已读到的数据
+            </summary>
+            <param name="startIndex">开始的索引</param>
+            <param name="length">加载的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.Clear">
+            <summary>
+            清空Cache中的数据
+            预期：
+            a. Filter改变时调用
+            b. CustomOQL改变时调用
+            c. FromOQL改变时调用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.ClearByIndex(System.Int32)">
+            <summary>
+            某条记录需要重新加载时，先清除这条记录
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.Remove(System.Int32)">
+            <summary>
+            从当前的ViewCache中删除指定的索引的值 
+            注意：
+            某Index被删除后，在该Index后续的Index将减1，表示向前移动一位
+            </summary>
+            <param name="index">指定的索引</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.GetIndexByRecordID(System.Int64)">
+            <summary>
+            根据ID返回Index，如果不存在则返回-1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.Replace(UFSoft.UBF.UI.MD.Runtime.IUIRecordCollection,System.Int32)">
+            <summary>
+            批量添加Record
+            注意，当Index和现有数据重复时，现有数据将被覆盖，而不是插入
+            </summary>
+            <param name="recs">待添加的数据</param>
+            <param name="startIndex">批量数据中第一条数据索引值</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.Insert(UFSoft.UBF.UI.MD.Runtime.IUIRecord,System.Int32)">
+            <summary>
+            插入一条记录，为某个索引号，如果存在这笔记录，在其后面的记录就向后移动
+            如，Cache中有记录1[a],2[b],3[c],6[d]，插入Insert("x",2),记录变为1[a],2[x],3[b],4[c],6[d]
+            </summary>
+            <param name="rec"></param>
+            <param name="startIndex"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.GetSelectRecord">
+            <summary>
+            获取Cache中所有IsSelected属性为True的记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.SetSelectRecord(System.Boolean)">
+            <summary>
+            设置Cache中所有记录的IsSelected的值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.SetErrorMessage(System.Int32,System.String,System.Boolean,System.String)">
+            <summary>
+            为Cache中的某一条记录设置ErrorMessage信息
+            </summary>
+            <param name="index">索引号</param>
+            <param name="attributeName">属性名称</param>
+            <param name="message">错误信息</param>
+            <param name="isProperty">是否属性类型的字段</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.FindByAnd(System.Collections.Generic.KeyValuePair{System.String,System.Object}[])">
+            <summary>
+            查找符合条件的记录
+            </summary>
+            <param name="values">参数</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCache.Item(System.Int32)">
+            <summary>
+            设置指定的索引的值
+            </summary>
+            <param name="index">指定的索引</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCollection">
+            <summary>
+            UIViewCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIViewCollection">
+            <summary>
+            IUIViewCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIViewCollection.ContainerModel">
+            <summary>
+             容器模型Model.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCollection.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uim">父模型</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewCollection.ContainerModel">
+            <summary>
+            容器模型Model.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewProperty">
+            <summary>
+            UIViewProperty元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIViewProperty">
+            <summary>
+            UIView属性元数据基类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIViewProperty.ContainerView">
+            <summary>
+            容器界面模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewProperty.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewProperty.#ctor(System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">字段名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">确省值</param>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewProperty.CreateCloneInstance">
+            <summary>
+            View Clone实例创建的模版方法.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewProperty.ContainerView">
+            <summary>
+            UIView
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewPropertyCollection">
+            <summary>
+            UIViewPropertyCollection元数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.IUIViewPropertyCollection">
+            <summary>
+            IUIViewPropertyCollection元数据接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IUIViewPropertyCollection.ContainerView">
+            <summary>
+            容器界面模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewPropertyCollection.#ctor(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="uiv">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewPropertyCollection.#ctor">
+            <summary>
+            for indigo 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.Implement.UIViewPropertyCollection.Add(UFSoft.UBF.UI.MD.Runtime.IUIViewProperty)">
+            <summary>
+            增加属性
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition">
+            <summary>
+            用于实现管理UIView中满足指定条件的记录集合的接口。
+            该接口的实现者将支持设置过滤条件、执行过滤动作，取得和设置当前焦点记录。
+            支持首条和末条的快捷设置焦点方式。以及向前和向后移动焦点
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.GetCondition">
+            <summary>
+            取得条件的OQL
+            </summary>
+            <returns>条件OQL</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Locate">
+            <summary>
+            创建满足定位条件的记录集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.First">
+            <summary>
+            设置当前定位位置为定位集合的第一条
+            </summary>
+            <returns>返回当前定位位置</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Last">
+            <summary>
+            设置当前定位位置为定位集合的最后一条
+            </summary>
+            <returns>返回当前定位位置</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Previous">
+            <summary>
+            设置当前定位位置为定位集合中现位置的前一条
+            </summary>
+            <returns>返回当前定位位置</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Next">
+            <summary>
+            设置当前定位位置为定位集合中现位置的后一条
+            </summary>
+            <returns>返回当前定位位置</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Defines">
+            <summary>
+            取得条件的条件项集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Values">
+            <summary>
+             取得条件的条件项对应的表达式和值集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Count">
+            <summary>
+            满足定位条件的记录数量
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ILocateByCondition.Foucs">
+            <summary>
+            取得或设置当前定位位置。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldAttributeCollection.mvarRefuse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UIModelUtil">
+            <summary>
+            模型处理的Util方法．（暂设．可移入UIRuntime中．）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelUtil.GetMasterUIViews(System.Collections.Generic.ICollection{UFSoft.UBF.UI.MD.Runtime.IUIView})">
+            <summary>
+            得到要处理的View列表．(包含：没有上级View存在列表中的View．)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelUtil.IsViewInParent(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            是否viewa 为　viewb的父或父．．级view.
+            </summary>
+            <param name="viewa">viewa</param>
+            <param name="viewb">viewb</param>
+            <returns>是否</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.MultiLangDataRowDrictory">
+            <summary>
+            行多语种数据类型，包含多个多语种字段的数据．
+            可序列化对象．目前直接继承字典是为了方便．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.MultiLangDataRowDrictory.Clone">
+            <summary>
+            Clone一个多语的数据类型.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy">
+            <summary>
+            分页数据类型．对于View上进行分页的加载支持的数据结构类型． 
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.nextLoadedPageIndex">
+            <summary>
+            从前开始已经加载的页面(默认0,第一页肯定是被加载了。)
+            用于在数据加载后，从后向前加载时，数据要插入到指定的页面号后的记录中去。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.CopyTo(UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy)">
+            <summary>
+            Copy To （没有将分页具体内容进行Copy） ??
+            </summary>
+            <param name="psp"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.IsUsing">
+            <summary>
+            是否进行分页加载．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageSize">
+            <summary>
+            每个Page页的数据量．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageCount">
+            <summary>
+            总记录数的Page页总数．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.CurrentPageIndex">
+            <summary>
+            当前的View处理页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PriorLoadedPageIndex">
+            <summary>
+            当前的View处理页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.NextLoadedPageIndex">
+            <summary>
+            从后开始已经加载的页面（默认是总页数)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.RecordCount">
+            <summary>
+             总记录数.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.CurrentRecord">
+            <summary>
+             当前游标记录.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageData.priorLoadedPageIndex">
+            <summary>
+            从前开始已经加载的页面(默认0,第一页肯定是被加载了。)
+            用于在数据加载后，从后向前加载时，数据要插入到指定的页面号后的记录中去。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageData.CurrentPageIndex">
+            <summary>
+            当前的View处理页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageData.NextLoadedPageIndex">
+            <summary>
+            从后开始已经加载的页面（默认是总页数)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageData.RecordCount">
+            <summary>
+             总记录数.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.PageSplitPolicy.PageData.CurrentRecord">
+            <summary>
+             当前记录，游标记录.某个主视图下的子视图的所有记录中的游标记录
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ServerModel.ServerUIModelFactory">
+            <summary>
+            服务端UIModle创建工厂．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UIConstant">
+            <summary>
+            公用静态只读变量
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIErrorMessage.SetErrorMessage(UFSoft.UBF.UI.MD.Runtime.IUIModel@,System.Exception)">
+            <summary>
+            解析一个Exception对象，并将错误信息设置到model对象上
+            </summary>
+            <param name="model"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIErrorMessage.SetErrorMessage(UFSoft.UBF.UI.MD.Runtime.IUIRecord@,System.String,System.Boolean,System.String)">
+            <summary>
+            设置一个错误信息到Record上
+            </summary>
+            <param name="record">承载错误信息的Record对象</param>
+            <param name="attributeName">字段名</param>
+            <param name="isProperty">是否属性字段</param>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIErrorMessage.SetErrorMessageCache(UFSoft.UBF.UI.MD.Runtime.IUIView@,System.Int32,System.String,System.Boolean,System.String)">
+            <summary>
+            设置一个记录级的错误消息到Cache中的数据
+            </summary>
+            <param name="view">记录所属的View</param>
+            <param name="index">记录的索引号</param>
+            <param name="attributeName">对应的字段名</param>
+            <param name="isProperty">是否是一个属性字段</param>
+            <param name="message">错误消息</param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ErrTO.ET">
+            <summary>
+            异常类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewErr.EN">
+            <summary>
+            实体名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewErr.AN">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewErr.IsP">
+            <summary>
+            是否属性类型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIEventArgs.#ctor">
+            <summary>
+            UIEventArgs
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UIEventArgs.Tag">
+            <summary>
+            扩展属性
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UIModelResourceService">
+            <summary>
+             model 资源服务.已不用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIModel(System.String)">
+            <summary>
+            建立UIModel模型
+            </summary>
+            <param name="dataSetName">模型名</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIModelCollection">
+            <summary>
+            建立UIModel模型集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIPropertyCollection(UFSoft.UBF.UI.MD.Runtime.IUIElement)">
+            <summary>
+            建立UIProperty属性集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIModelProperty(System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            建立UIModelProperty属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">缺省值</param>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIModelPropertyCollection(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            建立UIModelProperty属性集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIViewProperty(System.String,System.Type,System.Boolean,System.String,System.String)">
+            <summary>
+            建立UIViewProperty属性
+            </summary>
+            <param name="name">属性名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="defaultValue">缺省值</param>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIViewPropertyCollection(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            建立UIViewProperty属性集合
+            <param name="container"></param>
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIView(UFSoft.UBF.UI.MD.Runtime.IUIModel,System.String,System.String,System.Boolean)">
+            <summary>
+            建立UIView视图
+            </summary>
+            <param name="containerModel">所属Model</param>
+            <param name="viewName">视图名</param>
+            <param name="entityFullName">映射实体全名</param>
+            <param name="isMainView">是否是主视图</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIViewCollection(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            建立UIView视图集合
+            </summary>
+            <param name="model">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUILink(System.String,UFSoft.UBF.UI.MD.Runtime.IUIModel,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.EnumAssociationKind,UFSoft.UBF.UI.MD.Runtime.EnumAssociationDirection,UFSoft.UBF.UI.MD.Runtime.EnumCardinality,UFSoft.UBF.UI.MD.Runtime.EnumCardinality,System.String)">
+            <summary>
+            建立UILink连接
+            </summary>
+            <param name="linkName">连接名</param>
+            <param name="uimodel">所属的UIModel</param>
+            <param name="parentField">父字段名</param>
+            <param name="childField">子字段名</param>
+            <param name="association">关系类型</param>
+            <param name="direction">关联方向</param>
+            <param name="parentCardinality">父关系基数</param>
+            <param name="childCardinality">子关系基数</param>
+            <param name="parentAttributeName">父关系对应属性名(实体上名称)</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUILinkCollection(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            建立UILink连接集合
+            </summary>
+            <param name="model">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIAction(System.String,UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            建立UIAction动作
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIActionCollection(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            建立UIAction动作集合
+            </summary>
+            <param name="model">父模型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIField(UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.Type,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            建立UIField字段
+            </summary>
+            <param name="view">View</param>
+            <param name="name">字段名</param>
+            <param name="dataType">数据类型</param>
+            <param name="isNullable">是否可空</param>
+            <param name="isLoadable">是否加载数据</param>
+            <param name="defaultValue">确省值</param>
+            <param name="entityFullName">实体全名</param>
+            <param name="attributeName">属性名</param>
+            <param name="isDirectAttribute">是否是直接属性</param>
+            <param name="isReference">是否是参照</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIFieldCollection(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            创建UIField字段集合
+            </summary>
+            <param name="view">UIView</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIFilter(System.String,UFSoft.UBF.UI.MD.Runtime.IUIView,System.String,System.String)">
+            <summary>
+            建立UIFilter过滤条件
+            </summary>
+            <param name="name">过滤条件名</param>
+            <param name="view">View</param>
+            <param name="path">OQL Path过滤条件表达式</param>
+            <param name="orderBy">排序字段</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIFilterCollection(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            建立UIFilter过滤条件集合
+            </summary>
+            <param name="view">父视图</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIParameter(System.String,System.Data.DbType,System.Object,System.String)">
+            <summary>
+            建立UIParameter参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="dataType">数据类型</param>
+            <param name="dataValue">数据值</param>
+            <param name="bindSource">绑定源</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIParameter(System.String,System.Data.DbType)">
+            <summary>
+            建立UIParameter参数
+            </summary>
+            <param name="name">参数名</param>
+            <param name="dataType">数据类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIParameterCollection(UFSoft.UBF.UI.MD.Runtime.IUIFilter)">
+            <summary>
+            建立UIParameter参数集合
+            </summary>
+            <param name="filter">父过滤条件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIModelRuntimeFactory.CreateUIRecordCollection(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            建立UIRecord记录集合
+            </summary>
+            <param name="view">父视图</param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIRecordComparer.mvarDependUIField">
+            <summary>
+            当DependField存在且不等于时，不允许交换位置
+            相等时，按正常排序进行（适应多列排序）
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRecordComparer.EqualsByDependUIFields(UFSoft.UBF.UI.MD.Runtime.IUIRecord,UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            检查依赖字段是否相等，相等返回True，反之为False
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRecordComparer.CompareNotNullObject(System.Object,System.Object)">
+            <summary>
+            根据类型进行比较的核心所在
+            保证x,y两个参数为非空参数，然后使用实现类型对Object转化为相应数据类型，
+            再进行有效比较
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRecordComparer.CompareNull(System.Object,System.Object)">
+            <summary>
+            当x,y中有一个为NULL值时，返回比较值，否则返回-999
+            x==null, y!=null => -1
+            x!=null, y==null => 1
+            x==null, y==null => 0
+            x!=null,y!=null=>-999
+            2009.06.05 添加了对依赖字段的处理，支持多列排序
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRecordComparer.GetComparer(System.Type)">
+            <summary>
+            LocateByCondition专门方法，不清楚后果者，别用，谢谢
+            </summary>
+            <param name="dataType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.IsDataChanged(UFSoft.UBF.UI.MD.Runtime.IUIModel)">
+            <summary>
+            UIModel中的数据是否发生变化
+            注：只检查了绑定数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.CompareMultiLangData(UFSoft.UBF.Util.Data.MultiLangDataDict,UFSoft.UBF.Util.Data.MultiLangDataDict)">
+            <summary>
+            比较多语对象obj1和obj2是否相等
+            </summary>
+            <param name="obj1"></param>
+            <param name="obj2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.CompareMultiLangDataAndResetState(UFSoft.UBF.Util.Data.MultiLangDataDict,UFSoft.UBF.Util.Data.MultiLangDataDict@)">
+            <summary>
+            比较多语对象obj1和obj2是否相等，并且重新设置obj2的状态，以显示obj1到obj2的变化。
+            </summary>
+            <param name="obj1"></param>
+            <param name="obj2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.GetSelectRecordFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            即将删除
+            </summary>
+            <param name="view"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.LoadDataFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Boolean)">
+            <summary>
+            将缓存中的数据加载到UIView中
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.LoadDataFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            将缓存中的数据加载到UIView中
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.ClearRecordFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int32)">
+            <summary>
+            不会产生索引移动。通常用于Cache中的数据失效，需要进行同步时
+            举例：
+            Cache中的数据
+            Index->ID
+            1->1001
+            2->1003
+            3->1018
+            调用ClearRecordFromCache(view,2)后
+            Cache中的数据
+            1->1001
+            3->1018
+            </summary>
+            <param name="view"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.ClearRecordFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int32,System.Int32)">
+            <summary>
+            清空多条数据。不会产生索引移动
+            </summary>
+            <param name="view"></param>
+            <param name="index"></param>
+            <param name="length"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.ClearCache(UFSoft.UBF.UI.MD.Runtime.IUIView)">
+            <summary>
+            清空Cache中的数据
+            </summary>
+            <param name="view"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.ClearCache(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.MD.Runtime.IUIFilter)">
+            <summary>
+            清空Cache中的数据，由UIFilter触发
+            </summary>
+            <param name="view"></param>
+            <param name="filter"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.RemoveRecordFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int64)">
+            <summary>
+            会产生索引移动。通常用于数据库中，该记录已经
+            被删除了，同步删除Cache中的数据
+            举例：
+            Cache中的数据
+            Index->ID
+            1->1001
+            2->1003
+            3->1018
+            调用RemoveRecordFromCache(view,1003)后
+            Cache中的数据
+            1->1001
+            2->1018
+            </summary>
+            <param name="view"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.GetIndexByRecordIDFromCache(UFSoft.UBF.UI.MD.Runtime.IUIView,System.Int64)">
+            <summary>
+            从缓存中获取RecordIndex
+            </summary>
+            <param name="view"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.ComibinOQLString(System.String,System.String)">
+            <summary>
+            合并两个过滤条件.目前是filterB不可能带order by 情况.以后可能会.??
+            </summary>
+            <param name="oqlA"></param>
+            <param name="filterB"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.GetPageNoByIndex(System.Int64,System.Int32)">
+            <summary>
+            根据索引号计算所在的页号，索引号小于等于0时，返回0
+            </summary>
+            <param name="index">从1开始</param>
+            <param name="pageSize">每页的记录数</param>
+            <returns>所在的页号，从0开始</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.GetRecordIndexFromRecords(UFSoft.UBF.UI.MD.Runtime.IUIRecord[],UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            获取当前记录在records中的索引
+            </summary>
+            <param name="records"></param>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.DataRecordStateAssChange(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            根据参数Rec的状态，联动上级记录的状态
+            </summary>
+            <param name="rec"></param>
+            <returns>是否发生联动</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UIRuntimeHelper.MC(System.String,System.String,System.String)">
+            <summary>
+            内部使用，外人勿用，谢谢
+            </summary>
+            <param name="s1"></param>
+            <param name="s2"></param>
+            <param name="s3"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.IVirtualUIRecord.ContainerRecord">
+            <summary>
+            所属的实际的UIRecord.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.EnumAssociationKind">
+            <summary>
+            关联种类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.EnumAssociationDirection">
+            <summary>
+            关联方向
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.EnumCardinality">
+            <summary>
+            关联集基数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.StateProviderType">
+            <summary>
+            UIModel状态数据缓存策略
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UIFieldType">
+            <summary>
+            字段类型(属于设计期的属性,临时置于运行期,为动态List使用.)
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldType.DirectField">
+            <summary>
+            直接字段
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldType.EnumField">
+            <summary>
+            枚举字段
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldType.RefField">
+            <summary>
+            参照字段
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.UIFieldType.OtherField">
+            <summary>
+            其它不知字段（暂不能用）
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.RecordOrderType">
+            <summary>
+            记录排序顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewDisplayFilter.IsUsing">
+            <summary>
+            是否使用当前的显示过滤条件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewDisplayFilter.IsDefault">
+            <summary>
+            是否用默认值的过滤（默认的过滤目前在数据绑定上是处理成取父View的焦点行来过滤）
+            true时将不考虑下面的参数。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewDisplayFilter.FilterField">
+            <summary>
+            简单过滤条件定义：过滤的字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewDisplayFilter.FilterValue">
+            <summary>
+            简单过滤条件定义：过滤的值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.UICondition">
+            <summary>
+            UI Condition
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.MD.Runtime.UICondition.#ctor">
+            <summary>
+            Constructor 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UICondition.Expression">
+            <summary>
+            含UI层术语Field的条件表达式（逻辑表达式），
+            类似于OQL的表达式
+            Field，在这里使用Field.id加前缀，如 fld_1974
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.UICondition.FieldList">
+            <summary>
+            对于Expression中出现的Field，都应该在列表中增加一条，
+            以方便把UI层的术语转换为BE层的术语
+            Field，在这里使用Field.id加前缀，如 fld_1974
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption">
+            <summary>
+            View的查询语种设置
+            直接使用ViewQueryGlobalizationOption.Auto的方式来取赋值．
+            要判断是否是参数方式，用IsParamOption来判断．用Cultures取语种信息.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.Cultures">
+            <summary>
+            参数化多语定义的语种集
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.Manual">
+             <summary>
+            全部的(目前BaseLanguage中全部的语种)
+             </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.Auto">
+             <summary>
+            当前默认的语种(目前BaseLanguage中的IsDefault为true的语种)
+             </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.None">
+             <summary>
+            不使用多语种--返回结果中将无多语数据
+             </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption">
+            <summary>
+            多语种类型定义
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption.Manual">
+             <summary>
+            全部的(目前BaseLanguage中全部的语种)
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption.Default">
+            <summary>
+            当前Context的默认的语种(目前从PlatformContext取默认语言值，
+            如果Context中没有，则变换为Auto方式)－－没有实现.????
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption.Auto">
+             <summary>
+            当前默认的语种(目前BaseLanguage中的IsDefault为true的语种)
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption.None">
+             <summary>
+            不使用多语种--返回结果中将无多语数据
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.MD.Runtime.ViewQueryGlobalizationOption.GlobalizationOption.Param">
+             <summary>
+            根据指定参数列表来取语种
+             </summary>
+        </member>
+    </members>
+</doc>

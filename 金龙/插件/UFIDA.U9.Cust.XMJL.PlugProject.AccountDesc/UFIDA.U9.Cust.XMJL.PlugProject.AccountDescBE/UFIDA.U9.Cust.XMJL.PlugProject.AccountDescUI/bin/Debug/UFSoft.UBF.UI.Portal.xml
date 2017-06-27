@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.Portal</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.Portal.ContextKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.ContextKey.PortalSetting">
+            <summary>
+            站点模型对象标识
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.ContextKey.SiteId">
+            <summary>
+            门户站点标识
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.ContextKey.MenuId">
+            <summary>
+            导航菜单标识
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.ContextKey.PageId">
+            <summary>
+            页面标识
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.ContextKey.PartId">
+            <summary>
+            部件标识
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.DAO.SqlHelperInternal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Redirect">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.SqlConnectionHelper">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.SqlConnectionHelper.GetConnection(System.String,System.Boolean)">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.SqlConnectionHelper.GetConnectionString(System.String,System.Boolean,System.Boolean)">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.SqlPersonalizationProvider">
+            <summary>
+            根据页面链接唯一标识持久化数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.#ctor">
+            <devdoc>
+            Initializes an instance of SqlPersonalizationProvider.
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.CreateParameter(System.String,System.Data.SqlDbType,System.Object)">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.GetConnectionHolder">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.LoadPersonalizationBlob(System.Data.SqlClient.SqlConnection,System.String,System.String)">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)">
+            <internalonly />
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.ResetPersonalizationState(System.Data.SqlClient.SqlConnection,System.String,System.String)">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.ResetPersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String)">
+            <internalonly />
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.SavePersonalizationState(System.Data.SqlClient.SqlConnection,System.String,System.String,System.Byte[])">
+            <devdoc>
+            </devdoc>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationProvider.SavePersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[])">
+            <internalonly />
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.SqlProfileProvider">
+            <devdoc>
+               <para>[To be supplied.]</para>
+            </devdoc>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Service.CommandBase">
+            <summary>
+            请求描述
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Service.DataService">
+            <summary>
+            获取数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.ContentLayout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.DefaultPage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.PageBase">
+            <summary>
+            动态加载页面基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PageBase.OnPreInit(System.EventArgs)">
+            <summary>
+            初始化页面
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PageBase.AfterInit">
+            <summary>
+            每次页面输出时都回输出新的token,UIStateKey和当前组织
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PageBase.ChangeCurrentOrg">
+            <summary>
+             每次页面请求时如果页面传回的组织和当前session中的组织不一样则改变当前组织
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PageBase.ChangeCurrentOrg(System.String)">
+            <summary>
+            切换组织，给供应商门户模块调用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PageBase.ReleaseUIModel">
+            <summary>
+            释放相同的UIModel
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.PageBase.ForceUseMicrosoftViewStateStrategy">
+            <summary>
+            强制使用微软的ViewState机制
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.DefaultPage.BuildControls(UFSoft.UBF.UI.Portal.PageBase)">
+            <summary>
+             根据模型定义加载页面
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.DefaultPage.BuildContent(System.Web.UI.Control)">
+            <summary>
+            使用布局管理器创建部件容器区域
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.DefaultPage.loadPageParameters(System.Web.UI.WebControls.WebParts.WebPartManager,UFSoft.UBF.UI.Portal.Components.CSPage)">
+            <summary>
+            映射page参数和part的参数
+            </summary>        
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.DefaultPage.LogEntry">
+            <summary>
+            根据配置定义写入日志文件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Util.Serializer">
+            <summary>
+            模型组件序列化处理类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.PortalException">
+            <summary>
+            Portal异常基类
+            </summary>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PortalException.#ctor(UFSoft.UBF.Util.Exceptions.ResourceDescriptor,System.Object[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="desc"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PortalException.#ctor(UFSoft.UBF.Util.Exceptions.ResourceDescriptor,System.Exception,System.Object[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="desc"></param>
+            <param name="e"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.PortalException.GetFirstExceptionMessage(System.Exception)">
+            <summary>
+            获取最初触发的异常信息
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebPageFactory">
+            <summary>
+            根据模型定义创建页面工厂
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebPartFactory">
+            <summary>
+            部件工厂类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebPartFactory.Create(System.String)">
+            <summary>
+            partID：序列号
+            由于使用PartItem.ID的长度过长
+            </summary>
+            <param name="partItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebPartFactory.GetPageName">
+            <summary>
+            判定是否时Simple页面的窗口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebPartFactory.Create(UFSoft.UBF.UI.Portal.Components.CSPart)">
+            <summary>
+            根据定义创建部件实例
+            </summary>
+            <param name="partItem"></param>
+            <returns></returns>
+                    
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebPartZoneFactory">
+            <summary>
+            部件容器工厂类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebPartZoneFactory.Create(UFSoft.UBF.UI.Portal.Components.CSZone)">
+            <summary>
+            根据定义创建部件容器实现类实例
+            </summary>
+            <param name="zoneItem"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.GlobalInternalStrings">
+            <summary>
+            程序集全局变量
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.LayoutManager">
+            <summary>
+            布局管理器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.IWebEditor">
+            <summary>
+            获取个性化数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Security.PortalSecurity">
+            <summary>
+            安全验证、授权处理类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Security.PortalSecurity.SignIn(System.String,System.String,System.String,System.String,System.Boolean,System.String@)">
+            <summary>
+            登录处理，仅限于目前与权限系统集成
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="orgId">组织标识</param>
+            <param name="languageID">语种</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Security.PortalSecurity.SplitUserData(System.String,System.String@,System.String@,System.String@,System.String@)">
+            <summary>
+            拆分保存在Context.User.Identity.Name中的用户信息，仅限于登录后获取相关参数。
+            </summary>
+            <param name="userData">用户信息</param>
+            <param name="userID">用户标识</param>
+            <param name="userName">用户名</param>
+            <param name="userCode">用户编号</param>
+            <param name="orgId">组织标识</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Security.PortalSecurity.AuthenticateRequest">
+            <summary>
+            验证当前请求
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Security.PortalSecurity.AccessDenied">
+            <summary>
+            禁止访问异常处理
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.UserProfile">
+            <summary>
+            强类型的用户个性化环境信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.UserProfile.MasterPage">
+            <summary>
+            页面模板文件名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.UserProfile.ThemeName">
+            <summary>
+            风格主题名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.UserProfile.UICulture">
+            <summary>
+            语种
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.Util.CompressFacade">
+            <summary>
+            压缩解压处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.Util.CompressFacade.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebParts.TemplatedCatalogZone.RenderHeader(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            扩展CatalogZone Header 
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationEditorPart.GetInsertDirect(Telerik.WebControls.RadTreeViewDropPosition)">
+            <summary>
+            判断插入在目标控件的前面还是后面
+            </summary>
+            <param name="dropPosition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationEditorPart.isPersonalizationHiddenControl(System.String,Telerik.WebControls.RadTreeNode)">
+            <summary>
+            判定控件是否被上次操作隐藏过
+            </summary>
+            <param name="destNode">当前要展开的控件节点</param>
+            <param name="subNode">展开节点的子结点</param>
+            <param name="targetPart"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationEditorPart.GetTabKeys(System.String,System.Boolean)">
+            <summary>
+            根据NodeID分析返回table的key集合
+            </summary>
+            <param name="expandedNodeID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationEditorPart.GetRowByKeys(System.Object[])">
+            <summary>
+            根据keys返回table对应的行
+            </summary>
+            <param name="keys"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.UI.Portal.WebControls.WebParts.UFPersonalizationEditorPart.GetCacheCtrlKey(System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase">
+            <summary>
+            自定义WebPart基类
+            </summary>
+            <summary>
+            WebPart关联基本实现之Provider
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.NavigatePage(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            组装的Page之间的导航
+            </summary>
+            <param name="pageURI"></param>
+            <param name="querystrings"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.NavigatePage(System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            主画面之间的导航
+            </summary>
+            <param name="pageURI"></param>
+            <param name="querystrings"></param>
+            <param name="anchor">锚点</param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase._CurrentStyle">
+            <summary>
+            按照不同的分辨率/语种 显示不同的样式
+            </summary>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.InitUIConfig">
+            <summary>
+            初始化UIConfig
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.GetConnectionInterface">
+            <summary>
+            声明发布接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.GetRowData(System.Web.UI.WebControls.WebParts.RowCallback)">
+            <summary>
+            获取发布数据
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.SetConnectionInterface(System.Web.UI.WebControls.WebParts.IWebPartParameters)">
+            <summary>
+            声明订阅接口
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.OnPreRender(System.EventArgs)">
+            <summary>
+            指定获取订约数据委托方法
+            </summary>
+            <param name="e"></param>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.CreateRowData">
+            <summary>
+            创建发布数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.GetParametersData(System.Collections.IDictionary)">
+            <summary>
+             获取订约数据
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.CreateConsumerSchema">
+            <summary>
+            创建订阅数据结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.AllowPersonalization">
+            <summary>
+            是否允许个性化，对于有些Form，从开发层面就认为不可个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.IsNeedCheckTemplate">
+            <summary>
+            是否需要进行模板的一些升级校验，对于程序升级过后，
+            用户做过模板保存的，就不再需要检测了，
+            后台对比的是升级时间及最近的模板保存时间
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.PersonalizationEnabled">
+            <summary>
+            是否可个性化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.PersonalizationAssignEnabled">
+            <summary>
+            是否有个性模板管控权限
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.FavoritesData">
+            <summary>
+            存储数据模板
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.InnerFormID">
+            <summary>
+            为了获取FormID。传递给导航到的Form.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.AddSize">
+            <summary>
+            布局需要调整的实际尺寸
+            分辨率为非标准时
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.IsFixed">
+            <summary>
+            是否是固定尺寸WebPart
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.UsePercent">
+            <summary>
+            当前WebPart所占空间的比例
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.Resolution">
+            <summary>
+            分辨率
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.IsPrint">
+            <summary>
+            是否打印
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.RowData">
+            <summary>
+            获取发布数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.Schema">
+            <summary>
+            获取发布数据结构定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.Consumer">
+            <summary>
+            订阅数据集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartBase.ConsumerSchema">
+            <summary>
+            获取订阅数据结构
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.CompressedViewStateProvider">
+            <summary>
+            将ViewState压缩到页面的HiddenField
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.SessionViewStateProvider">
+            <summary>
+            使用Session管理页面状态
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebEditorAttribute">
+            <summary>
+            个性化属性编辑器注册定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.DynamicZoneBuilder">
+            <summary>
+            根据定义创建容器区域
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.DynamicZoneTemplate">
+            <summary>
+            根据定义加载内容部件容器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.DynamicZoneTemplate.#ctor(UFSoft.UBF.UI.Portal.Components.CSZone)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="zone"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.ITemplatedEditorPart">
+            <summary>
+            部件模板文件获取接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.ITemplatedWebPart">
+            <summary>
+            部件模板文件获取接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.MessageProxyWebPart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.PropertyGridEditorPart">
+            <summary>
+            个性化属性编辑器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.ConsumerWebPart">
+            <summary>
+            订阅数据的部件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.ProviderWebPart">
+            <summary>
+            发布数据的部件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.SimpleWebPart">
+            <summary>
+            部件应用示例
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedEditorPartChrome">
+            <summary>
+            个性化属性编辑器模板处理
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedEditorZone">
+            <summary>
+            属性编辑器容器模板处理
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedEditorZone.RenderHeader(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            扩展EditorZone Header 
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedEditorZone.IsInModeDialog">
+            <summary>
+            用于区分当前EditorZone是否在弹出对话框中
+            默认为false
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedWebPartChrome">
+            <summary>
+            部件模板处理
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.TemplatedWebPartZone">
+            <summary>
+            使用静态模板文件部件容器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartZoneBase">
+            <summary>
+            部件容器基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartZoneBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Portal.WebControls.WebParts.UBWebPart">
+            <summary>
+            兼容原来的接口(for xry)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Portal.WebControls.WebParts.WebPartPageMenu.IsInModeDialog">
+            <summary>
+            用于区分当前EditorZone是否在弹出对话框中
+            默认为false
+            </summary>
+        </member>
+    </members>
+</doc>

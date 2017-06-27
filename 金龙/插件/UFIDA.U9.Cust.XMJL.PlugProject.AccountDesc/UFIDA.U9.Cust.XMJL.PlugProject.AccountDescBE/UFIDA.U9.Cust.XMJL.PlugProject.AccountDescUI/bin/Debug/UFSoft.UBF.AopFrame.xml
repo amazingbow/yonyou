@@ -1,0 +1,733 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.AopFrame</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.AopFrame.AOPAttribute">
+            <summary>
+            AOP的aspect基类。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPAttribute.Process(System.Object)">
+            <summary>
+            Aspect Process
+            </summary>
+            <param name="obj">被处理的对象</param>
+            <param name="aspectAttr">aspect的数据对象</param>
+            <exception cref="T:UFSoft.UBF.AopFrame.AspectHandlerException">当发生无法解决的错误时抛出从该类型派生的类型的异常</exception>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPAttribute.FinalProcess(System.Object,System.Object@,System.Exception)">
+            <summary>
+            Aspect post process
+            当<code>exception</code>不为<code>null</code>时，如果返回值为<code>true</code>则指示AOP框架在后处理完成后继续抛出异常，否则不再抛出。
+            当<code>exception</code>为<code>null</code>时，返回值无意义。
+            注意：AOP框架仅当所有的AOP acpect Handler的<code>FinalProcess</code>都返回<code>true</code>时才会抛出异常。因此除非你的aspect handler明确地希望没收异常才返回<code>false</code>，否则返回<code>true</code>。        
+            </summary>
+            <param name="obj">被处理的对象</param>
+            <param name="exception">如果在异常发生后进入后处理时该值为发生的异常对象，否则为null。</param>
+            <returns>当<code>exception</code>不为<code>null</code>时，如果返回值为<code>true</code>则指示AOP框架在后处理完成后继续抛出异常，否则不再抛出。
+            当<code>exception</code>为<code>null</code>时，返回值无意义。
+            注意：AOP框架仅当所有的AOP acpect Handler的<code>FinalProcess</code>都返回<code>true</code>时才会抛出异常。因此除非你的aspect handler明确地希望没收异常才返回<code>false</code>，否则返回<code>true</code>。
+            </returns>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AopException">
+            <summary>
+            AOP的异常基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AopException.#ctor">
+            <summary>
+            构造AopException
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AopException.#ctor(System.String)">
+            <summary>
+            构造AopException
+            </summary>
+            <param name="message">异常描述</param>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AopException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造AopException
+            </summary>
+            <param name="message">异常描述</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AOPExtendType">
+            <summary>
+            针对AOP扩展的类型．不能用于普通BP后处理等．用于方面处理．
+            注意在异常处理上．AOP扩展的异常会被捕获．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AOPExtendModeEnum">
+            <summary>
+            AOP扩展方式类型．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.AopFrame.AOPExtendModeEnum.All">
+            <summary>
+            扩展的AOP针对所有的BP,SV．
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.AopFrame.AOPExtendModeEnum.Type">
+            <summary>
+            扩展的AOP针对所列出的类型列表．类型列表不是全名时，作为命名空间来应用．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AOPService">
+            <summary>
+            AOP服务类。提供基于AOP的对象方法调用。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPService.Invoke(System.Object,System.String,System.Type[],System.Object[])">
+            <summary>
+            AOP调用方法服务。调用指定的对象和方法并处理该方法上指名的AOP属性。
+            </summary>
+            <param name="obj">需要调用方法的对象</param>
+            <param name="methodName">需要调用的方法名</param>
+            <param name="types">方法的参数类型集合</param>
+            <param name="args">方法参数</param>
+            <returns>方法的返回值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPService.PreProcess(System.Object,UFSoft.UBF.AopFrame.AOPAttribute[],System.Collections.Generic.Stack{UFSoft.UBF.AopFrame.AOPAttribute})">
+            <summary>
+            执行AOP前置处理
+            </summary>
+            <param name="obj">被执行前置处理的对象</param>
+            <param name="attrs">AOP属性集合</param>
+            <param name="procStack">前置处理栈</param>
+            <exception cref="T:System.ArgumentNullException">当procStack为null时抛出该异常。</exception>
+            <exception cref="T:UFSoft.UBF.AopFrame.AspectHandlerException">当Aspect处理器出现不可忽略的异常时抛出该异常。</exception>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPService.PostProcess(System.Object,System.Object@,System.Collections.Generic.Stack{UFSoft.UBF.AopFrame.AOPAttribute},System.Exception)">
+            <summary>
+            AOP后置处理。当因为发生异常而进入后处理时，有所有的aspect handler的后处理集体表决是否转抛出异常。如果有一个反对，则异常将被没收。
+            </summary>
+            <param name="obj">被执行后置处理的对象</param>
+            <param name="procStack">前置处理栈</param>
+            <param name="e">异常对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPService.GetAOPAttributesFromMethod(System.Type,System.String,System.Type[])">
+            <summary>
+            获取指定类型的指定方法的所有AOPAttribute。
+            </summary>
+            <param name="type">类型</param>
+            <param name="methodName">方法名</param>
+            <param name="argTypes">方法的所有参数类型集合。允许为null，则不匹配参数类型。</param>
+            <returns>指定方法的所有AOPAttribute集合</returns>
+            <exception cref="T:UFSoft.UBF.AopFrame.GetAOPAttributeException">当无法正确执行时抛出该异常</exception>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AOPService.getMethodInfo(System.Type,System.String,System.Type[])">
+            <summary>
+            获取指定类型的指定方法的元信息。
+            </summary>
+            <param name="type">类型</param>
+            <param name="methodName">方法名</param>
+            <param name="argTypes">方法的所有参数类型集合。允许为null，则不匹配参数类型。</param>
+            <returns>方法的元信息</returns>
+            <exception cref="T:UFSoft.UBF.AopFrame.GetAOPAttributeException">当无法正确执行时抛出该异常</exception>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AspectHandlerException">
+            <summary>
+            Aspect处理器异常基类。
+            当aspect handler处理过程中出现无法解决的问题时抛出从该类型派生类型的异常。除非handler特别声明否则该类异常将导致AOP服务发出异常。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.AspectHandlerException.#ctor(System.Boolean)">
+            <summary>
+            构造AspectHandlerException。
+            </summary>
+            <param name="fatal">如果为true，将导致AOP服务异常，否则继续执行后续的aspect处理。</param>
+        </member>
+        <member name="T:UFSoft.UBF.Security.AuthorityService">
+            <summary>
+            权限服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Security.AuthorityService.CheckServiceAuthority(System.String)">
+            <summary>
+            检查BP,SV的权限.
+            </summary>
+            <param name="bp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Security.AuthorityService.CheckEntityAuthority(System.String,UFSoft.UBF.Security.EntityAuthorityType)">
+            <summary>
+            
+            </summary>
+            <param name="bp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Security.AuthorityService.GetBEAttributeAuthority(System.Int64,System.Int64,System.String)">
+            <summary>
+            获得用户BE属性权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <param name="context">上下文</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Security.IAOPAuthorityService.GetBEAttributeAuthority(System.Int64,System.Int64,System.String)">
+            <summary>
+            获得用户BE属性权限
+            </summary>
+            <param name="orgID">组织ID</param>
+            <param name="userID">用户ID</param>
+            <param name="context">上下文</param>
+            <returns>字典集合</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Security.EntityAuthority">
+            <summary>
+            实体权限数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.AuthorizeAttribute">
+            <summary>
+            权限属性类。用于指定一个方法是否支持权限 aspect 能力。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.BaseStrategy">
+            <summary>
+            BP Strategy 基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.BaseStrategy.Do(System.Object)">
+            <summary>
+            abstract interface
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Base.ICommonDataContract">
+            <summary>
+            公共传输契约接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Base.ICommonDataContract.Context">
+            <summary>
+            上下文接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Base.ICommonDataContract.OutMessages">
+            <summary>
+            消息接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Base.CommonDataContract">
+            <summary>
+            公共传输契约类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Base.ProxyBase">
+            <summary>
+            BP,SV代理基类.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Base.ProxyBase.InvokeAgent``1">
+            <summary>
+            代理调用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Base.ServiceProxyBase.InvokeByOrg``1(System.Int64)">
+            <summary>
+            跨组织调用
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Base.ServiceProxyBase.InvokeBySite``1(System.String)">
+            <summary>
+            跨Site调用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Base.ServiceProxyBase.TargetOrgName">
+            <summary>
+            目标组织名
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Extend.BPSVExtendService.BeforeDo(System.Object)">
+            <summary>
+            在BP，SV执行之前进行相应的扩展操作．
+            可对参数进行相应处理．
+            </summary>
+            <param name="bp">进行扩展的BP对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Extend.BPSVExtendService.BeforeDo(System.Object,System.Object@)">
+            <summary>
+            在BP，SV执行之前进行相应的扩展操作．
+            可对参数进行相应处理．
+            </summary>
+            <param name="bp">进行扩展的BP对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Extend.BPSVExtendService.AfterDo(System.Object,System.Object@)">
+            <summary>
+            在BP，SV执行之后进行相应的扩展操作
+            可对参数和返回结果进行处理．
+            </summary>
+            <param name="bp">进行扩展的BP对象</param>
+            <param name="result">BP本身返回的结果</param>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Extend.BPSVExtendType">
+            <summary>
+            针对BP,SV特有的扩展．主要扩展前后操作．可以用于改变参数，返回值等．
+            与AOP扩展区别，针对个别BP处理．异常不捕获．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.BPSVExtendBase">
+            <summary>
+            BP,SV用户扩展基类．
+            必须实现此类才能够扩展相应的BP.SV的功能．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.BPSVExtendBase.BeforeDo(System.Object)">
+            <summary>
+            在BP，SV执行之前进行相应的扩展操作．
+            可对参数进行相应处理．
+            </summary>
+            <param name="bp">进行扩展的BP对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.Service.BPSVExtendBase.AfterDo(System.Object,System.Object@)">
+            <summary>
+            在BP，SV执行之后进行相应的扩展操作
+            可对参数和返回结果进行处理．
+            </summary>
+            <param name="bp">进行扩展的BP对象</param>
+            <param name="result">BP本身返回的结果</param>
+        </member>
+        <member name="M:UFSoft.UBF.Service.BPSVExtendBase.BeforeDo(System.Object,System.Object@)">
+            <summary>
+            在BP，SV执行之前进行相应的扩展操作．
+            可对参数进行相应处理．
+            </summary>
+            <param name="bp"></param>
+            <param name="result"></param>
+            <returns>是否中断BP/SV调用</returns>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityKeyForLock">
+            <summary>
+            用于封装锁定的对象.锁定的目标对象的封装。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityLock">
+            <summary>
+            实体锁Key .
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityLockKey">
+            <summary>
+            实体锁的Key. Key的子类。目标对象为EntityKeyForLock
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityLockInternal">
+            <summary>
+            实体锁对象。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockInternal.AddLock">
+            <summary>
+            锁计数器递增
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockInternal.ReleaseLock">
+            <summary>
+            锁计数器递减
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockInternal.UpdateLock">
+            <summary>
+            锁升级
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityLockManagerForPL">
+            <summary>
+            为Yel在PL层使用实体锁提供API
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockManagerForPL.Lock(System.String,System.String,UFSoft.UBF.LockMode)">
+            <summary>
+            对传入的实体加锁，默认加锁失败抛出异常。
+            </summary>
+            <param name="entityID">实体ID</param>
+            <param name="entityType">实体类型Type</param>
+            <param name="lockMode">实体锁类型</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockManagerForPL.Lock(System.String,System.String,UFSoft.UBF.LockMode,System.Boolean)">
+            <summary>
+            对传入的实体加锁，默认加锁失败抛出异常；
+            若设置不抛出异常，则返回null对象。
+            </summary>
+            <param name="entityID">实体ID</param>
+            <param name="entityType">实体Type</param>
+            <param name="lockMode">锁类型</param>
+            <param name="throwEx">加锁失败是否抛出异常</param>
+            <returns>实体锁对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockManagerForPL.UnLock(UFSoft.UBF.AopFrame.Lock.EntityLock)">
+            <summary>
+            解锁操作
+            </summary>
+            <param name="entityLock">加锁成功后返回的实体锁对象</param>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityLockManagerTableImpl.Lock(UFSoft.UBF.AopFrame.Lock.EntityKeyForLock,UFSoft.UBF.LockMode,System.String)">
+            <summary>
+            加锁
+            </summary>
+            <param name="target">加锁对象</param>
+            <param name="mode">加锁模式</param>
+            <param name="owner">所有者</param>
+            <returns>锁对象</returns>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.EntityUnlockTask">
+            <summary>
+            实体解锁对象.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.Lock.EntityUnlockTask.#ctor(UFSoft.UBF.Lock.Key{UFSoft.UBF.AopFrame.Lock.EntityKeyForLock},UFSoft.UBF.Lock.UnlockBehavior{UFSoft.UBF.AopFrame.Lock.EntityKeyForLock})">
+            <summary>
+            初始化实例
+            </summary>
+            <param name="lockKey">实体锁的键值</param>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Lock.IRemoteLockProvider">
+            <summary>
+            远程锁的真正提供接口。（目前由UFSoft.UBF.GeneralBp来提供.）
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.BPLogInfo">
+            <summary>
+            操作服务的日志信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.BPLog">
+            <summary>
+            日志　－－目前不使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.BPLog.CreateCommand(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            构造一个准备执行的Command对象，并进行预处理
+            </summary>
+            <param name="conn"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.LoggerAttribute">
+            <summary>
+            日志属性类。用于指定一个方法是否支持log aspect 能力。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Resources.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.Resources.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.Resources.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.IEntityKeyNeedSerializationService">
+            <summary>
+            序列化EntityKey服务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.IEntityKeyNeedSerializationService.NeedSerialize(System.String)">
+            <summary>
+            是否需要序列化.
+            </summary>
+            <param name="entityType">EntityType类型</param>
+            <returns>是否序列化</returns>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.IEntityKeyNeedSerializationService.NeedSerialize(System.String[])">
+            <summary>
+            是否需要序列化
+            </summary>
+            <param name="entityTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.IEntityKeyNeedSerializationService.RefreshCache">
+            <summary>
+            进行缓存的刷新.(更改实体下发设置时要进行调用。)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.IGetOrgNameService">
+            <summary>
+            取组织名称的服务．和序列化服务一起交由序列化服务器实现．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.StubAspect">
+            <summary>
+            BP,SV Stub　调用切入点.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Tracer">
+            <summary>
+            调试工具类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.UBFTransactionScope">
+            <summary>
+            UBF 事务范围。开发人员通过using语句显示地创建一个事务作用域对象并指定事务的类型。
+            同BP的事务类型意义一样，可以指定同外层代码共享一个事务，也可以指定新事务或没有事务。
+            在该作用于内的数据库操作都使用该事务。
+            当离开该作用域时，依据事务的State决定提交（True）或Rollback（false）事务。
+            缺省的处理是Rollback事务，除非开发人员显示地调用了commit方法.
+            一旦开发人员显示地调用了Rollback方法，则事务的State永远无法改为True
+            </summary>
+            <example>
+            using(UBFTransactionScope tx = new UBFTransactionScope(TransactionOption.RequiresNew))
+            {
+                // custome code...
+                tx.Commit();
+            }
+            </example>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.IUBFTransactionContext">
+            <summary>
+            Transaction Context Class.Support commit transaction and rollback transaction.Provide event queue to publish event as tansaction complete.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IUBFTransactionContext.Commit">
+            <summary>
+            提交事务。并不立即执行事务的提交,何时提交由UBF系统确定。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IUBFTransactionContext.Rollback">
+            <summary>
+            回卷事务。并不立即执行事务的回卷,何时提交由UBF系统确定。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IUBFTransactionContext.Release">
+            <summary>
+            释放事务
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Transactions.IUBFTransactionContext.Transaction">
+            <summary>
+            取得当前事务
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Transactions.IUBFTransactionContext.BeforeCommit">
+            <summary>
+            在执行可提交事务的提交前发出该事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Transactions.IUBFTransactionContext.BeforeAbort">
+            <summary>
+            在执行可提交事务的回滚前发出该事件
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Transactions.IUBFTransactionContext.Committed">
+            <summary>
+            当可提交事务提交成功后发出该事件.如果当前事务环境是依赖事务,将一直延迟到它所依赖的可提交事务提交完成后才触发该事件.
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.Transactions.IUBFTransactionContext.Aborted">
+            <summary>
+            当可提交事务回滚后发出该事件.如果当前事务环境是依赖事务,将一直延迟到它所依赖的可提交事务提交完成后才触发该事件.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.EventQueueItem">
+            <summary>
+            事务的事件等待队列元素类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.IDataTransactionService">
+            <summary>
+            数据事务服务接口
+            （依赖数据库事务的处理进行相应的相应）
+            用于数据库事务提交成功，或者失败时，进行相应的内存对象数据一致性处理。
+            目前用于数据库事务失败时，实体缓存的清理。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IDataTransactionService.Commit(System.String)">
+            <summary>
+            提交事务
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IDataTransactionService.Rollback(System.String)">
+            <summary>
+            回滚事务
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IDataTransactionService.DBCommit(System.String)">
+            <summary>
+            正式数据库事务提交
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.IDataTransactionService.DBRollback(System.String)">
+            <summary>
+            正式数据库事务回滚事务
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.DataTransactionService">
+            <summary>
+            数据事务服务处理器-统一事务处理器.进行数据库事务与内存数据事务的一致性.
+            目前处理有:   1.数据库事务回滚后,保证实体数据清空,与数据库一致.实体缓存的清空.
+                         2.数据库事务提交回滚时,保证平台的EventBroker相应的订阅与注销回滚.
+                         3.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.DataTransactionService.Commit(System.String)">
+            <summary>
+            UBF事务- 提交事务 每个UBF事务上下文提交操作触发.
+            </summary>
+            <param name="dbTransactionID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.DataTransactionService.Rollback(System.String)">
+            <summary>
+            UBF事务- 回滚事务 每个UBF事务上下文 回滚操作触发
+            </summary>
+            <param name="dbTransactionID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.DataTransactionService.DBCommit(System.String)">
+            <summary>
+            正式数据库事务提交
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.DataTransactionService.DBRollback(System.String)">
+            <summary>
+            正式数据库事务回滚事务
+            </summary>
+            <param name="dbTransactionID">数据库事务ID</param>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.IDataTransactionTag">
+            <summary>
+            具有数据事务标识接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.TransactionAttribute">
+            <summary>
+            事务属性类。用于指定一个方法是否支持事务aspect的能力及支持的类型。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.AopFrame.TransactionAttribute.#ctor(UFSoft.UBF.Transactions.TransactionOption)">
+            <summary>
+            构造TransactionAttribute类。需要指定事务类型
+            </summary>
+            <param name="trans"></param>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.TransactionAttribute.TransactionOption">
+            <summary>
+            取得或设置事务类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.TransactionOption">
+            <summary>
+            事务类型枚举
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Transactions.TransactionOption.Required">
+            <summary>
+            需要事务
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Transactions.TransactionOption.RequiresNew">
+            <summary>
+            需要新建一个事务
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Transactions.TransactionOption.Supported">
+            <summary>
+            支持事务
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Transactions.TransactionOption.Notsupported">
+            <summary>
+            不支持事务
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.UBFTransactionContext">
+            <summary>
+            UBF Transaction Context类。
+            管理一个CommitableTransaction或DependentTransaction及其引用计数。支持在当前事务上的事务的提交和回滚。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.UBFTransactionContext.Release">
+            <summary>
+            释放事务上下文,此时数据库事务已经回滚或者已经提交.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.UBFTransactionContext.CompletedCommit(System.String)">
+            <summary>
+            事务提交或回滚后 操作（此时事务上下文已经改变成前一个上下文）.
+            </summary>
+            <param name="perTransID">上一个事务ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.UBFTransactionContext.PublishBeforeEvent(System.Boolean)">
+            <summary>
+            发布CSharp的事务提交前事件-正式提交和没事务时触发.-异常不捕获
+            --用于可提交事务,和空事务 执行前 触发.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Transactions.UBFTransactionContext.PublishEvent(System.Boolean,System.String)">
+            <summary>
+            发布CSharp的事务提交后事件-只有正式提交数据库事务后触发.-捕获不抛出
+            --仅可提交事务执行时解决.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Transactions.UBFTransactionContext.Transaction">
+            <summary>
+            取得事务对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.UBFCloneTransactionContext">
+            <summary>
+            依赖Clone事务上下文.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.UBFEmptyTransactionContext">
+            <summary>
+            空事务上下文-提交和回滚不执行操作,空事务的进入和退出进行事务上下文的切换,并且进行数据库链接的切换.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Transactions.UBFTransactionEventArgs.PerTransID">
+            <summary>
+            指当前所完成事务的TransID--对于后事件，当前事务已经结束.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Transactions.UBFTransactionManager">
+            <summary>
+            UBF Transaction 管理类。
+            管理当前线程的事务栈——包括CommitableTransaction和DependentTransaction。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Transactions.UBFTransactionManager.Current">
+            <summary>
+            取得或设置当前线程上的当前事务对象。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.AopFrame.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.AopFrame.Resource.IntercurrentException1">
+            <summary>
+              查找类似 当前数据正在被其他人操作，请稍后再试! 的本地化字符串。
+            </summary>
+        </member>
+    </members>
+</doc>

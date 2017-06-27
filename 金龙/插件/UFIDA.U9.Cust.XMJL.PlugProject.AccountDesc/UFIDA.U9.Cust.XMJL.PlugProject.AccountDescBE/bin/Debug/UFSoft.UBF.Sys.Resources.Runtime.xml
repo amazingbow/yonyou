@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Sys.Resources.Runtime</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.AssemblyResourceTextFormatter.#ctor">
+            <summary>
+            构造资源信息格式化器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.AssemblyResourceTextFormatter.#ctor(System.String)">
+            <summary>
+            使用指定的资源ID构造资源信息格式化器
+            </summary>
+            <param name="rid">资源ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.Cache.ResourceCache.AddData(System.String,UFSoft.UBF.Sys.Resources.IData)">
+            <summary>
+            向缓存中添加资源项
+            </summary>
+            <param name="elementId">资源项标识</param>
+            <param name="data">资源数据</param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.Cache.ResourceCache.LoadCache">
+            <summary>
+            加载所有领域模型元数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.Cache.ResourceCacheFactory.GetResourceCache(System.String,System.String)">
+            <summary>
+            为了使同一名称的缓存能获取多个副本而添加的方法
+            </summary>
+            <param name="cacheName">缓存名称</param>
+            <param name="code">缓存编号</param>
+            <returns>缓存</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO">
+            <summary>
+            数据访问基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO.OpenConnection">
+            <summary>
+            打开数据库连接
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO.CloseConnection">
+            <summary>
+            关闭数据库连接
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO.BeginTransaction">
+            <summary>
+            开始事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO.Commit">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.BaseDAO.Rollback">
+            <summary>
+            回滚事务
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.IDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.IDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataTransfer.DataFromObjectToRow(System.Object)">
+            <summary>
+            把数据从Object转化到Row
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataTransfer.DataFromRowToObject(UFSoft.UBF.Util.DB.Row)">
+            <summary>
+            把数据从Row转化到Object
+            </summary>
+            <param name="row"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO">
+            <summary>
+            语种数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.GetLanguageByKey(System.String)">
+            <summary>
+            根据主键获取校验信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.GetLanguageByName(System.String)">
+            <summary>
+            根据名称获取校验信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.GetLanguageByCode(System.String)">
+            <summary>
+            根据主键获取校验信息
+            </summary>
+            <param name="code">language code</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.GetDefaultLanguage">
+            <summary>
+            获取系统默认语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.GetLanguageComponent">
+            <summary>
+            获取所有校验对象信息
+            </summary>
+            <returns>校验对象信息集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.Insert(UFSoft.UBF.Sys.Resources.ILanguage)">
+            <summary>
+            增加
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.Update(UFSoft.UBF.Sys.Resources.ILanguage)">
+            <summary>
+            更新
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.LanguageDAO.Delete(UFSoft.UBF.Sys.Resources.ILanguage)">
+            <summary>
+            删除
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO">
+            <summary>
+            语种数据访问类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.GetDatasByComponent(System.String,System.String)">
+            <summary>
+            查询多个资源项（相同资源组件内的单语言资源）
+            </summary>
+            <param name="componentID">组件编号</param>
+            <param name="languageName">语言编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.GetDatasByComponent(System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            查询多个资源项（相同资源组件内的单语言资源）
+            </summary>
+            <param name="componentID">组件编号</param>
+            <param name="languageName">语言编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.GetDistinctLanguages">
+            <summary>
+            获取资源表中现有的所有语言信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.GetDistinctTypes">
+            <summary>
+            获取资源表中现有的所有资源类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.Insert(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            增加
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.InsertExe(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            增加，运行期真实插入
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.Update(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            更新
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.Delete(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            删除
+            </summary>
+            <param name="lang"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.DAO.ResourceDataDAO.UpdateChildren(UFSoft.UBF.Sys.Resources.IData,UFSoft.UBF.Util.DB.IDataAccessor)">
+            <summary>
+            递归更新同布资源
+            1. ParentResourceName为自己的资源
+            2. ParentHelpResourceName包含自己的资源
+            </summary>
+            <param name="parentData"></param>
+            <param name="da"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatter.#ctor">
+            <summary>
+            构造资源信息格式化器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatter.#ctor(System.String)">
+            <summary>
+            使用指定的资源ID构造资源信息格式化器
+            </summary>
+            <param name="rid">资源ID</param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatter.ConvertExceptionResource(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="T:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatterAttribute">
+            <summary>
+            资源信息格式化器，同时指定格式化资源ID和参数列表。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatterAttribute.Formatter">
+            <summary>
+            取得或设置格式化工具对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Sys.Resources.Runtime.ResourceTextFormatterAttribute.IsAssembly">
+            <summary>
+            是否装配件资源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDataByID(System.String)">
+            <summary>
+            根据编号获取资源项，缺省语言
+            </summary>
+            <param name="id">资源项编号</param>
+            <returns>资源项</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDataByID(System.String,System.String)">
+            <summary>
+            根据编号获取资源项，指定语言
+            </summary>
+            <param name="id">资源项编号</param>
+            <param name="languageName">语言名称</param>
+            <returns>资源项</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Reload(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            重新加载资源项
+            </summary>
+            <param name="data">资源项</param>
+            <param name="languageName">语言名称</param>
+            <returns>资源项</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Save(UFSoft.UBF.Sys.Resources.IResourceComponent)">
+            <summary>
+            保存资源组件
+            </summary>
+            <param name="languageComponent">资源组件</param>
+            <returns>保存结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Save(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            保存资源项
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.SaveExe(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            保存资源项（真实保存）
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Remove(UFSoft.UBF.Sys.Resources.IResourceComponent)">
+            <summary>
+            删除资源组件
+            </summary>
+            <param name="languageComponent">资源组件</param>
+            <returns>删除结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Publish(UFSoft.UBF.Sys.Resources.IResourceComponent)">
+            <summary>
+            发布资源组件
+            </summary>
+            <param name="resourceComponent">资源组件</param>
+            <returns>发布结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.Publish(UFSoft.UBF.Sys.Resources.IResourceComponent,System.String)">
+            <summary>
+            发布资源组件到数据库，并生成脚本文件
+            </summary>
+            <param name="resourceComponent">资源组件</param>
+            <param name="scriptFile">资源脚本文件全路径</param>
+            <returns>发布结果</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetResourceValue(System.String,System.String)">
+            <summary>
+            获取默认语言的资源值
+            </summary>
+            <param name="elementID">元素ID</param>
+            <param name="attributeName">属性名称</param>
+            <returns>资源值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetResourceValue(System.String,System.String,System.String)">
+            <summary>
+            获取指定语言的资源值
+            </summary>
+            <param name="elementID">元素ID</param>
+            <param name="attributeName">属性名称</param>
+            <param name="language">语言</param>
+            <returns>资源值</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetResourceByComponent(System.Collections.Generic.IList{System.String},System.String)">
+            <summary>
+            获取多个组件的资源
+            </summary>
+            <param name="ComponentIDs"></param>
+            <param name="LanguageName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetMultiLanguageResourceValue(System.String,System.String)">
+            <summary>
+            获取所有语言的资源值
+            </summary>
+            <param name="elementID">元素ID</param>
+            <param name="attributeName">属性名称</param>
+            <returns>语言编码和资源值对应的Hashtable</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDatasbyElementID(System.String)">
+            <summary>
+            根据元素编号获取所有语种对应的资源
+            </summary>
+            <param name="elementID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetAllDatas(System.String)">
+            <summary>
+            获取所有的资源项,使用指定语言
+            </summary>
+            <param name="languageName">语言名称</param>
+            <returns>资源项集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetAllDatasOrderComponent(System.String)">
+            <summary>
+            获取所有的资源项,使用指定语言,按照组件ID进行排序
+            </summary>
+            <param name="languageName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDatasByPage(System.Int32,System.Int32,UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+             根据条件获取分页资源数据项
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="searchData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetCount(UFSoft.UBF.Sys.Resources.IData)">
+            <summary>
+            根据条件获取记录总数
+            </summary>
+            <param name="searchData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetAllDatas">
+            <summary>
+            获取所有的资源项,使用默认语言
+            </summary>
+            <returns>资源项集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDistinctLanguages">
+            <summary>
+            获取资源表中现有的所有语言信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.IResourceService.GetDistinctTypes">
+            <summary>
+            获取资源表中现有的所有类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceService.Save(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            保存资源项
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceService.SaveExe(UFSoft.UBF.Sys.Resources.IData,System.String)">
+            <summary>
+            保存资源项（真实保存）
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceService.GetDatasbyElementID(System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="elementID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceService.GetDistinctLanguages">
+            <summary>
+            获取资源表中现有的所有语言信息,当向数库中添加了一个新语种的资源后，应调用该方法以更新服务中对语种记录的缓存
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Sys.Resources.Runtime.ResourceService.GetDistinctTypes">
+            <summary>
+            获取资源表中现有的所有类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Sys.Resources.Runtime.ResourceException">
+            <summary>
+            元数据服务异常
+            </summary>
+        </member>
+    </members>
+</doc>
