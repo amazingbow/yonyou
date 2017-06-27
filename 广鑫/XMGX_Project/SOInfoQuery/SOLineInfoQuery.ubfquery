@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="46ea5661-f21b-408b-a4b6-613bf6be674d" name="SOLineInfoQuery" displayName="SOLineInfoQuery" description="" help="" QueryType="DTOQuery" QueryURI="908f1068-947e-4481-b608-e66b786c810b" QuerySourceFullName="UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="f35fc783-1279-4eaf-8ab8-2b666cad2ad3" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="12d0f545-3b37-4da1-9e5c-685df1c77137" name="SOLineInfo" displayName="SOLineInfo" description="" help="" ProjectID="" ProjectPath="" BPItemID="8d63c8db-98df-4786-a9bc-784c2ea71b7d" BPOperationID="1c4da5aa-91fa-44f5-910f-ce5cbccd7441" DTOID="960429f1-6bfc-4107-95a1-ef06e6619049" BPAgentDll="UFIDA.U9.Cust.FJGX.SOInfoQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="364a8130-6ea5-4162-8dc1-dbbc7e8bcaef" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="f0867833-70f3-4e87-9ff3-4a3be403b8f6" UIFormItemID="362ec153-cc5d-45c8-a028-10ba376350e8" UIModelID="b57b177e-787b-4d2d-b83a-78b770157a55" />
+  <ColumnDefines>
+    <ColumnDefine id="617643dd-d452-4d5a-b7c7-2bf257dfb802" name="SOLine_ID" displayName="SOLine_ID" description="" help="" ParentName="" Alias="SOLine_ID" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="e73fd865-3be1-4d68-879d-449ecabcd92d" name="SOLine_TU_Round_Precision" displayName="SOLine_TU_Round_Precision" description="" help="" ParentName="" Alias="SOLine_TU_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="499b7a5f-d297-49db-8b4c-494717b27a01" name="SOLine_TU_Round_RoundType" displayName="SOLine_TU_Round_RoundType" description="" help="" ParentName="" Alias="SOLine_TU_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="ee63be31-52e9-4b5c-869e-596aefa0cd6d" name="SOLine_TU_Round_RoundValue" displayName="SOLine_TU_Round_RoundValue" description="" help="" ParentName="" Alias="SOLine_TU_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="a6e63f6a-f4ec-4fdb-b02b-597bfe9caf69" name="SOLine_OrderByQtyTU" displayName="SOLine_OrderByQtyTU" description="" help="" ParentName="" Alias="SOLine_OrderByQtyTU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="SOLine_TU_Round_Precision" RoundTypeField="SOLine_TU_Round_RoundType" RoundValueField="SOLine_TU_Round_RoundValue" Point="2" />
+    <ColumnDefine id="9ae229ac-a624-4262-916d-eb563afad98d" name="SOLine_FinallyPriceTC" displayName="SOLine_FinallyPriceTC" description="" help="" ParentName="" Alias="SOLine_FinallyPriceTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="6" />
+    <ColumnDefine id="5659102b-65e6-4043-bd17-34cc5d454613" name="SOLine_TotalMoneyTC" displayName="SOLine_TotalMoneyTC" description="" help="" ParentName="" Alias="SOLine_TotalMoneyTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="d8d273be-27d2-49af-957f-c8acd8e962d6" name="TotalShipQty" displayName="TotalShipQty" description="" help="" ParentName="" Alias="TotalShipQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="SOLine_TU_Round_Precision" RoundTypeField="SOLine_TU_Round_RoundType" RoundValueField="SOLine_TU_Round_RoundValue" Point="2" />
+    <ColumnDefine id="d0ccf8cc-e59e-4670-b6e7-26ef52fbf169" name="TotalShipMoney" displayName="TotalShipMoney" description="" help="" ParentName="" Alias="TotalShipMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="c190f751-7eda-482e-bee2-544b05c9a57b" name="AfterAdjustedMoney" displayName="AfterAdjustedMoney" description="" help="" ParentName="" Alias="AfterAdjustedMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="d340f84c-44e8-4b69-9f20-2a64a9188f49" name="AfterAdjustedPrice" displayName="AfterAdjustedPrice" description="" help="" ParentName="" Alias="AfterAdjustedPrice" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <SortDefines>
+    <SortDefine id="e2adc930-8bfd-468c-a28c-d344019856e0" name="SOLine_ItemInfo_ItemCode" displayName="" description="" help="" ParentName="" Alias="SOLine_ItemInfo_ItemCode" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="63591798-215c-4f9f-99a0-91145a3429f9" name="SOLine_ItemInfo_ItemName" displayName="" description="" help="" ParentName="" Alias="SOLine_ItemInfo_ItemName" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="2b995e29-0343-4fa9-b066-81e7427f828a" name="SOLine_ItemInfo_ItemID_SPECS" displayName="" description="" help="" ParentName="" Alias="SOLine_ItemInfo_ItemID_SPECS" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="d6fa60da-d2ee-48b5-9817-8efcafe4f1f0" name="SOLine_FinallyPriceTC" displayName="" description="" help="" ParentName="" Alias="SOLine_FinallyPriceTC" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="66fbf7a0-73e8-467b-a940-00e1feeedb28" name="SOLine_OrderByQtyTU" displayName="" description="" help="" ParentName="" Alias="SOLine_OrderByQtyTU" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="0e1972d2-b1c8-463a-bf81-3dace4a1bbda" name="SOLine_DocLineNo" displayName="" description="" help="" ParentName="" Alias="SOLine_DocLineNo" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="7b90bec3-d6e5-4a15-8f9a-e9b58a2f63eb" name="SOLine_TotalMoneyTC" displayName="" description="" help="" ParentName="" Alias="SOLine_TotalMoneyTC" IsFixed="False" Visible="True" DescFieldContextValue="" />
+    <SortDefine id="e38e2a7c-7087-4e06-bd2d-567498905e5f" name="SOLine_ItemInfo_ItemID_DescFlexField_PrivateDescSeg5" displayName="" description="" help="" ParentName="" Alias="SOLine_ItemInfo_ItemID_DescFlexField_PrivateDescSeg5" IsFixed="False" Visible="True" DescFieldContextValue="" />
+  </SortDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="f5b830a5-6ca9-420d-8625-089555e96843" name="SOLine_ItemInfo_ItemCode" displayName="商品编码" description="" help="" />
+      <BasicFilter id="8c223b98-a855-422c-b1d0-b0939b232c63" name="SOLine_ItemInfo_ItemName" displayName="商品名称" description="" help="" />
+      <BasicFilter id="a7644a51-ad56-469e-a5b1-b6be99fec086" name="SOLine_ItemInfo_ItemID_SPECS" displayName="型号" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="03aa23fe-58f0-4a62-85bf-77b68410906b" name="SOLine_DocLineNo" displayName="行号" description="" help="" />
+      <Column id="27a1ef1d-e653-4ac3-80f3-6642e7cb6fdf" name="SOLine_ItemInfo_ItemCode" displayName="商品编码" description="" help="" />
+      <Column id="7ff89da7-30a6-4dd5-ad77-3c2d716abe24" name="SOLine_ItemInfo_ItemName" displayName="商品名称" description="" help="" />
+      <Column id="b3d3741b-e33c-4361-b037-ef3cf0aff08b" name="SOLine_ItemInfo_ItemID_SPECS" displayName="型号" description="" help="" />
+      <Column id="5b4bcf99-b80a-4df7-b840-d482c3354430" name="SOLine_PU_Name" displayName="单位" description="" help="" />
+      <Column id="222cea87-ede4-4d0e-bfee-46b73ba92f34" name="SOLine_CU_Name" displayName="主单位" description="" help="" />
+      <Column id="cc19d354-3238-4a6f-aa6a-d49864a96bc5" name="SOLine_OrderByQtyTU" displayName="数量" description="" help="" />
+      <Column id="595b6986-8828-413a-9fa3-4b134107db89" name="SOLine_FinallyPriceTC" displayName="单价" description="" help="" />
+      <Column id="1ea1d931-f740-47db-b09c-88b4172e2a8e" name="SOLine_TotalMoneyTC" displayName="金额" description="" help="" />
+      <Column id="69e9f5e4-db39-49c1-a6ce-517f3e698cf8" name="SOLine_ItemInfo_ItemID_DescFlexField_PrivateDescSeg5" displayName="包装数" description="" help="" />
+      <Column id="1617d10c-4e81-4fb3-8663-49a357248e06" name="SOLine_Memo" displayName="备注" description="" help="" />
+      <Column id="46ce1bee-bdb6-47d2-81a0-6626e65f7ccb" name="SOLine_TU_Round_Precision" displayName="销售单位_精度_精度" description="" help="" />
+      <Column id="811bd965-24f5-4746-8a66-6047b54619b9" name="SOLine_TU_Round_RoundType" displayName="销售单位_精度_舍入类型" description="" help="" />
+      <Column id="34325c0b-fa62-46f1-a97b-1e98f08da227" name="SOLine_TU_Round_RoundValue" displayName="销售单位_精度_舍入值" description="" help="" />
+      <Column id="2d506625-55fb-45ae-8168-7f4e31d76334" name="TotalShipQty" displayName="累计出货数量" description="" help="" />
+      <Column id="ece1c6a2-bdfa-4526-a903-1a9463d2603a" name="TotalShipMoney" displayName="累计出货金额" description="" help="" />
+      <Column id="725a4741-f7e6-407e-a806-e01e49478387" name="AfterAdjustedMoney" displayName="调整后金额" description="" help="" />
+      <Column id="5b4f3667-27b7-48d8-aeeb-c05ca7c14fb8" name="AfterAdjustedPrice" displayName="调整后单价" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="46023daa-52ba-4ef9-829f-30f56385234f" name="SOLine_DocLineNo" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

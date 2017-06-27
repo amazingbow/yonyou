@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="886f1d2d-aa55-48c9-a93e-1ead2a543a0e" name="CustomerDocListQuery" displayName="CustomerDocListQuery" description="" help="" QueryType="DTOQuery" QueryURI="85a1401c-1e59-4b45-9470-2a1d96fa1581" QuerySourceFullName="UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="2148a7d4-9c7d-44a4-aaa7-894ee50d90bf" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="95a4fdc7-ba07-41b9-b3ab-83f0974e21d3" name="CustomerDocList" displayName="CustomerDocList" description="" help="" ProjectID="" ProjectPath="" BPItemID="b13d849b-6aa5-43ea-9b22-df633cc5a7d8" BPOperationID="945b32c6-34cc-4636-b8ee-4c85b0484b40" DTOID="e9b002e5-f4a1-4e58-acc9-4a59d3b01de3" BPAgentDll="UFIDA.U9.Cust.FJGX.CustomerQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="ab71bc11-cbc6-4bc7-96f5-31274f760a96" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="07fae401-1de9-4d02-bc08-df142d70d59a" UIFormItemID="573d28c0-9352-47d1-83c2-f7aea2870526" UIModelID="3a7a053e-d46d-4828-bb5e-cd7015ace973" />
+  <FilterDefines>
+    <FilterDefine id="b91c72cd-3704-4b88-bc13-63bac8f0ff9d" name="Customer" displayName="Customer" description="" help="" ParentName="" Alias="Customer" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="5022d16d-32e0-4805-9800-021dc7bae334" name="" displayName="" description="" help="" RefID="1a82443c-00ac-4b8c-b9c0-1e168fa0c4b2" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Customer" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="765895e1-c463-4d53-96da-5b8c6b9c8aa7" name="Operators" displayName="Operators" description="" help="" ParentName="" Alias="Operators" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="51a659d6-b8bc-43e1-be01-58087d6bccec" name="" displayName="" description="" help="" RefID="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Operators" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="65975135-c26b-4464-88cf-2b9a624d483b" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+    <FilterDefine id="5e8eb00f-1166-4067-b21d-10835271b80b" name="CustomerContact" displayName="CustomerContact" description="" help="" ParentName="" Alias="CustomerContact" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="929a39ad-4599-4761-8ef0-ae55f9e180ef" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="5864efa5-1d02-48e1-96f6-d6bc0554ecc8" name="TotalMoney" displayName="TotalMoney" description="" help="" ParentName="" Alias="TotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="b27c2c92-67c1-481e-b12d-c0795f8d748a" name="SumTotalMoney" displayName="SumTotalMoney" description="" help="" ParentName="" Alias="SumTotalMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="460246da-8db5-4fd6-aab9-5957d998fd63" name="DocNo" displayName="单据编号" description="" help="" />
+      <BasicFilter id="99ca5106-9adb-4b0c-b870-d82b1cb9c542" name="BusinessDate" displayName="单据日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="062c4c90-0873-4073-af86-c2940504587e" name="DocNo" displayName="单据编号" description="" help="" />
+      <Column id="240f6ac4-c166-4df4-bbc3-e1c19a4869c5" name="BusinessDate" displayName="单据日期" description="" help="" />
+      <Column id="6f87a540-3d2d-40d3-b25f-960742d88e00" name="Customer_Name" displayName="客户名称" description="" help="" />
+      <Column id="1cd8f4a2-6c02-4a8e-b0c7-fad271ab0a77" name="CustomerContact_Contact_Name" displayName="联系人" description="" help="" />
+      <Column id="a1889eb5-9285-4c15-a8e7-b822576be8d5" name="Operators_Name" displayName="业务员" description="" help="" />
+      <Column id="d4954c82-46b7-4ff1-a0e7-9338367b941d" name="TotalMoney" displayName="总金额" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="b300887c-3f48-4a92-b483-4aa036c01be1" name="BusinessDate" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

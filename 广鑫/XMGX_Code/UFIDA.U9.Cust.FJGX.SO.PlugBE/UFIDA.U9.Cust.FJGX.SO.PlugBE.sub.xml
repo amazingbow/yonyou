@@ -1,0 +1,19 @@
+﻿<?xml version="1.0"?>
+<pub-sub>
+
+  <!--销售订单默认值设置-->
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterDefaultValue">
+    <subscriber type="UFIDA.U9.Cust.FJGX.SM.PlugBE.SO.AfterDefaultValueExtend,UFIDA.U9.Cust.FJGX.SO.PlugBE.dll" />
+  </subcription>
+  
+  <!--销售订单行插入前后设置-->
+  <subcription event="UFIDA.U9.SM.SO.SO.AfterInserting">
+    <subscriber type="UFIDA.U9.Cust.FJGX.SM.PlugBE.SO.AfterInsertingExtend,UFIDA.U9.Cust.FJGX.SO.PlugBE.dll" />
+  </subcription>
+  
+  <!--销售订单删除操作-->
+  <subcription event="UFIDA.U9.SM.SO.SO.BeforeDeleted">
+    <subscriber type="UFIDA.U9.Cust.FJGX.SM.PlugBE.SO.DeletedExtend,UFIDA.U9.Cust.FJGX.SO.PlugBE.dll" />
+  </subcription>
+  
+</pub-sub>

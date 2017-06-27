@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="d487fcdf-9f08-43c3-91c2-192e1e412e37" name="RcvInfoQuery" displayName="RcvInfoQuery" description="" help="" QueryType="DTOQuery" QueryURI="24bda083-7049-4d72-ab22-97a3c9da313e" QuerySourceFullName="UIFIA.U9.Cust.FJGX.RcvHeadQryBP.RcvHeadQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="8e839ba9-d4fe-4f5a-8037-3b2897b37182" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="7c5c14e1-6aff-452d-ac7d-0be428135882" name="RcvHead" displayName="RcvHead" description="" help="" ProjectID="" ProjectPath="" BPItemID="b4dc2df1-e750-4eed-bf68-70a754cfabee" BPOperationID="24208a6d-2cfd-42ad-a042-27782ae8364b" DTOID="bb7c96fb-518c-49ff-be51-fd484b76164c" BPAgentDll="UIFIA.U9.Cust.FJGX.RcvInfoQueryBP.Agent" BPAgentProxy="UIFIA.U9.Cust.FJGX.RcvHeadQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="709eb04c-2d03-4309-bb20-1e50bedb8f7a" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="bc3232b5-6fd6-418e-bea2-f9c34f8d6a9d" UIFormItemID="ae9b84e7-bf83-4a3f-b543-df766e6b224d" UIModelID="bab3c098-3a6e-4040-8c38-0947efc78ea1" />
+  <FilterDefines>
+    <FilterDefine id="b473a75c-e2ed-4119-b073-19cced51a347" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="5ab579ee-3154-418a-9d55-91645bfa3fa0" name="TotalMoney" displayName="TotalMoney" description="" help="" ParentName="" Alias="TotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="9ffaa9e3-4a58-4f8e-90db-c1578a7988ca" name="SumTotalMoney" displayName="SumTotalMoney" description="" help="" ParentName="" Alias="SumTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="950dbcbc-f6b1-4cb2-8f07-2c9f2c7bdf44" name="DocNo" displayName="收发单据号" description="" help="" />
+      <BasicFilter id="96a8ef49-5e64-489d-924f-6bb764aaadfd" name="BusinessDate" displayName="单据日期" description="" help="" />
+      <BasicFilter id="2b216806-985c-446c-aa7a-39a21e6f57d2" name="SupplierCode" displayName="供应商编码" description="" help="" />
+      <BasicFilter id="c6b76e4d-cd51-4a02-bf5a-37597a46ba73" name="SupplierName" displayName="供应商名称" description="" help="" />
+      <BasicFilter id="76254703-d3c8-456d-a151-f471fed292a7" name="CreatedBy" displayName="制单人" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="514a45b9-12f4-44e0-b68f-339b5234a3a5" name="DocNo" displayName="收发单据号" description="" help="" />
+      <Column id="96a20b2b-2d14-4690-8f3a-bac28d42ba8d" name="BusinessDate" displayName="单据日期" description="" help="" />
+      <Column id="2e39c249-d985-4a02-bd4f-27e506dd53cd" name="SupplierCode" displayName="供应商编码" description="" help="" />
+      <Column id="19efb43e-42f8-4125-84bf-36e64fe8c7d0" name="SupplierName" displayName="供应商名称" description="" help="" />
+      <Column id="38faf941-3b63-40a3-8481-ccb13b1d99c1" name="SupplierContactName" displayName="供应商联系人" description="" help="" />
+      <Column id="2b7b7043-0cd7-4eaa-93ca-f70de0a920b7" name="TotalMoney" displayName="金额" description="" help="" />
+      <Column id="9b186d20-1ee6-4f4f-8d49-c92e898cf6a1" name="CreatedBy" displayName="制单人" description="" help="" />
+      <Column id="5c2b14c8-c0c9-4bab-98ad-bb8cd4047efc" name="Memo" displayName="备注" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="f64859d9-57b1-439f-bdcd-48a953548d80" name="BusinessDate" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

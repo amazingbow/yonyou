@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="e692afd9-54d8-4614-a74d-622506c83211" name="CustomerQuery" displayName="CustomerQuery" description="" help="" QueryType="DTOQuery" QueryURI="06962097-1967-412d-93ee-705453ccb0c9" QuerySourceFullName="UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="42133db2-912e-4578-a1ce-9ee4fffb9464" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="c717cff4-7cfa-4783-90ce-9bf39b5412f3" name="Customer" displayName="Customer" description="" help="" ProjectID="" ProjectPath="" BPItemID="f24d358d-29dc-4020-bcbd-25584028efdb" BPOperationID="c918ae89-8659-4117-bce9-50526b382138" DTOID="ece0687c-e456-4698-8f21-878e38658e20" BPAgentDll="UFIDA.U9.Cust.FJGX.CustomerQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.CustomerQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="a738ffb7-8b27-41d6-a73b-e651a1f8a3c7" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="ef4d2311-6d9a-4eac-93d8-c5b32f9a1b85" UIFormItemID="cb668246-35db-441b-8aec-c6af8ec95a50" UIModelID="ca341aa5-79df-4947-8107-ff4c5febf593" />
+  <FilterDefines>
+    <FilterDefine id="0e4315a4-70ca-4bec-9c7e-4818a35795e4" name="CustomerContact_Contact" displayName="CustomerContact_Contact" description="" help="" ParentName="" Alias="CustomerContact_Contact" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="1769d48c-5004-4d20-b941-ffde56b29624" name="" displayName="" description="" help="" RefID="0036f3a1-2a68-4e33-947b-f173bca222e6" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="CustomerContact_Contact" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="3e564d57-066b-482e-8a50-81054eadc2b7" name="Customer_CustomerCategory" displayName="Customer_CustomerCategory" description="" help="" ParentName="" Alias="Customer_CustomerCategory" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="faf5fd2e-f35d-498c-b0d2-92ae3a5bbbb0" name="" displayName="" description="" help="" RefID="f93d0aeb-2fa7-45d2-856d-42b812aed3ed" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="Code" ReturnValueType="String" LeftExpression="Customer_CustomerCategory.Code" RefWidth="580" RefHeight="408">
+        <RefConditions>
+          <Condition id="0c269b65-b956-4322-ab97-4a1ea012e900" name="" displayName="" description="" help="" ParameterName="" ParameterValue="" IsFixed="False" CustomInParams="1&amp;ValueSetDefID=1001511130131010" />
+        </RefConditions>
+      </Reference>
+    </FilterDefine>
+    <FilterDefine id="d7666212-3b0d-4ce5-9d5e-83239255a5d1" name="Customer_Saleser" displayName="Customer_Saleser" description="" help="" ParentName="" Alias="Customer_Saleser" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="2970945c-dc60-44dc-b4a2-f7826f3113d2" name="" displayName="" description="" help="" RefID="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Customer_Saleser" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="0ddc71e8-d6a8-4127-98a8-ffe83f6b71ee" name="AROCMoneyBalance_TotalMoney" displayName="AROCMoneyBalance_TotalMoney" description="" help="" ParentName="" Alias="AROCMoneyBalance_TotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="3ae2b167-783a-4517-8f5c-01dbe92e8a56" name="LastSOTotalMoneyTC" displayName="LastSOTotalMoneyTC" description="" help="" ParentName="" Alias="LastSOTotalMoneyTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="0bce0a32-e69b-400a-a2a9-4b68aa62a635" name="LastRecBillTotalMoney" displayName="LastRecBillTotalMoney" description="" help="" ParentName="" Alias="LastRecBillTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="6b1b6491-7dac-4d26-b871-3d09ff364bdc" name="Customer_Code" displayName="Customer_Code" description="" help="" ParentName="" Alias="Customer_Code" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="81be2aee-c0de-495f-aa14-4ee3e9b18725" name="Customer_Name" displayName="Customer_Name" description="" help="" ParentName="" Alias="Customer_Name" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="75b80609-3606-4f04-8439-0fcd5a240d37" name="ObjectCreditLevelApproval_CreditLimit" displayName="ObjectCreditLevelApproval_CreditLimit" description="" help="" ParentName="" Alias="ObjectCreditLevelApproval_CreditLimit" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="8d5e17a6-54a5-4240-9c55-aac2d9671d58" name="SumBalanceTotalMoney" displayName="SumBalanceTotalMoney" description="" help="" ParentName="" Alias="SumBalanceTotalMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="e962fd7c-c2eb-442b-93f9-724271d964dc" name="Customer_Code" displayName="编码" description="" help="" />
+      <BasicFilter id="ffe15207-4d43-4356-b384-6c0c91921c89" name="Customer_Name" displayName="名称" description="" help="" />
+      <BasicFilter id="11548925-bf7d-4b8d-856b-3292fbce0e66" name="CustomerContact_Contact" displayName="联系人" description="" help="" />
+      <BasicFilter id="a81a72b2-b284-4b9f-a9d2-65799cbdcfda" name="CustomerContact_Contact_DefaultMobilNum" displayName="手机" description="" help="" />
+      <BasicFilter id="788d6293-b0ae-4659-acd3-458def05d381" name="CustomerContact_Contact_DefaultPhoneNum" displayName="电话" description="" help="" />
+      <BasicFilter id="de273af2-a8c9-4f7c-bede-94d7be0334cf" name="Customer_CustomerCategory" displayName="客户分类" description="" help="" />
+      <BasicFilter id="8c4de50e-4937-4af5-af8a-764f103b3291" name="Customer_Saleser" displayName="业务员" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="51e7663f-c8be-4731-bfd3-75f5b098c248" name="Customer_Code" displayName="编码" description="" help="" />
+      <Column id="fa556ce1-1996-486f-8c88-30276c253103" name="Customer_Name" displayName="名称" description="" help="" />
+      <Column id="01133745-a664-451c-8ad0-3913e27367ad" name="CustomerContact_Contact_DefaultMobilNum" displayName="手机" description="" help="" />
+      <Column id="f696bb25-7b87-4766-8cd3-3d0cdcbabc7c" name="CustomerContact_Contact_DefaultPhoneNum" displayName="电话" description="" help="" />
+      <Column id="c017c6a0-aab5-4186-b4c4-cf779973bad3" name="CustomerContact_Contact_DefaultFaxNum" displayName="传真" description="" help="" />
+      <Column id="acd215df-e75c-4a8c-8c66-088ff159954c" name="AROCMoneyBalance_TotalMoney" displayName="实际应收" description="" help="" />
+      <Column id="e4334282-1af2-405f-8bb6-77564d9b0e97" name="LastSOTotalMoneyTC" displayName="最后交易额" description="" help="" />
+      <Column id="a5c3f62d-547c-422f-b01d-3264cd02a762" name="LastRecBillTotalMoney" displayName="最近一笔收款金额" description="" help="" />
+      <Column id="f5734fb3-4461-461c-9f7a-03f19f315cc8" name="Customer_StateTaxNo" displayName="国税号" description="" help="" />
+      <Column id="23924b31-2385-4132-b37e-2a426d1fffc8" name="CustomerBankAccount_Code" displayName="开户银行" description="" help="" />
+      <Column id="ce91a426-03b4-4dc9-b2dc-993c824da0c0" name="Customer_Description" displayName="说明" description="" help="" />
+      <Column id="85c9649f-d02f-4bea-a2ca-b27fa6155b70" name="Customer_Saleser_Name" displayName="业务员" description="" help="" />
+      <Column id="5a65a8d8-2924-4366-bd17-254458be34d0" name="CustomerContact_Contact_Name" displayName="联系人" description="" help="" />
+      <Column id="c8d12089-6bd8-4b75-8445-7d2364b946f0" name="Customer_CustomerCategory_Name" displayName="客户分类" description="" help="" />
+      <Column id="6a4b470a-23b2-464b-8391-fad7e1ef8939" name="Customer_OfficialLocation_Name" displayName="地址" description="" help="" />
+      <Column id="b437b55b-375b-436f-8d1c-7085016b2792" name="ObjectCreditLevelApproval_CreditLimit" displayName="信用额度" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="e7a7edfe-1c48-42c1-ae70-55b26bb0c86b" name="Customer_Code" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

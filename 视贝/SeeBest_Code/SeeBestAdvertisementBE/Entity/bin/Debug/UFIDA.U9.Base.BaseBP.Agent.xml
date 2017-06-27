@@ -1,0 +1,2959 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Base.BaseBP.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.CompileAccountingCalendarProxy.AccountingCalendar_SKey">
+            <summary>
+            会计期间定义 序列化Key属性。（传递跨组织序列列字段）
+            追加会计期间.Misc.会计期间定义
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.CompileAccountingCalendarProxy.AccountingCalendar">
+            <summary>
+            会计期间定义 (该属性可为空,且无默认值)
+            追加会计期间.Misc.会计期间定义
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.AppendCompileAccCalendarProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            调整会计期间.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.AppendCompileAccCalendarProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            调整会计期间.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAccountYearListProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            获取会计日历的所有年度操作.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAccountYearListProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            获取会计日历的所有年度操作.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctYearByDateProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            根据日期得到会计年度操作.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctYearByDateProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            根据日期得到会计年度操作.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctYearByDateProxy.Date">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            根据日期得到会计年度操作.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctPeriodByDateProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            根据日期获得会计期间操作.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctPeriodByDateProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            根据日期获得会计期间操作.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetAcctPeriodByDateProxy.Date">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            根据日期获得会计期间操作.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.IsLastAccountPeriodProxy.AccountPeriod_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            是否年度最后会计期间.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.IsLastAccountPeriodProxy.AccountPeriod">
+            <summary>
+            会计期间 (该属性可为空,且无默认值)
+            是否年度最后会计期间.Misc.会计期间
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetMaxYearUsedBySOBAPProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            取最大已经被账簿使用的会计年度.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.GetMaxYearUsedBySOBAPProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            取最大已经被账簿使用的会计年度.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.AppendAccountPeriodProxy.AccountingCalendar_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            追加指定个年度的会计期间.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.AppendAccountPeriodProxy.AccountingCalendar">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            追加指定个年度的会计期间.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.AppendAccountPeriodProxy.YearCount">
+            <summary>
+            待追加的年数 (该属性可为空,但有默认值)
+            追加指定个年度的会计期间.Misc.待追加的年数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.UpdateSOBByACProxy.AC_SKey">
+            <summary>
+            会计日历 序列化Key属性。（传递跨组织序列列字段）
+            更新会计日历的帐簿.Misc.会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Account.Proxy.UpdateSOBByACProxy.AC">
+            <summary>
+            会计日历 (该属性可为空,且无默认值)
+            更新会计日历的帐簿.Misc.会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Contact.Proxy.GetDefaultContactManBPProxy.Organization">
+            <summary>
+            组织机构 (该属性可为空,且无默认值)
+            获取某组织的缺省联系人.Misc.组织机构
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Contact.Proxy.GetContactManProxy.Organization">
+            <summary>
+            组织机构 (该属性可为空,且无默认值)
+            获取某组织的联系人集合.Misc.组织机构
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Contact.Proxy.GetContactAddressPhoneProxy.Contact_SKey">
+            <summary>
+            联系对象 序列化Key属性。（传递跨组织序列列字段）
+            获取联系对象默认地址电话.Misc.联系对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Contact.Proxy.GetContactAddressPhoneProxy.Contact">
+            <summary>
+            联系对象 (该属性可为空,且无默认值)
+            获取联系对象默认地址电话.Misc.联系对象
+            </summary>
+            <value>UFIDA.U9.Base.Contact.Contact</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.CompileExchangeRateTableProxy.ExchangeRateDef_SKey">
+            <summary>
+            汇率定义 序列化Key属性。（传递跨组织序列列字段）
+            编译汇率表.Misc.汇率定义
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.CompileExchangeRateTableProxy.ExchangeRateDef">
+            <summary>
+            汇率定义 (该属性可为空,且无默认值)
+            编译汇率表.Misc.汇率定义
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.CompileExchangeRateTableProxy.ExchangeRateTable_SKey">
+            <summary>
+            汇率表 序列化Key属性。（传递跨组织序列列字段）
+            编译汇率表.Misc.汇率表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.CompileExchangeRateTableProxy.ExchangeRateTable">
+            <summary>
+            汇率表 (该属性可为空,且无默认值)
+            编译汇率表.Misc.汇率表
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTable</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.FromCurrency_SKey">
+            <summary>
+            原始货币 序列化Key属性。（传递跨组织序列列字段）
+            取每日汇率.Misc.原始货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.FromCurrency">
+            <summary>
+            原始货币 (该属性可为空,且无默认值)
+            取每日汇率.Misc.原始货币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.ToCurrency_SKey">
+            <summary>
+            目标货币 序列化Key属性。（传递跨组织序列列字段）
+            取每日汇率.Misc.目标货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.ToCurrency">
+            <summary>
+            目标货币 (该属性可为空,且无默认值)
+            取每日汇率.Misc.目标货币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.ExchangeRateType">
+            <summary>
+            汇率类型 (该属性可为空,但有默认值)
+            取每日汇率.Misc.汇率类型
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateProxy.Date">
+            <summary>
+            日期 (该属性可为空,但有默认值)
+            取每日汇率.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.FromCurrency_SKey">
+            <summary>
+            源币种 序列化Key属性。（传递跨组织序列列字段）
+            返回浮动汇率是否在容差范围内.Misc.源币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.FromCurrency">
+            <summary>
+            源币种 (该属性可为空,且无默认值)
+            返回浮动汇率是否在容差范围内.Misc.源币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.ToCurrency_SKey">
+            <summary>
+            目标币种 序列化Key属性。（传递跨组织序列列字段）
+            返回浮动汇率是否在容差范围内.Misc.目标币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.ToCurrency">
+            <summary>
+            目标币种 (该属性可为空,且无默认值)
+            返回浮动汇率是否在容差范围内.Misc.目标币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.ExchangeRateType">
+            <summary>
+            汇率类型 (该属性可为空,但有默认值)
+            返回浮动汇率是否在容差范围内.Misc.汇率类型
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.Date">
+            <summary>
+            日期 (该属性可为空,但有默认值)
+            返回浮动汇率是否在容差范围内.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetVarExchangeRateIsRightProxy.ExchangeRate">
+            <summary>
+            汇率 (该属性可为空,但有默认值)
+            返回浮动汇率是否在容差范围内.Misc.汇率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetCurrencyRoundProxy.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            获取币种的舍入信息.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetCurrencyRoundProxy.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            获取币种的舍入信息.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetCurrencyRoundProxy.IsPriceRound">
+            <summary>
+            是否单价精度 (该属性可为空,但有默认值)
+            获取币种的舍入信息.Misc.是否单价精度
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.FromCurrency_SKey">
+            <summary>
+            原始货币 序列化Key属性。（传递跨组织序列列字段）
+            取每日汇率DTO.Misc.原始货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.FromCurrency">
+            <summary>
+            原始货币 (该属性可为空,且无默认值)
+            取每日汇率DTO.Misc.原始货币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.ToCurrency_SKey">
+            <summary>
+            目标货币 序列化Key属性。（传递跨组织序列列字段）
+            取每日汇率DTO.Misc.目标货币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.ToCurrency">
+            <summary>
+            目标货币 (该属性可为空,且无默认值)
+            取每日汇率DTO.Misc.目标货币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.ExchangeRateType">
+            <summary>
+            汇率类型 (该属性可为空,但有默认值)
+            取每日汇率DTO.Misc.汇率类型
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetDateExchangeRateDTOProxy.Date">
+            <summary>
+            日期 (该属性可为空,但有默认值)
+            取每日汇率DTO.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionProxy.FromCurrency_SKey">
+            <summary>
+            原币 序列化Key属性。（传递跨组织序列列字段）
+            获取汇率精度.Misc.原币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionProxy.FromCurrency">
+            <summary>
+            原币 (该属性可为空,且无默认值)
+            获取汇率精度.Misc.原币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionProxy.ToCurrency_SKey">
+            <summary>
+            目标币 序列化Key属性。（传递跨组织序列列字段）
+            获取汇率精度.Misc.目标币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionProxy.ToCurrency">
+            <summary>
+            目标币 (该属性可为空,且无默认值)
+            获取汇率精度.Misc.目标币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionProxy.ExchangeRateType">
+            <summary>
+            汇率类型 (该属性可为空,但有默认值)
+            获取汇率精度.Misc.汇率类型
+            </summary>
+            <value>UFIDA.U9.Base.Currency.ExchangeRateTypesEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.GetExchangeRatePrecisionBatchBPProxy.BatchExRatePrecisionDTOList">
+            <summary>
+            批量汇率精度DTOList (该属性可为空,且无默认值)
+            批量获取汇率精度.Misc.批量汇率精度DTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Currency.Proxy.DelExchangTablesBPProxy.IDList">
+            <summary>
+            IDList (该属性可为空,且无默认值)
+            列表中删除汇率参照.Misc.IDList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldDefByNameProxy.DescFlexName">
+            <summary>
+            实体名称 (该属性可为空,且无默认值)
+            通过名称获取描述性弹性域定义.Misc.实体名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.IsDescFlexFieldDefExistedProxy.EntityFullName">
+            <summary>
+            实体全名称 (该属性可为空,且无默认值)
+            实体是否已经定义了描述性弹性域操作.Misc.实体全名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexValueDTOProxy.DescFlexFieldDef_SKey">
+            <summary>
+            描述性弹性域 序列化Key属性。（传递跨组织序列列字段）
+            取描述性弹性域段值详细信息.Misc.描述性弹性域
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexValueDTOProxy.DescFlexFieldDef">
+            <summary>
+            描述性弹性域 (该属性可为空,且无默认值)
+            取描述性弹性域段值详细信息.Misc.描述性弹性域
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.DescFlexField.DescFlexFieldDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexValueDTOProxy.DescFlexSegments">
+            <summary>
+            实体描述性弹性域段集合 (该属性可为空,且无默认值)
+            取描述性弹性域段值详细信息.Misc.实体描述性弹性域段集合
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexUIControlDTOSProxy.EntityFullNames">
+            <summary>
+            实体全名称列表 (该属性可为空,且无默认值)
+            批量取描述性弹性域界面控件DTO.Misc.实体全名称列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexSegmentsByContextValueProxy.ContextValue">
+            <summary>
+            上下文 (该属性可为空,且无默认值)
+            通过上下文值取段集合操作.Misc.上下文
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexSegmentsByContextValueProxy.EntityFullName">
+            <summary>
+            描述性弹性域定义对应的实体全名 (该属性可为空,且无默认值)
+            通过上下文值取段集合操作.Misc.描述性弹性域定义对应的实体全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexSegmentsByContextValueProxy.IsIncludeGlobal">
+            <summary>
+            是否包含实体全局段 (该属性可为空,但有默认值)
+            通过上下文值取段集合操作.Misc.是否包含实体全局段
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexSegmentsByContextValueProxy.IsIncludePublic">
+            <summary>
+            是否包含实体公共段 (该属性可为空,但有默认值)
+            通过上下文值取段集合操作.Misc.是否包含实体公共段
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexUIControlDTOProxy.EntityFullName">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            取描述性弹性域界面控件DTO.Misc.属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldUIFieldsProxy.FormID">
+            <summary>
+            FormID (该属性可为空,但有默认值)
+            获取一个UIMODEL下面的全部定义过的描述性弹性域字段.Misc.FormID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldDefByNamesProxy.DescFlexNames">
+            <summary>
+            实体名称集合 (该属性可为空,且无默认值)
+            通过名称集合获取描述性弹性域定义.Misc.实体名称集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldCombineNamesProxy.EntityFullNames">
+            <summary>
+            实体名称集合 (该属性可为空,且无默认值)
+            获得描述性弹性域的组合名称字段.Misc.实体名称集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldCombineNamesProxy.PropNames">
+            <summary>
+            描述性弹性域属性类型名称 (该属性可为空,且无默认值)
+            获得描述性弹性域的组合名称字段.Misc.描述性弹性域属性类型名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.GetDescFlexFieldCombineNamesProxy.IDs">
+            <summary>
+            ID集合 (该属性可为空,且无默认值)
+            获得描述性弹性域的组合名称字段.Misc.ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.QueryPublicFlexFieldReferenceBPProxy.SourceEntityFullNames">
+            <summary>
+            上游实体全名称集合 (该属性可为空,且无默认值)
+            查询上游单据和下游单据的公共扩展段对应关系业务处理.Misc.上游实体全名称集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.QueryPublicFlexFieldReferenceBPProxy.DestinationEntityFullNames">
+            <summary>
+            下游实体全名称集合 (该属性可为空,且无默认值)
+            查询上游单据和下游单据的公共扩展段对应关系业务处理.Misc.下游实体全名称集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.DescFlexField.Proxy.QueryPubDescSegsBPProxy.EntityFullNames">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            查询实体的公共扩展字段定义.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetBusinessTypeByAppProxy.ApplicationCode">
+            <summary>
+            应用编码 (该属性可为空,且无默认值)
+            依据应用获取单据业务类型操作.Misc.应用编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.CanBePrintProxy.Doc_SKey">
+            <summary>
+            DocID 序列化Key属性。（传递跨组织序列列字段）
+            单据是否可打印.Misc.DocID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.CanBePrintProxy.Doc">
+            <summary>
+            DocID (该属性可为空,且无默认值)
+            单据是否可打印.Misc.DocID
+            </summary>
+            <value>UFIDA.U9.Base.Doc.Doc</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.CanBePrintProxy.DocEntityKey">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            单据是否可打印.Misc.单据Key
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.CanBePrintProxy.IsCheckCanBePrint">
+            <summary>
+            是否只是检查能否打印 (该属性可为空,但有默认值)
+            单据是否可打印.Misc.是否只是检查能否打印
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.DocPrintProxy.Doc_SKey">
+            <summary>
+            DocID 序列化Key属性。（传递跨组织序列列字段）
+            单据打印.Misc.DocID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.DocPrintProxy.Doc">
+            <summary>
+            DocID (该属性可为空,且无默认值)
+            单据打印.Misc.DocID
+            </summary>
+            <value>UFIDA.U9.Base.Doc.Doc</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.DocPrintProxy.DocEntityKey">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            单据打印.Misc.单据Key
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.DocPrintProxy.IsCheckCanBePrint">
+            <summary>
+            是否只是检查能否打印 (该属性可为空,但有默认值)
+            单据打印.Misc.是否只是检查能否打印
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetDocTypeByAppProxy.Application_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            获取一个应用下的所有单据类型.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetDocTypeByAppProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            获取一个应用下的所有单据类型.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetDocTypeByAppProxy.Condition">
+            <summary>
+            过滤条件 (该属性可为空,且无默认值)
+            获取一个应用下的所有单据类型.Misc.过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetDocTypeByAppProxy.OrderBy">
+            <summary>
+            排序 (该属性可为空,且无默认值)
+            获取一个应用下的所有单据类型.Misc.排序
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetDocPrintInfoProxy.DocEntityKey">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            取得单据打印信息.Misc.单据Key
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.UpdateDocPrintAmountProxy.DocEntityKey">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            更新单据已打印份数.Misc.单据Key
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.UpdateDocPrintAmountProxy.PrintAmount">
+            <summary>
+            打印份数 (该属性可为空,但有默认值)
+            更新单据已打印份数.Misc.打印份数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.BatchGetDocPrintInfoBPProxy.DocEntityKeyList">
+            <summary>
+            单据Key集合 (该属性可为空,且无默认值)
+            批量取得单据打印信息操作.Misc.单据Key集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.BatchUpdateDocPrintAmountBPProxy.BatchUpdateDocPrintAmountDTO">
+            <summary>
+            批量更新单据已打印份数DTO (该属性可为空,且无默认值)
+            批量更新单据已打印份数操作.Misc.批量更新单据已打印份数DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            挂起.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.HoldReason_SKey">
+            <summary>
+            挂起原因 序列化Key属性。（传递跨组织序列列字段）
+            挂起.Misc.挂起原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.HoldReason">
+            <summary>
+            挂起原因 (该属性可为空,且无默认值)
+            挂起.Misc.挂起原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.HoldReason</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.HoldUser_SKey">
+            <summary>
+            挂起人 序列化Key属性。（传递跨组织序列列字段）
+            挂起.Misc.挂起人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.HoldUser">
+            <summary>
+            挂起人 (该属性可为空,且无默认值)
+            挂起.Misc.挂起人
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.User</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.HoldProxy.HoldDate">
+            <summary>
+            挂起日期 (该属性可为空,但有默认值)
+            挂起.Misc.挂起日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            解除.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.ReleaseReason_SKey">
+            <summary>
+            解除原因 序列化Key属性。（传递跨组织序列列字段）
+            解除.Misc.解除原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.ReleaseReason">
+            <summary>
+            解除原因 (该属性可为空,且无默认值)
+            解除.Misc.解除原因
+            </summary>
+            <value>UFIDA.U9.Base.HoldRelease.ReleaseReason</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.ReleaseUser_SKey">
+            <summary>
+            解除人 序列化Key属性。（传递跨组织序列列字段）
+            解除.Misc.解除人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.ReleaseUser">
+            <summary>
+            解除人 (该属性可为空,且无默认值)
+            解除.Misc.解除人
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.User</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.ReleaseProxy.ReleaseDate">
+            <summary>
+            解除日期 (该属性可为空,但有默认值)
+            解除.Misc.解除日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.QueryHisProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            查询历史.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.HoldRelease.Proxy.DeleteHisProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            删除历史.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CompileKeyFlexFieldStruProxy.Define_SKey">
+            <summary>
+            弹性域结构 序列化Key属性。（传递跨组织序列列字段）
+            编译弹性域结构.Misc.弹性域结构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CompileKeyFlexFieldStruProxy.Define">
+            <summary>
+            弹性域结构 (该属性可为空,且无默认值)
+            编译弹性域结构.Misc.弹性域结构
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.GetValueSetValueByCombineCodeProxy.StruKey_SKey">
+            <summary>
+            结构Key 序列化Key属性。（传递跨组织序列列字段）
+            依据组合码取值集值DTO.Misc.结构Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.GetValueSetValueByCombineCodeProxy.StruKey">
+            <summary>
+            结构Key (该属性可为空,且无默认值)
+            依据组合码取值集值DTO.Misc.结构Key
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.GetValueSetValueByCombineCodeProxy.CombineCode">
+            <summary>
+            组合码 (该属性可为空,且无默认值)
+            依据组合码取值集值DTO.Misc.组合码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CheckCombineCodesProxy.Stru_SKey">
+            <summary>
+            弹性域结构 序列化Key属性。（传递跨组织序列列字段）
+            校验组合码集合.Misc.弹性域结构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CheckCombineCodesProxy.Stru">
+            <summary>
+            弹性域结构 (该属性可为空,且无默认值)
+            校验组合码集合.Misc.弹性域结构
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CheckCombineCodesProxy.CombineCodes">
+            <summary>
+            待校验的有效组合码集合 (该属性可为空,且无默认值)
+            校验组合码集合.Misc.待校验的有效组合码集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.CheckCombineCodesProxy.IsThrowException">
+            <summary>
+            是否抛出异常 (该属性可为空,但有默认值)
+            校验组合码集合.Misc.是否抛出异常
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.SetSegQualifierProxy.Stru_SKey">
+            <summary>
+            结构 序列化Key属性。（传递跨组织序列列字段）
+            设置段限定.Misc.结构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.SetSegQualifierProxy.Stru">
+            <summary>
+            结构 (该属性可为空,且无默认值)
+            设置段限定.Misc.结构
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.SetSegQualifierProxy.SegQualifierDTOList">
+            <summary>
+            段限定DTO集合 (该属性可为空,且无默认值)
+            设置段限定.Misc.段限定DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.GetUniqueNumberSegmentProxy.Stru_SKey">
+            <summary>
+            结构 序列化Key属性。（传递跨组织序列列字段）
+            获取唯一数字段.Misc.结构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.KeyFlexField.Proxy.GetUniqueNumberSegmentProxy.Stru">
+            <summary>
+            结构 (该属性可为空,且无默认值)
+            获取唯一数字段.Misc.结构
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileCode">
+            <summary>
+            参数代码 (该属性可为空,且无默认值)
+            取参数值.Misc.参数代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileOrg_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取参数值.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileOrg">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取参数值.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileRole_SKey">
+            <summary>
+            角色 序列化Key属性。（传递跨组织序列列字段）
+            取参数值.Misc.角色
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileRole">
+            <summary>
+            角色 (该属性可为空,且无默认值)
+            取参数值.Misc.角色
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.Role</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileUser_SKey">
+            <summary>
+            用户 序列化Key属性。（传递跨组织序列列字段）
+            取参数值.Misc.用户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.ProfileUser">
+            <summary>
+            用户 (该属性可为空,且无默认值)
+            取参数值.Misc.用户
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.User</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueProxy.IsThrowException">
+            <summary>
+            是否抛出异常 (该属性可为空,但有默认值)
+            取参数值.Misc.是否抛出异常
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueListProxy.ProfileValueInputDTOs">
+            <summary>
+            获取参数值的输入DTO (该属性可为空,且无默认值)
+            批量取参数值.Misc.获取参数值的输入DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileValueListProxy.IsThrowException">
+            <summary>
+            是否抛异常 (该属性可为空,但有默认值)
+            批量取参数值.Misc.是否抛异常
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.GetProfileUIDataProxy.IDsValues">
+            <summary>
+            参数 (该属性可为空,且无默认值)
+            获取枚举或参照的元数据信息.Misc.参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.ProfileValueValidateProxy.ProfileValues">
+            <summary>
+            参数列表 (该属性可为空,且无默认值)
+            应用的参数修改有效.Misc.参数列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.ProfileValueValidateProxy.ApplicationID">
+            <summary>
+            应用 (该属性可为空,但有默认值)
+            应用的参数修改有效.Misc.应用
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.CBOProfileValidatorProxy.ProfileValues">
+            <summary>
+            参数值列表 (该属性可为空,且无默认值)
+            CBO参数校验器.Misc.参数值列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.CostFieldValidatorProxy.ProfileValues">
+            <summary>
+            参数列表 (该属性可为空,且无默认值)
+            成本域参数校验.Misc.参数列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SMProfileValidatorProxy.ProfileValues">
+            <summary>
+            参数值列表 (该属性可为空,且无默认值)
+            SM参数校验器.Misc.参数值列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.InitOrgProfileDataProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            创建组织参数数据.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.InitOrgProfileDataProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            创建组织参数数据.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.InitOrgProfileDataProxy.Application_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            创建组织参数数据.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.InitOrgProfileDataProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            创建组织参数数据.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.FromOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            组织参数下发.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.FromOrg">
+            <summary>
+            来源组织 (该属性可为空,且无默认值)
+            组织参数下发.Misc.来源组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.ToOrgs_SKey">
+            <summary>
+            目的组织列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.ToOrgs">
+            <summary>
+            目的组织列表 (该属性可为空,且无默认值)
+            组织参数下发.Misc.目的组织列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.Profiles_SKey">
+            <summary>
+            参数列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Profile.Proxy.SendProfileValueProxy.Profiles">
+            <summary>
+            参数列表 (该属性可为空,且无默认值)
+            组织参数下发.Misc.参数列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceNosProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            获取编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceNosProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            获取编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceNosProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            获取编码.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceNosProxy.Count">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            获取编码.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceNosProxy.EntityInstance">
+            <summary>
+            实例 (该属性可为空,且无默认值)
+            获取编码.Misc.实例
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetAvailableNosProxy.Sequence_SKey">
+            <summary>
+            编码实例 序列化Key属性。（传递跨组织序列列字段）
+            获取可用的编号.Misc.编码实例
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetAvailableNosProxy.Sequence">
+            <summary>
+            编码实例 (该属性可为空,且无默认值)
+            获取可用的编号.Misc.编码实例
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.Sequence</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetAvailableNosProxy.Count">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            获取可用的编号.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.RecycleUnusedNosProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            归还编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.RecycleUnusedNosProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            归还编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.RecycleUnusedNosProxy.SequenceCodes">
+            <summary>
+            要归还的编码值 (该属性可为空,且无默认值)
+            归还编码.Misc.要归还的编码值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.AddUnusedNosProxy.Sequence_SKey">
+            <summary>
+            编码实例 序列化Key属性。（传递跨组织序列列字段）
+            向编码实例对应的空号表增加空号.Misc.编码实例
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.AddUnusedNosProxy.Sequence">
+            <summary>
+            编码实例 (该属性可为空,且无默认值)
+            向编码实例对应的空号表增加空号.Misc.编码实例
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.Sequence</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.AddUnusedNosProxy.Nos">
+            <summary>
+            要回收的空号 (该属性可为空,但有默认值)
+            向编码实例对应的空号表增加空号.Misc.要回收的空号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.ChangeSequenceValueProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            修改编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.ChangeSequenceValueProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            修改编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.ChangeSequenceValueProxy.SequenceCode">
+            <summary>
+            原编码 (该属性可为空,且无默认值)
+            修改编码.Misc.原编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.ChangeSequenceValueProxy.SequenceCodeNew">
+            <summary>
+            新编码 (该属性可为空,且无默认值)
+            修改编码.Misc.新编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.CleanNosProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            整理编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.CleanNosProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            整理编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.CleanNosProxy.Nos">
+            <summary>
+            编码值 (该属性可为空,且无默认值)
+            整理编码.Misc.编码值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNoProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            获取可见编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNoProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            获取可见编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNoProxy.SequenceNo">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            获取可见编码.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceSegDisplayNameProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            得到段值显示名称操作.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSequenceSegDisplayNameProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            得到段值显示名称操作.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNosProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            获取可见编码集合.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNosProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            获取可见编码集合.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetVisibleNosProxy.SequenceNos">
+            <summary>
+            编码集合 (该属性可为空,且无默认值)
+            获取可见编码集合.Misc.编码集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.SequenceDef_SKey">
+            <summary>
+            编码方案 序列化Key属性。（传递跨组织序列列字段）
+            取系统编码.Misc.编码方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.SequenceDef">
+            <summary>
+            编码方案 (该属性可为空,且无默认值)
+            取系统编码.Misc.编码方案
+            </summary>
+            <value>UFIDA.U9.Base.Sequence.SequenceDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            取系统编码.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.Count">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            取系统编码.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.EntityInstance">
+            <summary>
+            实例 (该属性可为空,且无默认值)
+            取系统编码.Misc.实例
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.GetSystemSequenceNosProxy.FirstNo">
+            <summary>
+            起始号码 (该属性可为空,但有默认值)
+            取系统编码.Misc.起始号码
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.UpdateSequenceNosProxy.SequenceDefs_SKey">
+            <summary>
+            编码方案列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.UpdateSequenceNosProxy.SequenceDefs">
+            <summary>
+            编码方案列表 (该属性可为空,且无默认值)
+            更新单据编码.Misc.编码方案列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.UpdateSequenceNosProxy.EntityKeys">
+            <summary>
+            实体key列表 (该属性可为空,且无默认值)
+            更新单据编码.Misc.实体key列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Sequence.Proxy.UpdateSequenceNosProxy.SequenceNos">
+            <summary>
+            单据号列表 (该属性可为空,且无默认值)
+            更新单据编码.Misc.单据号列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CompileWorkCalendarProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            编译工作日历.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CompileWorkCalendarProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            编译工作日历.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CompileWorkCalendarProxy.FromDate">
+            <summary>
+            生成日历的起始日期 (该属性可为空,且无默认值)
+            编译工作日历.Misc.生成日历的起始日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CompileWorkCalendarProxy.ToDate">
+            <summary>
+            生成日历的结束日期 (该属性可为空,且无默认值)
+            编译工作日历.Misc.生成日历的结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            获取工作日.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            获取工作日.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.FromDate">
+            <summary>
+            起始时间 (该属性可为空,但有默认值)
+            获取工作日.Misc.起始时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.OffsetDays">
+            <summary>
+            偏移工作日数 (该属性可为空,但有默认值)
+            获取工作日.Misc.偏移工作日数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <!-- 对于成员“P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.IsForward”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayProxy.IsCalculateTime">
+            <summary>
+            是否计算时间 (该属性可为空,但有默认值)
+            获取工作日.Misc.是否计算时间
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDaysProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            计算工作日数.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDaysProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            计算工作日数.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDaysProxy.FromDate">
+            <summary>
+            起始日期 (该属性可为空,且无默认值)
+            计算工作日数.Misc.起始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDaysProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            计算工作日数.Misc.结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDayHoursProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            计算工作日工时数.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDayHoursProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            计算工作日工时数.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDayHoursProxy.FromDate">
+            <summary>
+            起始日期 (该属性可为空,且无默认值)
+            计算工作日工时数.Misc.起始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.CalcWorkDayHoursProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            计算工作日工时数.Misc.结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkHoursProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            获取工作小时.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkHoursProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            获取工作小时.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkHoursProxy.FromDate">
+            <summary>
+            起始时间 (该属性可为空,但有默认值)
+            获取工作小时.Misc.起始时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkHoursProxy.OffsetHours">
+            <summary>
+            偏移工作小时数 (该属性可为空,但有默认值)
+            获取工作小时.Misc.偏移工作小时数
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <!-- 对于成员“P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkHoursProxy.IsForward”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDatesProxy.WorkCalendar_SKey">
+            <summary>
+            工作日历 序列化Key属性。（传递跨组织序列列字段）
+            取工作日集合.Misc.工作日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDatesProxy.WorkCalendar">
+            <summary>
+            工作日历 (该属性可为空,且无默认值)
+            取工作日集合.Misc.工作日历
+            </summary>
+            <value>UFIDA.U9.Base.WorkCalendar.WorkCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDatesProxy.FromDate">
+            <summary>
+            起始日期 (该属性可为空,且无默认值)
+            取工作日集合.Misc.起始日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDatesProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            取工作日集合.Misc.结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayDTOsProxy.WorkDayDTOs">
+            <summary>
+            工作日DTO集合 (该属性可为空,且无默认值)
+            批量取工作日DTO操作.Misc.工作日DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.WorkCalendar.Proxy.GetWorkDayTimeDTOsProxy.WorkDayTimeDTOs">
+            <summary>
+            工作日时间DTO集合 (该属性可为空,且无默认值)
+            批量取上下班时间.Misc.工作日时间DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetOrgPrimarySOBProxy.Org_SKey">
+            <summary>
+            法人组织 序列化Key属性。（传递跨组织序列列字段）
+            求法人组织的主SOB.Misc.法人组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetOrgPrimarySOBProxy.Org">
+            <summary>
+            法人组织 (该属性可为空,且无默认值)
+            求法人组织的主SOB.Misc.法人组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBKeyFlexFieldsProxy.SOB_SKey">
+            <summary>
+            帐薄 序列化Key属性。（传递跨组织序列列字段）
+            求SOB的关键弹性域段.Misc.帐薄
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBKeyFlexFieldsProxy.SOB">
+            <summary>
+            帐薄 (该属性可为空,且无默认值)
+            求SOB的关键弹性域段.Misc.帐薄
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBKeyFlexStuctProxy.SOB_SKey">
+            <summary>
+            帐薄 序列化Key属性。（传递跨组织序列列字段）
+            获取SOB的弹性域结构.Misc.帐薄
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBKeyFlexStuctProxy.SOB">
+            <summary>
+            帐薄 (该属性可为空,且无默认值)
+            获取SOB的弹性域结构.Misc.帐薄
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodProxy.SOB_SKey">
+            <summary>
+            帐薄 序列化Key属性。（传递跨组织序列列字段）
+            获取SOB会计期间.Misc.帐薄
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodProxy.SOB">
+            <summary>
+            帐薄 (该属性可为空,且无默认值)
+            获取SOB会计期间.Misc.帐薄
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodProxy.Date">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            获取SOB会计期间.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetKeyFlexFieldIsUsedProxy.KeyFlexFieldStru_SKey">
+            <summary>
+            属性 序列化Key属性。（传递跨组织序列列字段）
+            根据弹性域结构获取SOB.Misc.属性
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetKeyFlexFieldIsUsedProxy.KeyFlexFieldStru">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            根据弹性域结构获取SOB.Misc.属性
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.CompileSobAPProxy.AC_SKey">
+            <summary>
+            待编译的会计日历 序列化Key属性。（传递跨组织序列列字段）
+            编译SOB会计期间.Misc.待编译的会计日历
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.CompileSobAPProxy.AC">
+            <summary>
+            待编译的会计日历 (该属性可为空,且无默认值)
+            编译SOB会计期间.Misc.待编译的会计日历
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountCalendar</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.CompileSobAPProxy.Year">
+            <summary>
+            年号 (该属性可为空,但有默认值)
+            编译SOB会计期间.Misc.年号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.CompileSobAPProxy.SOB_SKey">
+            <summary>
+            待编译的SOB 序列化Key属性。（传递跨组织序列列字段）
+            编译SOB会计期间.Misc.待编译的SOB
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.CompileSobAPProxy.SOB">
+            <summary>
+            待编译的SOB (该属性可为空,且无默认值)
+            编译SOB会计期间.Misc.待编译的SOB
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataBySobIDProxy.SOBID">
+            <summary>
+            帐簿ID (该属性可为空,但有默认值)
+            依据SobID获得SOB.Misc.帐簿ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetAccountQulifierSetDTOProxy.SOBKey_SKey">
+            <summary>
+            帐簿 序列化Key属性。（传递跨组织序列列字段）
+            取得科目弹性域段限定.Misc.帐簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetAccountQulifierSetDTOProxy.SOBKey">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            取得科目弹性域段限定.Misc.帐簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodsByYearProxy.SOB_SKey">
+            <summary>
+            帐薄 序列化Key属性。（传递跨组织序列列字段）
+            获取某一年度的SOB会计期间.Misc.帐薄
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodsByYearProxy.SOB">
+            <summary>
+            帐薄 (该属性可为空,且无默认值)
+            获取某一年度的SOB会计期间.Misc.帐薄
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodsByYearProxy.Year">
+            <summary>
+            会计年度　 (该属性可为空,但有默认值)
+            获取某一年度的SOB会计期间.Misc.会计年度　
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountPeriodsByYearProxy.IsIncludeAdjustedPeriod">
+            <summary>
+            调整期 (该属性可为空,但有默认值)
+            获取某一年度的SOB会计期间.Misc.调整期
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataByStructProxy.AccountStruc_SKey">
+            <summary>
+            科目结构 序列化Key属性。（传递跨组织序列列字段）
+            依据科目结构获取SOBUI数据.Misc.科目结构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataByStructProxy.AccountStruc">
+            <summary>
+            科目结构 (该属性可为空,且无默认值)
+            依据科目结构获取SOBUI数据.Misc.科目结构
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.KeyFlexField.KeyFlexFieldStru</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataByStructProxy.ExcludedSOB_SKey">
+            <summary>
+            待除掉的SOB 序列化Key属性。（传递跨组织序列列字段）
+            依据科目结构获取SOBUI数据.Misc.待除掉的SOB
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataByStructProxy.ExcludedSOB">
+            <summary>
+            待除掉的SOB (该属性可为空,且无默认值)
+            依据科目结构获取SOBUI数据.Misc.待除掉的SOB
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSobUIDataByStructProxy.IsExcludedInputSOB">
+            <summary>
+            是否排除输入的SOB (该属性可为空,但有默认值)
+            依据科目结构获取SOBUI数据.Misc.是否排除输入的SOB
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetMaxClosedPeriodNumberInPrimaryAndInnerSOBProxy.PrimarySOBKey_SKey">
+            <summary>
+            SOB 序列化Key属性。（传递跨组织序列列字段）
+            取最大已经关闭的期间号.Misc.SOB
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetMaxClosedPeriodNumberInPrimaryAndInnerSOBProxy.PrimarySOBKey">
+            <summary>
+            SOB (该属性可为空,且无默认值)
+            取最大已经关闭的期间号.Misc.SOB
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAPYearListProxy.SOBKey_SKey">
+            <summary>
+            SOBKey 序列化Key属性。（传递跨组织序列列字段）
+            取帐簿会计期间年度集合.Misc.SOBKey
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAPYearListProxy.SOBKey">
+            <summary>
+            SOBKey (该属性可为空,且无默认值)
+            取帐簿会计期间年度集合.Misc.SOBKey
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.ConfirmAdjustSOBStruProxy.SOBAccountStru_SKey">
+            <summary>
+            待调整的结构子表 序列化Key属性。（传递跨组织序列列字段）
+            SOB结构调整确认.Misc.待调整的结构子表
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.ConfirmAdjustSOBStruProxy.SOBAccountStru">
+            <summary>
+            待调整的结构子表 (该属性可为空,且无默认值)
+            SOB结构调整确认.Misc.待调整的结构子表
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountStructure</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountStruByYearProxy.SOB_SKey">
+            <summary>
+            帐簿 序列化Key属性。（传递跨组织序列列字段）
+            按帐簿和年度取帐簿科目结构.Misc.帐簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountStruByYearProxy.SOB">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            按帐簿和年度取帐簿科目结构.Misc.帐簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.SOB.Proxy.GetSOBAccountStruByYearProxy.Year">
+            <summary>
+            年度 (该属性可为空,但有默认值)
+            按帐簿和年度取帐簿科目结构.Misc.年度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertNumberBPProxy.Source">
+            <summary>
+            数字 (该属性可为空,但有默认值)
+            转换数字.Misc.数字
+            </summary>
+            <value>System.Double</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertNumberBPProxy.Lang">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            转换数字.Misc.语言
+            </summary>
+            <value>UFIDA.U9.Base.Language.Language</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertCurrencyBPProxy.Source">
+            <summary>
+            货币 (该属性可为空,但有默认值)
+            转换货币.Misc.货币
+            </summary>
+            <value>System.Double</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertCurrencyBPProxy.Lang">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            转换货币.Misc.语言
+            </summary>
+            <value>UFIDA.U9.Base.Language.Language</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertTimeBPProxy.Source">
+            <summary>
+            时间 (该属性可为空,但有默认值)
+            转换时间.Misc.时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertTimeBPProxy.Lang">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            转换时间.Misc.语言
+            </summary>
+            <value>UFIDA.U9.Base.Language.Language</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertShortDateBPProxy.Source">
+            <summary>
+            日期 (该属性可为空,但有默认值)
+            转换短日期.Misc.日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertShortDateBPProxy.Lang">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            转换短日期.Misc.语言
+            </summary>
+            <value>UFIDA.U9.Base.Language.Language</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertLongDateBPProxy.Source">
+            <summary>
+            日期 (该属性可为空,但有默认值)
+            转换长日期.Misc.日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.ConvertLongDateBPProxy.Lang">
+            <summary>
+            语言 (该属性可为空,且无默认值)
+            转换长日期.Misc.语言
+            </summary>
+            <value>UFIDA.U9.Base.Language.Language</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetNumberFormatBPProxy.NumFormat">
+            <summary>
+            数字格式 (该属性可为空,且无默认值)
+            获取数字货币格式操作.Misc.数字格式
+            </summary>
+            <value>UFIDA.U9.Base.Format.NumberFormat</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetNumberFormatBPProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            获取数字货币格式操作.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetNumberFormatBPProxy.CurrFormat">
+            <summary>
+            货币格式 (该属性可为空,且无默认值)
+            获取数字货币格式操作.Misc.货币格式
+            </summary>
+            <value>UFIDA.U9.Base.Format.CurrencyFormat</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetDateFormatBPProxy.DateFormat">
+            <summary>
+            日期格式 (该属性可为空,且无默认值)
+            获取日期时间格式操作.Misc.日期格式
+            </summary>
+            <value>UFIDA.U9.Base.Format.DateFormat</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetDateFormatBPProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            获取日期时间格式操作.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetDateFormatBPProxy.IsDate">
+            <summary>
+            获取日期格式 (该属性可为空,但有默认值)
+            获取日期时间格式操作.Misc.获取日期格式
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetDateFormatBPProxy.TimeFormat">
+            <summary>
+            时间格式 (该属性可为空,且无默认值)
+            获取日期时间格式操作.Misc.时间格式
+            </summary>
+            <value>UFIDA.U9.Base.Format.TimeFormat</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.Numeric">
+            <summary>
+            数据类型示例数据 (该属性可为空,但有默认值)
+            获取例子格式.Misc.数据类型示例数据
+            </summary>
+            <value>System.Double</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.DateTime">
+            <summary>
+            日期时间示例数据 (该属性可为空,且无默认值)
+            获取例子格式.Misc.日期时间示例数据
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.NumericID">
+            <summary>
+            数字格式 (该属性可为空,但有默认值)
+            获取例子格式.Misc.数字格式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.CurrencyID">
+            <summary>
+            金额格式 (该属性可为空,但有默认值)
+            获取例子格式.Misc.金额格式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.DateID">
+            <summary>
+            日期格式 (该属性可为空,但有默认值)
+            获取例子格式.Misc.日期格式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Language.Proxy.GetFormatSamplesProxy.TimeID">
+            <summary>
+            时间格式 (该属性可为空,但有默认值)
+            获取例子格式.Misc.时间格式
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.RefQueryBPProxy.EntityFullname">
+            <summary>
+            查询的实体全名 (该属性可为空,且无默认值)
+            RefQueryBP.Misc.查询的实体全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.EnumQueryBPProxy.EntityFullname">
+            <summary>
+            查询的实体全名 (该属性可为空,且无默认值)
+            EnumQueryBP.Misc.查询的实体全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.EntityBatchDeleteProxy.EntityIDs">
+            <summary>
+            实体集合 (该属性可为空,且无默认值)
+            实体批删除.Misc.实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.EntityBatchDeleteProxy.EntityTypeFullName">
+            <summary>
+            实体类型 (该属性可为空,且无默认值)
+            实体批删除.Misc.实体类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.EntityDeleteProxy.Entity">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            实体删除.Misc.实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.EntityDeleteProxy.SysVersion">
+            <summary>
+            属性 (该属性可为空,但有默认值)
+            实体删除.Misc.属性
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetOptionalFeatureProxy.OptionalFeatureDTO">
+            <summary>
+            可选配特征DTO (该属性可为空,且无默认值)
+            取可选配特征.Misc.可选配特征DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetHideMenusProxy.Application">
+            <summary>
+            应用ID (该属性可为空,但有默认值)
+            依据应用获取隐藏菜单列表.Misc.应用ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.CommonEntityQueryBPProxy.QueryDTO">
+            <summary>
+            查询DTO (该属性可为空,且无默认值)
+            通用实体查询操作.Misc.查询DTO
+            </summary>
+            <value>UFIDA.U9.Base.Util.CommonEntityQueryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.CBO4CRMByJobBPProxy.XmlData">
+            <summary>
+            传给CRM的XML数据 (该属性可为空,且无默认值)
+            CRM异步调用接口.Misc.传给CRM的XML数据
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.CBO4CRMByJobBPProxy.OrgCode">
+            <summary>
+            CRM组织编码 (该属性可为空,且无默认值)
+            CRM异步调用接口.Misc.CRM组织编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.CBO4CRMByJobBPProxy.HostName">
+            <summary>
+            CRM主机名 (该属性可为空,且无默认值)
+            CRM异步调用接口.Misc.CRM主机名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrganizationsByUserBPProxy.UserId">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            获得某用户关联组织字典集合.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.UserCode">
+            <summary>
+            用户账号 (该属性可为空,且无默认值)
+            登录检查操作.Misc.用户账号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.Password">
+            <summary>
+            密码 (该属性可为空,且无默认值)
+            登录检查操作.Misc.密码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.OrganizationId">
+            <summary>
+            组织标识 (该属性可为空,但有默认值)
+            登录检查操作.Misc.组织标识
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.LanguageCode">
+            <summary>
+            语言编码 (该属性可为空,且无默认值)
+            登录检查操作.Misc.语言编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.IP">
+            <summary>
+            IP地址 (该属性可为空,且无默认值)
+            登录检查操作.Misc.IP地址
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoginBPProxy.EnterpriseId">
+            <summary>
+            企业标识 (该属性可为空,但有默认值)
+            登录检查操作.Misc.企业标识
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.EncryptBPProxy.Source">
+            <summary>
+            源 (该属性可为空,且无默认值)
+            加密(MD5哈希).Misc.源
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.CheckPwdIsValidBPProxy.Source">
+            <summary>
+            源 (该属性可为空,且无默认值)
+            密码健壮性性检查.Misc.源
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserByIdBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            通过ID获取用户操作.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.ChangePassWordBPProxy.PassWord">
+            <summary>
+            用户密码 (该属性可为空,且无默认值)
+            更改用户密码.Misc.用户密码
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.UserPassWordDTObject</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserRoleListBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            取得当前用户的角色列表.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserRoleListBPProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            取得当前用户的角色列表.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetAppByUserOrgBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            根据用户和组织的ID返回用户所属的APP.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetAppByUserOrgBPProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            根据用户和组织的ID返回用户所属的APP.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetDefaultLanugageByUserProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            获取用户的登录语言.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetDefaultLanugageByUserProxy.UserCode">
+            <summary>
+            用户编码 (该属性可为空,且无默认值)
+            获取用户的登录语言.Misc.用户编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetDefaultLanugageByUserProxy.UserName">
+            <summary>
+            用户名 (该属性可为空,且无默认值)
+            获取用户的登录语言.Misc.用户名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrgByUserIDBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            返回用户所在的组织ID列表.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserOrgIDByRoleBPProxy.RoleID">
+            <summary>
+            角色ID (该属性可为空,且无默认值)
+            根据角色得到用户组织的ID列表.Misc.角色ID
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.StopRoleFromUserOrgRoleBPProxy.OrgID">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            由于组织停用导致用户组织角色关系取消.Misc.属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.StopRoleFromUserOrgRoleBPProxy.AppID">
+            <summary>
+            属性1 (该属性可为空,且无默认值)
+            由于组织停用导致用户组织角色关系取消.Misc.属性1
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.LoadContactInfoBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            读取联系人信息.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SaveContactInfoBPProxy.ContactInfo">
+            <summary>
+            联系人信息 (该属性可为空,且无默认值)
+            保存联系人信息.Misc.联系人信息
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.ContactInfoDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SaveContactInfoBPProxy.UserID">
+            <summary>
+            UserID (该属性可为空,但有默认值)
+            保存联系人信息.Misc.UserID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrgCodeByIDBPProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            根据组织ID获得编码.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetPortalUserProxy.UserCode">
+            <summary>
+            用户编号 (该属性可为空,且无默认值)
+            获取用户门户相关信息.Misc.用户编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetPortalUserProxy.OrgID">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            获取用户门户相关信息.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetPortalUserCountProxy.UserCode">
+            <summary>
+            用户编号 (该属性可为空,且无默认值)
+            获取门户用户数量信息.Misc.用户编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SetUserOrgRoleForHRProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            岗位对应的角色和用户组织关联起来.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SetUserOrgRoleForHRProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            岗位对应的角色和用户组织关联起来.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SetUserOrgRoleForHRProxy.Roles">
+            <summary>
+            角色ID列表 (该属性可为空,且无默认值)
+            岗位对应的角色和用户组织关联起来.Misc.角色ID列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.DelUserOrgRoleForHRProxy.UserID">
+            <summary>
+            用户 (该属性可为空,但有默认值)
+            删除用户组织角色关系.Misc.用户
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.DelUserOrgRoleForHRProxy.OrgID">
+            <summary>
+            组织 (该属性可为空,但有默认值)
+            删除用户组织角色关系.Misc.组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.DelUserOrgRoleForHRProxy.Roles">
+            <summary>
+            角色列表 (该属性可为空,且无默认值)
+            删除用户组织角色关系.Misc.角色列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrgByIDProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            根据组织ID获取组织信息.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserOrgRoleCountOperationProxy.OrgID">
+            <summary>
+            属性 (该属性可为空,但有默认值)
+            获取用户组织和用户组织角色数量.Misc.属性
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SaveUserOrgRoleBPProxy.UserOrgRoles">
+            <summary>
+            用户组织角色集合 (该属性可为空,且无默认值)
+            保存用户组织角色.Misc.用户组织角色集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserOrgByOrgRoleProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            根据组织角色获取用户组织.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetUserOrgByOrgRoleProxy.RoleID">
+            <summary>
+            角色ID (该属性可为空,但有默认值)
+            根据组织角色获取用户组织.Misc.角色ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.RoleDelUserProxy.UserOrgList">
+            <summary>
+            用户组织列表 (该属性可为空,且无默认值)
+            删除分配角色的用户.Misc.用户组织列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.RoleDelUserProxy.RoleID">
+            <summary>
+            角色ID (该属性可为空,但有默认值)
+            删除分配角色的用户.Misc.角色ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SaveUserOrgBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            保存用户组织.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.SaveUserOrgBPProxy.OrgList">
+            <summary>
+            组织列表 (该属性可为空,且无默认值)
+            保存用户组织.Misc.组织列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrgIDListByUIDBPProxy.UserID">
+            <summary>
+            用户ID (该属性可为空,但有默认值)
+            获取组织列表.Misc.用户ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetOrgsByUserCodeProxy.UserCode">
+            <summary>
+            用户 (该属性可为空,且无默认值)
+            获得某用户关联组织集合.Misc.用户
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetDefaultLanByOrgBPProxy.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            组织获取默认语言.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.GetDefaultLanByOrgBPProxy.Org">
+            <summary>
+            组织机构 (该属性可为空,且无默认值)
+            组织获取默认语言.Misc.组织机构
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.BatchEnableUserBPProxy.UserKeyList_SKey">
+            <summary>
+            用户Key列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.BatchEnableUserBPProxy.UserKeyList">
+            <summary>
+            用户Key列表 (该属性可为空,且无默认值)
+            批量启用或停用用户.Misc.用户Key列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UserRole.Proxy.BatchEnableUserBPProxy.Enable">
+            <summary>
+            是否启用 (该属性可为空,但有默认值)
+            批量启用或停用用户.Misc.是否启用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetUOMRonudProxy.UOM_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            获取计量单位的舍入信息操作.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetUOMRonudProxy.UOM">
+            <summary>
+            计量单位 (该属性可为空,且无默认值)
+            获取计量单位的舍入信息操作.Misc.计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetBaseUOMProxy.UOMKey_SKey">
+            <summary>
+            计量单位Key 序列化Key属性。（传递跨组织序列列字段）
+            获取计量单位的副单位.Misc.计量单位Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetBaseUOMProxy.UOMKey">
+            <summary>
+            计量单位Key (该属性可为空,且无默认值)
+            获取计量单位的副单位.Misc.计量单位Key
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetBaseUOMByClassProxy.UOMClass">
+            <summary>
+            计量单位组 (该属性可为空,但有默认值)
+            取计量单位组的基准计量单位.Misc.计量单位组
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOMClassEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetUOMRefByCodeProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            获得计量单位参照信息.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetNewBaseUOMProxy.UOMKey_SKey">
+            <summary>
+            计量单位的Key 序列化Key属性。（传递跨组织序列列字段）
+            获取计量单位的基准计量单位.Misc.计量单位的Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.GetNewBaseUOMProxy.UOMKey">
+            <summary>
+            计量单位的Key (该属性可为空,且无默认值)
+            获取计量单位的基准计量单位.Misc.计量单位的Key
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgRefProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,但有默认值)
+            取登陆组织参照信息.Misc.组织ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgWorkCalendarInfoProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取组织的工作日历信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgWorkCalendarInfoProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取组织的工作日历信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgInfoProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取组织信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgInfoProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取组织信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetChildOrgsProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取下级组织.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetChildOrgsProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取下级组织.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetChildOrgsProxy.OrgHierachyTypes">
+            <summary>
+            上下级关系类型 (该属性可为空,但有默认值)
+            取下级组织.Misc.上下级关系类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetChildOrgsProxy.IsIncludeSelf">
+            <summary>
+            是否包含组织本身 (该属性可为空,但有默认值)
+            取下级组织.Misc.是否包含组织本身
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetOrgsByPropertyProxy.OrgRelativeType">
+            <summary>
+            关系类型 (该属性可为空,但有默认值)
+            按照属性去组织列表.Misc.关系类型
+            </summary>
+            <value>UFIDA.U9.Base.Organization.OrgHierachyTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetAllChildOrgBpProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取所有下级组织.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetAllChildOrgBpProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取所有下级组织.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetAllChildOrgBpProxy.OrgHierachyTypes">
+            <summary>
+            垂直关系 (该属性可为空,且无默认值)
+            取所有下级组织.Misc.垂直关系
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Organization.Proxy.GetAllChildOrgBpProxy.Condition">
+            <summary>
+            查询条件 (该属性可为空,且无默认值)
+            取所有下级组织.Misc.查询条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.ValueSet.Proxy.GetValuesProxy.ValueSetDef_SKey">
+            <summary>
+            值集 序列化Key属性。（传递跨组织序列列字段）
+            取值集值.Misc.值集
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.ValueSet.Proxy.GetValuesProxy.ValueSetDef">
+            <summary>
+            值集 (该属性可为空,且无默认值)
+            取值集值.Misc.值集
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.ValueSet.ValueSetDef</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.ValueSet.Proxy.GetValuesProxy.QueryCondition">
+            <summary>
+            过滤条件(可以设置取值集值的过滤条件，不设置时取全部值集值。) (该属性可为空,且无默认值)
+            取值集值.Misc.过滤条件(可以设置取值集值的过滤条件，不设置时取全部值集值。)
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.ValueSet.Proxy.GetDefineValueInfoBPProxy.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            取自定义依赖值.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.FlexField.ValueSet.Proxy.GetValueSetInfoBPProxy.ValueSetID">
+            <summary>
+            ValueSetID (该属性可为空,但有默认值)
+            取值集信息.Misc.ValueSetID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Application.Proxy.GetAppByEntityFullNameProxy.EntityFullName">
+            <summary>
+            实体名 (该属性可为空,且无默认值)
+            获取实体所属应用.Misc.实体名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Application.Proxy.GetAppByPageProxy.PageURI">
+            <summary>
+            页面URI (该属性可为空,且无默认值)
+            获取页面所属应用.Misc.页面URI
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Application.Proxy.AppIsEnabledProxy.AppCode">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            判断应用是否启用.Misc.应用
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Application.Proxy.AppIsEnabledProxy.OrgID">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            判断应用是否启用.Misc.组织
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetEntityNameProxy.EntityFullNames">
+            <summary>
+            实体全名 (该属性可为空,且无默认值)
+            根据实体全名获取ID和Name.Misc.实体全名
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetEntityMetadataProxy.EntityFullName">
+            <summary>
+            实体名 (该属性可为空,且无默认值)
+            获取实体元数据.Misc.实体名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetEntityMetadataProxy.Depth">
+            <summary>
+            层 (该属性可为空,但有默认值)
+            获取实体元数据.Misc.层
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetEntityInfoByAttributeCodeProxy.AttributeCodes">
+            <summary>
+            属性编码串 (该属性可为空,且无默认值)
+            根据属性编码获得实体元数据.Misc.属性编码串
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetEntityInfoByAttributeCodeProxy.EntityFullName">
+            <summary>
+            实体名　 (该属性可为空,且无默认值)
+            根据属性编码获得实体元数据.Misc.实体名　
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetAttributeTreeRefDataProxy.EntityFullName">
+            <summary>
+            实体名 (该属性可为空,且无默认值)
+            获取属性树参照数据.Misc.实体名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetAttributeTreeRefDataProxy.Level">
+            <summary>
+            层次 (该属性可为空,但有默认值)
+            获取属性树参照数据.Misc.层次
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetKFFReferenceProxy.StructID">
+            <summary>
+            编码结构ID (该属性可为空,但有默认值)
+            获得关键性弹性域特殊参照数据.Misc.编码结构ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetKFFReferenceProxy.RefType">
+            <summary>
+            参照类型 (该属性可为空,且无默认值)
+            获得关键性弹性域特殊参照数据.Misc.参照类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.DelInfoFromListBPProxy.EntityFullName">
+            <summary>
+            实体全名 (该属性可为空,且无默认值)
+            列表中删除选择项操作.Misc.实体全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.DelInfoFromListBPProxy.MainID">
+            <summary>
+            主ID集合 (该属性可为空,且无默认值)
+            列表中删除选择项操作.Misc.主ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetExpandEnumDataBPProxy.EnumFullName">
+            <summary>
+            枚举全名 (该属性可为空,且无默认值)
+            获取可扩展枚举数据.Misc.枚举全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Util.Proxy.GetExpandEnumDataBPProxy.Value">
+            <summary>
+            枚举值 (该属性可为空,且无默认值)
+            获取可扩展枚举数据.Misc.枚举值
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.GetMetaDataBPProxy.EntityFullName">
+            <summary>
+            实体全称 (该属性可为空,且无默认值)
+            取元数据操作.Misc.实体全称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.GetMetaDataBPProxy.Level">
+            <summary>
+            级数 (该属性可为空,但有默认值)
+            取元数据操作.Misc.级数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.GetMetaDataBPProxy.IsAAI">
+            <summary>
+            AAI 使用 (该属性可为空,但有默认值)
+            取元数据操作.Misc.AAI 使用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.GetFunctionBPProxy.FunctionCategory">
+            <summary>
+            函数类别 (该属性可为空,且无默认值)
+            取函数.Misc.函数类别
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertCodeToNameBPProxy.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            转换成名称.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertCodeToNameBPProxy.IsAAI">
+            <summary>
+            IsAAI (该属性可为空,但有默认值)
+            转换成名称.Misc.IsAAI
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertCodeToNameBPProxy.EntityFullName">
+            <summary>
+            EntityFullName (该属性可为空,且无默认值)
+            转换成名称.Misc.EntityFullName
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertNameToCodeBPProxy.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            转换成编码.Misc.名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertNameToCodeBPProxy.IsAAI">
+            <summary>
+            IsAAI (该属性可为空,但有默认值)
+            转换成编码.Misc.IsAAI
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.ConvertNameToCodeBPProxy.EntityFullName">
+            <summary>
+            EntityFullName (该属性可为空,且无默认值)
+            转换成编码.Misc.EntityFullName
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.GetEntityDisplayNameProxy.EntityFullName">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            取显示名称.Misc.名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.OQLIsValidateBPProxy.OQL">
+            <summary>
+            Oql语句 (该属性可为空,且无默认值)
+            校验OQL是否合法操作.Misc.Oql语句
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Expression.Helper.Proxy.OQLIsValidateBPProxy.EntityFullName">
+            <summary>
+            实体的FullName (该属性可为空,且无默认值)
+            校验OQL是否合法操作.Misc.实体的FullName
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckProvinceInCountryProxy.ProvinceID">
+            <summary>
+            省／自治区 (该属性可为空,但有默认值)
+            检查省／自治区是否在国家／地区中.Misc.省／自治区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckProvinceInCountryProxy.CountryID">
+            <summary>
+            国家／地区 (该属性可为空,但有默认值)
+            检查省／自治区是否在国家／地区中.Misc.国家／地区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCountyInCityProxy.CountyID">
+            <summary>
+            区县 (该属性可为空,但有默认值)
+            检查区县是否在城市中.Misc.区县
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCountyInCityProxy.CityID">
+            <summary>
+            城市 (该属性可为空,但有默认值)
+            检查区县是否在城市中.Misc.城市
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCountyInCityProxy.ProvinceID">
+            <summary>
+            省／自治区 (该属性可为空,但有默认值)
+            检查区县是否在城市中.Misc.省／自治区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCountyInCityProxy.CountryID">
+            <summary>
+            国家／地区 (该属性可为空,但有默认值)
+            检查区县是否在城市中.Misc.国家／地区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCityInProvinceProxy.CityID">
+            <summary>
+            城市 (该属性可为空,但有默认值)
+            检查城市是否在省／自治区中.Misc.城市
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCityInProvinceProxy.PrivinceID">
+            <summary>
+            省／自治区 (该属性可为空,但有默认值)
+            检查城市是否在省／自治区中.Misc.省／自治区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckCityInProvinceProxy.CountryID">
+            <summary>
+            国家／地区 (该属性可为空,但有默认值)
+            检查城市是否在省／自治区中.Misc.国家／地区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckPostCodeInCountyProxy.PostCodeID">
+            <summary>
+            邮政编码 (该属性可为空,但有默认值)
+            检查邮政编码是否符合区县.Misc.邮政编码
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckPostCodeInCountyProxy.CountyID">
+            <summary>
+            区县 (该属性可为空,但有默认值)
+            检查邮政编码是否符合区县.Misc.区县
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckPostCodeInCountyProxy.CityID">
+            <summary>
+            城市 (该属性可为空,但有默认值)
+            检查邮政编码是否符合区县.Misc.城市
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckPostCodeInCountyProxy.ProvinceID">
+            <summary>
+            省／自治区 (该属性可为空,但有默认值)
+            检查邮政编码是否符合区县.Misc.省／自治区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Location.Proxy.CheckPostCodeInCountyProxy.CountryID">
+            <summary>
+            国家／地区 (该属性可为空,但有默认值)
+            检查邮政编码是否符合区县.Misc.国家／地区
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.FromUOMKey_SKey">
+            <summary>
+            来源计量单位 序列化Key属性。（传递跨组织序列列字段）
+            转换数量.Misc.来源计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.FromUOMKey">
+            <summary>
+            来源计量单位 (该属性可为空,且无默认值)
+            转换数量.Misc.来源计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.ToUOMKey_SKey">
+            <summary>
+            目标计量单位 序列化Key属性。（传递跨组织序列列字段）
+            转换数量.Misc.目标计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.ToUOMKey">
+            <summary>
+            目标计量单位 (该属性可为空,且无默认值)
+            转换数量.Misc.目标计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.RatioFromUOMToBase">
+            <summary>
+            来源计量单位到其基准单位　的转化率 (该属性可为空,但有默认值)
+            转换数量.Misc.来源计量单位到其基准单位　的转化率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.RatioToUOMToBase">
+            <summary>
+            目标计量单位到其基准单位　的转化率 (该属性可为空,但有默认值)
+            转换数量.Misc.目标计量单位到其基准单位　的转化率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.RatioFromBaseUOMToToBaseUOM">
+            <summary>
+            来源计量单位的基准单位到目标计量单位的基准单位　的转化率 (该属性可为空,但有默认值)
+            转换数量.Misc.来源计量单位的基准单位到目标计量单位的基准单位　的转化率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertAmountProxy.Amount">
+            <summary>
+            待转换数量 (该属性可为空,但有默认值)
+            转换数量.Misc.待转换数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.UomKey_SKey">
+            <summary>
+            从计量单位 序列化Key属性。（传递跨组织序列列字段）
+            转换基准数量.Misc.从计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.UomKey">
+            <summary>
+            从计量单位 (该属性可为空,且无默认值)
+            转换基准数量.Misc.从计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.BaseUOMKey_SKey">
+            <summary>
+            基准计量单位 序列化Key属性。（传递跨组织序列列字段）
+            转换基准数量.Misc.基准计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.BaseUOMKey">
+            <summary>
+            基准计量单位 (该属性可为空,且无默认值)
+            转换基准数量.Misc.基准计量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.RatioToBase">
+            <summary>
+            计量单位到基准单位的转换率 (该属性可为空,但有默认值)
+            转换基准数量.Misc.计量单位到基准单位的转换率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.UOM.Proxy.ConvertBaseAmountProxy.Amount">
+            <summary>
+            待转换数量 (该属性可为空,但有默认值)
+            转换基准数量.Misc.待转换数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.AppPortal.Proxy.SavePortalOrgProxy.PortalOrgList">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            保存当前Portal下的组织操作.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Base.ReportBP.Proxy.GetEnumValueByNameBPProxy.EnumType">
+            <summary>
+            枚举类型 (该属性可为空,且无默认值)
+            获取枚举值BP.Misc.枚举类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.ReportBP.Proxy.GetEnumValueByNameBPProxy.ValueDisplayName">
+            <summary>
+            枚举值名称 (该属性可为空,且无默认值)
+            获取枚举值BP.Misc.枚举值名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.ReportBP.Proxy.GetEnumValueByNameBPProxy.SysMLFlag">
+            <summary>
+            多语言标记 (该属性可为空,且无默认值)
+            获取枚举值BP.Misc.多语言标记
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.RefrenceEntityDesc.Proxy.GetRefrenceEntityDescDTOProxy.EntityID">
+            <summary>
+            实体ID (该属性可为空,但有默认值)
+            获取引用实体描述表DTO.Misc.实体ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.RefrenceEntityDesc.Proxy.GetRefrenceEntityDescDTOProxy.EntityFullName">
+            <summary>
+            实体全名 (该属性可为空,且无默认值)
+            获取引用实体描述表DTO.Misc.实体全名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetPushToDocTypeByRuleProxy.ConditionValue">
+            <summary>
+            条件值 (该属性可为空,且无默认值)
+            由生单规则获取单据类型.Misc.条件值
+            </summary>
+            <value>UFIDA.U9.Base.Doc.PushToDocTypeConditionValueDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetPushToDocTypeUIDataProxy.OPath">
+            <summary>
+            过滤条件 (该属性可为空,且无默认值)
+            获取推单UI数据.Misc.过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetPushToDocTypeUIDataProxy.ConfigKey_SKey">
+            <summary>
+            生单配置 序列化Key属性。（传递跨组织序列列字段）
+            获取推单UI数据.Misc.生单配置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Base.Doc.Proxy.GetPushToDocTypeUIDataProxy.ConfigKey">
+            <summary>
+            生单配置 (该属性可为空,且无默认值)
+            获取推单UI数据.Misc.生单配置
+            </summary>
+            <value>UFIDA.U9.Base.Doc.PushToDocTypeConfig</value>
+        </member>
+        <member name="P:UFIDA.U9.Base.Personization.Proxy.GetDocPageParamsProxy.DocKey">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            获取特殊单据个性化专用参数.Misc.单据Key
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Cust.FJGX.SOInfoQueryBP</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOInfoQueryBP.PubBase.DataRowConverter">
+            <summary>
+                DataRow值转化器
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOInfoQueryBP.PubBase.DataRowConverter.IsDBNullOrEmpty(System.Data.DataRow,System.String)">
+            <summary>
+                DataRow字段是否为DBNull或string.Empty
+            </summary>
+            <param name="dataRow"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOInfoQueryBP.PubBase.DataRowConverter.IsDBNullOrEmpty(System.Object)">
+            <summary>
+                DataRow字段是否为DBNull或string.Empty
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO">
+            <summary>
+            SOHeadInfoQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.#ctor(System.Int64,System.String,System.DateTime,System.String,System.String,System.String,UFIDA.U9.CBO.HR.Operator.Operators.EntityKey,System.String,System.String,UFIDA.U9.CBO.HR.Department.Department.EntityKey,System.String,System.String,System.Int64,System.Decimal,System.String,System.String,UFIDA.U9.Base.Contact.Contact.EntityKey,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            SOHeadInfoQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_DocNo">
+            <summary>
+            单号 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_BusinessDate">
+            <summary>
+            单据日期 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.单据日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Customer_Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_Seller">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.业务员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_Seller_Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_SaleDepartment">
+            <summary>
+            部门 (该属性可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.部门
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Department.Department</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_SaleDepartment_Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_TotalMoneyAC">
+            <summary>
+            金额 (该属性可为空,但有默认值)
+            SOHeadInfoQryDTO.Misc.金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.CustomerContact_Contact_DefaultPhoneNum">
+            <summary>
+            电话 (该属性可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.电话
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.CustomerContact_Contact_DefaultMobilNum">
+            <summary>
+            手机 (该属性可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.手机
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.CustomerContact_Contact">
+            <summary>
+            负责人 (该属性不可为空,且无默认值)
+            SOHeadInfoQryDTO.Misc.负责人
+            </summary>
+            <value>UFIDA.U9.Base.Contact.Contact</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SumTotalMoney">
+            <summary>
+            合计金额 (该属性可为空,但有默认值)
+            SOHeadInfoQryDTO.Misc.合计金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.TotalShipMoney">
+            <summary>
+            累计出货金额 (该属性可为空,但有默认值)
+            SOHeadInfoQryDTO.Misc.累计出货金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SumTotalShipMoney">
+            <summary>
+            标准出货 (该属性可为空,但有默认值)
+            SOHeadInfoQryDTO.Misc.标准出货
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Customer_Name">
+            <summary>
+            名称
+            SOHeadInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.CustomerContact_Contact_Name">
+            <summary>
+            名称
+            SOHeadInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_Seller_Name">
+            <summary>
+            名称
+            SOHeadInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.SO_SaleDepartment_Name">
+            <summary>
+            名称
+            SOHeadInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_TypeName">
+            <summary>
+            SOHeadInfoQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_DocNo">
+            <summary>
+            单号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_BusinessDate">
+            <summary>
+            单据日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_Customer_Code">
+            <summary>
+            编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_Customer_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_CustomerContact_Contact_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_Seller">
+            <summary>
+            业务员的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_Seller_Code">
+            <summary>
+            编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_Seller_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_SaleDepartment">
+            <summary>
+            部门的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_SaleDepartment_Code">
+            <summary>
+            编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_SaleDepartment_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SO_TotalMoneyAC">
+            <summary>
+            金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_CustomerContact_Contact_DefaultPhoneNum">
+            <summary>
+            电话的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_CustomerContact_Contact_DefaultMobilNum">
+            <summary>
+            手机的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_CustomerContact_Contact">
+            <summary>
+            负责人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SumTotalMoney">
+            <summary>
+            合计金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_TotalShipMoney">
+            <summary>
+            累计出货金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.SOHeadInfoQryDTO.Res_SumTotalShipMoney">
+            <summary>
+            标准出货的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+                QueryBP partial
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBPImpementStrategy">
+            <summary>
+                Impement Implement
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+                分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+                缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+                开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+                是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+                基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+                参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOHeadInfoQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                这部份代码查询开发人员不要作修改
+                删除Do方法中的
+                throw new NotImplementedException();
+                在Do方法中直接加上一句:
+                return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO">
+            <summary>
+            SOLineInfoQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.#ctor(System.Int64,System.Int64,System.String,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.Decimal,System.Int32,System.Decimal,System.String,System.Int32,UFIDA.U9.Base.PropertyTypes.RoundTypeEnum,System.Int32,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            SOLineInfoQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_ItemInfo_ItemCode">
+            <summary>
+            料号 (该属性可为空,且无默认值)
+            SOLineInfoQryDTO.Misc.料号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_ItemInfo_ItemName">
+            <summary>
+            品名 (该属性可为空,且无默认值)
+            SOLineInfoQryDTO.Misc.品名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_ItemInfo_ItemID_SPECS">
+            <summary>
+            型号 (该属性可为空,且无默认值)
+            SOLineInfoQryDTO.Misc.型号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_FinallyPriceTC">
+            <summary>
+            单价 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.单价
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_OrderByQtyTU">
+            <summary>
+            数量 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_DocLineNo">
+            <summary>
+            行号 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.行号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_TotalMoneyTC">
+            <summary>
+            金额 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_ItemInfo_ItemID_DescFlexField_PrivateDescSeg5">
+            <summary>
+            包装数 (该属性可为空,且无默认值)
+            SOLineInfoQryDTO.Misc.包装数
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_TU_Round_Precision">
+            <summary>
+            销售单位_精度_精度 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.销售单位_精度_精度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_TU_Round_RoundType">
+            <summary>
+            销售单位_精度_舍入类型 (该属性不可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.销售单位_精度_舍入类型
+            </summary>
+            <value>UFIDA.U9.Base.PropertyTypes.RoundTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_TU_Round_RoundValue">
+            <summary>
+            销售单位_精度_舍入值 (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.销售单位_精度_舍入值
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.TotalShipQty">
+            <summary>
+            累计出货数量 (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.累计出货数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.TotalShipMoney">
+            <summary>
+            累计出货金额 (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.累计出货金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.AfterAdjustedMoney">
+            <summary>
+            调整后金额 (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.调整后金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.AfterAdjustedPrice">
+            <summary>
+            调整后单价 (该属性可为空,但有默认值)
+            SOLineInfoQryDTO.Misc.调整后单价
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_PU_Name">
+            <summary>
+            名称
+            SOLineInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_CU_Name">
+            <summary>
+            名称
+            SOLineInfoQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.SOLine_Memo">
+            <summary>
+            备注
+            SOLineInfoQryDTO.Misc.备注
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_TypeName">
+            <summary>
+            SOLineInfoQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_ItemInfo_ItemCode">
+            <summary>
+            料号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_ItemInfo_ItemName">
+            <summary>
+            品名的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_ItemInfo_ItemID_SPECS">
+            <summary>
+            型号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_PU_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_CU_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_FinallyPriceTC">
+            <summary>
+            单价的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_Memo">
+            <summary>
+            备注的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_OrderByQtyTU">
+            <summary>
+            数量的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_DocLineNo">
+            <summary>
+            行号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_TotalMoneyTC">
+            <summary>
+            金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_ItemInfo_ItemID_DescFlexField_PrivateDescSeg5">
+            <summary>
+            包装数的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_TU_Round_Precision">
+            <summary>
+            销售单位_精度_精度的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_TU_Round_RoundType">
+            <summary>
+            销售单位_精度_舍入类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_SOLine_TU_Round_RoundValue">
+            <summary>
+            销售单位_精度_舍入值的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_TotalShipQty">
+            <summary>
+            累计出货数量的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_TotalShipMoney">
+            <summary>
+            累计出货金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_AfterAdjustedMoney">
+            <summary>
+            调整后金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.SOLineInfoQryDTO.Res_AfterAdjustedPrice">
+            <summary>
+            调整后单价的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+            QueryBP partial 
+            </summary>	
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBPImpementStrategy">
+            <summary>
+                Impement Implement
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+                分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+                缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+                开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+                是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+                基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+                参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.SOLineInfoQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                这部份代码查询开发人员不要作修改
+                删除Do方法中的
+                throw new NotImplementedException();
+                在Do方法中直接加上一句:
+                return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

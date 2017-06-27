@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.AB.ABSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLBudgetCheckSVProxy.CheckBudgetDTOs">
+            <summary>
+            检查预算DTO集合 (该属性可为空,且无默认值)
+            总账预算检查服务.Misc.检查预算DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.ExeBudgetDTOs">
+            <summary>
+            执行预算DTO集合 (该属性可为空,且无默认值)
+            总账执行预算服务.Misc.执行预算DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            总账执行预算服务.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.DocMaker">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            总账执行预算服务.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.ExeType">
+            <summary>
+            执行类型 (该属性可为空,但有默认值)
+            总账执行预算服务.Misc.执行类型
+            </summary>
+            <value>UFIDA.U9.AB.Enums.BudgetExeTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.IsExecute">
+            <summary>
+            是否执行预算 (该属性可为空,但有默认值)
+            总账执行预算服务.Misc.是否执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.ISGLExecute">
+            <summary>
+            是否总账执行 (该属性可为空,但有默认值)
+            总账执行预算服务.Misc.是否总账执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetSVProxy.IsMessage">
+            <summary>
+            是否继续执行 (该属性可为空,但有默认值)
+            总账执行预算服务.Misc.是否继续执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.ExeBudgetDTOs">
+            <summary>
+            执行预算DTO集合 (该属性可为空,且无默认值)
+            总账执行预算检查服务.Misc.执行预算DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.ExeType">
+            <summary>
+            执行类型 (该属性可为空,但有默认值)
+            总账执行预算检查服务.Misc.执行类型
+            </summary>
+            <value>UFIDA.U9.AB.Enums.BudgetExeTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            总账执行预算检查服务.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.DocMaker">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            总账执行预算检查服务.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.IsExecute">
+            <summary>
+            是否执行预算 (该属性可为空,但有默认值)
+            总账执行预算检查服务.Misc.是否执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLExecuteBudgetCheckSVProxy.IsMessage">
+            <summary>
+            是否提示后执行 (该属性可为空,但有默认值)
+            总账执行预算检查服务.Misc.是否提示后执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.Account_SKey">
+            <summary>
+            会计科目 序列化Key属性。（传递跨组织序列列字段）
+            总账科目是否预算相关服务.Misc.会计科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.Account">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            总账科目是否预算相关服务.Misc.会计科目
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Account.Account</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            总账科目是否预算相关服务.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            总账科目是否预算相关服务.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.AccPeriod_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            总账科目是否预算相关服务.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GLAccountIsBudgetSVProxy.AccPeriod">
+            <summary>
+            会计期间 (该属性可为空,且无默认值)
+            总账科目是否预算相关服务.Misc.会计期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.CarryForwardExecutableMoneyOnPeriodChangeSVProxy.AccPeriod_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            期间状态改变结转可执行金额服务.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.CarryForwardExecutableMoneyOnPeriodChangeSVProxy.AccPeriod">
+            <summary>
+            会计期间 (该属性可为空,且无默认值)
+            期间状态改变结转可执行金额服务.Misc.会计期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            会计科目是否有预算专项服务.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            会计科目是否有预算专项服务.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.Year">
+            <summary>
+            年度 (该属性可为空,但有默认值)
+            会计科目是否有预算专项服务.Misc.年度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.Account_SKey">
+            <summary>
+            科目 序列化Key属性。（传递跨组织序列列字段）
+            会计科目是否有预算专项服务.Misc.科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.Account">
+            <summary>
+            科目 (该属性可为空,且无默认值)
+            会计科目是否有预算专项服务.Misc.科目
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Account.Account</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            会计科目是否有预算专项服务.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountIsBudgetSpecialSVProxy.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            会计科目是否有预算专项服务.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AutoCancelEncumbSVProxy.CancelDTOs">
+            <summary>
+            取消保留DTO (该属性可为空,且无默认值)
+            自动取消预算保留.Misc.取消保留DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GetBudgetYearStateSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            获取预算年度状态.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GetBudgetYearStateSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            获取预算年度状态.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GetBudgetYearStateSVProxy.Year">
+            <summary>
+            年度 (该属性可为空,但有默认值)
+            获取预算年度状态.Misc.年度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.ReverseAutoCancelEncumbSVProxy.DocID">
+            <summary>
+            应付处理单 (该属性可为空,但有默认值)
+            转回自动取消预算保留.Misc.应付处理单
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GenerateBudgetObjectDetailByAccountSVProxy.Account_SKey">
+            <summary>
+            科目 序列化Key属性。（传递跨组织序列列字段）
+            根据科目创建预算对象明细服务.Misc.科目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.GenerateBudgetObjectDetailByAccountSVProxy.Account">
+            <summary>
+            科目 (该属性可为空,且无默认值)
+            根据科目创建预算对象明细服务.Misc.科目
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Account.Account</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            批会计科目是否有预算专项服务.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            批会计科目是否有预算专项服务.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.Year">
+            <summary>
+            年度 (该属性可为空,但有默认值)
+            批会计科目是否有预算专项服务.Misc.年度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.Accounts_SKey">
+            <summary>
+            会计科目 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.Accounts">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            批会计科目是否有预算专项服务.Misc.会计科目
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.Currencys_SKey">
+            <summary>
+            币种 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.GLBudget.Proxy.AccountsIsBudgetSpecialSVProxy.Currencys">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            批会计科目是否有预算专项服务.Misc.币种
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveCheckEncumbDataSVProxy.DocEncumbCheckDTOs">
+            <summary>
+            单据行保留校验DTO集合 (该属性可为空,且无默认值)
+            单据保存校验保留数据服务.Misc.单据行保留校验DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocApproveBudgetEncumbSVProxy.DocLineIDs">
+            <summary>
+            单据行ID集合 (该属性可为空,且无默认值)
+            单据审核预算保留服务.Misc.单据行ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocApproveBudgetEncumbSVProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            单据审核预算保留服务.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocApproveBudgetEncumbSVProxy.DocMaker">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            单据审核预算保留服务.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocApproveBudgetEncumbSVProxy.SourceSys">
+            <summary>
+            来源系统 (该属性可为空,但有默认值)
+            单据审核预算保留服务.Misc.来源系统
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Enums.BudgetSourceSysEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocApproveBudgetEncumbSVProxy.IsMessage">
+            <summary>
+            是否继续执行 (该属性可为空,但有默认值)
+            单据审核预算保留服务.Misc.是否继续执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocLineDelEncumbSVProxy.DocLineIDs">
+            <summary>
+            单据行ID集合 (该属性可为空,且无默认值)
+            单据行删除预算保留服务.Misc.单据行ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocCancelApproveBudgetEncumbSVProxy.DocLineIDs">
+            <summary>
+            单据行ID集合 (该属性可为空,且无默认值)
+            单据取消审核预算保留服务.Misc.单据行ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocCancelApproveBudgetEncumbSVProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            单据取消审核预算保留服务.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocCancelApproveBudgetEncumbSVProxy.DocMaker">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            单据取消审核预算保留服务.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocCancelApproveBudgetEncumbSVProxy.SourceSys">
+            <summary>
+            来源系统 (该属性可为空,但有默认值)
+            单据取消审核预算保留服务.Misc.来源系统
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Enums.BudgetSourceSysEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.DocEncumbDTOs">
+            <summary>
+            单据保留DTO集合 (该属性可为空,且无默认值)
+            单据预算保留保存服务.Misc.单据保留DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.SysVer">
+            <summary>
+            单据版本 (该属性可为空,但有默认值)
+            单据预算保留保存服务.Misc.单据版本
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.LineID">
+            <summary>
+            业务单据行 (该属性可为空,但有默认值)
+            单据预算保留保存服务.Misc.业务单据行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            单据预算保留保存服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            单据预算保留保存服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSaveSVProxy.IsOnlyNew">
+            <summary>
+            是否只有新增 (该属性可为空,但有默认值)
+            单据预算保留保存服务.Misc.是否只有新增
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbLoadSVProxy.DocHeadIDs">
+            <summary>
+            单据头IDs (该属性可为空,且无默认值)
+            单据保留加载服务.Misc.单据头IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbLoadSVProxy.DocLineIDs">
+            <summary>
+            单据行IDs (该属性可为空,且无默认值)
+            单据保留加载服务.Misc.单据行IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbLoadSVProxy.DocType">
+            <summary>
+            单据类别 (该属性可为空,但有默认值)
+            单据保留加载服务.Misc.单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbLoadSVProxy.EnumVoucherDetailIDs">
+            <summary>
+            保留凭证明细IDs (该属性可为空,且无默认值)
+            单据保留加载服务.Misc.保留凭证明细IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbExecuteServiceProxy.DocEncumbInfo">
+            <summary>
+            单据预算保留执行信息 (该属性可为空,且无默认值)
+            单据预算保留执行服务.Misc.单据预算保留执行信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbCancelServiceProxy.DocEncumbInfo">
+            <summary>
+            单据预算保留取消信息 (该属性可为空,且无默认值)
+            单据预算保留取消服务.Misc.单据预算保留取消信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbCancelServiceProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            单据预算保留取消服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbCancelServiceProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            单据预算保留取消服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocEncumbCancelServiceProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            单据预算保留取消服务.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.PreDocEncumbLoadSVProxy.DocHeadIDs">
+            <summary>
+            单据头IDs (该属性可为空,且无默认值)
+            来源单据单据保留加载服务.Misc.单据头IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.PreDocEncumbLoadSVProxy.DocLineIDs">
+            <summary>
+            单据行IDs (该属性可为空,且无默认值)
+            来源单据单据保留加载服务.Misc.单据行IDs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.PreDocEncumbLoadSVProxy.DocType">
+            <summary>
+            单据类别 (该属性可为空,但有默认值)
+            来源单据单据保留加载服务.Misc.单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetDocLineEncumbExecutedSVProxy.DocLineID">
+            <summary>
+            单据行ID (该属性可为空,但有默认值)
+            取单据行是否执行保留.Misc.单据行ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetDocLineEncumbExecutedSVProxy.DocType">
+            <summary>
+            单据类别 (该属性可为空,但有默认值)
+            取单据行是否执行保留.Misc.单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            根据部门物料得到预算控制对象.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            根据部门物料得到预算控制对象.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            根据部门物料得到预算控制对象.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Deptment_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            根据部门物料得到预算控制对象.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Deptment">
+            <summary>
+            部门 (该属性可为空,且无默认值)
+            根据部门物料得到预算控制对象.Misc.部门
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Department.Department</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            根据部门物料得到预算控制对象.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.Project">
+            <summary>
+            项目 (该属性可为空,且无默认值)
+            根据部门物料得到预算控制对象.Misc.项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.OperatorUser_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            根据部门物料得到预算控制对象.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectByDepartmentAndItemSVProxy.OperatorUser">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            根据部门物料得到预算控制对象.Misc.业务员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetDocEncumbModeSVProxy.LineID">
+            <summary>
+            单表行ID (该属性可为空,但有默认值)
+            得到单据预算保留方式.Misc.单表行ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            得到预算控制对象.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            得到预算控制对象.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectSVProxy.Currency_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            得到预算控制对象.Misc.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectSVProxy.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            得到预算控制对象.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetBudgetControlObjectSVProxy.ExePhase">
+            <summary>
+            执行环节 (该属性可为空,但有默认值)
+            得到预算控制对象.Misc.执行环节
+            </summary>
+            <value>UFIDA.U9.AB.Enums.BudgetExePhaseEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.DocEncumbDTOs">
+            <summary>
+            单据保留DTO集合 (该属性可为空,且无默认值)
+            单据核准后的预算保留.Misc.单据保留DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            单据核准后的预算保留.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.DocMaker">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            单据核准后的预算保留.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.SourceSys">
+            <summary>
+            来源系统 (该属性可为空,但有默认值)
+            单据核准后的预算保留.Misc.来源系统
+            </summary>
+            <value>UFIDA.U9.CBO.FI.Enums.BudgetSourceSysEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.SysVer">
+            <summary>
+            单据行版本 (该属性可为空,但有默认值)
+            单据核准后的预算保留.Misc.单据行版本
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            单据核准后的预算保留.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BudgetEncumbAfterDocApprovedSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            单据核准后的预算保留.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.CheckDocLineExistBudgetDataSVProxy.DocLines">
+            <summary>
+            单据行 (该属性可为空,但有默认值)
+            检查单据行是否存在预算相关数据服务.Misc.单据行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetNextBudgetControlPeriodSVProxy.BudgetCtrlPeriod_SKey">
+            <summary>
+            预算控制周期 序列化Key属性。（传递跨组织序列列字段）
+            得到下个预算控制周期.Misc.预算控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetNextBudgetControlPeriodSVProxy.BudgetCtrlPeriod">
+            <summary>
+            预算控制周期 (该属性可为空,且无默认值)
+            得到下个预算控制周期.Misc.预算控制周期
+            </summary>
+            <value>UFIDA.U9.AB.ABControlScheme.BudgetControlPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.IsDocHasEncumbDataSVProxy.LineIDs">
+            <summary>
+            单据行列表 (该属性可为空,且无默认值)
+            单据行是否存在预算保留.Misc.单据行列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetNextBudgetControlPeriodCloneSVProxy.BudgetCtrlPeriod_SKey">
+            <summary>
+            预算控制周期 序列化Key属性。（传递跨组织序列列字段）
+            得到下个预算控制周期.Misc.预算控制周期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.GetNextBudgetControlPeriodCloneSVProxy.BudgetCtrlPeriod">
+            <summary>
+            预算控制周期 (该属性可为空,且无默认值)
+            得到下个预算控制周期.Misc.预算控制周期
+            </summary>
+            <value>UFIDA.U9.AB.ABControlScheme.BudgetControlPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSVProxy.AutoEncumbDTOs">
+            <summary>
+            自动保留DTOs (该属性可为空,且无默认值)
+            自动预算保留服务.Misc.自动保留DTOs
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSVProxy.DocType">
+            <summary>
+            单据类别 (该属性可为空,但有默认值)
+            自动预算保留服务.Misc.单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocBudgetEncumbSVProxy.PaymenExeComfirmMoneyDTOs">
+            <summary>
+            付款执行应付确认金额DTOs (该属性可为空,且无默认值)
+            自动预算保留服务.Misc.付款执行应付确认金额DTOs
+            </summary>
+            <value>UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.MatchClueDelEncumbSVProxy.MatchClues">
+            <summary>
+            匹配明细线索集合 (该属性可为空,且无默认值)
+            删除匹配行自动保留服务.Misc.匹配明细线索集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveEncumbSVProxy.DeleteLines">
+            <summary>
+            删除行ID (该属性可为空,且无默认值)
+            单据保存保留服务.Misc.删除行ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveEncumbSVProxy.MatchLines">
+            <summary>
+            匹配行ID (该属性可为空,且无默认值)
+            单据保存保留服务.Misc.匹配行ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveEncumbSVProxy.AutoEncumbs">
+            <summary>
+            自动保留集合 (该属性可为空,且无默认值)
+            单据保存保留服务.Misc.自动保留集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveEncumbSVProxy.DocType">
+            <summary>
+            单据类别 (该属性可为空,但有默认值)
+            单据保存保留服务.Misc.单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.DocSaveEncumbSVProxy.PaymenExeComfirmMoneyDTOs">
+            <summary>
+            付款执行应付确认金额DTOs (该属性可为空,且无默认值)
+            单据保存保留服务.Misc.付款执行应付确认金额DTOs
+            </summary>
+            <value>UFIDA.U9.AB.BusinessBudget.PaymenExeComfirmMoneyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.BusinessBudget.Proxy.BatchGetBudgetControlObjectByDepartmentAndItemSVProxy.BatchInputDTO">
+            <summary>
+            批量录入DTO集合 (该属性可为空,且无默认值)
+            批量得到预算控制对象服务.Misc.批量录入DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.AAIBudget.Proxy.AAIExecuteBudgetSVProxy.AAIBudgetInterfaceDTOs">
+            <summary>
+            AAI预算接口DTO集合 (该属性可为空,且无默认值)
+            AAI执行预算服务.Misc.AAI预算接口DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AB.AAIBudget.Proxy.AAIExecuteBudgetSVProxy.IsMessage">
+            <summary>
+            是否继续执行 (该属性可为空,但有默认值)
+            AAI执行预算服务.Misc.是否继续执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.AAIBudget.Proxy.AAIExecuteBudgetSVProxy.TaskNum">
+            <summary>
+            任务号 (该属性可为空,且无默认值)
+            AAI执行预算服务.Misc.任务号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AB.AAIBudget.Proxy.AAICheckImpropriateSVProxy.AAIBudgeInterfaceDTOs">
+            <summary>
+            AAI预算接口DTO (该属性可为空,且无默认值)
+            AAI检查占用服务.Misc.AAI预算接口DTO
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

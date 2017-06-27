@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e" name="RcvTransLRef" displayName="库存杂收单行" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.XMJL.UI.RcvTransLRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="2e8339ab-45c1-4853-947c-4a92f995b68d" name="cRef" displayName="cRef" description="" help="库存杂收单行" refEntityId="74f9f565-0c5d-4506-9bc1-b62b31f9d279" refEntityName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="506875e6-b38e-4c1a-879a-c40f6bb0a29c" name="ID" displayName="ID" description="" help="库存杂收单行.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:ID" displayNameIndexStr="2" />
+        <RefField id="e69d826a-75d9-436b-822a-14540b057842" name="DocLineNo" displayName="行号" description="" help="库存杂收单行.基本信息.行号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:DocLineNo" displayNameIndexStr="2" />
+        <RefField id="3766d274-8608-4730-b182-4a3e4e120264" name="ItemInfo_ItemCode" displayName="料号" description="" help="料品信息.Misc.料号" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:ItemInfo.ItemCode" displayNameIndexStr="2" />
+        <RefField id="c13987cb-3f3e-4b91-90da-0db460c63052" name="ItemInfo_ItemName" displayName="品名" description="" help="料品信息.Misc.品名" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:ItemInfo.ItemName" displayNameIndexStr="2" />
+        <RefField id="195fb109-6bd5-4207-badf-044abda613e2" name="MiscRcvTrans_DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:MiscRcvTrans.DocNo" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="4fb5f97e-3d31-4314-bcb0-66f660931618" name="MiscRcvTrans_DocNo" displayName="单号" description="" help="单据基类.Misc.单号" direction="0" sequence="0" refAttributeName="UFIDA.U9.InvDoc.MiscRcv.MiscRcvTransL:MiscRcvTrans.DocNo" />
+      </OrderFields>
+      <Filter>UFIDA::U9::InvDoc::MiscRcv::MiscRcvTransL.Org.ID=#Context.OrgID#</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

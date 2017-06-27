@@ -1,0 +1,1686 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.MO.MOCostSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimateMOCostProxy.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            预估生产订单成本.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimateMOCostProxy.MOKey">
+            <summary>
+            生产订单 (该属性可为空,且无默认值)
+            预估生产订单成本.Misc.生产订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimateMOCostProxy.EstimateDate">
+            <summary>
+            预估日期 (该属性可为空,且无默认值)
+            预估生产订单成本.Misc.预估日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimatePLSCostProxy.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            预估生产线日计划成本.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimatePLSCostProxy.PLSKey">
+            <summary>
+            生产线日计划 (该属性可为空,且无默认值)
+            预估生产线日计划成本.Misc.生产线日计划
+            </summary>
+            <value>UFIDA.U9.MO.REP.PLS</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.EstimateCost.Proxy.EstimatePLSCostProxy.EstimateDate">
+            <summary>
+            预估日期 (该属性可为空,且无默认值)
+            预估生产线日计划成本.Misc.预估日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.CalcIssueCostProxy.IssueDocKey_SKey">
+            <summary>
+            领料单 序列化Key属性。（传递跨组织序列列字段）
+            计算生产领料成本.Misc.领料单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.CalcIssueCostProxy.IssueDocKey">
+            <summary>
+            领料单 (该属性可为空,且无默认值)
+            计算生产领料成本.Misc.领料单
+            </summary>
+            <value>UFIDA.U9.MO.Issue.IssueDoc</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.SpecificPriceIssueSVProxy.IssueDocKey_SKey">
+            <summary>
+            领料单 序列化Key属性。（传递跨组织序列列字段）
+            指定价格出库服务.Misc.领料单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.SpecificPriceIssueSVProxy.IssueDocKey">
+            <summary>
+            领料单 (该属性可为空,且无默认值)
+            指定价格出库服务.Misc.领料单
+            </summary>
+            <value>UFIDA.U9.MO.Issue.IssueDoc</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.GetIssueCostProxy.GetIssueCostInParam">
+            <summary>
+            取领料成本入口参数 (该属性可为空,且无默认值)
+            取跨组织，VMI领料成本服务.Misc.取领料成本入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.ReWriteIssueCostProxy.CostReWriteDTOList">
+            <summary>
+            成本回写DTO集合 (该属性可为空,且无默认值)
+            库存异动重写领料成本.Misc.成本回写DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.ReWriteIssueCostProxy.IsNeedGenAAI">
+            <summary>
+            是否需要生成AAI (该属性可为空,但有默认值)
+            库存异动重写领料成本.Misc.是否需要生成AAI
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.MO_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            备料是否计算成本的服务.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.MO">
+            <summary>
+            生产订单 (该属性可为空,且无默认值)
+            备料是否计算成本的服务.Misc.生产订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.PLS_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            备料是否计算成本的服务.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.PLS">
+            <summary>
+            生产线日计划 (该属性可为空,且无默认值)
+            备料是否计算成本的服务.Misc.生产线日计划
+            </summary>
+            <value>UFIDA.U9.MO.REP.PLS</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.ItemMaster_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            备料是否计算成本的服务.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.IsPickCalcuCostProxy.ItemMaster">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            备料是否计算成本的服务.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.GetIssuedItemSVProxy.GetIssuedItemInDTO">
+            <summary>
+            入口参数 (该属性可为空,且无默认值)
+            取领用同阶备料信息服务.Misc.入口参数
+            </summary>
+            <value>UFIDA.U9.MOCost.IssueCost.GetIssuedItemInDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CalCompleteTXNCostProxy.CompleteTXNList">
+            <summary>
+            生产订单完工报告 (该属性可为空,且无默认值)
+            计算完工报告成本.Misc.生产订单完工报告
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RecalculateCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            成本重算.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RecalculateCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            成本重算.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RecalculateCostProxy.SOBPeriodList_SKey">
+            <summary>
+            账簿期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RecalculateCostProxy.SOBPeriodList">
+            <summary>
+            账簿期间集合 (该属性可为空,且无默认值)
+            成本重算.Misc.账簿期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CalcPeriodEndCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            反结帐.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CalcPeriodEndCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            反结帐.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CalcPeriodEndCostProxy.SOBPeriodList_SKey">
+            <summary>
+            账簿期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CalcPeriodEndCostProxy.SOBPeriodList">
+            <summary>
+            账簿期间集合 (该属性可为空,且无默认值)
+            反结帐.Misc.账簿期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReWriteCompleteRptCostProxy.CostReWriteDTOList">
+            <summary>
+            成本回写DTO集合 (该属性可为空,且无默认值)
+            库存异动重写完工成本.Misc.成本回写DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.OrgKey_SKey">
+            <summary>
+            属性 序列化Key属性。（传递跨组织序列列字段）
+            重新生成AAI服务.Misc.属性
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.OrgKey">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            重新生成AAI服务.Misc.属性
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.SOBPeriodList_SKey">
+            <summary>
+            账簿期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.SOBPeriodList">
+            <summary>
+            账簿期间集合 (该属性可为空,且无默认值)
+            重新生成AAI服务.Misc.账簿期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.AAIDate">
+            <summary>
+            AAI时间 (该属性可为空,且无默认值)
+            重新生成AAI服务.Misc.AAI时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateAAIProxy.CostAAIGenerateMode">
+            <summary>
+            交易分录生成方式 (该属性可为空,但有默认值)
+            重新生成AAI服务.Misc.交易分录生成方式
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.Period_SKey">
+            <summary>
+            期间 序列化Key属性。（传递跨组织序列列字段）
+            设置期间内MO的财务标志.Misc.期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.Period">
+            <summary>
+            期间 (该属性可为空,且无默认值)
+            设置期间内MO的财务标志.Misc.期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.CloseOrOpen">
+            <summary>
+            打开或关闭 (该属性可为空,但有默认值)
+            设置期间内MO的财务标志.Misc.打开或关闭
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.CanceledMOList_SKey">
+            <summary>
+            取消的MO列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.CanceledMOList">
+            <summary>
+            取消的MO列表 (该属性可为空,且无默认值)
+            设置期间内MO的财务标志.Misc.取消的MO列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.CanceledPLSList_SKey">
+            <summary>
+            取消的MO列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.SetFICloseStateByPeriodSVProxy.CanceledPLSList">
+            <summary>
+            取消的MO列表 (该属性可为空,且无默认值)
+            设置期间内MO的财务标志.Misc.取消的MO列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsMfgTransCheckOKSVProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            判断制造是否发生异动服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsMfgTransCheckOKSVProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            判断制造是否发生异动服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsMfgTransCheckOKSVProxy.SOBPeriodKeyList_SKey">
+            <summary>
+            期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsMfgTransCheckOKSVProxy.SOBPeriodKeyList">
+            <summary>
+            期间集合 (该属性可为空,且无默认值)
+            判断制造是否发生异动服务.Misc.期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateCompleteRptCostSvProxy.DTOList">
+            <summary>
+            接收完工入库成本DTO集合 (该属性可为空,且无默认值)
+            接收完工入库成本服务.Misc.接收完工入库成本DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateCompleteRptCostSvProxy.Sequence">
+            <summary>
+            计算顺序 (该属性可为空,但有默认值)
+            接收完工入库成本服务.Misc.计算顺序
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.MOCostBalanceProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            成本月结.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.MOCostBalanceProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            成本月结.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.MOCostBalanceProxy.SOBPeriodList_SKey">
+            <summary>
+            账簿期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.MOCostBalanceProxy.SOBPeriodList">
+            <summary>
+            账簿期间集合 (该属性可为空,且无默认值)
+            成本月结.Misc.账簿期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsIPVCostedProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            检查本期IPV是否已处理.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsIPVCostedProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            检查本期IPV是否已处理.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsIPVCostedProxy.PeriodKey_SKey">
+            <summary>
+            账簿会计期间 序列化Key属性。（传递跨组织序列列字段）
+            检查本期IPV是否已处理.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.IsIPVCostedProxy.PeriodKey">
+            <summary>
+            账簿会计期间 (该属性可为空,且无默认值)
+            检查本期IPV是否已处理.Misc.账簿会计期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CheckMfgSettleSVProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            月结制造异动检查服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CheckMfgSettleSVProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            月结制造异动检查服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CheckMfgSettleSVProxy.FromDate">
+            <summary>
+            起始时间 (该属性可为空,且无默认值)
+            月结制造异动检查服务.Misc.起始时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CheckMfgSettleSVProxy.ToDate">
+            <summary>
+            结束时间 (该属性可为空,且无默认值)
+            月结制造异动检查服务.Misc.结束时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetPickListQPAProxy.ParamDTOList">
+            <summary>
+            参数DTO集合 (该属性可为空,且无默认值)
+            取备料QPA服务.Misc.参数DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            重新生成资源报告AAI服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            重新生成资源报告AAI服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.SOBPeriodList_SKey">
+            <summary>
+            账簿期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.SOBPeriodList">
+            <summary>
+            账簿期间集合 (该属性可为空,且无默认值)
+            重新生成资源报告AAI服务.Misc.账簿期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.AAIDate">
+            <summary>
+            AAI时间 (该属性可为空,且无默认值)
+            重新生成资源报告AAI服务.Misc.AAI时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RegenerateResDocAAIProxy.CostAAIGenerateMode">
+            <summary>
+            交易分录生成方式 (该属性可为空,但有默认值)
+            重新生成资源报告AAI服务.Misc.交易分录生成方式
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMfgUnTransToGLSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            月结获得制造单据未完事信息服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMfgUnTransToGLSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            月结获得制造单据未完事信息服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMfgUnTransToGLSVProxy.StartTime">
+            <summary>
+            开始时间 (该属性可为空,且无默认值)
+            月结获得制造单据未完事信息服务.Misc.开始时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMfgUnTransToGLSVProxy.EndTime">
+            <summary>
+            结束时间 (该属性可为空,且无默认值)
+            月结获得制造单据未完事信息服务.Misc.结束时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RetrieveMOBgnCostProxy.IsCancel">
+            <summary>
+            取消方向 (该属性可为空,但有默认值)
+            更新期初开账成本.Misc.取消方向
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RetrieveMOBgnCostProxy.MOBgnCostParamDTO">
+            <summary>
+            传入订单成本集合 (该属性可为空,且无默认值)
+            更新期初开账成本.Misc.传入订单成本集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RetrieveMOBgnCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            更新期初开账成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.RetrieveMOBgnCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            更新期初开账成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            重算跨期完工报告服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            重算跨期完工报告服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.SOBPeriodList_SKey">
+            <summary>
+            成本期间列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.SOBPeriodList">
+            <summary>
+            成本期间列表 (该属性可为空,且无默认值)
+            重算跨期完工报告服务.Misc.成本期间列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.CalObjType">
+            <summary>
+            成本核算方式 (该属性可为空,但有默认值)
+            重算跨期完工报告服务.Misc.成本核算方式
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.ReCalcPriorCompleteRptCostProxy.TempTableName">
+            <summary>
+            表名 (该属性可为空,且无默认值)
+            重算跨期完工报告服务.Misc.表名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetDocMessProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取生成分录的单据信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetDocMessProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取生成分录的单据信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetDocMessProxy.CreateDate">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            取生成分录的单据信息.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CreateAAISVProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            生成交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CreateAAISVProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            生成交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CreateAAISVProxy.EntityList">
+            <summary>
+            单据列表 (该属性可为空,且无默认值)
+            生成交易分录.Misc.单据列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.CreateAAISVProxy.CreateDate">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            生成交易分录.Misc.日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.LotCreateAAISVProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            批量生成交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.LotCreateAAISVProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            批量生成交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.LotCreateAAISVProxy.CreateDate">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            批量生成交易分录.Misc.日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.LotCreateAAISVProxy.Opath">
+            <summary>
+            条件 (该属性可为空,且无默认值)
+            批量生成交易分录.Misc.条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.LotCreateAAISVProxy.IfRegulate">
+            <summary>
+            是否为调度 (该属性可为空,但有默认值)
+            批量生成交易分录.Misc.是否为调度
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetCurrencyInfoProxy.ParamList">
+            <summary>
+            参数集合 (该属性可为空,且无默认值)
+            取币种信息.Misc.参数集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.PeriodInitCostSVProxy.PeriodInitCostDTO">
+            <summary>
+            期初成本 (该属性可为空,且无默认值)
+            期初成本开账成本联动.Misc.期初成本
+            </summary>
+            <value>UFIDA.U9.MOCost.MOCost.PeriodInitCostDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.PeriodInitCostSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            期初成本开账成本联动.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.PeriodInitCostSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            期初成本开账成本联动.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.PeriodInitCostSVProxy.IfAdd">
+            <summary>
+            是否新增 (该属性可为空,但有默认值)
+            期初成本开账成本联动.Misc.是否新增
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            更新料品成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            更新料品成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.ItemElementCost">
+            <summary>
+            要素成本 (该属性可为空,且无默认值)
+            更新料品成本.Misc.要素成本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.IfLot">
+            <summary>
+            是否批量 (该属性可为空,但有默认值)
+            更新料品成本.Misc.是否批量
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.IfPeriodInit">
+            <summary>
+            是否成本初始化 (该属性可为空,但有默认值)
+            更新料品成本.Misc.是否成本初始化
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.AccountPeriodKey_SKey">
+            <summary>
+            会计期间 序列化Key属性。（传递跨组织序列列字段）
+            更新料品成本.Misc.会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.UpdateItemElementCostProxy.AccountPeriodKey">
+            <summary>
+            会计期间 (该属性可为空,且无默认值)
+            更新料品成本.Misc.会计期间
+            </summary>
+            <value>UFIDA.U9.Base.Account.AccountPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            订单差异处理.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            订单差异处理.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.MOKey_SKey">
+            <summary>
+            订单 序列化Key属性。（传递跨组织序列列字段）
+            订单差异处理.Misc.订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.MOKey">
+            <summary>
+            订单 (该属性可为空,且无默认值)
+            订单差异处理.Misc.订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.IfClosed">
+            <summary>
+            是否关闭 (该属性可为空,但有默认值)
+            订单差异处理.Misc.是否关闭
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.BizDate">
+            <summary>
+            业务操作日期 (该属性可为空,且无默认值)
+            订单差异处理.Misc.业务操作日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            订单差异处理.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BalanceCostDealProxy.PLSKey">
+            <summary>
+            生产线日计划 (该属性可为空,且无默认值)
+            订单差异处理.Misc.生产线日计划
+            </summary>
+            <value>UFIDA.U9.MO.REP.PLS</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            委外资源成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            委外资源成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.SOBKey_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            委外资源成本.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.SOBKey">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            委外资源成本.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            委外资源成本.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.MOKey">
+            <summary>
+            生产订单 (该属性可为空,且无默认值)
+            委外资源成本.Misc.生产订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.OpNum">
+            <summary>
+            工序号 (该属性可为空,且无默认值)
+            委外资源成本.Misc.工序号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.ItemKey_SKey">
+            <summary>
+            工序委外件 序列化Key属性。（传递跨组织序列列字段）
+            委外资源成本.Misc.工序委外件
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.ItemKey">
+            <summary>
+            工序委外件 (该属性可为空,且无默认值)
+            委外资源成本.Misc.工序委外件
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.SubQty">
+            <summary>
+            委外（收货）数量 (该属性可为空,但有默认值)
+            委外资源成本.Misc.委外（收货）数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.UOMKey_SKey">
+            <summary>
+            数量单位 序列化Key属性。（传递跨组织序列列字段）
+            委外资源成本.Misc.数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractResCostProxy.UOMKey">
+            <summary>
+            数量单位 (该属性可为空,且无默认值)
+            委外资源成本.Misc.数量单位
+            </summary>
+            <value>UFIDA.U9.Base.UOM.UOM</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.CalcOpTransferDocCostProxy.OpTransferDocKey_SKey">
+            <summary>
+            工序转移单 序列化Key属性。（传递跨组织序列列字段）
+            结转工序转移单成本.Misc.工序转移单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.CalcOpTransferDocCostProxy.OpTransferDocKey">
+            <summary>
+            工序转移单 (该属性可为空,且无默认值)
+            结转工序转移单成本.Misc.工序转移单
+            </summary>
+            <value>UFIDA.U9.MO.SFC.OpTransferDoc</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.OrgKey_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序转移单成本.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.OrgKey">
+            <summary>
+            组织机构 (该属性可为空,且无默认值)
+            重新结转工序转移单成本.Misc.组织机构
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.MOKey_SKey">
+            <summary>
+            生产订单 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序转移单成本.Misc.生产订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.MOKey">
+            <summary>
+            生产订单 (该属性可为空,且无默认值)
+            重新结转工序转移单成本.Misc.生产订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序转移单成本.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OperationCost.Proxy.RefreshOpTransCostProxy.PLSKey">
+            <summary>
+            生产线日计划 (该属性可为空,且无默认值)
+            重新结转工序转移单成本.Misc.生产线日计划
+            </summary>
+            <value>UFIDA.U9.MO.REP.PLS</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ResourceCost.Proxy.CalcResUsageRptCostProxy.ResUsageRptKey_SKey">
+            <summary>
+            资源耗用报告 序列化Key属性。（传递跨组织序列列字段）
+            计算资源耗用报告成本.Misc.资源耗用报告
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ResourceCost.Proxy.CalcResUsageRptCostProxy.ResUsageRptKey">
+            <summary>
+            资源耗用报告 (该属性可为空,且无默认值)
+            计算资源耗用报告成本.Misc.资源耗用报告
+            </summary>
+            <value>UFIDA.U9.MO.ResUsage.ResUsageRpt</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ResourceCost.Proxy.CalcResTimeRptCostProxy.ResTimeRpt_SKey">
+            <summary>
+            资源时间报告 序列化Key属性。（传递跨组织序列列字段）
+            计算资源时间报告成本.Misc.资源时间报告
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ResourceCost.Proxy.CalcResTimeRptCostProxy.ResTimeRpt">
+            <summary>
+            资源时间报告 (该属性可为空,且无默认值)
+            计算资源时间报告成本.Misc.资源时间报告
+            </summary>
+            <value>UFIDA.U9.MO.ResUsage.ResTimeRpt</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.SplitOffMOCostSVProxy.SplitMOCostList">
+            <summary>
+            分割生产订单成本参数 (该属性可为空,且无默认值)
+            分割成产订单成本.Misc.分割生产订单成本参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.MergeMOCostProxy.FromMOKey_SKey">
+            <summary>
+            来源订单 序列化Key属性。（传递跨组织序列列字段）
+            合并生产订单成本.Misc.来源订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.MergeMOCostProxy.FromMOKey">
+            <summary>
+            来源订单 (该属性可为空,且无默认值)
+            合并生产订单成本.Misc.来源订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.MergeMOCostProxy.ToMOKey_SKey">
+            <summary>
+            目标订单 序列化Key属性。（传递跨组织序列列字段）
+            合并生产订单成本.Misc.目标订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.MergeMOCostProxy.ToMOKey">
+            <summary>
+            目标订单 (该属性可为空,且无默认值)
+            合并生产订单成本.Misc.目标订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            结转报废补单成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            结转报废补单成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.SrcMO_SKey">
+            <summary>
+            来源订单 序列化Key属性。（传递跨组织序列列字段）
+            结转报废补单成本.Misc.来源订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.SrcMO">
+            <summary>
+            来源订单 (该属性可为空,且无默认值)
+            结转报废补单成本.Misc.来源订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.CompMO_SKey">
+            <summary>
+            补偿订单 序列化Key属性。（传递跨组织序列列字段）
+            结转报废补单成本.Misc.补偿订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.CompMO">
+            <summary>
+            补偿订单 (该属性可为空,且无默认值)
+            结转报废补单成本.Misc.补偿订单
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SplitOffMergeMOCost.Proxy.TransferCompensateMOCostProxy.OpNum">
+            <summary>
+            工序号 (该属性可为空,且无默认值)
+            结转报废补单成本.Misc.工序号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostPeriodProxy.PlantOrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            关闭生产期间.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostPeriodProxy.PlantOrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            关闭生产期间.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            单据财务关闭成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            单据财务关闭成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostProxy.FromDate">
+            <summary>
+            起始日期 (该属性可为空,且无默认值)
+            单据财务关闭成本.Misc.起始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CloseCostProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            单据财务关闭成本.Misc.结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CalcCloseMOVarianceSVProxy.MOKey_SKey">
+            <summary>
+            MOKey 序列化Key属性。（传递跨组织序列列字段）
+            计算生产订单关闭材料量差成本.Misc.MOKey
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.CalcCloseMOVarianceSVProxy.MOKey">
+            <summary>
+            MOKey (该属性可为空,且无默认值)
+            计算生产订单关闭材料量差成本.Misc.MOKey
+            </summary>
+            <value>UFIDA.U9.MO.MO.MO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.ClosePLSCostProxy.PLSKey_SKey">
+            <summary>
+            生产线日计划 序列化Key属性。（传递跨组织序列列字段）
+            关闭生产线日计划成本.Misc.生产线日计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.CloseCost.Proxy.ClosePLSCostProxy.PLSKey">
+            <summary>
+            生产线日计划 (该属性可为空,且无默认值)
+            关闭生产线日计划成本.Misc.生产线日计划
+            </summary>
+            <value>UFIDA.U9.MO.REP.PLS</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.MOs_SKey">
+            <summary>
+            生产订单 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.MOs">
+            <summary>
+            生产订单 (该属性可为空,但有默认值)
+            取生产订单生产线日计划信息.Misc.生产订单
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.PLSs_SKey">
+            <summary>
+            生产线日计划 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.PLSs">
+            <summary>
+            生产线日计划 (该属性可为空,但有默认值)
+            取生产订单生产线日计划信息.Misc.生产线日计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.EndDate">
+            <summary>
+            期间结束日期 (该属性可为空,且无默认值)
+            取生产订单生产线日计划信息.Misc.期间结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetMOPLSInfoProxy.FromDate">
+            <summary>
+            期间开始日期 (该属性可为空,且无默认值)
+            取生产订单生产线日计划信息.Misc.期间开始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BathGetMOPLSInfoSVProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            批量取订单信息服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BathGetMOPLSInfoSVProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            批量取订单信息服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BathGetMOPLSInfoSVProxy.EndDate">
+            <summary>
+            期间结束日期 (该属性可为空,且无默认值)
+            批量取订单信息服务.Misc.期间结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.BathGetMOPLSInfoSVProxy.FromDate">
+            <summary>
+            期间开始日期 (该属性可为空,且无默认值)
+            批量取订单信息服务.Misc.期间开始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.Proxy.ReceivePOMoveCostProxy.ResPOMoveCostDTO">
+            <summary>
+            工序外协资源成本DTO (该属性可为空,且无默认值)
+            接受工序外协成本.Misc.工序外协资源成本DTO
+            </summary>
+            <value>UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveCostDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ReceivePOMove.Proxy.ReceivePOMoveIPVProxy.ResPOMoveIPVDTO">
+            <summary>
+            工序外协资源IPVDTO (该属性可为空,且无默认值)
+            接收工序外协IPV.Misc.工序外协资源IPVDTO
+            </summary>
+            <value>UFIDA.U9.MOCost.ReceivePOMove.ResPOMoveIPVDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.UpdateIssueLayerProxy.FromDate">
+            <summary>
+            从日期 (该属性可为空,且无默认值)
+            更新领退料抵消关系.Misc.从日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.UpdateIssueLayerProxy.ToDate">
+            <summary>
+            到日期 (该属性可为空,且无默认值)
+            更新领退料抵消关系.Misc.到日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.UpdateIssueLayerProxy.OrgKey_SKey">
+            <summary>
+            组织Key 序列化Key属性。（传递跨组织序列列字段）
+            更新领退料抵消关系.Misc.组织Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.IssueCost.Proxy.UpdateIssueLayerProxy.OrgKey">
+            <summary>
+            组织Key (该属性可为空,且无默认值)
+            更新领退料抵消关系.Misc.组织Key
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteCostTransToGLSVProxy.OrgKey_SKey">
+            <summary>
+            组织Key 序列化Key属性。（传递跨组织序列列字段）
+            删除转总帐服务.Misc.组织Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteCostTransToGLSVProxy.OrgKey">
+            <summary>
+            组织Key (该属性可为空,且无默认值)
+            删除转总帐服务.Misc.组织Key
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteCostTransToGLSVProxy.SOBPeriodList_SKey">
+            <summary>
+            SOB期间Key集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteCostTransToGLSVProxy.SOBPeriodList">
+            <summary>
+            SOB期间Key集合 (该属性可为空,且无默认值)
+            删除转总帐服务.Misc.SOB期间Key集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.CostTransToGLSVProxy.OrgKey_SKey">
+            <summary>
+            组织Key 序列化Key属性。（传递跨组织序列列字段）
+            转总帐服务.Misc.组织Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.CostTransToGLSVProxy.OrgKey">
+            <summary>
+            组织Key (该属性可为空,且无默认值)
+            转总帐服务.Misc.组织Key
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.CostTransToGLSVProxy.SOBPeriodList_SKey">
+            <summary>
+            SOB期间Key集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.CostTransToGLSVProxy.SOBPeriodList">
+            <summary>
+            SOB期间Key集合 (该属性可为空,且无默认值)
+            转总帐服务.Misc.SOB期间Key集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteAAIProxy.OrgKey_SKey">
+            <summary>
+            组织Key 序列化Key属性。（传递跨组织序列列字段）
+            删除AAI服务.Misc.组织Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteAAIProxy.OrgKey">
+            <summary>
+            组织Key (该属性可为空,且无默认值)
+            删除AAI服务.Misc.组织Key
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteAAIProxy.SOBPeriodList_SKey">
+            <summary>
+            SOB期间Key集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.DeleteAAIProxy.SOBPeriodList">
+            <summary>
+            SOB期间Key集合 (该属性可为空,且无默认值)
+            删除AAI服务.Misc.SOB期间Key集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.GetTransferredDocsProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            获取已转总帐的单据.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.GetTransferredDocsProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            获取已转总帐的单据.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.GetTransferredDocsProxy.SOBPeriodList_SKey">
+            <summary>
+            SOB期间Key集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCostTransToGLSV.Proxy.GetTransferredDocsProxy.SOBPeriodList">
+            <summary>
+            SOB期间Key集合 (该属性可为空,且无默认值)
+            获取已转总帐的单据.Misc.SOB期间Key集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PullListCostSV.Proxy.RewritePullListCostSVProxy.CostRewriteDTOList">
+            <summary>
+            成本回写DTO集合 (该属性可为空,且无默认值)
+            回写倒扣补货单发料成本服务.Misc.成本回写DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PullListCostSV.Proxy.RewritePullListCostSVProxy.IsDemandLine">
+            <summary>
+            是否领料 (该属性可为空,但有默认值)
+            回写倒扣补货单发料成本服务.Misc.是否领料
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.RecerveIPVProxy.IsCanceled">
+            <summary>
+            是否取消结算 (该属性可为空,但有默认值)
+            接收匹配差异服务.Misc.是否取消结算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.RecerveIPVProxy.MatchResultDTOList">
+            <summary>
+            传送匹配结果DTO (该属性可为空,且无默认值)
+            接收匹配差异服务.Misc.传送匹配结果DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.RecerveIPVProxy.OrgKey_SKey">
+            <summary>
+            工厂组织 序列化Key属性。（传递跨组织序列列字段）
+            接收匹配差异服务.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.RecerveIPVProxy.OrgKey">
+            <summary>
+            工厂组织 (该属性可为空,且无默认值)
+            接收匹配差异服务.Misc.工厂组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.RecerveIPVProxy.IsNeedNewTransaction">
+            <summary>
+            是否需要新事物 (该属性可为空,但有默认值)
+            接收匹配差异服务.Misc.是否需要新事物
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MFGUseInShopSrv.Proxy.GetMFGUseInShopSrvProxy.InDTO">
+            <summary>
+            传入DTO (该属性可为空,且无默认值)
+            车间内物料耗用关系服务.Misc.传入DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMFGIssueRationSrv.Proxy.GetMFGIssueRationSrvProxy.InDTOList">
+            <summary>
+            传入DTO (该属性可为空,且无默认值)
+            “生产订单(日计划)备料”领用关系的服务.Misc.传入DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractCostProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            成本会计获取生产订单外协成本服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractCostProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            成本会计获取生产订单外协成本服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractCostProxy.SOBPeriodKeyList_SKey">
+            <summary>
+            账簿会计期间集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractCostProxy.SOBPeriodKeyList">
+            <summary>
+            账簿会计期间集合 (该属性可为空,且无默认值)
+            成本会计获取生产订单外协成本服务.Misc.账簿会计期间集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.MOCost.Proxy.GetSubcontractCostProxy.LLC">
+            <summary>
+            低阶码 (该属性可为空,但有默认值)
+            成本会计获取生产订单外协成本服务.Misc.低阶码
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetDocTypeSrv.Proxy.GetDocTypeSrvProxy.InDTO">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            "获取单据类型"的服务.Misc.属性
+            </summary>
+            <value>UFIDA.U9.MOCost.GetDocTypeSrv.GetDocTypeInDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetMOSrv.Proxy.GetMOSrvProxy.InDTOList">
+            <summary>
+            传入DTO (该属性可为空,且无默认值)
+            获取MOID的服务.Misc.传入DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetPLSSrv.Proxy.GetPLSSrvProxy.InDTOList">
+            <summary>
+            传入DTO (该属性可为空,且无默认值)
+            获取PLSID的服务.Misc.传入DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.Proxy.GetInnerTransSOBExchRateProxy.SrcDocInfoDTOList">
+            <summary>
+            SrcDocInfoDTOList (该属性可为空,且无默认值)
+            获取内部结算SOB汇率服务.Misc.SrcDocInfoDTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.InDTOList">
+            <summary>
+            入口参数DTO (该属性可为空,且无默认值)
+            CA取领料成本服务.Misc.入口参数DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.TempTableName">
+            <summary>
+            表名 (该属性可为空,且无默认值)
+            CA取领料成本服务.Misc.表名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.CalObjType">
+            <summary>
+            成本核算对象 (该属性可为空,但有默认值)
+            CA取领料成本服务.Misc.成本核算对象
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.OnlyCalcCost">
+            <summary>
+            是否计入成本 (该属性可为空,但有默认值)
+            CA取领料成本服务.Misc.是否计入成本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.IsSepcialIssue">
+            <summary>
+            是否返修物料 (该属性可为空,但有默认值)
+            CA取领料成本服务.Misc.是否返修物料
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetIssueDocCostSV.Proxy.GetIssueDocCostSVProxy.CalcSequence">
+            <summary>
+            计算顺序 (该属性可为空,但有默认值)
+            CA取领料成本服务.Misc.计算顺序
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.WriteBackTransVoucherInfoSv.Proxy.WriteBackTransVoucherInfoSvProxy.DocInfoList">
+            <summary>
+            单据信息 (该属性可为空,且无默认值)
+            回写库存异动凭证号.Misc.单据信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.WriteBackTransVoucherInfoSv.Proxy.WriteBackTransVoucherInfoSvProxy.IfCreateVoucher">
+            <summary>
+            是否生成凭证用 (该属性可为空,但有默认值)
+            回写库存异动凭证号.Misc.是否生成凭证用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.WriteBackTransVoucherInfoSv.Proxy.WriteBackTransVoucherInfoSvProxy.BillVoucherInfoList">
+            <summary>
+            凭证信息 (该属性可为空,且无默认值)
+            回写库存异动凭证号.Misc.凭证信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.Proxy.GetResRptCostProxy.DTOList">
+            <summary>
+            CA取资源成本参数DTO列表 (该属性可为空,且无默认值)
+            取资源报告成本.Misc.CA取资源成本参数DTO列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.Proxy.GetResRptCostProxy.TempTableName">
+            <summary>
+            资源报告成本临时表 (该属性可为空,且无默认值)
+            取资源报告成本.Misc.资源报告成本临时表
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.Proxy.GetResRptCostProxy.CalObjType">
+            <summary>
+            成本核算对象类型  (该属性可为空,但有默认值)
+            取资源报告成本.Misc.成本核算对象类型 
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.GetResRptCostSV.Proxy.GetResRptCostProxy.CalcSequence">
+            <summary>
+            计算顺序 (该属性可为空,但有默认值)
+            取资源报告成本.Misc.计算顺序
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.UpdateMOIndirectCostSVProxy.UpdateMOIndirectCostParam">
+            <summary>
+            更新订单间接费服务参数 (该属性可为空,且无默认值)
+            更新订单间接费服务.Misc.更新订单间接费服务参数
+            </summary>
+            <value>UFIDA.U9.MOCost.ForCASV.UpdateMOIndirectCostParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.UpdateResourceCostSVProxy.InParamData">
+            <summary>
+            资源成本数据 (该属性可为空,且无默认值)
+            CA更新资源成本.Misc.资源成本数据
+            </summary>
+            <value>UFIDA.U9.MOCost.ForCASV.UpdateResCostInParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.PeriodEndSV.Proxy.CostPeriodEndSVProxy.InParam">
+            <summary>
+            结转入口参数 (该属性可为空,且无默认值)
+            期末成本结转.Misc.结转入口参数
+            </summary>
+            <value>UFIDA.U9.MOCost.PeriodEndSV.InParamDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalOpTransCostSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序成本.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalOpTransCostSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            重新结转工序成本.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalOpTransCostSVProxy.DTOList">
+            <summary>
+            订单列表 (该属性可为空,且无默认值)
+            重新结转工序成本.Misc.订单列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalOpTransCostSVProxy.CalcWIPCost">
+            <summary>
+            是否重新计算撤复线成本 (该属性可为空,但有默认值)
+            重新结转工序成本.Misc.是否重新计算撤复线成本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序成本服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            重新结转工序成本服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.MOList_SKey">
+            <summary>
+            订单列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.MOList">
+            <summary>
+            订单列表 (该属性可为空,且无默认值)
+            重新结转工序成本服务.Misc.订单列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.PLSList_SKey">
+            <summary>
+            日计划列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.PLSList">
+            <summary>
+            日计划列表 (该属性可为空,且无默认值)
+            重新结转工序成本服务.Misc.日计划列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.TransDate">
+            <summary>
+            开始结转日期 (该属性可为空,且无默认值)
+            重新结转工序成本服务.Misc.开始结转日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.TransOpNum">
+            <summary>
+            开始结转工序 (该属性可为空,且无默认值)
+            重新结转工序成本服务.Misc.开始结转工序
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.CalcOpTransCostSVProxy.CalcWIPCost">
+            <summary>
+            是否重新计算撤复线成本 (该属性可为空,但有默认值)
+            重新结转工序成本服务.Misc.是否重新计算撤复线成本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.IsResourceCostToGLProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            判断资源成本是否转总账.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.IsResourceCostToGLProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            判断资源成本是否转总账.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.IsResourceCostToGLProxy.FromTime">
+            <summary>
+            从时间 (该属性可为空,且无默认值)
+            判断资源成本是否转总账.Misc.从时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.ForCASV.Proxy.IsResourceCostToGLProxy.ToTime">
+            <summary>
+            到时间 (该属性可为空,且无默认值)
+            判断资源成本是否转总账.Misc.到时间
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SubOpMOCostSV.Proxy.ChangeAndSynSubOpMOCostSVProxy.SubOpMOCostDTOs">
+            <summary>
+            协同子单成本 (该属性可为空,且无默认值)
+            更新同步子单成本服务.Misc.协同子单成本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SubOpMOCostSV.Proxy.ChangeAndSynSubOpMOCostSVProxy.IsNeedGenAAI">
+            <summary>
+            是否生成AAI (该属性可为空,但有默认值)
+            更新同步子单成本服务.Misc.是否生成AAI
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SubOpMOCostSV.Proxy.DeleteSubOpMOCostBySheetSVProxy.DocType">
+            <summary>
+            单据类型 (该属性可为空,且无默认值)
+            按单删除协同子单成本服务.Misc.单据类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.SubOpMOCostSV.Proxy.DeleteSubOpMOCostBySheetSVProxy.SheetID">
+            <summary>
+            单据ID (该属性可为空,但有默认值)
+            按单删除协同子单成本服务.Misc.单据ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.OpTranCostWithLockSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            重新结转工序成本服务4.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.OpTranCostWithLockSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            重新结转工序成本服务4.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.OpTranCostWithLockSVProxy.DTOList">
+            <summary>
+            订单列表 (该属性可为空,且无默认值)
+            重新结转工序成本服务4.Misc.订单列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MOCost.OpCostTran.Proxy.OpTranCostWithLockSVProxy.CalcWIPCost">
+            <summary>
+            是否重新计算撤复线成本 (该属性可为空,但有默认值)
+            重新结转工序成本服务4.Misc.是否重新计算撤复线成本
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+    </members>
+</doc>

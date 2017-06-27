@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="38962930-0c30-4253-8839-bd52eedadcb5" name="CustomerVoucherQuery" displayName="CustomerVoucherQuery" description="" help="" QueryType="DTOQuery" QueryURI="6de4cc91-9677-4aae-9880-bd1282141a4a" QuerySourceFullName="UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="4f55bc08-81af-44d7-b378-55b9faaf49b3" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="a5b0bfea-1d5c-422a-afb3-a5c578336164" name="CustomerVoucher" displayName="CustomerVoucher" description="" help="" ProjectID="" ProjectPath="" BPItemID="6e5b17e7-de70-417b-8cb9-292da595c51f" BPOperationID="33b837c4-4726-428b-b1ad-a65ca0f93bb8" DTOID="23f6b071-aa0e-4290-bd6d-5c0b811f3dfe" BPAgentDll="UFIDA.U9.Cust.FJGX.CustomerQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="c6a47fa5-cf63-4231-ab39-12ef7371080d" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="6c083941-6ce9-45ee-abfb-3698e9d12d0a" UIFormItemID="1db13c95-3c70-4eb8-a53b-a0e975d58e92" UIModelID="cd50ffb1-7d7e-4f99-a971-388cd7545a20" />
+  <FilterDefines>
+    <FilterDefine id="5e97b1a2-34af-444f-9958-4cade5b18d91" name="Customer" displayName="Customer" description="" help="" ParentName="" Alias="Customer" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="d6d6a4c5-ca46-4c4b-a394-65bea9de7556" name="" displayName="" description="" help="" RefID="1a82443c-00ac-4b8c-b9c0-1e168fa0c4b2" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Customer" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="d92b929b-2d11-42fd-ae13-521b297cdfd5" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="b43d37fe-7919-4137-8826-71d147ea9499" name="DebitMoney" displayName="DebitMoney" description="" help="" ParentName="" Alias="DebitMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="391b118d-ed1f-438f-a513-ddf42a2c3639" name="CreditMoney" displayName="CreditMoney" description="" help="" ParentName="" Alias="CreditMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="2975bc5e-aac8-42c3-9e6a-d6983418b804" name="SumDebitMoney" displayName="SumDebitMoney" description="" help="" ParentName="" Alias="SumDebitMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="691993e5-a865-4fca-93ac-00f371b0fa67" name="SumCreditMoney" displayName="SumCreditMoney" description="" help="" ParentName="" Alias="SumCreditMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="185ae2c9-09e9-4e89-9fa1-d1f4f563db6f" name="SumMoney" displayName="SumMoney" description="" help="" ParentName="" Alias="SumMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="ea89652a-56bd-4c02-a710-f9210f63e2e4" name="BalanceMoney" displayName="BalanceMoney" description="" help="" ParentName="" Alias="BalanceMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="d567d93b-5646-4835-bb37-a79c5ec385ec" name="DocNo" displayName="应收单据" description="" help="" />
+      <BasicFilter id="bd5b82cd-cc6b-44e9-83f0-6788e94fbad5" name="BusinessDate" displayName="业务日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="d2cb99a6-0f0b-45d1-a2ae-ce9c5ab5db18" name="Customer_Name" displayName="公司名称" description="" help="" />
+      <Column id="54bb9c0d-56de-42f2-8c3a-6aea0cc6acb9" name="DocNo" displayName="应收单据" description="" help="" />
+      <Column id="ffe1806a-f45a-4ffa-8424-5df1f42ecba1" name="DocTypeName" displayName="单据类型" description="" help="" />
+      <Column id="cee03ebd-847f-460e-bb42-d5058cd8b619" name="BusinessDate" displayName="业务日期" description="" help="" />
+      <Column id="b57fddd2-aae9-4a3f-a4a9-4bed05104a52" name="CreatedBy" displayName="制单人" description="" help="" />
+      <Column id="cd1de146-ab76-4520-80a5-0b97b27c7f19" name="DebitMoney" displayName="借方金额" description="" help="" />
+      <Column id="d7978412-0d66-4af6-a4c3-1d1958a80c8e" name="CreditMoney" displayName="贷方金额" description="" help="" />
+      <Column id="9299c0a9-8129-4b71-8ff7-0f5d5c3aa586" name="BalanceMoney" displayName="结存" description="" help="" />
+      <Column id="e5d5fdba-f4ac-4cb4-937c-ef5c4277ecda" name="Memo" displayName="摘要" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="09a36efa-635f-40fd-9b7e-4cd1c011ebb5" name="BusinessDate" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

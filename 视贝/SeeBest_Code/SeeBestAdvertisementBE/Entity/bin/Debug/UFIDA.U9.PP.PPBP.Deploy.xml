@@ -1,0 +1,4215 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PP.PPBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.PP.PP.PlanPeriodDTOData">
+            <summary>
+            计划分期DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanPeriodDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanPeriodDTOData.#ctor(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanPeriodDTOData.m_periodNumber">
+            <summary>
+            分期
+            计划分期DTO.Misc.分期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanPeriodDTOData.m_starDate">
+            <summary>
+            开始日期
+            计划分期DTO.Misc.开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanPeriodDTOData.m_endDate">
+            <summary>
+            结束日期
+            计划分期DTO.Misc.结束日期
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanApprovedDTOData">
+            <summary>
+            计划下达DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanApprovedDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanApprovedDTOData.#ctor(System.Int64,System.Boolean,System.Int64,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_isApproved">
+            <summary>
+            已下达
+            计划下达DTO.Misc.已下达
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_childPlanStatus">
+            <summary>
+            子计划状态
+            计划下达DTO.Misc.子计划状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_plantOrg_Code">
+            <summary>
+            编码
+            计划下达DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_plantOrg_Name">
+            <summary>
+            名称
+            计划下达DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_childPlan_Code">
+            <summary>
+            编码
+            计划下达DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanApprovedDTOData.m_childPlan_Name">
+            <summary>
+            名称
+            计划下达DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanApprovedDTOData.PlantOrg_SKey">
+            <summary>
+            工厂组织 序列化Key属性。（传递跨组织序列列字段）
+            计划下达DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanApprovedDTOData.PlantOrg">
+            <summary>
+            工厂组织
+            计划下达DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanApprovedDTOData.ChildPlan_SKey">
+            <summary>
+            对应子计划 序列化Key属性。（传递跨组织序列列字段）
+            计划下达DTO.Misc.对应子计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanApprovedDTOData.ChildPlan">
+            <summary>
+            对应子计划
+            计划下达DTO.Misc.对应子计划
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanExploreDTOData">
+            <summary>
+            计划展开DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanExploreDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanExploreDTOData.#ctor(System.Int64,System.Int64,System.Decimal,System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_qty">
+            <summary>
+            计划数量
+            计划展开DTO.Misc.计划数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_item_Code">
+            <summary>
+            料号
+            计划展开DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_item_Name">
+            <summary>
+            品名
+            计划展开DTO.Misc.品名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_productUOM_Code">
+            <summary>
+            编码
+            计划展开DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_productUOM_Name">
+            <summary>
+            名称
+            计划展开DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_fromDegree">
+            <summary>
+            从等级
+            计划展开DTO.Misc.从等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_toDegree">
+            <summary>
+            到等级
+            计划展开DTO.Misc.到等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_fromPotency">
+            <summary>
+            从成份
+            计划展开DTO.Misc.从成份
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_toPotency">
+            <summary>
+            到成份
+            计划展开DTO.Misc.到成份
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_bomMaster_Code">
+            <summary>
+            BOM母项编码
+            计划展开DTO.Misc.BOM母项编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_bomMaster_Name">
+            <summary>
+            BOM母项名称
+            计划展开DTO.Misc.BOM母项名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_itemVersion_Code">
+            <summary>
+            料品版本编码
+            计划展开DTO.Misc.料品版本编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_itemVersion_Name">
+            <summary>
+            料品版本名称
+            计划展开DTO.Misc.料品版本名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_uom_Precision">
+            <summary>
+            精度
+            计划展开DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_uom_RoundType">
+            <summary>
+            舍入类型
+            计划展开DTO.Misc.舍入类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanExploreDTOData.m_uom_RoundValue">
+            <summary>
+            舍入值
+            计划展开DTO.Misc.舍入值
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            计划展开DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.Item">
+            <summary>
+            料品
+            计划展开DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.ItemVersion_SKey">
+            <summary>
+            版本 序列化Key属性。（传递跨组织序列列字段）
+            计划展开DTO.Misc.版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.ItemVersion">
+            <summary>
+            版本
+            计划展开DTO.Misc.版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.ProductUOM_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            计划展开DTO.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.ProductUOM">
+            <summary>
+            单位
+            计划展开DTO.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.BomMaster_SKey">
+            <summary>
+            Bom 序列化Key属性。（传递跨组织序列列字段）
+            计划展开DTO.Misc.Bom
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanExploreDTOData.BomMaster">
+            <summary>
+            Bom
+            计划展开DTO.Misc.Bom
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.BOMVersionDTOData">
+            <summary>
+            BOM版本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.BOMVersionDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.BOMVersionDTOData.#ctor(System.String,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BOMVersionDTOData.m_versionCode">
+            <summary>
+            版本号
+            BOM版本DTO.Misc.版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BOMVersionDTOData.m_effectiveDate">
+            <summary>
+            生效日期
+            BOM版本DTO.Misc.生效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BOMVersionDTOData.m_disableDate">
+            <summary>
+            失效日期
+            BOM版本DTO.Misc.失效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BOMVersionDTOData.m_fromQty">
+            <summary>
+            从数量
+            BOM版本DTO.Misc.从数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.BOMVersionDTOData.m_toQty">
+            <summary>
+            到数量
+            BOM版本DTO.Misc.到数量
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanReleaseDTOData">
+            <summary>
+            计划释放DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanReleaseDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanReleaseDTOData.#ctor(System.Int64,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanReleaseDTOData.m_releaseQty">
+            <summary>
+            本次施放数量
+            计划释放DTO.Misc.本次施放数量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanReleaseDTOData.PlanLine_SKey">
+            <summary>
+            计划行 序列化Key属性。（传递跨组织序列列字段）
+            计划释放DTO.Misc.计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanReleaseDTOData.PlanLine">
+            <summary>
+            计划行
+            计划释放DTO.Misc.计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanReleaseDTOData.DepartMent_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            计划释放DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanReleaseDTOData.DepartMent">
+            <summary>
+            组织
+            计划释放DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanVersionDTOData">
+            <summary>
+            计划版本DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanVersionDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanVersionDTOData.#ctor(System.Int32,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanVersionDTOData.m_planVersion">
+            <summary>
+            版本号
+            计划版本DTO.Misc.版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanVersionDTOData.m_createdDate">
+            <summary>
+            创建日期
+            计划版本DTO.Misc.创建日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanVersionDTOData.m_planID">
+            <summary>
+            计划ID
+            计划版本DTO.Misc.计划ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanSplitDTOData">
+            <summary>
+            计划分解DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanSplitDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanSplitDTOData.#ctor(System.Int32,System.DateTime,System.DateTime,System.Boolean,System.Int32,System.String,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_planPeriod">
+            <summary>
+            分期
+            计划分解DTO.Misc.分期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_starDate">
+            <summary>
+            起始日期
+            计划分解DTO.Misc.起始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_endDate">
+            <summary>
+            截止日期
+            计划分解DTO.Misc.截止日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_isSplit">
+            <summary>
+            已分解
+            计划分解DTO.Misc.已分解
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_childPlanStatus">
+            <summary>
+            子计划状态
+            计划分解DTO.Misc.子计划状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_childPlanCode">
+            <summary>
+            编码
+            计划分解DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanSplitDTOData.m_childPlanName">
+            <summary>
+            名称
+            计划分解DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanSplitDTOData.ChildPlan_SKey">
+            <summary>
+            对应子计划 序列化Key属性。（传递跨组织序列列字段）
+            计划分解DTO.Misc.对应子计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanSplitDTOData.ChildPlan">
+            <summary>
+            对应子计划
+            计划分解DTO.Misc.对应子计划
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanLineDTOData">
+            <summary>
+            计划行DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanLineDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanLineDTOData.#ctor(UFIDA.U9.PP.PP.ProductPlanPeriodLineData,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_planLine">
+            <summary>
+            计划行
+            计划行DTO.Misc.计划行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_itemCode">
+            <summary>
+            料号
+            计划行DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_itemName">
+            <summary>
+            品名
+            计划行DTO.Misc.品名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_periodNumber">
+            <summary>
+            计划分期
+            计划行DTO.Misc.计划分期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_uomCode">
+            <summary>
+            计量单位编码
+            计划行DTO.Misc.计量单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_uomName">
+            <summary>
+            计量单位名称
+            计划行DTO.Misc.计量单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_plantOrgCode">
+            <summary>
+            编码
+            计划行DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_plantOrgName">
+            <summary>
+            名称
+            计划行DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_operatingOrgCode">
+            <summary>
+            编码
+            计划行DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_operatingOrgName">
+            <summary>
+            名称
+            计划行DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_customerCode">
+            <summary>
+            客户编码
+            计划行DTO.Misc.客户编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_customerName">
+            <summary>
+            客户名称
+            计划行DTO.Misc.客户名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_customerSiteCode">
+            <summary>
+            客户位置编码
+            计划行DTO.Misc.客户位置编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_customerSiteName">
+            <summary>
+            客户位置名称
+            计划行DTO.Misc.客户位置名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_departmentCode">
+            <summary>
+            部门编码
+            计划行DTO.Misc.部门编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_departmentName">
+            <summary>
+            部门名称
+            计划行DTO.Misc.部门名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_projectCode">
+            <summary>
+            项目编码
+            计划行DTO.Misc.项目编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_projectName">
+            <summary>
+            项目编码
+            计划行DTO.Misc.项目编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_taskCode">
+            <summary>
+            任务编码
+            计划行DTO.Misc.任务编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_taskName">
+            <summary>
+            任务名称
+            计划行DTO.Misc.任务名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_itemVersion">
+            <summary>
+            料品版本编码
+            计划行DTO.Misc.料品版本编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_periodStar">
+            <summary>
+            期间开始日期
+            计划行DTO.Misc.期间开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanLineDTOData.m_periodEnd">
+            <summary>
+            期间结束日期
+            计划行DTO.Misc.期间结束日期
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MORewriteDTOData">
+            <summary>
+            MO回写DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MORewriteDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MORewriteDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.DateTime,System.DateTime,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int32,System.Int32,System.Int64,System.String,System.Boolean,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_demandCode">
+            <summary>
+            需求代号
+            MO回写DTO.Misc.需求代号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_plannedStartDate">
+            <summary>
+            预计开工日期
+            MO回写DTO.Misc.预计开工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_plannedCompleteDate">
+            <summary>
+            预计完工日期
+            MO回写DTO.Misc.预计完工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_qty">
+            <summary>
+            数量
+            MO回写DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_degree">
+            <summary>
+            等级
+            MO回写DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_potency">
+            <summary>
+            成分
+            MO回写DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_mO">
+            <summary>
+            MO
+            MO回写DTO.Misc.MO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_docNO">
+            <summary>
+            单据号
+            MO回写DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_isRewrite">
+            <summary>
+            是否回写
+            MO回写DTO.Misc.是否回写
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_uOM_Code">
+            <summary>
+            编码
+            MO回写DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_uOM_Name">
+            <summary>
+            名称
+            MO回写DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_isMainProduct">
+            <summary>
+            是否主产品
+            MO回写DTO.Misc.是否主产品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_uom_Precision">
+            <summary>
+            精度
+            MO回写DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_uom_RoundType">
+            <summary>
+            舍入类型
+            MO回写DTO.Misc.舍入类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.MORewriteDTOData.m_uom_RoundValue">
+            <summary>
+            舍入值
+            MO回写DTO.Misc.舍入值
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Org">
+            <summary>
+            组织
+            MO回写DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Item">
+            <summary>
+            物料
+            MO回写DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.ItemVersion_SKey">
+            <summary>
+            物料版本 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.ItemVersion">
+            <summary>
+            物料版本
+            MO回写DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.OwnerOrg_SKey">
+            <summary>
+            货主 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.OwnerOrg">
+            <summary>
+            货主
+            MO回写DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Department_SKey">
+            <summary>
+            生产部门 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Department">
+            <summary>
+            生产部门
+            MO回写DTO.Misc.生产部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Project">
+            <summary>
+            项目
+            MO回写DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Task">
+            <summary>
+            任务
+            MO回写DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Uom_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Uom">
+            <summary>
+            生产单位
+            MO回写DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Wh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.Wh">
+            <summary>
+            存储地点
+            MO回写DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.SeiBan_SKey">
+            <summary>
+            番号 序列化Key属性。（传递跨组织序列列字段）
+            MO回写DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MORewriteDTOData.SeiBan">
+            <summary>
+            番号
+            MO回写DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.DataTransferObjectData">
+            <summary>
+            数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DataTransferObjectData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.CancelMODTOData">
+            <summary>
+            取消生产订单DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.CancelMODTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.CancelMODTOData.#ctor(System.Int64,System.DateTime,System.DateTime,System.Int64,System.Decimal,System.Int64,System.String,System.String,System.String,System.String,System.String,System.Int64,System.Int32,System.Int32,System.Int32,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_plannedStartDate">
+            <summary>
+            预计开工日期
+            取消生产订单DTO.Misc.预计开工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_plannedCompleteDate">
+            <summary>
+            预计完工日期
+            取消生产订单DTO.Misc.预计完工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_qty">
+            <summary>
+            数量
+            取消生产订单DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_mO">
+            <summary>
+            MO
+            取消生产订单DTO.Misc.MO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_docNO">
+            <summary>
+            单据号
+            取消生产订单DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_uOM_Code">
+            <summary>
+            计量单位编码
+            取消生产订单DTO.Misc.计量单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_uOM_Name">
+            <summary>
+            计量单位名称
+            取消生产订单DTO.Misc.计量单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_item_Code">
+            <summary>
+            料号
+            取消生产订单DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_item_Name">
+            <summary>
+            品名
+            取消生产订单DTO.Misc.品名
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_pPLineID">
+            <summary>
+            生产计划行ID
+            取消生产订单DTO.Misc.生产计划行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_productUOM_Round_Precision">
+            <summary>
+            精度
+            取消生产订单DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_productUOM_Round_RoundType">
+            <summary>
+            类型
+            取消生产订单DTO.Misc.类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_productUOM_Round_RoundValue">
+            <summary>
+            值
+            取消生产订单DTO.Misc.值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.CancelMODTOData.m_createdon">
+            <summary>
+            创建时间
+            取消生产订单DTO.Misc.创建时间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.CancelMODTOData.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            取消生产订单DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.CancelMODTOData.Item">
+            <summary>
+            物料
+            取消生产订单DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.CancelMODTOData.Uom_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            取消生产订单DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.CancelMODTOData.Uom">
+            <summary>
+            生产单位
+            取消生产订单DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NetChangeDTOData">
+            <summary>
+            净改变DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NetChangeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NetChangeDTOData.#ctor(System.Int64,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.NetChangeDTOData.m_itemVersion">
+            <summary>
+            物料版本
+            净改变DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.NetChangeDTOData.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            净改变DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.NetChangeDTOData.Item">
+            <summary>
+            物料
+            净改变DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.NetChangeDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            净改变DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.NetChangeDTOData.Org">
+            <summary>
+            组织
+            净改变DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PPDocTypeDTOData">
+            <summary>
+            生产计划单据类型传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPDocTypeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PPDocTypeDTOData.#ctor(System.Int64,System.String,System.String,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPDocTypeDTOData.m_iD">
+            <summary>
+            属性
+            生产计划单据类型传输对象.Misc.属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPDocTypeDTOData.m_code">
+            <summary>
+            单据类型编码
+            生产计划单据类型传输对象.Misc.单据类型编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPDocTypeDTOData.m_name">
+            <summary>
+            单据类型名称
+            生产计划单据类型传输对象.Misc.单据类型名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPDocTypeDTOData.m_conformType">
+            <summary>
+            确认方式
+            生产计划单据类型传输对象.Misc.确认方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PPDocTypeDTOData.m_docHeaderSequence">
+            <summary>
+            编码规则
+            生产计划单据类型传输对象.Misc.编码规则
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanDTOData">
+            <summary>
+            计划DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDTOData.#ctor(System.Int64,System.String,System.Int64,System.Int32,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int64,System.DateTime,System.Int32,System.String,System.Int64,System.Int32,System.Int64,System.Int64,System.String,System.String,System.Int64,System.Decimal,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Decimal,System.DateTime,System.String,System.Int64,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_itemCode">
+            <summary>
+            料品代码
+            计划DTO.Misc.料品代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_degree">
+            <summary>
+            等级
+            计划DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_potency">
+            <summary>
+            成分
+            计划DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_qtyByBuildUOM">
+            <summary>
+            计划数量
+            计划DTO.Misc.计划数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_tranOutQtyByBuildUOM">
+            <summary>
+            执行数量
+            计划DTO.Misc.执行数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_itemName">
+            <summary>
+            料品名称
+            计划DTO.Misc.料品名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_itemVesionCode">
+            <summary>
+            版本名称
+            计划DTO.Misc.版本名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_productUOMCode">
+            <summary>
+            生产单位Coe
+            计划DTO.Misc.生产单位Coe
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_productUOMName">
+            <summary>
+            生产单位名称
+            计划DTO.Misc.生产单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_productUOMRoundPrecision">
+            <summary>
+            生产单位精度
+            计划DTO.Misc.生产单位精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_productUOMRoundType">
+            <summary>
+            生产单位精度类型
+            计划DTO.Misc.生产单位精度类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_productUOMRoundValue">
+            <summary>
+            生产单位精度值
+            计划DTO.Misc.生产单位精度值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_taskCode">
+            <summary>
+            任务代码
+            计划DTO.Misc.任务代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_taskName">
+            <summary>
+            任务名称
+            计划DTO.Misc.任务名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_projectCode">
+            <summary>
+            项目代码
+            计划DTO.Misc.项目代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_projectName">
+            <summary>
+            项目名称
+            计划DTO.Misc.项目名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_seibanCode">
+            <summary>
+            Seiban代码
+            计划DTO.Misc.Seiban代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_docDate">
+            <summary>
+            单据日期
+            计划DTO.Misc.单据日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_docVersion">
+            <summary>
+            单据版本
+            计划DTO.Misc.单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_docNo">
+            <summary>
+            单据号
+            计划DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_docLineNo">
+            <summary>
+            行号
+            计划DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_customerCode">
+            <summary>
+            客户代码
+            计划DTO.Misc.客户代码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_customerName">
+            <summary>
+            客户名称
+            计划DTO.Misc.客户名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_pUToPBURate">
+            <summary>
+            生产单位主副转换率
+            计划DTO.Misc.生产单位主副转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_sUToSBURate">
+            <summary>
+            库存单位主副转换率
+            计划DTO.Misc.库存单位主副转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_canTransOutAmount">
+            <summary>
+            可调拨数量
+            计划DTO.Misc.可调拨数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_cUToCBURadio">
+            <summary>
+            成本-基准
+            计划DTO.Misc.成本-基准
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_pUToPBURadio">
+            <summary>
+            计价-基准
+            计划DTO.Misc.计价-基准
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_transTime">
+            <summary>
+            调拨时间
+            计划DTO.Misc.调拨时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_docLineNoNew">
+            <summary>
+            行号(new)
+            计划DTO.Misc.行号(new)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_whCode">
+            <summary>
+            存储地点编码
+            计划DTO.Misc.存储地点编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.PlanDTOData.m_whName">
+            <summary>
+            存储地点名称
+            计划DTO.Misc.存储地点名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Item">
+            <summary>
+            料品
+            计划DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.ItemVersion_SKey">
+            <summary>
+            料品版本 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.ItemVersion">
+            <summary>
+            料品版本
+            计划DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Project">
+            <summary>
+            项目
+            计划DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Task">
+            <summary>
+            任务
+            计划DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Seiban_SKey">
+            <summary>
+            Seiban 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Seiban">
+            <summary>
+            Seiban
+            计划DTO.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Customer">
+            <summary>
+            客户
+            计划DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransOutOrg_SKey">
+            <summary>
+            调出组织 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.调出组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransOutOrg">
+            <summary>
+            调出组织
+            计划DTO.Misc.调出组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransOutWh_SKey">
+            <summary>
+            调出地点 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.调出地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransOutWh">
+            <summary>
+            调出地点
+            计划DTO.Misc.调出地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransIntoOrg_SKey">
+            <summary>
+            调入组织 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.调入组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransIntoOrg">
+            <summary>
+            调入组织
+            计划DTO.Misc.调入组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransIntoWh_SKey">
+            <summary>
+            调入地点 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.调入地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.TransIntoWh">
+            <summary>
+            调入地点
+            计划DTO.Misc.调入地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.BuildUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.BuildUOM">
+            <summary>
+            生产单位
+            计划DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Pplinekey_SKey">
+            <summary>
+            生产计划行 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.生产计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Pplinekey">
+            <summary>
+            生产计划行
+            计划DTO.Misc.生产计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.StoreUOM_SKey">
+            <summary>
+            库存单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.库存单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.StoreUOM">
+            <summary>
+            库存单位
+            计划DTO.Misc.库存单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Doc_SKey">
+            <summary>
+            单据 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.单据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Doc">
+            <summary>
+            单据
+            计划DTO.Misc.单据
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocLine_SKey">
+            <summary>
+            单据行 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.单据行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocLine">
+            <summary>
+            单据行
+            计划DTO.Misc.单据行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocOrg_SKey">
+            <summary>
+            单据组织 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.单据组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocOrg">
+            <summary>
+            单据组织
+            计划DTO.Misc.单据组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocTransType_SKey">
+            <summary>
+            单据类型 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.DocTransType">
+            <summary>
+            单据类型
+            计划DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.BuildBaseUOM_SKey">
+            <summary>
+            生产单位副单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.生产单位副单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.BuildBaseUOM">
+            <summary>
+            生产单位副单位
+            计划DTO.Misc.生产单位副单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.StoreBaseUOM_SKey">
+            <summary>
+            库存单位基准单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.库存单位基准单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.StoreBaseUOM">
+            <summary>
+            库存单位基准单位
+            计划DTO.Misc.库存单位基准单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.CostUOM_SKey">
+            <summary>
+            成本单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.成本单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.CostUOM">
+            <summary>
+            成本单位
+            计划DTO.Misc.成本单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.CostBaseUOM_SKey">
+            <summary>
+            成本基准单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.成本基准单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.CostBaseUOM">
+            <summary>
+            成本基准单位
+            计划DTO.Misc.成本基准单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.PriceUOM_SKey">
+            <summary>
+            价格单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.价格单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.PriceUOM">
+            <summary>
+            价格单位
+            计划DTO.Misc.价格单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.PriceBaseUOM_SKey">
+            <summary>
+            计价单位辅单位 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.计价单位辅单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.PriceBaseUOM">
+            <summary>
+            计价单位辅单位
+            计划DTO.Misc.计价单位辅单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Wh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            计划DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanDTOData.Wh">
+            <summary>
+            存储地点
+            计划DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ToTransSplitDTOData">
+            <summary>
+            转调拨生单条件DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ToTransSplitDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ToTransSplitDTOData.#ctor(System.Int32,System.DateTime,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_transType">
+            <summary>
+            调拨类型
+            转调拨生单条件DTO.Misc.调拨类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_transTime">
+            <summary>
+            调拨时间
+            转调拨生单条件DTO.Misc.调拨时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isTransOutOrg">
+            <summary>
+            调出组织
+            转调拨生单条件DTO.Misc.调出组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isTransInOrg">
+            <summary>
+            调入组织
+            转调拨生单条件DTO.Misc.调入组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isTransInWh">
+            <summary>
+            调入存储地点
+            转调拨生单条件DTO.Misc.调入存储地点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isTransOutWh">
+            <summary>
+            调出存储地点
+            转调拨生单条件DTO.Misc.调出存储地点
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isTask">
+            <summary>
+            任务
+            转调拨生单条件DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isProject">
+            <summary>
+            项目
+            转调拨生单条件DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isSeiban">
+            <summary>
+            Seiban
+            转调拨生单条件DTO.Misc.Seiban
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isCustomer">
+            <summary>
+            客户
+            转调拨生单条件DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.ToTransSplitDTOData.m_isWh">
+            <summary>
+            存储地点
+            转调拨生单条件DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.UpdateDTOData">
+            <summary>
+            更新调拨/出货量 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.UpdateDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.UpdateDTOData.#ctor(System.Int64,System.Decimal,System.Int32,System.Int64,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.UpdateDTOData.m_qty">
+            <summary>
+            本次数量
+            更新调拨/出货量.Misc.本次数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.UpdateDTOData.m_qtyType">
+            <summary>
+            数量类型
+            更新调拨/出货量.Misc.数量类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PP.UpdateDTOData.m_rate">
+            <summary>
+            转换率
+            更新调拨/出货量.Misc.转换率
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.PpLine_SKey">
+            <summary>
+            生产计划行Key 序列化Key属性。（传递跨组织序列列字段）
+            更新调拨/出货量.Misc.生产计划行Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.PpLine">
+            <summary>
+            生产计划行Key
+            更新调拨/出货量.Misc.生产计划行Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.UOM_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            更新调拨/出货量.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.UOM">
+            <summary>
+            单位
+            更新调拨/出货量.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.SubUOM_SKey">
+            <summary>
+            辅单位 序列化Key属性。（传递跨组织序列列字段）
+            更新调拨/出货量.Misc.辅单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UpdateDTOData.SubUOM">
+            <summary>
+            辅单位
+            更新调拨/出货量.Misc.辅单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ItemBOMEnableException">
+            <summary>
+            异常类型: 物料必须是可BOM异常
+            
+             当前计划行不能展开，物料必须是可BOM且物料形态不能为无库存、商品、杂项、资产、服务、备件、工序委外件、配方和费用性物料！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMEnableException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料必须是可BOM异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMEnableException.#ctor">
+            <summary>
+            异常类型: 物料必须是可BOM异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMEnableException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料必须是可BOM异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ItemForecastContorlException">
+            <summary>
+            异常类型: 物料预测控制异常
+            
+             当前计划行的不能展开，物料预测控制须为独立与相关!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastContorlException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料预测控制异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastContorlException.#ctor">
+            <summary>
+            异常类型: 物料预测控制异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastContorlException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料预测控制异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ItemBOMException">
+            <summary>
+            异常类型: 物料BOM结构异常
+            
+             当前计划行不能展开，请确保物料存在相应的BOM结构！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料BOM结构异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMException.#ctor">
+            <summary>
+            异常类型: 物料BOM结构异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemBOMException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料BOM结构异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanNOReExploreException">
+            <summary>
+            异常类型: 计划不能重展异常！
+            
+             计划不能重展!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOReExploreException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划不能重展异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOReExploreException.#ctor">
+            <summary>
+            异常类型: 计划不能重展异常！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOReExploreException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划不能重展异常！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanNOApproveException">
+            <summary>
+            异常类型: 计划分解未核准异常
+            
+             当前计划不能被分解。只有已经核准的非主计划可以被分解！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOApproveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划分解未核准异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOApproveException.#ctor">
+            <summary>
+            异常类型: 计划分解未核准异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNOApproveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划分解未核准异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PeriodTypeException">
+            <summary>
+            异常类型: 计划分解分期类型异常
+            
+             子计划分期类型必须小于母计划的分期类型！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodTypeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划分解分期类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodTypeException.#ctor">
+            <summary>
+            异常类型: 计划分解分期类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodTypeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划分解分期类型异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PeriodContinuityException">
+            <summary>
+            异常类型: 计划分解分期不连续异常
+            
+             被分解的多个计划分期必须连续而且未分解！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodContinuityException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划分解分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodContinuityException.#ctor">
+            <summary>
+            异常类型: 计划分解分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PeriodContinuityException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划分解分期不连续异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanDateCrossException">
+            <summary>
+            异常类型: 计划时间交叉异常
+            
+             当前计划和下达组织中的主计划时间交叉，不能下达！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDateCrossException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划时间交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDateCrossException.#ctor">
+            <summary>
+            异常类型: 计划时间交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDateCrossException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划时间交叉异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SelPlanDateCrossException">
+            <summary>
+            异常类型: 所选计划时间交叉异常
+            
+             所选计划存在时间交叉，不可合并!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SelPlanDateCrossException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 所选计划时间交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SelPlanDateCrossException.#ctor">
+            <summary>
+            异常类型: 所选计划时间交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SelPlanDateCrossException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 所选计划时间交叉异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanNoRollException">
+            <summary>
+            异常类型: 计划不能滚动期调整异常
+            
+             只有滚动期大于０，计划期数大于１的主计划才能进行滚动修正！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoRollException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划不能滚动期调整异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoRollException.#ctor">
+            <summary>
+            异常类型: 计划不能滚动期调整异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoRollException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划不能滚动期调整异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.AmortizePeriodException">
+            <summary>
+            异常类型: 摊销分期异常
+            
+             当前摊销分期不应该含有计划的最后一个分期!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 摊销分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodException.#ctor">
+            <summary>
+            异常类型: 摊销分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 摊销分期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.AmortizePeriodConException">
+            <summary>
+            异常类型: 摊销分期不连续异常
+            
+             当前摊销分期必须为连续分期!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodConException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 摊销分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodConException.#ctor">
+            <summary>
+            异常类型: 摊销分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizePeriodConException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 摊销分期不连续异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.OrganizationException">
+            <summary>
+            异常类型: 执行组织不相同异常
+            
+             被合并的计划必须为同一执行组织计划！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrganizationException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 执行组织不相同异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrganizationException.#ctor">
+            <summary>
+            异常类型: 执行组织不相同异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrganizationException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 执行组织不相同异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.VersionException">
+            <summary>
+            异常类型: 不同版本不能合并异常
+            
+             同一计划的不同版本不能合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.VersionException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不同版本不能合并异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.VersionException.#ctor">
+            <summary>
+            异常类型: 不同版本不能合并异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.VersionException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不同版本不能合并异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ParentPlanException">
+            <summary>
+            异常类型: 母子计划不能合并异常
+            
+             母子计划不能合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ParentPlanException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 母子计划不能合并异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ParentPlanException.#ctor">
+            <summary>
+            异常类型: 母子计划不能合并异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ParentPlanException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 母子计划不能合并异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ApproveException">
+            <summary>
+            异常类型: 未核准不能下达异常
+            
+             计划未核准不能下达！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未核准不能下达异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveException.#ctor">
+            <summary>
+            异常类型: 未核准不能下达异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未核准不能下达异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NOReleaseException">
+            <summary>
+            异常类型: 计划行不能释放异常
+            
+             计划必须是可释放，已核准的主计划，计划行物料形态不为重复，“原始数量”+“订单修正量”-“已释放数量”>0
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NOReleaseException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划行不能释放异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NOReleaseException.#ctor">
+            <summary>
+            异常类型: 计划行不能释放异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NOReleaseException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划行不能释放异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitWidthException">
+            <summary>
+            异常类型: 计划分解宽度异常
+            
+             子计划的分期宽度必须小于母计划！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitWidthException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划分解宽度异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitWidthException.#ctor">
+            <summary>
+            异常类型: 计划分解宽度异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitWidthException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划分解宽度异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitPeiodException">
+            <summary>
+            异常类型: 计划分解时间连续异常
+            
+             录入的计划分期时间必须连续不交叉。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitPeiodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划分解时间连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitPeiodException.#ctor">
+            <summary>
+            异常类型: 计划分解时间连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitPeiodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划分解时间连续异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ReleaseQtyException">
+            <summary>
+            异常类型: 计划释放数量异常
+            
+             计划行释放数量必须小于可释放数量，“原始数量”+“订单修正量”-“已释放数量”>“本次释放数量”！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseQtyException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划释放数量异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseQtyException.#ctor">
+            <summary>
+            异常类型: 计划释放数量异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseQtyException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划释放数量异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.OrgNoItemException">
+            <summary>
+            异常类型: 下达组织没有相应物料异常
+            
+             下达组织没有相应物料！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgNoItemException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下达组织没有相应物料异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgNoItemException.#ctor">
+            <summary>
+            异常类型: 下达组织没有相应物料异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgNoItemException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 下达组织没有相应物料异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanMergeNoneException">
+            <summary>
+            异常类型: 计划合并无期间类型异常
+            
+             “无期间类型”计划不可以和其它类型计划合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeNoneException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划合并无期间类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeNoneException.#ctor">
+            <summary>
+            异常类型: 计划合并无期间类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeNoneException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划合并无期间类型异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanMergeOrg">
+            <summary>
+            异常类型: 计划合并组织不同异常
+            
+             不同组织的计划不可以合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeOrg.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划合并组织不同异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeOrg.#ctor">
+            <summary>
+            异常类型: 计划合并组织不同异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanMergeOrg.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划合并组织不同异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanExcuException">
+            <summary>
+            异常类型: 计划已执行异常
+            
+             计划有执行数据，不可以反审核！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanExcuException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划已执行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanExcuException.#ctor">
+            <summary>
+            异常类型: 计划已执行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanExcuException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划已执行异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanChildException">
+            <summary>
+            异常类型: 子计划状态异常
+            
+             子计划必须是“开立”状态版本为“1”，否则不可以弃审！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanChildException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 子计划状态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanChildException.#ctor">
+            <summary>
+            异常类型: 子计划状态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanChildException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 子计划状态异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ItemForecastUpException">
+            <summary>
+            异常类型: 物料预测控制顶层行异常
+            
+             当前计划行的不能展开，物料预测控制须为独立或独立与相关!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastUpException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料预测控制顶层行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastUpException.#ctor">
+            <summary>
+            异常类型: 物料预测控制顶层行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemForecastUpException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料预测控制顶层行异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ReleaseMPSException">
+            <summary>
+            异常类型: 释放MPS异常
+            
+             当前计划行不可释放，料品必须有效，计划方法是MPS或者MRP，料品形态不等于商品，服务，砸向料品，资产
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseMPSException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 释放MPS异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseMPSException.#ctor">
+            <summary>
+            异常类型: 释放MPS异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseMPSException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 释放MPS异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanDelException">
+            <summary>
+            异常类型: 计划删除异常
+            
+             审核或终止的计划，分解下达的子计划，不可以删除！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDelException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDelException.#ctor">
+            <summary>
+            异常类型: 计划删除异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanDelException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划删除异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MergePlanCountException">
+            <summary>
+            异常类型: 合并计划数量异常
+            
+             请选择两个或两个以上计划进行合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergePlanCountException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 合并计划数量异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergePlanCountException.#ctor">
+            <summary>
+            异常类型: 合并计划数量异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergePlanCountException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 合并计划数量异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ApproveOrgException">
+            <summary>
+            异常类型: 下达组织异常
+            
+             只有设置了工厂组织的主计划才能进行下达！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveOrgException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下达组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveOrgException.#ctor">
+            <summary>
+            异常类型: 下达组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApproveOrgException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 下达组织异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NoPeriodException">
+            <summary>
+            异常类型: 计划行无分期异常
+            
+             计划行无分期！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划行无分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoPeriodException.#ctor">
+            <summary>
+            异常类型: 计划行无分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划行无分期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.MergeNoPeriodException">
+            <summary>
+            异常类型: 计划合并无分期异常
+            
+             [计划]${ProductPlan}的计划行无分期不能合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergeNoPeriodException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划合并无分期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergeNoPeriodException.#ctor(System.String)">
+            <summary>
+            异常类型: 计划合并无分期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.MergeNoPeriodException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 计划合并无分期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.MergeNoPeriodException.ProductPlan">
+            <summary>
+            计划
+            计划合并无分期异常.Misc.计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.LineAutoCreateException">
+            <summary>
+            异常类型: 自动创建行操作异常
+            
+             系统创建行不可以做任何操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.LineAutoCreateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动创建行操作异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.LineAutoCreateException.#ctor">
+            <summary>
+            异常类型: 自动创建行操作异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.LineAutoCreateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 自动创建行操作异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanStopException">
+            <summary>
+            异常类型: 计划终止异常
+            
+             [计划]${ProductPlan}已终止不可以合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanStopException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划终止异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanStopException.#ctor(System.String)">
+            <summary>
+            异常类型: 计划终止异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanStopException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 计划终止异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanStopException.ProductPlan">
+            <summary>
+            计划
+            计划终止异常.Misc.计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanOverdueException">
+            <summary>
+            异常类型: 计划过期异常
+            
+             [计划]${ProductPlan}已过期，不可以合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanOverdueException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanOverdueException.#ctor(System.String)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanOverdueException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="productPlan">计划</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.PlanOverdueException.ProductPlan">
+            <summary>
+            计划
+            计划过期异常.Misc.计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ReleasePlantOrgException">
+            <summary>
+            异常类型: 释放工厂组织异常
+            
+             计划行设置了工厂组织，不可以进行释放的相应操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleasePlantOrgException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 释放工厂组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleasePlantOrgException.#ctor">
+            <summary>
+            异常类型: 释放工厂组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleasePlantOrgException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 释放工厂组织异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitInCrossException">
+            <summary>
+            异常类型: 分解时段和母计划交叉异常
+            
+             录入的分解时段和母计划的期间交叉！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitInCrossException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分解时段和母计划交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitInCrossException.#ctor">
+            <summary>
+            异常类型: 分解时段和母计划交叉异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitInCrossException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分解时段和母计划交叉异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitStartEndException">
+            <summary>
+            异常类型: 时段起止时间异常
+            
+             录入的时段与子计划的起止时间不一致！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitStartEndException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 时段起止时间异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitStartEndException.#ctor">
+            <summary>
+            异常类型: 时段起止时间异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitStartEndException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 时段起止时间异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitContinuException">
+            <summary>
+            异常类型: 分解期间不连续异常
+            
+             请选择未分解且连续的分期！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitContinuException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分解期间不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitContinuException.#ctor">
+            <summary>
+            异常类型: 分解期间不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitContinuException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分解期间不连续异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitNoPeriodException">
+            <summary>
+            异常类型: 未录入分期时段异常
+            
+             计划周期类型为“绝对日”，必须录入分期时段！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitNoPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未录入分期时段异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitNoPeriodException.#ctor">
+            <summary>
+            异常类型: 未录入分期时段异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitNoPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未录入分期时段异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitTypeNullException">
+            <summary>
+            异常类型: 分解周期类型空异常
+            
+             请选择周期类型！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitTypeNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分解周期类型空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitTypeNullException.#ctor">
+            <summary>
+            异常类型: 分解周期类型空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitTypeNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分解周期类型空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.RollLastPeriodException">
+            <summary>
+            异常类型: 滚动最后分期异常
+            
+             当前系统日期处在计划的最后一个分期，不能做滚动修正！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RollLastPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 滚动最后分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RollLastPeriodException.#ctor">
+            <summary>
+            异常类型: 滚动最后分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RollLastPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 滚动最后分期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NoApprovedCancelException">
+            <summary>
+            异常类型: 下达取消异常
+            
+             [子计划]${ProductPlan}版本不为1，不可以取消。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoApprovedCancelException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下达取消异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoApprovedCancelException.#ctor(System.String)">
+            <summary>
+            异常类型: 下达取消异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoApprovedCancelException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 下达取消异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.NoApprovedCancelException.ProductPlan">
+            <summary>
+            生产计划
+            下达取消异常.Misc.生产计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ReleaseItemException">
+            <summary>
+            异常类型: 释放物料形态异常
+            
+             计划行不可释放，物料形态不能为重复，计划，系列，模型，工艺，可选类。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 释放物料形态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemException.#ctor">
+            <summary>
+            异常类型: 释放物料形态异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 释放物料形态异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NoSaveException">
+            <summary>
+            异常类型: 计划行未保存异常
+            
+             请先保存当前行，再进行操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoSaveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划行未保存异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoSaveException.#ctor">
+            <summary>
+            异常类型: 计划行未保存异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NoSaveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划行未保存异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.UomNoEqualException">
+            <summary>
+            异常类型: 单位不一致异常
+            
+             当前计划已存在[料品]${ItemName}，[单位]${ProductUom},同一计划中相同料品的单位必须一致！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.UomNoEqualException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 单位不一致异常 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+            <param name="productUom">单位</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.UomNoEqualException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 单位不一致异常 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+            <param name="productUom">单位</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.UomNoEqualException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 单位不一致异常 Constructor
+            </summary>
+            <param name="itemName">料品</param>
+            <param name="productUom">单位</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UomNoEqualException.ItemName">
+            <summary>
+            料品
+            单位不一致异常.Misc.料品
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.UomNoEqualException.ProductUom">
+            <summary>
+            单位
+            单位不一致异常.Misc.单位
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.PlanNoSaveException">
+            <summary>
+            异常类型: 计划未保存异常
+            
+             当前计划已发生改变，请先保存再进行相关操作！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoSaveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划未保存异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoSaveException.#ctor">
+            <summary>
+            异常类型: 计划未保存异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.PlanNoSaveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划未保存异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ApprovedCancelException">
+            <summary>
+            异常类型: 下达取消状态异常
+            
+             [子计划]${ProductPlan}不是“开立”态，不可以取消。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApprovedCancelException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下达取消状态异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApprovedCancelException.#ctor(System.String)">
+            <summary>
+            异常类型: 下达取消状态异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ApprovedCancelException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 下达取消状态异常 Constructor
+            </summary>
+            <param name="productPlan">生产计划</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.ApprovedCancelException.ProductPlan">
+            <summary>
+            生产计划
+            下达取消状态异常.Misc.生产计划
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ExploreLineException">
+            <summary>
+            异常类型: 展开行有执行数据异常
+            
+             计划行有执行数据不可以展开！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExploreLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 展开行有执行数据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExploreLineException.#ctor">
+            <summary>
+            异常类型: 展开行有执行数据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExploreLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 展开行有执行数据异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ReleaseItemRoutException">
+            <summary>
+            异常类型: 释放物料工艺件异常
+            
+             计划行物料为工艺件，不可进行释放相关操作。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemRoutException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 释放物料工艺件异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemRoutException.#ctor">
+            <summary>
+            异常类型: 释放物料工艺件异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ReleaseItemRoutException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 释放物料工艺件异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitLineException">
+            <summary>
+            异常类型: 分解行已分解标志异常
+            
+             所选行的[已分解]标志必须相同！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分解行已分解标志异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitLineException.#ctor">
+            <summary>
+            异常类型: 分解行已分解标志异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分解行已分解标志异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.RefreshDateException">
+            <summary>
+            异常类型: 刷新执行数量日期异常
+            
+             开始日期必须小于等于截止日期！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshDateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 刷新执行数量日期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshDateException.#ctor">
+            <summary>
+            异常类型: 刷新执行数量日期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshDateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 刷新执行数量日期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.RefreshPeriodException">
+            <summary>
+            异常类型: 无摊销分期异常
+            
+             请选择摊销分期!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 无摊销分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshPeriodException.#ctor">
+            <summary>
+            异常类型: 无摊销分期异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.RefreshPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 无摊销分期异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.AmortizeRollPeriodException">
+            <summary>
+            异常类型: 摊销滚动分期不连续异常
+            
+             最大摊销期和最小滚动期必须相连!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizeRollPeriodException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 摊销滚动分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizeRollPeriodException.#ctor">
+            <summary>
+            异常类型: 摊销滚动分期不连续异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.AmortizeRollPeriodException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 摊销滚动分期不连续异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.OrgChangeException">
+            <summary>
+            异常类型: 工厂组织或营运组织属性已被引用，不能修改！OrgChangeException该组织的${OrgType}属性已被引用，不能修改！
+            
+             该组织的${OrgType}属性已被引用，不能修改！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgChangeException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 工厂组织或营运组织属性已被引用，不能修改！OrgChangeException该组织的${OrgType}属性已被引用，不能修改！ Constructor
+            </summary>
+            <param name="orgType">组织类型</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgChangeException.#ctor(System.String)">
+            <summary>
+            异常类型: 工厂组织或营运组织属性已被引用，不能修改！OrgChangeException该组织的${OrgType}属性已被引用，不能修改！ Constructor
+            </summary>
+            <param name="orgType">组织类型</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgChangeException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 工厂组织或营运组织属性已被引用，不能修改！OrgChangeException该组织的${OrgType}属性已被引用，不能修改！ Constructor
+            </summary>
+            <param name="orgType">组织类型</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.OrgChangeException.OrgType">
+            <summary>
+            组织类型
+            工厂组织或营运组织属性已被引用，不能修改！OrgChangeException该组织的${OrgType}属性已被引用，不能修改！.Misc.组织类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ItemIsNotBuildException">
+            <summary>
+            异常类型: 料品不可生产不能释放为生产订单
+            
+             ${ItemName}不可生产不能释放为生产订单
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemIsNotBuildException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 料品不可生产不能释放为生产订单 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemIsNotBuildException.#ctor(System.String)">
+            <summary>
+            异常类型: 料品不可生产不能释放为生产订单 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ItemIsNotBuildException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 料品不可生产不能释放为生产订单 Constructor
+            </summary>
+            <param name="itemName">料品名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.ItemIsNotBuildException.ItemName">
+            <summary>
+            料品名称
+            料品不可生产不能释放为生产订单.Misc.料品名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.OverduePPNotDelete">
+            <summary>
+            异常类型: 已经审核或者过期计划不能删除！
+            
+             ${PPName} 已经审核或者过期计划不能删除！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OverduePPNotDelete.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 已经审核或者过期计划不能删除！ Constructor
+            </summary>
+            <param name="pPName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OverduePPNotDelete.#ctor(System.String)">
+            <summary>
+            异常类型: 已经审核或者过期计划不能删除！ Constructor
+            </summary>
+            <param name="pPName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OverduePPNotDelete.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 已经审核或者过期计划不能删除！ Constructor
+            </summary>
+            <param name="pPName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.OverduePPNotDelete.PPName">
+            <summary>
+            计划名称
+            已经审核或者过期计划不能删除！.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.DocTypeException">
+            <summary>
+            异常类型: 单据类型不同不能合并！
+            
+             单据类型不同不能合并！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DocTypeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 单据类型不同不能合并！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DocTypeException.#ctor">
+            <summary>
+            异常类型: 单据类型不同不能合并！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.DocTypeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 单据类型不同不能合并！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SplitException">
+            <summary>
+            异常类型: 取消分解
+            
+             计划已审核，不能取消分解！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取消分解 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitException.#ctor">
+            <summary>
+            异常类型: 取消分解 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SplitException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取消分解 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NullSEDateException">
+            <summary>
+            异常类型: 计划起止日期为空异常
+            
+             计划开始或结束日期不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NullSEDateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划起止日期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NullSEDateException.#ctor">
+            <summary>
+            异常类型: 计划起止日期为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NullSEDateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划起止日期为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.ExistChildPlanException">
+            <summary>
+            异常类型: 母计划弃审异常
+            
+             当前计划存在子计划，无法弃审！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExistChildPlanException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 母计划弃审异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExistChildPlanException.#ctor">
+            <summary>
+            异常类型: 母计划弃审异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.ExistChildPlanException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 母计划弃审异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.SameDateCanotSpitException">
+            <summary>
+            异常类型: 起至日期相同的计划不能分解异常
+            
+             起至日期相同的计划不能分解
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SameDateCanotSpitException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 起至日期相同的计划不能分解异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SameDateCanotSpitException.#ctor">
+            <summary>
+            异常类型: 起至日期相同的计划不能分解异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.SameDateCanotSpitException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 起至日期相同的计划不能分解异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.OrgIsNotOpenException">
+            <summary>
+            异常类型: 下达组织没有启用需求计划模块异常
+            
+             下达组织${Org}没有启用需求计划模块，不能下达
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgIsNotOpenException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下达组织没有启用需求计划模块异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgIsNotOpenException.#ctor(System.String)">
+            <summary>
+            异常类型: 下达组织没有启用需求计划模块异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.OrgIsNotOpenException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 下达组织没有启用需求计划模块异常 Constructor
+            </summary>
+            <param name="org">组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PP.OrgIsNotOpenException.Org">
+            <summary>
+            组织
+            下达组织没有启用需求计划模块异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.CannotFindMOException">
+            <summary>
+            异常类型: 没有找到符合条件的MO
+            
+             没有找到符合条件的MO
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.CannotFindMOException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到符合条件的MO Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.CannotFindMOException.#ctor">
+            <summary>
+            异常类型: 没有找到符合条件的MO Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.CannotFindMOException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有找到符合条件的MO Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PP.NumberRuleException">
+            <summary>
+            异常类型: 编号规则为空
+            
+             编号方式 为自动编号时 编号规则 不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NumberRuleException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 编号规则为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NumberRuleException.#ctor">
+            <summary>
+            异常类型: 编号规则为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PP.NumberRuleException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 编号规则为空 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData">
+            <summary>
+            计划头基本信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.#ctor(System.Int64,System.Int64,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_planCode">
+            <summary>
+            编码
+            计划头基本信息DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_planName">
+            <summary>
+            名称
+            计划头基本信息DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_planMemo">
+            <summary>
+            备注
+            计划头基本信息DTO.Misc.备注
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_planStatus">
+            <summary>
+            状态
+            计划头基本信息DTO.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_isCancel">
+            <summary>
+            是否已终止
+            计划头基本信息DTO.Misc.是否已终止
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_cancelReason">
+            <summary>
+            原因
+            计划头基本信息DTO.Misc.原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.m_planSysVersion">
+            <summary>
+            系统版本
+            计划头基本信息DTO.Misc.系统版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            计划头基本信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.OrgKey">
+            <summary>
+            组织
+            计划头基本信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.PlanKey_SKey">
+            <summary>
+            生产计划 序列化Key属性。（传递跨组织序列列字段）
+            计划头基本信息DTO.Misc.生产计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData.PlanKey">
+            <summary>
+            生产计划
+            计划头基本信息DTO.Misc.生产计划
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData">
+            <summary>
+            计划行基本信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.#ctor(UFIDA.U9.PP.PPTempBP.ProductPlanDescDTOData,System.Int32,System.Int64,System.String,System.DateTime,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_productPlanDescDTO">
+            <summary>
+            计划头基本信息
+            计划行基本信息DTO.Misc.计划头基本信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_periodNo">
+            <summary>
+            分期序号
+            计划行基本信息DTO.Misc.分期序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_lineDocNo">
+            <summary>
+            行号
+            计划行基本信息DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_periodStartDate">
+            <summary>
+            所在分期起始日期
+            计划行基本信息DTO.Misc.所在分期起始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_periodEndDate">
+            <summary>
+            所在分期截止日期
+            计划行基本信息DTO.Misc.所在分期截止日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.m_lineSysVersion">
+            <summary>
+            系统版本
+            计划行基本信息DTO.Misc.系统版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.ProductPlanLine_SKey">
+            <summary>
+            计划行 序列化Key属性。（传递跨组织序列列字段）
+            计划行基本信息DTO.Misc.计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData.ProductPlanLine">
+            <summary>
+            计划行
+            计划行基本信息DTO.Misc.计划行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData">
+            <summary>
+            计划行详细信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.#ctor(UFIDA.U9.PP.PPTempBP.ProductPlanLineKeyInfoDTOData,UFIDA.U9.PP.PPTempBP.LineDemiDTOData,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,System.Int64,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.m_productPlanLineKeyInfoDTO">
+            <summary>
+            计划行基本信息
+            计划行详细信息DTO.Misc.计划行基本信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.m_lineDemiDTO">
+            <summary>
+            行纬度
+            计划行详细信息DTO.Misc.行纬度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.m_pareItemInfo">
+            <summary>
+            父物料
+            计划行详细信息DTO.Misc.父物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.m_pareQty">
+            <summary>
+            本层预测值
+            计划行详细信息DTO.Misc.本层预测值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.m_parentBomLine">
+            <summary>
+            父BOM行
+            计划行详细信息DTO.Misc.父BOM行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.PareBOM_SKey">
+            <summary>
+            父BOM 序列化Key属性。（传递跨组织序列列字段）
+            计划行详细信息DTO.Misc.父BOM
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.PareBOM">
+            <summary>
+            父BOM
+            计划行详细信息DTO.Misc.父BOM
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.UOM_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            计划行详细信息DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineDescDTOData.UOM">
+            <summary>
+            计量单位
+            计划行详细信息DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.LineDemiDTOData">
+            <summary>
+            行纬度DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.m_demandType">
+            <summary>
+            需求分类
+            行纬度DTO.Misc.需求分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.m_itemInfo">
+            <summary>
+            物料
+            行纬度DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.OperatingOrg_SKey">
+            <summary>
+            营运组织 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.OperatingOrg">
+            <summary>
+            营运组织
+            行纬度DTO.Misc.营运组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.PlantOrg_SKey">
+            <summary>
+            工厂组织 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.PlantOrg">
+            <summary>
+            工厂组织
+            行纬度DTO.Misc.工厂组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Department">
+            <summary>
+            部门
+            行纬度DTO.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Project">
+            <summary>
+            项目
+            行纬度DTO.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Task">
+            <summary>
+            任务
+            行纬度DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.Customer">
+            <summary>
+            客户
+            行纬度DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.CustomerSite_SKey">
+            <summary>
+            客户位置 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.CustomerSite">
+            <summary>
+            客户位置
+            行纬度DTO.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.SeiBan_SKey">
+            <summary>
+            番号 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.SeiBan">
+            <summary>
+            番号
+            行纬度DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.WareHouse_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            行纬度DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.LineDemiDTOData.WareHouse">
+            <summary>
+            存储地点
+            行纬度DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData">
+            <summary>
+            行父子信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.#ctor(System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.PareLine_SKey">
+            <summary>
+            父行 序列化Key属性。（传递跨组织序列列字段）
+            行父子信息DTO.Misc.父行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.PareLine">
+            <summary>
+            父行
+            行父子信息DTO.Misc.父行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.ChLine_SKey">
+            <summary>
+            子行 序列化Key属性。（传递跨组织序列列字段）
+            行父子信息DTO.Misc.子行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.ProductPlanLineParentChildPairDTOData.ChLine">
+            <summary>
+            子行
+            行父子信息DTO.Misc.子行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData">
+            <summary>
+            拆分行信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.#ctor(UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData,System.Int64,System.String,UFIDA.U9.PP.PPTempBP.LineDemiDTOData,System.Int64,System.String,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_pPTimeSlotForBreakDownDTO">
+            <summary>
+            拆分分期
+            拆分行信息.Misc.拆分分期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_lineDocNO">
+            <summary>
+            计划行号
+            拆分行信息.Misc.计划行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_lineDemiDTO">
+            <summary>
+            行纬度
+            拆分行信息.Misc.行纬度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_foreQty">
+            <summary>
+            上级拆解预测值
+            拆分行信息.Misc.上级拆解预测值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_pPLine">
+            <summary>
+            计划行
+            拆分行信息.Misc.计划行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.m_parentBomLine">
+            <summary>
+            BOM父行
+            拆分行信息.Misc.BOM父行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.ProductPlanLine_SKey">
+            <summary>
+            计划行 序列化Key属性。（传递跨组织序列列字段）
+            拆分行信息.Misc.计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.ProductPlanLine">
+            <summary>
+            计划行
+            拆分行信息.Misc.计划行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.UOM_SKey">
+            <summary>
+            单位 序列化Key属性。（传递跨组织序列列字段）
+            拆分行信息.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.UOM">
+            <summary>
+            单位
+            拆分行信息.Misc.单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.PPDetial_SKey">
+            <summary>
+            计划行明细 序列化Key属性。（传递跨组织序列列字段）
+            拆分行信息.Misc.计划行明细
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData.PPDetial">
+            <summary>
+            计划行明细
+            拆分行信息.Misc.计划行明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData">
+            <summary>
+            拆分分期 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.#ctor(UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData,System.Int32,System.DateTime,System.DateTime,System.Collections.Generic.List{UFIDA.U9.PP.PPTempBP.PPLineDetailDescDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.m_pPForBreakDownDTO">
+            <summary>
+            拆分DTO
+            拆分分期.Misc.拆分DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.m_slotNO">
+            <summary>
+            序号
+            拆分分期.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.m_startDate">
+            <summary>
+            起始日期
+            拆分分期.Misc.起始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.m_endDate">
+            <summary>
+            截止日期
+            拆分分期.Misc.截止日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData.m_pPLineDetailDescDTO">
+            <summary>
+            拆分行信息
+            拆分分期.Misc.拆分行信息
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData">
+            <summary>
+            拆分DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.#ctor(System.Int64,System.Int64,System.String,System.String,System.String,System.Int64,System.Collections.Generic.List{UFIDA.U9.PP.PPTempBP.PPTimeSlotForBreakDownDTOData},System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.m_planCode">
+            <summary>
+            计划编码
+            拆分DTO.Misc.计划编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.m_planName">
+            <summary>
+            计划名称
+            拆分DTO.Misc.计划名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.m_planMemo">
+            <summary>
+            备注
+            拆分DTO.Misc.备注
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.m_pPTimeSlotForBreakDownDTO">
+            <summary>
+            拆分分期
+            拆分DTO.Misc.拆分分期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.m_parentPlan">
+            <summary>
+            来源计划
+            拆分DTO.Misc.来源计划
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.SrcOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            拆分DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.SrcOrg">
+            <summary>
+            来源组织
+            拆分DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.ExeOrg_SKey">
+            <summary>
+            执行组织 序列化Key属性。（传递跨组织序列列字段）
+            拆分DTO.Misc.执行组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.ExeOrg">
+            <summary>
+            执行组织
+            拆分DTO.Misc.执行组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.PlanTemplete_SKey">
+            <summary>
+            计划模板 序列化Key属性。（传递跨组织序列列字段）
+            拆分DTO.Misc.计划模板
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.PlanTemplete">
+            <summary>
+            计划模板
+            拆分DTO.Misc.计划模板
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.Setting_SKey">
+            <summary>
+            子计划清单 序列化Key属性。（传递跨组织序列列字段）
+            拆分DTO.Misc.子计划清单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PPForBreakDownDTOData.Setting">
+            <summary>
+            子计划清单
+            拆分DTO.Misc.子计划清单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData">
+            <summary>
+            计算拆解数量返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData.#ctor(System.Decimal,System.DateTime,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData.m_qty">
+            <summary>
+            返回数量
+            计算拆解数量返回DTO.Misc.返回数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData.m_startDate">
+            <summary>
+            明细开始日期
+            计算拆解数量返回DTO.Misc.明细开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PP.PPTempBP.CalcDetailQtyDTOData.m_endDate">
+            <summary>
+            明细结束日期
+            计算拆解数量返回DTO.Misc.明细结束日期
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.ArgumentsNotFullException">
+            <summary>
+            异常类型: 参数校验异常
+            
+             输入的参数不完整或有误
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ArgumentsNotFullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 参数校验异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ArgumentsNotFullException.#ctor">
+            <summary>
+            异常类型: 参数校验异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.ArgumentsNotFullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 参数校验异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.SubsequentException">
+            <summary>
+            异常类型: 取消下发异常
+            
+             计划${PlanName}已审核不能取消下发
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.SubsequentException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取消下发异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.SubsequentException.#ctor(System.String)">
+            <summary>
+            异常类型: 取消下发异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.SubsequentException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 取消下发异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.SubsequentException.PlanName">
+            <summary>
+            计划名称
+            取消下发异常.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.HaveNotApprovedException">
+            <summary>
+            异常类型: 未审核异常
+            
+             计划${PlanName}未审核
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.HaveNotApprovedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未审核异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.HaveNotApprovedException.#ctor(System.String)">
+            <summary>
+            异常类型: 未审核异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.HaveNotApprovedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 未审核异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.HaveNotApprovedException.PlanName">
+            <summary>
+            计划名称
+            未审核异常.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.DureException">
+            <summary>
+            异常类型: 计划过期异常
+            
+             计划${PlanName}已过期
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.DureException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.DureException.#ctor(System.String)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.DureException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 计划过期异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.DureException.PlanName">
+            <summary>
+            计划名称
+            计划过期异常.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.CancedException">
+            <summary>
+            异常类型: 终止异常
+            
+             计划${PlanName}已终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.CancedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 终止异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.CancedException.#ctor(System.String)">
+            <summary>
+            异常类型: 终止异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.CancedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 终止异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.CancedException.PlanName">
+            <summary>
+            计划名称
+            终止异常.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.PlanModeCannotDepartException">
+            <summary>
+            异常类型: 下发模式异常
+            
+             计划${PlanName}计划模式只有拆解才可以下发
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PlanModeCannotDepartException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 下发模式异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PlanModeCannotDepartException.#ctor(System.String)">
+            <summary>
+            异常类型: 下发模式异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PlanModeCannotDepartException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 下发模式异常 Constructor
+            </summary>
+            <param name="planName">计划名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPTempBP.PlanModeCannotDepartException.PlanName">
+            <summary>
+            计划名称
+            下发模式异常.Misc.计划名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPTempBP.PPlanRepeatException">
+            <summary>
+            异常类型: 计划已经存在[执行组织+计划版本+计划编码]应该唯一异常
+            
+             计划已经存在[执行组织+计划版本+计划编码]应该唯一
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPlanRepeatException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计划已经存在[执行组织+计划版本+计划编码]应该唯一异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPlanRepeatException.#ctor">
+            <summary>
+            异常类型: 计划已经存在[执行组织+计划版本+计划编码]应该唯一异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PP.PPTempBP.PPlanRepeatException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计划已经存在[执行组织+计划版本+计划编码]应该唯一异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PP.PPBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PP.PPBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

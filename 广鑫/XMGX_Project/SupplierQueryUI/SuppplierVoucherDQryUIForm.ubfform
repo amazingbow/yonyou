@@ -1,0 +1,90 @@
+<View ID="823342da-6c12-4574-b762-4d59a1937f16" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="往来凭证" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" Height="250" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="SuppplierVoucherDQryUIForm" Namespace="UFIDA.U9.Cust.FJGX.SuppplierVoucherDQryUIModel" QueryInfo="QueryInfo" TabStop="False" TemplateCode="UI_QryForm" TemplateType="CustomTemplate" UIModelID="40571c86-e4ae-4ae1-8384-882dc8a77d51" URI="UFIDA.U9.Cust.FJGX.SuppplierVoucherDQryUIModel.SuppplierVoucherDQryUIFormWebPart" UserType="ForQuery" ViewID="4983" Width="700" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="700" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="1" Name="Row0" />
+    <Row Fixed="False" Height="209" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters>
+    <Parameter DataType="Int64" IsConsumer="True" IsPersoner="False" Name="@Parameter0" UIModelParameterName="@SupplierID" UIViewID="QueryView" />
+  </InParameters>
+  <Toolbar ID="b88f3801-a10e-4650-8eeb-941bdeec01b3" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="1" Name="Toolbar1" TabIndex="3" TabStop="True" Width="700" X="0" Y="0">
+    <Button ID="5ef55152-f00f-4ae7-8a84-e74adb2a34bd" AccessKey="" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="1" Name="BtnOutPut" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="OnOutPut" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="1a41de57-d362-41ad-ae2b-a22870199f0a" AccessKey="" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="1" Name="BtnPrint" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="OnPrint" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="760ef580-9c43-48d8-bd11-937897f1bdea" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="2" GridColumnCount="10" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="4" TabStop="False" Width="700" X="0" Y="220">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="40" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Value" Width="55" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="100" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="60" />
+      <Column Fixed="True" Name="Column9" Width="10" />
+      <Column Fixed="True" Name="Column14" Width="384" />
+      <Column Fixed="False" Name="Column15" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Label ID="95c8db57-4a7f-494e-94b5-e1cfa63bcb6a" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="ChooseCase" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="0" Height="20" IsNull="True" Name="Label0" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="55" X="60" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="9dff0291-5bfa-4559-b6a1-54d99c0cea44" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DDLCase" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="125" Y="3">
+      <Events>
+        <Event ActionName="OnCaseChanged" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+    </DropDownList>
+    <Button ID="cc71e136-ea86-434d-b95b-63bc58f94843" AccessKey="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="OnLookCase" TabIndex="6" TabStop="True" Width="40" X="10" Y="3">
+      <Events>
+        <Event ActionName="OnLookCase" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="False" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Label ID="f4c04ce4-1e3f-43c9-932a-b718d9421396" DisplayName="应付余额:" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" Name="Label2" TabIndex="9" TabStop="True" TitleAlign="Left" TitleLocation="Left" Visible="True" Width="384" X="305" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <Button ID="cd6abef9-2c13-4732-8bb6-7ae27ab234b3" AccessKey="" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" Name="btnSaveCurrentQueryCase" TabIndex="10" TabStop="True" Width="60" X="235" Y="3">
+      <Events>
+        <Event ActionName="btnSaveCurrentQueryCase" EnableEvent="True" EventType="PostBack" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="f61902e1-1b2d-49d6-898e-a807f463db78" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="2" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="209" LayoutType="GridBag" Name="Card3" TabIndex="5" TabStop="False" Width="700" X="0" Y="6">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Value" Width="689" />
+      <Column Fixed="False" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="203" Name="Row0" />
+      <Row Fixed="False" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="ad3346a3-7eba-498f-937e-5f337bd38bad" EditStatus="browse" Enabled="True" GridHeight="2" GridWidth="2" GridX="0" GridY="0" HasSum="False" Height="209" Name="DataGrid1" PageSize="18" Paging="True" TabIndex="0" TabStop="True" Width="690" X="5" Y="0">
+      <Events>
+        <Event ActionName="OnGridRowDbClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="GridRowDbClicked" Parameter="" Template="" />
+      </Events>
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow" />
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns />
+    </DataGrid>
+  </Card>
+  <Events />
+</View>

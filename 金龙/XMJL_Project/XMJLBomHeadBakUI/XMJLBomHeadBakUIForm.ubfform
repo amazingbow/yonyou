@@ -1,0 +1,532 @@
+<View ID="ebadbf90-8074-4bb0-b8d6-e11afb7f9a51" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="缺件表备份列表" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="10" GridTopMargin="0" Height="504" IsMainForm="True" LayoutType="GridBag" Name="XMJLBomHeadBakUIForm" Namespace="XMJLBomHeadBakUIModel" TabStop="False" TemplateCode="UI_SingleGrid" TemplateType="CustomTemplate" UIModelID="de91f518-a4b1-45b6-8394-79eac1ba2f98" URI=".UI_单列表WebPart" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+    <Row Fixed="False" Height="20" Name="Row4" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <DataGrid ID="4d86cf34-b54f-4ac1-9056-c19244a3ff0d" EditStatus="edit" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="1" HasSum="False" Height="421" Name="DataGrid6" PageSize="20" Paging="True" TabIndex="0" TabStop="True" Width="992" X="0" Y="38">
+    <Events />
+    <Header ID="e100788e-df1b-4a65-89b1-b0175fc84888" Name="Header6">
+      <HeaderRow ID="dcc5fd54-966a-4566-85b3-de6a7d3480a3" Name="DefaultRow">
+        <HeaderCell ID="b9287f12-0d0b-48ad-8439-385035112085" ColSpan="1" Name="HeaderCell15" OwnerColName="ID0" RowSpan="1" />
+        <HeaderCell ID="c267539e-7587-4eb8-950c-3ddf7ebfa089" ColSpan="1" Name="HeaderCell16" OwnerColName="CreatedOn3" RowSpan="1" />
+        <HeaderCell ID="4f205b1b-a3df-48a8-b2f0-3aa1c825a07d" ColSpan="1" Name="HeaderCell17" OwnerColName="CreatedBy0" RowSpan="1" />
+        <HeaderCell ID="cdd0dce8-6a4d-459a-80e0-70e1478e6e40" ColSpan="1" Name="HeaderCell18" OwnerColName="ModifiedOn1" RowSpan="1" />
+        <HeaderCell ID="5b21e03a-7294-450b-a778-d7d347b85db8" ColSpan="1" Name="HeaderCell19" OwnerColName="ModifiedBy0" RowSpan="1" />
+        <HeaderCell ID="8631e1fd-dd88-4d64-9293-5db52e51ddb5" ColSpan="1" Name="HeaderCell20" OwnerColName="SysVersion0" RowSpan="1" />
+        <HeaderCell ID="177b9af8-15b3-4d97-962f-71824db028d8" ColSpan="1" Name="HeaderCell21" OwnerColName="Cust_Xmjl_MO_BomMain1" RowSpan="1" />
+        <HeaderCell ID="97e3a544-9022-4fbe-bbc4-6f20030f5674" ColSpan="1" Name="HeaderCell22" OwnerColName="RowNo1" RowSpan="1" />
+        <HeaderCell ID="d2c59493-3686-41c6-9573-dd78fc9022fd" ColSpan="1" Name="HeaderCell23" OwnerColName="Item4" RowSpan="1" />
+        <HeaderCell ID="dead938b-4854-4ad9-b06f-50aa446e88c9" ColSpan="1" Name="HeaderCell24" OwnerColName="Item_Code257" RowSpan="1" />
+        <HeaderCell ID="b993a754-cc2e-4787-b131-770d2a486193" ColSpan="1" Name="HeaderCell25" OwnerColName="Item_Name1" RowSpan="1" />
+        <HeaderCell ID="392570e1-fb42-45de-8548-183e4036be23" ColSpan="1" Name="HeaderCell26" OwnerColName="Supplier0" RowSpan="1" />
+        <HeaderCell ID="10157205-e4a2-4cff-ad27-ace21fcd5a88" ColSpan="1" Name="HeaderCell27" OwnerColName="Supplier_Code0" RowSpan="1" />
+        <HeaderCell ID="616fbf2c-6a14-4207-9ac9-97140c336378" ColSpan="1" Name="HeaderCell28" OwnerColName="Supplier_Name0" RowSpan="1" />
+        <HeaderCell ID="89a64249-15f2-4d58-a61b-afd093f1f93b" ColSpan="1" Name="HeaderCell29" OwnerColName="WareHouse0" RowSpan="1" />
+        <HeaderCell ID="bee0c562-7922-4863-a1ed-00ece2a71b78" ColSpan="1" Name="HeaderCell30" OwnerColName="WareHouse_Code0" RowSpan="1" />
+        <HeaderCell ID="ffd3a986-4f9a-4c91-8104-5f8bbba2b3d1" ColSpan="1" Name="HeaderCell31" OwnerColName="WareHouse_Name0" RowSpan="1" />
+        <HeaderCell ID="6bdd0756-2c9d-4190-85bb-0f4aaee04052" ColSpan="1" Name="HeaderCell32" OwnerColName="WorkPlace0" RowSpan="1" />
+        <HeaderCell ID="106da031-7297-414c-b59b-2361948916fc" ColSpan="1" Name="HeaderCell33" OwnerColName="Status0" RowSpan="1" />
+        <HeaderCell ID="21ecf5e5-bc98-4df7-b3b6-a93a27fd4142" ColSpan="1" Name="HeaderCell34" OwnerColName="Qty0" RowSpan="1" />
+        <HeaderCell ID="1be1449c-663d-49ed-98fd-bf1c987e91a4" ColSpan="1" Name="HeaderCell35" OwnerColName="DisbursedQty0" RowSpan="1" />
+        <HeaderCell ID="80a5ecc9-8ccf-417f-862b-8d497e6c9a4a" ColSpan="1" Name="HeaderCell36" OwnerColName="RptBy0" RowSpan="1" />
+        <HeaderCell ID="6b40d97d-f205-40b5-9c90-297ca1d62f14" ColSpan="1" Name="HeaderCell37" OwnerColName="RptBy_Code0" RowSpan="1" />
+        <HeaderCell ID="c3fbe3f9-defe-490f-8250-32597033934e" ColSpan="1" Name="HeaderCell38" OwnerColName="RptBy_Name0" RowSpan="1" />
+        <HeaderCell ID="8cc4d673-c38e-4043-b59c-770c36a16403" ColSpan="1" Name="HeaderCell39" OwnerColName="RptOn0" RowSpan="1" />
+        <HeaderCell ID="c945892c-3e9f-46e0-b6bf-67f75ebeb120" ColSpan="1" Name="HeaderCell40" OwnerColName="Memo0" RowSpan="1" />
+        <HeaderCell ID="bd6548d7-d613-4130-91ab-8c57d81c067c" ColSpan="1" Name="HeaderCell41" OwnerColName="Org0" RowSpan="1" />
+        <HeaderCell ID="ff4fee93-604c-433e-8db0-b494e1adcb63" ColSpan="1" Name="HeaderCell42" OwnerColName="Org_Code0" RowSpan="1" />
+        <HeaderCell ID="5f8440ff-99fd-4883-bb70-61b4a8600fdd" ColSpan="1" Name="HeaderCell43" OwnerColName="Org_Name0" RowSpan="1" />
+        <HeaderCell ID="98b975eb-2251-4f07-9fc5-d97d56650091" ColSpan="1" Name="HeaderCell44" OwnerColName="FeeID0" RowSpan="1" />
+        <HeaderCell ID="852060ac-325b-46f5-9fc8-09b266148191" ColSpan="1" Name="HeaderCell45" OwnerColName="OutOn0" RowSpan="1" />
+        <HeaderCell ID="2f31bf8f-cb61-4342-b88f-949d6655bf9a" ColSpan="1" Name="HeaderCell46" OwnerColName="FeeQty0" RowSpan="1" />
+        <HeaderCell ID="e5e9adb7-877e-4432-8524-8e602e2522e8" ColSpan="1" Name="HeaderCell47" OwnerColName="BackQty0" RowSpan="1" />
+        <HeaderCell ID="a198489b-0a85-4418-96b6-0c9b1fb6a51a" ColSpan="1" Name="HeaderCell48" OwnerColName="DescFlexField_PubDescSeg10" RowSpan="1" />
+        <HeaderCell ID="08a004f0-e96d-4fe0-a925-639db210863b" ColSpan="1" Name="HeaderCell49" OwnerColName="DescFlexField_PubDescSeg20" RowSpan="1" />
+        <HeaderCell ID="deaa329c-db93-40d2-afc4-cbf7b53493d8" ColSpan="1" Name="HeaderCell50" OwnerColName="DescFlexField_PubDescSeg30" RowSpan="1" />
+        <HeaderCell ID="f0f1654f-27f4-4214-9071-47a8c3ca58c3" ColSpan="1" Name="HeaderCell51" OwnerColName="DescFlexField_PubDescSeg40" RowSpan="1" />
+        <HeaderCell ID="31c5e9cc-1737-4443-aca7-42c956dd8f70" ColSpan="1" Name="HeaderCell52" OwnerColName="DescFlexField_PubDescSeg50" RowSpan="1" />
+        <HeaderCell ID="f363f57d-ced3-427a-9493-44018e7b9af8" ColSpan="1" Name="HeaderCell53" OwnerColName="DescFlexField_PubDescSeg60" RowSpan="1" />
+        <HeaderCell ID="a6817ce2-c2f0-480f-a39e-4befe0070c7f" ColSpan="1" Name="HeaderCell54" OwnerColName="DescFlexField_PubDescSeg70" RowSpan="1" />
+        <HeaderCell ID="ce78f81c-d0a2-4c47-8449-4e71e6272ef3" ColSpan="1" Name="HeaderCell55" OwnerColName="DescFlexField_PubDescSeg80" RowSpan="1" />
+        <HeaderCell ID="c2f830a5-9d7c-41bc-b694-4c36c8d36c2f" ColSpan="1" Name="HeaderCell56" OwnerColName="DescFlexField_PubDescSeg90" RowSpan="1" />
+        <HeaderCell ID="85afcf33-b002-41c1-9237-3f20306af6c3" ColSpan="1" Name="HeaderCell57" OwnerColName="DescFlexField_PubDescSeg100" RowSpan="1" />
+        <HeaderCell ID="581ac247-536d-4618-9f8a-32c2dad4e1fd" ColSpan="1" Name="HeaderCell58" OwnerColName="DescFlexField_PubDescSeg110" RowSpan="1" />
+        <HeaderCell ID="7cd263da-bd7b-4e83-8d18-8a93241b323d" ColSpan="1" Name="HeaderCell59" OwnerColName="DescFlexField_PubDescSeg120" RowSpan="1" />
+        <HeaderCell ID="2dcf0975-b444-4a85-9842-54b7a7ef69d5" ColSpan="1" Name="HeaderCell60" OwnerColName="DescFlexField_PubDescSeg130" RowSpan="1" />
+        <HeaderCell ID="1bd8fa40-84e2-4878-aeb2-062dbcc1208d" ColSpan="1" Name="HeaderCell61" OwnerColName="DescFlexField_PubDescSeg140" RowSpan="1" />
+        <HeaderCell ID="7c4b3d0f-6528-42dd-b155-3ab3c74cdcf3" ColSpan="1" Name="HeaderCell62" OwnerColName="DescFlexField_PubDescSeg150" RowSpan="1" />
+        <HeaderCell ID="6737c5e4-5f37-483c-993b-608704eae67f" ColSpan="1" Name="HeaderCell63" OwnerColName="DescFlexField_PubDescSeg160" RowSpan="1" />
+        <HeaderCell ID="bab3a5ac-6350-4ebf-a2d9-cd28be0d32e7" ColSpan="1" Name="HeaderCell64" OwnerColName="DescFlexField_PubDescSeg170" RowSpan="1" />
+        <HeaderCell ID="338d5c9a-a20c-417c-b99f-465e9e5304c1" ColSpan="1" Name="HeaderCell65" OwnerColName="DescFlexField_PubDescSeg180" RowSpan="1" />
+        <HeaderCell ID="0280fda1-020d-480b-9c88-b391242acbf0" ColSpan="1" Name="HeaderCell66" OwnerColName="DescFlexField_PubDescSeg190" RowSpan="1" />
+        <HeaderCell ID="ef45985a-36c8-444c-a223-bae6c3a54233" ColSpan="1" Name="HeaderCell67" OwnerColName="DescFlexField_PubDescSeg200" RowSpan="1" />
+        <HeaderCell ID="d9bf20ac-2268-44a2-b714-4a39a18c8035" ColSpan="1" Name="HeaderCell68" OwnerColName="DescFlexField_PubDescSeg210" RowSpan="1" />
+        <HeaderCell ID="9dbbd98f-584e-499f-902d-c35a11774e4a" ColSpan="1" Name="HeaderCell69" OwnerColName="DescFlexField_PubDescSeg220" RowSpan="1" />
+        <HeaderCell ID="a74f7e9f-4095-43ba-ae3c-bacb8b19b229" ColSpan="1" Name="HeaderCell70" OwnerColName="DescFlexField_PubDescSeg230" RowSpan="1" />
+        <HeaderCell ID="5b4cd447-03f9-47ae-9266-93b2deca92af" ColSpan="1" Name="HeaderCell71" OwnerColName="DescFlexField_PubDescSeg240" RowSpan="1" />
+        <HeaderCell ID="6b43c863-51a8-4410-94cd-3c867bc51e27" ColSpan="1" Name="HeaderCell72" OwnerColName="DescFlexField_PubDescSeg250" RowSpan="1" />
+        <HeaderCell ID="0e677d04-abbe-48d1-b105-af4c69418f52" ColSpan="1" Name="HeaderCell73" OwnerColName="DescFlexField_PubDescSeg260" RowSpan="1" />
+        <HeaderCell ID="7c2f767a-613a-47a6-a876-04fc31f3e350" ColSpan="1" Name="HeaderCell74" OwnerColName="DescFlexField_PubDescSeg270" RowSpan="1" />
+        <HeaderCell ID="3776048b-1c23-4608-98ed-9d427ba08173" ColSpan="1" Name="HeaderCell75" OwnerColName="DescFlexField_PubDescSeg280" RowSpan="1" />
+        <HeaderCell ID="6330f817-2bd0-4ff7-85c2-a899a3d0b2f2" ColSpan="1" Name="HeaderCell76" OwnerColName="DescFlexField_PubDescSeg290" RowSpan="1" />
+        <HeaderCell ID="00bfb93b-6a75-4e67-8be3-483c2e9fafa9" ColSpan="1" Name="HeaderCell77" OwnerColName="DescFlexField_PubDescSeg300" RowSpan="1" />
+        <HeaderCell ID="5dc75da4-dc92-4db3-b694-d5da8a154c9b" ColSpan="1" Name="HeaderCell78" OwnerColName="DescFlexField_PubDescSeg310" RowSpan="1" />
+        <HeaderCell ID="69a5cd75-73fe-4317-adc9-0d46f4ee9f03" ColSpan="1" Name="HeaderCell79" OwnerColName="DescFlexField_PubDescSeg320" RowSpan="1" />
+        <HeaderCell ID="ef2980e0-fbd8-442a-8036-24b84612050c" ColSpan="1" Name="HeaderCell80" OwnerColName="DescFlexField_PubDescSeg330" RowSpan="1" />
+        <HeaderCell ID="3473882b-ea1c-4241-b0e9-fe7189d8972c" ColSpan="1" Name="HeaderCell81" OwnerColName="DescFlexField_PubDescSeg340" RowSpan="1" />
+        <HeaderCell ID="5a9bef7c-2757-481d-96f8-97df151c1392" ColSpan="1" Name="HeaderCell82" OwnerColName="DescFlexField_PubDescSeg350" RowSpan="1" />
+        <HeaderCell ID="89cb015a-af7d-4738-9f03-d8e5d4107e6b" ColSpan="1" Name="HeaderCell83" OwnerColName="DescFlexField_PubDescSeg360" RowSpan="1" />
+        <HeaderCell ID="70702530-d6d1-4c9e-ac76-40156e3234c4" ColSpan="1" Name="HeaderCell84" OwnerColName="DescFlexField_PubDescSeg370" RowSpan="1" />
+        <HeaderCell ID="083e51a1-5fbe-4cae-bf37-6334b444d012" ColSpan="1" Name="HeaderCell85" OwnerColName="DescFlexField_PubDescSeg380" RowSpan="1" />
+        <HeaderCell ID="7f61f5ef-9701-44b1-b7a4-50c791551387" ColSpan="1" Name="HeaderCell86" OwnerColName="DescFlexField_PubDescSeg390" RowSpan="1" />
+        <HeaderCell ID="2b5147c9-c55c-4476-a6e6-fc663527b42a" ColSpan="1" Name="HeaderCell87" OwnerColName="DescFlexField_PubDescSeg400" RowSpan="1" />
+        <HeaderCell ID="4c5c82ba-04b8-4548-89af-7bf2b8fbbaa9" ColSpan="1" Name="HeaderCell88" OwnerColName="DescFlexField_PubDescSeg410" RowSpan="1" />
+        <HeaderCell ID="ab89ab7f-6cf3-4174-a47f-964c35bedab9" ColSpan="1" Name="HeaderCell89" OwnerColName="DescFlexField_PubDescSeg420" RowSpan="1" />
+        <HeaderCell ID="d0304d98-d302-4f91-895e-19bcf1f0347f" ColSpan="1" Name="HeaderCell90" OwnerColName="DescFlexField_PubDescSeg430" RowSpan="1" />
+        <HeaderCell ID="70344672-2207-40b0-ab2b-476db66832b8" ColSpan="1" Name="HeaderCell91" OwnerColName="DescFlexField_PubDescSeg440" RowSpan="1" />
+        <HeaderCell ID="fd3ed6b5-28c9-453c-be22-30eb85abc2cc" ColSpan="1" Name="HeaderCell92" OwnerColName="DescFlexField_PubDescSeg450" RowSpan="1" />
+        <HeaderCell ID="f40440a0-16e7-44a0-b9a4-be6a4d747ab1" ColSpan="1" Name="HeaderCell93" OwnerColName="DescFlexField_PubDescSeg460" RowSpan="1" />
+        <HeaderCell ID="997ccb7d-f423-47f0-95a2-cc56be97eb0f" ColSpan="1" Name="HeaderCell94" OwnerColName="DescFlexField_PubDescSeg470" RowSpan="1" />
+        <HeaderCell ID="b508e19f-4c07-4662-b175-3e2905dd4353" ColSpan="1" Name="HeaderCell95" OwnerColName="DescFlexField_PubDescSeg480" RowSpan="1" />
+        <HeaderCell ID="bc60e469-e186-4bd3-a891-a53f13b40bec" ColSpan="1" Name="HeaderCell96" OwnerColName="DescFlexField_PubDescSeg490" RowSpan="1" />
+        <HeaderCell ID="45f9aad3-3fd5-4ef6-a9e7-718e7c05b09b" ColSpan="1" Name="HeaderCell97" OwnerColName="DescFlexField_PubDescSeg500" RowSpan="1" />
+        <HeaderCell ID="6c6d8e0d-2d48-4efd-b2b3-4d16b838a393" ColSpan="1" Name="HeaderCell98" OwnerColName="DescFlexField_ContextValue0" RowSpan="1" />
+        <HeaderCell ID="6b1bc1a6-bbab-46da-939b-2fa97f0c83eb" ColSpan="1" Name="HeaderCell99" OwnerColName="DescFlexField_PrivateDescSeg10" RowSpan="1" />
+        <HeaderCell ID="eabae6d0-4f5f-401f-a60d-6ba3187e0221" ColSpan="1" Name="HeaderCell100" OwnerColName="DescFlexField_PrivateDescSeg20" RowSpan="1" />
+        <HeaderCell ID="e084aada-320b-4410-94bd-9fabc37cfae4" ColSpan="1" Name="HeaderCell101" OwnerColName="DescFlexField_PrivateDescSeg30" RowSpan="1" />
+        <HeaderCell ID="9a9f528f-2d50-4777-90ff-f4653f5c2042" ColSpan="1" Name="HeaderCell102" OwnerColName="DescFlexField_PrivateDescSeg40" RowSpan="1" />
+        <HeaderCell ID="bb6f8860-04b5-44a6-8a36-609bce037238" ColSpan="1" Name="HeaderCell103" OwnerColName="DescFlexField_PrivateDescSeg50" RowSpan="1" />
+        <HeaderCell ID="e4b91dbb-33df-4bc7-a7fb-aedd7086f5a6" ColSpan="1" Name="HeaderCell104" OwnerColName="DescFlexField_PrivateDescSeg60" RowSpan="1" />
+        <HeaderCell ID="01978471-538e-4292-9a22-b2b8ecbb5437" ColSpan="1" Name="HeaderCell105" OwnerColName="DescFlexField_PrivateDescSeg70" RowSpan="1" />
+        <HeaderCell ID="14e609b5-9b29-4390-b419-2345f41f8982" ColSpan="1" Name="HeaderCell106" OwnerColName="DescFlexField_PrivateDescSeg80" RowSpan="1" />
+        <HeaderCell ID="e725120a-e8dd-4455-ac3f-5c3c59414c39" ColSpan="1" Name="HeaderCell107" OwnerColName="DescFlexField_PrivateDescSeg90" RowSpan="1" />
+        <HeaderCell ID="17ff0f7a-2f7d-4154-bfe1-d4d2106d9003" ColSpan="1" Name="HeaderCell108" OwnerColName="DescFlexField_PrivateDescSeg100" RowSpan="1" />
+        <HeaderCell ID="7d4e7de3-c49d-4fbb-812f-5c07e045dcce" ColSpan="1" Name="HeaderCell109" OwnerColName="DescFlexField_PrivateDescSeg110" RowSpan="1" />
+        <HeaderCell ID="8c366d36-243d-4355-8cf5-eb147023748f" ColSpan="1" Name="HeaderCell110" OwnerColName="DescFlexField_PrivateDescSeg120" RowSpan="1" />
+        <HeaderCell ID="5acc52c0-48be-460d-a1b0-31b53f2d5566" ColSpan="1" Name="HeaderCell111" OwnerColName="DescFlexField_PrivateDescSeg130" RowSpan="1" />
+        <HeaderCell ID="364a3c98-021e-4f6c-9669-b1f263169f9f" ColSpan="1" Name="HeaderCell112" OwnerColName="DescFlexField_PrivateDescSeg140" RowSpan="1" />
+        <HeaderCell ID="55b86e92-c388-4c62-a13f-f67c46db9d2e" ColSpan="1" Name="HeaderCell113" OwnerColName="DescFlexField_PrivateDescSeg150" RowSpan="1" />
+        <HeaderCell ID="48b82a71-fc7c-4331-b6da-dafd3d816d5a" ColSpan="1" Name="HeaderCell114" OwnerColName="DescFlexField_PrivateDescSeg160" RowSpan="1" />
+        <HeaderCell ID="56c35cd8-1c31-46be-a887-8926825097fd" ColSpan="1" Name="HeaderCell115" OwnerColName="DescFlexField_PrivateDescSeg170" RowSpan="1" />
+        <HeaderCell ID="9798ef5d-3c5a-49ab-b4c8-f4490e5710a9" ColSpan="1" Name="HeaderCell116" OwnerColName="DescFlexField_PrivateDescSeg180" RowSpan="1" />
+        <HeaderCell ID="4ccf77f7-62ae-4996-a415-be942b46b159" ColSpan="1" Name="HeaderCell117" OwnerColName="DescFlexField_PrivateDescSeg190" RowSpan="1" />
+        <HeaderCell ID="6ac558b5-2193-4828-b7e9-f285a869233f" ColSpan="1" Name="HeaderCell118" OwnerColName="DescFlexField_PrivateDescSeg200" RowSpan="1" />
+        <HeaderCell ID="f5d4c1e2-bfd1-4f14-b8d8-18f23345c7ae" ColSpan="1" Name="HeaderCell119" OwnerColName="DescFlexField_PrivateDescSeg210" RowSpan="1" />
+        <HeaderCell ID="d32918d9-fa50-4f8f-ac39-a2c75dd9e3b1" ColSpan="1" Name="HeaderCell120" OwnerColName="DescFlexField_PrivateDescSeg220" RowSpan="1" />
+        <HeaderCell ID="6aba9362-5f45-45ee-b6fa-c7c05138f69c" ColSpan="1" Name="HeaderCell121" OwnerColName="DescFlexField_PrivateDescSeg230" RowSpan="1" />
+        <HeaderCell ID="c25b4e06-4c5c-49fa-b2e6-6e0b05ce6e5d" ColSpan="1" Name="HeaderCell122" OwnerColName="DescFlexField_PrivateDescSeg240" RowSpan="1" />
+        <HeaderCell ID="c34f2b3f-e9fd-42ed-8f34-5dfafcd48c9f" ColSpan="1" Name="HeaderCell123" OwnerColName="DescFlexField_PrivateDescSeg250" RowSpan="1" />
+        <HeaderCell ID="8997af64-8503-4497-8533-92b8a4c547f1" ColSpan="1" Name="HeaderCell124" OwnerColName="DescFlexField_PrivateDescSeg260" RowSpan="1" />
+        <HeaderCell ID="56a99cd8-468a-461d-ac44-ce794ae41f48" ColSpan="1" Name="HeaderCell125" OwnerColName="DescFlexField_PrivateDescSeg270" RowSpan="1" />
+        <HeaderCell ID="0dba943c-c971-4a92-a2fe-746f6bbbf5a1" ColSpan="1" Name="HeaderCell126" OwnerColName="DescFlexField_PrivateDescSeg280" RowSpan="1" />
+        <HeaderCell ID="882c981b-f3a1-411f-a547-c9e026787146" ColSpan="1" Name="HeaderCell127" OwnerColName="DescFlexField_PrivateDescSeg290" RowSpan="1" />
+        <HeaderCell ID="bf8094c2-73b9-48f4-b302-53d6724eddf1" ColSpan="1" Name="HeaderCell128" OwnerColName="DescFlexField_PrivateDescSeg300" RowSpan="1" />
+        <HeaderCell ID="84f7f107-478c-40bb-9305-f3a4133c5e15" ColSpan="1" Name="HeaderCell129" OwnerColName="DescFlexField_CombineName0" RowSpan="1" />
+        <HeaderCell ID="d5d2aaa9-11e5-4821-9970-90b80975d58d" ColSpan="1" Name="HeaderCell130" OwnerColName="BackupOn0" RowSpan="1" />
+        <HeaderCell ID="dd4e18dd-70d0-4a51-ae5a-c4905f4d930a" ColSpan="1" Name="HeaderCell131" OwnerColName="ManufactureNo0" RowSpan="1" />
+      </HeaderRow>
+    </Header>
+    <UIFilterBar Name="LocateBar" />
+    <Columns>
+      <NumberColumn ID="4405d8b1-14ed-4863-a1c2-dade14965f13" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID0" NPos="1" Point="0" UIFieldID="ID" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <DatePickerColumn ID="13158d3a-bcd8-4420-88c1-7012a87273e8" DefaultValue="" DisplayFormat="8" Enabled="True" Help="缺件发料单备份.Sys.创建时间" IsNull="True" IsProperty="False" IsSequence="False" Name="CreatedOn3" NPos="2" Point="0" UIFieldID="CreatedOn" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <Events />
+      </DatePickerColumn>
+      <TextBoxColumn ID="469bf7c9-5887-4238-b9d4-0f609bb9e430" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Sys.创建人" IsNull="True" IsProperty="False" IsSequence="False" Name="CreatedBy0" NPos="3" Point="0" TextAlign="Left" UIFieldID="CreatedBy" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <Events />
+      </TextBoxColumn>
+      <DatePickerColumn ID="87a1e0ca-e756-4663-be44-ce4b794c462e" DefaultValue="" DisplayFormat="8" Enabled="True" Help="缺件发料单备份.Sys.修改时间" IsNull="True" IsProperty="False" IsSequence="False" Name="ModifiedOn1" NPos="4" Point="0" UIFieldID="ModifiedOn" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <Events />
+      </DatePickerColumn>
+      <TextBoxColumn ID="fdc95c4d-194f-46ee-b91a-b1a88b4c7d29" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Sys.修改人" IsNull="True" IsProperty="False" IsSequence="False" Name="ModifiedBy0" NPos="5" Point="0" TextAlign="Left" UIFieldID="ModifiedBy" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <Events />
+      </TextBoxColumn>
+      <NumberColumn ID="940ddf98-5c86-4591-acc9-fba0e8ee8565" DefaultValue="0" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Sys.事务版本" IsNull="True" IsProperty="False" IsSequence="False" Name="SysVersion0" NPos="6" Point="0" UIFieldID="SysVersion" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="False">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <ReferenceColumn ID="994dc194-4ce0-4f93-b981-3cad439bd978" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.缺件发料主表" IsNull="True" IsProperty="False" IsSequence="False" Name="Cust_Xmjl_MO_BomMain1" NPos="7" Point="0" TextAlign="Right" UIFieldID="Cust_Xmjl_MO_BomMain" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <NumberColumn ID="2bc7ada2-7283-4581-ac84-f2b9a79eaf03" DefaultValue="0" DisplayFormat="10.0" Enabled="True" Help="缺件发料单备份.Misc.行号" IsNull="True" IsProperty="False" IsSequence="False" Name="RowNo1" NPos="8" Point="0" UIFieldID="RowNo" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <ReferenceColumn ID="8257aa78-e240-45cb-968e-123e23df0b03" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.料品" IsNull="True" IsProperty="False" IsSequence="False" Name="Item4" NPos="9" Point="0" TextAlign="Right" UIFieldID="Item" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <TextBoxColumn ID="95042ba8-ce12-4bc0-93d5-fd00e57fb231" DefaultValue="" DisplayFormat="255" Enabled="True" Help="料品.料品.料号" IsNull="False" IsProperty="False" IsSequence="False" Name="Item_Code257" NPos="10" Point="0" TextAlign="Left" UIFieldID="Item_Code" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="b7032408-807c-4965-b5be-962ea8832b27" DefaultValue="" DisplayFormat="255" Enabled="True" Help="料品.料品.品名" IsNull="False" IsProperty="False" IsSequence="False" Name="Item_Name1" NPos="11" Point="0" TextAlign="Left" UIFieldID="Item_Name" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <ReferenceColumn ID="8e44df03-1d7a-4db1-be97-6e26ba120912" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.供应商" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier0" NPos="12" Point="0" TextAlign="Right" UIFieldID="Supplier" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <TextBoxColumn ID="16c364b0-fbad-4e3f-8407-3a9cb6e3ce44" DefaultValue="" DisplayFormat="255" Enabled="True" Help="供应商.供应商.编码" IsNull="False" IsProperty="False" IsSequence="False" Name="Supplier_Code0" NPos="13" Point="0" TextAlign="Left" UIFieldID="Supplier_Code" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="20784cc7-c01d-4de8-bcb6-4f79564a6f5e" DefaultValue="" DisplayFormat="255" Enabled="True" Help="供应商.供应商.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="Supplier_Name0" NPos="14" Point="0" TextAlign="Left" UIFieldID="Supplier_Name" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <ReferenceColumn ID="4ea6ef85-c364-4242-abe2-93bf4d7c5db1" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.仓库" IsNull="True" IsProperty="False" IsSequence="False" Name="WareHouse0" NPos="15" Point="0" TextAlign="Right" UIFieldID="WareHouse" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <TextBoxColumn ID="0cee55a7-84f0-4b5a-b903-b8f6f19c4771" DefaultValue="" DisplayFormat="50" Enabled="True" Help="存储地点.A_基本信息.编码" IsNull="False" IsProperty="False" IsSequence="False" Name="WareHouse_Code0" NPos="16" Point="0" TextAlign="Left" UIFieldID="WareHouse_Code" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="a4d0cbb3-ca87-4f8f-870d-d2606ee85bcf" DefaultValue="" DisplayFormat="50" Enabled="True" Help="存储地点.A_基本信息.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="WareHouse_Name0" NPos="17" Point="0" TextAlign="Left" UIFieldID="WareHouse_Name" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="add29039-3da9-47fe-8199-8bd3dd1e2720" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Misc.工位" IsNull="True" IsProperty="False" IsSequence="False" Name="WorkPlace0" NPos="18" Point="0" TextAlign="Left" UIFieldID="WorkPlace" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <DropDownListColumn ID="8bd0cbd2-45e0-415a-b5bd-bd0f8642f03a" DefaultValue="0" DisplayFormat="10.0" Enabled="True" EnumFullName="UFIDA.U9.Cust.XMJL.BommBE.BomHeadStatus" EnumID="26cd6c09-deb6-49f2-9646-9ebeb71c4ba0" Help="缺件发料单备份.Misc.状态" IsNull="True" IsProperty="False" IsSequence="False" Name="Status0" NPos="19" Point="0" UIFieldID="Status" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </DropDownListColumn>
+      <NumberColumn ID="06939ede-5146-405c-91a5-efd91c518da7" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="缺件发料单备份.Misc.发料数量" IsNull="True" IsProperty="False" IsSequence="False" Name="Qty0" NPos="20" Point="0" UIFieldID="Qty" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <NumberColumn ID="41401b17-604a-4b2b-a635-269d5861a1d2" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="缺件发料单备份.Misc.已发料数量" IsNull="True" IsProperty="False" IsSequence="False" Name="DisbursedQty0" NPos="21" Point="0" UIFieldID="DisbursedQty" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <ReferenceColumn ID="f230cae5-b5a1-4d1d-997e-140200c7314d" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.报告人员" IsNull="True" IsProperty="False" IsSequence="False" Name="RptBy0" NPos="22" Point="0" TextAlign="Right" UIFieldID="RptBy" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <TextBoxColumn ID="0e27b7a2-a543-4262-a7fe-fd8d7b8236dd" DefaultValue="" DisplayFormat="50" Enabled="True" Help="用户.Misc.账号" IsNull="False" IsProperty="False" IsSequence="False" Name="RptBy_Code0" NPos="23" Point="0" TextAlign="Left" UIFieldID="RptBy_Code" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2c2da902-4dc5-48f7-a3f5-182f1f2f1a19" DefaultValue="" DisplayFormat="50" Enabled="True" Help="用户.Misc.标识名称" IsNull="False" IsProperty="False" IsSequence="False" Name="RptBy_Name0" NPos="24" Point="0" TextAlign="Left" UIFieldID="RptBy_Name" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <DatePickerColumn ID="fb13b53d-fefc-42d3-9d98-1545e366a87d" DefaultValue="" DisplayFormat="19" Enabled="True" Help="缺件发料单备份.Misc.报告日期" IsNull="True" IsProperty="False" IsSequence="False" Name="RptOn0" NPos="25" Point="0" UIFieldID="RptOn" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </DatePickerColumn>
+      <TextBoxColumn ID="8431946f-7462-4858-9a09-245f7b70f6c3" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Misc.备注" IsNull="True" IsProperty="False" IsSequence="False" Name="Memo0" NPos="26" Point="0" TextAlign="Left" UIFieldID="Memo" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <ReferenceColumn ID="1c2a7dcc-e794-46ed-aba9-020e201208ff" DefaultValue="" DisplayFormat="19.0" Enabled="True" Help="缺件发料单备份.Misc.组织" IsNull="True" IsProperty="False" IsSequence="False" Name="Org0" NPos="27" Point="0" TextAlign="Right" UIFieldID="Org" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <RefNameFields />
+        <UIFilterBar Name="ReferenceFilter" />
+        <Events />
+      </ReferenceColumn>
+      <TextBoxColumn ID="889d6ac8-2054-46dd-95a0-6aae9ea544aa" DefaultValue="" DisplayFormat="50" Enabled="True" Help="组织机构.行政组织.编码" IsNull="False" IsProperty="False" IsSequence="False" Name="Org_Code0" NPos="28" Point="0" TextAlign="Left" UIFieldID="Org_Code" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="00b1f4dd-1471-425f-8b47-49bb9a5cd1dd" DefaultValue="" DisplayFormat="50" Enabled="True" Help="组织机构.行政组织.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="Org_Name0" NPos="29" Point="0" TextAlign="Left" UIFieldID="Org_Name" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="f48152ff-7545-4734-b9a1-964de7790341" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Misc.费用行ID" IsNull="True" IsProperty="False" IsSequence="False" Name="FeeID0" NPos="30" Point="0" TextAlign="Left" UIFieldID="FeeID" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <DatePickerColumn ID="a608f611-2cb9-4cc1-9d35-d99ae5a011c0" DefaultValue="" DisplayFormat="19" Enabled="True" Help="缺件发料单备份.Misc.出库日期" IsNull="True" IsProperty="False" IsSequence="False" Name="OutOn0" NPos="31" Point="0" UIFieldID="OutOn" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </DatePickerColumn>
+      <NumberColumn ID="ed39f4c5-d74d-454a-a733-0e79081f37b4" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="缺件发料单备份.Misc.生成费用行的数量" IsNull="True" IsProperty="False" IsSequence="False" Name="FeeQty0" NPos="32" Point="0" UIFieldID="FeeQty" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <NumberColumn ID="5c2ba182-b0c3-4039-ab3a-35eb0f6f93d9" DefaultValue="0" DisplayFormat="24.9" Enabled="True" Help="缺件发料单备份.Misc.回冲数量" IsNull="True" IsProperty="False" IsSequence="False" Name="BackQty0" NPos="33" Point="0" UIFieldID="BackQty" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <PrecisionBind />
+        <RoundRuleBind />
+        <ValueOfRoundByValueBind />
+        <CurrencyType />
+        <Events />
+      </NumberColumn>
+      <TextBoxColumn ID="ae2d819a-79d5-416f-84f3-eb7330800450" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段1" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg10" NPos="34" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg1" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="88485afe-41fc-4097-a4fb-da6e09964eb7" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段2" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg20" NPos="35" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg2" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="55a94424-71f5-44b2-86eb-b0c2deb1e143" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段3" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg30" NPos="36" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg3" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="90901585-aa89-4e74-a563-205ebcc87bc6" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段4" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg40" NPos="37" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg4" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="c3f08aba-259e-492c-822e-fffcd98542a5" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段5" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg50" NPos="38" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg5" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="71b77d80-995e-404c-b063-55bc5fcf33fa" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段6" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg60" NPos="39" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg6" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="9720051e-8b0b-4788-8f88-cfa846d8a233" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段7" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg70" NPos="40" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg7" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="66aef551-a769-457f-a121-ffdb9d338b00" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段8" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg80" NPos="41" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg8" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="30dd7e78-39a7-4cd5-9fcd-824657b90cc1" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段9" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg90" NPos="42" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg9" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="489830de-5a69-41dd-8d32-bfe2526e7edb" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段10" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg100" NPos="43" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg10" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="6e9de725-1bb9-44e9-9ac6-7c6eeb441136" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段11" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg110" NPos="44" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg11" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="24946dec-58dd-435a-b986-6d45a71235c1" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段12" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg120" NPos="45" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg12" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="f3299762-6b80-4a66-9dca-671099e30922" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段13" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg130" NPos="46" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg13" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="ccfac227-2ff1-4578-967f-7f7435df3ed8" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段14" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg140" NPos="47" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg14" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="5e2c385e-e2fb-4b67-b42a-c63dd3008f5a" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段15" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg150" NPos="48" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg15" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="be1bd667-c436-4a83-8c68-4f937e02d5e8" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段16" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg160" NPos="49" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg16" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="6338906a-bf47-4167-a7e9-81d3f48ac71a" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段17" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg170" NPos="50" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg17" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="dde8ce06-a9b0-4f4e-bad6-b0d40326a6eb" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段18" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg180" NPos="51" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg18" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="9309ee75-a9a9-44d0-adf1-643f4fa6badc" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段19" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg190" NPos="52" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg19" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="58a44a7a-b201-4d2c-abe0-db213426c4fd" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段20" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg200" NPos="53" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg20" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="d9ae8850-af58-4d9f-be34-da7ec0b2b1d4" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段21" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg210" NPos="54" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg21" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="14a478dd-4652-4aa1-b41b-a6a7bf8a0c81" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段22" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg220" NPos="55" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg22" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="a55f53c1-6231-4189-9aed-bb3e301023bd" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段23" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg230" NPos="56" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg23" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="85fd397e-586a-4cf2-8c7b-6aef1d062c8b" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段24" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg240" NPos="57" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg24" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="57fd8c2c-b04b-40f2-a91e-7f41b5dc19a0" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段25" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg250" NPos="58" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg25" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="8cab052f-1197-4aa1-ae49-27734e163699" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段26" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg260" NPos="59" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg26" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="eeb6763c-c94f-4dc3-b479-d9f71c83cc98" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段27" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg270" NPos="60" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg27" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="32514451-7fc3-47b9-a90e-310340f09093" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段28" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg280" NPos="61" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg28" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="880993b4-bc1a-4e4c-93f2-536660ac8990" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段29" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg290" NPos="62" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg29" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="aa985e08-cab9-43a0-846f-2f24c18e0803" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段30" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg300" NPos="63" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg30" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2c3cfba7-5a1e-4de2-87f8-2dd52e45d12c" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段31" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg310" NPos="64" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg31" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="d65b544b-9e2c-415d-9b94-80a90d4485eb" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段32" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg320" NPos="65" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg32" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="74271567-305c-43fa-853d-31267b083187" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段33" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg330" NPos="66" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg33" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2466129f-fd29-4742-ab3a-ea5fedc6d95d" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段34" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg340" NPos="67" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg34" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="e1c2be98-0d6e-4246-932d-9ee1a12020e6" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段35" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg350" NPos="68" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg35" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="38ec076a-631a-40c8-bc67-a22f7189af00" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段36" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg360" NPos="69" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg36" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="087e3482-14d1-4d19-8c0f-a1c93df6678b" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段37" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg370" NPos="70" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg37" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2dd5c80a-6e66-4829-bb40-cdfe47258025" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段38" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg380" NPos="71" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg38" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="8f6132a2-e93a-47c7-abac-e42c4ec0fec7" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段39" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg390" NPos="72" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg39" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="0a91012b-9afd-40d8-8857-9df256edfb9e" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段40" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg400" NPos="73" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg40" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="5fa0ac81-5c75-4a9b-88aa-8f029981ae85" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段41" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg410" NPos="74" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg41" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="a77b91af-4225-4570-963d-3f843936d49c" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段42" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg420" NPos="75" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg42" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="61d5a6e8-5dde-4e1b-8a9d-475724b73479" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段43" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg430" NPos="76" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg43" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="32a6abb1-79ba-4f43-9487-88a87798be6a" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段44" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg440" NPos="77" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg44" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2a1fc032-d7df-4e9b-a07c-04e827f5b965" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段45" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg450" NPos="78" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg45" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="79b644ba-502d-4d52-b5c0-063453f0d040" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段46" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg460" NPos="79" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg46" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="64425178-9871-4d2b-a8ec-903fadf71b14" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段47" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg470" NPos="80" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg47" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="9c8765d4-a983-4e72-8953-dca8703d3f38" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段48" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg480" NPos="81" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg48" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="e74b7373-b334-4b58-bde0-b62388ef4160" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段49" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg490" NPos="82" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg49" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="ddcea2cd-0fe7-4ee5-a6c9-c357ae46802d" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.公共段50" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PubDescSeg500" NPos="83" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PubDescSeg50" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="65687655-6f8b-48c5-a1b8-e391f04196a0" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.上下文值" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_ContextValue0" NPos="84" Point="0" TextAlign="Left" UIFieldID="DescFlexField_ContextValue" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="673c3e17-b591-4439-b2af-ae555bd76489" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段1" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg10" NPos="85" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg1" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="d378dab6-ed9e-4d3a-833d-05281815e99e" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段2" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg20" NPos="86" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg2" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="19c98df5-4800-4461-952b-4a78484fce44" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段3" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg30" NPos="87" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg3" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="df80bd41-d666-48b2-b6fb-79a965fb2449" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段4" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg40" NPos="88" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg4" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="6aa1233a-ba63-4267-99a1-5c5b408c5efc" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段5" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg50" NPos="89" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg5" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="350332cc-dbbd-481f-9b95-05f744315d4e" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段6" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg60" NPos="90" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg6" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="b704bf39-dd02-4ec0-b2a1-9aabeed54441" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段7" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg70" NPos="91" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg7" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="84face84-b925-43cd-8c79-8910d1b09b2f" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段8" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg80" NPos="92" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg8" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="d0431311-4ccd-4938-87b0-f41ed759ba3f" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段9" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg90" NPos="93" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg9" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="84dbe575-6f9b-4153-8295-10d2b764725c" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段10" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg100" NPos="94" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg10" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="b350fb8f-5bb3-475c-858e-20e18d871628" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段11" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg110" NPos="95" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg11" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="fea2b561-6e33-417b-9f9f-a5d73f1bfdc4" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段12" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg120" NPos="96" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg12" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="26851053-28ec-4c75-9ac8-83b98dd69906" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段13" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg130" NPos="97" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg13" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="283b8e52-50d1-455a-b4d3-90423e0a1ab0" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段14" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg140" NPos="98" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg14" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="2ce1558f-55d2-403e-ab0f-a51575c9da30" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段15" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg150" NPos="99" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg15" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="7214e457-050a-4669-a1da-d985fe5084a9" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段16" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg160" NPos="100" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg16" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="4ee41187-ac76-47b6-87b8-a2a506683263" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段17" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg170" NPos="101" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg17" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="99464381-f8b5-4331-b184-6af0d5f08607" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段18" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg180" NPos="102" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg18" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="18894471-4d1f-44e2-b117-986fa771e600" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段19" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg190" NPos="103" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg19" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="441b5e9f-4302-4f01-90aa-59014d864fce" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段20" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg200" NPos="104" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg20" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="60b4f2dd-cbc3-41de-84e1-d507d47cb59b" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段21" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg210" NPos="105" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg21" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="623be934-aab0-4828-985c-f288360ee0ea" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段22" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg220" NPos="106" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg22" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="02688b59-fba8-4d9b-b1be-0dc1a52297da" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段23" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg230" NPos="107" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg23" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="a3ff456d-be71-4c4a-b38e-60847ae77dbb" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段24" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg240" NPos="108" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg24" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="757bebe4-2c4e-40ad-9f33-c662d6f72f17" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段25" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg250" NPos="109" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg25" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="feed0af1-ae7d-409c-a51a-3de5e29a644f" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段26" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg260" NPos="110" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg26" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="8c2ce2eb-f7e7-42c9-8fb0-05fe21760166" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段27" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg270" NPos="111" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg27" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="4a2eca49-bc6d-42df-b115-1a89251cd2e3" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段28" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg280" NPos="112" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg28" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="c530b869-d1c6-4279-9f3e-ea03bc9632bb" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段29" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg290" NPos="113" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg29" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="e1f3c300-3c03-435c-8bbc-d186bcfc65bf" DefaultValue="" DisplayFormat="1000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.私有段30" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_PrivateDescSeg300" NPos="114" Point="0" TextAlign="Left" UIFieldID="DescFlexField_PrivateDescSeg30" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <TextBoxColumn ID="939f555f-0093-408c-80cc-fcbbb5c2d319" DefaultValue="" DisplayFormat="4000" Enabled="True" Help="缺件发料单备份.Misc.实体扩展字段.实体扩展字段集合.Misc.组合名称" IsNull="True" IsProperty="False" IsSequence="False" Name="DescFlexField_CombineName0" NPos="115" Point="0" TextAlign="Left" UIFieldID="DescFlexField_CombineName" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+      <DatePickerColumn ID="82502707-548f-4085-8314-ae1181ff8f7e" DefaultValue="" DisplayFormat="19" Enabled="True" Help="缺件发料单备份.Misc.备份时间" IsNull="True" IsProperty="False" IsSequence="False" Name="BackupOn0" NPos="116" Point="0" UIFieldID="BackupOn" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </DatePickerColumn>
+      <TextBoxColumn ID="0c8c93c7-eef7-4055-a64a-c7775a140c66" DefaultValue="" DisplayFormat="50" Enabled="True" Help="缺件发料单备份.Misc.车号" IsNull="True" IsProperty="False" IsSequence="False" Name="ManufactureNo0" NPos="117" Point="0" TextAlign="Left" UIFieldID="ManufactureNo" UIViewID="Cust_Xmjl_MO_BomHead_Bak" Visible="True">
+        <Events />
+      </TextBoxColumn>
+    </Columns>
+  </DataGrid>
+  <Events />
+</View>

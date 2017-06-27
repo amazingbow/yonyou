@@ -1,0 +1,1405 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.AAI.AAISV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.SOBKeySet_SKey">
+            <summary>
+            账簿集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.SOBKeySet">
+            <summary>
+            账簿集合 (该属性可为空,且无默认值)
+            创建交易分录同步.Misc.账簿集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.ApplicationKey_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            创建交易分录同步.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.ApplicationKey">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            创建交易分录同步.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            创建交易分录同步.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            创建交易分录同步.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.EntityKeySet">
+            <summary>
+            实体集合 (该属性可为空,且无默认值)
+            创建交易分录同步.Misc.实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.IsExecBudget">
+            <summary>
+            是否执行预算 (该属性可为空,但有默认值)
+            创建交易分录同步.Misc.是否执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.IsBatchCheck">
+            <summary>
+            是否批量检查 (该属性可为空,但有默认值)
+            创建交易分录同步.Misc.是否批量检查
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.CreationMode">
+            <summary>
+            生成方式 (该属性可为空,但有默认值)
+            创建交易分录同步.Misc.生成方式
+            </summary>
+            <value>UFIDA.U9.AAI.TransEntry.CreationModeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesTBProxy.IsNotGenerateNoGLAAI">
+            <summary>
+            是否不生成不转GL的交易分录 (该属性可为空,但有默认值)
+            创建交易分录同步.Misc.是否不生成不转GL的交易分录
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransactionEntriesProxy.EntityKey">
+            <summary>
+            业务实体 (该属性可为空,且无默认值)
+            删除交易分录.Misc.业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransactionEntriesProxy.SOBKeys_SKey">
+            <summary>
+            账簿 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransactionEntriesProxy.SOBKeys">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            删除交易分录.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            合并交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            合并交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesProxy.FromEntityKeys">
+            <summary>
+            从业务实体集合 (该属性可为空,且无默认值)
+            合并交易分录.Misc.从业务实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesProxy.ToEntityKey">
+            <summary>
+            合并到业务实体 (该属性可为空,且无默认值)
+            合并交易分录.Misc.合并到业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取消合并交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取消合并交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesProxy.EntityKey">
+            <summary>
+            合并的业务实体 (该属性可为空,且无默认值)
+            取消合并交易分录.Misc.合并的业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.TransferToSOBProxy.FromSOBKey_SKey">
+            <summary>
+            源账簿 序列化Key属性。（传递跨组织序列列字段）
+            交易分录转账簿.Misc.源账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.TransferToSOBProxy.FromSOBKey">
+            <summary>
+            源账簿 (该属性可为空,且无默认值)
+            交易分录转账簿.Misc.源账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.TransferToSOBProxy.ToSOBKey_SKey">
+            <summary>
+            目标账簿 序列化Key属性。（传递跨组织序列列字段）
+            交易分录转账簿.Misc.目标账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.TransferToSOBProxy.ToSOBKey">
+            <summary>
+            目标账簿 (该属性可为空,且无默认值)
+            交易分录转账簿.Misc.目标账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.TransferToSOBProxy.FilterParams">
+            <summary>
+            过滤条件 (该属性可为空,且无默认值)
+            交易分录转账簿.Misc.过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetTransEntryHeadsProxy.TransHeadID">
+            <summary>
+            分录头ID (该属性可为空,但有默认值)
+            获取交易分录.Misc.分录头ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetEntryHeadByDocProxy.DocKeys">
+            <summary>
+            单据Key (该属性可为空,且无默认值)
+            根据单据获取分录头信息.Misc.单据Key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetEntryHeadByDocProxy.SobKeys_SKey">
+            <summary>
+            SobKey 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetEntryHeadByDocProxy.SobKeys">
+            <summary>
+            SobKey (该属性可为空,且无默认值)
+            根据单据获取分录头信息.Misc.SobKey
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetBudgetInterfaceProxy.DocIDs">
+            <summary>
+            单据ID (该属性可为空,且无默认值)
+            获取预算接口信息.Misc.单据ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetBudgetInterfaceProxy.Sob_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            获取预算接口信息.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetBudgetInterfaceProxy.Sob">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            获取预算接口信息.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取未转总账的交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取未转总账的交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.AppKey_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            取未转总账的交易分录.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.AppKey">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            取未转总账的交易分录.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.EntityKeys">
+            <summary>
+            业务实体 (该属性可为空,且无默认值)
+            取未转总账的交易分录.Misc.业务实体
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.SOBAccountingPeriod_SKey">
+            <summary>
+            主账簿期间 序列化Key属性。（传递跨组织序列列字段）
+            取未转总账的交易分录.Misc.主账簿期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.SOBAccountingPeriod">
+            <summary>
+            主账簿期间 (该属性可为空,且无默认值)
+            取未转总账的交易分录.Misc.主账簿期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.IsQueryMerged">
+            <summary>
+            是否取被合并的分录 (该属性可为空,但有默认值)
+            取未转总账的交易分录.Misc.是否取被合并的分录
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            取未转总账的交易分录.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetUntransferredEntriesProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            取未转总账的交易分录.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.EntityKeys">
+            <summary>
+            单据ID (该属性可为空,且无默认值)
+            执行预算.Misc.单据ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.SobKeys_SKey">
+            <summary>
+            账薄Key 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.SobKeys">
+            <summary>
+            账薄Key (该属性可为空,且无默认值)
+            执行预算.Misc.账薄Key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.OrgKey_SKey">
+            <summary>
+            组织Key 序列化Key属性。（传递跨组织序列列字段）
+            执行预算.Misc.组织Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.OrgKey">
+            <summary>
+            组织Key (该属性可为空,且无默认值)
+            执行预算.Misc.组织Key
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.ApplicationKey_SKey">
+            <summary>
+            应用Key 序列化Key属性。（传递跨组织序列列字段）
+            执行预算.Misc.应用Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetProxy.ApplicationKey">
+            <summary>
+            应用Key (该属性可为空,且无默认值)
+            执行预算.Misc.应用Key
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            是否有未转总账的交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            是否有未转总账的交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.App_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            是否有未转总账的交易分录.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.App">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            是否有未转总账的交易分录.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.EntityKeys">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            是否有未转总账的交易分录.Misc.实体
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.SOBAccountingPeriod_SKey">
+            <summary>
+            主账簿期间 序列化Key属性。（传递跨组织序列列字段）
+            是否有未转总账的交易分录.Misc.主账簿期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.SOBAccountingPeriod">
+            <summary>
+            主账簿期间 (该属性可为空,且无默认值)
+            是否有未转总账的交易分录.Misc.主账簿期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistUntransferredEntriesProxy.ExcludeEntityTypeList">
+            <summary>
+            排除实体集合 (该属性可为空,且无默认值)
+            是否有未转总账的交易分录.Misc.排除实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelExecutedBudgetProxy.EntityKeys">
+            <summary>
+            实体Key (该属性可为空,且无默认值)
+            取消预算.Misc.实体Key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesProxy.EntityKeys">
+            <summary>
+            实体Keys (该属性可为空,且无默认值)
+            批量删除交易分录.Misc.实体Keys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesProxy.Sobs_SKey">
+            <summary>
+            帐簿 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesProxy.Sobs">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            批量删除交易分录.Misc.帐簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesProxy.IsOnlyCheck">
+            <summary>
+            是否只是异常检查 (该属性可为空,但有默认值)
+            批量删除交易分录.Misc.是否只是异常检查
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesProxy.IsUseSOB">
+            <summary>
+            是否使用SOB参数 (该属性可为空,但有默认值)
+            批量删除交易分录.Misc.是否使用SOB参数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetEntitiesOfUnCreateTransEntryProxy.EntityKeys">
+            <summary>
+            实体Key (该属性可为空,且无默认值)
+            取未产生分录的实体.Misc.实体Key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegAddFactorProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            描述性弹性域全局段生成因素.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegAddFactorProxy.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            描述性弹性域全局段生成因素.Misc.名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegAddFactorProxy.EntityFullName">
+            <summary>
+            因素取值类型 (该属性可为空,且无默认值)
+            描述性弹性域全局段生成因素.Misc.因素取值类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegAddFactorProxy.GlobalDescFlexSegment_SKey">
+            <summary>
+            描述性弹性域公共段 序列化Key属性。（传递跨组织序列列字段）
+            描述性弹性域全局段生成因素.Misc.描述性弹性域公共段
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegAddFactorProxy.GlobalDescFlexSegment">
+            <summary>
+            描述性弹性域公共段 (该属性可为空,且无默认值)
+            描述性弹性域全局段生成因素.Misc.描述性弹性域公共段
+            </summary>
+            <value>UFIDA.U9.Base.FlexField.DescFlexField.GlobalDescFlexSegment</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.PubDFFSegDeleteFactorProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            描述性弹性域全局段删除因素.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegAddFactorDataSourceProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegAddFactorDataSourceProxy.EntityFullName">
+            <summary>
+            因素编码绑定的实体类型 (该属性可为空,且无默认值)
+            业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.因素编码绑定的实体类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.EntityFullName">
+            <summary>
+            绑定的实体类型 (该属性可为空,且无默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.绑定的实体类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.IsIncludeDebit">
+            <summary>
+            是否包括借方因素 (该属性可为空,但有默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.是否包括借方因素
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.IsIncludeCredit">
+            <summary>
+            是否包括贷方因素 (该属性可为空,但有默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.是否包括贷方因素
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.IsExcludeBIDerication">
+            <summary>
+            是否不包括双向因素 (该属性可为空,但有默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.是否不包括双向因素
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.AABizType_SKey">
+            <summary>
+            自动会计业务类型 序列化Key属性。（传递跨组织序列列字段）
+            业务实体绑定描述性弹性域全局段删除因素.Misc.自动会计业务类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.EntityDFFSegDeleteFactorDataSourceProxy.AABizType">
+            <summary>
+            自动会计业务类型 (该属性可为空,且无默认值)
+            业务实体绑定描述性弹性域全局段删除因素.Misc.自动会计业务类型
+            </summary>
+            <value>UFIDA.U9.AAI.AABizType</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.Code">
+            <summary>
+            代码 (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.代码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.EntityFullName">
+            <summary>
+            因素绑定的实体类型 (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.因素绑定的实体类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.AccessPath">
+            <summary>
+            子实体对目标实体访问路径 (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.子实体对目标实体访问路径
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.TagetEntityFullName">
+            <summary>
+            目标实体实体类型FullName (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.目标实体实体类型FullName
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.DebitExpr">
+            <summary>
+            借方因素子实体取值表达式 (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.借方因素子实体取值表达式
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.SubEntityDFFSegAddFactorDataSourceProxy.CreditExpr">
+            <summary>
+            贷方因素子实体取值表达式 (该属性可为空,且无默认值)
+            子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.贷方因素子实体取值表达式
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ProcessSubEntityDFFSegAddFactorDataSourceDTOsProxy.SubEntityDFFSegAddFactorDataSourceDTOs">
+            <summary>
+            DTOList (该属性可为空,且无默认值)
+            批量处理子业务实体绑定描述性弹性域全局段生成因素取数公式.Misc.DTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ProcessEntityDFFSegDeleteFactorDataSourceDTOProxy.EntityDFFSegDeleteFactorDataSourceDTOs">
+            <summary>
+            业务实体绑定描述性弹性域全局段删除因素DTOList (该属性可为空,且无默认值)
+            批量处理业务实体绑定描述性弹性域全局段删除因素服务.Misc.业务实体绑定描述性弹性域全局段删除因素DTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.FromPostPeriod_SKey">
+            <summary>
+            起始期间范围 序列化Key属性。（传递跨组织序列列字段）
+            启用预算年度控制时补充执行预算服务.Misc.起始期间范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.FromPostPeriod">
+            <summary>
+            起始期间范围 (该属性可为空,且无默认值)
+            启用预算年度控制时补充执行预算服务.Misc.起始期间范围
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.ToPostPeriod_SKey">
+            <summary>
+            结束期间范围 序列化Key属性。（传递跨组织序列列字段）
+            启用预算年度控制时补充执行预算服务.Misc.结束期间范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.ToPostPeriod">
+            <summary>
+            结束期间范围 (该属性可为空,且无默认值)
+            启用预算年度控制时补充执行预算服务.Misc.结束期间范围
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.EntryCount">
+            <summary>
+            每次调用执行数量，0表示全部 (该属性可为空,但有默认值)
+            启用预算年度控制时补充执行预算服务.Misc.每次调用执行数量，0表示全部
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.MinEntryID">
+            <summary>
+            上次执行完的ID (该属性可为空,但有默认值)
+            启用预算年度控制时补充执行预算服务.Misc.上次执行完的ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteUndeliveredBudgetSVProxy.AccountList">
+            <summary>
+            科目ID集合 (该属性可为空,且无默认值)
+            启用预算年度控制时补充执行预算服务.Misc.科目ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ProcessEntityDFFBindFactorDataSourceDTOProxy.MainEntityDFFBindFactorDataSourceDTO">
+            <summary>
+            主业务实体DFF绑定AAI因素数据来源DTO (该属性可为空,且无默认值)
+            业务实体DFF绑定AAI因素数据来源DTO服务.Misc.主业务实体DFF绑定AAI因素数据来源DTO
+            </summary>
+            <value>UFIDA.U9.AAI.TransEntry.EntityDFFBindFactorDataSourceDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ProcessEntityDFFBindFactorDataSourceDTOProxy.SubEntityDFFBindFactorDataSourceDTOs">
+            <summary>
+            子业务实体DFF绑定AAI因素数据来源DTO集合 (该属性可为空,且无默认值)
+            业务实体DFF绑定AAI因素数据来源DTO服务.Misc.子业务实体DFF绑定AAI因素数据来源DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetAccountBalanceBySobAndAccountCodesProxy.SOB_SKey">
+            <summary>
+            帐簿 序列化Key属性。（传递跨组织序列列字段）
+            依据帐簿和科目编码集合来获取科目余额服务.Misc.帐簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetAccountBalanceBySobAndAccountCodesProxy.SOB">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            依据帐簿和科目编码集合来获取科目余额服务.Misc.帐簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetAccountBalanceBySobAndAccountCodesProxy.AccountCodes">
+            <summary>
+            科目编码集合 (该属性可为空,且无默认值)
+            依据帐簿和科目编码集合来获取科目余额服务.Misc.科目编码集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetPAFactorsDefProxy.PAFactorsParamDTOs">
+            <summary>
+            取得预设科目的影响因素定义DTO (该属性可为空,且无默认值)
+            取得预设科目的影响因素定义服务.Misc.取得预设科目的影响因素定义DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesProxy.OrganizationKey">
+            <summary>
+            组织KEY (该属性可为空,且无默认值)
+            删除期间交易分录.Misc.组织KEY
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesProxy.ApplicationKey">
+            <summary>
+            应用KEY (该属性可为空,且无默认值)
+            删除期间交易分录.Misc.应用KEY
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesProxy.EntityTypeFullName">
+            <summary>
+            业务实体类型全称 (该属性可为空,且无默认值)
+            删除期间交易分录.Misc.业务实体类型全称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesProxy.PeriodKey_SKey">
+            <summary>
+            账簿期间列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesProxy.PeriodKey">
+            <summary>
+            账簿期间列表 (该属性可为空,且无默认值)
+            删除期间交易分录.Misc.账簿期间列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            是否有转总账的交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            是否有转总账的交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.App_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            是否有转总账的交易分录.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.App">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            是否有转总账的交易分录.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.EntityKeys">
+            <summary>
+            实体 (该属性可为空,且无默认值)
+            是否有转总账的交易分录.Misc.实体
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.SOBAccountingPeriod_SKey">
+            <summary>
+            主账簿期间 序列化Key属性。（传递跨组织序列列字段）
+            是否有转总账的交易分录.Misc.主账簿期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransferredEntriesProxy.SOBAccountingPeriod">
+            <summary>
+            主账簿期间 (该属性可为空,且无默认值)
+            是否有转总账的交易分录.Misc.主账簿期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            是否有已生成的交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            是否有已生成的交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.App_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            是否有已生成的交易分录.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.App">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            是否有已生成的交易分录.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.SOBAccountingPeriods_SKey">
+            <summary>
+            主账簿期间 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsExistTransactionEntriesProxy.SOBAccountingPeriods">
+            <summary>
+            主账簿期间 (该属性可为空,且无默认值)
+            是否有已生成的交易分录.Misc.主账簿期间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.SOBKeySet_SKey">
+            <summary>
+            账簿集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.SOBKeySet">
+            <summary>
+            账簿集合 (该属性可为空,且无默认值)
+            创建交易分录.Misc.账簿集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.ApplicationKey_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            创建交易分录.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.ApplicationKey">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            创建交易分录.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            创建交易分录.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            创建交易分录.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.EntityKeySet">
+            <summary>
+            实体集合 (该属性可为空,且无默认值)
+            创建交易分录.Misc.实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.IsExecBudget">
+            <summary>
+            是否执行预算 (该属性可为空,但有默认值)
+            创建交易分录.Misc.是否执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.IsOnlyCheck">
+            <summary>
+            是否只是检查 (该属性可为空,但有默认值)
+            创建交易分录.Misc.是否只是检查
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.IsBatchCheck">
+            <summary>
+            是否批量检查 (该属性可为空,但有默认值)
+            创建交易分录.Misc.是否批量检查
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.CreationMode">
+            <summary>
+            生成方式 (该属性可为空,但有默认值)
+            创建交易分录.Misc.生成方式
+            </summary>
+            <value>UFIDA.U9.AAI.TransEntry.CreationModeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GenerateTransactionEntriesProxy.IsNotGenerateNoGLAAI">
+            <summary>
+            是否不生成不转GL的交易分录 (该属性可为空,但有默认值)
+            创建交易分录.Misc.是否不生成不转GL的交易分录
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetTBProxy.EntityKeys">
+            <summary>
+            单据ID (该属性可为空,且无默认值)
+            执行预算同步.Misc.单据ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ExecuteTransEntryBudgetTBProxy.TaskNum">
+            <summary>
+            执行预算线索号 (该属性可为空,且无默认值)
+            执行预算同步.Misc.执行预算线索号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelExecutedBudgetTBProxy.EntityKeys">
+            <summary>
+            实体Key (该属性可为空,且无默认值)
+            取消预算同步.Misc.实体Key
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesTBProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            合并交易分录同步.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesTBProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            合并交易分录同步.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesTBProxy.FromEntityKeys">
+            <summary>
+            从业务实体集合 (该属性可为空,且无默认值)
+            合并交易分录同步.Misc.从业务实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.MergeTransactionEntriesTBProxy.ToEntityKey">
+            <summary>
+            合并到业务实体 (该属性可为空,且无默认值)
+            合并交易分录同步.Misc.合并到业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesTBProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            取消合并交易分录同步.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesTBProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            取消合并交易分录同步.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.CancelMergeTransactionEntriesTBProxy.EntityKey">
+            <summary>
+            合并的业务实体 (该属性可为空,且无默认值)
+            取消合并交易分录同步.Misc.合并的业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesTBProxy.EntityKeys">
+            <summary>
+            实体Keys (该属性可为空,且无默认值)
+            批量删除交易分录同步.Misc.实体Keys
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesTBProxy.Sobs_SKey">
+            <summary>
+            帐簿 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesTBProxy.Sobs">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            批量删除交易分录同步.Misc.帐簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesTBProxy.IsOnlyCheck">
+            <summary>
+            是否只是异常检查 (该属性可为空,但有默认值)
+            批量删除交易分录同步.Misc.是否只是异常检查
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.BatchDeleteTransEntriesTBProxy.IsUseSOB">
+            <summary>
+            是否使用SOB (该属性可为空,但有默认值)
+            批量删除交易分录同步.Misc.是否使用SOB
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesTBProxy.OrganizationKey">
+            <summary>
+            组织KEY (该属性可为空,且无默认值)
+            删除期间交易分录同步.Misc.组织KEY
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesTBProxy.ApplicationKey">
+            <summary>
+            应用KEY (该属性可为空,且无默认值)
+            删除期间交易分录同步.Misc.应用KEY
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesTBProxy.EntityTypeFullName">
+            <summary>
+            业务实体类型全称 (该属性可为空,且无默认值)
+            删除期间交易分录同步.Misc.业务实体类型全称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesTBProxy.PeriodKey_SKey">
+            <summary>
+            账簿期间列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeletePeriodTransactionEntriesTBProxy.PeriodKey">
+            <summary>
+            账簿期间列表 (该属性可为空,且无默认值)
+            删除期间交易分录同步.Misc.账簿期间列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsTransactionEntriesCreatedProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            检查未生成交易分录的实体.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsTransactionEntriesCreatedProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            检查未生成交易分录的实体.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsTransactionEntriesCreatedProxy.SOB_SKey">
+            <summary>
+            帐簿 序列化Key属性。（传递跨组织序列列字段）
+            检查未生成交易分录的实体.Misc.帐簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsTransactionEntriesCreatedProxy.SOB">
+            <summary>
+            帐簿 (该属性可为空,且无默认值)
+            检查未生成交易分录的实体.Misc.帐簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.IsTransactionEntriesCreatedProxy.EntityKeys">
+            <summary>
+            实体集合 (该属性可为空,且无默认值)
+            检查未生成交易分录的实体.Misc.实体集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.AAIBuildUrlProxy.EntityTypeFullName">
+            <summary>
+            实体名 (该属性可为空,且无默认值)
+            AAI获取实体相关URI操作.Misc.实体名
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.AAIBuildUrlProxy.EntityID">
+            <summary>
+            定位记录 (该属性可为空,但有默认值)
+            AAI获取实体相关URI操作.Misc.定位记录
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.AAIBuildUrlProxy.ParamList">
+            <summary>
+            辅助参数 (该属性可为空,且无默认值)
+            AAI获取实体相关URI操作.Misc.辅助参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.GetTransEntryHeadDTOsProxy.TransHeadIDs">
+            <summary>
+            交易分录Id集合 (该属性可为空,且无默认值)
+            获取交易分录头DTO集合.Misc.交易分录Id集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.Org_SKey">
+            <summary>
+            业务组织 序列化Key属性。（传递跨组织序列列字段）
+            重新生成交易分录.Misc.业务组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.Org">
+            <summary>
+            业务组织 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.业务组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.AppList_SKey">
+            <summary>
+            需要处理的应用 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.AppList">
+            <summary>
+            需要处理的应用 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.需要处理的应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            重新生成交易分录.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.Period_SKey">
+            <summary>
+            账簿会计期间 序列化Key属性。（传递跨组织序列列字段）
+            重新生成交易分录.Misc.账簿会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.Period">
+            <summary>
+            账簿会计期间 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.账簿会计期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.CreationMode">
+            <summary>
+            生成方式 (该属性可为空,但有默认值)
+            重新生成交易分录.Misc.生成方式
+            </summary>
+            <value>UFIDA.U9.AAI.TransEntry.CreationModeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.IsBatchCheck">
+            <summary>
+            是否批量报错 (该属性可为空,但有默认值)
+            重新生成交易分录.Misc.是否批量报错
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.OPath">
+            <summary>
+            条件 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.HeadList_SKey">
+            <summary>
+            交易分录头列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.HeadList">
+            <summary>
+            交易分录头列表 (该属性可为空,且无默认值)
+            重新生成交易分录.Misc.交易分录头列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.ReGenerateTransentrySVProxy.ContainModified">
+            <summary>
+            手工修改分录重生成 (该属性可为空,但有默认值)
+            重新生成交易分录.Misc.手工修改分录重生成
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransEntryBodySVProxy.EntityKeySet">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            删除交易分录行.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransEntryBodySVProxy.SobSet_SKey">
+            <summary>
+            账簿集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.Proxy.DeleteTransEntryBodySVProxy.SobSet">
+            <summary>
+            账簿集合 (该属性可为空,且无默认值)
+            删除交易分录行.Misc.账簿集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.WriteBackVoucherInfoProxy.VoucherInfos">
+            <summary>
+            凭证信息集合 (该属性可为空,且无默认值)
+            回写凭证信息.Misc.凭证信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.QueryVoucherInfoProxy.EntityKey">
+            <summary>
+            业务实体 (该属性可为空,且无默认值)
+            查询凭证信息.Misc.业务实体
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetTransToGLLogsProxy.DocInfos">
+            <summary>
+            单据DTO (该属性可为空,且无默认值)
+            取转总账线索.Misc.单据DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.DeleteTransToGlLogsProxy.TransLogs">
+            <summary>
+            转总账线索 (该属性可为空,且无默认值)
+            删除交易分录转总账线索.Misc.转总账线索
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.DeleteTransVouchersProxy.DocIds">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            删除交易凭证.Misc.单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.DeleteTransVouchersProxy.IsCancel">
+            <summary>
+            作废 (该属性可为空,但有默认值)
+            删除交易凭证.Misc.作废
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetTransactonEntryDocInfoDTOProxy.VoucherID">
+            <summary>
+            凭证ID (该属性可为空,但有默认值)
+            得到交易分录单据信息服务.Misc.凭证ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.CascadeUpdateDispNoProxy.GLVoucherNumChgDTOs">
+            <summary>
+            凭证编号修改联动输入DTO集合 (该属性可为空,且无默认值)
+            凭证编号修改联动服务.Misc.凭证编号修改联动输入DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAppAAIToGLSVProxy.AAIHeadKeyList_SKey">
+            <summary>
+            AAI头实体Key列表 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAppAAIToGLSVProxy.AAIHeadKeyList">
+            <summary>
+            AAI头实体Key列表 (该属性可为空,且无默认值)
+            跨应用转总帐普通服务.Misc.AAI头实体Key列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAppAAIToGLSVProxy.MergeCondition">
+            <summary>
+            合并条件 (该属性可为空,且无默认值)
+            跨应用转总帐普通服务.Misc.合并条件
+            </summary>
+            <value>UFIDA.U9.AAI.Voucher.MergeConDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAppAAIToGLSVProxy.AllData">
+            <summary>
+            是否全部交易分录头 (该属性可为空,但有默认值)
+            跨应用转总帐普通服务.Misc.是否全部交易分录头
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.BatchAcrossAppAAIToGLSVProxy.OPath">
+            <summary>
+            交易分录头过滤条件 (该属性可为空,且无默认值)
+            批量跨应用转总帐服务.Misc.交易分录头过滤条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.BatchAcrossAppAAIToGLSVProxy.MergeCondition">
+            <summary>
+            合并条件 (该属性可为空,且无默认值)
+            批量跨应用转总帐服务.Misc.合并条件
+            </summary>
+            <value>UFIDA.U9.AAI.Voucher.MergeConDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AAITransToGLSVProxy.Application_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            AAI根据交易分录生成凭证服务服务.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AAITransToGLSVProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            AAI根据交易分录生成凭证服务服务.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AAITransToGLSVProxy.TransactionVoucherDTOs">
+            <summary>
+            合并交易分录集合 (该属性可为空,且无默认值)
+            AAI根据交易分录生成凭证服务服务.Misc.合并交易分录集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AAITransToGLSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            AAI根据交易分录生成凭证服务服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AAITransToGLSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            AAI根据交易分录生成凭证服务服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAPPDelVoucherSVProxy.TransHeadDTO">
+            <summary>
+            交易分录DTO集合 (该属性可为空,且无默认值)
+            跨应用删除凭证.Misc.交易分录DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.AcrossAPPDelVoucherSVProxy.IsCancel">
+            <summary>
+            是否作废 (该属性可为空,但有默认值)
+            跨应用删除凭证.Misc.是否作废
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetAcrossLogsSVProxy.TransHeadDTOList">
+            <summary>
+            交易分录头集合 (该属性可为空,且无默认值)
+            跨应用转总帐获取线索.Misc.交易分录头集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.BatchAcrossAPPDelVoucherSVProxy.VoucherList">
+            <summary>
+            凭证列表 (该属性可为空,且无默认值)
+            跨应用批量删除凭证.Misc.凭证列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.BatchAcrossAPPDelVoucherSVProxy.IsCancel">
+            <summary>
+            是否作废 (该属性可为空,但有默认值)
+            跨应用批量删除凭证.Misc.是否作废
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetVoucherListBySOBAppSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            通过账簿和应用获取凭证列表.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetVoucherListBySOBAppSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            通过账簿和应用获取凭证列表.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetVoucherListBySOBAppSVProxy.AppList">
+            <summary>
+            应用列表 (该属性可为空,且无默认值)
+            通过账簿和应用获取凭证列表.Misc.应用列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.GetVoucherListBySOBAppSVProxy.OrgList">
+            <summary>
+            来源组织列表 (该属性可为空,且无默认值)
+            通过账簿和应用获取凭证列表.Misc.来源组织列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.DelVoucherRetAllDocSVProxy.DocIds">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            删除凭证，返回全部线索.Misc.单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.Voucher.Proxy.DelVoucherRetAllDocSVProxy.IsCancel">
+            <summary>
+            作废 (该属性可为空,但有默认值)
+            删除凭证，返回全部线索.Misc.作废
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+    </members>
+</doc>

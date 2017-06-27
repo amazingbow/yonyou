@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="d109297d-6b0e-4cc2-89fa-446fbd2f653c" name="CustomerSV" displayName="CustomerSV" description="" help="" type="SV" assemblyName="UFIDA.U9.Cust.XMJL.SV">
+  <Namespace id="e2ff31c8-38b0-440f-921e-702a644c49e0" name="UFIDA.U9.Cust.XMJL.CustomerSV" displayName="UFIDA.U9.Cust.XMJL.CustomerSV" description="" help="">
+    <PropertyType id="74737bf6-3bff-4338-9580-53bd646fc010" name="CustomerBalanceDTO" displayName="客户额度DTO" description="客户额度DTO" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="11c66fe3-5c18-4450-bc97-dab6cb99bec0" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="050d2c6f-a4bd-42c1-848f-6b3df3b82ae2" name="Code" displayName="客户代码" description="" help="客户额度DTO.Misc.客户代码" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="f70422ff-ece2-4ef1-8a96-389cff53717a" name="Name" displayName="客户名称" description="" help="客户额度DTO.Misc.客户名称" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="3b6d7b76-6a6e-4052-9766-7f5fb9d7101d" name="Balance" displayName="额度" description="" help="客户额度DTO.Misc.额度" dataTypeID="91031687-94bb-4988-a939-df7bf999ef4f" isKey="False" defaultValue="0" length="9" precise="24" scale="9" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <Operation id="86210f93-4641-44cf-82d2-7a8b3dd19822" name="QueryBalance" displayName="获取客户金额额度" description="获取客户金额额度" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="74737bf6-3bff-4338-9580-53bd646fc010" isService="True" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="89d8ad1a-b7d6-46c4-ae08-f6b1707c2db9" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="3cda5f75-0d29-43f4-9275-0eaec96a1e3a" name="Codes" displayName="客户代码集合" description="" help="获取客户金额额度.Misc.客户代码集合" isCollection="True" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="8535cb5f-256b-4999-8e2b-1b62c5d95865" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="74737bf6-3bff-4338-9580-53bd646fc010" isService="False" isDefault="True" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="997b1812-b30c-402d-a01a-cc3e0c977afb" name="CustomerSV" displayName="UFIDA.U9.Cust.XMJL.CustomerSV">
+      <Class Editable="True" ID="3ad6f5d2-93dc-42c4-b937-84eff181c209" Type="PropertyType" ADID="74737bf6-3bff-4338-9580-53bd646fc010">
+        <Location X="505" Y="69" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="abcc9902-4209-407c-a858-e5202e0d5a1e" Type="Service" ADID="86210f93-4641-44cf-82d2-7a8b3dd19822">
+        <Location X="82" Y="71" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+    <Diagram id="7fe7c7f2-5c47-4cf1-a31a-fdba33d6eb9f" name="Diagram" displayName="Diagram">
+      <Class Editable="True" ID="246bf477-e962-48c4-8787-db5987fd1a94" Type="Service" ADID="86210f93-4641-44cf-82d2-7a8b3dd19822">
+        <Location X="100" Y="100" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+    <Diagram id="e824cae4-2f24-4def-b3d4-0ca01e1292b1" name="Diagram1" displayName="Diagram1">
+      <Class Editable="True" ID="3dffc907-cac9-47a6-9ec5-de20c215e893" Type="Service" ADID="86210f93-4641-44cf-82d2-7a8b3dd19822">
+        <Location X="100" Y="100" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

@@ -1,0 +1,1308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Cust.FJGX.CustomerQueryBP</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.Cust.FJGX.PubBase.DataRowConverter">
+            <summary>
+                DataRow值转化器
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.PubBase.DataRowConverter.IsDBNullOrEmpty(System.Data.DataRow,System.String)">
+            <summary>
+                DataRow字段是否为DBNull或string.Empty
+            </summary>
+            <param name="dataRow"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.PubBase.DataRowConverter.IsDBNullOrEmpty(System.Object)">
+            <summary>
+                DataRow字段是否为DBNull或string.Empty
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO">
+            <summary>
+            CustomerQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.#ctor(System.Int64,System.Int64,System.String,System.String,UFIDA.U9.Base.Contact.Contact.EntityKey,System.String,System.String,UFIDA.U9.CBO.SCM.Customer.CustomerCategory.EntityKey,UFIDA.U9.CBO.HR.Operator.Operators.EntityKey,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.String,UFIDA.U9.Base.PropertyTypes.RoundTypeEnum,System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_ID">
+            <summary>
+            ID (该属性不可为空,但有默认值)
+            CustomerQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            CustomerQryDTO.Misc.编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerContact_Contact">
+            <summary>
+            联系人 (该属性不可为空,且无默认值)
+            CustomerQryDTO.Misc.联系人
+            </summary>
+            <value>UFIDA.U9.Base.Contact.Contact</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerContact_Contact_DefaultMobilNum">
+            <summary>
+            手机 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.手机
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerContact_Contact_DefaultPhoneNum">
+            <summary>
+            电话 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.电话
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_CustomerCategory">
+            <summary>
+            客户分类 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.客户分类
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.CustomerCategory</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_Saleser">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.业务员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerContact_Contact_DefaultFaxNum">
+            <summary>
+            传真 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.传真
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.AROCMoneyBalance_TotalMoney">
+            <summary>
+            实际应收 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.实际应收
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.LastSOTotalMoneyTC">
+            <summary>
+            最后交易额 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.最后交易额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.LastRecBillTotalMoney">
+            <summary>
+            最近一笔收款金额 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.最近一笔收款金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_StateTaxNo">
+            <summary>
+            国税号 (该属性可为空,且无默认值)
+            CustomerQryDTO.Misc.国税号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerBankAccount_Code">
+            <summary>
+            开户银行 (该属性不可为空,且无默认值)
+            CustomerQryDTO.Misc.开户银行
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_TradeCurrency_MoneyRound_RoundType">
+            <summary>
+            客户_交易币种_金额精度_舍入类型 (该属性不可为空,但有默认值)
+            CustomerQryDTO.Misc.客户_交易币种_金额精度_舍入类型
+            </summary>
+            <value>UFIDA.U9.Base.PropertyTypes.RoundTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_TradeCurrency_MoneyRound_RoundValue">
+            <summary>
+            客户_交易币种_金额精度_舍入值 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.客户_交易币种_金额精度_舍入值
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_TradeCurrency_MoneyRound_Precision">
+            <summary>
+            客户_交易币种_金额精度_精度 (该属性不可为空,但有默认值)
+            CustomerQryDTO.Misc.客户_交易币种_金额精度_精度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.ObjectCreditLevelApproval_CreditLimit">
+            <summary>
+            信用额度 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.信用额度
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.SumBalanceTotalMoney">
+            <summary>
+            合计实际应收金额 (该属性可为空,但有默认值)
+            CustomerQryDTO.Misc.合计实际应收金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_Name">
+            <summary>
+            名称
+            CustomerQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_Description">
+            <summary>
+            描述
+            CustomerQryDTO.Misc.描述
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_Saleser_Name">
+            <summary>
+            名称
+            CustomerQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.CustomerContact_Contact_Name">
+            <summary>
+            名称
+            CustomerQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_CustomerCategory_Name">
+            <summary>
+            名称
+            CustomerQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Customer_OfficialLocation_Name">
+            <summary>
+            名称
+            CustomerQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_TypeName">
+            <summary>
+            CustomerQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_Code">
+            <summary>
+            编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerContact_Contact">
+            <summary>
+            联系人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerContact_Contact_DefaultMobilNum">
+            <summary>
+            手机的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerContact_Contact_DefaultPhoneNum">
+            <summary>
+            电话的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_CustomerCategory">
+            <summary>
+            客户分类的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_Saleser">
+            <summary>
+            业务员的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerContact_Contact_DefaultFaxNum">
+            <summary>
+            传真的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_AROCMoneyBalance_TotalMoney">
+            <summary>
+            实际应收的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_LastSOTotalMoneyTC">
+            <summary>
+            最后交易额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_LastRecBillTotalMoney">
+            <summary>
+            最近一笔收款金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_StateTaxNo">
+            <summary>
+            国税号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerBankAccount_Code">
+            <summary>
+            开户银行的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_Description">
+            <summary>
+            描述的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_TradeCurrency_MoneyRound_RoundType">
+            <summary>
+            客户_交易币种_金额精度_舍入类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_TradeCurrency_MoneyRound_RoundValue">
+            <summary>
+            客户_交易币种_金额精度_舍入值的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_Saleser_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_CustomerContact_Contact_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_CustomerCategory_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_OfficialLocation_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_Customer_TradeCurrency_MoneyRound_Precision">
+            <summary>
+            客户_交易币种_金额精度_精度的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_ObjectCreditLevelApproval_CreditLimit">
+            <summary>
+            信用额度的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.CustomerQryDTO.Res_SumBalanceTotalMoney">
+            <summary>
+            合计实际应收金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+                QueryBP partial
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy">
+            <summary>
+                Impement Implement
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+                分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+                缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+                开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+                是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+                基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+                参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.CreateCustomerTable(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj,UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            创建客户临时表
+            </summary>
+            <param name="bpParameter"></param>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.CreateARTotalMoneyTable(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj,UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            实际应收临时表
+            </summary>
+            <param name="bpParameter"></param>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.CreateLastSOTotalMoneyTCTable(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj,UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            最后交易额临时表
+            </summary>
+            <param name="bpParameter"></param>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.CreateLastRecBillTotalMoneyTable(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj,UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            最近一笔收款金额临时表
+            </summary>
+            <param name="bpParameter"></param>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.CreateResultTable(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj,UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            创建结果临时表
+            </summary>
+            <param name="bpParameter"></param>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.GetSumBalanceTotalMoney(UFSoft.UBF.Business.EntityViewQuery)">
+            <summary>
+            获取合计应付金额
+            </summary>
+            <param name="entityViewQuery"></param>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                这部份代码查询开发人员不要作修改
+                删除Do方法中的
+                throw new NotImplementedException();
+                在Do方法中直接加上一句:
+                return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO">
+            <summary>
+            CustomerDocListQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.#ctor(System.Int64,System.String,System.DateTime,UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey,System.String,UFIDA.U9.CBO.SCM.Customer.CustomerContact.EntityKey,System.String,UFIDA.U9.CBO.HR.Operator.Operators.EntityKey,System.String,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            CustomerDocListQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.DocNo">
+            <summary>
+            单据编号 (该属性可为空,且无默认值)
+            CustomerDocListQryDTO.Misc.单据编号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.BusinessDate">
+            <summary>
+            单据日期 (该属性可为空,且无默认值)
+            CustomerDocListQryDTO.Misc.单据日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            CustomerDocListQryDTO.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.CustomerContact">
+            <summary>
+            联系人 (该属性可为空,且无默认值)
+            CustomerDocListQryDTO.Misc.联系人
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.CustomerContact</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Operators">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            CustomerDocListQryDTO.Misc.业务员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.TotalMoney">
+            <summary>
+            总金额 (该属性可为空,但有默认值)
+            CustomerDocListQryDTO.Misc.总金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.DocType">
+            <summary>
+            单据种类 (该属性可为空,但有默认值)
+            CustomerDocListQryDTO.Misc.单据种类
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.SumTotalMoney">
+            <summary>
+            合计总金额 (该属性可为空,但有默认值)
+            CustomerDocListQryDTO.Misc.合计总金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Customer_Name">
+            <summary>
+            名称
+            CustomerDocListQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.CustomerContact_Contact_Name">
+            <summary>
+            名称
+            CustomerDocListQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Operators_Name">
+            <summary>
+            名称
+            CustomerDocListQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_TypeName">
+            <summary>
+            CustomerDocListQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_DocNo">
+            <summary>
+            单据编号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_BusinessDate">
+            <summary>
+            单据日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_Customer">
+            <summary>
+            客户的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_Customer_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_CustomerContact">
+            <summary>
+            联系人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_CustomerContact_Contact_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_Operators">
+            <summary>
+            业务员的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_Operators_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_TotalMoney">
+            <summary>
+            总金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_DocType">
+            <summary>
+            单据种类的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.CustomerDocListQryDTO.Res_SumTotalMoney">
+            <summary>
+            合计总金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+                QueryBP partial
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBPImpementStrategy">
+            <summary>
+                Impement Implement
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+                分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+                缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+                开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+                是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+                基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+                参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocListQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                这部份代码查询开发人员不要作修改
+                删除Do方法中的
+                throw new NotImplementedException();
+                在Do方法中直接加上一句:
+                return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO">
+            <summary>
+            CustomerDocLineListQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.#ctor(System.Int64,System.DateTime,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.Decimal,System.Decimal,System.String,System.Decimal,System.Decimal,System.String,System.Int32,System.String,UFIDA.U9.Base.PropertyTypes.RoundTypeEnum,System.Int32,System.Int32,System.Int32,UFIDA.U9.Base.PropertyTypes.RoundTypeEnum,System.Int32)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.BusinessDate">
+            <summary>
+            单据日期 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.单据日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.DocNo">
+            <summary>
+            单据号 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.单据号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ItemCode">
+            <summary>
+            存货编码 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.存货编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ItemName">
+            <summary>
+            存货名称 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.存货名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.SPECS">
+            <summary>
+            规格型号 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.规格型号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.MainSOQty">
+            <summary>
+            主销售数量 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.主销售数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.MainUOM_Name">
+            <summary>
+            主单位 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.主单位
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.FinallyPrice">
+            <summary>
+            主报价 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.主报价
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.InvSOQty">
+            <summary>
+            辅销售数量 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.辅销售数量
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.InvUOM_Name">
+            <summary>
+            辅单位 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.辅单位
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.TotalMoney">
+            <summary>
+            金额 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.ConversionRates">
+            <summary>
+            换算率 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.换算率
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Customer_Name">
+            <summary>
+            公司名称 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.公司名称
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.DocLineNo">
+            <summary>
+            行号 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.行号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Operators_Name">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.业务员
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.MainUOM_Round_RoundType">
+            <summary>
+            主单位_精度_舍入类型 (该属性不可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.主单位_精度_舍入类型
+            </summary>
+            <value>UFIDA.U9.Base.PropertyTypes.RoundTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.MainUOM_Round_RoundValue">
+            <summary>
+            主单位_精度_舍入值 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.主单位_精度_舍入值
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.MainUOM_Round_Precision">
+            <summary>
+            主单位_精度_精度 (该属性不可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.主单位_精度_精度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.InvUOM_Round_Precision">
+            <summary>
+            辅单位_精度_精度 (该属性不可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.辅单位_精度_精度
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.InvUOM_Round_RoundType">
+            <summary>
+            辅单位_精度_舍入类型 (该属性不可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.辅单位_精度_舍入类型
+            </summary>
+            <value>UFIDA.U9.Base.PropertyTypes.RoundTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.InvUOM_Round_RoundValue">
+            <summary>
+            辅单位_精度_舍入值 (该属性可为空,但有默认值)
+            CustomerDocLineListQryDTO.Misc.辅单位_精度_舍入值
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Memo">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            CustomerDocLineListQryDTO.Misc.备注
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_TypeName">
+            <summary>
+            CustomerDocLineListQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_BusinessDate">
+            <summary>
+            单据日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_DocNo">
+            <summary>
+            单据号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_ItemCode">
+            <summary>
+            存货编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_ItemName">
+            <summary>
+            存货名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_SPECS">
+            <summary>
+            规格型号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_MainSOQty">
+            <summary>
+            主销售数量的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_MainUOM_Name">
+            <summary>
+            主单位的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_FinallyPrice">
+            <summary>
+            主报价的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_InvSOQty">
+            <summary>
+            辅销售数量的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_InvUOM_Name">
+            <summary>
+            辅单位的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_TotalMoney">
+            <summary>
+            金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_ConversionRates">
+            <summary>
+            换算率的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_Customer_Name">
+            <summary>
+            公司名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_DocLineNo">
+            <summary>
+            行号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_Operators_Name">
+            <summary>
+            业务员的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_MainUOM_Round_RoundType">
+            <summary>
+            主单位_精度_舍入类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_MainUOM_Round_RoundValue">
+            <summary>
+            主单位_精度_舍入值的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_MainUOM_Round_Precision">
+            <summary>
+            主单位_精度_精度的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_InvUOM_Round_Precision">
+            <summary>
+            辅单位_精度_精度的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_InvUOM_Round_RoundType">
+            <summary>
+            辅单位_精度_舍入类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_InvUOM_Round_RoundValue">
+            <summary>
+            辅单位_精度_舍入值的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO.Res_Memo">
+            <summary>
+            备注的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+                QueryBP partial
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBPImpementStrategy">
+            <summary>
+                Impement Implement
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+                分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+                缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+                开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+                是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+                基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+                参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+                这部份代码查询开发人员不要作修改
+                删除Do方法中的
+                throw new NotImplementedException();
+                在Do方法中直接加上一句:
+                return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO">
+            <summary>
+            CustomerVoucherQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.FromEntityData(UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.ToEntityData(UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.#ctor(System.Int64,UFIDA.U9.CBO.SCM.Customer.Customer.EntityKey,System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.DateTime,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.ID">
+            <summary>
+            ID (该属性可为空,但有默认值)
+            CustomerVoucherQryDTO.Misc.ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.DocNo">
+            <summary>
+            应收单据 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.应收单据
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.DocTypeName">
+            <summary>
+            单据类型 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.单据类型
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.CreatedBy">
+            <summary>
+            制单人 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.制单人
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Memo">
+            <summary>
+            摘要 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.摘要
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.DebitMoney">
+            <summary>
+            借方金额 (该属性可为空,但有默认值)
+            CustomerVoucherQryDTO.Misc.借方金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.CreditMoney">
+            <summary>
+            贷方金额 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.贷方金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.SumDebitMoney">
+            <summary>
+            合计借方金额 (该属性可为空,但有默认值)
+            CustomerVoucherQryDTO.Misc.合计借方金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.SumCreditMoney">
+            <summary>
+            合计贷方金额 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.合计贷方金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.SumMoney">
+            <summary>
+            合计金额 (该属性可为空,但有默认值)
+            CustomerVoucherQryDTO.Misc.合计金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            CustomerVoucherQryDTO.Misc.业务日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.BalanceMoney">
+            <summary>
+            结存 (该属性可为空,但有默认值)
+            CustomerVoucherQryDTO.Misc.结存
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Customer_Name">
+            <summary>
+            名称
+            CustomerVoucherQryDTO.Misc.名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_TypeName">
+            <summary>
+            CustomerVoucherQryDTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_ID">
+            <summary>
+            ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_Customer">
+            <summary>
+            客户的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_Customer_Name">
+            <summary>
+            名称的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_DocNo">
+            <summary>
+            应收单据的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_DocTypeName">
+            <summary>
+            单据类型的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_CreatedBy">
+            <summary>
+            制单人的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_Memo">
+            <summary>
+            摘要的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_DebitMoney">
+            <summary>
+            借方金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_CreditMoney">
+            <summary>
+            贷方金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_SumDebitMoney">
+            <summary>
+            合计借方金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_SumCreditMoney">
+            <summary>
+            合计贷方金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_SumMoney">
+            <summary>
+            合计金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_BusinessDate">
+            <summary>
+            业务日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.CustomerVoucherQryDTO.Res_BalanceMoney">
+            <summary>
+            结存的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBP">
+            <summary>
+            查询BP business operation
+            
+            </summary>
+            <summary>
+            QueryBP partial 
+            </summary>	
+        </member>
+        <member name="P:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBP.QryInParameter">
+            <summary>
+            查询入口参数	
+            查询BP.Misc.查询入口参数
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBPImpementStrategy">
+            <summary>
+            Impement Implement
+            
+            </summary>	
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBPImpementStrategy.isNeedTempTable">
+            <summary>
+            分页内部是否需要使用临时表机制，对于数据量比较小的查询，没有必要采用临时表
+            缓存第一次查询的结果，每次重查就行了，否则第一次查询时页面加载会慢些。由BP
+            开发人员自己判断。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBPImpementStrategy.oqlBuildByTempTable">
+            <summary>
+            是否基于临时表构造的OQL,对于基于临时表的查询，分页服务内部不需要多语的处理；
+            基于业务表的查询，则需要。此处由BP开发人员根据实际情况返回正确的值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBPImpementStrategy.DoLogic(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+            执行业务逻辑，返回OQL串，由BP开发人员添加代码。
+            参数bpParameter中带有已选栏目、过滤及排序信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFIDA.U9.Cust.FJGX.CustomerVoucherQryBP.QueryBPImpementStrategy.DoProcess(UFIDA.U9.Query.QueryCaseBP.QryCommonParaObj)">
+            <summary>
+            这部份代码查询开发人员不要作修改
+            删除Do方法中的
+            throw new NotImplementedException();
+            在Do方法中直接加上一句:
+            return DoProcess(bpObj.QryInParameter);
+            </summary>
+            <param name="bpParameter"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppPackage id="1f19d46e-e85e-404d-bd16-81f4e1c92651" code="AppPackCode01" name="应用组装包" shortName="" displayName="应用组装包" description="" version="">
+    <Apps>
+        <App id="3110" code="01" shortName="CBO" name="基础设置" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3000" code="0101" shortName="CBO" name="基础设置" uri="">
+                <Pages>
+                    <Page id="0f3103ab-bd72-4d95-9056-386d81993c5c" code="0f3103ab-bd72-4d95-9056-386d81993c5c" name="库存快速查询" shortName="" displayName="库存快速查询" description="" title="库存快速查询" uri="Cust.FJGX.InvInfoQuery" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="36e0e8d2-028a-4e88-8b53-d3065a9352f4" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>f83071f3-14c5-4e41-9740-084c6374f636</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="f83071f3-14c5-4e41-9740-084c6374f636" code="f83071f3-14c5-4e41-9740-084c6374f636" name="库存快速查询" shortName="库存快速查询" displayName="库存快速查询" description="库存快速查询" title="库存快速查询" bindedFormID="760c2587-22a1-4d0d-b103-656c1738f894" bindedFormName="InvInfoQueryDQryUIFormWebPart" height="504" width="992" />
+                        </Parts>
+                        <PartRelations />
+                        <Parameters />
+                    </Page>
+                    <Page id="c406b6bf-69b0-49aa-b916-3334224dc3c2" code="c406b6bf-69b0-49aa-b916-3334224dc3c2" name="客户快速查询" shortName="" displayName="客户快速查询" description="" title="客户快速查询" uri="Cust.FJGX.CustomerQueryURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="226167ae-21b7-4654-9509-d8211a518d79" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>7450bed1-fcc8-4da7-a1b4-9a9e092f3fed</Part>
+                                    <Part>9f16a8e8-b557-4412-8999-374d38aff712</Part>
+                                </Parts>
+                            </Column>
+                            <Column id="5956e65b-1157-4531-8411-8e9dbeb74c37" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>0d4fc183-4920-43ba-b55f-bd22b24da82b</Part>
+                                    <Part>b80b28c9-4d1b-47b2-a55f-b32728eddd9a</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="7450bed1-fcc8-4da7-a1b4-9a9e092f3fed" code="7450bed1-fcc8-4da7-a1b4-9a9e092f3fed" name="客户信息" shortName="客户信息" displayName="客户信息" description="客户信息" title="客户信息" bindedFormID="7d7122df-c02f-4aab-b42f-68f6a02b2d9d" bindedFormName="CustomerDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="0d4fc183-4920-43ba-b55f-bd22b24da82b" code="0d4fc183-4920-43ba-b55f-bd22b24da82b" name="出货单据" shortName="出货单据" displayName="出货单据" description="出货单据" title="出货单据" bindedFormID="a46a4620-021d-488f-85de-9fdde081404b" bindedFormName="CustomerDocListDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="9f16a8e8-b557-4412-8999-374d38aff712" code="9f16a8e8-b557-4412-8999-374d38aff712" name="往来凭证" shortName="往来凭证" displayName="往来凭证" description="往来凭证" title="往来凭证" bindedFormID="78a77467-e297-4a91-88f7-cd73ae82adea" bindedFormName="CustomerVoucherDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="b80b28c9-4d1b-47b2-a55f-b32728eddd9a" code="b80b28c9-4d1b-47b2-a55f-b32728eddd9a" name="出库记录" shortName="出库记录" displayName="出库记录" description="出库记录" title="出库记录" bindedFormID="36f81ab1-ce1c-4a33-9eea-74426ad67d1d" bindedFormName="CustomerDocLineListDQryUIFormWebPart" height="250" width="700" />
+                        </Parts>
+                        <PartRelations>
+                            <PartRelation providerID="7450bed1-fcc8-4da7-a1b4-9a9e092f3fed" consumerID="0d4fc183-4920-43ba-b55f-bd22b24da82b">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                            <PartRelation providerID="7450bed1-fcc8-4da7-a1b4-9a9e092f3fed" consumerID="9f16a8e8-b557-4412-8999-374d38aff712">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                            <PartRelation providerID="0d4fc183-4920-43ba-b55f-bd22b24da82b" consumerID="b80b28c9-4d1b-47b2-a55f-b32728eddd9a">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                        </PartRelations>
+                        <Parameters />
+                    </Page>
+                    <Page id="be3d1228-900d-4e84-9a5f-eb62ca22473b" code="be3d1228-900d-4e84-9a5f-eb62ca22473b" name="销售单据查询" shortName="" displayName="销售单据查询" description="" title="销售单据查询" uri="Cust.FJGX.SOInfoQuery" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="c3ac3b48-ed1b-49ec-a0ad-57ae5c498140" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>721ccaf1-6c72-4eef-b0ef-907e30cd1e88</Part>
+                                </Parts>
+                            </Column>
+                            <Column id="bbfadd21-6446-42d9-b5bf-6f47564687db" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>3e24d936-5847-4588-a97f-4dfeb04d972c</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="721ccaf1-6c72-4eef-b0ef-907e30cd1e88" code="721ccaf1-6c72-4eef-b0ef-907e30cd1e88" name="主表" shortName="主表" displayName="主表" description="主表" title="主表" bindedFormID="5453aa45-ff1e-479f-8597-455061a92232" bindedFormName="SOHeadInfoDQryUIFormWebPart" height="504" width="700" />
+                            <Part id="3e24d936-5847-4588-a97f-4dfeb04d972c" code="3e24d936-5847-4588-a97f-4dfeb04d972c" name="子表" shortName="子表" displayName="子表" description="子表" title="子表" bindedFormID="e75902f2-1bd0-4b3f-88b1-5e8e2a95b5d4" bindedFormName="SOLineInfoDQryUIFormWebPart" height="504" width="700" />
+                        </Parts>
+                        <PartRelations>
+                            <PartRelation providerID="721ccaf1-6c72-4eef-b0ef-907e30cd1e88" consumerID="3e24d936-5847-4588-a97f-4dfeb04d972c">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                        </PartRelations>
+                        <Parameters />
+                    </Page>
+                    <Page id="72c33965-5c45-498d-9765-41b851c963a9" code="72c33965-5c45-498d-9765-41b851c963a9" name="供应商快速查询" shortName="" displayName="供应商快速查询" description="" title="供应商快速查询" uri="Cust.FJGX.SupplierQueryURI" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="bcd26371-8fdb-4aec-aa9a-1742563e8f92" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>40777eb8-b904-4057-b93a-69e23b46b3a3</Part>
+                                    <Part>cc2478b2-fd75-4f6b-a483-eab6296a5d83</Part>
+                                </Parts>
+                            </Column>
+                            <Column id="5580a721-b5bb-4e14-9c6b-f7419cee9e01" code="" name="" shortName="" displayName="" description="" widthProportion="50" heightProportion="0" title="" IsMainRegion="False">
+                                <Parts>
+                                    <Part>cf96bf05-1f3f-400b-aad4-91dee12e786e</Part>
+                                    <Part>52d5cec3-8595-43df-9c32-074997bde3c7</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="40777eb8-b904-4057-b93a-69e23b46b3a3" code="40777eb8-b904-4057-b93a-69e23b46b3a3" name="供应商信息" shortName="供应商信息" displayName="供应商信息" description="供应商信息" title="供应商信息" bindedFormID="a0836bfa-12ba-4e66-871c-2964d8df8a43" bindedFormName="SupplierDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="cc2478b2-fd75-4f6b-a483-eab6296a5d83" code="cc2478b2-fd75-4f6b-a483-eab6296a5d83" name="往来凭证" shortName="往来凭证" displayName="往来凭证" description="往来凭证" title="往来凭证" bindedFormID="823342da-6c12-4574-b762-4d59a1937f16" bindedFormName="SuppplierVoucherDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="cf96bf05-1f3f-400b-aad4-91dee12e786e" code="cf96bf05-1f3f-400b-aad4-91dee12e786e" name="入库单据" shortName="入库单据" displayName="入库单据" description="入库单据" title="入库单据" bindedFormID="5cc7ff9c-c51f-4e92-b8cf-48b0dfa80aef" bindedFormName="SupplierDocListDQryUIFormWebPart" height="250" width="700" />
+                            <Part id="52d5cec3-8595-43df-9c32-074997bde3c7" code="52d5cec3-8595-43df-9c32-074997bde3c7" name="入库记录" shortName="入库记录" displayName="入库记录" description="入库记录" title="入库记录" bindedFormID="9b56f165-8ab1-4d8f-b89d-4108fb4ddd75" bindedFormName="SupplierDocLineListDQryUIFormWebPart" height="250" width="700" />
+                        </Parts>
+                        <PartRelations>
+                            <PartRelation providerID="40777eb8-b904-4057-b93a-69e23b46b3a3" consumerID="cf96bf05-1f3f-400b-aad4-91dee12e786e">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                            <PartRelation providerID="40777eb8-b904-4057-b93a-69e23b46b3a3" consumerID="cc2478b2-fd75-4f6b-a483-eab6296a5d83">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                            <PartRelation providerID="cf96bf05-1f3f-400b-aad4-91dee12e786e" consumerID="52d5cec3-8595-43df-9c32-074997bde3c7">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter1" />
+                                </FieldMaps>
+                            </PartRelation>
+                        </PartRelations>
+                        <Parameters />
+                    </Page>
+                    <Page id="0cd19ecd-57c3-4354-8ea1-b8cf90343983" code="0cd19ecd-57c3-4354-8ea1-b8cf90343983" name="入库单据查询" shortName="" displayName="入库单据查询" description="" title="入库单据查询" uri="Cust.FJGX.RcvInfoQuery" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="ba38c6b4-58ec-4515-b47c-ac15b4c55891" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>cf149608-3715-46cb-8e0b-04140717e349</Part>
+                                    <Part>07adaad4-3c00-4a0b-8215-58d8594a6b33</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="cf149608-3715-46cb-8e0b-04140717e349" code="cf149608-3715-46cb-8e0b-04140717e349" name="入库单据" shortName="入库单据" displayName="入库单据" description="入库单据" title="入库单据" bindedFormID="3190b0ea-dc0f-4e8f-b3e6-01a2d7a829dd" bindedFormName="RcvHeadDQryUIFormWebPart" height="250" width="992" />
+                            <Part id="07adaad4-3c00-4a0b-8215-58d8594a6b33" code="07adaad4-3c00-4a0b-8215-58d8594a6b33" name="入库记录" shortName="入库记录" displayName="入库记录" description="入库记录" title="入库记录" bindedFormID="55a9fc45-fc6d-4f31-94b9-96f2a09c6ae4" bindedFormName="RcvLineDQryUIFormWebPart" height="250" width="992" />
+                        </Parts>
+                        <PartRelations>
+                            <PartRelation providerID="cf149608-3715-46cb-8e0b-04140717e349" consumerID="07adaad4-3c00-4a0b-8215-58d8594a6b33">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter0" />
+                                </FieldMaps>
+                            </PartRelation>
+                        </PartRelations>
+                        <Parameters />
+                    </Page>
+                    <Page id="ff1bb27b-8328-43a5-a088-841963c9bc20" code="ff1bb27b-8328-43a5-a088-841963c9bc20" name="业绩查询" shortName="" displayName="业绩查询" description="" title="业绩查询" uri="Cust.FJGX.AchievementQuery" topMargine="10" bottomMargine="10" leftMargine="10" rightMargine="10" columnSpace="10" orientation="Vertical" defaultEntity="">
+                        <Columns>
+                            <Column id="80fb1abe-09d0-457b-9138-f61fcdb4a6bd" code="" name="" shortName="" displayName="" description="" widthProportion="100" heightProportion="0" title="" IsMainRegion="True">
+                                <Parts>
+                                    <Part>34df0713-c0ba-47bd-9103-13cf96eeb1a4</Part>
+                                    <Part>e2df2ba4-c719-40c1-8b9c-0f6ee6c56c27</Part>
+                                </Parts>
+                            </Column>
+                        </Columns>
+                        <Parts>
+                            <Part id="34df0713-c0ba-47bd-9103-13cf96eeb1a4" code="34df0713-c0ba-47bd-9103-13cf96eeb1a4" name="业绩统计表" shortName="业绩统计表" displayName="业绩统计表" description="业绩统计表" title="业绩统计表" bindedFormID="f78a8f53-f297-4a53-91bd-0ba5905e933c" bindedFormName="AchievementSumDQryUIFormWebPart" height="250" width="992" />
+                            <Part id="e2df2ba4-c719-40c1-8b9c-0f6ee6c56c27" code="e2df2ba4-c719-40c1-8b9c-0f6ee6c56c27" name="业绩明细表" shortName="业绩明细表" displayName="业绩明细表" description="业绩明细表" title="业绩明细表" bindedFormID="0c9f5649-4ff8-4403-a75f-ed297c80d8b0" bindedFormName="AchievementDetailDQryUIFormWebPart" height="250" width="992" />
+                        </Parts>
+                        <PartRelations>
+                            <PartRelation providerID="34df0713-c0ba-47bd-9103-13cf96eeb1a4" consumerID="e2df2ba4-c719-40c1-8b9c-0f6ee6c56c27">
+                                <FieldMaps>
+                                    <FieldMap providerFieldID="@Provider_Para0" consumerFieldID="@Parameter1" />
+                                </FieldMaps>
+                            </PartRelation>
+                        </PartRelations>
+                        <Parameters />
+                    </Page>
+                </Pages>
+                <BEComponents>
+                    <BEComponent assemblyName="UFIDA.U9.Cust.FJGX.OperatorsDailyBE.dll" assemblyID="f37b22f3-fc8c-483d-a3cb-f93bc1c38e99" />
+                </BEComponents>
+                <BPComponents>
+                    <BPComponent assemblyName="UFIDA.U9.Cust.FJGX.CustomerQueryBP.dll" assemblyID="72b94328-ebc0-4981-b998-c80c743dc8d5" />
+                    <BPComponent assemblyName="UFIDA.U9.Cust.FJGX.InvInfoQueryBP.dll" assemblyID="02faa32c-526c-4704-955a-4188240e4a28" />
+                    <BPComponent assemblyName="UFIDA.U9.Cust.FJGX.SOInfoQueryBP.dll" assemblyID="1b6d2178-38e2-4a94-bbec-77512b30f3ab" />
+                    <BPComponent assemblyName="UFIDA.U9.Cust.FJGX.SupplierQueryBP.dll" assemblyID="e1f42014-2d10-4bd6-84d3-27b33bb4e708" />
+                    <BPComponent assemblyName="UIFIA.U9.Cust.FJGX.RcvInfoQueryBP.dll" assemblyID="86839503-d815-4f28-8189-0690539d16fb" />
+                    <BPComponent assemblyName="UFIDA.U9.Cust.FJGX.AchievementQueryBP.dll" assemblyID="c051c491-9cad-4ad7-a7a4-bfd8d21615e4" />
+                </BPComponents>
+                <ServiceComponents />
+                <UIComponents>
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.CustomerQueryUI.WebPart.dll" assemblyID="d76c29bf-0ca6-4b70-8306-ba743464191b" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.InvInfoQueryUI.WebPart.dll" assemblyID="19e177c2-4788-43e3-a57b-3a32ca259e0a" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.SOInfoQueryUI.WebPart.dll" assemblyID="e792b2c9-542c-44b8-b6d0-df9e7127ad47" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.SupplierQueryUI.WebPart.dll" assemblyID="17eaf860-cebd-4afc-a953-e0a9df4787f2" />
+                    <UIComponent assemblyName="UIFIA.U9.Cust.FJGX.RcvInfoQueryUI.WebPart.dll" assemblyID="82d4fd75-85c3-490b-878c-b383b9d7de75" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.AchievementQueryUI.WebPart.dll" assemblyID="57139c1d-9f15-4a40-ab02-2efb93f77222" />
+                    <UIComponent assemblyName="UFIDA.U9.Cust.FJGX.OperatorsDailyUI.WebPart.dll" assemblyID="d311a5dc-231e-4f9d-8583-b0b6f947e16f" />
+                </UIComponents>
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu>
+                    <Menu id="b999694a-9b7d-48d7-b01a-d446185fac97" code="b999694a-9b7d-48d7-b01a-d446185fac97" name="快速查询" shortName="new menu" displayName="快速查询" description="new menu" image="" isDialog="False" pageURI="" pageParameter="" sequence="0" kind="Task" theApp="">
+                        <Menu id="30116095-9641-48ab-bcff-118570a1926e" code="30116095-9641-48ab-bcff-118570a1926e" name="客户快速查询" shortName="new menu" displayName="客户快速查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.CustomerQueryURI" pageParameter="" sequence="0" kind="Task" theApp="" />
+                        <Menu id="9e0dc701-4d93-414e-b3d5-3719330d86ab" code="9e0dc701-4d93-414e-b3d5-3719330d86ab" name="库存快速查询" shortName="new menu" displayName="库存快速查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.InvInfoQuery" pageParameter="" sequence="1" kind="Task" theApp="" />
+                        <Menu id="b5b0b1e1-7171-4dc7-9b07-63be3bbfc564" code="b5b0b1e1-7171-4dc7-9b07-63be3bbfc564" name="销售单据查询" shortName="new menu" displayName="销售单据查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.SOInfoQuery" pageParameter="" sequence="2" kind="Task" theApp="" />
+                        <Menu id="b4b0791d-5aaf-4e95-9728-c4286320b371" code="b4b0791d-5aaf-4e95-9728-c4286320b371" name="供应商快速查询" shortName="new menu" displayName="供应商快速查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.SupplierQueryURI" pageParameter="" sequence="3" kind="Task" theApp="" />
+                        <Menu id="48c3d2ec-ad11-4e84-ad51-aac0f257196d" code="48c3d2ec-ad11-4e84-ad51-aac0f257196d" name="入库单据查询" shortName="new menu" displayName="入库单据查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.RcvInfoQuery" pageParameter="" sequence="4" kind="Task" theApp="" />
+                        <Menu id="ede3824e-400a-4b53-9347-d321f89c6efc" code="ede3824e-400a-4b53-9347-d321f89c6efc" name="业绩查询" shortName="new menu" displayName="业绩查询" description="new menu" image="" isDialog="False" pageURI="Cust.FJGX.AchievementQuery" pageParameter="" sequence="5" kind="Task" theApp="" />
+                    </Menu>
+                </PrePlacedMenu>
+            </App>
+        </App>
+        <App id="3001" code="02" shortName="FI" name="财务" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3002" code="0201" shortName="GL" name="总账" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3003" code="0202" shortName="AR" name="应收管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3004" code="0203" shortName="AP" name="应付管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3005" code="0204" shortName="NM" name="票据管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3006" code="0205" shortName="TI" name="税务发票" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3007" code="0206" shortName="CM" name="现金银行" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3008" code="0207" shortName="CFP" name="现金流监控" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3009" code="0208" shortName="FA" name="固定资产" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3010" code="0209" shortName="ER" name="费用报销" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3201" code="0210" shortName="GC" name="全球合并" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3202" code="0211" shortName="RET" name="关系企业交易" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3203" code="0212" shortName="FN" name="资金结算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3301" code="0213" shortName="TB" name="全面预算" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3011" code="03" shortName="HR" name="人力资源" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3041" code="0301" shortName="HM" name="人事管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3034" code="0302" shortName="PA" name="薪资管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3035" code="0303" shortName="BEN" name="福利保险" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3012" code="05" shortName="SCM" name="供应链" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3015" code="0503" shortName="SD" name="销售管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3016" code="0504" shortName="PM" name="采购管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3017" code="0505" shortName="INV" name="库存管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3081" code="0508" shortName="DM" name="分销渠道" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3020" code="06" shortName="MFG" name="生产制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3021" code="0601" shortName="BOM" name="工程数据" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3023" code="0603" shortName="CRP" name="细能力" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3024" code="0604" shortName="ECN" name="工程变更" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3025" code="0605" shortName="MO" name="生产管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3027" code="0607" shortName="SFC" name="车间管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3028" code="0608" shortName="MRP" name="需求计划" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3030" code="0610" shortName="MOOS" name="可视化排程" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3060" code="07" shortName="QC" name="质量管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3061" code="0701" shortName="QC" name="质量管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3031" code="09" shortName="COST" name="成本管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3032" code="0901" shortName="CA" name="成本会计" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3033" code="0902" shortName="IC" name="料品成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3050" code="10" shortName="SP" name="自助门户" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3051" code="1001" shortName="CP" name="客户门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3052" code="1002" shortName="VP" name="供应商门户" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3100" code="11" shortName="SM" name="系统管理" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3101" code="1101" shortName="SM" name="系统管理" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3070" code="12" shortName="CS" name="协同" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3071" code="1201" shortName="CS" name="协同" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+        <App id="3401" code="13" shortName="ETO" name="项目制造" uri="">
+            <Pages />
+            <BEComponents />
+            <BPComponents />
+            <ServiceComponents />
+            <UIComponents />
+            <WorkflowComponents />
+            <ReportComponents />
+            <PrePlacedMenu />
+            <App id="3402" code="1301" shortName="PMM" name="项目计划控制" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+            <App id="3403" code="1302" shortName="CBS" name="项目成本" uri="">
+                <Pages />
+                <BEComponents />
+                <BPComponents />
+                <ServiceComponents />
+                <UIComponents />
+                <WorkflowComponents />
+                <ReportComponents />
+                <PrePlacedMenu />
+            </App>
+        </App>
+    </Apps>
+</AppPackage>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>8.0.40301</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9287D990-157F-4D55-8666-049ED3732C82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>UFIDA.U9.Cust.XMJL.SV</RootNamespace>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>UFIDA.U9.Cust.XMJL.SV</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="UFIDA.U9.Cust.XMJL.SV.target" />
+  <PropertyGroup>
+    <PostBuildEvent />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UFIDA.U9.AP.APBE, Version=25.5401.1149.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AP.APBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AP.APBE.Deploy, Version=25.5401.972.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AP.APBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AP.APBP, Version=25.5401.1132.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AP.APBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AP.APBP.Agent, Version=25.5401.420.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AP.APBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AP.APBP.Deploy, Version=25.5401.420.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AP.APBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AR.ARBE">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AR.ARBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AR.ARBE.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AR.ARBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AR.ARBP">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AR.ARBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AR.ARBP.Agent">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AR.ARBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.AR.ARBP.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.AR.ARBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBP, Version=25.5401.8473.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBP.Agent, Version=25.5401.8473.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.Base.BaseBP.Deploy, Version=25.5401.8473.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.Base.BaseBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.FIBE, Version=25.5401.1210.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.FIBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.FIBE.Deploy, Version=25.5401.8377.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.FIBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.FIBP">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.FIBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.FIBP.Agent, Version=25.5401.1210.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.FIBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.FIBP.Deploy, Version=25.5401.1210.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.FIBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.SCMBE, Version=25.5401.1077.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.SCMBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.SCMBE.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.SCMBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.CBO.SCMBP, Version=25.5401.4580.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.CBO.SCMBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLBE">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLBE.Deploy, Version=25.5401.5519.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLBP">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLBP.Agent">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLBP.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLReportSrv">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLReportSrv.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLReportSrv.Agent, Version=21.5200.666.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLReportSrv.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.GL.GLReportSrv.Deploy, Version=21.5200.666.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.GL.GLReportSrv.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.InvTrans.InvTransBE, Version=25.5401.1194.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.InvTrans.InvTransBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.InvTrans.InvTransBE.Deploy, Version=25.5401.1194.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.InvTrans.InvTransBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.ISV.PM.PMISV">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.ISV.PM.PMISV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMAAIQry">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMAAIQry.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMAAIQry.Agent">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMAAIQry.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMAAIQry.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMAAIQry.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMBP, Version=25.5401.1176.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMBP.Agent, Version=25.5401.9055.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMBP.Deploy, Version=25.5401.9055.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMBP.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMSV, Version=25.5401.5883.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMSV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMSV.Agent, Version=25.5401.7849.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMSV.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.PM.PMSV.Deploy, Version=25.5401.5267.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.PM.PMSV.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SM.SMBE">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SM.SMBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SM.SMBE.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SM.SMBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SM.SMBP">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SM.SMBP.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SM.SMSV">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SM.SMSV.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SPR.SPRBE">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SPR.SPRBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.SPR.SPRBE.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.SPR.SPRBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.TI.TIBE">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.TI.TIBE.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.TI.TIBE.Deploy">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.TI.TIBE.Deploy.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U9.TI.TIBP.Agent">
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\Libs\UFIDA.U9.TI.TIBP.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Sys.Database, Version=25.5401.8193.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\bin\UFSoft.UBF.Sys.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.DataAccess, Version=25.5401.14300.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\yonyou\U9V50\Portal\ApplicationServer\bin\UFSoft.UBF.Util.DataAccess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

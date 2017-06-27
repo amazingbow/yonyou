@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="ee459fa4-b481-434f-9d88-9030e842d65c" name="AchievementDetailQuery" displayName="AchievementDetailQuery" description="" help="" QueryType="DTOQuery" QueryURI="8721a8f8-d2e9-4bde-a572-3bcb69e4c700" QuerySourceFullName="UFIDA.U9.Cust.FJGX.AchievementDetailQryBP.AchievementDetailQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="118168c3-1e43-4e33-83ec-003e003fabda" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="cba21d99-afb9-415b-a5b5-6ab772cdd4e8" name="AchievementDetail" displayName="AchievementDetail" description="" help="" ProjectID="" ProjectPath="" BPItemID="8b9416e7-3e47-408c-9022-49875407f2a7" BPOperationID="238fa976-57a2-486c-917c-e590e704f512" DTOID="c3f37160-8c97-4238-b643-e6a5160acca0" BPAgentDll="UFIDA.U9.Cust.FJGX.AchievementQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.AchievementDetailQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="cbeb4e32-fe22-4ce3-9d26-318478764d32" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="b2e15cb4-4569-46d7-96b1-92e077d09716" UIFormItemID="b32e99e6-51bc-4c14-9202-dfade309240e" UIModelID="c9f7c83a-a4d9-4718-bfed-76a626fa755b" />
+  <FilterDefines>
+    <FilterDefine id="136c207a-2694-4a3d-8f0b-cdf6bc0fb4dc" name="RecDate" displayName="RecDate" description="" help="" ParentName="" Alias="RecDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="f28f0af4-9f33-4a0f-b2ab-84d1930f8866" name="RecDate" displayName="RecDate" description="" help="" ParentName="" Alias="RecDate" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="Date" Point="2" />
+    <ColumnDefine id="af4afa1f-89d9-4bec-97f0-3e3726fd721b" name="RecTotalMoney" displayName="RecTotalMoney" description="" help="" ParentName="" Alias="RecTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="5dba5e87-e630-4a14-9d46-8d6f1ae9a08b" name="RecDate" displayName="收款日期" description="" help="" />
+      <BasicFilter id="1eb93dcc-433b-4483-b367-7e492d36b381" name="RecDocNo" displayName="收款单号" description="" help="" />
+      <BasicFilter id="d0b49ca9-dc44-484f-9858-4276e660810e" name="CustomerCode" displayName="客户编码" description="" help="" />
+      <BasicFilter id="7d646ef9-ae5a-4feb-a546-17857b2ce6fb" name="CustomerName" displayName="客户名称" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="ebb93e70-60a9-4be7-9af0-c8daddb17670" name="RecDate" displayName="收款日期" description="" help="" />
+      <Column id="e71ac562-5e9a-4545-9f11-8bd06a84fcb7" name="RecDocNo" displayName="收款单号" description="" help="" />
+      <Column id="b02a2b93-511e-47c4-b804-b29d5a789ce5" name="CustomerCode" displayName="客户编码" description="" help="" />
+      <Column id="e3062ad0-8a90-493f-aa38-60a39aed0aca" name="CustomerName" displayName="客户名称" description="" help="" />
+      <Column id="4c1eb4a2-2203-44cf-b31b-5968d6fcfb2d" name="OperatorsCode" displayName="业务员编码" description="" help="" />
+      <Column id="82b64f43-7238-4425-835f-0a3cd4e1d6ae" name="OperatorsName" displayName="业务员" description="" help="" />
+      <Column id="e2a3461d-d21a-491e-b086-911462ceae1b" name="RecTotalMoney" displayName="收款金额" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="a56eac7b-3683-482b-ae39-8aa352c6522d" name="RecDate" displayName="" description="" help="" SortType="DESC" />
+      <Sort id="1896c531-13a9-4930-8a9c-1d49d9e022bb" name="RecDocNo" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

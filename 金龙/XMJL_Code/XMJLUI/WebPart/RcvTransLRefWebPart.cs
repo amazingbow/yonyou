@@ -1,0 +1,627 @@
+﻿
+
+
+using System;
+using System.Text;
+using System.Collections;
+using System.Xml;
+using System.Data;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Resources;
+using System.Reflection;
+using System.Globalization;
+using System.Threading;
+
+using Telerik.WebControls;
+using UFSoft.UBF.UI.WebControls;
+using UFSoft.UBF.UI.WebControls.InterActionComponenet;
+using UFSoft.UBF.Util.Log;
+using UFSoft.UBF.Util.Context;
+
+//using MagicAjax.UI.Controls;
+using UFSoft.UBF.Report.UI.ReportView.Web;
+using UFSoft.UBF.UI.WebControlAdapter;
+using UFSoft.UBF.UI.FormProcess;
+using UFSoft.UBF.UI.IView;
+using UFSoft.UBF.UI.Engine;
+using UFSoft.UBF.UI.Engine.Builder;
+using UFSoft.UBF.UI.Engine.Authorization;
+using UFSoft.UBF.UI.MD.Runtime;
+using UFSoft.UBF.UI.ActionProcess;
+using UFSoft.UBF.UI.ControlModel;
+using UFSoft.UBF.UI.Controls;
+using UFSoft.UBF.UI.WebControls.Association;
+using UFSoft.UBF.UI.WebControls.ClientCallBack;
+using System.Web.UI;
+using UFSoft.UBF.UI.UIFormPersonalization;
+using System.Collections.Specialized;
+
+
+/***********************************************************************************************
+ * Form ID:ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e 
+ * Form Name:RcvTransLRef
+ * UIFactory Auto Generator
+ ***********************************************************************************************/
+namespace RcvTransLRef
+{
+	[FormRegister("UFIDA.U9.Cust.XMJL.UI","RcvTransLRef.RcvTransLRefWebPart", "UFIDA.U9.Cust.XMJL.UI.WebPart", "ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e","WebPart", "False", 580, 408)] 
+	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.XMJL.UI', 'RcvTransLRef.RcvTransLRefWebPart', 'UFIDA.U9.Cust.XMJL.UI.WebPart', 'ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e')
+	///<siteMapNode url="~/erp/simple.aspx?lnk=ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e" title="RcvTransLRef"/>
+    public partial class RcvTransLRefWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
+    {
+		#region Page Controller/Code Behind
+        private static readonly ILogger logger = LoggerManager.GetLogger(typeof(RcvTransLRefWebPart));
+        private string assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;
+        //private string displayNamePostfix = "displayName";
+
+		#region 强类型化基类属性.
+		public new RcvTransLRefAction Action
+		{
+			get { return (RcvTransLRefAction)base.Action; }
+			set { base.Action = value; }
+		}
+		RcvTransLRefModel _uimodel=null;
+		public new RcvTransLRefModel Model
+		{
+			get 
+			{
+			     if(_uimodel == null){
+			          _uimodel = new RcvTransLRefModel();
+			     }
+			     return _uimodel; 
+			}
+			set { _uimodel = value; }
+		}
+        protected override IUIModel UIModel{
+            get{
+                return this.Model;
+            }
+            set{
+                this.Model = value as RcvTransLRefModel;
+            }
+        }
+		#endregion 
+		public FormAdjust adjust;
+        #region variable declaration
+        IUFCard Card4;
+        IUFLabel Label0;
+        IUFFldDropDownList SelectList;
+        IUFWizardControl WizardControl0;
+        IUFLabel lblContinueCheckBox;
+        IUFFldCheckBox ContinueCheckBox;
+        IUFButton FindButton;
+        IUFFldCheckBox CheckBox;
+        IUFCard Card6;
+        IUFCard CardForRefQueryCase;
+        IUFButton QryButton;
+        IUFLabel lbCase;
+        IUFFldDropDownList DDLCase;
+        IUFCard Card1;
+        IUFButton ConfirmButton;
+        IUFButton CancelButton;
+        IUFDataGrid DataGrid;
+        IUFRadioBoxList MatchTypeRadioBoxList;
+		UpdatePanel updatePanel;
+		HiddenField wpFindID;
+		IUFContainer topLevelPanel;     
+        IUFSeparator SeparatorInFavorites;
+        IUFButton BtnDefaultValues;
+        #endregion
+        
+        #region constructor
+        public RcvTransLRefWebPart()
+        {
+            FormID = "ee4c9f0e-064a-492e-ac15-ec1e7e0ac87e";
+            IsAutoSize = bool.Parse("False");
+        }
+        #endregion
+
+
+	
+            
+	//获取档案版型结果: 
+
+        #region eventBind and databind
+        private void EventBind()
+        {
+			//事件绑定模板
+				//Button控件事件
+			this.FindButton.Click += new EventHandler(FindButton_Click);		
+						
+				//Button控件事件
+			this.QryButton.Click += new EventHandler(QryButton_Click);		
+						
+							
+				//Button控件事件
+			this.ConfirmButton.Click += new EventHandler(ConfirmButton_Click);		
+						
+				//Button控件事件
+			this.CancelButton.Click += new EventHandler(CancelButton_Click);		
+						
+				//Grid控件事件
+			
+			((UFWebDataGridAdapter)this.DataGrid).RowDoubleClick += new GridRowDBClickedDelegate(DataGrid_GridRowDbClicked);
+			//((UFWebDataGridAdapter)this.DataGrid).DBClickAutoPostBack = true;
+						
+
+	
+			//Grid控件的分页事件				
+			((UFWebDataGridAdapter)this.DataGrid).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid_GridMakePageEventHandler);
+             //Grid控件的客户化筛选，定位事件
+            ((UFWebDataGridAdapter)this.DataGrid).GridCustomFilterHandler += new GridCustomFilterDelegate(UFGridDataGrid_GridCustomFilterHandler);
+
+            AfterEventBind();
+        }
+        #endregion            
+        
+		#region override method
+		protected override void OnLoad(EventArgs e)
+		{
+			base.OnLoad2(e);
+		}
+		protected override void OnLoadDataDo(EventArgs e)
+		{
+		    adjust.ProcessAdjustBeforeOnLoad(this);
+			if (UIEngineHelper.IsDataBind(PageStatus, this))
+			{
+				if(this.Model==null){				        
+					this.Model = new RcvTransLRefModel();
+				}
+				OnLoadConsumer(new InParameterModel[]{},new InParameterModel[]{});
+				OnLoadData(this);
+				this.IsDataBinding = true ; //加载完数据要绑定一次.目前加这.
+			}
+			else
+			{
+				if(this.UseQueryCase){
+					UFIDA.UBF.Query.CommonService.RefQueryHelper.AfterOnLoad_Qry_DefaultImpl(this.Action);
+				}
+				//去除.已经移入到OnInit()中.
+				//this.Model = (RcvTransLRefModel)this.CurrentState[this.TaskId.ToString()];
+			}
+			adjust.ProcessAdjustAfterOnLoadData(this);
+		            AfterOnLoad();
+            
+            adjust.ProcessAdjustAfterOnLoad(this);
+		}
+		protected override void OnPreRender(EventArgs e)
+		{
+			base.OnPreRender2(e);
+		}
+        protected override void OnPreRenderDo(EventArgs e)
+        {
+            adjust.ProcessAdjustBeforeOnPreRender(this);
+			base.OnPreRender(e);
+			this.CurrentState[this.TaskId.ToString()] = this.Model;
+			RegisterClearWebPartPadding();
+            UFIDA.U9.UI.PDHelper.FormAuthorityHelper.SetWebPartAuthorization(this);
+            
+			if (IsDataBinding) //2006-9-7 可由开发人员控制
+			{
+				BeforeUIModelBinding();
+										
+				UFIDA.U9.UI.PDHelper.CommonReferenceHelper.LocateRecordFromFocusID(this, this.DataGrid);
+				if(!Page.IsPostBack)
+				{
+					EnumTypeBinding.BindEnumControls(this);
+				}
+				UFIDA.U9.UI.Commands.CommandHelper.BindFlexData(this);
+				adjust.ProcessAdjustBeforeDataBinding(this);
+				if (this.IsOnlyDataBinding)
+				{
+					this.DataBinding();
+				}
+				adjust.ProcessAdjustAfterDataBinding(this);
+			    if(this.UseQueryCase){
+					UFIDA.UBF.Query.CommonService.RefQueryHelper.AfterUIModelBinding_Qry_DefaultImpl(this.Action);
+				}
+				AfterUIModelBinding();
+			}
+			adjust.ProcessAdjustAfterOnPreRender(this);
+        }
+		protected override void OnInit(EventArgs e)
+		{
+			base.OnInit2(e);
+		}
+		protected override void OnInitDo(EventArgs e)
+		{			 
+			this.Page.InitComplete += new EventHandler(Page_InitComplete);
+			WebPartBuilder.InitWebPart(this);
+            this.Action = new RcvTransLRefAction(this);
+            adjust = new FormAdjust();
+		    CreateFormChildControls();
+                DialogNoPersonalization = true;
+		        if(!UseQueryCase){
+		            CardForRefQueryCase.Visible=false;
+		            UFGrid sortGrid = this.GetUFControlByName(this.TopLevelContainer, "DataGrid") as UFGrid;
+                    if (sortGrid != null)
+                        sortGrid.ShowCustomFilterToolBar = false;
+		        }
+		        else
+                {
+                    UFIDA.UBF.Query.CommonService.RefQueryHelper.AfterCreateChildControls_Qry_DefaultImpl(this.Action);
+                    UFIDA.U9.UI.PDHelper.PDFormMessage.ShowQryDialogForReference(this,this.QryButton);
+                }
+		}
+        void Page_InitComplete(object sender, EventArgs e)
+        {
+
+            adjust.ProcessInit(this);
+        }
+        #endregion
+
+      
+        
+        #endregion
+
+	
+		/// <summary>
+        /// WebPart View
+        /// </summary>
+        #region view Create Contorls
+        private void CreateFormChildControls()
+        {
+            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"RcvTransLRef",true,580,408);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 4, 0, 5, 10, 5, 10, 5);
+			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_panel, 5,new GridColumnDef[]{new GridColumnDef(560,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(318,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+            //???还有用么?
+            topLevelPanel = _panel;    
+            
+            UIControlBuilder.BuildCommonControls(this,ref updatePanel,ref wpFindID);
+            
+
+
+
+
+
+	
+			_BuilderControl_Card4(_panel);
+
+		
+			UIControlBuilder.BuilderUFControl(this.Card4, "1");		
+
+
+	
+			_BuilderControl_Card6(_panel);
+
+		
+			UIControlBuilder.BuilderUFControl(this.Card6, "0");		
+
+
+	
+			_BuilderControl_DataGrid(_panel);
+
+		
+			UIControlBuilder.BuilderUFControl(this.DataGrid, "2");		
+
+
+	
+			_BuilderControl_MatchTypeRadioBoxList(_panel);
+
+		
+			UIControlBuilder.BuilderUFControl(this.MatchTypeRadioBoxList, "6");		
+
+
+
+				
+     
+			
+			
+            EventBind();
+            AfterCreateChildControls();
+            
+			((UFWebButtonAdapter)ConfirmButton).IsDefaultButton = true;
+        }        
+
+
+
+
+
+
+
+	                   
+        private IUFCard _BuilderControl_Card4(IUFContainer container)
+        {
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "1","","df4193f9-c8c9-4002-bb83-41da805d2e5c");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 0, 0, 0, 0, 0);
+			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 0,new GridColumnDef[]{new GridColumnDef(45,bool.Parse("False")),new GridColumnDef(5,bool.Parse("False")),new GridColumnDef(120,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(180,bool.Parse("False")),new GridColumnDef(15,bool.Parse("False")),new GridColumnDef(80,bool.Parse("False")),new GridColumnDef(5,bool.Parse("False")),new GridColumnDef(30,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(60,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+            this.Card4 = _UFCard;
+
+            ///foreach UFCard下的所有控件，增加到此容器
+
+
+
+
+
+				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 45, 20, 0, 0, 1, 1, "100","9bf97f14-74b9-4a4f-b2fc-d5bfb9c95e3a","079fc0b1-0948-45cc-acd0-5815f7a612fe");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.Label0, "0");		
+
+
+		        this.SelectList = UIControlBuilder.BuilderDropDownList(_UFCard, "SelectList", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "100",true,false,"","","5cd65797-5231-4651-b929-b5b34dcf71c4");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SelectList, "False", "", null, null, "");
+			EnumControlsMap.Add(this.SelectList, _UFCard);
+		
+
+		
+			UIControlBuilder.BuilderUFControl(this.SelectList, "1");		
+		 
+
+	
+			_BuilderControl_WizardControl0(_UFCard);
+
+		
+			UIControlBuilder.BuilderUFControl(this.WizardControl0, "2");		
+
+
+				this.lblContinueCheckBox = UIControlBuilder.BuilderUFLabel(_UFCard, "lblContinueCheckBox", "", "False", "True", "Right", 80, 20, 6, 0, 1, 1, "100","0aead14b-b05a-4582-9aca-34da4f4bf7a0","02804610-3bef-4f74-bac4-406122eac417");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblContinueCheckBox, "3");		
+
+
+				this.ContinueCheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "ContinueCheckBox", false, true, "Left", 60, 0, 30, 20, 8, 0, 1, 1, "100",true,"lblContinueCheckBox","","697ad35c-10a9-4603-91d3-a399ab455f6b");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ContinueCheckBox, "False", "", null, null, "");
+		
+
+		
+			UIControlBuilder.BuilderUFControl(this.ContinueCheckBox, "4");		
+		 
+
+				this.FindButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "FindButton", true, true, 60, 20, 10, 0, 1, 1, "100","R", this.Model.ElementID,"",false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","8cc5f747-ec43-4feb-9c05-5080b95ac546");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.FindButton, "4");		
+
+
+				this.CheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "CheckBox", false, true, "Left", 60, 0, 30, 20, 0, 0, 1, 1, "100",false,"","","d4653675-81ae-46f2-a14c-a30c562e076e");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CheckBox, "False", "", null, null, "");
+		
+
+		
+			UIControlBuilder.BuilderUFControl(this.CheckBox, "5");		
+		 
+
+
+							
+
+            
+            container.Controls.Add(_UFCard);
+            return _UFCard;
+        }
+
+		    private void _BuilderControl_WizardControl0(IUFContainer container)
+        {
+            IUFWizardControl _UFWizard = new UFWebWizardControlAdapter();
+            _UFWizard.ID = "WizardControl0";
+			UIControlBuilder.BuilderUFControl(_UFWizard, "True", "True", "2");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFWizard, 180, 20, 4, 0, 1, 1, "100");
+
+            ///foreach _UFWizard下的所有控件，增加到此容器
+            
+            this.WizardControl0 = _UFWizard;
+    		_UFWizard.SetWizardPageVisible(0);
+            container.Controls.Add(_UFWizard);
+        }
+
+	                   
+        private IUFCard _BuilderControl_Card6(IUFContainer container)
+        {
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"FunctionBar", true, true, "0","","6c027ceb-e11a-4450-98f8-6a92dec4e828");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 3, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
+			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 0,new GridColumnDef[]{new GridColumnDef(360,bool.Parse("False")),new GridColumnDef(30,bool.Parse("False")),new GridColumnDef(170,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+            this.Card6 = _UFCard;
+
+            ///foreach UFCard下的所有控件，增加到此容器
+
+
+
+
+
+	
+			_BuilderControl_CardForRefQueryCase(_UFCard);
+
+		
+			UIControlBuilder.BuilderUFControl(this.CardForRefQueryCase, "0");		
+
+
+	
+			_BuilderControl_Card1(_UFCard);
+
+		
+			UIControlBuilder.BuilderUFControl(this.Card1, "0");		
+
+
+
+		
+
+            
+            container.Controls.Add(_UFCard);
+            return _UFCard;
+        }
+
+	                   
+        private IUFCard _BuilderControl_CardForRefQueryCase(IUFContainer container)
+        {
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"CardForRefQueryCase",false,"none", true, true, "0","","9af8fb7b-631c-476c-8d66-ccd008d43c00");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 360, 20, 0, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 6, 1, 0, 0, 0, 0, 0, 0);
+			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 0,new GridColumnDef[]{new GridColumnDef(80,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(80,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(150,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+            this.CardForRefQueryCase = _UFCard;
+
+            ///foreach UFCard下的所有控件，增加到此容器
+
+
+
+
+
+				this.QryButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "QryButton", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"",false,"3664768b-36ca-44ab-9583-8d85fb432e43","3664768b-36ca-44ab-9583-8d85fb432e43","63f1a487-b357-4fb1-89b7-7cbe6542aa8d");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.QryButton, "1");		
+
+
+				this.lbCase = UIControlBuilder.BuilderUFLabel(_UFCard, "lbCase", "", "True", "True", "Right", 80, 20, 3, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","c2e0ad0b-95f8-447d-b91e-8cb3530ae242");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lbCase, "1");		
+
+
+		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 150, 20, 5, 0, 1, 1, "100",true,false,"","","35e127e9-c034-4d10-82e9-9d5a7cd0604e");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DDLCase, "False", "", null, null, "");
+			EnumControlsMap.Add(this.DDLCase, _UFCard);
+			this.DDLCase.ContentChanged += new EventHandler(DDLCase_TextChanged);
+			this.DDLCase.AutoPostBack = true;
+		
+
+		
+			UIControlBuilder.BuilderUFControl(this.DDLCase, "2");		
+		 
+
+
+			
+
+            
+            container.Controls.Add(_UFCard);
+            return _UFCard;
+        }
+
+	                   
+        private IUFCard _BuilderControl_Card1(IUFContainer container)
+        {
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card1",false,"none", true, true, "0","","7c6cc3d3-81b3-4dd4-9ddc-4ac3dc518c90");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 170, 20, 2, 0, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
+			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 0,new GridColumnDef[]{new GridColumnDef(80,bool.Parse("False")),new GridColumnDef(10,bool.Parse("False")),new GridColumnDef(80,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+            this.Card1 = _UFCard;
+
+            ///foreach UFCard下的所有控件，增加到此容器
+
+
+
+
+
+				this.ConfirmButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "ConfirmButton", true, true, 80, 20, 0, 0, 1, 1, "100","O", this.Model.ElementID,"",false,"626ebf9b-f65a-4dd5-8f32-96f84919878c","626ebf9b-f65a-4dd5-8f32-96f84919878c","556075b8-4ec5-40bb-a39a-b638ac74ccac");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.ConfirmButton, "3");		
+
+
+				this.CancelButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "CancelButton", true, true, 80, 20, 2, 0, 1, 1, "100","C", this.Model.ElementID,"",false,"020a5365-8f12-4970-b8df-17ce3ae60a68","020a5365-8f12-4970-b8df-17ce3ae60a68","44278156-0e9d-4d36-8e43-c373a8501052");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.CancelButton, "4");		
+
+
+
+		
+
+            
+            container.Controls.Add(_UFCard);
+            return _UFCard;
+        }
+
+				
+
+
+
+
+
+       
+        private void _BuilderControl_DataGrid(IUFContainer container)
+        {
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid", UFSoft.UBF.UI.ControlModel.EditStatus.Browse, true, true,true,true,true,true,13,false, false) ;
+  			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "2");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 560, 318, 0, 2, 1, 1, "100");
+			InitViewBindingContainer(this, _UFGrid,  this.Model.cRef, "cRef", "", null, 13, "库存杂收单行");
+			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
+			_UFGrid.AllowSelectAllPage=false;
+			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
+		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
+            this.DataGrid = _UFGrid;
+            container.Controls.Add(_UFGrid);
+
+
+
+			IUFDataGridColumn column ;
+			GridColumn gridColumn ;
+	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID0","NumberColumnModel", "", 0,this.Model.cRef.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, true, 7, 80, "8",true, false,"","506875e6-b38e-4c1a-879a-c40f6bb0a29c","506875e6-b38e-4c1a-879a-c40f6bb0a29c","3cf45ac1-7aee-4657-960f-58fc89c75f7f");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.FixedPoint, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+	
+    if (this.UseQueryCase && UFIDA.UBF.Query.CommonService.RefQueryHelper.QueryCaseExist(this.Action, null))
+    {
+            return;
+    }
+	 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DocLineNo0","NumberColumnModel", "", 0,this.Model.cRef.Fields["DocLineNo"]/*DocLineNo*/,"DocLineNo", false, true, true, false, false, true, 2, 80, "10",true, false,"","e69d826a-75d9-436b-822a-14540b057842","e69d826a-75d9-436b-822a-14540b057842","e75ab8da-7f3c-413a-8b4e-e830c2d7dd28");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.FixedPoint, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemInfo_ItemCode0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["ItemInfo_ItemCode"]/*ItemInfo_ItemCode*/,"ItemInfo_ItemCode", false, true, true, false, false, true, 0, 255, "5",true, false,"","3766d274-8608-4730-b182-4a3e4e120264","3766d274-8608-4730-b182-4a3e4e120264","b5d3b604-36f2-4893-a773-4ffc3a8afe32");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemInfo_ItemName0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["ItemInfo_ItemName"]/*ItemInfo_ItemName*/,"ItemInfo_ItemName", false, true, true, false, false, true, 0, 255, "5",true, false,"","c13987cb-3f3e-4b91-90da-0db460c63052","c13987cb-3f3e-4b91-90da-0db460c63052","d494d700-fbca-4b65-87b0-a8ec2c9b9122");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"MiscRcvTrans_DocNo0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["MiscRcvTrans_DocNo"]/*MiscRcvTrans_DocNo*/,"MiscRcvTrans_DocNo", false, true, true, false, false, true, 0, 80, "5",true, false,"","195fb109-6bd5-4207-badf-044abda613e2","195fb109-6bd5-4207-badf-044abda613e2","a4701a4d-103f-43b1-89c7-9780ad69ef37");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
+	  
+		 
+        }
+
+	        private void _BuilderControl_MatchTypeRadioBoxList(IUFContainer container)
+        {
+            IUFRadioBoxList _UFListControl = UIControlBuilder.BuildRadioBoxList(container,"MatchTypeRadioBoxList",true,true,"6",0,4,UFSoft.UBF.UI.ControlModel.LineOrientation.Horizontal);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFListControl, 560, 20, 0, 1, 1, 1, "100");
+            this.MatchTypeRadioBoxList = _UFListControl;
+            ///foreach CheckBoxList和RadioBoxList下的所有子项
+            ListItem listItem = null ;
+            listItem = UIControlBuilder.BuildListItem(container,"0", true,false,"130bc338-9958-4133-9b7f-9c185bc2455a","b0a4509e-59a1-4da3-9c24-444383172cf1");
+            _UFListControl.Items.Add(listItem);
+            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"49790074-95af-497d-ae37-16bb697f3ce6","0d201039-37e4-42b6-9f26-6dc338c221f2");
+            _UFListControl.Items.Add(listItem);
+            listItem = UIControlBuilder.BuildListItem(container,"2", true,true,"517d6f15-ca0d-4e3b-aa58-3c85a5b2ae66","43618b23-560e-4bab-9ec7-6b0abbe0eaac");
+            _UFListControl.Items.Add(listItem);
+            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"ea7795fe-8961-4c3f-8ed1-b5128be2cd75","800ca72a-fdd9-481c-afa6-04a8a3aa7a09");
+            _UFListControl.Items.Add(listItem);
+        }
+
+
+
+
+		#endregion
+		
+
+	}
+}

@@ -1,0 +1,2549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.AP.APSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.AP.APBill.APAccrueResultDTOData">
+            <summary>
+            应付立账结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APAccrueResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APAccrueResultDTOData.#ctor(System.Int64,System.String,System.Int64,System.Collections.Generic.List{UFIDA.U9.AP.APBill.APAccrueResultLineDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultDTOData.m_aPBillHeadID">
+            <summary>
+            应付单ID
+            应付立账结果DTO.Misc.应付单ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultDTOData.m_aPBillNum">
+            <summary>
+            应付单号
+            应付立账结果DTO.Misc.应付单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultDTOData.m_aPBillSysVersion">
+            <summary>
+            应付单SysVersion
+            应付立账结果DTO.Misc.应付单SysVersion
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultDTOData.m_aPAccrueResultLineDTO">
+            <summary>
+            应付立账行结果DTO
+            应付立账结果DTO.Misc.应付立账行结果DTO
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData">
+            <summary>
+            应付立账行结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.#ctor(System.Int64,System.Collections.Generic.List{System.Int64},UFIDA.U9.AP.APBill.APAccrueResultDTOData,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.m_aPBillLineID">
+            <summary>
+            应付单行ID
+            应付立账行结果DTO.Misc.应付单行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.m_aPInstalmentID">
+            <summary>
+            应付分期行ID
+            应付立账行结果DTO.Misc.应付分期行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.m_aPAccrueResultDTO">
+            <summary>
+            应付立账结果DTO
+            应付立账行结果DTO.Misc.应付立账结果DTO
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APAccrueResultLineDTOData.m_lineNum">
+            <summary>
+            应付单行号
+            应付立账行结果DTO.Misc.应付单行号
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData">
+            <summary>
+            待核销金额 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData.#ctor(System.Decimal,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData.m_sumTotalMoney">
+            <summary>
+            总金额
+            待核销金额.Misc.总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData.m_enjoyedDiscount">
+            <summary>
+            已享受折扣
+            待核销金额.Misc.已享受折扣
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.ComingApplyMoneyInfoDTOData.m_dataTag">
+            <summary>
+            数据标识
+            待核销金额.Misc.数据标识
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData">
+            <summary>
+            可使用预付款查询DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.#ctor(UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.Base.DTOs.MoneyData,UFIDA.U9.Base.DTOs.MoneyData,System.String,System.String,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.String,System.String,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.Int64,System.DateTime,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.Base.Currency.CurrencyData,UFIDA.U9.Base.Currency.CurrencyData,UFIDA.U9.Base.DTOs.MoneyData,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_preDoc">
+            <summary>
+            预付款单据
+            可使用预付款查询DTO.Misc.预付款单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_preLine">
+            <summary>
+            预付款行
+            可使用预付款查询DTO.Misc.预付款行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_payAmount">
+            <summary>
+            预付款金额
+            可使用预付款查询DTO.Misc.预付款金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_availableAmount">
+            <summary>
+            可使用金额
+            可使用预付款查询DTO.Misc.可使用金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_docType">
+            <summary>
+            单据类型
+            可使用预付款查询DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_docEnum">
+            <summary>
+            单据类型枚举
+            可使用预付款查询DTO.Misc.单据类型枚举
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_supp">
+            <summary>
+            供应商
+            可使用预付款查询DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_suppSite">
+            <summary>
+            供应商位置
+            可使用预付款查询DTO.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_payObjType">
+            <summary>
+            付款对象
+            可使用预付款查询DTO.Misc.付款对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_docStatus">
+            <summary>
+            状态
+            可使用预付款查询DTO.Misc.状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_currency">
+            <summary>
+            币种
+            可使用预付款查询DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_sysVersion">
+            <summary>
+            应付单据版本
+            可使用预付款查询DTO.Misc.应付单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_payDate">
+            <summary>
+            付款日期
+            可使用预付款查询DTO.Misc.付款日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_pC">
+            <summary>
+            付款币种
+            可使用预付款查询DTO.Misc.付款币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_aPDoc">
+            <summary>
+            应付单
+            可使用预付款查询DTO.Misc.应付单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_aPDocLine">
+            <summary>
+            应付单行
+            可使用预付款查询DTO.Misc.应付单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_currencyData">
+            <summary>
+            币种数据
+            可使用预付款查询DTO.Misc.币种数据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_pCData">
+            <summary>
+            付款币种数据
+            可使用预付款查询DTO.Misc.付款币种数据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_pCPayAmount">
+            <summary>
+            付款币种总金额
+            可使用预付款查询DTO.Misc.付款币种总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.m_isPeriodBegin">
+            <summary>
+            是否期初预付
+            可使用预付款查询DTO.Misc.是否期初预付
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.SuppID_SKey">
+            <summary>
+            供应商ID 序列化Key属性。（传递跨组织序列列字段）
+            可使用预付款查询DTO.Misc.供应商ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.SuppID">
+            <summary>
+            供应商ID
+            可使用预付款查询DTO.Misc.供应商ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.SuppSiteID_SKey">
+            <summary>
+            供应商位置ID 序列化Key属性。（传递跨组织序列列字段）
+            可使用预付款查询DTO.Misc.供应商位置ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.CanUsePrePayQueryDTOData.SuppSiteID">
+            <summary>
+            供应商位置ID
+            可使用预付款查询DTO.Misc.供应商位置ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData">
+            <summary>
+            更新付款单行到帐信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.#ctor(System.Int64,System.Boolean,System.Int64,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.m_payLineID">
+            <summary>
+            付款单行ID
+            更新付款单行到帐信息.Misc.付款单行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.m_isReached">
+            <summary>
+            是否到帐
+            更新付款单行到帐信息.Misc.是否到帐
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.m_srcBillID">
+            <summary>
+            来源单据ID
+            更新付款单行到帐信息.Misc.来源单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.m_reachDate">
+            <summary>
+            到账日期
+            更新付款单行到帐信息.Misc.到账日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayLineReachInfoDTOData.m_cPLine">
+            <summary>
+            委托付款行
+            更新付款单行到帐信息.Misc.委托付款行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData">
+            <summary>
+            更新付款单票据线索DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.m_payBillID">
+            <summary>
+            单据标识
+            更新付款单票据线索DTO.Misc.单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.m_payLineID">
+            <summary>
+            单据行标识
+            更新付款单票据线索DTO.Misc.单据行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.m_noteID">
+            <summary>
+            票据标识
+            更新付款单票据线索DTO.Misc.票据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.m_noteNum">
+            <summary>
+            票据编号
+            更新付款单票据线索DTO.Misc.票据编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PaymentSV.UpdatePayBillNoteClueDTOData.m_srcBillVersion">
+            <summary>
+            来源单据版本
+            更新付款单票据线索DTO.Misc.来源单据版本
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException">
+            <summary>
+            异常类型: 预付款挪用检查异常
+            
+             预付款挪用检查异常,物料行可挪用金额[${CanUseMoney}]小于要挪用金额[${UseMoney}] 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预付款挪用检查异常 Constructor
+            </summary>
+            <param name="canUseMoney">可挪用金额</param>
+            <param name="useMoney">挪用金额</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 预付款挪用检查异常 Constructor
+            </summary>
+            <param name="canUseMoney">可挪用金额</param>
+            <param name="useMoney">挪用金额</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 预付款挪用检查异常 Constructor
+            </summary>
+            <param name="canUseMoney">可挪用金额</param>
+            <param name="useMoney">挪用金额</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException.CanUseMoney">
+            <summary>
+            可挪用金额
+            预付款挪用检查异常.Misc.可挪用金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.Exceptions.PrePayUseException.UseMoney">
+            <summary>
+            挪用金额
+            预付款挪用检查异常.Misc.挪用金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.Exceptions.CanotReferenceDeleltedException">
+            <summary>
+            异常类型: 是否被别人删除异常
+            
+             引用的${AttrName}已经不存在,请检查是否被别人删除
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.CanotReferenceDeleltedException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 是否被别人删除异常 Constructor
+            </summary>
+            <param name="attrName">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.CanotReferenceDeleltedException.#ctor(System.String)">
+            <summary>
+            异常类型: 是否被别人删除异常 Constructor
+            </summary>
+            <param name="attrName">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.CanotReferenceDeleltedException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 是否被别人删除异常 Constructor
+            </summary>
+            <param name="attrName">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AP.PaymentSV.Exceptions.CanotReferenceDeleltedException.AttrName">
+            <summary>
+            属性
+            是否被别人删除异常.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AP.PaymentSV.Exceptions.NeedAPBillDataTagException">
+            <summary>
+            异常类型: 参数错误，应传入应付单数据标识。异常
+            
+             参数错误，应传入应付单数据标识。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.NeedAPBillDataTagException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 参数错误，应传入应付单数据标识。异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.NeedAPBillDataTagException.#ctor">
+            <summary>
+            异常类型: 参数错误，应传入应付单数据标识。异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PaymentSV.Exceptions.NeedAPBillDataTagException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 参数错误，应传入应付单数据标识。异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.APMatch.MatchStateOfLineDTOData">
+            <summary>
+            单据行的匹配状态 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.MatchStateOfLineDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.MatchStateOfLineDTOData.#ctor(System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APMatch.MatchStateOfLineDTOData.m_lineID">
+            <summary>
+            行ID
+            单据行的匹配状态.Misc.行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APMatch.MatchStateOfLineDTOData.m_hasMatchLine">
+            <summary>
+            是否有匹配记录
+            单据行的匹配状态.Misc.是否有匹配记录
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APMatch.Exceptions.ErrorException_SearchInfoError">
+            <summary>
+            异常类型: 查询错误异常
+            
+             查询错误
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ErrorException_SearchInfoError.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 查询错误异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ErrorException_SearchInfoError.#ctor">
+            <summary>
+            异常类型: 查询错误异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ErrorException_SearchInfoError.#ctor(System.Exception)">
+            <summary>
+            异常类型: 查询错误异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.APMatch.Exceptions.ExistException_BillLineExistFeeApportation">
+            <summary>
+            异常类型: 单据行已有费用分摊记录或费用匹配异常
+            
+             单据行已有费用分摊或费用匹配记录
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ExistException_BillLineExistFeeApportation.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 单据行已有费用分摊记录或费用匹配异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ExistException_BillLineExistFeeApportation.#ctor">
+            <summary>
+            异常类型: 单据行已有费用分摊记录或费用匹配异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APMatch.Exceptions.ExistException_BillLineExistFeeApportation.#ctor(System.Exception)">
+            <summary>
+            异常类型: 单据行已有费用分摊记录或费用匹配异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForFASV.Exceptions.NoSelectedSrcBillException">
+            <summary>
+            异常类型: 没有选择来源单据异常
+            
+             没有选择来源单据
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.NoSelectedSrcBillException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有选择来源单据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.NoSelectedSrcBillException.#ctor">
+            <summary>
+            异常类型: 没有选择来源单据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.NoSelectedSrcBillException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有选择来源单据异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForFASV.Exceptions.AmountOverException">
+            <summary>
+            异常类型: 本次建卡数量已超过未分配资产数量异常
+            
+             本次建卡数量已超过${APDoc}的未分配资产数量
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.AmountOverException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 本次建卡数量已超过未分配资产数量异常 Constructor
+            </summary>
+            <param name="aPDoc">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.AmountOverException.#ctor(System.String)">
+            <summary>
+            异常类型: 本次建卡数量已超过未分配资产数量异常 Constructor
+            </summary>
+            <param name="aPDoc">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.AmountOverException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 本次建卡数量已超过未分配资产数量异常 Constructor
+            </summary>
+            <param name="aPDoc">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AP.ForFASV.Exceptions.AmountOverException.APDoc">
+            <summary>
+            属性
+            本次建卡数量已超过未分配资产数量异常.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForFASV.Exceptions.APBillIsModifiedException">
+            <summary>
+            异常类型: 应付单已经被修改不能建卡,请重新加载数据异常
+            
+             应付单已经被修改不能建卡,请重新加载数据
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.APBillIsModifiedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 应付单已经被修改不能建卡,请重新加载数据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.APBillIsModifiedException.#ctor">
+            <summary>
+            异常类型: 应付单已经被修改不能建卡,请重新加载数据异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForFASV.Exceptions.APBillIsModifiedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 应付单已经被修改不能建卡,请重新加载数据异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData">
+            <summary>
+            发票最新采购价 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Boolean,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Boolean,System.DateTime,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_org">
+            <summary>
+            核算组织
+            发票最新采购价.Misc.核算组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_aC">
+            <summary>
+            核算币种
+            发票最新采购价.Misc.核算币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_supplier">
+            <summary>
+            供应商
+            发票最新采购价.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_supplierSite">
+            <summary>
+            供应商Site
+            发票最新采购价.Misc.供应商Site
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_item">
+            <summary>
+            物料
+            发票最新采购价.Misc.物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_isContainTax">
+            <summary>
+            价格是否含税
+            发票最新采购价.Misc.价格是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_uom">
+            <summary>
+            单位
+            发票最新采购价.Misc.单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_price">
+            <summary>
+            含税单价
+            发票最新采购价.Misc.含税单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_nonTaxPrice">
+            <summary>
+            未税单价
+            发票最新采购价.Misc.未税单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_project">
+            <summary>
+            项目
+            发票最新采购价.Misc.项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_isControlProject">
+            <summary>
+            是否控制项目
+            发票最新采购价.Misc.是否控制项目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_bizDate">
+            <summary>
+            业务日期
+            发票最新采购价.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.InvoiceLastestPriceDTOData.m_createDate">
+            <summary>
+            创建日期
+            发票最新采购价.Misc.创建日期
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.LastPriceCondsDTOData">
+            <summary>
+            发票最新价取数条件DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_fromItemCode">
+            <summary>
+            物料编码from
+            发票最新价取数条件DTO.Misc.物料编码from
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_toItemCode">
+            <summary>
+            物料编码to
+            发票最新价取数条件DTO.Misc.物料编码to
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_fromItemVersion">
+            <summary>
+            物料版本from
+            发票最新价取数条件DTO.Misc.物料版本from
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_toItemVersion">
+            <summary>
+            物料版本to
+            发票最新价取数条件DTO.Misc.物料版本to
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_fromItemElement">
+            <summary>
+            物料成本from
+            发票最新价取数条件DTO.Misc.物料成本from
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_toItemElement">
+            <summary>
+            物料成本to
+            发票最新价取数条件DTO.Misc.物料成本to
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_fromItemGrade">
+            <summary>
+            物料等级from
+            发票最新价取数条件DTO.Misc.物料等级from
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_toItemGrade">
+            <summary>
+            物料等级to
+            发票最新价取数条件DTO.Misc.物料等级to
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI1">
+            <summary>
+            自由项1
+            发票最新价取数条件DTO.Misc.自由项1
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI2">
+            <summary>
+            自由项2
+            发票最新价取数条件DTO.Misc.自由项2
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI3">
+            <summary>
+            自由项3
+            发票最新价取数条件DTO.Misc.自由项3
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI4">
+            <summary>
+            自由项4
+            发票最新价取数条件DTO.Misc.自由项4
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI5">
+            <summary>
+            自由项5
+            发票最新价取数条件DTO.Misc.自由项5
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI6">
+            <summary>
+            自由项6
+            发票最新价取数条件DTO.Misc.自由项6
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI7">
+            <summary>
+            自由项7
+            发票最新价取数条件DTO.Misc.自由项7
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI8">
+            <summary>
+            自由项8
+            发票最新价取数条件DTO.Misc.自由项8
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI9">
+            <summary>
+            自由项9
+            发票最新价取数条件DTO.Misc.自由项9
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.m_uDI10">
+            <summary>
+            自由项10
+            发票最新价取数条件DTO.Misc.自由项10
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            发票最新价取数条件DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.OrgKey">
+            <summary>
+            组织
+            发票最新价取数条件DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.SupplierKey_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            发票最新价取数条件DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LastPriceCondsDTOData.SupplierKey">
+            <summary>
+            供应商
+            发票最新价取数条件DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.PeriodBeginInfoDTOData">
+            <summary>
+            是否期初DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.PeriodBeginInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.PeriodBeginInfoDTOData.#ctor(System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.PeriodBeginInfoDTOData.m_aPBillHeadID">
+            <summary>
+            应付单ID
+            是否期初DTO.Misc.应付单ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.PeriodBeginInfoDTOData.m_isPeriodBegin">
+            <summary>
+            期初
+            是否期初DTO.Misc.期初
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.LockUnLockDTOData">
+            <summary>
+            锁定解锁DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LockUnLockDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LockUnLockDTOData.#ctor(System.Int64,System.Boolean,System.Int32,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LockUnLockDTOData.m_isLock">
+            <summary>
+            是否锁定
+            锁定解锁DTO.Misc.是否锁定
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LockUnLockDTOData.m_lockType">
+            <summary>
+            锁定类型
+            锁定解锁DTO.Misc.锁定类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LockUnLockDTOData.m_oCMoney">
+            <summary>
+            锁定解锁金额
+            锁定解锁DTO.Misc.锁定解锁金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LockUnLockDTOData.m_headSysVersion">
+            <summary>
+            单头版本
+            锁定解锁DTO.Misc.单头版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LockUnLockDTOData.InstalKey_SKey">
+            <summary>
+            分期行Key 序列化Key属性。（传递跨组织序列列字段）
+            锁定解锁DTO.Misc.分期行Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LockUnLockDTOData.InstalKey">
+            <summary>
+            分期行Key
+            锁定解锁DTO.Misc.分期行Key
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData">
+            <summary>
+            分期行冲减余额DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.#ctor(System.Int64,System.Int64,UFIDA.U9.CBO.FI.PropertyTypes.ARAPSingleCurrencyMoneyData,UFIDA.U9.CBO.FI.PropertyTypes.ARAPSingleCurrencyMoneyData,System.Decimal,System.Decimal,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_headSysVersion">
+            <summary>
+            单头版本
+            分期行冲减余额DTO.Misc.单头版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_oCDeltaMoney">
+            <summary>
+            原币冲减量
+            分期行冲减余额DTO.Misc.原币冲减量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_fCDeltaMoney">
+            <summary>
+            本币冲减量
+            分期行冲减余额DTO.Misc.本币冲减量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_pUDeltaAmount">
+            <summary>
+            计价单位冲减量
+            分期行冲减余额DTO.Misc.计价单位冲减量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_tBUDeltaAmount">
+            <summary>
+            交易基准冲减量
+            分期行冲减余额DTO.Misc.交易基准冲减量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.m_tUDeltaAmount">
+            <summary>
+            交易单位冲减量
+            分期行冲减余额DTO.Misc.交易单位冲减量
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.InstalKey_SKey">
+            <summary>
+            分期行Key 序列化Key属性。（传递跨组织序列列字段）
+            分期行冲减余额DTO.Misc.分期行Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.InstalKey">
+            <summary>
+            分期行Key
+            分期行冲减余额DTO.Misc.分期行Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.PostPeriodKey_SKey">
+            <summary>
+            处理单计账期间 序列化Key属性。（传递跨组织序列列字段）
+            分期行冲减余额DTO.Misc.处理单计账期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.APInstalSubBalanceDTOData.PostPeriodKey">
+            <summary>
+            处理单计账期间
+            分期行冲减余额DTO.Misc.处理单计账期间
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData">
+            <summary>
+            行调整折扣DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.#ctor(System.Int64,UFIDA.U9.CBO.FI.PropertyTypes.FAMoneyData,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.m_adjustEnjoyedDiscount">
+            <summary>
+            调增已享受折扣
+            行调整折扣DTO.Misc.调增已享受折扣
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.m_headSysVersion">
+            <summary>
+            单头版本
+            行调整折扣DTO.Misc.单头版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.LineKey_SKey">
+            <summary>
+            应付单行 序列化Key属性。（传递跨组织序列列字段）
+            行调整折扣DTO.Misc.应付单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APBill.LineAdjustDiscountDTOData.LineKey">
+            <summary>
+            应付单行
+            行调整折扣DTO.Misc.应付单行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APBill.ReWriteMatchSVResultDTOData">
+            <summary>
+            回写匹配服务结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.ReWriteMatchSVResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APBill.ReWriteMatchSVResultDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.AP.DTOs.AfterMatchSaveForUIDTOData},System.Collections.Generic.List{UFIDA.U9.AP.DTOs.AfterMatchSaveForUIDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.ReWriteMatchSVResultDTOData.m_holdAPBillLines">
+            <summary>
+            申请挂起应付单行集合
+            回写匹配服务结果DTO.Misc.申请挂起应付单行集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.APBill.ReWriteMatchSVResultDTOData.m_releaseAPBillLines">
+            <summary>
+            申请释放应付单行集合
+            回写匹配服务结果DTO.Misc.申请释放应付单行集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData">
+            <summary>
+            委托付款确认付款DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.#ctor(System.Int64,System.Int64,UFIDA.U9.AP.PayReqFundBP.ConfirmPayBillHeadDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.m_confrimPayHeadDTO">
+            <summary>
+            确认付款表头DTO
+            委托付款确认付款DTO.Misc.确认付款表头DTO
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.PayReqFundHead_SKey">
+            <summary>
+            付款请款单 序列化Key属性。（传递跨组织序列列字段）
+            委托付款确认付款DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.PayReqFundHead">
+            <summary>
+            付款请款单
+            委托付款确认付款DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.PayReqFundUse_SKey">
+            <summary>
+            付款请款用途行 序列化Key属性。（传递跨组织序列列字段）
+            委托付款确认付款DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayConfirmDTOData.PayReqFundUse">
+            <summary>
+            付款请款用途行
+            委托付款确认付款DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData">
+            <summary>
+            委托付款拒付DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.#ctor(System.Int64,System.Int64,System.String,System.DateTime,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.m_refuser">
+            <summary>
+            拒付人
+            委托付款拒付DTO.Misc.拒付人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.m_refuseTime">
+            <summary>
+            拒付时间
+            委托付款拒付DTO.Misc.拒付时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.m_refuseReason">
+            <summary>
+            拒付原因
+            委托付款拒付DTO.Misc.拒付原因
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.PayReqFundHead_SKey">
+            <summary>
+            付款请款单 序列化Key属性。（传递跨组织序列列字段）
+            委托付款拒付DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.PayReqFundHead">
+            <summary>
+            付款请款单
+            委托付款拒付DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.PayReqFundUse_SKey">
+            <summary>
+            付款请款用途行 序列化Key属性。（传递跨组织序列列字段）
+            委托付款拒付DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.ConsignPayRefuseDTOData.PayReqFundUse">
+            <summary>
+            付款请款用途行
+            委托付款拒付DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData">
+            <summary>
+            付款请款到账DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.#ctor(System.Int64,System.Int64,System.Boolean,System.DateTime,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.m_isReached">
+            <summary>
+            是否到账
+            付款请款到账DTO.Misc.是否到账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.m_reachTime">
+            <summary>
+            到账时间
+            付款请款到账DTO.Misc.到账时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.m_cPLine">
+            <summary>
+            委托付款单行标识
+            付款请款到账DTO.Misc.委托付款单行标识
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.PayReqFundHead_SKey">
+            <summary>
+            付款请款单 序列化Key属性。（传递跨组织序列列字段）
+            付款请款到账DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.PayReqFundHead">
+            <summary>
+            付款请款单
+            付款请款到账DTO.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.PayReqFundUse_SKey">
+            <summary>
+            付款请款用途行 序列化Key属性。（传递跨组织序列列字段）
+            付款请款到账DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.PayReqFundReachDTOData.PayReqFundUse">
+            <summary>
+            付款请款用途行
+            付款请款到账DTO.Misc.付款请款用途行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData">
+            <summary>
+            付款请款到账V2.1DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.m_cPLine">
+            <summary>
+            委托付款单行标识
+            付款请款到账V2.1DTO.Misc.委托付款单行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.m_isReached">
+            <summary>
+            是否到账
+            付款请款到账V2.1DTO.Misc.是否到账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.m_reachTime">
+            <summary>
+            到账时间
+            付款请款到账V2.1DTO.Misc.到账时间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.ConfirmHead_SKey">
+            <summary>
+            付款请款确认单 序列化Key属性。（传递跨组织序列列字段）
+            付款请款到账V2.1DTO.Misc.付款请款确认单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.ConfirmHead">
+            <summary>
+            付款请款确认单
+            付款请款到账V2.1DTO.Misc.付款请款确认单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.ConfirmUseLine_SKey">
+            <summary>
+            付款请款确认用途行 序列化Key属性。（传递跨组织序列列字段）
+            付款请款到账V2.1DTO.Misc.付款请款确认用途行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewPayReqFundReachDTOData.ConfirmUseLine">
+            <summary>
+            付款请款确认用途行
+            付款请款到账V2.1DTO.Misc.付款请款确认用途行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData">
+            <summary>
+            委托付款拒付V2.1DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.#ctor(System.Int64,System.Int64,System.String,System.DateTime,System.String,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.m_refuser">
+            <summary>
+            拒付人
+            委托付款拒付V2.1DTO.Misc.拒付人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.m_refuseTime">
+            <summary>
+            拒付时间
+            委托付款拒付V2.1DTO.Misc.拒付时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.m_refuseReason">
+            <summary>
+            拒付原因
+            委托付款拒付V2.1DTO.Misc.拒付原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.m_rejectPCMoney">
+            <summary>
+            拒付金额
+            委托付款拒付V2.1DTO.Misc.拒付金额
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.ConfirmHead_SKey">
+            <summary>
+            付款请款确认单 序列化Key属性。（传递跨组织序列列字段）
+            委托付款拒付V2.1DTO.Misc.付款请款确认单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.ConfirmHead">
+            <summary>
+            付款请款确认单
+            委托付款拒付V2.1DTO.Misc.付款请款确认单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.ConfirmUseLine_SKey">
+            <summary>
+            付款请款确认用途行 序列化Key属性。（传递跨组织序列列字段）
+            委托付款拒付V2.1DTO.Misc.付款请款确认用途行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.PayReqFundSV.NewConsignPayRefuseDTOData.ConfirmUseLine">
+            <summary>
+            付款请款确认用途行
+            委托付款拒付V2.1DTO.Misc.付款请款确认用途行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.Exceptions.SrcBillIsPayRequiredException">
+            <summary>
+            异常类型: 来源单据已请预付异常
+            
+             来源单据已请预付
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.SrcBillIsPayRequiredException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源单据已请预付异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.SrcBillIsPayRequiredException.#ctor">
+            <summary>
+            异常类型: 来源单据已请预付异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.SrcBillIsPayRequiredException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源单据已请预付异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.PayReqFundSV.Exceptions.ParamSetErrorException">
+            <summary>
+            异常类型: 参数错误
+            
+             参数错误
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.ParamSetErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 参数错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.ParamSetErrorException.#ctor">
+            <summary>
+            异常类型: 参数错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.PayReqFundSV.Exceptions.ParamSetErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 参数错误 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData">
+            <summary>
+            应付单据类型查询DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.#ctor(System.Int64,System.String,System.String,System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_iD">
+            <summary>
+            ID
+            应付单据类型查询DTO.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_code">
+            <summary>
+            编码
+            应付单据类型查询DTO.Misc.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_name">
+            <summary>
+            名称
+            应付单据类型查询DTO.Misc.名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_description">
+            <summary>
+            描述
+            应付单据类型查询DTO.Misc.描述
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_docHeaderSequenceStyle">
+            <summary>
+            编号方式
+            应付单据类型查询DTO.Misc.编号方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_isLike">
+            <summary>
+            是否模糊查询
+            应付单据类型查询DTO.Misc.是否模糊查询
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_isPayNote">
+            <summary>
+            是否是付票据
+            应付单据类型查询DTO.Misc.是否是付票据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.APDocTypeForNMDTOData.m_isRecNote">
+            <summary>
+            是否是收票据
+            应付单据类型查询DTO.Misc.是否是收票据
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData">
+            <summary>
+            查询付款单参数DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.String,System.String,System.Int64,System.String,System.String,System.Int64,System.Int64,System.Int32,System.Decimal,System.Decimal,System.String,System.Int64,System.String,System.String,System.String,System.Int32,System.String,System.String,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_aC">
+            <summary>
+            币种
+            查询付款单参数DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_sttlMethod">
+            <summary>
+            结算方式
+            查询付款单参数DTO.Misc.结算方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_cust">
+            <summary>
+            客户
+            查询付款单参数DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_cust_Code">
+            <summary>
+            客户
+            查询付款单参数DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_cust_Name">
+            <summary>
+            客户
+            查询付款单参数DTO.Misc.客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_supp">
+            <summary>
+            供应商
+            查询付款单参数DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_supp_Code">
+            <summary>
+            供应商
+            查询付款单参数DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_supp_Name">
+            <summary>
+            供应商
+            查询付款单参数DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_bank">
+            <summary>
+            银行
+            查询付款单参数DTO.Misc.银行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_bankAcc">
+            <summary>
+            银行账号
+            查询付款单参数DTO.Misc.银行账号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_exRateType">
+            <summary>
+            汇率类型
+            查询付款单参数DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_rate">
+            <summary>
+            汇率
+            查询付款单参数DTO.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_money">
+            <summary>
+            金额
+            查询付款单参数DTO.Misc.金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_childAccCode">
+            <summary>
+            子账号
+            查询付款单参数DTO.Misc.子账号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_childAcc">
+            <summary>
+            账号组合
+            查询付款单参数DTO.Misc.账号组合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_payDate">
+            <summary>
+            付款日期
+            查询付款单参数DTO.Misc.付款日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_payDocNo">
+            <summary>
+            付款单号
+            查询付款单参数DTO.Misc.付款单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_payDocType">
+            <summary>
+            付款单类型
+            查询付款单参数DTO.Misc.付款单类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_payType">
+            <summary>
+            付款性质
+            查询付款单参数DTO.Misc.付款性质
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_payer">
+            <summary>
+            付款员
+            查询付款单参数DTO.Misc.付款员
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_likeParam">
+            <summary>
+            过滤字段
+            查询付款单参数DTO.Misc.过滤字段
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_businessOrg">
+            <summary>
+            业务组织
+            查询付款单参数DTO.Misc.业务组织
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocParamDTOData.m_settlementOrg">
+            <summary>
+            结算组织
+            查询付款单参数DTO.Misc.结算组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData">
+            <summary>
+            查询付款单结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.#ctor(System.String,System.Int64,System.String,System.Int64,System.Int64,System.Int32,System.Decimal,System.Int64,System.String,System.String,System.Int64,System.String,System.String,System.Int64,System.Int64,System.Int32,System.Decimal,System.Int64,System.Int64,System.Int64,System.String,System.Int64,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.String,System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payDate">
+            <summary>
+            付款日期
+            查询付款单结果DTO.Misc.付款日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payID">
+            <summary>
+            付款单
+            查询付款单结果DTO.Misc.付款单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payDocNO">
+            <summary>
+            付款单号
+            查询付款单结果DTO.Misc.付款单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payDocType">
+            <summary>
+            付款单类型
+            查询付款单结果DTO.Misc.付款单类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aC">
+            <summary>
+            币种
+            查询付款单结果DTO.Misc.币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payType">
+            <summary>
+            付款性质
+            查询付款单结果DTO.Misc.付款性质
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payMoney">
+            <summary>
+            付款金额
+            查询付款单结果DTO.Misc.付款金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_suppSite">
+            <summary>
+            供应商位置
+            查询付款单结果DTO.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_suppSite_Code">
+            <summary>
+            供应商位置
+            查询付款单结果DTO.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_suppSite_Name">
+            <summary>
+            供应商位置
+            查询付款单结果DTO.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_supp">
+            <summary>
+            供应商
+            查询付款单结果DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_supp_Code">
+            <summary>
+            供应商
+            查询付款单结果DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_supp_Name">
+            <summary>
+            供应商
+            查询付款单结果DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payer">
+            <summary>
+            付款员
+            查询付款单结果DTO.Misc.付款员
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payLineID">
+            <summary>
+            行ID
+            查询付款单结果DTO.Misc.行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_exRateType">
+            <summary>
+            汇率类型
+            查询付款单结果DTO.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_rate">
+            <summary>
+            汇率
+            查询付款单结果DTO.Misc.汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bank">
+            <summary>
+            银行
+            查询付款单结果DTO.Misc.银行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bankAcc">
+            <summary>
+            账号
+            查询付款单结果DTO.Misc.账号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_childAcc">
+            <summary>
+            账号组合
+            查询付款单结果DTO.Misc.账号组合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_childAccCode">
+            <summary>
+            子账号
+            查询付款单结果DTO.Misc.子账号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_sttlMethod">
+            <summary>
+            结算方式
+            查询付款单结果DTO.Misc.结算方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_noteCode">
+            <summary>
+            票据号
+            查询付款单结果DTO.Misc.票据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_fee">
+            <summary>
+            费用
+            查询付款单结果DTO.Misc.费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payDocTypeCode">
+            <summary>
+            付款单类型Code
+            查询付款单结果DTO.Misc.付款单类型Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payDocTypeName">
+            <summary>
+            付款单类型Name
+            查询付款单结果DTO.Misc.付款单类型Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCCode">
+            <summary>
+            币种Code
+            查询付款单结果DTO.Misc.币种Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCName">
+            <summary>
+            币种Name
+            查询付款单结果DTO.Misc.币种Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payTypeName">
+            <summary>
+            付款性质Name
+            查询付款单结果DTO.Misc.付款性质Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payerCode">
+            <summary>
+            付款员Code
+            查询付款单结果DTO.Misc.付款员Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_payerName">
+            <summary>
+            付款员Name
+            查询付款单结果DTO.Misc.付款员Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_accPeriodName">
+            <summary>
+            期间Name
+            查询付款单结果DTO.Misc.期间Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_exRateTypeName">
+            <summary>
+            汇率类型Name
+            查询付款单结果DTO.Misc.汇率类型Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bankCode">
+            <summary>
+            银行Code
+            查询付款单结果DTO.Misc.银行Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bankName">
+            <summary>
+            银行Name
+            查询付款单结果DTO.Misc.银行Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bankAccCode">
+            <summary>
+            账号code
+            查询付款单结果DTO.Misc.账号code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_bankAccName">
+            <summary>
+            账号Name
+            查询付款单结果DTO.Misc.账号Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_sttlMethodCode">
+            <summary>
+            结算方式Code
+            查询付款单结果DTO.Misc.结算方式Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_sttlMethodName">
+            <summary>
+            结算方式Name
+            查询付款单结果DTO.Misc.结算方式Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_accPeriod">
+            <summary>
+            期间
+            查询付款单结果DTO.Misc.期间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCSymbol">
+            <summary>
+            币种Symbol
+            查询付款单结果DTO.Misc.币种Symbol
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCPrecision">
+            <summary>
+            币种Precision
+            查询付款单结果DTO.Misc.币种Precision
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCRoundType">
+            <summary>
+            币种RoundType
+            查询付款单结果DTO.Misc.币种RoundType
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_aCRoundValue">
+            <summary>
+            币种RoundValue
+            查询付款单结果DTO.Misc.币种RoundValue
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.QryPayDocResultDTOData.m_srcBillVersion">
+            <summary>
+            来源单据版本
+            查询付款单结果DTO.Misc.来源单据版本
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData">
+            <summary>
+            付款单线索DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.#ctor(UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.Collections.Generic.List{UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData},System.Boolean,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.m_headClue">
+            <summary>
+            付款单线索
+            付款单线索DTO.Misc.付款单线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.m_lineClues">
+            <summary>
+            行线索集合
+            付款单线索DTO.Misc.行线索集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.m_isMainBill">
+            <summary>
+            是否主单
+            付款单线索DTO.Misc.是否主单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.m_aAIMainEntity">
+            <summary>
+            AAI主单实体
+            付款单线索DTO.Misc.AAI主单实体
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillHeadClueDTOData.m_srcBillID">
+            <summary>
+            来源单据
+            付款单线索DTO.Misc.来源单据
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData">
+            <summary>
+            付款单行线索DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData.#ctor(UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData.m_lineCLue">
+            <summary>
+            行线索
+            付款单行线索DTO.Misc.行线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData.m_srcLineID">
+            <summary>
+            来源行ID
+            付款单行线索DTO.Misc.来源行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForNMSV.PayBillLineClueDTOData.m_srcSubLineID">
+            <summary>
+            来源子行ID
+            付款单行线索DTO.Misc.来源子行ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APReverseSV.Exceptions.CannotReverseThisPayBillException">
+            <summary>
+            异常类型: 不允许转回多行的付款单，如果需要整单转回，请到应付系统操作异常
+            
+             不允许转回多行的付款单，如果需要整单转回，请到应付系统操作
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APReverseSV.Exceptions.CannotReverseThisPayBillException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不允许转回多行的付款单，如果需要整单转回，请到应付系统操作异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APReverseSV.Exceptions.CannotReverseThisPayBillException.#ctor">
+            <summary>
+            异常类型: 不允许转回多行的付款单，如果需要整单转回，请到应付系统操作异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.APReverseSV.Exceptions.CannotReverseThisPayBillException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不允许转回多行的付款单，如果需要整单转回，请到应付系统操作异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppNotNullException">
+            <summary>
+            异常类型: 付款供应商非空异常
+            
+             付款供应商不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 付款供应商非空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppNotNullException.#ctor">
+            <summary>
+            异常类型: 付款供应商非空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 付款供应商非空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppSiteNotNullException">
+            <summary>
+            异常类型: 付款供应商位置非空异常
+            
+             付款供应商位置不能为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppSiteNotNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 付款供应商位置非空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppSiteNotNullException.#ctor">
+            <summary>
+            异常类型: 付款供应商位置非空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ARAPCounterApply.Exceptions.PaySuppSiteNotNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 付款供应商位置非空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData">
+            <summary>
+            采购单据查询预付款条件DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.#ctor(System.Int32,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.m_pMDocType">
+            <summary>
+            采购单据类型
+            采购单据查询预付款条件DTO.Misc.采购单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.m_pMDocTag">
+            <summary>
+            采购单据标识
+            采购单据查询预付款条件DTO.Misc.采购单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.m_pMDocLineTag">
+            <summary>
+            采购单据行标识
+            采购单据查询预付款条件DTO.Misc.采购单据行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData.m_isDispDetail">
+            <summary>
+            是否显示明细
+            采购单据查询预付款条件DTO.Misc.是否显示明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData">
+            <summary>
+            采购单据查询预付款结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.#ctor(UFIDA.U9.AP.ForPM.PuQueryPrePayCondtionDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.DateTime,System.Decimal,UFIDA.U9.CBO.FI.DTOs.DefaultACDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_puQueryPrePayCondtionDTO">
+            <summary>
+            查询预付款条件
+            采购单据查询预付款结果DTO.Misc.查询预付款条件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_payBillHead">
+            <summary>
+            付款单
+            采购单据查询预付款结果DTO.Misc.付款单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_payItemDetailLine">
+            <summary>
+            付款单物料明细
+            采购单据查询预付款结果DTO.Misc.付款单物料明细
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_aPBillHead">
+            <summary>
+            应付单
+            采购单据查询预付款结果DTO.Misc.应付单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_aPBillLine">
+            <summary>
+            应付单行
+            采购单据查询预付款结果DTO.Misc.应付单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_payDate">
+            <summary>
+            付款日期
+            采购单据查询预付款结果DTO.Misc.付款日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_payMoney">
+            <summary>
+            付款金额
+            采购单据查询预付款结果DTO.Misc.付款金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PuQueryPrePayResultDTOData.m_payACCur">
+            <summary>
+            核算币种DTO
+            采购单据查询预付款结果DTO.Misc.核算币种DTO
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData">
+            <summary>
+            采购单据联动更新预付款DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.#ctor(System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int32,System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_aPBillTag">
+            <summary>
+            应付单据标识
+            采购单据联动更新预付款DTO.Misc.应付单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_aPDataTag">
+            <summary>
+            应付数据标识
+            采购单据联动更新预付款DTO.Misc.应付数据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_itemInfo">
+            <summary>
+            物料信息
+            采购单据联动更新预付款DTO.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_pMDocType">
+            <summary>
+            采购单据类型
+            采购单据联动更新预付款DTO.Misc.采购单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_pMDocID">
+            <summary>
+            采购单据标识
+            采购单据联动更新预付款DTO.Misc.采购单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_pMLineID">
+            <summary>
+            采购单据行标识
+            采购单据联动更新预付款DTO.Misc.采购单据行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_payBillTag">
+            <summary>
+            付款单标识
+            采购单据联动更新预付款DTO.Misc.付款单标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.PMLinkageUpdatePreRecDTOData.m_payUseLineTag">
+            <summary>
+            付款用途行标识
+            采购单据联动更新预付款DTO.Misc.付款用途行标识
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData">
+            <summary>
+            预付明细查询结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.#ctor(UFIDA.U9.Base.DTOs.IDCodeNameDTOData,UFIDA.U9.Base.DTOs.IDCodeNameDTOData,System.DateTime,UFIDA.U9.Base.DTOs.IDCodeNameDTOData,UFIDA.U9.Base.Currency.CurrencyData,UFIDA.U9.Base.Currency.CurrencyData,UFIDA.U9.Base.DTOs.IDCodeNameDTOData,UFIDA.U9.Base.DTOs.IDCodeNameDTOData,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,UFIDA.U9.Base.DTOs.IDCodeNameDTOData,System.Int64,System.Int32,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_payDoc">
+            <summary>
+            付款单
+            预付明细查询结果DTO.Misc.付款单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_aPDoc">
+            <summary>
+            应付单
+            预付明细查询结果DTO.Misc.应付单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_payDate">
+            <summary>
+            付款日期
+            预付明细查询结果DTO.Misc.付款日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_docType">
+            <summary>
+            单据类型
+            预付明细查询结果DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_pC">
+            <summary>
+            付款币种
+            预付明细查询结果DTO.Misc.付款币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_aC">
+            <summary>
+            核算币种
+            预付明细查询结果DTO.Misc.核算币种
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_paySupp">
+            <summary>
+            付款供应商
+            预付明细查询结果DTO.Misc.付款供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_paySuppSite">
+            <summary>
+            付款供应商位置
+            预付明细查询结果DTO.Misc.付款供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_docState">
+            <summary>
+            单据状态
+            预付明细查询结果DTO.Misc.单据状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_lineNum">
+            <summary>
+            行号
+            预付明细查询结果DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_prePayMoney">
+            <summary>
+            预付金额
+            预付明细查询结果DTO.Misc.预付金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_executedMoney">
+            <summary>
+            已执行金额
+            预付明细查询结果DTO.Misc.已执行金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_exeCutingMoney">
+            <summary>
+            正在执行金额
+            预付明细查询结果DTO.Misc.正在执行金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_canDisposeMoney">
+            <summary>
+            可处理余额
+            预付明细查询结果DTO.Misc.可处理余额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_totalMoney">
+            <summary>
+            总金额
+            预付明细查询结果DTO.Misc.总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_srcBillLine">
+            <summary>
+            来源单据行标识
+            预付明细查询结果DTO.Misc.来源单据行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_itemInfo">
+            <summary>
+            料品信息
+            预付明细查询结果DTO.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_payProperty">
+            <summary>
+            收款性质
+            预付明细查询结果DTO.Misc.收款性质
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_lineID">
+            <summary>
+            来源行标识
+            预付明细查询结果DTO.Misc.来源行标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_aPDocBizType">
+            <summary>
+            应付单据类型
+            预付明细查询结果DTO.Misc.应付单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_sysVersion">
+            <summary>
+            版本号
+            预付明细查询结果DTO.Misc.版本号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.m_isPeriodBegin">
+            <summary>
+            是否期初预付
+            预付明细查询结果DTO.Misc.是否期初预付
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.PaySuppID_SKey">
+            <summary>
+            付款供应商ID 序列化Key属性。（传递跨组织序列列字段）
+            预付明细查询结果DTO.Misc.付款供应商ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.PaySuppID">
+            <summary>
+            付款供应商ID
+            预付明细查询结果DTO.Misc.付款供应商ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.PaySuppSiteID_SKey">
+            <summary>
+            付款供应商位置ID 序列化Key属性。（传递跨组织序列列字段）
+            预付明细查询结果DTO.Misc.付款供应商位置ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.ForPM.QueryPrePayDetailResultDTOData.PaySuppSiteID">
+            <summary>
+            付款供应商位置ID
+            预付明细查询结果DTO.Misc.付款供应商位置ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData">
+            <summary>
+            应付单物料价格信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.#ctor(System.String,System.Int64,System.DateTime,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.SCM.Supplier.SupplierMISCInfoData,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.String,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.CBO.FI_SCM.DTOs.CodeNameIDDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.PayReqUOMInfoDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CurrencyInfoDTOData,UFIDA.U9.CBO.FI_SCM.DTOs.CurrencyInfoDTOData,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_docNo">
+            <summary>
+            应付单单号
+            应付单物料价格信息DTO.Misc.应付单单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aPBillID">
+            <summary>
+            单据行ID
+            应付单物料价格信息DTO.Misc.单据行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aPBillDocDate">
+            <summary>
+            立账日期
+            应付单物料价格信息DTO.Misc.立账日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aPDocType">
+            <summary>
+            单据类型
+            应付单物料价格信息DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aPSupplier">
+            <summary>
+            供应商
+            应付单物料价格信息DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aPSupplierSite">
+            <summary>
+            供应商位置
+            应付单物料价格信息DTO.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_itemInfo">
+            <summary>
+            料品
+            应付单物料价格信息DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_itemSpec">
+            <summary>
+            料品规格
+            应付单物料价格信息DTO.Misc.料品规格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_itemMark">
+            <summary>
+            厂牌
+            应付单物料价格信息DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_pUAmount">
+            <summary>
+            数量
+            应付单物料价格信息DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_nonTaxPrice">
+            <summary>
+            未税单价
+            应付单物料价格信息DTO.Misc.未税单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_taxPrice">
+            <summary>
+            含税单价
+            应付单物料价格信息DTO.Misc.含税单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_taxSchedule">
+            <summary>
+            税组合
+            应付单物料价格信息DTO.Misc.税组合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_pUOM">
+            <summary>
+            计价单位
+            应付单物料价格信息DTO.Misc.计价单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_aC">
+            <summary>
+            核币
+            应付单物料价格信息DTO.Misc.核币
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_fC">
+            <summary>
+            本币
+            应付单物料价格信息DTO.Misc.本币
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AP.ForSCM.APItemPriceInfoDTOData.m_withTaxMoney">
+            <summary>
+            价税合计
+            应付单物料价格信息DTO.Misc.价税合计
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AP.APSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AP.APSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

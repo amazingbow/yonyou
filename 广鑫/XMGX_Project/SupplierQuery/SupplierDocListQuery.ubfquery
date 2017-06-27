@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="206dd4d6-13cb-4afc-bb3c-b6690c185103" name="SupplierDocListQuery" displayName="SupplierDocListQuery" description="" help="" QueryType="DTOQuery" QueryURI="35d1fcae-9379-4d03-b0ea-3f47d02895b9" QuerySourceFullName="UFIDA.U9.Cust.FJGX.SupplierDocListQryBP.SupplierDocListQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="dcc6b89f-c484-437f-8f86-9a0e5c104195" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="0eff086a-ba4b-4920-b19f-816baeb99717" name="SupplierDocList" displayName="SupplierDocList" description="" help="" ProjectID="" ProjectPath="" BPItemID="9e0c15eb-bdf2-41d4-adfe-93de2e0e6638" BPOperationID="2ef28c7d-8aa1-4076-9867-03fa7e8c4b91" DTOID="1cadea44-62b7-4fd3-ba7d-ea7c2b3ac378" BPAgentDll="UFIDA.U9.Cust.FJGX.SupplierQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.SupplierDocListQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="8e265eea-179d-4aff-adcb-253dcf12ed7e" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="3495b081-2bbe-45ea-811e-7f9a9e87e5fa" UIFormItemID="76948048-6e17-4c2f-bb04-c9e003f34a4f" UIModelID="b82b47d3-0b86-4910-9728-26a0de1950a1" />
+  <FilterDefines>
+    <FilterDefine id="df02ad80-1163-4fd8-81ec-c8a1ef72e053" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="46c0e9b9-5693-4172-a47c-81c6edfe8f29" name="SumUnPayedMnyTC" displayName="SumUnPayedMnyTC" description="" help="" ParentName="" Alias="SumUnPayedMnyTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="eace36ff-267c-4584-a4e3-454507ca3bfe" name="SumTotalUnPayedMnyTC" displayName="SumTotalUnPayedMnyTC" description="" help="" ParentName="" Alias="SumTotalUnPayedMnyTC" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="79cccb35-0691-4252-bb19-055852aa6678" name="DocNo" displayName="单号" description="" help="" />
+      <BasicFilter id="b3406158-fb87-4a9a-8c34-b8c486225f7c" name="BusinessDate" displayName="入库时间" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="22eaddc9-1daf-4a2d-809a-94f4bdd32b9e" name="DocNo" displayName="单号" description="" help="" />
+      <Column id="82868b7a-bd7c-4650-8ec9-df79982d2dac" name="BusinessDate" displayName="入库时间" description="" help="" />
+      <Column id="125b6f00-1f1d-40bf-b778-86bdc6c6ad9e" name="SumUnPayedMnyTC" displayName="应付余额" description="" help="" />
+      <Column id="234ca45c-aa3e-41da-869b-c0e8125e7dc4" name="CreatedBy" displayName="制单人" description="" help="" />
+      <Column id="3e4cedb8-6871-41f9-99d8-c936f27eb9c7" name="OperatorsName" displayName="业务员" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="e723ae72-9b09-487c-8a2d-177ab07580ce" name="BusinessDate" displayName="" description="" help="" SortType="DESC" />
+      <Sort id="8c88d202-cb5b-4d75-9309-37953275e935" name="DocNo" displayName="" description="" help="" SortType="DESC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

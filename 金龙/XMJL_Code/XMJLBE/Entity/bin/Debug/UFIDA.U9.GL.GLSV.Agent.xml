@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.GL.GLSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetBudgetApprovedVoucherProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            取得预算相关已审核凭证请求.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetBudgetApprovedVoucherProxy.FromDate">
+            <summary>
+            起始日期 (该属性可为空,但有默认值)
+            取得预算相关已审核凭证请求.Misc.起始日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetBudgetApprovedVoucherProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,但有默认值)
+            取得预算相关已审核凭证请求.Misc.结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetBudgetApprovedVoucherProxy.VoucherCount">
+            <summary>
+            凭证张数 (该属性可为空,但有默认值)
+            取得预算相关已审核凭证请求.Misc.凭证张数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetBudgetApprovedVoucherProxy.MinVoucherID">
+            <summary>
+            最小凭证ID (该属性可为空,且无默认值)
+            取得预算相关已审核凭证请求.Misc.最小凭证ID
+            </summary>
+            <value>System.EntityKey</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.IsBizHappenedProxy.SobAp_SKey">
+            <summary>
+            SOB会计期间 序列化Key属性。（传递跨组织序列列字段）
+            SOB会计期间是否发生业务.Misc.SOB会计期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.IsBizHappenedProxy.SobAp">
+            <summary>
+            SOB会计期间 (该属性可为空,且无默认值)
+            SOB会计期间是否发生业务.Misc.SOB会计期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherCorrectSVProxy.Voucher_SKey">
+            <summary>
+            原凭证 序列化Key属性。（传递跨组织序列列字段）
+            凭证更正服务.Misc.原凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherCorrectSVProxy.Voucher">
+            <summary>
+            原凭证 (该属性可为空,且无默认值)
+            凭证更正服务.Misc.原凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherCorrectSVProxy.CorrectType">
+            <summary>
+            更正类型 (该属性可为空,但有默认值)
+            凭证更正服务.Misc.更正类型
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.AdjustAction</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherCorrectSVProxy.IsAuditTrace">
+            <summary>
+            是否有痕 (该属性可为空,但有默认值)
+            凭证更正服务.Misc.是否有痕
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherExecuteBudgetSVProxy.Vouchers_SKey">
+            <summary>
+            凭证 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherExecuteBudgetSVProxy.Vouchers">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            凭证执行预算服务.Misc.凭证
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherExecuteBudgetSVProxy.IsExecuteEncumb">
+            <summary>
+            是否执行预算 (该属性可为空,但有默认值)
+            凭证执行预算服务.Misc.是否执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherExecuteBudgetSVProxy.IsMessage">
+            <summary>
+            是否提示后执行 (该属性可为空,但有默认值)
+            凭证执行预算服务.Misc.是否提示后执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherExecuteBudgetSVProxy.MesasgeFlags">
+            <summary>
+            处理提示标志 (该属性可为空,且无默认值)
+            凭证执行预算服务.Misc.处理提示标志
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherUnSubmitSVProxy.Voucher_SKey">
+            <summary>
+            凭证 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherUnSubmitSVProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            凭证取消提交服务.Misc.凭证
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherBatchRemoveVoucherSVProxy.Voucher_SKey">
+            <summary>
+            凭证 序列化Key属性。（传递跨组织序列列字段）
+            从批中移除凭证服务.Misc.凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherBatchRemoveVoucherSVProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            从批中移除凭证服务.Misc.凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherBatchRemoveVoucherSVProxy.IsCheck">
+            <summary>
+            是否检查批状态 (该属性可为空,但有默认值)
+            从批中移除凭证服务.Misc.是否检查批状态
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherDeleteSVProxy.Vouchers_SKey">
+            <summary>
+            凭证 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.VoucherDeleteSVProxy.Vouchers">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            凭证删除服务.Misc.凭证
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.AddNewParentUpdateBalanceSRVProxy.ParentAccounts_SKey">
+            <summary>
+            科目 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.AddNewParentUpdateBalanceSRVProxy.ParentAccounts">
+            <summary>
+            科目 (该属性可为空,且无默认值)
+            新增汇总科目据更新分类账.Misc.科目
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetSOBDataSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            获取SOB基本信息服务.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.GetSOBDataSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            获取SOB基本信息服务.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.ReBuildGLSVProxy.EntityID">
+            <summary>
+            EntityID (该属性可为空,但有默认值)
+            总账数据更新服务.Misc.EntityID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.ReBuildGLSVProxy.EntityTypeFullName">
+            <summary>
+            EntityTypeFullName (该属性可为空,且无默认值)
+            总账数据更新服务.Misc.EntityTypeFullName
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.ReBuildGLSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,但有默认值)
+            总账数据更新服务.Misc.账簿
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.ReBuildGLSVProxy.OtherParams">
+            <summary>
+            其他条件 (该属性可为空,且无默认值)
+            总账数据更新服务.Misc.其他条件
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GLService.Proxy.CANODataInterfaceGLSrvProxy.CNAOExportInfo">
+            <summary>
+            审计署导出信息 (该属性可为空,且无默认值)
+            总账输出审计署接口服务.Misc.审计署导出信息
+            </summary>
+            <value>UFIDA.U9.CBO.DTOs.CNAOExportInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.ModifyAuditingInfoService.Proxy.ModifyAuditingInfoSRVProxy.Auditor_SKey">
+            <summary>
+            审核人 序列化Key属性。（传递跨组织序列列字段）
+            修改审核信息请求.Misc.审核人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.ModifyAuditingInfoService.Proxy.ModifyAuditingInfoSRVProxy.Auditor">
+            <summary>
+            审核人 (该属性可为空,且无默认值)
+            修改审核信息请求.Misc.审核人
+            </summary>
+            <value>UFIDA.U9.Base.UserRole.User</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.ModifyAuditingInfoService.Proxy.ModifyAuditingInfoSRVProxy.AuditDate">
+            <summary>
+            审核日期 (该属性可为空,但有默认值)
+            修改审核信息请求.Misc.审核日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.ModifyAuditingInfoService.Proxy.ModifyAuditingInfoSRVProxy.Voucher_SKey">
+            <summary>
+            凭证 序列化Key属性。（传递跨组织序列列字段）
+            修改审核信息请求.Misc.凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.ModifyAuditingInfoService.Proxy.ModifyAuditingInfoSRVProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            修改审核信息请求.Misc.凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLSVProxy.Application_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            根据交易分录生成凭证服务.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLSVProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            根据交易分录生成凭证服务.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLSVProxy.TransactionVoucherDTOs">
+            <summary>
+            合并交易分录集合 (该属性可为空,且无默认值)
+            根据交易分录生成凭证服务.Misc.合并交易分录集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLSVProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            根据交易分录生成凭证服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLSVProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            根据交易分录生成凭证服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.SaveVoucherAndWriteBackAAIProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            保存凭证并回写AAI服务.Misc.凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.SaveVoucherAndWriteBackAAIProxy.TransEntryHeaders">
+            <summary>
+            交易分录头集合 (该属性可为空,但有默认值)
+            保存凭证并回写AAI服务.Misc.交易分录头集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.SaveVoucherAndWriteBackAAIProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            保存凭证并回写AAI服务.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.DeleteTransferVoucherSVProxy.TransVoucherInfos">
+            <summary>
+            交易凭证线索集合 (该属性可为空,且无默认值)
+            删除作废转总账凭证服务.Misc.交易凭证线索集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.DeleteTransferVoucherSVProxy.IsCancel">
+            <summary>
+            作废 (该属性可为空,但有默认值)
+            删除作废转总账凭证服务.Misc.作废
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLBaseSVProxy.Org_SKey">
+            <summary>
+            组织机构 序列化Key属性。（传递跨组织序列列字段）
+            转总账服务.Misc.组织机构
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLBaseSVProxy.Org">
+            <summary>
+            组织机构 (该属性可为空,且无默认值)
+            转总账服务.Misc.组织机构
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLBaseSVProxy.Application_SKey">
+            <summary>
+            应用 序列化Key属性。（传递跨组织序列列字段）
+            转总账服务.Misc.应用
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLBaseSVProxy.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            转总账服务.Misc.应用
+            </summary>
+            <value>UFIDA.U9.Base.Application.Application</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransToGLBaseSVProxy.Vouchers">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            转总账服务.Misc.凭证
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.ImportVoucherSvProxy.VoucherDTOs">
+            <summary>
+            产业链凭证DTO (该属性可为空,且无默认值)
+            增加凭证导入的服务.Misc.产业链凭证DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransVoucherModifySVProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            ISV凭证修改服务.Misc.凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransVoucherModifySVProxy.IsAllowOutOfBalanceCtl">
+            <summary>
+            是否允许超出余额控制 (该属性可为空,但有默认值)
+            ISV凭证修改服务.Misc.是否允许超出余额控制
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransVoucherModifySVProxy.IsMessage">
+            <summary>
+            是否预算提示后执行 (该属性可为空,但有默认值)
+            ISV凭证修改服务.Misc.是否预算提示后执行
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TransToGLService.Proxy.TransVoucherModifySVProxy.IsAllowOutOfMemoBacanceCtl">
+            <summary>
+            是否允许超出备查余额控制 (该属性可为空,但有默认值)
+            ISV凭证修改服务.Misc.是否允许超出备查余额控制
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.FromPostPeriod_SKey">
+            <summary>
+            起始期间 序列化Key属性。（传递跨组织序列列字段）
+            获取预算年度开始执行前凭证数据.Misc.起始期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.FromPostPeriod">
+            <summary>
+            起始期间 (该属性可为空,且无默认值)
+            获取预算年度开始执行前凭证数据.Misc.起始期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.ToPostPeriod_SKey">
+            <summary>
+            结束期间 序列化Key属性。（传递跨组织序列列字段）
+            获取预算年度开始执行前凭证数据.Misc.结束期间
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.ToPostPeriod">
+            <summary>
+            结束期间 (该属性可为空,且无默认值)
+            获取预算年度开始执行前凭证数据.Misc.结束期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.EntryCount">
+            <summary>
+            分录数 (该属性可为空,但有默认值)
+            获取预算年度开始执行前凭证数据.Misc.分录数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.MinEntryID">
+            <summary>
+            最小分录ID (该属性可为空,但有默认值)
+            获取预算年度开始执行前凭证数据.Misc.最小分录ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.GetBudgetExecuteVoucherSV.Proxy.GetBudgetExecuteVoucherProxy.AccountList">
+            <summary>
+            科目列表 (该属性可为空,且无默认值)
+            获取预算年度开始执行前凭证数据.Misc.科目列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.ReceiveCostFromGLProxy.InputDTO">
+            <summary>
+            传入条件DTO (该属性可为空,且无默认值)
+            成本发生额取数函数.Misc.传入条件DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.AccBasicCode">
+            <summary>
+            会计要素 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.会计要素
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.AccPropertyCode">
+            <summary>
+            科目属性 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.科目属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.Accounts">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.会计科目
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.CurrencyCode">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.币种
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.ReturnOccurType">
+            <summary>
+            返回发生额类型 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.返回发生额类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.RetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.OccurDir">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.OccurFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IsIncludeUnPostVouher">
+            <summary>
+            是否包含未记账 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.是否包含未记账
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IncludeUnPostVoucherStatusStr">
+            <summary>
+            未记账凭证状态 (该属性可为空,且无默认值)
+            总账科目发生额函数.Misc.未记账凭证状态
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IncludeAdjustType">
+            <summary>
+            包含调整凭证 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.包含调整凭证
+            </summary>
+            <value>UFIDA.U9.GL.Enums.IncludeAdjustType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IsCounteract">
+            <summary>
+            抵消数 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.抵消数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IsIndividual">
+            <summary>
+            个别数 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.个别数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountTransactionSVProxy.IsSumLowLevel">
+            <summary>
+            是否汇总下级 (该属性可为空,但有默认值)
+            总账科目发生额函数.Misc.是否汇总下级
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.GetBalanceType">
+            <summary>
+            余额取数类型 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.余额取数类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.BalanceFetchDataType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.AccBasicCode">
+            <summary>
+            会计要素 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.会计要素
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.AccPropertyCode">
+            <summary>
+            科目属性 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.科目属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.Accounts">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.会计科目
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.CurrencyCode">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.币种
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.ReturnBalanceType">
+            <summary>
+            返回余额类型 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.返回余额类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.RetBalanceType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.BalanceDir">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.BalanceFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IsIncludeUnPostVouher">
+            <summary>
+            是否包含未记账 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.是否包含未记账
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IncludeUnPostVoucherStatusStr">
+            <summary>
+            未记账凭证状态 (该属性可为空,且无默认值)
+            总账科目余额函数.Misc.未记账凭证状态
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IncludeAdjustType">
+            <summary>
+            包含调整凭证 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.包含调整凭证
+            </summary>
+            <value>UFIDA.U9.GL.Enums.IncludeAdjustType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IsCounteract">
+            <summary>
+            抵消数 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.抵消数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IsIndividual">
+            <summary>
+            个别数 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.个别数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLAccountBalanceSVProxy.IsSumLowLevel">
+            <summary>
+            是否汇总下级 (该属性可为空,但有默认值)
+            总账科目余额函数.Misc.是否汇总下级
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.OQL">
+            <summary>
+            凭证条件OQL (该属性可为空,且无默认值)
+            总账凭证取数函数.Misc.凭证条件OQL
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.ReturnType">
+            <summary>
+            返回值类型 (该属性可为空,但有默认值)
+            总账凭证取数函数.Misc.返回值类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.RetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.DCFlagStr">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账凭证取数函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.OccurFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账凭证取数函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账凭证取数函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账凭证取数函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.OQL">
+            <summary>
+            凭证条件OQL (该属性可为空,且无默认值)
+            总账现金流量凭证函数.Misc.凭证条件OQL
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.ReturnType">
+            <summary>
+            返回发生额类型 (该属性可为空,但有默认值)
+            总账现金流量凭证函数.Misc.返回发生额类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.CFRetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.CashFlowItemDirection">
+            <summary>
+            现金流量方向 (该属性可为空,但有默认值)
+            总账现金流量凭证函数.Misc.现金流量方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.CFDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.SobCode">
+            <summary>
+            凭证条件OQL (该属性可为空,且无默认值)
+            总账现金流量凭证函数.Misc.凭证条件OQL
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账现金流量凭证函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账现金流量凭证函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.IsCounteract">
+            <summary>
+            抵消数 (该属性可为空,但有默认值)
+            总账现金流量凭证函数.Misc.抵消数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucherOfCashFlowSVProxy.IsIndividual">
+            <summary>
+            个别数 (该属性可为空,但有默认值)
+            总账现金流量凭证函数.Misc.个别数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.SOBCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账净利润函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.PeriodStr">
+            <summary>
+            期间范围 (该属性可为空,且无默认值)
+            总账净利润函数.Misc.期间范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.IsIncludeUnPostVouher">
+            <summary>
+            是否包含未记账 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.是否包含未记账
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.IncludeAdjustType">
+            <summary>
+            包含调整凭证 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.包含调整凭证
+            </summary>
+            <value>UFIDA.U9.GL.Enums.IncludeAdjustType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.IsCounteract">
+            <summary>
+            抵消数 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.抵消数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLNetIncomeSVProxy.IsIndividual">
+            <summary>
+            个别数 (该属性可为空,但有默认值)
+            总账净利润函数.Misc.个别数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.GetBalanceType">
+            <summary>
+            余额取数类型 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.余额取数类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.BalanceFetchDataType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.AccBasicCode">
+            <summary>
+            会计要素 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.会计要素
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.AccPropertyCode">
+            <summary>
+            科目属性 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.科目属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.Accounts">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.会计科目
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.MemoItems">
+            <summary>
+            备查 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.备查
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.CurrencyCode">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.币种
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.ReturnBalanceType">
+            <summary>
+            返回余额类型 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.返回余额类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.MemoRetBalanceType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.BalanceDir">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.BalanceFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.IsIncludeUnPostVouher">
+            <summary>
+            是否包含未记账 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.是否包含未记账
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.IncludeUnPostVoucherStatusStr">
+            <summary>
+            未记账凭证状态 (该属性可为空,且无默认值)
+            总账备查余额函数.Misc.未记账凭证状态
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.IncludeAdjustType">
+            <summary>
+            包含调整凭证 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.包含调整凭证
+            </summary>
+            <value>UFIDA.U9.GL.Enums.IncludeAdjustType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoBalanceSVProxy.IsSumLowLevel">
+            <summary>
+            是否汇总下级 (该属性可为空,但有默认值)
+            总账备查余额函数.Misc.是否汇总下级
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucheMemoSVProxy.VoucherDTO">
+            <summary>
+            凭证DTO (该属性可为空,且无默认值)
+            总账备查取数函数.Misc.凭证DTO
+            </summary>
+            <value>UFIDA.U9.GL.FetchDataFromGL.VoucherQryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucheMemoSVProxy.ReturnType">
+            <summary>
+            返回类型 (该属性可为空,但有默认值)
+            总账备查取数函数.Misc.返回类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.RetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucheMemoSVProxy.DCFlagStr">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账备查取数函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.OccurFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucheMemoSVProxy.EntryDTO">
+            <summary>
+            分录DTO (该属性可为空,且无默认值)
+            总账备查取数函数.Misc.分录DTO
+            </summary>
+            <value>UFIDA.U9.GL.FetchDataFromGL.EntryQryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLVoucheMemoSVProxy.EntryMemoDTO">
+            <summary>
+            备查DTO (该属性可为空,且无默认值)
+            总账备查取数函数.Misc.备查DTO
+            </summary>
+            <value>UFIDA.U9.GL.FetchDataFromGL.EntryMemoBookQryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.AccBasicCode">
+            <summary>
+            会计要素 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.会计要素
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.AccPropertyCode">
+            <summary>
+            科目属性 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.科目属性
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.Accounts">
+            <summary>
+            会计科目 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.会计科目
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.MemoItems">
+            <summary>
+            备查 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.备查
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.CurrencyCode">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.币种
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.ReturnOccurType">
+            <summary>
+            返回发生额类型 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.返回发生额类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.MemoRetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.PeriodStr">
+            <summary>
+            起止范围 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.起止范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.OccurDir">
+            <summary>
+            取数方向 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.取数方向
+            </summary>
+            <value>UFIDA.U9.GL.Enums.OccurFetchDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.IsIncludeUnPostVouher">
+            <summary>
+            是否包含未记账 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.是否包含未记账
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.IncludeUnPostVoucherStatusStr">
+            <summary>
+            未记账凭证状态 (该属性可为空,且无默认值)
+            总账备查发生额函数.Misc.未记账凭证状态
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.IncludeAdjustType">
+            <summary>
+            包含调整凭证 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.包含调整凭证
+            </summary>
+            <value>UFIDA.U9.GL.Enums.IncludeAdjustType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLMemoTransactionSVProxy.IsSumLowLevel">
+            <summary>
+            是否汇总下级 (该属性可为空,但有默认值)
+            总账备查发生额函数.Misc.是否汇总下级
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.GetCashType">
+            <summary>
+            取数类型 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.取数类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.CFOccurFetchDataType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.SobCode">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            现金流量发生额.Misc.账簿
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.CashFlowItems">
+            <summary>
+            现金流量项目 (该属性可为空,且无默认值)
+            现金流量发生额.Misc.现金流量项目
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.CurrencyCode">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            现金流量发生额.Misc.币种
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.ReturnCashFlowType">
+            <summary>
+            返回类型 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.返回类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.CFRetOccurType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.PeriodType">
+            <summary>
+            期间类型 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.期间类型
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FDPeriodType</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.PeriodStr">
+            <summary>
+            期间范围 (该属性可为空,且无默认值)
+            现金流量发生额.Misc.期间范围
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.CashFlowItemDir">
+            <summary>
+            现金流量项目类型编码 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.现金流量项目类型编码
+            </summary>
+            <value>UFIDA.U9.GL.Enums.CFDirection</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.BalanceEntityStr">
+            <summary>
+            平衡体 (该属性可为空,且无默认值)
+            现金流量发生额.Misc.平衡体
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.CheckType">
+            <summary>
+            检查方式 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.检查方式
+            </summary>
+            <value>UFIDA.U9.GL.Enums.FetchDataCheckTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.IsCounteract">
+            <summary>
+            抵消数 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.抵消数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.FetchDataService.Proxy.GLCashFlowSVProxy.IsIndividual">
+            <summary>
+            个别数 (该属性可为空,但有默认值)
+            现金流量发生额.Misc.个别数
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.CashBankVoucherIsExistNoApprovedSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            登记现金银行的凭证是否存在未审核记录服务.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.CashBankVoucherIsExistNoApprovedSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            登记现金银行的凭证是否存在未审核记录服务.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.CashBankVoucherIsExistNoApprovedSVProxy.Date">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            登记现金银行的凭证是否存在未审核记录服务.Misc.日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.GetNoApprovedCashBankVoucherSVProxy.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            返回未审核的登记现金银行的凭证服务.Misc.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.GetNoApprovedCashBankVoucherSVProxy.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            返回未审核的登记现金银行的凭证服务.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.GetNoApprovedCashBankVoucherSVProxy.Date">
+            <summary>
+            日期 (该属性可为空,且无默认值)
+            返回未审核的登记现金银行的凭证服务.Misc.日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.RepairBookCashJournalProxy.StartDate">
+            <summary>
+            启用日期 (该属性可为空,且无默认值)
+            补登现金日记账.Misc.启用日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.RepairBookBankJournalProxy.StartDate">
+            <summary>
+            启用日期 (该属性可为空,且无默认值)
+            补登银行日记账.Misc.启用日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.RepairBookBankJournalProxy.BankAccount_SKey">
+            <summary>
+            银行账号 序列化Key属性。（传递跨组织序列列字段）
+            补登银行日记账.Misc.银行账号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CashBankSV.Proxy.RepairBookBankJournalProxy.BankAccount">
+            <summary>
+            银行账号 (该属性可为空,且无默认值)
+            补登银行日记账.Misc.银行账号
+            </summary>
+            <value>UFIDA.U9.CBO.FI.BankAccount.BankAccount</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveCSVoucherProxy.CSVoucher">
+            <summary>
+            协同凭证 (该属性可为空,且无默认值)
+            跨组织保存协同凭证.Misc.协同凭证
+            </summary>
+            <value>UFIDA.U9.GL.CSVoucher.CSVoucherDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgGetCSVoucherProxy.CSVoucherID">
+            <summary>
+            协同凭证 (该属性可为空,但有默认值)
+            跨组织取得协同凭证.Misc.协同凭证
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.Voucher">
+            <summary>
+            新增或修改 (该属性可为空,且无默认值)
+            跨组织保存凭证.Misc.新增或修改
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.DeleteVoucher_SKey">
+            <summary>
+            删除 序列化Key属性。（传递跨组织序列列字段）
+            跨组织保存凭证.Misc.删除
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.DeleteVoucher">
+            <summary>
+            删除 (该属性可为空,且无默认值)
+            跨组织保存凭证.Misc.删除
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.DeleteVouchers_SKey">
+            <summary>
+            批量删除 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.DeleteVouchers">
+            <summary>
+            批量删除 (该属性可为空,且无默认值)
+            跨组织保存凭证.Misc.批量删除
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.RevokeVoucher_SKey">
+            <summary>
+            作废 序列化Key属性。（传递跨组织序列列字段）
+            跨组织保存凭证.Misc.作废
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.RevokeVoucher">
+            <summary>
+            作废 (该属性可为空,且无默认值)
+            跨组织保存凭证.Misc.作废
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.MultiOrgSaveVoucherProxy.IsAllowOutOfBalanceCtl">
+            <summary>
+            是否允许超出科目余额控制 (该属性可为空,但有默认值)
+            跨组织保存凭证.Misc.是否允许超出科目余额控制
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.CSCheckVouchersFromLogSVProxy.Voucher_SKey">
+            <summary>
+            凭证 序列化Key属性。（传递跨组织序列列字段）
+            校验协同总账凭证分录.Misc.凭证
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.GL.CSVoucherSV.Proxy.CSCheckVouchersFromLogSVProxy.Voucher">
+            <summary>
+            凭证 (该属性可为空,且无默认值)
+            校验协同总账凭证分录.Misc.凭证
+            </summary>
+            <value>UFIDA.U9.GL.Voucher.Voucher</value>
+        </member>
+        <member name="P:UFIDA.U9.GL.TBSV.Proxy.QueryGL4TBSVProxy.QueryConditionDTO">
+            <summary>
+            预算批量执行查询单据条件DTO (该属性可为空,且无默认值)
+            总账分类查询服务.Misc.预算批量执行查询单据条件DTO
+            </summary>
+            <value>UFIDA.U9.CBO.FI.TB.DTO.TBQueryBizDocConditionDTO</value>
+        </member>
+    </members>
+</doc>

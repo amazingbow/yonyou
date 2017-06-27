@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.MRP.MRPSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.NetChangeNotifyProxy.NetChangeDTO">
+            <summary>
+            净改变物料DTO集合 (该属性可为空,且无默认值)
+            净改变通知服务.Misc.净改变物料DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.InvPlanToMRPProxy.OnHandLayoutDTO">
+            <summary>
+            库存规划DTO (该属性可为空,且无默认值)
+            获得库存规划服务.Misc.库存规划DTO
+            </summary>
+            <value>UFIDA.U9.MRP.DTOs.OnHandLayoutDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.TransToDemandInterfaceProxy.DemandDTOS">
+            <summary>
+            需求DTO (该属性可为空,且无默认值)
+            接收外部需求服务.Misc.需求DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.TransToDemandInterfaceProxy.IsOverride">
+            <summary>
+            是否覆盖 (该属性可为空,但有默认值)
+            接收外部需求服务.Misc.是否覆盖
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.TransDemandToATPProxy.Query">
+            <summary>
+            查询DTO集合 (该属性可为空,且无默认值)
+            ATP批量获取需求服务.Misc.查询DTO集合
+            </summary>
+            <value>UFIDA.U9.MRP.MRP.ATPQueryListDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.TransSupplyToATPProxy.Query">
+            <summary>
+            查询条件 (该属性可为空,且无默认值)
+            ATP批量获取供应服务.Misc.查询条件
+            </summary>
+            <value>UFIDA.U9.MRP.MRP.ATPQueryListDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.CancelReleaseDIProxy.SourceDoc">
+            <summary>
+            来源单据 (该属性可为空,且无默认值)
+            取消释放外部需求服务.Misc.来源单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetRushPlanOrdersProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            获得紧急计划订单服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetRushPlanOrdersProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            获得紧急计划订单服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetRushPlanOrdersProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            获得紧急计划订单服务.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetRushPlanOrdersProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            获得紧急计划订单服务.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.UpdatePlanOrderQtyProxy.InputDTO">
+            <summary>
+            更新DTO集合 (该属性可为空,且无默认值)
+            计划订单执行回写服务.Misc.更新DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.MODocNo">
+            <summary>
+            生产订单单号 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.生产订单单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.MO">
+            <summary>
+            生产订单 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.生产订单
+            </summary>
+            <value>UFSoft.UBF.Business.BusinessEntity</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.MOQty">
+            <summary>
+            生产订单数量 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.生产订单数量
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.MOCompleteDate">
+            <summary>
+            完工日期 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.完工日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Org_SKey">
+            <summary>
+            生产组织 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.生产组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Org">
+            <summary>
+            生产组织 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.生产组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Item_SKey">
+            <summary>
+            生产组织 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.生产组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Item">
+            <summary>
+            生产组织 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.生产组织
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.ItemVersion">
+            <summary>
+            料品版本 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.料品版本
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.OwnerOrg_SKey">
+            <summary>
+            货主组织 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.OwnerOrg">
+            <summary>
+            货主组织 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.货主组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Project">
+            <summary>
+            项目 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Task">
+            <summary>
+            任务 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.任务
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Task</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.DemandCode">
+            <summary>
+            需求分类 (该属性可为空,但有默认值)
+            批量消耗计划订单.Misc.需求分类
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.DemandCodeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Seiban_SKey">
+            <summary>
+            Seiban 序列化Key属性。（传递跨组织序列列字段）
+            批量消耗计划订单.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.Seiban">
+            <summary>
+            Seiban (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.Seiban
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Seiban.SeibanMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.BatchConsumPlanOrderForMOProxy.SeibanNO">
+            <summary>
+            Seiban号 (该属性可为空,且无默认值)
+            批量消耗计划订单.Misc.Seiban号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Org_SKey">
+            <summary>
+            生产组织 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.生产组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Org">
+            <summary>
+            生产组织 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.生产组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Item_SKey">
+            <summary>
+            生产料品 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.生产料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Item">
+            <summary>
+            生产料品 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.生产料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.ItemVersion">
+            <summary>
+            料品版本号 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.料品版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.OwnerOrg_SKey">
+            <summary>
+            货主组织 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.OwnerOrg">
+            <summary>
+            货主组织 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.货主组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.CompleteDate">
+            <summary>
+            MO完工日期 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.MO完工日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Project">
+            <summary>
+            项目 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Task">
+            <summary>
+            任务 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.任务
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Task</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.DemandCode">
+            <summary>
+            需求分类 (该属性可为空,但有默认值)
+            获得计划订单可消耗数量.Misc.需求分类
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.DemandCodeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Seiban_SKey">
+            <summary>
+            Seiban 序列化Key属性。（传递跨组织序列列字段）
+            获得计划订单可消耗数量.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.Seiban">
+            <summary>
+            Seiban (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.Seiban
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Seiban.SeibanMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetConsumQtyForMOProxy.SeibanNO">
+            <summary>
+            Seiban号 (该属性可为空,且无默认值)
+            获得计划订单可消耗数量.Misc.Seiban号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetPlanOrderInfoForECNProxy.ItemInfo">
+            <summary>
+            料品信息 (该属性可为空,且无默认值)
+            ECN获取计划订单信息.Misc.料品信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetPlanOrderInfoForECNProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            ECN获取计划订单信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.GetPlanOrderInfoForECNProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            ECN获取计划订单信息.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.MPSDTO">
+            <summary>
+            MPSDTO (该属性可为空,且无默认值)
+            接收MPS.Misc.MPSDTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.OrgKey_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            接收MPS.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.OrgKey">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            接收MPS.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.PlanCode">
+            <summary>
+            计划编码 (该属性可为空,且无默认值)
+            接收MPS.Misc.计划编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.Version">
+            <summary>
+            版本号 (该属性可为空,且无默认值)
+            接收MPS.Misc.版本号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.SourceOrgKey_SKey">
+            <summary>
+            来源组织组织 序列化Key属性。（传递跨组织序列列字段）
+            接收MPS.Misc.来源组织组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReceiveMPSProxy.SourceOrgKey">
+            <summary>
+            来源组织组织 (该属性可为空,且无默认值)
+            接收MPS.Misc.来源组织组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.DocNo">
+            <summary>
+            计划单号 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.计划单号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.ItemInfo">
+            <summary>
+            料品信息 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.料品信息
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            取计划订单的数量信息.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.Task">
+            <summary>
+            任务 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.任务
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Task</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.Project_SKey">
+            <summary>
+            项目 序列化Key属性。（传递跨组织序列列字段）
+            取计划订单的数量信息.Misc.项目
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.Project">
+            <summary>
+            项目 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.项目
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.ProjectTask.Project</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.StartDate">
+            <summary>
+            合同生效日期 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.合同生效日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.FindPlanOrderQtyInfoSVProxy.EndDate">
+            <summary>
+            合同失效日期 (该属性可为空,且无默认值)
+            取计划订单的数量信息.Misc.合同失效日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ReserveMPSSrvProxy.MPSDTOs">
+            <summary>
+            预留MPSDTO (该属性可为空,且无默认值)
+            预留MPS服务.Misc.预留MPSDTO
+            </summary>
+            <value>UFIDA.U9.MRP.MRP.ReserveMPSDTOs</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.PushToInvSimulationSVProxy.IDList">
+            <summary>
+            ID集合 (该属性可为空,且无默认值)
+            构造库存模拟DTO集合服务.Misc.ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.PushToInvSimulationSVProxy.PushType">
+            <summary>
+            构造属性(0为计划订单，1为MPS明细） (该属性可为空,但有默认值)
+            构造库存模拟DTO集合服务.Misc.构造属性(0为计划订单，1为MPS明细）
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.DisConsumePlanOrderSVProxy.DisConsumePlanOrderDTOs">
+            <summary>
+            计划订单反销低DTO集合 (该属性可为空,且无默认值)
+            计划订单反销低服务.Misc.计划订单反销低DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ConsumeDRPSVProxy.DRPConsumeDTOs">
+            <summary>
+            销抵DTO集合 (该属性可为空,且无默认值)
+            销抵DRP.Misc.销抵DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ConsumeDRPSVProxy.TransoutOrg_SKey">
+            <summary>
+            调出组织 序列化Key属性。（传递跨组织序列列字段）
+            销抵DRP.Misc.调出组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.Proxy.ConsumeDRPSVProxy.TransoutOrg">
+            <summary>
+            调出组织 (该属性可为空,且无默认值)
+            销抵DRP.Misc.调出组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+    </members>
+</doc>

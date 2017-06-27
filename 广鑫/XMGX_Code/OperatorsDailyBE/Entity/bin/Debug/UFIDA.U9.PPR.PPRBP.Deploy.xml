@@ -1,0 +1,2442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PPR.PPRBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData">
+            <summary>
+            原单价信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.#ctor(System.Decimal,System.Decimal,System.Int64,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_oldPrice">
+            <summary>
+            单价
+            原单价信息.Misc.单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_oldPercent">
+            <summary>
+            定价百分比
+            原单价信息.Misc.定价百分比
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_itemDependedID">
+            <summary>
+            依赖物料ID
+            原单价信息.Misc.依赖物料ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_itemDependedCode">
+            <summary>
+            依赖物料编码
+            原单价信息.Misc.依赖物料编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_itemDependedName">
+            <summary>
+            依赖物料名称
+            原单价信息.Misc.依赖物料名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceAdjustment.PurOldPriceInfosData.m_itemDependedVersion">
+            <summary>
+            依赖物料版本
+            原单价信息.Misc.依赖物料版本
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException">
+            <summary>
+            异常类型: 某调价行某料品找不到任何定价信息，无法按幅度调价!
+            
+             ${LineNumber}行${ItemName}料品找不到任何定价信息，无法按幅度调价!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 某调价行某料品找不到任何定价信息，无法按幅度调价! Constructor
+            </summary>
+            <param name="lineNumber">调价单行号</param>
+            <param name="itemName">物料名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 某调价行某料品找不到任何定价信息，无法按幅度调价! Constructor
+            </summary>
+            <param name="lineNumber">调价单行号</param>
+            <param name="itemName">物料名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 某调价行某料品找不到任何定价信息，无法按幅度调价! Constructor
+            </summary>
+            <param name="lineNumber">调价单行号</param>
+            <param name="itemName">物料名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException.LineNumber">
+            <summary>
+            调价单行号
+            某调价行某料品找不到任何定价信息，无法按幅度调价!.Misc.调价单行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceListIsNullException.ItemName">
+            <summary>
+            物料名称
+            某调价行某料品找不到任何定价信息，无法按幅度调价!.Misc.物料名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.AdjustmentEffectDateMustBiggerOrEqualWithSystemTimeException">
+            <summary>
+            异常类型: 调价生效日期必须大于等于当前系统时间
+            
+             调价生效日期必须大于等于当前系统时间
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.AdjustmentEffectDateMustBiggerOrEqualWithSystemTimeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 调价生效日期必须大于等于当前系统时间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.AdjustmentEffectDateMustBiggerOrEqualWithSystemTimeException.#ctor">
+            <summary>
+            异常类型: 调价生效日期必须大于等于当前系统时间 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.AdjustmentEffectDateMustBiggerOrEqualWithSystemTimeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 调价生效日期必须大于等于当前系统时间 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.ThisDayAdjustRepeatException">
+            <summary>
+            异常类型: 该天已有调价异常
+            
+             该天已有调价异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.ThisDayAdjustRepeatException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 该天已有调价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.ThisDayAdjustRepeatException.#ctor">
+            <summary>
+            异常类型: 该天已有调价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.ThisDayAdjustRepeatException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 该天已有调价异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.PrlineVersionIsOldException">
+            <summary>
+            异常类型: 要调价的价表行必须是最新的版本异常
+            
+             要调价的价表行必须是最新的版本异常
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PrlineVersionIsOldException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 要调价的价表行必须是最新的版本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PrlineVersionIsOldException.#ctor">
+            <summary>
+            异常类型: 要调价的价表行必须是最新的版本异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PrlineVersionIsOldException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 要调价的价表行必须是最新的版本异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.HasAdjustmentCanNotChangeDateException">
+            <summary>
+            异常类型: 经过当前调价后，调价单已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作
+            
+             经过当前调价后，调价单${ADCode}已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.HasAdjustmentCanNotChangeDateException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 经过当前调价后，调价单已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作 Constructor
+            </summary>
+            <param name="aDCode">调价单号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.HasAdjustmentCanNotChangeDateException.#ctor(System.String)">
+            <summary>
+            异常类型: 经过当前调价后，调价单已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作 Constructor
+            </summary>
+            <param name="aDCode">调价单号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.HasAdjustmentCanNotChangeDateException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 经过当前调价后，调价单已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作 Constructor
+            </summary>
+            <param name="aDCode">调价单号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceAdjustment.HasAdjustmentCanNotChangeDateException.ADCode">
+            <summary>
+            调价单号
+            经过当前调价后，调价单已在新有效期范围外，请先将该调价单作废后再进行价表有效期变更操作.Misc.调价单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.CanNotCancelOnEffectiveDateException">
+            <summary>
+            异常类型: 调价单生效日不能终止
+            
+             调价单生效日不能终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanNotCancelOnEffectiveDateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 调价单生效日不能终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanNotCancelOnEffectiveDateException.#ctor">
+            <summary>
+            异常类型: 调价单生效日不能终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanNotCancelOnEffectiveDateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 调价单生效日不能终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.priceAdjustmentCanceledException">
+            <summary>
+            异常类型: 当前厂商调价单已经被终止，不能再终止
+            
+             当前厂商调价单已经被终止，不能再终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.priceAdjustmentCanceledException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前厂商调价单已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.priceAdjustmentCanceledException.#ctor">
+            <summary>
+            异常类型: 当前厂商调价单已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.priceAdjustmentCanceledException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前厂商调价单已经被终止，不能再终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.CanceledPRException">
+            <summary>
+            异常类型: 价表已经终止
+            
+             价表已经终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanceledPRException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 价表已经终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanceledPRException.#ctor">
+            <summary>
+            异常类型: 价表已经终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.CanceledPRException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 价表已经终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.DataHaveChangedException">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！
+            
+             当前数据已发生变化，请稍后再试！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.DataHaveChangedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.DataHaveChangedException.#ctor">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.DataHaveChangedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceAdjustmentOrPLIsNull">
+            <summary>
+            异常类型: 调价单或调价单对应价表为空
+            
+             调价单或调价单对应价表为空
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceAdjustmentOrPLIsNull.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 调价单或调价单对应价表为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceAdjustmentOrPLIsNull.#ctor">
+            <summary>
+            异常类型: 调价单或调价单对应价表为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceAdjustment.PurPriceAdjustmentOrPLIsNull.#ctor(System.Exception)">
+            <summary>
+            异常类型: 调价单或调价单对应价表为空 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData">
+            <summary>
+            供应商价表信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.#ctor(System.Int64,System.String,System.String,System.Int32,System.Int64,System.Boolean,System.Boolean,System.Boolean,System.Boolean,UFIDA.U9.CBO.SCM.DTOs.DateRangeData,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_pLCode">
+            <summary>
+            价目表编码
+            供应商价表信息.Misc.价目表编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_pLName">
+            <summary>
+            价目表名称
+            供应商价表信息.Misc.价目表名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_pLVersion">
+            <summary>
+            价目表版本
+            供应商价表信息.Misc.价目表版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_isIncludeTax">
+            <summary>
+            是否含税
+            供应商价表信息.Misc.是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_isCanModifyInDoc">
+            <summary>
+            是否可修改
+            供应商价表信息.Misc.是否可修改
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_isDefault">
+            <summary>
+            默认
+            供应商价表信息.Misc.默认
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_isFromSite">
+            <summary>
+            是否来自site
+            供应商价表信息.Misc.是否来自site
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.m_dateRange">
+            <summary>
+            日期范围
+            供应商价表信息.Misc.日期范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.PLKey_SKey">
+            <summary>
+            价目表Key 序列化Key属性。（传递跨组织序列列字段）
+            供应商价表信息.Misc.价目表Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.PLKey">
+            <summary>
+            价目表Key
+            供应商价表信息.Misc.价目表Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.Currency_SKey">
+            <summary>
+            价目表币种 序列化Key属性。（传递跨组织序列列字段）
+            供应商价表信息.Misc.价目表币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.Currency">
+            <summary>
+            价目表币种
+            供应商价表信息.Misc.价目表币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.Supplier_SKey">
+            <summary>
+            供应商 序列化Key属性。（传递跨组织序列列字段）
+            供应商价表信息.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.Supplier">
+            <summary>
+            供应商
+            供应商价表信息.Misc.供应商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.SupplierSite_SKey">
+            <summary>
+            供应商位置 序列化Key属性。（传递跨组织序列列字段）
+            供应商价表信息.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PurPriceList.PartnerSupplierPLInfoForBPData.SupplierSite">
+            <summary>
+            供应商位置
+            供应商价表信息.Misc.供应商位置
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceList.ExistAdjustmentNotInDateRangeException">
+            <summary>
+            异常类型: 存在不在有效期内的调价单异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.ExistAdjustmentNotInDateRangeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 存在不在有效期内的调价单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.ExistAdjustmentNotInDateRangeException.#ctor">
+            <summary>
+            异常类型: 存在不在有效期内的调价单异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.ExistAdjustmentNotInDateRangeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 存在不在有效期内的调价单异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceList.prCanceledException">
+            <summary>
+            异常类型: 当前厂商价目表已经被终止，不能再终止
+            
+             当前厂商价目表已经被终止，不能再终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.prCanceledException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前厂商价目表已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.prCanceledException.#ctor">
+            <summary>
+            异常类型: 当前厂商价目表已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.prCanceledException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前厂商价目表已经被终止，不能再终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurPriceList.DataHaveChangedException">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！
+            
+             当前数据已发生变化，请稍后再试！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.DataHaveChangedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.DataHaveChangedException.#ctor">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurPriceList.DataHaveChangedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData">
+            <summary>
+            物料询价信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Decimal,System.DateTime,System.Int64,System.String,System.Int64,System.Collections.Generic.List{UFIDA.U9.CBO.SCM.DTOs.SupplierPriceInfoDTOData},System.Int64,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_itemInfo">
+            <summary>
+            料品信息
+            物料询价信息DTO.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_reqQty">
+            <summary>
+            请购数量
+            物料询价信息DTO.Misc.请购数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_requestDeliveryDate">
+            <summary>
+            要求交货日期
+            物料询价信息DTO.Misc.要求交货日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_reuturnPackingMode">
+            <summary>
+            包装方式
+            物料询价信息DTO.Misc.包装方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_supplierInfos">
+            <summary>
+            供应商
+            物料询价信息DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.m_rFQClass">
+            <summary>
+            询价类
+            物料询价信息DTO.Misc.询价类
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.TransportMode_SKey">
+            <summary>
+            运输方式 序列化Key属性。（传递跨组织序列列字段）
+            物料询价信息DTO.Misc.运输方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.TransportMode">
+            <summary>
+            运输方式
+            物料询价信息DTO.Misc.运输方式
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.WareHouse_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            物料询价信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.WareHouse">
+            <summary>
+            存储地点
+            物料询价信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.UOM_SKey">
+            <summary>
+            计量单位 序列化Key属性。（传递跨组织序列列字段）
+            物料询价信息DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.UOM">
+            <summary>
+            计量单位
+            物料询价信息DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.Mfc_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            物料询价信息DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.Mfc">
+            <summary>
+            厂牌
+            物料询价信息DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.Seiban_SKey">
+            <summary>
+            番号 序列化Key属性。（传递跨组织序列列字段）
+            物料询价信息DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.ItemQuotationDTOData.Seiban">
+            <summary>
+            番号
+            物料询价信息DTO.Misc.番号
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData">
+            <summary>
+            RFQLineWithQtyDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.#ctor(System.Int64,UFIDA.U9.CBO.DTOs.DoubleQuantityData,System.Int64,UFIDA.U9.PPR.RFQ.RFQSubLineData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.m_toPOQty">
+            <summary>
+            转PO数量
+            RFQLineWithQtyDTO.Misc.转PO数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.m_destID">
+            <summary>
+            目标单据标识
+            RFQLineWithQtyDTO.Misc.目标单据标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.m_rFQSubLine">
+            <summary>
+            询价单子行
+            RFQLineWithQtyDTO.Misc.询价单子行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.RFQLine_SKey">
+            <summary>
+            询价单行 序列化Key属性。（传递跨组织序列列字段）
+            RFQLineWithQtyDTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData.RFQLine">
+            <summary>
+            询价单行
+            RFQLineWithQtyDTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.ConditionData">
+            <summary>
+            过滤条件 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.ConditionData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.ConditionData.#ctor(UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.String,UFIDA.U9.PPR.RFQ.RFQLineData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ConditionData.m_itemInfo">
+            <summary>
+            物料信息
+            过滤条件.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ConditionData.m_rFQLot">
+            <summary>
+            询价批
+            过滤条件.Misc.询价批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.ConditionData.m_rfqLine">
+            <summary>
+            询价单行
+            过滤条件.Misc.询价单行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.DefValueDTOData">
+            <summary>
+            默认值DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.DefValueDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.DefValueDTOData.#ctor(UFIDA.U9.PPR.RFQ.RFQDocTypeData,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.DefValueDTOData.m_docType">
+            <summary>
+            单据类型
+            默认值DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.DefValueDTOData.m_step">
+            <summary>
+            行号步长
+            默认值DTO.Misc.行号步长
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.DefValueDTOData.m_start">
+            <summary>
+            行号起始值
+            默认值DTO.Misc.行号起始值
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQToPODTOData">
+            <summary>
+            询价单转订单DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQToPODTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQToPODTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.PPR.RFQ.RFQLineWithQtyDTOData},System.Collections.Generic.List{System.String},System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_rFQLines">
+            <summary>
+            询价单行
+            询价单转订单DTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_splitBy">
+            <summary>
+            分单条件
+            询价单转订单DTO.Misc.分单条件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_splitDay">
+            <summary>
+            允许时距
+            询价单转订单DTO.Misc.允许时距
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_splitDateType">
+            <summary>
+            分单日期类型
+            询价单转订单DTO.Misc.分单日期类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_baseDateType">
+            <summary>
+            基准日期类型
+            询价单转订单DTO.Misc.基准日期类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQToPODTOData.m_isPulled">
+            <summary>
+            是否拉式生单
+            询价单转订单DTO.Misc.是否拉式生单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData">
+            <summary>
+            询价单状态更新入口DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.#ctor(System.Int64,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.m_cancelReason">
+            <summary>
+            终止原因
+            询价单状态更新入口DTO.Misc.终止原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.m_rFQOperType">
+            <summary>
+            询价单行操作类型枚举
+            询价单状态更新入口DTO.Misc.询价单行操作类型枚举
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.RFQ_SKey">
+            <summary>
+            询价单 序列化Key属性。（传递跨组织序列列字段）
+            询价单状态更新入口DTO.Misc.询价单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQStutsUpdateInputDTOData.RFQ">
+            <summary>
+            询价单
+            询价单状态更新入口DTO.Misc.询价单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData">
+            <summary>
+            询价单行状态更新入口DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.#ctor(System.Int64,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.m_cancelReason">
+            <summary>
+            终止原因
+            询价单行状态更新入口DTO.Misc.终止原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.m_rFQLineOperType">
+            <summary>
+            询价单行操作类型枚举
+            询价单行状态更新入口DTO.Misc.询价单行操作类型枚举
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.RFQLine_SKey">
+            <summary>
+            询价单行 序列化Key属性。（传递跨组织序列列字段）
+            询价单行状态更新入口DTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQLineStutsUpdateInputDTOData.RFQLine">
+            <summary>
+            询价单行
+            询价单行状态更新入口DTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQLineUpdateResultDTOData">
+            <summary>
+            询价单行更新结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineUpdateResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQLineUpdateResultDTOData.#ctor(System.Decimal,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineUpdateResultDTOData.m_rFQLineID">
+            <summary>
+            询价单行
+            询价单行更新结果DTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQLineUpdateResultDTOData.m_errorMsg">
+            <summary>
+            操作结果
+            询价单行更新结果DTO.Misc.操作结果
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData">
+            <summary>
+            查询询价单行数据返回数据 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.#ctor(System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.Int32,System.String,System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_rFQLot">
+            <summary>
+            询价批
+            查询询价单行数据返回数据.Misc.询价批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_item_Code">
+            <summary>
+            物料Code
+            查询询价单行数据返回数据.Misc.物料Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_item_Name">
+            <summary>
+            物料Name
+            查询询价单行数据返回数据.Misc.物料Name
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemAttr">
+            <summary>
+            料品形态属性
+            查询询价单行数据返回数据.Misc.料品形态属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemDes">
+            <summary>
+            描述
+            查询询价单行数据返回数据.Misc.描述
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemGrade">
+            <summary>
+            料品等级
+            查询询价单行数据返回数据.Misc.料品等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemPotency">
+            <summary>
+            料品成分
+            查询询价单行数据返回数据.Misc.料品成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            查询询价单行数据返回数据.Misc.料品版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_item">
+            <summary>
+            物料
+            查询询价单行数据返回数据.Misc.物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.QryRFQLineResultDTOData.m_itemSepcs">
+            <summary>
+            物料规格
+            查询询价单行数据返回数据.Misc.物料规格
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData">
+            <summary>
+            OrgAndItemInfoDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData.#ctor(System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData.m_itemInfo">
+            <summary>
+            料品
+            OrgAndItemInfoDTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            OrgAndItemInfoDTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.OrgAndItemInfoDTOData.Org">
+            <summary>
+            组织
+            OrgAndItemInfoDTO.Misc.组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData">
+            <summary>
+            RFQCompareResultDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.#ctor(System.Int64,UFIDA.U9.PPR.CP.CPData,UFIDA.U9.PPR.CP.CPLineData,System.Int32,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_rfqLineID">
+            <summary>
+            询价单行
+            RFQCompareResultDTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_cP">
+            <summary>
+            比价单
+            RFQCompareResultDTO.Misc.比价单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_cPLine">
+            <summary>
+            比价单行
+            RFQCompareResultDTO.Misc.比价单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_comparePrcResultEnum">
+            <summary>
+            比价结果
+            RFQCompareResultDTO.Misc.比价结果
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_cPMemo">
+            <summary>
+            比价备注
+            RFQCompareResultDTO.Misc.比价备注
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_updateType">
+            <summary>
+            比价更新类型
+            RFQCompareResultDTO.Misc.比价更新类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareResultDTOData.m_isExistAcceptedCP">
+            <summary>
+            本次比价是否存在接受的比价记录
+            RFQCompareResultDTO.Misc.本次比价是否存在接受的比价记录
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQSrcDocDTOData">
+            <summary>
+            RFQSrcDocDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQSrcDocDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQSrcDocDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQSrcDocDTOData.m_srcDocID">
+            <summary>
+            SrcDocID
+            RFQSrcDocDTO.Misc.SrcDocID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQSrcDocDTOData.m_expID">
+            <summary>
+            需排除的ID
+            RFQSrcDocDTO.Misc.需排除的ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData">
+            <summary>
+            CompareRFQToPLDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.#ctor(System.Int64,System.Int64,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.m_pLID">
+            <summary>
+            价表ID
+            CompareRFQToPLDTO.Misc.价表ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.m_pLCode">
+            <summary>
+            待生成的价表或调价单编号
+            CompareRFQToPLDTO.Misc.待生成的价表或调价单编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.m_pLName">
+            <summary>
+            待生成的价表或调价单名称
+            CompareRFQToPLDTO.Misc.待生成的价表或调价单名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.m_aDCode">
+            <summary>
+            待生成的调价单编号
+            CompareRFQToPLDTO.Misc.待生成的调价单编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.m_sysVersion">
+            <summary>
+            比价单行系统版本
+            CompareRFQToPLDTO.Misc.比价单行系统版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.CPLineKey_SKey">
+            <summary>
+            比价单行key 序列化Key属性。（传递跨组织序列列字段）
+            CompareRFQToPLDTO.Misc.比价单行key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.CompareRFQToPLDTOData.CPLineKey">
+            <summary>
+            比价单行key
+            CompareRFQToPLDTO.Misc.比价单行key
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData">
+            <summary>
+            RFQCompareErrorMsgDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData.m_errorMessage">
+            <summary>
+            错误信息
+            RFQCompareErrorMsgDTO.Misc.错误信息
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData.CPKey_SKey">
+            <summary>
+            比价单Key 序列化Key属性。（传递跨组织序列列字段）
+            RFQCompareErrorMsgDTO.Misc.比价单Key
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQCompareErrorMsgDTOData.CPKey">
+            <summary>
+            比价单Key
+            RFQCompareErrorMsgDTO.Misc.比价单Key
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQSrcDocDTO2Data">
+            <summary>
+            RFQSrcDocDTO2 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQSrcDocDTO2Data.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQSrcDocDTO2Data.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQSrcDocDTO2Data.m_srcDocID">
+            <summary>
+            SrcDocID
+            RFQSrcDocDTO2.Misc.SrcDocID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.RFQSrcDocDTO2Data.m_expID">
+            <summary>
+            需排除的ID列表串
+            RFQSrcDocDTO2.Misc.需排除的ID列表串
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData">
+            <summary>
+            CreatePriceListResultDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.Base.DTOs.IDCodeNameDTOData},System.Collections.Generic.List{UFIDA.U9.Base.DTOs.IDCodeNameDTOData},System.Collections.Generic.List{UFIDA.U9.Base.DTOs.IDCodeNameDTOData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData.m_priceLists">
+            <summary>
+            价表
+            CreatePriceListResultDTO.Misc.价表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData.m_adjustments">
+            <summary>
+            调价单
+            CreatePriceListResultDTO.Misc.调价单
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQ.CreatePriceListResultDTOData.m_purDiscountPolicys">
+            <summary>
+            折扣单
+            CreatePriceListResultDTO.Misc.折扣单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_ProviderNotExistException">
+            <summary>
+            异常类型: 供应商不存在
+            
+             供应商不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderNotExistException.#ctor">
+            <summary>
+            异常类型: 供应商不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 供应商不存在 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_ProviderIsHoldException">
+            <summary>
+            异常类型: 供应商已经被hold
+            
+             供应商已经被hold:${Description}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderIsHoldException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商已经被hold Constructor
+            </summary>
+            <param name="description">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderIsHoldException.#ctor(System.String)">
+            <summary>
+            异常类型: 供应商已经被hold Constructor
+            </summary>
+            <param name="description">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderIsHoldException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 供应商已经被hold Constructor
+            </summary>
+            <param name="description">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQ_ProviderIsHoldException.Description">
+            <summary>
+            属性
+            供应商已经被hold.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteNotExistException">
+            <summary>
+            异常类型: 供应商出货site不存在
+            
+             供应商出货site不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商出货site不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteNotExistException.#ctor">
+            <summary>
+            异常类型: 供应商出货site不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 供应商出货site不存在 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_RejectProviderException">
+            <summary>
+            异常类型: 不能向供应商进行采购
+            
+             不能向供应商进行采购
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_RejectProviderException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不能向供应商进行采购 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_RejectProviderException.#ctor">
+            <summary>
+            异常类型: 不能向供应商进行采购 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_RejectProviderException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不能向供应商进行采购 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsObsoleteException">
+            <summary>
+            异常类型: 供应商出货site已经过期
+            
+             供应商出货site已经过期
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsObsoleteException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商出货site已经过期 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsObsoleteException.#ctor">
+            <summary>
+            异常类型: 供应商出货site已经过期 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsObsoleteException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 供应商出货site已经过期 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_PRIsHangException">
+            <summary>
+            异常类型: 询价单行对应的请购单行已被挂起或终止
+            
+             询价单行对应的请购单行已被挂起或终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsHangException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 询价单行对应的请购单行已被挂起或终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsHangException.#ctor">
+            <summary>
+            异常类型: 询价单行对应的请购单行已被挂起或终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsHangException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 询价单行对应的请购单行已被挂起或终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_PRIsNotExistException">
+            <summary>
+            异常类型: 询价单行对应的请购单行不存在
+            
+             询价单行对应的请购单行不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 询价单行对应的请购单行不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsNotExistException.#ctor">
+            <summary>
+            异常类型: 询价单行对应的请购单行不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_PRIsNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 询价单行对应的请购单行不存在 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsNotPRSiteException">
+            <summary>
+            异常类型: 供应商询价site不是一个询价地点
+            
+             供应商询价site不是一个询价地点
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsNotPRSiteException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商询价site不是一个询价地点 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsNotPRSiteException.#ctor">
+            <summary>
+            异常类型: 供应商询价site不是一个询价地点 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQ_ProviderSiteIsNotPRSiteException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 供应商询价site不是一个询价地点 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.CanNotComparePriceException">
+            <summary>
+            异常类型: 不能比价异常
+            
+             已经存在接受比价的相同询价批相同物料的询价单，不能进行接受比价
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CanNotComparePriceException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不能比价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CanNotComparePriceException.#ctor">
+            <summary>
+            异常类型: 不能比价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CanNotComparePriceException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不能比价异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.CannotApproveTheSameTimeException">
+            <summary>
+            异常类型: 相同物料,询价批,厂牌,不同供应商的询价单行不能同时审核异常
+            
+             相同物料,询价批,厂牌,不同供应商的询价单行不能同时审核
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CannotApproveTheSameTimeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 相同物料,询价批,厂牌,不同供应商的询价单行不能同时审核异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CannotApproveTheSameTimeException.#ctor">
+            <summary>
+            异常类型: 相同物料,询价批,厂牌,不同供应商的询价单行不能同时审核异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CannotApproveTheSameTimeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 相同物料,询价批,厂牌,不同供应商的询价单行不能同时审核异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RfqSameLotItemNotSameSuppCannotComPrcException">
+            <summary>
+            异常类型: 相同询价批,相同物料,不同供应商的询价单不能接收比价异常
+            
+             相同询价批,相同物料,不同供应商的询价单不能接收比价!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RfqSameLotItemNotSameSuppCannotComPrcException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 相同询价批,相同物料,不同供应商的询价单不能接收比价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RfqSameLotItemNotSameSuppCannotComPrcException.#ctor">
+            <summary>
+            异常类型: 相同询价批,相同物料,不同供应商的询价单不能接收比价异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RfqSameLotItemNotSameSuppCannotComPrcException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 相同询价批,相同物料,不同供应商的询价单不能接收比价异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.NoItemPrcSupplierException">
+            <summary>
+            异常类型: 不存在物料报价供应商异常
+            
+             不存在物料${ItemName}的报价供应商
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.NoItemPrcSupplierException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不存在物料报价供应商异常 Constructor
+            </summary>
+            <param name="itemName">物料名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.NoItemPrcSupplierException.#ctor(System.String)">
+            <summary>
+            异常类型: 不存在物料报价供应商异常 Constructor
+            </summary>
+            <param name="itemName">物料名称</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.NoItemPrcSupplierException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 不存在物料报价供应商异常 Constructor
+            </summary>
+            <param name="itemName">物料名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.NoItemPrcSupplierException.ItemName">
+            <summary>
+            物料名称
+            不存在物料报价供应商异常.Misc.物料名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException">
+            <summary>
+            异常类型: 该询价单的与来源合同供应商不一致，不能接受比价异常
+            
+             该询价单的供应商:${RfqSupp} 与来源合同供应商:${PRPCSupp} 不一致，不能接受比价
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 该询价单的与来源合同供应商不一致，不能接受比价异常 Constructor
+            </summary>
+            <param name="rfqSupp">供应商（RFQ）</param>
+            <param name="pRPCSupp">供应商（PRPC）</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 该询价单的与来源合同供应商不一致，不能接受比价异常 Constructor
+            </summary>
+            <param name="rfqSupp">供应商（RFQ）</param>
+            <param name="pRPCSupp">供应商（PRPC）</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 该询价单的与来源合同供应商不一致，不能接受比价异常 Constructor
+            </summary>
+            <param name="rfqSupp">供应商（RFQ）</param>
+            <param name="pRPCSupp">供应商（PRPC）</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException.RfqSupp">
+            <summary>
+            供应商（RFQ）
+            该询价单的与来源合同供应商不一致，不能接受比价异常.Misc.供应商（RFQ）
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQ.RFQCanNotAccPrc_SrcPRPCException.PRPCSupp">
+            <summary>
+            供应商（PRPC）
+            该询价单的与来源合同供应商不一致，不能接受比价异常.Misc.供应商（PRPC）
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.CPISExsitException">
+            <summary>
+            异常类型: 比价单已被他人修改
+            
+             比价单已被他人修改
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CPISExsitException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 比价单已被他人修改 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CPISExsitException.#ctor">
+            <summary>
+            异常类型: 比价单已被他人修改 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.CPISExsitException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 比价单已被他人修改 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQ.SupplyIsTrueException">
+            <summary>
+            异常类型: 物料对应的供应商选择不正确
+            
+             物料对应的供应商选择不正确
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.SupplyIsTrueException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 物料对应的供应商选择不正确 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.SupplyIsTrueException.#ctor">
+            <summary>
+            异常类型: 物料对应的供应商选择不正确 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQ.SupplyIsTrueException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 物料对应的供应商选择不正确 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurDiscountPolicy.dpCanceledException">
+            <summary>
+            异常类型: 当前厂商折扣单已经被终止，不能再终止
+            
+             当前厂商折扣单已经被终止，不能再终止
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.dpCanceledException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前厂商折扣单已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.dpCanceledException.#ctor">
+            <summary>
+            异常类型: 当前厂商折扣单已经被终止，不能再终止 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.dpCanceledException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前厂商折扣单已经被终止，不能再终止 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PurDiscountPolicy.DataHaveChangedException">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！
+            
+             当前数据已发生变化，请稍后再试！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.DataHaveChangedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.DataHaveChangedException.#ctor">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.PurDiscountPolicy.DataHaveChangedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 当前数据已发生变化，请稍后再试！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData">
+            <summary>
+            RequestRecordDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.#ctor(System.Collections.Generic.List{System.Int64},System.DateTime,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.m_rFQRanges">
+            <summary>
+            询价范围
+            RequestRecordDTO.Misc.询价范围
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.m_rFQDate">
+            <summary>
+            询价日期
+            RequestRecordDTO.Misc.询价日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.m_rFQLot">
+            <summary>
+            询价批
+            RequestRecordDTO.Misc.询价批
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.RFQRanges_SKey">
+            <summary>
+            询价范围 序列化Key属性集合。（传递跨组织序列列字段） --??还有问题.
+            RequestRecordDTO.Misc.询价范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.RFQOperator_SKey">
+            <summary>
+            询价人 序列化Key属性。（传递跨组织序列列字段）
+            RequestRecordDTO.Misc.询价人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.RFQRange.RequestRecordDTOData.RFQOperator">
+            <summary>
+            询价人
+            RequestRecordDTO.Misc.询价人
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData">
+            <summary>
+            查询询价范围条件DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int32,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_itemMasterID">
+            <summary>
+            物料
+            查询询价范围条件DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_itemCatalogID">
+            <summary>
+            物料分类
+            查询询价范围条件DTO.Misc.物料分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_supplierID">
+            <summary>
+            供应商
+            查询询价范围条件DTO.Misc.供应商
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_supplierCatalogID">
+            <summary>
+            供应商分类
+            查询询价范围条件DTO.Misc.供应商分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_industryID">
+            <summary>
+            行业
+            查询询价范围条件DTO.Misc.行业
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_territoryID">
+            <summary>
+            地区
+            查询询价范围条件DTO.Misc.地区
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_itemFormAttribute">
+            <summary>
+            物料形态属性
+            查询询价范围条件DTO.Misc.物料形态属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_itemDesc">
+            <summary>
+            物料多选返回ID
+            查询询价范围条件DTO.Misc.物料多选返回ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeConditionDTOData.m_suppDesc">
+            <summary>
+            供应商多选返回ID
+            查询询价范围条件DTO.Misc.供应商多选返回ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData">
+            <summary>
+            查询询价范围结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.#ctor(System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,UFIDA.U9.CBO.SCM.Supplier.SupplierMISCInfoData,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.Int32,System.Int64,System.Int64,System.Int64,System.Int32,System.Int64,System.String,System.String,UFIDA.U9.Base.PropertyTypes.RoundData,System.Int64,System.String,System.String,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_rfqRangeID">
+            <summary>
+            询价范围表ID
+            查询询价范围结果DTO.Misc.询价范围表ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemInfo">
+            <summary>
+            料品信息
+            查询询价范围结果DTO.Misc.料品信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_supplierInfo">
+            <summary>
+            供应商信息
+            查询询价范围结果DTO.Misc.供应商信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_tag">
+            <summary>
+            处理标识
+            查询询价范围结果DTO.Misc.处理标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemDescription">
+            <summary>
+            物料描述
+            查询询价范围结果DTO.Misc.物料描述
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt1Name">
+            <summary>
+            自由项1
+            查询询价范围结果DTO.Misc.自由项1
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt2Name">
+            <summary>
+            自由项2
+            查询询价范围结果DTO.Misc.自由项2
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt3Name">
+            <summary>
+            自由项3
+            查询询价范围结果DTO.Misc.自由项3
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt4Name">
+            <summary>
+            自由项4
+            查询询价范围结果DTO.Misc.自由项4
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt5Name">
+            <summary>
+            自由项5
+            查询询价范围结果DTO.Misc.自由项5
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt6Name">
+            <summary>
+            自由项6
+            查询询价范围结果DTO.Misc.自由项6
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt7Name">
+            <summary>
+            自由项7
+            查询询价范围结果DTO.Misc.自由项7
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt8Name">
+            <summary>
+            自由项8
+            查询询价范围结果DTO.Misc.自由项8
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt9Name">
+            <summary>
+            自由项9
+            查询询价范围结果DTO.Misc.自由项9
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemOpt10Name">
+            <summary>
+            自由项10
+            查询询价范围结果DTO.Misc.自由项10
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_supplierCatalog">
+            <summary>
+            供应商分类
+            查询询价范围结果DTO.Misc.供应商分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_industry">
+            <summary>
+            行业
+            查询询价范围结果DTO.Misc.行业
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_address">
+            <summary>
+            办公地址
+            查询询价范围结果DTO.Misc.办公地址
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_contactMan">
+            <summary>
+            联系人
+            查询询价范围结果DTO.Misc.联系人
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_lanaguage">
+            <summary>
+            语言
+            查询询价范围结果DTO.Misc.语言
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_itemForm">
+            <summary>
+            形态属性
+            查询询价范围结果DTO.Misc.形态属性
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_uOM">
+            <summary>
+            计量单位
+            查询询价范围结果DTO.Misc.计量单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_uOMCode">
+            <summary>
+            计价单位编码
+            查询询价范围结果DTO.Misc.计价单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_uOMName">
+            <summary>
+            计价单位名称
+            查询询价范围结果DTO.Misc.计价单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_round">
+            <summary>
+            精度
+            查询询价范围结果DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_mfc">
+            <summary>
+            厂牌
+            查询询价范围结果DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_mfcCode">
+            <summary>
+            厂牌编码
+            查询询价范围结果DTO.Misc.厂牌编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_mfcName">
+            <summary>
+            厂牌名称
+            查询询价范围结果DTO.Misc.厂牌名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData.m_querySupplierCount">
+            <summary>
+            料品询价家数
+            查询询价范围结果DTO.Misc.料品询价家数
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.AutoRFQResultDTOData">
+            <summary>
+            定期询价结果DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.AutoRFQResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.AutoRFQResultDTOData.#ctor(System.Collections.Generic.List{UFSoft.UBF.Business.BusinessEntity.EntityKey},System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.AutoRFQResultDTOData.m_rFQLines">
+            <summary>
+            询价单行
+            定期询价结果DTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.AutoRFQResultDTOData.m_successItemQty">
+            <summary>
+            询价成功料品数量
+            定期询价结果DTO.Misc.询价成功料品数量
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData">
+            <summary>
+            物料自由项名称 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt1Name">
+            <summary>
+            自由项1
+            物料自由项名称.Misc.自由项1
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt2Name">
+            <summary>
+            自由项2
+            物料自由项名称.Misc.自由项2
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt3Name">
+            <summary>
+            自由项3
+            物料自由项名称.Misc.自由项3
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt4Name">
+            <summary>
+            自由项4
+            物料自由项名称.Misc.自由项4
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt5Name">
+            <summary>
+            自由项5
+            物料自由项名称.Misc.自由项5
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt6Name">
+            <summary>
+            自由项6
+            物料自由项名称.Misc.自由项6
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt7Name">
+            <summary>
+            自由项7
+            物料自由项名称.Misc.自由项7
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt8Name">
+            <summary>
+            自由项8
+            物料自由项名称.Misc.自由项8
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt9Name">
+            <summary>
+            自由项9
+            物料自由项名称.Misc.自由项9
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData.m_itemOpt10Name">
+            <summary>
+            自由项10
+            物料自由项名称.Misc.自由项10
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.RFQRange.GetRFRRangeResult2DTOData">
+            <summary>
+            查询询价范围结果2DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeResult2DTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.RFQRange.GetRFRRangeResult2DTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.PPR.RFQRange.GetRFRRangeResultDTOData},UFIDA.U9.PPR.RFQRange.ItemOptNameDTOData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResult2DTOData.m_getRFRRangeResultDTOList">
+            <summary>
+            
+            查询询价范围结果2DTO.Misc.
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.RFQRange.GetRFRRangeResult2DTOData.m_itemOptNameDTO">
+            <summary>
+            物料自由项名称
+            查询询价范围结果2DTO.Misc.物料自由项名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.DefValueDTOData">
+            <summary>
+            默认值返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.DefValueDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.DefValueDTOData.#ctor(UFIDA.U9.PPR.CP.CPDocTypeData,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.CP.DefValueDTOData.m_cPDocType">
+            <summary>
+            CP单据类型
+            默认值返回DTO.Misc.CP单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.CP.DefValueDTOData.m_start">
+            <summary>
+            起始
+            默认值返回DTO.Misc.起始
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.CP.DefValueDTOData.m_step">
+            <summary>
+            单号步长
+            默认值返回DTO.Misc.单号步长
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.CP.DefValueDTOData.m_isImmeCreateCP">
+            <summary>
+            直接生成比价单
+            默认值返回DTO.Misc.直接生成比价单
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.CPResultNoEmptyException">
+            <summary>
+            异常类型: 比价结论不能为空
+            
+             比价单行号=${CPLineNo}的比价结论不能为空!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultNoEmptyException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 比价结论不能为空 Constructor
+            </summary>
+            <param name="cPLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultNoEmptyException.#ctor(System.String)">
+            <summary>
+            异常类型: 比价结论不能为空 Constructor
+            </summary>
+            <param name="cPLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultNoEmptyException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 比价结论不能为空 Constructor
+            </summary>
+            <param name="cPLineNo">行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.CP.CPResultNoEmptyException.CPLineNo">
+            <summary>
+            行号
+            比价结论不能为空.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.PriceEqualException">
+            <summary>
+            异常类型: 相同料品信息,厂牌,供应商,供应商位置的报价价格必须相同
+            
+             相同料品信息,厂牌,供应商,供应商位置的报价价格必须相同！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.PriceEqualException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 相同料品信息,厂牌,供应商,供应商位置的报价价格必须相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.PriceEqualException.#ctor">
+            <summary>
+            异常类型: 相同料品信息,厂牌,供应商,供应商位置的报价价格必须相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.PriceEqualException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 相同料品信息,厂牌,供应商,供应商位置的报价价格必须相同 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException">
+            <summary>
+            异常类型: 询价类维度只能有一条比价接受的记录
+            
+             料号${ItemCode}品名${ItemName}的询价类维度只能有一条比价接受的记录
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 询价类维度只能有一条比价接受的记录 Constructor
+            </summary>
+            <param name="itemCode">料号</param>
+            <param name="itemName">品名</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 询价类维度只能有一条比价接受的记录 Constructor
+            </summary>
+            <param name="itemCode">料号</param>
+            <param name="itemName">品名</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 询价类维度只能有一条比价接受的记录 Constructor
+            </summary>
+            <param name="itemCode">料号</param>
+            <param name="itemName">品名</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException.ItemCode">
+            <summary>
+            料号
+            询价类维度只能有一条比价接受的记录.Misc.料号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PPR.CP.CPResultIsAcceptOnlyOneException.ItemName">
+            <summary>
+            品名
+            询价类维度只能有一条比价接受的记录.Misc.品名
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.CPIsUsedNoUnApproveException">
+            <summary>
+            异常类型: 比价单已被引用，不允许弃审！
+            
+             比价单已被引用，不允许弃审！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPIsUsedNoUnApproveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 比价单已被引用，不允许弃审！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPIsUsedNoUnApproveException.#ctor">
+            <summary>
+            异常类型: 比价单已被引用，不允许弃审！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.CPIsUsedNoUnApproveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 比价单已被引用，不允许弃审！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.IsCreatePriceListNoUnApproveException">
+            <summary>
+            异常类型: 已经生成价目表相关信息不能再弃审
+            
+             已经生成价目表相关信息不能再弃审
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.IsCreatePriceListNoUnApproveException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 已经生成价目表相关信息不能再弃审 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.IsCreatePriceListNoUnApproveException.#ctor">
+            <summary>
+            异常类型: 已经生成价目表相关信息不能再弃审 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.IsCreatePriceListNoUnApproveException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 已经生成价目表相关信息不能再弃审 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PPR.CP.SupplierExsitException">
+            <summary>
+            异常类型: 供应商必须有档案
+            
+             比价单单号=${DocNo}行号${CPLineNo}的供应商必须有档案
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.SupplierExsitException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 供应商必须有档案 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="cPLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.SupplierExsitException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 供应商必须有档案 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="cPLineNo">行号</param>
+        </member>
+        <member name="M:UFIDA.U9.PPR.CP.SupplierExsitException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 供应商必须有档案 Constructor
+            </summary>
+            <param name="docNo">单号</param>
+            <param name="cPLineNo">行号</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PPR.CP.SupplierExsitException.DocNo">
+            <summary>
+            单号
+            供应商必须有档案.Misc.单号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PPR.CP.SupplierExsitException.CPLineNo">
+            <summary>
+            行号
+            供应商必须有档案.Misc.行号
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData">
+            <summary>
+            RequestRecordDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.#ctor(System.Int64,System.DateTime,System.String,System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.m_rFQDate">
+            <summary>
+            询价日期
+            RequestRecordDTO.Misc.询价日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.m_rFQLot">
+            <summary>
+            询价批
+            RequestRecordDTO.Misc.询价批
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.m_rFQLine">
+            <summary>
+            询价单行
+            RequestRecordDTO.Misc.询价单行
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.RFQRanges_SKey">
+            <summary>
+            询价范围 序列化Key属性。（传递跨组织序列列字段）
+            RequestRecordDTO.Misc.询价范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.RFQRanges">
+            <summary>
+            询价范围
+            RequestRecordDTO.Misc.询价范围
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.RFQOperator_SKey">
+            <summary>
+            询价人 序列化Key属性。（传递跨组织序列列字段）
+            RequestRecordDTO.Misc.询价人
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.ItemRFQRange.RequestRecordDTOData.RFQOperator">
+            <summary>
+            询价人
+            RequestRecordDTO.Misc.询价人
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.ItemRFQRange.BatchOperationResultDTOData">
+            <summary>
+            列表批量操作返回结果 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.ItemRFQRange.BatchOperationResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PPR.ItemRFQRange.BatchOperationResultDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.ItemRFQRange.BatchOperationResultDTOData.m_iD">
+            <summary>
+            ID
+            列表批量操作返回结果.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PPR.ItemRFQRange.BatchOperationResultDTOData.m_errMsg">
+            <summary>
+            ErrMsg
+            列表批量操作返回结果.Misc.ErrMsg
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PPR.PPRBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PPRBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PPR.PPRBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

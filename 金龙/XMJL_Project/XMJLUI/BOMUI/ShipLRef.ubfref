@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="88e9cadc-b354-4a43-8f8d-c0aa76f81c95" name="ShipLRef" displayName="库存杂发单行" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.XMJL.UI.ShipLRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="792bf4ab-b61e-49c9-b5bf-a01c2eb61128" name="cRef" displayName="cRef" description="" help="库存杂发单行" refEntityId="0ae88b23-2028-482e-8411-40f532718167" refEntityName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="1d598e14-df4f-47d4-bbd9-b0db2789c7a0" name="ID" displayName="ID" description="" help="库存杂发单行.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:ID" displayNameIndexStr="2" />
+        <RefField id="608f9799-2964-47bc-be21-29135bee19b7" name="DocLineNo" displayName="行号" description="" help="库存杂发单行.基本信息.行号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:DocLineNo" displayNameIndexStr="2" />
+        <RefField id="ccb5d8db-0a09-47d3-b8f1-ea2eabef939c" name="ItemInfo_ItemName" displayName="品名" description="" help="料品信息.Misc.品名" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:ItemInfo.ItemName" displayNameIndexStr="2" />
+        <RefField id="9513b9f7-9df4-4e5f-849b-b566c80f2037" name="ItemInfo_ItemCode" displayName="料号" description="" help="料品信息.Misc.料号" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="255" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:ItemInfo.ItemCode" displayNameIndexStr="2" />
+        <RefField id="5a52e222-fc24-4281-bca1-424a37f5b18f" name="MiscShip_DocNo" displayName="单号" description="" help="单据基类.Misc.单号" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:MiscShip.DocNo" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="81fe8a7b-96e4-4db6-a4d9-c8748e809aee" name="MiscShip_DocNo" displayName="单号" description="" help="单据基类.Misc.单号" direction="0" sequence="0" refAttributeName="UFIDA.U9.InvDoc.MiscShip.MiscShipmentL:MiscShip.DocNo" />
+      </OrderFields>
+      <Filter>UFIDA::U9::InvDoc::MiscShip::MiscShipmentL.Org.ID=#Context.OrgID#</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

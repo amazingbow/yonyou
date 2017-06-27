@@ -1,0 +1,110 @@
+<View ID="760c2587-22a1-4d0d-b103-656c1738f894" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="库存快速查询" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="10" GridTopMargin="0" Height="504" IsAutoSize="True" IsMainForm="True" LayoutType="GridBag" Name="InvInfoQueryDQryUIForm" Namespace="UFIDA.U9.Cust.FJGX.InvInfoQueryDQryUIModel" QueryInfo="QueryInfo" TabStop="False" TemplateCode="UI_QryForm" TemplateType="CustomTemplate" UIModelID="df179418-68f3-4ba2-aa34-c58590f59669" URI="UFIDA.U9.Cust.FJGX.InvInfoQueryDQryUIModel.InvInfoQueryDQryUIFormWebPart" UserType="ForQuery" ViewID="4983" Width="992" X="10" Y="10">
+  <Columns>
+    <Column Fixed="False" Name="Column0" Type="Title" Width="992" />
+  </Columns>
+  <Rows>
+    <Row Fixed="True" Height="28" Name="Row0" />
+    <Row Fixed="False" Height="421" Name="Row1" />
+    <Row Fixed="True" Height="25" Name="Row3" />
+  </Rows>
+  <Providers />
+  <InParameters />
+  <Toolbar ID="b5151a38-53c5-44f5-8e7a-5807dc6463fa" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="28" Name="Toolbar1" TabIndex="3" TabStop="True" Width="992" X="0" Y="0">
+    <Button ID="557742a5-c151-49a2-96f7-d63494905f08" AccessKey="" DisplayNameResourceID="688fd549-5a92-49cc-8072-6d5377f6409a" DisplaySrcType="PublicResource" Height="28" Name="BtnOutPut" TabIndex="1" TabStop="True" Width="35" X="0" Y="0">
+      <Events>
+        <Event ActionName="OnOutPut" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="91226a99-d3df-4c59-be98-d653a6da8ab2" AccessKey="" DisplayNameResourceID="27b5c615-cde5-458c-be74-833317249568" DisplaySrcType="PublicResource" Height="28" Name="BtnPrint" TabIndex="2" TabStop="True" Width="35" X="35" Y="0">
+      <Events>
+        <Event ActionName="OnPrint" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Toolbar>
+  <Card ID="2af00304-fd78-47e9-aaed-c64fb238b7e3" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="2" GridColumnCount="20" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="2" Height="25" LayoutType="GridBag" Name="Card0" TabIndex="4" TabStop="False" Width="992" X="0" Y="469">
+    <Columns>
+      <Column Fixed="True" Name="Column0" Type="Title" Width="80" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column2" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column3" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column4" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column5" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column6" Type="Value" Width="80" />
+      <Column Fixed="True" Name="Column13" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column12" Width="80" />
+      <Column Fixed="True" Name="Column11" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column10" Width="120" />
+      <Column Fixed="True" Name="Column19" Width="10" />
+      <Column Fixed="True" Name="Column9" Width="80" />
+      <Column Fixed="False" Name="Column16" Width="10" />
+      <Column Fixed="True" Name="Column17" Width="80" />
+      <Column Fixed="True" Name="Column18" Width="10" />
+      <Column Fixed="False" Name="Column15" Type="Title" Width="120" />
+      <Column Fixed="False" Name="Column14" Type="Spacing" Width="10" />
+      <Column Fixed="True" Name="Column7" Width="80" />
+      <Column Fixed="False" Name="Column8" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="True" Height="20" Name="Row0" />
+    </Rows>
+    <Label ID="010ecd06-ed37-4f32-afd7-504d9ac54316" DisplayName="" DisplayNameIndexStr="1" DisplayNameResourceID="7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3" DisplaySrcType="PublicResource" DisplaySrcUIFieldID="ChooseCase" DisplaySrcUIViewID="" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="0" Height="20" IsNull="True" Name="Label0" TabIndex="4" TabStop="True" TitleAlign="Right" TitleLocation="Left" Visible="True" Width="80" X="370" Y="3">
+      <Events />
+      <RelationControls />
+      <Events />
+    </Label>
+    <DropDownList ID="71f76ad9-feb4-4837-82c9-4402f7c97b5f" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="10" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="DDLCase" TabIndex="5" TabStop="True" TitleAlign="Left" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="120" X="460" Y="3">
+      <Events>
+        <Event ActionName="OnCaseChanged" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="TextChanged" Parameter="" Template="" />
+      </Events>
+      <RelationControls />
+    </DropDownList>
+    <Button ID="8b08b0bd-88d0-478e-9768-8fcda46c9a96" AccessKey="" GridHeight="1" GridWidth="1" GridX="0" GridY="0" Height="20" Name="OnLookCase" TabIndex="6" TabStop="True" Width="80" X="10" Y="3">
+      <Events>
+        <Event ActionName="OnLookCase" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="False" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+    <Button ID="4040286d-adb2-4ce3-8135-1e512f00d9a2" AccessKey="" GridHeight="1" GridWidth="1" GridX="12" GridY="0" Height="20" Name="btnSaveCurrentQueryCase" TabIndex="7" TabStop="True" Width="80" X="590" Y="3">
+      <Events>
+        <Event ActionName="btnSaveCurrentQueryCase" EnableEvent="True" EventType="PostBack" Name="Click" Parameter="" Template="" />
+      </Events>
+    </Button>
+  </Card>
+  <Card ID="8bda53e0-7837-4ac8-b262-11b1a9153fe1" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="4" GridColumnSpace="0" GridHeight="1" GridLeftMargin="3" GridRightMargin="3" GridRowCount="2" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="1" Height="421" LayoutType="GridBag" Name="Card3" TabIndex="5" TabStop="False" Width="992" X="0" Y="38">
+    <Columns>
+      <Column Fixed="True" Name="Column2" Width="200" />
+      <Column Fixed="True" Name="Column3" Width="10" />
+      <Column Fixed="False" Name="Column0" Type="Value" Width="775" />
+      <Column Fixed="True" Name="Column1" Type="Spacing" Width="1" />
+    </Columns>
+    <Rows>
+      <Row Fixed="False" Height="415" Name="Row0" />
+      <Row Fixed="True" Height="1" Name="Row1" />
+    </Rows>
+    <DataGrid ID="03086867-bf82-4386-b12c-aafd43d477c1" EditStatus="browse" Enabled="True" GridHeight="2" GridWidth="1" GridX="2" GridY="0" HasSum="False" Height="421" Name="DataGrid1" PageSize="18" Paging="True" TabIndex="0" TabStop="True" Width="775" X="213" Y="0">
+      <Events />
+      <Header ID="d0cc6b6f-35fc-4266-9054-14613d995644" Name="Header1">
+        <HeaderRow Name="DefaultRow" />
+      </Header>
+      <UIFilterBar Name="LocateBar" />
+      <Columns />
+    </DataGrid>
+    <Card ID="12352ecd-0afb-4b1b-b3c5-697b32cacfa4" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="0" GridColumnCount="1" GridColumnSpace="0" GridHeight="1" GridLeftMargin="0" GridRightMargin="0" GridRowCount="3" GridRowSpace="5" GridTopMargin="0" GridWidth="1" GridX="0" GridY="0" Height="415" Name="Card4" TabStop="False" Width="200" X="3" Y="0">
+      <Columns>
+        <Column Fixed="True" Name="Column0" Type="Title" Width="200" />
+      </Columns>
+      <Rows>
+        <Row Fixed="False" Height="20" Name="Row0" />
+        <Row Fixed="False" Height="365" Name="Row1" />
+        <Row Fixed="False" Height="20" Name="Row2" />
+      </Rows>
+      <TreeControl ID="e5f54a4b-c935-42a6-8cb7-fa519d86759b" CheckBoxes="False" GridHeight="3" GridWidth="1" GridX="0" GridY="0" Height="415" LoadOnDemand="False" MultipleSelect="False" Name="CategoryTree0" TabIndex="1" TabStop="True" Width="200" X="0" Y="0">
+        <UIFilterBar ID="7e4a4559-a208-489a-b386-80532b683784" Name="LocateBar" />
+        <Events>
+          <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="NodeClick" Parameter="" Template="" />
+          <Event EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="NodeExpand" Parameter="" Template="" />
+        </Events>
+      </TreeControl>
+    </Card>
+  </Card>
+  <Events />
+</View>

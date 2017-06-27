@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="87984999-3563-485d-b1b7-2395a87af6b7" name="InvInfoQuery" displayName="InvInfoQuery" description="" help="" QueryType="DTOQuery" QueryURI="125fe688-7233-492a-aeff-a142dfafe751" QuerySourceFullName="UFIDA.U9.Cust.FJGX.InvInfoQueryQryBP.InvInfoQueryQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="8cbec974-339c-4cb3-9ea8-921d672457c3" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="02a0cec8-103d-497f-a67c-d31b92fe8cb6" name="InvInfoQuery" displayName="InvInfoQuery" description="" help="" ProjectID="" ProjectPath="" BPItemID="7e8a7355-7fe2-412d-bc25-da603b6d2213" BPOperationID="8465e109-4620-4f25-a0e9-31e8da01629b" DTOID="ce9e308b-2503-40e2-b7c0-4b209f0ea6ee" BPAgentDll="UFIDA.U9.Cust.FJGX.InvInfoQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.InvInfoQueryQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="d593d3a1-5ef5-4504-9d5f-f7b4416dae0d" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="d36674d0-b572-4b81-bae1-8499353c7272" UIFormItemID="feccab90-4abe-4977-8722-8f5d3435d8e3" UIModelID="df179418-68f3-4ba2-aa34-c58590f59669" />
+  <FilterDefines>
+    <FilterDefine id="756c3dd6-239f-4c1f-a7bf-4a6c0bf633e6" name="WhQoh_Wh" displayName="WhQoh_Wh" description="" help="" ParentName="" Alias="WhQoh_Wh" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="9a3fb628-92f9-4a4b-95bd-52d4a80c5333" name="" displayName="" description="" help="" RefID="bb7eec00-144e-4510-b7f1-e6c940cb3046" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="WhQoh_Wh" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="ebd00908-afb6-49fa-a157-4e80645e2ac3" name="ItemMaster_MainItemCategory" displayName="ItemMaster_MainItemCategory" description="" help="" ParentName="" Alias="ItemMaster_MainItemCategory" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="d465704c-1a09-4ff5-b8ab-9a815c95d6e4" name="" displayName="" description="" help="" RefID="0c9de78c-52ac-4151-874b-8264bc372717" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="Code" ReturnValueType="String" LeftExpression="ItemMaster_MainItemCategory" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="a41f6c4d-d779-42e5-834a-d840421f575c" name="ItemMaster_SPECS" displayName="ItemMaster_SPECS" description="" help="" ParentName="" Alias="ItemMaster_SPECS" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="" />
+    <FilterDefine id="4a46fc38-a6a9-4268-92ea-23ee40cf44ea" name="WhQoh_LotInfo_LotMaster_EntityID" displayName="WhQoh_LotInfo_LotMaster_EntityID" description="" help="" ParentName="" Alias="WhQoh_LotInfo_LotMaster_EntityID" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="073c3aae-df82-4033-9517-36a9bd6f2ecf" name="" displayName="" description="" help="" RefID="64b737ee-fbcf-4aea-ad0c-2c04da70e1e0" RefURI="" KeyField="" ValueField="LotCode" TextField="LotCode" ReturnValueField="ID" ReturnValueType="String" LeftExpression="WhQoh_LotInfo_LotMaster_EntityID" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="9404e18d-f9a0-432d-9b37-bff0d3bea4e2" name="WhQoh_Project" displayName="WhQoh_Project" description="" help="" ParentName="" Alias="WhQoh_Project" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="598244fc-bdab-4362-b829-9bd726daa525" name="" displayName="" description="" help="" RefID="65b15208-f055-4f29-8da7-a2cc9d7c1198" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="WhQoh_Project" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="0b65f24d-e3d8-4c70-91d8-6c15a316a395" name="Organization" displayName="Organization" description="" help="" ParentName="" Alias="Organization" IsFixed="True" IsAllowBlank="False" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,In">
+      <DefaultValue id="47e7d674-fde0-4077-9c89-798393b257aa" name="" displayName="" description="" help="" RelationOperator="Equal" IsContext="True">
+        <RefValues>
+          <RefValueItem id="4e5401a9-9c42-4c9b-913f-38c42f17f9ae" name="" displayName="" description="" help="" IDValue="System.Contexts!OrgID" CodeValue="System.Contexts!OrgCode" Label="System.Contexts!OrgName" />
+        </RefValues>
+      </DefaultValue>
+      <Reference id="f8123448-166b-432e-8be7-e0b102f066db" name="" displayName="" description="" help="" RefID="11b8e416-dd9a-411c-ad71-295f7c35d03c" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="Code" ReturnValueType="String" LeftExpression="Organization.Code" RefWidth="580" RefHeight="408">
+        <RefConditions>
+          <Condition id="4a081505-9c0c-4c49-b550-cae130b10a66" name="" displayName="" description="" help="" ParameterName="" ParameterValue="" IsFixed="False" CustomInParams="ID in (select org from UFIDA::U9::Base::UserRole::UserOrg where user = #Context.UserID# )" />
+        </RefConditions>
+      </Reference>
+    </FilterDefine>
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="4df20825-d66f-4d0c-a1e1-a0510ff5b4fa" name="WhQoh_StoreQty" displayName="WhQoh_StoreQty" description="" help="" ParentName="" Alias="WhQoh_StoreQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="323949e2-c71b-49e0-9426-f9eaa7666dc5" name="WhQoh_StoreQtyCU" displayName="WhQoh_StoreQtyCU" description="" help="" ParentName="" Alias="WhQoh_StoreQtyCU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_CU_Round_Precision" RoundTypeField="WhQoh_CU_Round_RoundType" RoundValueField="WhQoh_CU_Round_RoundValue" Point="2" />
+    <ColumnDefine id="f3ea931b-7369-42d6-acb2-c3d6bd7a51a8" name="ResvStQty" displayName="ResvStQty" description="" help="" ParentName="" Alias="ResvStQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="866e5b11-70fa-4dee-a817-b0eb8e3ee249" name="ResvStQtyCU" displayName="ResvStQtyCU" description="" help="" ParentName="" Alias="ResvStQtyCU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_CU_Round_Precision" RoundTypeField="WhQoh_CU_Round_RoundType" RoundValueField="WhQoh_CU_Round_RoundValue" Point="2" />
+    <ColumnDefine id="87083f44-d5a3-4a8a-8557-2f28ddfe2618" name="AvailableQty" displayName="AvailableQty" description="" help="" ParentName="" Alias="AvailableQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="06c83136-e744-4b0c-b15f-9754db94158b" name="AvailableQtyCU" displayName="AvailableQtyCU" description="" help="" ParentName="" Alias="AvailableQtyCU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_CU_Round_Precision" RoundTypeField="WhQoh_CU_Round_RoundType" RoundValueField="WhQoh_CU_Round_RoundValue" Point="2" />
+    <ColumnDefine id="d43c537e-238d-40d3-adc0-12310a6e810c" name="PackageNum" displayName="PackageNum" description="" help="" ParentName="" Alias="PackageNum" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Numberic" Point="3" />
+    <ColumnDefine id="a9736425-c2eb-4e15-9a3c-f7cdcdbaa7ad" name="WholesalePrice" displayName="WholesalePrice" description="" help="" ParentName="" Alias="WholesalePrice" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="4" />
+    <ColumnDefine id="103bf64f-0fb0-4628-8a7d-645097dd7297" name="MeterPrice" displayName="MeterPrice" description="" help="" ParentName="" Alias="MeterPrice" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Numberic" Point="4" />
+    <ColumnDefine id="38395226-a0d3-45c8-b262-524abb596a28" name="ItemMaster_InventoryInfo_InventoryMaxLimitQty" displayName="ItemMaster_InventoryInfo_InventoryMaxLimitQty" description="" help="" ParentName="" Alias="ItemMaster_InventoryInfo_InventoryMaxLimitQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="c7a45847-14b5-4f2d-aaf4-68d0b3e44744" name="ItemMaster_InventoryInfo_InventoryMinLimitQty" displayName="ItemMaster_InventoryInfo_InventoryMinLimitQty" description="" help="" ParentName="" Alias="ItemMaster_InventoryInfo_InventoryMinLimitQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="87cb1265-554c-4e2d-9d51-2c9e5099b930" name="ItemMaster_InventoryInfo_SafetyStockQty" displayName="ItemMaster_InventoryInfo_SafetyStockQty" description="" help="" ParentName="" Alias="ItemMaster_InventoryInfo_SafetyStockQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="WhQoh_StoreUOM_Round_Precision" RoundTypeField="WhQoh_StoreUOM_Round_RoundType" RoundValueField="WhQoh_StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="b7f1ecac-c3b5-4d94-af69-8b1d69649084" name="WhQoh_StoreUOM_Round_Precision" displayName="WhQoh_StoreUOM_Round_Precision" description="" help="" ParentName="" Alias="WhQoh_StoreUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="1223ea98-77f5-4101-9d51-ae4a8b6d1d63" name="WhQoh_StoreUOM_Round_RoundType" displayName="WhQoh_StoreUOM_Round_RoundType" description="" help="" ParentName="" Alias="WhQoh_StoreUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="96564a5e-12fb-4676-8292-ffd2ec888f6f" name="WhQoh_StoreUOM_Round_RoundValue" displayName="WhQoh_StoreUOM_Round_RoundValue" description="" help="" ParentName="" Alias="WhQoh_StoreUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="0ec38dfa-659c-4314-bc55-9dfa18419b30" name="WhQoh_CU_Round_Precision" displayName="WhQoh_CU_Round_Precision" description="" help="" ParentName="" Alias="WhQoh_CU_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="3af9afe2-48e6-403d-b3ba-d21f51f483f9" name="WhQoh_CU_Round_RoundValue" displayName="WhQoh_CU_Round_RoundValue" description="" help="" ParentName="" Alias="WhQoh_CU_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="f8064f6c-e9fd-4cd6-8d5e-d1983798d853" name="WhQoh_CU_Round_RoundType" displayName="WhQoh_CU_Round_RoundType" description="" help="" ParentName="" Alias="WhQoh_CU_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="a16cd1cf-d0fa-46da-aac9-2a6b6e0fce2e" name="Organization" displayName="组织" description="" help="" />
+      <BasicFilter id="81b9971c-f693-4747-8c21-32cbc9ef0cc8" name="WhQoh_Wh" displayName="存储地点" description="" help="" />
+      <BasicFilter id="77ef5cda-d2e3-4bab-b8aa-e807c748dd48" name="ItemMaster_Code" displayName="存货编码" description="" help="" />
+      <BasicFilter id="0d2b8b2c-e273-493c-894e-bf528a7e973c" name="ItemMaster_Name" displayName="存货名称" description="" help="" />
+      <BasicFilter id="6b45a5de-d738-41a7-89f0-a0ac2a014425" name="ItemMaster_MainItemCategory" displayName="料品分类" description="" help="" />
+      <BasicFilter id="a278d09a-bfcf-4e60-9fe0-a82dff797262" name="ItemMaster_SPECS" displayName="规格" description="" help="" />
+      <BasicFilter id="34d4f225-6306-4f8e-a69a-fde21a3612b4" name="WhQoh_LotInfo_LotMaster_EntityID" displayName="批号" description="" help="" />
+      <BasicFilter id="0de87051-76b1-4214-ae34-8a9b122cb2ce" name="WhQoh_Project" displayName="项目" description="" help="" />
+      <BasicFilter id="ae1343f6-6834-41cf-9499-e44e99928827" name="WhQoh_StoreQty" displayName="结存数(库存单位)" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="524ffcee-21ac-4496-8486-951a09332376" name="ItemMaster_Code" displayName="存货编码" description="" help="" />
+      <Column id="0bdd9b24-9d11-4c57-a59c-22b2f23f24eb" name="ItemMaster_Name" displayName="存货名称" description="" help="" />
+      <Column id="66956cee-fa4e-4498-ac07-8beb1508c647" name="ItemMaster_SPECS" displayName="规格" description="" help="" />
+      <Column id="f5a88010-df0a-4130-92af-68f306bc6bb7" name="WhQoh_LotInfo_LotCode" displayName="批号" description="" help="" />
+      <Column id="9253c481-96cc-4286-94a2-5fdb48a1f92e" name="WhQoh_StoreQty" displayName="结存数(库存单位)" description="" help="" />
+      <Column id="a7f05590-c778-4388-99bb-11f237369c77" name="WhQoh_StoreQtyCU" displayName="结存数(成本单位)" description="" help="" />
+      <Column id="1087c119-bc9e-4a6a-857c-312644bf233e" name="ResvStQty" displayName="预留量(库存单位)" description="" help="" />
+      <Column id="5648e6e8-846c-4bd8-b77a-bb5395e90fef" name="ResvStQtyCU" displayName="预留量(成本单位)" description="" help="" />
+      <Column id="46f7cb98-9cac-4c84-ac4a-582b76fcb522" name="AvailableQty" displayName="可用量(库存单位)" description="" help="" />
+      <Column id="1c83c88a-6e37-431f-a077-28f7bd1217e8" name="AvailableQtyCU" displayName="可用量(成本单位)" description="" help="" />
+      <Column id="83ad1146-efa9-42e1-b6c0-c636109243b0" name="WhQoh_StoreUOM_Name" displayName="库存单位" description="" help="" />
+      <Column id="16aba4ec-eb66-43e7-b9b1-bcae19ac63ea" name="WhQoh_CU_Name" displayName="成本单位" description="" help="" />
+      <Column id="3f1df540-0423-4aa6-8ff9-2c36c9aa32e7" name="PackageNum" displayName="包装数" description="" help="" />
+      <Column id="bc88e5b4-ea84-4d43-82ac-c6ff95a0646f" name="WholesalePrice" displayName="批发价" description="" help="" />
+      <Column id="3af1710c-70f2-4a86-9683-36c0cc15463a" name="MeterPrice" displayName="米价" description="" help="" />
+      <Column id="f8259cc6-9451-42e7-a92c-4e4e2e1a222f" name="ItemMaster_InventoryInfo_InventoryMaxLimitQty" displayName="最高库存" description="" help="" />
+      <Column id="232717da-92a6-4f79-a13c-fc41505eeb65" name="ItemMaster_InventoryInfo_InventoryMinLimitQty" displayName="最低库存" description="" help="" />
+      <Column id="196659b9-56fe-440f-a799-c07c278a93d8" name="ItemMaster_InventoryInfo_SafetyStockQty" displayName="安全库存" description="" help="" />
+      <Column id="893623db-491a-4cc0-9955-acbba4918049" name="ItemMaster_MainItemCategory_Name" displayName="料品分类" description="" help="" />
+      <Column id="81fb8bb8-055d-4846-b3c6-e20ff8a1c6e6" name="WhQoh_Wh_Name" displayName="存货仓库" description="" help="" />
+      <Column id="54778685-de06-4cd5-b670-e99a9a0d3be3" name="WhQoh_StoreUOM_Round_Precision" displayName="库存在手量_库存单位_精度_精度" description="" help="" />
+      <Column id="89d3806a-e1e4-493f-b30c-3a2f42783cca" name="WhQoh_StoreUOM_Round_RoundType" displayName="库存在手量_库存单位_精度_舍入类型" description="" help="" />
+      <Column id="25791a05-0386-4177-a880-eeef652d4b0c" name="WhQoh_StoreUOM_Round_RoundValue" displayName="库存在手量_库存单位_精度_舍入值" description="" help="" />
+      <Column id="81123b28-9f7f-4003-961f-6a037390ba70" name="WhQoh_CU_Round_Precision" displayName="库存在手量_成本单位_精度_精度" description="" help="" />
+      <Column id="95ca4fca-2f23-481f-a71c-ddfb22865f2c" name="WhQoh_CU_Round_RoundValue" displayName="库存在手量_成本单位_精度_舍入值" description="" help="" />
+      <Column id="46974b2c-28a1-457e-9bc9-26830cd9514b" name="WhQoh_CU_Round_RoundType" displayName="库存在手量_成本单位_精度_舍入类型" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="a9fa3d25-e20e-4df0-a73e-919dff99e1dc" name="ItemMaster_Code" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

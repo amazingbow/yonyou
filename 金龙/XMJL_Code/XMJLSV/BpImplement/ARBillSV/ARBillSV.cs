@@ -1,0 +1,65 @@
+﻿
+
+
+
+
+
+namespace ARBillSV
+{
+	using System;
+	using System.Collections.Generic;
+	using System.Text;
+	using System.Reflection;
+	using UFSoft.UBF.AopFrame; 	
+
+	/// <summary>
+	/// 服务 business operation
+	/// 
+	/// </summary>
+	[Serializable]	
+	public partial class ARBillSV
+	{
+	    #region Fields
+		private List<System.Int64> arBillHeadKey;
+		
+	    #endregion
+		
+	    #region constructor
+		public ARBillSV()
+		{}
+		
+	    #endregion
+
+	    #region member		
+		/// <summary>
+		/// 属性	
+		/// 服务.Misc.属性
+		/// </summary>
+		/// <value></value>
+		public List<System.Int64> ArBillHeadKey
+		{
+			get
+			{
+				return this.arBillHeadKey;
+			}
+			set
+			{
+				arBillHeadKey = value;
+			}
+		}
+	    #endregion
+		
+	    #region do method 
+		[Transaction(UFSoft.UBF.Transactions.TransactionOption.Supported)]
+		[Logger]
+		[Authorize]
+		public System.String Do()
+		{	
+		    BaseStrategy selector = Select();	
+				System.String result =  (System.String)selector.Execute(this);	
+		    
+			return result ; 
+		}			
+	    #endregion 					
+	} 		
+}

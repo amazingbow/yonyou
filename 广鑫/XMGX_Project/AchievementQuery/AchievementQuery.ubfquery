@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="e8f556b8-9507-436c-8896-d5ad084f5484" name="AchievementQuery" displayName="AchievementQuery" description="" help="" QueryType="DTOQuery" QueryURI="ad67c24b-c274-4cc2-b4f8-4954741d3961" QuerySourceFullName="UFIDA.U9.Cust.FJGX.AchievementSumQryBP.AchievementSumQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="449addd1-5504-46de-aaba-ebfaf430f741" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="eb50c8da-c1f3-4016-8376-2d9ae41381de" name="AchievementSum" displayName="AchievementSum" description="" help="" ProjectID="" ProjectPath="" BPItemID="d3e45d7a-aca8-4624-9ebe-ed45c3ccce5f" BPOperationID="3612fdfe-1ff2-4c46-a6f9-38d9fff63773" DTOID="6fa83770-aa98-410d-af1f-1f73dbda25f8" BPAgentDll="UFIDA.U9.Cust.FJGX.AchievementQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.AchievementSumQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="b2607847-3929-44aa-b0da-c45a9e5a9121" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="6df77bc7-0f19-4a6a-b1e9-b1d2c9db06de" UIFormItemID="83ff87bc-4258-4bf8-8778-c210c0687764" UIModelID="701d24cb-f81c-44b1-bda3-b4bcd2dbbb61" />
+  <FilterDefines>
+    <FilterDefine id="bdfb9388-a15f-45f6-926a-d2932ed5f4f0" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="1d11c48d-fe15-4542-8215-352135641496" name="RecTotalMoney" displayName="RecTotalMoney" description="" help="" ParentName="" Alias="RecTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="0aebd28a-7662-4f79-a5a0-26a1b1e4f171" name="ARTotalMoney" displayName="ARTotalMoney" description="" help="" ParentName="" Alias="ARTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="085770ee-81a7-42d7-ada7-2159d0d729aa" name="BackMoneyRatio" displayName="BackMoneyRatio" description="" help="" ParentName="" Alias="BackMoneyRatio" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Percent" Point="4" />
+    <ColumnDefine id="d82d344a-1772-42d1-8969-c2d76753eb81" name="SumRecTotalMoney" displayName="SumRecTotalMoney" description="" help="" ParentName="" Alias="SumRecTotalMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="e856914a-2bda-476f-8f23-ad656695246b" name="SumARTotalMoney" displayName="SumARTotalMoney" description="" help="" ParentName="" Alias="SumARTotalMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="8be9adde-2cc9-4925-b46c-e9242764db6b" name="OperatorsCode" displayName="业务员编码" description="" help="" />
+      <BasicFilter id="ffca4a9f-8e6c-4af0-bad2-7680c0ccfc47" name="OperatorsName" displayName="业务员" description="" help="" />
+      <BasicFilter id="312869bb-cdf9-4f79-998f-d783945b2f30" name="BusinessDate" displayName="业务日期" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="d36aec04-a9ce-4396-8d18-86768697e74d" name="OperatorsCode" displayName="业务员编码" description="" help="" />
+      <Column id="9267c423-d883-4094-b7f7-4d20e0747231" name="OperatorsName" displayName="业务员" description="" help="" />
+      <Column id="bd987b21-f8a3-4636-bf65-ac6a0a80b9be" name="RecTotalMoney" displayName="收款金额" description="" help="" />
+      <Column id="d61a7bab-cc8a-4ba9-93e0-ba5deb1b99b7" name="ARTotalMoney" displayName="应收金额" description="" help="" />
+      <Column id="580bd481-2b63-4711-9cc1-1fafe814b474" name="BackMoneyRatio" displayName="回款率" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="6c1176a1-e1df-41e9-834a-e29049de983c" name="OperatorsCode" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

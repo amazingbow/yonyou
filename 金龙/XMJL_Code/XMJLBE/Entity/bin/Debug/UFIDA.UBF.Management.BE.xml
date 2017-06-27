@@ -1,0 +1,2826 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.UBF.Management.BE</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Enterprise">
+            <summary>
+            实体: 企业
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.FromEntityData(UFSoft.UBF.Management.Enterprise.EnterpriseData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.ToEntityData(UFSoft.UBF.Management.Enterprise.EnterpriseData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            企业.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            企业.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            企业.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            企业.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            企业.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            企业.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Code">
+            <summary>
+            编码 (该属性不可为空,且无默认值)
+            企业.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Name">
+            <summary>
+            名称 (该属性不可为空,且无默认值)
+            企业.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Description">
+            <summary>
+            描述 (该属性可为空,且无默认值)
+            企业.Misc.描述
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Memo">
+            <summary>
+            备注 (该属性可为空,且无默认值)
+            企业.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Site">
+            <summary>
+            站点 (该属性可为空,且无默认值)
+            企业.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_Description">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Description")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_Memo">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Memo")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.Res_Site">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Site")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Enterprise.EntityKey">
+            <summary>
+            Strong Class Enterprise EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Enterprise.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Enterprise.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            企业.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            企业.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            企业.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            企业.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            企业.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            企业.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            编码 (该属性不可为空,且无默认值)
+            企业.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            名称 (该属性不可为空,且无默认值)
+            企业.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.Description">
+            <summary>
+             OrginalData属性。只可读。
+            描述 (该属性可为空,且无默认值)
+            企业.Misc.描述
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.Memo">
+            <summary>
+             OrginalData属性。只可读。
+            备注 (该属性可为空,且无默认值)
+            企业.Misc.备注
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityOriginal.Site">
+            <summary>
+            站点 (该属性可为空,且无默认值)
+            企业.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.Code">
+            <summary>
+            属性: 编码 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.Name">
+            <summary>
+            属性: 名称 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.Description">
+            <summary>
+            属性: 描述 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.Memo">
+            <summary>
+            属性: 备注 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Enterprise.EntityRes.Site">
+            <summary>
+            属性: 站点 的名称
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Site">
+            <summary>
+            实体: 站点
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.Create(UFSoft.UBF.Management.Enterprise.Enterprise)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.CreateDefault(UFSoft.UBF.Management.Enterprise.Enterprise)">
+            <summary>
+            Create Instance With Parent 
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.FromEntityData(UFSoft.UBF.Management.Enterprise.SiteData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.ToEntityData(UFSoft.UBF.Management.Enterprise.SiteData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            站点.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            站点.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            站点.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            站点.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            站点.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            站点.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Code">
+            <summary>
+            编码 (该属性可为空,且无默认值)
+            站点.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Name">
+            <summary>
+            名称 (该属性可为空,且无默认值)
+            站点.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Address">
+            <summary>
+            地址 (该属性不可为空,且无默认值)
+            站点.Misc.地址
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Enterprise">
+            <summary>
+            企业 (该属性可为空,且无默认值)
+            站点.Misc.企业
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EnterpriseKey">
+            <summary>
+            企业 的Key (该属性可为空,且无默认值)
+            站点.Misc.企业
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_Address">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Address")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.Res_Enterprise">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Enterprise")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Site.EntityKey">
+            <summary>
+            Strong Class Site EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Site.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.Enterprise.Site.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            站点.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            站点.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            站点.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            站点.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            站点.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            站点.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            编码 (该属性可为空,且无默认值)
+            站点.Misc.编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            名称 (该属性可为空,且无默认值)
+            站点.Misc.名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.Address">
+            <summary>
+             OrginalData属性。只可读。
+            地址 (该属性不可为空,且无默认值)
+            站点.Misc.地址
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.Enterprise">
+            <summary>
+             OrginalData属性。只可读。
+            企业 (该属性可为空,且无默认值)
+            站点.Misc.企业
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityOriginal.EnterpriseKey">
+            <summary>
+            EntityKey 属性
+            企业 的Key (该属性可为空,且无默认值)
+            站点.Misc.企业
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Management.Enterprise.Site.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.Code">
+            <summary>
+            属性: 编码 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.Name">
+            <summary>
+            属性: 名称 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.Address">
+            <summary>
+            属性: 地址 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.Enterprise.Site.EntityRes.Enterprise">
+            <summary>
+            属性: 企业 的名称
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.LogicServer.LogicServer">
+            <summary>
+            实体: 逻辑服务器
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.FromEntityData(UFSoft.UBF.Management.LogicServer.LogicServerData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.ToEntityData(UFSoft.UBF.Management.LogicServer.LogicServerData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            逻辑服务器.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            逻辑服务器.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Site">
+            <summary>
+            站点 (该属性可为空,且无默认值)
+            逻辑服务器.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.SiteKey">
+            <summary>
+            站点 的Key (该属性可为空,且无默认值)
+            逻辑服务器.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Server">
+            <summary>
+            物理服务器 (该属性不可为空,且无默认值)
+            逻辑服务器.Misc.物理服务器
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.ServerKey">
+            <summary>
+            物理服务器 的Key (该属性不可为空,且无默认值)
+            逻辑服务器.Misc.物理服务器
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Type">
+            <summary>
+            逻辑服务器类型 (该属性不可为空,但有默认值)
+            逻辑服务器.Misc.逻辑服务器类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.URI">
+            <summary>
+            URI (该属性可为空,且无默认值)
+            逻辑服务器.Misc.URI
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Password">
+            <summary>
+            密码 (该属性可为空,且无默认值)
+            逻辑服务器.Misc.密码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_Site">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Site")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_Server">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Server")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_Type">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Type")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_URI">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("URI")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.Res_Password">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Password")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.LogicServer.LogicServer.EntityKey">
+            <summary>
+            Strong Class LogicServer EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.LogicServer.LogicServer.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.LogicServer.LogicServer.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            逻辑服务器.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            逻辑服务器.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            逻辑服务器.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.Site">
+            <summary>
+             OrginalData属性。只可读。
+            站点 (该属性可为空,且无默认值)
+            逻辑服务器.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.SiteKey">
+            <summary>
+            EntityKey 属性
+            站点 的Key (该属性可为空,且无默认值)
+            逻辑服务器.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.Server">
+            <summary>
+             OrginalData属性。只可读。
+            物理服务器 (该属性不可为空,且无默认值)
+            逻辑服务器.Misc.物理服务器
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.ServerKey">
+            <summary>
+            EntityKey 属性
+            物理服务器 的Key (该属性不可为空,且无默认值)
+            逻辑服务器.Misc.物理服务器
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.Type">
+            <summary>
+             OrginalData属性。只可读。
+            逻辑服务器类型 (该属性不可为空,但有默认值)
+            逻辑服务器.Misc.逻辑服务器类型
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.URI">
+            <summary>
+             OrginalData属性。只可读。
+            URI (该属性可为空,且无默认值)
+            逻辑服务器.Misc.URI
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityOriginal.Password">
+            <summary>
+             OrginalData属性。只可读。
+            密码 (该属性可为空,且无默认值)
+            逻辑服务器.Misc.密码
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.Site">
+            <summary>
+            属性: 站点 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.Server">
+            <summary>
+            属性: 物理服务器 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.Type">
+            <summary>
+            属性: 逻辑服务器类型 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.URI">
+            <summary>
+            属性: URI 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.LogicServer.EntityRes.Password">
+            <summary>
+            属性: 密码 的名称
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.LogicServer.SiteServerType">
+            <summary>
+            可扩展枚举: 逻辑服务器类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.SiteServerType.GetFromValue(System.Int32)">
+            <summary>
+            Get SiteServerType By Value 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.SiteServerType.GetFromValue(System.Object)">
+            <summary>
+            Get SiteServerType By Value 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.SiteServerType.GetFromName(System.String)">
+            <summary>
+            Get SiteServerType By Name 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.ServiceEngine">
+            <summary>
+            枚举值: ServiceEngine  Value:0  
+            逻辑服务器类型.Misc.ServiceEngine
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.WebServer">
+            <summary>
+            枚举值: WebServer  Value:1  
+            逻辑服务器类型.Misc.WebServer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.DatabaseServer">
+            <summary>
+            枚举值: DatabaseServer  Value:2  
+            逻辑服务器类型.Misc.DatabaseServer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.ReportServer">
+            <summary>
+            枚举值: ReportServer  Value:3  
+            逻辑服务器类型.Misc.ReportServer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.WorkflowServer">
+            <summary>
+            枚举值: WorkflowServer  Value:4  
+            逻辑服务器类型.Misc.WorkflowServer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.JobServer">
+            <summary>
+            枚举值: JobServer  Value:5  
+            逻辑服务器类型.Misc.JobServer
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Values">
+            <summary>
+            Get SiteServerType's All Values.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_TypeName">
+            <summary>
+            逻辑服务器类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_TypeNameS">
+            <summary>
+            逻辑服务器类型的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_ServiceEngine">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_WebServer">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_DatabaseServer">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_ReportServer">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_WorkflowServer">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.Res_JobServer">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.SiteServerType.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.LogicServer.SiteServerType.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.LogicServer.SiteServerType.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.PhysicalServer.PhysicalServer">
+            <summary>
+            实体: 物理服务器
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.FromEntityData(UFSoft.UBF.Management.PhysicalServer.PhysicalServerData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.ToEntityData(UFSoft.UBF.Management.PhysicalServer.PhysicalServerData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            物理服务器.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            物理服务器.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            物理服务器.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            物理服务器.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            物理服务器.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            物理服务器.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Code">
+            <summary>
+            服务器编码 (该属性不可为空,且无默认值)
+            物理服务器.Misc.服务器编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Name">
+            <summary>
+            服务器名称 (该属性不可为空,且无默认值)
+            物理服务器.Misc.服务器名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.IP">
+            <summary>
+            IPv4*6 (该属性不可为空,且无默认值)
+            物理服务器.Misc.IPv4*6
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Location">
+            <summary>
+            服务器的物理位置 (该属性可为空,且无默认值)
+            物理服务器.Misc.服务器的物理位置
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_Code">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Code")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_Name">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Name")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_IP">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IP")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.Res_Location">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Location")的方式取资源
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityKey">
+            <summary>
+            Strong Class PhysicalServer EntityKey 
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            物理服务器.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            物理服务器.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            物理服务器.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            物理服务器.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            物理服务器.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            物理服务器.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.Code">
+            <summary>
+             OrginalData属性。只可读。
+            服务器编码 (该属性不可为空,且无默认值)
+            物理服务器.Misc.服务器编码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.Name">
+            <summary>
+             OrginalData属性。只可读。
+            服务器名称 (该属性不可为空,且无默认值)
+            物理服务器.Misc.服务器名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.IP">
+            <summary>
+             OrginalData属性。只可读。
+            IPv4*6 (该属性不可为空,且无默认值)
+            物理服务器.Misc.IPv4*6
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityOriginal.Location">
+            <summary>
+             OrginalData属性。只可读。
+            服务器的物理位置 (该属性可为空,且无默认值)
+            物理服务器.Misc.服务器的物理位置
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.Code">
+            <summary>
+            属性: 服务器编码 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.Name">
+            <summary>
+            属性: 服务器名称 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.IP">
+            <summary>
+            属性: IPv4*6 的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Management.PhysicalServer.PhysicalServer.EntityRes.Location">
+            <summary>
+            属性: 服务器的物理位置 的名称
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig">
+            <summary>
+            实体: 站点应用配置
+            
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.FromEntityData(SiteAppConfigBE.SiteAppConfigData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.ToEntityData(SiteAppConfigBE.SiteAppConfigData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            站点应用配置.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            站点应用配置.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            站点应用配置.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            站点应用配置.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            站点应用配置.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            站点应用配置.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Site">
+            <summary>
+            站点 (该属性不可为空,且无默认值)
+            站点应用配置.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.SiteKey">
+            <summary>
+            站点 的Key (该属性不可为空,且无默认值)
+            站点应用配置.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Application">
+            <summary>
+            应用 (该属性可为空,且无默认值)
+            站点应用配置.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.ApplicationKey">
+            <summary>
+            应用 的Key (该属性可为空,且无默认值)
+            站点应用配置.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.InstallDateTime">
+            <summary>
+            安装日期 (该属性可为空,但有默认值)
+            站点应用配置.Misc.安装日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_Site">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Site")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_Application">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Application")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.Res_InstallDateTime">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("InstallDateTime")的方式取资源
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig.EntityKey">
+            <summary>
+            Strong Class SiteAppConfig EntityKey 
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityFinder.FindByBusinessKey(UFSoft.UBF.Management.Enterprise.Site.EntityKey,UFIDA.U9.Base.Application.Application.EntityKey)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityFinder.FindByBusinessKey(UFSoft.UBF.Management.Enterprise.Site,UFIDA.U9.Base.Application.Application)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityFinder.FindByBusinessKey(SiteAppConfigBE.SiteAppConfig.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityFinder.FindByBusinessKeyIndex(SiteAppConfigBE.SiteAppConfig.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引SiteAppConfigBE_SiteAppConfig_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            SiteAppConfigBE_SiteAppConfig_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:SiteAppConfigBE.SiteAppConfig.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            站点应用配置.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            站点应用配置.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            站点应用配置.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            站点应用配置.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            站点应用配置.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            站点应用配置.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.Site">
+            <summary>
+             OrginalData属性。只可读。
+            站点 (该属性不可为空,且无默认值)
+            站点应用配置.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.SiteKey">
+            <summary>
+            EntityKey 属性
+            站点 的Key (该属性不可为空,且无默认值)
+            站点应用配置.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.Application">
+            <summary>
+             OrginalData属性。只可读。
+            应用 (该属性可为空,且无默认值)
+            站点应用配置.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.ApplicationKey">
+            <summary>
+            EntityKey 属性
+            应用 的Key (该属性可为空,且无默认值)
+            站点应用配置.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityOriginal.InstallDateTime">
+            <summary>
+             OrginalData属性。只可读。
+            安装日期 (该属性可为空,但有默认值)
+            站点应用配置.Misc.安装日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:SiteAppConfigBE.SiteAppConfig.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.Site">
+            <summary>
+            属性: 站点 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.Application">
+            <summary>
+            属性: 应用 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppConfigBE.SiteAppConfig.EntityRes.InstallDateTime">
+            <summary>
+            属性: 安装日期 的名称
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup">
+            <summary>
+            实体: 站点应用启用
+            
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnInserting">
+            <summary>
+            before Insert
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnInserted">
+            <summary>
+            after Insert
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnUpdating">
+            <summary>
+            before Update
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnUpdated">
+            <summary>
+            after Update
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnDeleting">
+            <summary>
+            before Delete
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnDeleted">
+            <summary>
+            after Delete
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.OnValidate">
+            <summary>
+            on Validate
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.Create">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Instance</returns>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            use for Serialization
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.CreateDefault">
+            <summary>
+            Create Instance
+            </summary>
+            <returns>Default Instance</returns>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.CreateDefaultComponent">
+            <summary>
+            Create DefaultComponent
+            </summary>
+            <returns>DefaultComponent Instance</returns>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.FromEntityData(SiteAppStartupBE.SiteAppStartupData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.ToEntityData(SiteAppStartupBE.SiteAppStartupData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Key">
+            <summary>
+            Strong Class EntityKey Property
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Finder">
+            <summary>
+            Finder
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.OriginalData">
+            <summary>
+            当前实体对象的旧数据对象(为上次更新后的数据)
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.ID">
+            <summary>
+            ID (该属性不可为空,且无默认值)
+            站点应用启用.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.CreatedOn">
+            <summary>
+            创建时间 (该属性可为空,且无默认值)
+            站点应用启用.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.CreatedBy">
+            <summary>
+            创建人 (该属性可为空,且无默认值)
+            站点应用启用.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.ModifiedOn">
+            <summary>
+            修改时间 (该属性可为空,且无默认值)
+            站点应用启用.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.ModifiedBy">
+            <summary>
+            修改人 (该属性可为空,且无默认值)
+            站点应用启用.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.SysVersion">
+            <summary>
+            事务版本 (该属性可为空,但有默认值)
+            站点应用启用.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Site">
+            <summary>
+            站点 (该属性可为空,且无默认值)
+            站点应用启用.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.SiteKey">
+            <summary>
+            站点 的Key (该属性可为空,且无默认值)
+            站点应用启用.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Application">
+            <summary>
+            应用 (该属性不可为空,且无默认值)
+            站点应用启用.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.ApplicationKey">
+            <summary>
+            应用 的Key (该属性不可为空,且无默认值)
+            站点应用启用.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Organization">
+            <summary>
+            组织 (该属性不可为空,且无默认值)
+            站点应用启用.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.OrganizationKey">
+            <summary>
+            组织 的Key (该属性不可为空,且无默认值)
+            站点应用启用.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.IsStartup">
+            <summary>
+            是否启用 (该属性可为空,但有默认值)
+            站点应用启用.Misc.是否启用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.StartupDate">
+            <summary>
+            启用日期 (该属性可为空,但有默认值)
+            站点应用启用.Misc.启用日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_EntityName">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_EntityNameS">
+            <summary>
+            Entity的显示名称资源-请使用EntityRes.GetResource(EntityRes.BE_FullName)的方式取 Entity的显示名称资源.
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_ID">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ID")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_CreatedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_CreatedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CreatedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_ModifiedOn">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedOn")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_ModifiedBy">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ModifiedBy")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_SysVersion">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SysVersion")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_Site">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Site")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_Application">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Application")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_Organization">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("Organization")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_IsStartup">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsStartup")的方式取资源
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.Res_StartupDate">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("StartupDate")的方式取资源
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup.EntityKey">
+            <summary>
+            Strong Class SiteAppStartup EntityKey 
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityKey.GetEntity">
+            <summary>
+            得到当前Key所对应的Entity．(Session级有缓存,性能不用考虑．)
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup.EntityFinder">
+            <summary>
+            Strong Class EntityFinder
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityFinder.FindByBusinessKey(UFSoft.UBF.Management.Enterprise.Site.EntityKey,UFIDA.U9.Base.Application.Application.EntityKey,UFIDA.U9.Base.Organization.Organization.EntityKey)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityFinder.FindByBusinessKey(UFSoft.UBF.Management.Enterprise.Site,UFIDA.U9.Base.Application.Application,UFIDA.U9.Base.Organization.Organization)">
+            <summary>
+            通过实体设置的业务主键进行查询 -业务主键展开方式,会受业务主键调整影响接口.建议使用另一参数类型对象接口查询．
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityFinder.FindByBusinessKey(SiteAppStartupBE.SiteAppStartup.EntityFinder.BusinessKeyParameter)">
+            <summary>
+            通过实体设置的业务主键进行查询－建议使用.
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityFinder.FindByBusinessKeyIndex(SiteAppStartupBE.SiteAppStartup.EntityFinder.BusinessKeyIndexParameter)">
+            <summary>
+            通过索引SiteAppStartupBE_SiteAppStartup_BusinessKey_Index进行查询(参数对象接口)
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup.EntityFinder.BusinessKeyParameter">
+            <summary>
+            业务主键查询参数类型
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup.EntityFinder.BusinessKeyIndexParameter">
+            <summary>
+            SiteAppStartupBE_SiteAppStartup_BusinessKey_Index索引查询参数类型
+            </summary>
+        </member>
+        <member name="T:SiteAppStartupBE.SiteAppStartup.EntityList">
+            <summary>
+            EntityList
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityList.#ctor">
+            <summary>
+            EntityList 无参的构造方法,用于其它特殊情况
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityList.#ctor(System.Collections.IList)">
+            <summary>
+            EntityList Constructor With Collection .主要用于查询返回实体集时使用.
+            </summary>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityList.#ctor(System.String,UFSoft.UBF.Business.BusinessEntity,System.String,System.Collections.IList)">
+            <summary>
+             EntityList Constructor , used by  peresidence
+            </summary>
+            <param name="childAttrName">this EntityList's child Attribute Name</param>
+            <param name="parentEntity">this EntityList's Parent Entity </param>
+            <param name="parentAttrName">Parent Entity's Attribute Name with this EntityList's </param>
+            <param name="list">list </param>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.ID">
+            <summary>
+             OrginalData属性。只可读。
+            ID (该属性不可为空,且无默认值)
+            站点应用启用.Key.ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.CreatedOn">
+            <summary>
+             OrginalData属性。只可读。
+            创建时间 (该属性可为空,且无默认值)
+            站点应用启用.Sys.创建时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.CreatedBy">
+            <summary>
+             OrginalData属性。只可读。
+            创建人 (该属性可为空,且无默认值)
+            站点应用启用.Sys.创建人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.ModifiedOn">
+            <summary>
+             OrginalData属性。只可读。
+            修改时间 (该属性可为空,且无默认值)
+            站点应用启用.Sys.修改时间
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.ModifiedBy">
+            <summary>
+             OrginalData属性。只可读。
+            修改人 (该属性可为空,且无默认值)
+            站点应用启用.Sys.修改人
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.SysVersion">
+            <summary>
+             OrginalData属性。只可读。
+            事务版本 (该属性可为空,但有默认值)
+            站点应用启用.Sys.事务版本
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.Site">
+            <summary>
+             OrginalData属性。只可读。
+            站点 (该属性可为空,且无默认值)
+            站点应用启用.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.SiteKey">
+            <summary>
+            EntityKey 属性
+            站点 的Key (该属性可为空,且无默认值)
+            站点应用启用.Misc.站点
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.Application">
+            <summary>
+             OrginalData属性。只可读。
+            应用 (该属性不可为空,且无默认值)
+            站点应用启用.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.ApplicationKey">
+            <summary>
+            EntityKey 属性
+            应用 的Key (该属性不可为空,且无默认值)
+            站点应用启用.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.Organization">
+            <summary>
+             OrginalData属性。只可读。
+            组织 (该属性不可为空,且无默认值)
+            站点应用启用.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.OrganizationKey">
+            <summary>
+            EntityKey 属性
+            组织 的Key (该属性不可为空,且无默认值)
+            站点应用启用.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.IsStartup">
+            <summary>
+             OrginalData属性。只可读。
+            是否启用 (该属性可为空,但有默认值)
+            站点应用启用.Misc.是否启用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityOriginal.StartupDate">
+            <summary>
+             OrginalData属性。只可读。
+            启用日期 (该属性可为空,但有默认值)
+            站点应用启用.Misc.启用日期
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:SiteAppStartupBE.SiteAppStartup.EntityRes.GetResource(System.String)">
+            <summary>
+            获取显示名称资源方法
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.BE_Name">
+            <summary>
+            EntityName的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.BE_FullName">
+            <summary>
+            Entity　的全名. 
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.ID">
+            <summary>
+            属性: ID 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.CreatedOn">
+            <summary>
+            属性: 创建时间 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.CreatedBy">
+            <summary>
+            属性: 创建人 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.ModifiedOn">
+            <summary>
+            属性: 修改时间 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.ModifiedBy">
+            <summary>
+            属性: 修改人 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.SysVersion">
+            <summary>
+            属性: 事务版本 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.Site">
+            <summary>
+            属性: 站点 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.Application">
+            <summary>
+            属性: 应用 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.Organization">
+            <summary>
+            属性: 组织 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.IsStartup">
+            <summary>
+            属性: 是否启用 的名称
+            </summary>
+        </member>
+        <member name="P:SiteAppStartupBE.SiteAppStartup.EntityRes.StartupDate">
+            <summary>
+            属性: 启用日期 的名称
+            </summary>
+        </member>
+    </members>
+</doc>

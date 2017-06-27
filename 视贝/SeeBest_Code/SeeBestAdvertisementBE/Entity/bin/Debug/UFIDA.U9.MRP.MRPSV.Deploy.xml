@@ -1,0 +1,1525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.MRP.MRPSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.MRP.MRPSV.Exceptions.OrgIsUsedByRCCPException">
+            <summary>
+            异常类型: 该组织已被粗能力引用，不能修改如下属性：工厂组织异常
+            
+             该组织已被粗能力引用，不能修改如下属性：工厂组织
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRPSV.Exceptions.OrgIsUsedByRCCPException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 该组织已被粗能力引用，不能修改如下属性：工厂组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRPSV.Exceptions.OrgIsUsedByRCCPException.#ctor">
+            <summary>
+            异常类型: 该组织已被粗能力引用，不能修改如下属性：工厂组织异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRPSV.Exceptions.OrgIsUsedByRCCPException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 该组织已被粗能力引用，不能修改如下属性：工厂组织异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.NetChangeDTOData">
+            <summary>
+            净改变物料DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.NetChangeDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.NetChangeDTOData.#ctor(System.Int64,System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.NetChangeDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            净改变物料DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.NetChangeDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            净改变物料DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.NetChangeDTOData.Org">
+            <summary>
+            组织
+            净改变物料DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.NetChangeDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            净改变物料DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.NetChangeDTOData.Item">
+            <summary>
+            料品
+            净改变物料DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.DemandDTOData">
+            <summary>
+            需求DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.DemandDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.DemandDTOData.#ctor(System.Int64,System.Int64,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64,System.Int64,System.String,System.Int64,System.DateTime,System.DateTime,System.Int64,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Int32,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int64,System.Int64,System.Boolean,System.Int64,System.Int64,System.String,System.Int64,System.DateTime,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_itemCode">
+            <summary>
+            物料编码
+            需求DTO.Misc.物料编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_itemVersion">
+            <summary>
+            物料版本
+            需求DTO.Misc.物料版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_fromDegree">
+            <summary>
+            从等级
+            需求DTO.Misc.从等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_toDegree">
+            <summary>
+            到等级
+            需求DTO.Misc.到等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_toPotency">
+            <summary>
+            到成分
+            需求DTO.Misc.到成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_demandCode">
+            <summary>
+            需求编号
+            需求DTO.Misc.需求编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_lot">
+            <summary>
+            批号
+            需求DTO.Misc.批号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_demandStartDate">
+            <summary>
+            需求开始日期
+            需求DTO.Misc.需求开始日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_demandEndDate">
+            <summary>
+            需求结束日期
+            需求DTO.Misc.需求结束日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_qty">
+            <summary>
+            单位数量
+            需求DTO.Misc.单位数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_demandQty">
+            <summary>
+            需求数量
+            需求DTO.Misc.需求数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceType">
+            <summary>
+            来源性质
+            需求DTO.Misc.来源性质
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDoc">
+            <summary>
+            来源单据
+            需求DTO.Misc.来源单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDocCode">
+            <summary>
+            来源单据编号
+            需求DTO.Misc.来源单据编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDocVersion">
+            <summary>
+            来源单据版本
+            需求DTO.Misc.来源单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDocLine">
+            <summary>
+            来源单据行号
+            需求DTO.Misc.来源单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDocPlanLine">
+            <summary>
+            来源单据计划行号
+            需求DTO.Misc.来源单据计划行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_isFirm">
+            <summary>
+            FIRM标识
+            需求DTO.Misc.FIRM标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_fromPotency">
+            <summary>
+            从成分
+            需求DTO.Misc.从成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_sourceDocID">
+            <summary>
+            来源单据ID
+            需求DTO.Misc.来源单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_isDRPProcess">
+            <summary>
+            已处理
+            需求DTO.Misc.已处理
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_seibanCode">
+            <summary>
+            SeibanCode
+            需求DTO.Misc.SeibanCode
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_arrivingDate">
+            <summary>
+            计划到货日期
+            需求DTO.Misc.计划到货日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_forecastOrderType">
+            <summary>
+            预测订单类型
+            需求DTO.Misc.预测订单类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_multiHierarchyExpandFlag">
+            <summary>
+            多阶展开层数
+            需求DTO.Misc.多阶展开层数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DemandDTOData.m_taskOutputID">
+            <summary>
+            任务产出ID
+            需求DTO.Misc.任务产出ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Org">
+            <summary>
+            组织
+            需求DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Item">
+            <summary>
+            物料
+            需求DTO.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.OwnerOrg_SKey">
+            <summary>
+            货主 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.OwnerOrg">
+            <summary>
+            货主
+            需求DTO.Misc.货主
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.StoreSpace_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.StoreSpace">
+            <summary>
+            存储地点
+            需求DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Supplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Supplier">
+            <summary>
+            厂牌
+            需求DTO.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.UOM_SKey">
+            <summary>
+            交易单位 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.交易单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.UOM">
+            <summary>
+            交易单位
+            需求DTO.Misc.交易单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Project_SKey">
+            <summary>
+            项目编号 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.项目编号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Project">
+            <summary>
+            项目编号
+            需求DTO.Misc.项目编号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Task_SKey">
+            <summary>
+            任务 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Task">
+            <summary>
+            任务
+            需求DTO.Misc.任务
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.SourceOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.SourceOrg">
+            <summary>
+            来源组织
+            需求DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.PlanVersion_SKey">
+            <summary>
+            计划版本 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.计划版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.PlanVersion">
+            <summary>
+            计划版本
+            需求DTO.Misc.计划版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.BOMComponent_SKey">
+            <summary>
+            BOM子项 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.BOM子项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.BOMComponent">
+            <summary>
+            BOM子项
+            需求DTO.Misc.BOM子项
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Seiban_SKey">
+            <summary>
+            Seiban 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.Seiban">
+            <summary>
+            Seiban
+            需求DTO.Misc.Seiban
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.SrcWarehouse_SKey">
+            <summary>
+            来源存储地点 序列化Key属性。（传递跨组织序列列字段）
+            需求DTO.Misc.来源存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DemandDTOData.SrcWarehouse">
+            <summary>
+            来源存储地点
+            需求DTO.Misc.来源存储地点
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.MPSItemDTOData">
+            <summary>
+            MPS待生产物料 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSItemDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSItemDTOData.#ctor(System.Int64,System.String,System.Int64,System.DateTime,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Decimal,System.Int64,System.DateTime,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_itemVersion">
+            <summary>
+            物料版本
+            MPS待生产物料.Misc.物料版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_startDate">
+            <summary>
+            预计开工日期
+            MPS待生产物料.Misc.预计开工日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_critical">
+            <summary>
+            关键件
+            MPS待生产物料.Misc.关键件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_shrinkRate">
+            <summary>
+            考虑库存损耗率
+            MPS待生产物料.Misc.考虑库存损耗率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_scrapRate">
+            <summary>
+            考虑子件损耗率
+            MPS待生产物料.Misc.考虑子件损耗率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_yieldRate">
+            <summary>
+            考虑产出率
+            MPS待生产物料.Misc.考虑产出率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_demandQty">
+            <summary>
+            需求数量
+            MPS待生产物料.Misc.需求数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_demandDate">
+            <summary>
+            需求日期
+            MPS待生产物料.Misc.需求日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSItemDTOData.m_demandCode">
+            <summary>
+            需求分类
+            MPS待生产物料.Misc.需求分类
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.ItemKey_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            MPS待生产物料.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.ItemKey">
+            <summary>
+            物料
+            MPS待生产物料.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.LineKey_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            MPS待生产物料.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.LineKey">
+            <summary>
+            生产线
+            MPS待生产物料.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.DemandUOM_SKey">
+            <summary>
+            需求单位 序列化Key属性。（传递跨组织序列列字段）
+            MPS待生产物料.Misc.需求单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSItemDTOData.DemandUOM">
+            <summary>
+            需求单位
+            MPS待生产物料.Misc.需求单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.CancelDTOData">
+            <summary>
+            取消释放DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.CancelDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.CancelDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancelDTOData.m_sourceKey">
+            <summary>
+            来源单据
+            取消释放DTO.Misc.来源单据
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData">
+            <summary>
+            取消释放来源DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.m_sourceKey">
+            <summary>
+            来源单据
+            取消释放来源DTO.Misc.来源单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.m_docNo">
+            <summary>
+            单据号
+            取消释放来源DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.m_lineNum">
+            <summary>
+            行号
+            取消释放来源DTO.Misc.行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.m_planLineNum">
+            <summary>
+            计划行号
+            取消释放来源DTO.Misc.计划行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.CancleReleaseInputDTOData.m_docVersion">
+            <summary>
+            单据版本
+            取消释放来源DTO.Misc.单据版本
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData">
+            <summary>
+            计划订单更新DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Decimal,System.Int64,System.Int64,System.String,UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int32,System.Int32,System.Int32,System.DateTime,System.Int32,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_planOrderKey">
+            <summary>
+            计划订单Key
+            计划订单更新DTO.Misc.计划订单Key
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_qty">
+            <summary>
+            本次释放数量
+            计划订单更新DTO.Misc.本次释放数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_docNo">
+            <summary>
+            释放单据号
+            计划订单更新DTO.Misc.释放单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_docKey">
+            <summary>
+            释放单据
+            计划订单更新DTO.Misc.释放单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_docVersion">
+            <summary>
+            释放单据版本
+            计划订单更新DTO.Misc.释放单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_docLineNo">
+            <summary>
+            释放单据行号
+            计划订单更新DTO.Misc.释放单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_docSubLineNo">
+            <summary>
+            释放单据计划行号
+            计划订单更新DTO.Misc.释放单据计划行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_releaseDate">
+            <summary>
+            释放日期
+            计划订单更新DTO.Misc.释放日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_releaseDocType">
+            <summary>
+            释放单据类别
+            计划订单更新DTO.Misc.释放单据类别
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.m_planDueDate">
+            <summary>
+            计划到货日期
+            计划订单更新DTO.Misc.计划到货日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.UOM_SKey">
+            <summary>
+            释放数量单位 序列化Key属性。（传递跨组织序列列字段）
+            计划订单更新DTO.Misc.释放数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.UOM">
+            <summary>
+            释放数量单位
+            计划订单更新DTO.Misc.释放数量单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.Org_SKey">
+            <summary>
+            释放组织 序列化Key属性。（传递跨组织序列列字段）
+            计划订单更新DTO.Misc.释放组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.UpdatePlanOrderQtyDTOData.Org">
+            <summary>
+            释放组织
+            计划订单更新DTO.Misc.释放组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.ATPQueryListDTOData">
+            <summary>
+            ATP查询DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ATPQueryListDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ATPQueryListDTOData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ATPQueryListDTOData.m_queryList">
+            <summary>
+            查询DTO集合
+            ATP查询DTO.Misc.查询DTO集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.ObjectDTOData">
+            <summary>
+            通用返回对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ObjectDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ObjectDTOData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ObjectDTOData.m_objects">
+            <summary>
+            返回对象集合
+            通用返回对象.Misc.返回对象集合
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData">
+            <summary>
+            批量消耗计划订单料品DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData.#ctor(System.Int32,System.Int32,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData.m_degree">
+            <summary>
+            等级
+            批量消耗计划订单料品DTO.Misc.等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData.m_potency">
+            <summary>
+            成分
+            批量消耗计划订单料品DTO.Misc.成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ConsumeItemInfoDtoData.m_qty">
+            <summary>
+            产出数量
+            批量消耗计划订单料品DTO.Misc.产出数量
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.ItemForECNDTOData">
+            <summary>
+            ECN物料输入DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ItemForECNDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ItemForECNDTOData.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ItemForECNDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            ECN物料输入DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.ItemForECNDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            ECN物料输入DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.ItemForECNDTOData.Item">
+            <summary>
+            料品
+            ECN物料输入DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData">
+            <summary>
+            ECN获取计划订单信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.#ctor(System.Int64,System.Int64,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int64,System.String,System.String,System.Decimal,System.Decimal,System.Int64,System.String,System.String,System.DateTime,System.DateTime,System.Decimal,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            ECN获取计划订单信息DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_planName_Code">
+            <summary>
+            计划名称编码
+            ECN获取计划订单信息DTO.Misc.计划名称编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_planName_Name">
+            <summary>
+            计划名称名称
+            ECN获取计划订单信息DTO.Misc.计划名称名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_planVersion">
+            <summary>
+            计划版本
+            ECN获取计划订单信息DTO.Misc.计划版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_planOrderDocNo">
+            <summary>
+            计划订单号
+            ECN获取计划订单信息DTO.Misc.计划订单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_demandCode">
+            <summary>
+            需求分类
+            ECN获取计划订单信息DTO.Misc.需求分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_warehouse_Code">
+            <summary>
+            存储地点编码
+            ECN获取计划订单信息DTO.Misc.存储地点编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_warehouse_Name">
+            <summary>
+            存储地点名称
+            ECN获取计划订单信息DTO.Misc.存储地点名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_qty">
+            <summary>
+            数量
+            ECN获取计划订单信息DTO.Misc.数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_adjustQty">
+            <summary>
+            调整后数量
+            ECN获取计划订单信息DTO.Misc.调整后数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_iNVUOM_Code">
+            <summary>
+            库存单位编码
+            ECN获取计划订单信息DTO.Misc.库存单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_iNVUOM_Name">
+            <summary>
+            库存单位名称
+            ECN获取计划订单信息DTO.Misc.库存单位名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_demandDate">
+            <summary>
+            需求日期
+            ECN获取计划订单信息DTO.Misc.需求日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_adjustDemandDate">
+            <summary>
+            调整后需求日期
+            ECN获取计划订单信息DTO.Misc.调整后需求日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_releasedQty">
+            <summary>
+            已发放数量
+            ECN获取计划订单信息DTO.Misc.已发放数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_iNVUOM_Precision">
+            <summary>
+            精度
+            ECN获取计划订单信息DTO.Misc.精度
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_iNVUOM_RoundType">
+            <summary>
+            舍入类型
+            ECN获取计划订单信息DTO.Misc.舍入类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_iNVUOM_RoundValue">
+            <summary>
+            舍入值
+            ECN获取计划订单信息DTO.Misc.舍入值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.m_itemCode">
+            <summary>
+            料号
+            ECN获取计划订单信息DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            ECN获取计划订单信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Org">
+            <summary>
+            组织
+            ECN获取计划订单信息DTO.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            ECN获取计划订单信息DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Item">
+            <summary>
+            料品
+            ECN获取计划订单信息DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Warehouse_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            ECN获取计划订单信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.Warehouse">
+            <summary>
+            存储地点
+            ECN获取计划订单信息DTO.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.INVUOM_SKey">
+            <summary>
+            库存单位 序列化Key属性。（传递跨组织序列列字段）
+            ECN获取计划订单信息DTO.Misc.库存单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.PlanOrderForECNDTOData.INVUOM">
+            <summary>
+            库存单位
+            ECN获取计划订单信息DTO.Misc.库存单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.MPSDTOData">
+            <summary>
+            主生产计划DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSDTOData.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{UFIDA.U9.MRP.MRP.MPSDetailDTOData},System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_itemCode">
+            <summary>
+            料号
+            主生产计划DTO.Misc.料号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_warehouseCode">
+            <summary>
+            存储地点编号
+            主生产计划DTO.Misc.存储地点编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_supplierCode">
+            <summary>
+            厂牌编号
+            主生产计划DTO.Misc.厂牌编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_itemVersion">
+            <summary>
+            料品版本
+            主生产计划DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_lot">
+            <summary>
+            批号
+            主生产计划DTO.Misc.批号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_fromDegree">
+            <summary>
+            从等级
+            主生产计划DTO.Misc.从等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_toDegree">
+            <summary>
+            到等级
+            主生产计划DTO.Misc.到等级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_fromPotency">
+            <summary>
+            从成分
+            主生产计划DTO.Misc.从成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_toPotency">
+            <summary>
+            到成分
+            主生产计划DTO.Misc.到成分
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_mPSDetails">
+            <summary>
+            主生产计划明细
+            主生产计划DTO.Misc.主生产计划明细
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDTOData.m_ownerOrgCode">
+            <summary>
+            货主组织编号
+            主生产计划DTO.Misc.货主组织编号
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.MPSDetailDTOData">
+            <summary>
+            主生产计划明细DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSDetailDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.MPSDetailDTOData.#ctor(System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int64,System.String,System.Decimal,System.Decimal,System.Int64,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_demandCode">
+            <summary>
+            需求编号
+            主生产计划明细DTO.Misc.需求编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_priority">
+            <summary>
+            优先级
+            主生产计划明细DTO.Misc.优先级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_endSupplyDate">
+            <summary>
+            结束供应日期
+            主生产计划明细DTO.Misc.结束供应日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_supplyDate">
+            <summary>
+            供应日期
+            主生产计划明细DTO.Misc.供应日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_tradeUOMCode">
+            <summary>
+            交易单位
+            主生产计划明细DTO.Misc.交易单位
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_tUQty">
+            <summary>
+            交易数量
+            主生产计划明细DTO.Misc.交易数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_tUToIURatio">
+            <summary>
+            交易-库存转换率
+            主生产计划明细DTO.Misc.交易-库存转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_sourceType">
+            <summary>
+            来源性质
+            主生产计划明细DTO.Misc.来源性质
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_sourceDocCode">
+            <summary>
+            来源单据编号
+            主生产计划明细DTO.Misc.来源单据编号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_sourceDocVersion">
+            <summary>
+            来源单据版本
+            主生产计划明细DTO.Misc.来源单据版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_sourceDocLine">
+            <summary>
+            来源单据行号
+            主生产计划明细DTO.Misc.来源单据行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_sourceDocShipLineNo">
+            <summary>
+            来源单据计划行号
+            主生产计划明细DTO.Misc.来源单据计划行号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_isFirm">
+            <summary>
+            FIRM标识
+            主生产计划明细DTO.Misc.FIRM标识
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_iNVUOMCode">
+            <summary>
+            库存单位编码
+            主生产计划明细DTO.Misc.库存单位编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_iUQty">
+            <summary>
+            库存单位数量
+            主生产计划明细DTO.Misc.库存单位数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_tUDailyQty">
+            <summary>
+            交易单位日产量
+            主生产计划明细DTO.Misc.交易单位日产量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_iUDailyQty">
+            <summary>
+            库存单位日产量
+            主生产计划明细DTO.Misc.库存单位日产量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_projectCode">
+            <summary>
+            项目编码
+            主生产计划明细DTO.Misc.项目编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_taskCode">
+            <summary>
+            任务编码
+            主生产计划明细DTO.Misc.任务编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_execQty">
+            <summary>
+            已执行数量
+            主生产计划明细DTO.Misc.已执行数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.MPSDetailDTOData.m_supplyType">
+            <summary>
+            供应类型
+            主生产计划明细DTO.Misc.供应类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSDetailDTOData.SupplyOrgKey_SKey">
+            <summary>
+            供应组织 序列化Key属性。（传递跨组织序列列字段）
+            主生产计划明细DTO.Misc.供应组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSDetailDTOData.SupplyOrgKey">
+            <summary>
+            供应组织
+            主生产计划明细DTO.Misc.供应组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSDetailDTOData.SourceOrg_SKey">
+            <summary>
+            来源组织 序列化Key属性。（传递跨组织序列列字段）
+            主生产计划明细DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.MPSDetailDTOData.SourceOrg">
+            <summary>
+            来源组织
+            主生产计划明细DTO.Misc.来源组织
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.QtyInfoDTOData">
+            <summary>
+            计划订单数量DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.QtyInfoDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.QtyInfoDTOData.#ctor(System.String,System.Decimal,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.QtyInfoDTOData.m_docNo">
+            <summary>
+            计划单号
+            计划订单数量DTO.Misc.计划单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.QtyInfoDTOData.m_requiredQty">
+            <summary>
+            投放量
+            计划订单数量DTO.Misc.投放量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.QtyInfoDTOData.m_releasedQty">
+            <summary>
+            已发放量
+            计划订单数量DTO.Misc.已发放量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.QtyInfoDTOData.m_planOrderID">
+            <summary>
+            计划订单ID
+            计划订单数量DTO.Misc.计划订单ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.ReserveMPSDTOsData">
+            <summary>
+            预留MPSDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ReserveMPSDTOsData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.ReserveMPSDTOsData.#ctor(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.ReserveMPSDTOsData.m_mPS">
+            <summary>
+            预留MPS
+            预留MPSDTO.Misc.预留MPS
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.InvReqDTOData">
+            <summary>
+            库存模拟需求DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.InvReqDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.InvReqDTOData.#ctor(System.Int64,System.Int64,System.Int64,System.Int32,System.DateTime,System.String,System.Int64,System.DateTime,System.String,System.DateTime,System.Boolean,UFIDA.U9.CBO.MFG.BOM.BOMVersionData,System.Int32,System.Int64,System.Int32,System.Int64,System.Decimal,System.Int64,System.DateTime)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_productAim">
+            <summary>
+            生产目的
+            库存模拟需求DTO.Misc.生产目的
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_bomEffictiveDate">
+            <summary>
+            BOM有效日期
+            库存模拟需求DTO.Misc.BOM有效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_bomECONo">
+            <summary>
+            BOM ECO号
+            库存模拟需求DTO.Misc.BOM ECO号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_routeEffectiveDate">
+            <summary>
+            工艺有效日期
+            库存模拟需求DTO.Misc.工艺有效日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_routeECONo">
+            <summary>
+            工艺ECO号
+            库存模拟需求DTO.Misc.工艺ECO号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_planStartDate">
+            <summary>
+            预计开始时间
+            库存模拟需求DTO.Misc.预计开始时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_isOnly">
+            <summary>
+            Only关键件
+            库存模拟需求DTO.Misc.Only关键件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_bomVer">
+            <summary>
+            BOM版本
+            库存模拟需求DTO.Misc.BOM版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_bomLot">
+            <summary>
+            BOM批量
+            库存模拟需求DTO.Misc.BOM批量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_routingLot">
+            <summary>
+            工艺批量
+            库存模拟需求DTO.Misc.工艺批量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_productAmount">
+            <summary>
+            生产数量
+            库存模拟需求DTO.Misc.生产数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.InvReqDTOData.m_needTime">
+            <summary>
+            需求日期
+            库存模拟需求DTO.Misc.需求日期
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.Item">
+            <summary>
+            料品
+            库存模拟需求DTO.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ItemVer_SKey">
+            <summary>
+            料品版本 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ItemVer">
+            <summary>
+            料品版本
+            库存模拟需求DTO.Misc.料品版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ProductLine_SKey">
+            <summary>
+            生产线 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ProductLine">
+            <summary>
+            生产线
+            库存模拟需求DTO.Misc.生产线
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.RouteVer_SKey">
+            <summary>
+            工艺版本 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.工艺版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.RouteVer">
+            <summary>
+            工艺版本
+            库存模拟需求DTO.Misc.工艺版本
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.BomUOM_SKey">
+            <summary>
+            BOM单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.BOM单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.BomUOM">
+            <summary>
+            BOM单位
+            库存模拟需求DTO.Misc.BOM单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.RoutingUOM_SKey">
+            <summary>
+            工艺单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.工艺单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.RoutingUOM">
+            <summary>
+            工艺单位
+            库存模拟需求DTO.Misc.工艺单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ProductUOM_SKey">
+            <summary>
+            生产单位 序列化Key属性。（传递跨组织序列列字段）
+            库存模拟需求DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.InvReqDTOData.ProductUOM">
+            <summary>
+            生产单位
+            库存模拟需求DTO.Misc.生产单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData">
+            <summary>
+            计划订单反销低DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.#ctor(System.Int64,System.String,System.Decimal,System.Int64,UFIDA.U9.CBO.SCM.PropertyTypes.SrcDocInfoData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.m_planOrderDocNo">
+            <summary>
+            计划订单单号
+            计划订单反销低DTO.Misc.计划订单单号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.m_cancelQty">
+            <summary>
+            取消数量
+            计划订单反销低DTO.Misc.取消数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.m_docInfo">
+            <summary>
+            单据信息
+            计划订单反销低DTO.Misc.单据信息
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.PlanOrder_SKey">
+            <summary>
+            计划订单 序列化Key属性。（传递跨组织序列列字段）
+            计划订单反销低DTO.Misc.计划订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.PlanOrder">
+            <summary>
+            计划订单
+            计划订单反销低DTO.Misc.计划订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.UOM_SKey">
+            <summary>
+            取消单位 序列化Key属性。（传递跨组织序列列字段）
+            计划订单反销低DTO.Misc.取消单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRP.DisConsumePlanOrderDTOData.UOM">
+            <summary>
+            取消单位
+            计划订单反销低DTO.Misc.取消单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.MRP.MRPSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRPSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.MRP.MRPSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

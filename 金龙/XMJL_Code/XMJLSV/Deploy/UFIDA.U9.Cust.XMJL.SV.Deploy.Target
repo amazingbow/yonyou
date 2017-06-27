@@ -1,0 +1,120 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    	<Compile Include="SupplierSV\SupplierDTOData.cs" 	/> 
+    	<Compile Include="ItemSV\ItemPriceDTOData.cs" 	/> 
+    	<Compile Include="ItemSV\ItemStoreDTOData.cs" 	/> 
+    	<Compile Include="ItemSV\ItemDTOData.cs" 	/> 
+    	<Compile Include="CustomerSV\CustomerBalanceDTOData.cs" 	/> 
+    	<Compile Include="BOMSV\BomDTOData.cs" 	/> 
+    	<Compile Include="BOMSV\ProductBomDTOData.cs" 	/> 
+    	<Compile Include="ReceivementSV\SRMRcvDTOData.cs" 	/> 
+    	<Compile Include="ReceivementSV\SrmRcvLineDTOData.cs" 	/> 
+    	<Compile Include="ReceivementSV\SRMRcvQueryDTOData.cs" 	/> 
+    	<Compile Include="BillBalance\BillBalanceDTOData.cs" 	/> 
+    	<Compile Include="BillBalance\BillBalanceQueryDTOData.cs" 	/> 
+    	<Compile Include="APBillSV\APBillHeadDTOData.cs" 	/> 
+    	<Compile Include="APBillSV\APBillLineDTOData.cs" 	/> 
+    	<Compile Include="APBillSV\CommonResultDTOData.cs" 	/> 
+    	<Compile Include="APBillSV\RCVLineInfoDTOData.cs" 	/> 
+
+    	<Compile Include="EnumData.cs" 	/>
+  </ItemGroup> 
+  <ItemGroup>
+    <EmbeddedResource Include="Resource.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resource.Designer.cs">
+          <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />  
+    <Reference Include="System.Runtime.Serialization"/>
+    <Reference Include="UFSoft.UBF.Business, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Business.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+   </Reference>
+    <Reference Include="UFSoft.UBF.PL, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.PL.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Execution, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Execution.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.Util.Data, Version=2.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Util.Data.dll</HintPath>      
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UBF.System, Version=1.0.0.1, Culture=neutral, PublicKeyToken=aed5b8b71060d80b, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UBF.System.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UFSoft.UBF.AopFrame, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.AopFrame.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+   </Reference> 
+    <Reference Include="UFSoft.UBF.Sys.Resources.Runtime, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Sys.Resources.Runtime.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+ 
+    <Reference Include="UFSoft.UBF.Service, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.UBF\UBFStudio\Runtime\\UFSoft.UBF.Service.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+        <Private>False</Private>
+   </Reference> 
+
+    <Reference Include="UFIDA.U9.CBO.PubBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\App\\UFIDA.U9.CBO.PubBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.CBO.PubBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+    <Reference Include="UFIDA.U9.Base.BaseBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\UBF\\UFIDA.U9.Base.BaseBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.Base.BaseBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+    <Reference Include="UFIDA.U9.InvDoc.InvDocBP.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\App\\UFIDA.U9.InvDoc.InvDocBP.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.InvDoc.InvDocBP.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+    <Reference Include="UFIDA.U9.PM.PMBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\App\\UFIDA.U9.PM.PMBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.PM.PMBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+    <Reference Include="UFIDA.U9.CBO.FI_SCMBE.Deploy"	>
+	<HintPath>.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\App\\UFIDA.U9.CBO.FI_SCMBE.Deploy.dll</HintPath>
+      <Name>UFIDA.U9.CBO.FI_SCMBE.Deploy</Name>     
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DocumentationFile>.\bin\Debug\UFIDA.U9.Cust.XMJL.SV.Deploy.XML</DocumentationFile>
+  </PropertyGroup>
+   <PropertyGroup Condition="">
+     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+     <PostBuildEvent>
+	Md $(ProjectDir)\.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\Unconfiged\Component\\
+	Copy $(TargetDir)\UFIDA.U9.Cust.XMJL.SV.Deploy.dll $(ProjectDir)\.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\Unconfiged\Component\\ 
+	Copy $(TargetDir)\UFIDA.U9.Cust.XMJL.SV.Deploy.pdb $(ProjectDir)\.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\Unconfiged\Component\\ 
+	Copy $(TargetDir)\UFIDA.U9.Cust.XMJL.SV.Deploy.xml $(ProjectDir)\.\..\..\..\..\..\yonyou\UBFV50\U9.VOB.Product.Component\\Unconfiged\Component\\ 
+    </PostBuildEvent>
+   </PropertyGroup>
+   </Project>

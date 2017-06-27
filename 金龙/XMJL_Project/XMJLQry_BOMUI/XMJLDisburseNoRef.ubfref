@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="0e3bce97-f8bf-458f-a536-c89d20f3f9d7" name="XMJLDisburseNoRef" displayName="缺件发料主表" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.XMJL.Qry.BOMUI.XMJLDisburseNoRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="12c7171d-de93-4002-911b-f0f627603c68" name="cRef" displayName="cRef" description="" help="缺件发料主表" refEntityId="cce8c490-0ca5-4435-8cdd-10ea421c71e9" refEntityName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="c1807baf-a761-4845-a9cc-b30996a287a7" name="ID" displayName="ID" description="" help="单据基类.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain:ID" displayNameIndexStr="2" />
+        <RefField id="45c85fbd-d9bd-4fa7-a15e-299daf5404f6" name="DescFlexField_PrivateDescSeg1" displayName="发料单号" description="" help="实体扩展字段集合.Misc.私有段1" isKey="False" isEdit="True" isName="True" isVisible="True" isParent="False" sequence="0" length="150" refAttributeName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain:DescFlexField.PrivateDescSeg1" displayNameIndexStr="" />
+        <RefField id="5a3deee5-520c-4418-82c3-8cfcbbf9cf19" name="Department_Name" displayName="工厂" description="" help="部门.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="150" refAttributeName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain:Department.Name" displayNameIndexStr="" />
+        <RefField id="1495017b-9b79-4e93-9b49-bfbccb799c4d" name="DisburseBY_Name" displayName="发料人" description="" help="业务员.Misc.名称" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="150" refAttributeName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain:DisburseBY.Name" displayNameIndexStr="" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="d27f1e90-4ae4-4bee-9470-c66f1cec2bbf" name="DescFlexField_PrivateDescSeg1" displayName="发料单号" description="" help="实体扩展字段集合.Misc.私有段1" direction="1" sequence="0" refAttributeName="UFIDA.U9.Cust.XMJL.BommBE.Cust_Xmjl_MO_BomMain:DescFlexField.PrivateDescSeg1" />
+      </OrderFields>
+      <Filter>UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.ID  in (select max(UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.ID) from UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain where UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.Org.ID=#Context.OrgID#
+ and UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.DescFlexField.PrivateDescSeg1!=''
+group by UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.DescFlexField.PrivateDescSeg1, UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.DisburseBY.Name,
+UFIDA::U9::Cust::XMJL::BommBE::Cust_Xmjl_MO_BomMain.DisburseBY.Dept.Name)</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

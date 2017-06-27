@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="3cd5e1c8-7341-4811-bdb6-ba86293c026e" name="CustomerDocLineListQuery" displayName="CustomerDocLineListQuery" description="" help="" QueryType="DTOQuery" QueryURI="8efe437c-c62d-4066-8c17-c8ef8ac54b28" QuerySourceFullName="UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.CustomerDocLineListQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="384eb2d8-3423-4980-884d-20bd3142ae59" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="5dc3b8bf-d29c-46ed-bc53-06fe6630f398" name="CustomerDocLineList" displayName="CustomerDocLineList" description="" help="" ProjectID="" ProjectPath="" BPItemID="ca27c534-865f-428b-8862-44c1e2386330" BPOperationID="6515e309-75ae-49a4-8d95-2e13fac19764" DTOID="117d2e10-1e33-4aee-8409-b8c2812197ff" BPAgentDll="UFIDA.U9.Cust.FJGX.CustomerQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.CustomerDocLineListQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="6411a41e-ae6e-4644-8ffc-3e7bbbd12466" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="4e804d55-4b1c-4fdc-a615-caeb02ee5c13" UIFormItemID="13255955-ca16-456d-a017-9857e9a20370" UIModelID="ced4253c-8729-4232-9460-67f7c29ff12f" />
+  <FilterDefines>
+    <FilterDefine id="4d78b55c-9259-407d-aad0-9903d5f65684" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,IsNull,NotIsNull,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="83eaf6a8-019b-4196-b117-16ac09daba6c" name="MainSOQty" displayName="MainSOQty" description="" help="" ParentName="" Alias="MainSOQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="MainUOM_Round_Precision" RoundTypeField="MainUOM_Round_RoundType" RoundValueField="MainUOM_Round_RoundValue" NumericType="Currency" Point="0" />
+    <ColumnDefine id="6159c7ff-9cea-45c0-a039-592444ef9127" name="FinallyPrice" displayName="FinallyPrice" description="" help="" ParentName="" Alias="FinallyPrice" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="4" />
+    <ColumnDefine id="76edd471-9af2-4d36-95e3-9b0075bb8ce2" name="InvSOQty" displayName="InvSOQty" description="" help="" ParentName="" Alias="InvSOQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="InvUOM_Round_Precision" RoundTypeField="InvUOM_Round_RoundType" RoundValueField="InvUOM_Round_RoundValue" Point="0" />
+    <ColumnDefine id="463606ee-9478-41ea-ba77-3799ff258c58" name="TotalMoney" displayName="TotalMoney" description="" help="" ParentName="" Alias="TotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="1830f289-7ba5-4344-b223-ec0f6f6db475" name="ConversionRates" displayName="ConversionRates" description="" help="" ParentName="" Alias="ConversionRates" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="True" DateDisplayType="" PrecisionType="Static" NumericType="Numberic" Point="3" />
+    <ColumnDefine id="c8e6fa4d-88ea-4f1f-8ea6-07f28c8cf2ea" name="MainUOM_Round_RoundType" displayName="MainUOM_Round_RoundType" description="" help="" ParentName="" Alias="MainUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="b396e2ff-e448-4346-b967-272242761436" name="MainUOM_Round_RoundValue" displayName="MainUOM_Round_RoundValue" description="" help="" ParentName="" Alias="MainUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="3e5d593e-dc9f-49fa-87c8-6ee4f25a4c59" name="MainUOM_Round_Precision" displayName="MainUOM_Round_Precision" description="" help="" ParentName="" Alias="MainUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="da0e3664-f6e4-492d-9d1b-f056a7eab22a" name="InvUOM_Round_Precision" displayName="InvUOM_Round_Precision" description="" help="" ParentName="" Alias="InvUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="70d39016-336a-4aac-a61c-ec10873a420e" name="InvUOM_Round_RoundType" displayName="InvUOM_Round_RoundType" description="" help="" ParentName="" Alias="InvUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="0dae7f6e-a0bf-4023-9588-8fcd63008d9b" name="InvUOM_Round_RoundValue" displayName="InvUOM_Round_RoundValue" description="" help="" ParentName="" Alias="InvUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="99c9f492-e2e7-4412-a50f-814f96d5ef51" name="DocNo" displayName="单据号" description="" help="" />
+      <BasicFilter id="f1d8328f-c35e-4aa5-8737-9583be52aa37" name="BusinessDate" displayName="单据日期" description="" help="" />
+      <BasicFilter id="9c868159-2665-4a32-8de6-50ee35e63124" name="ItemCode" displayName="存货编码" description="" help="" />
+      <BasicFilter id="2a8ad44e-a800-4659-8532-c8d912e0c8f0" name="ItemName" displayName="存货名称" description="" help="" />
+      <BasicFilter id="ee6fd570-c089-49b7-b55d-d79d1b7c18ca" name="SPECS" displayName="规格型号" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="500b6200-c110-4b1f-ae3a-d145a7edcb2c" name="BusinessDate" displayName="单据日期" description="" help="" />
+      <Column id="345e3329-cf8a-4cd5-b501-c04b2a678400" name="DocNo" displayName="单据号" description="" help="" />
+      <Column id="b60932a5-779c-40ce-8db3-df52c8dd09bb" name="DocLineNo" displayName="行号" description="" help="" />
+      <Column id="8120e6f1-e9d1-4e3b-ab44-46602a1980b6" name="ItemCode" displayName="存货编码" description="" help="" />
+      <Column id="9e4a66f4-8c17-4c79-905b-79fd60fc6665" name="ItemName" displayName="存货名称" description="" help="" />
+      <Column id="b11045a4-9f42-4fd3-894b-6ae3be017839" name="MainSOQty" displayName="主销售数量" description="" help="" />
+      <Column id="f80c0a91-bc51-43b9-bb1d-e592e6356787" name="MainUOM_Name" displayName="主单位" description="" help="" />
+      <Column id="3c2787c2-23c6-416b-b22c-050ae7914cd9" name="FinallyPrice" displayName="主报价" description="" help="" />
+      <Column id="aa0552af-926b-498f-92aa-c88ef7a87db3" name="InvSOQty" displayName="辅销售数量" description="" help="" />
+      <Column id="17a67895-4b6d-480f-9db5-4211c6d3c8e3" name="InvUOM_Name" displayName="辅单位" description="" help="" />
+      <Column id="ca0a50c9-308e-4ef2-b7f7-20fd18a8ea4c" name="TotalMoney" displayName="金额" description="" help="" />
+      <Column id="b4c80b52-3d8e-47be-abd1-3db326001b27" name="ConversionRates" displayName="换算率" description="" help="" />
+      <Column id="7b82d0bc-4cff-4ec5-969f-13025804fdb3" name="Customer_Name" displayName="公司名称" description="" help="" />
+      <Column id="2ce83978-46e8-436a-baa3-e5b092d24b3a" name="Operators_Name" displayName="业务员" description="" help="" />
+      <Column id="68aec8d7-01b4-4347-9a2d-4903a394049d" name="SPECS" displayName="规格型号" description="" help="" />
+      <Column id="04114802-3b61-44a6-a757-9d5427af9c7c" name="Memo" displayName="备注" description="" help="" />
+      <Column id="30536b64-aec9-4040-874a-91ce719d110c" name="MainUOM_Round_RoundType" displayName="主单位_精度_舍入类型" description="" help="" />
+      <Column id="7be8b509-3017-464f-9449-9cea7bdc5f2b" name="MainUOM_Round_RoundValue" displayName="主单位_精度_舍入值" description="" help="" />
+      <Column id="37c66f31-71ec-4879-b104-7095648f84a0" name="MainUOM_Round_Precision" displayName="主单位_精度_精度" description="" help="" />
+      <Column id="53398381-dc88-4f89-880e-84c70a444c0e" name="InvUOM_Round_Precision" displayName="辅单位_精度_精度" description="" help="" />
+      <Column id="08736efb-9c2d-466a-8bfd-d866d2963cb6" name="InvUOM_Round_RoundType" displayName="辅单位_精度_舍入类型" description="" help="" />
+      <Column id="b9640267-a0ae-45f2-9fbb-8345f56a79a8" name="InvUOM_Round_RoundValue" displayName="辅单位_精度_舍入值" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="c641805c-f768-4ddb-9273-144ddf2465f6" name="DocNo" displayName="" description="" help="" SortType="ASC" />
+      <Sort id="2fbba6f8-91ef-4181-bf43-8483d889e457" name="DocLineNo" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

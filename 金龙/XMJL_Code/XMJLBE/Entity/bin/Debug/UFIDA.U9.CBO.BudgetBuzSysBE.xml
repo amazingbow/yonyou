@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.CBO.BudgetBuzSysBE</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO">
+            <summary>
+            预算单据行DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.FromEntityData(UFIDA.U9.CBO.DTOs.BudgetDocLineDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.ToEntityData(UFIDA.U9.CBO.DTOs.BudgetDocLineDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.#ctor(System.Int64,System.Int64,UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget.EntityKey,UFIDA.U9.Base.SOB.SOBAccountingPeriod.EntityKey,System.Decimal,System.Boolean,System.Boolean,UFIDA.U9.Base.Organization.Organization.EntityKey,System.Int64,UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget.EntityKey,UFIDA.U9.Base.Currency.Currency.EntityKey,System.Decimal,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.DocHeadID">
+            <summary>
+            单据表头 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.单据表头
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.DocLineID">
+            <summary>
+            单据表行 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.单据表行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.MoneySpecialProject">
+            <summary>
+            资金预算专项 (该属性可为空,且无默认值)
+            预算单据行DTO.Misc.资金预算专项
+            </summary>
+            <value>UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.PostPeriod">
+            <summary>
+            记帐期间 (该属性可为空,且无默认值)
+            预算单据行DTO.Misc.记帐期间
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SOBAccountingPeriod</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Money">
+            <summary>
+            原币总金额 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.原币总金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.IsLicencedApproval">
+            <summary>
+            特批 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.特批
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.IsApproved">
+            <summary>
+            已核准 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.已核准
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            预算单据行DTO.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.SysVer">
+            <summary>
+            系统版本 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.系统版本
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.BusinessSpecialProject">
+            <summary>
+            业务预算专项 (该属性可为空,且无默认值)
+            预算单据行DTO.Misc.业务预算专项
+            </summary>
+            <value>UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Currency">
+            <summary>
+            币种 (该属性可为空,且无默认值)
+            预算单据行DTO.Misc.币种
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.OCNoTaxMoney">
+            <summary>
+            原币未税金额 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.原币未税金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.FCMoney">
+            <summary>
+            本币总金额 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.本币总金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.FCNoTaxMoney">
+            <summary>
+            本币未税金额 (该属性可为空,但有默认值)
+            预算单据行DTO.Misc.本币未税金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_TypeName">
+            <summary>
+            预算单据行DTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_DocHeadID">
+            <summary>
+            单据表头的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_DocLineID">
+            <summary>
+            单据表行的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_MoneySpecialProject">
+            <summary>
+            资金预算专项的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_PostPeriod">
+            <summary>
+            记帐期间的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_Money">
+            <summary>
+            原币总金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_IsLicencedApproval">
+            <summary>
+            特批的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_IsApproved">
+            <summary>
+            已核准的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_Org">
+            <summary>
+            组织的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_SysVer">
+            <summary>
+            系统版本的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_BusinessSpecialProject">
+            <summary>
+            业务预算专项的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_Currency">
+            <summary>
+            币种的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_OCNoTaxMoney">
+            <summary>
+            原币未税金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_FCMoney">
+            <summary>
+            本币总金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.BudgetDocLineDTO.Res_FCNoTaxMoney">
+            <summary>
+            本币未税金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO">
+            <summary>
+            单据保留保存DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.FromEntityData(UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.ToEntityData(UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.#ctor(UFIDA.U9.Base.SOB.SetofBooks.EntityKey,System.Int64,System.String,System.Int64,System.Int32,UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum,System.DateTime,System.String,System.Int64,System.Int64,UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget.EntityKey,System.Int64,System.Decimal,System.Int64,System.Int32,System.Int32)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.SOB">
+            <summary>
+            账簿 (该属性可为空,且无默认值)
+            单据保留保存DTO.Misc.账簿
+            </summary>
+            <value>UFIDA.U9.Base.SOB.SetofBooks</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.DocHead">
+            <summary>
+            单据头 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.单据头
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.DocHeadCode">
+            <summary>
+            单据头编码 (该属性可为空,且无默认值)
+            单据保留保存DTO.Misc.单据头编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.DocLine">
+            <summary>
+            单据行 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.单据行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.DocLineNum">
+            <summary>
+            单据行号 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.单据行号
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.SourceDocType">
+            <summary>
+            来源单据类别 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.来源单据类别
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.BusinessDate">
+            <summary>
+            业务日期 (该属性可为空,且无默认值)
+            单据保留保存DTO.Misc.业务日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Digest">
+            <summary>
+            摘要 (该属性可为空,且无默认值)
+            单据保留保存DTO.Misc.摘要
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.SourceEncumbVoucherIndex">
+            <summary>
+            来源保留凭证线索 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.来源保留凭证线索
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.ControlObject">
+            <summary>
+            预算控制对象 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.预算控制对象
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.SpecialProject">
+            <summary>
+            预算专项 (该属性可为空,且无默认值)
+            单据保留保存DTO.Misc.预算专项
+            </summary>
+            <value>UFIDA.U9.CBO.FI.BudgetSpecialProject.SpecialBudget</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.ControlPeriod">
+            <summary>
+            预算控制周期 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.预算控制周期
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Money">
+            <summary>
+            金额 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.金额
+            </summary>
+            <value>System.Decimal</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.ID">
+            <summary>
+            预算单据保留数据 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.预算单据保留数据
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.EncumbMode">
+            <summary>
+            保留方式 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.保留方式
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.EncumbPhase">
+            <summary>
+            保留环节 (该属性可为空,但有默认值)
+            单据保留保存DTO.Misc.保留环节
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_TypeName">
+            <summary>
+            单据保留保存DTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_SOB">
+            <summary>
+            账簿的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_DocHead">
+            <summary>
+            单据头的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_DocHeadCode">
+            <summary>
+            单据头编码的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_DocLine">
+            <summary>
+            单据行的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_DocLineNum">
+            <summary>
+            单据行号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_SourceDocType">
+            <summary>
+            来源单据类别的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_BusinessDate">
+            <summary>
+            业务日期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_Digest">
+            <summary>
+            摘要的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_SourceEncumbVoucherIndex">
+            <summary>
+            来源保留凭证线索的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_ControlObject">
+            <summary>
+            预算控制对象的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_SpecialProject">
+            <summary>
+            预算专项的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_ControlPeriod">
+            <summary>
+            预算控制周期的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_Money">
+            <summary>
+            金额的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_ID">
+            <summary>
+            预算单据保留数据的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_EncumbMode">
+            <summary>
+            保留方式的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.CBO_DocEncumbSaveDTO.Res_EncumbPhase">
+            <summary>
+            保留环节的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO">
+            <summary>
+            不合法的单据保留信息DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.FromEntityData(UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.ToEntityData(UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.DocLineID">
+            <summary>
+            单据行ID (该属性可为空,但有默认值)
+            不合法的单据保留信息DTO.Misc.单据行ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.ExceptionMessage">
+            <summary>
+            保留不合法信息 (该属性可为空,且无默认值)
+            不合法的单据保留信息DTO.Misc.保留不合法信息
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.Res_TypeName">
+            <summary>
+            不合法的单据保留信息DTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.Res_DocLineID">
+            <summary>
+            单据行ID的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.IllegalDocEncumbTipsDTO.Res_ExceptionMessage">
+            <summary>
+            保留不合法信息的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO">
+            <summary>
+            预算检查占用返回DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.FromEntityData(UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTOData)">
+            <summary>
+            Copy Entity From EntityData
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.ToEntityData">
+            <summary>
+            Create EntityData From Entity
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.ToEntityData(UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTOData,System.Collections.IDictionary)">
+            <summary>
+            Create EntityData From Entity - used by ubf 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.#ctor(System.Boolean,System.String)">
+            <summary>
+            Constructor with Full Argument 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.IsBudgetExcute">
+            <summary>
+            是否需要执行预算 (该属性可为空,但有默认值)
+            预算检查占用返回DTO.Misc.是否需要执行预算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.TaskNum">
+            <summary>
+            任务号 (该属性可为空,且无默认值)
+            预算检查占用返回DTO.Misc.任务号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.Res_TypeName">
+            <summary>
+            预算检查占用返回DTO的显示名称资源--已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.Res_IsBudgetExcute">
+            <summary>
+            是否需要执行预算的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.DTOs.ABCheckImpropriateRetrunDTO.Res_TaskNum">
+            <summary>
+            任务号的显示名称资源 -- 已经废弃，不使用.
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum">
+            <summary>
+            可扩展枚举: 预算保留来源单据类别 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.GetFromValue(System.Int32)">
+            <summary>
+            Get BudgetEncumbDocTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.GetFromValue(System.Object)">
+            <summary>
+            Get BudgetEncumbDocTypeEnum By Value 
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.GetFromName(System.String)">
+            <summary>
+            Get BudgetEncumbDocTypeEnum By Name 
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.PR">
+            <summary>
+            枚举值: 请购单  Value:0  
+            预算保留来源单据类别.Misc.请购单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.PO">
+            <summary>
+            枚举值: 采购订单  Value:1  
+            预算保留来源单据类别.Misc.采购订单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.AP">
+            <summary>
+            枚举值: 应付单  Value:2  
+            预算保留来源单据类别.Misc.应付单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.ReqFund">
+            <summary>
+            枚举值: 付款请款单  Value:3  
+            预算保留来源单据类别.Misc.付款请款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.AutoPayment">
+            <summary>
+            枚举值: 自动付款单  Value:4  
+            预算保留来源单据类别.Misc.自动付款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Payment">
+            <summary>
+            枚举值: 付款单  Value:5  
+            预算保留来源单据类别.Misc.付款单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Values">
+            <summary>
+            Get BudgetEncumbDocTypeEnum's All Values.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_TypeName">
+            <summary>
+            预算保留来源单据类别的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_TypeNameS">
+            <summary>
+            预算保留来源单据类别的显示名称资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_PR">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_PO">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_AP">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_ReqFund">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_AutoPayment">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.Res_Payment">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.EnumRes.GetResource(System.String)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Name 就可.
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.EnumRes.GetResourceByValue(System.Int32)">
+            <summary>
+             获取资源接口,直接传了枚举对象.Value 或Int32值 就可.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CBO.Enums.BudgetEncumbDocTypeEnum.EnumRes.Enum_FullName">
+            <summary>
+            枚举全名: FullName 
+            </summary>
+        </member>
+    </members>
+</doc>

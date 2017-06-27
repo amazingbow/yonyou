@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="b37587f9-5ed0-46cd-b226-669a1f0c6dab" name="SupplierQuery" displayName="SupplierQuery" description="" help="" QueryType="DTOQuery" QueryURI="792096f9-2995-4223-8fe9-5fba15b80ae6" QuerySourceFullName="UFIDA.U9.Cust.FJGX.SupplierQryBP.SupplierQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="6101d44b-4ab3-48b5-8510-6b99e026d0cd" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="dba8dfb8-055d-42dc-8d55-8800aa734535" name="Supplier" displayName="Supplier" description="" help="" ProjectID="" ProjectPath="" BPItemID="b5b45406-a4ce-4846-b7f1-130fdc91bd04" BPOperationID="ea8b682d-47b1-49af-8552-d0a79dc57a12" DTOID="79b2ba29-62df-49bc-a7de-b2409daa926d" BPAgentDll="UFIDA.U9.Cust.FJGX.SupplierQueryBP.Agent" BPAgentProxy="UFIDA.U9.Cust.FJGX.SupplierQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="2bf22b57-5428-4b21-83ee-13fa937ff4e2" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="5c6d0356-4fe9-4929-9fe9-404be405fbe7" UIFormItemID="9a0eb991-3859-4280-a931-cf768719d7f8" UIModelID="941c294a-5486-42ee-8959-670439660c42" />
+  <FilterDefines>
+    <FilterDefine id="31ab31f6-b795-4cd8-90b5-dd6a0854c463" name="SupplierContact_Contact" displayName="SupplierContact_Contact" description="" help="" ParentName="" Alias="SupplierContact_Contact" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="951685ef-afad-4389-acc2-ef40c1740737" name="" displayName="" description="" help="" RefID="0036f3a1-2a68-4e33-947b-f173bca222e6" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="SupplierContact_Contact" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="23ebbdc3-88dd-4bdc-b0bd-9e5e324ee543" name="Supplier_Purchaser" displayName="Supplier_Purchaser" description="" help="" ParentName="" Alias="Supplier_Purchaser" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="4a5d07e0-4424-4ab5-a469-bfe0a67779bc" name="" displayName="" description="" help="" RefID="a118cadb-1a8e-42f3-b0ab-4ec16749bcaa" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Supplier_Purchaser" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+    <FilterDefine id="84a08aac-17b5-483d-b382-c68422541c3d" name="Supplier_Category" displayName="Supplier_Category" description="" help="" ParentName="" Alias="Supplier_Category" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="">
+      <Reference id="25eb99ef-4c42-412d-a871-893219938eb0" name="" displayName="" description="" help="" RefID="2ed6ba98-2b2c-4653-884c-2846a6f7673e" RefURI="" KeyField="" ValueField="Code" TextField="Name" ReturnValueField="ID" ReturnValueType="String" LeftExpression="Supplier_Category" RefWidth="580" RefHeight="408" />
+    </FilterDefine>
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="234423bc-6819-420c-a28b-94e36f19fec0" name="Supplier_ID" displayName="Supplier_ID" description="" help="" ParentName="" Alias="Supplier_ID" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="8bacebd1-6d8b-4982-bf34-82cd3d9cbec5" name="APTotalMoney" displayName="APTotalMoney" description="" help="" ParentName="" Alias="APTotalMoney" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="5b0ae1b5-e7dc-44e5-9427-2447ad516638" name="SumAPTotalMoney" displayName="SumAPTotalMoney" description="" help="" ParentName="" Alias="SumAPTotalMoney" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" AlwaysLoaded="True" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="3d668a54-094b-44b0-91a0-baa94d894892" name="Supplier_Code" displayName="编码" description="" help="" />
+      <BasicFilter id="3db93810-b37c-4432-a93d-c3b69a6aad7f" name="Supplier_Name" displayName="名称" description="" help="" />
+      <BasicFilter id="7c97c0b9-656d-4690-8bfc-791c652aec0d" name="SupplierContact_Contact" displayName="联系人" description="" help="" />
+      <BasicFilter id="287c0fd9-9be6-4446-80e4-be49fdeedff4" name="SupplierContact_Contact_Name" displayName="联系人名称" description="" help="" />
+      <BasicFilter id="3961151b-ea51-414e-bfac-e4756c7fff5c" name="SupplierContact_Contact_DefaultMobilNum" displayName="手机" description="" help="" />
+      <BasicFilter id="175bbc62-36ad-4c90-95e0-188164ab458e" name="SupplierContact_Contact_DefaultPhoneNum" displayName="电话" description="" help="" />
+      <BasicFilter id="a5a7edc0-4043-4f11-b4ab-eb87c79f30bc" name="Supplier_Purchaser" displayName="业务员" description="" help="" />
+      <BasicFilter id="71125d60-8b93-4119-a4ee-7a04a42d6201" name="Supplier_Category" displayName="分类" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="3ce702ee-0cc1-4ad6-9f05-c19af5ac5103" name="Supplier_Code" displayName="编码" description="" help="" />
+      <Column id="2fbbd632-851a-4816-bb90-e6836ebc7d4e" name="Supplier_Name" displayName="名称" description="" help="" />
+      <Column id="f1459c3d-ab65-4d83-afba-5cb2648bdf1c" name="SupplierContact_Contact_Name" displayName="联系人" description="" help="" />
+      <Column id="9f22fd44-591d-4e42-aeb4-8dfaf18b127f" name="SupplierContact_Contact_DefaultMobilNum" displayName="手机" description="" help="" />
+      <Column id="b7711929-63ec-4226-bac7-18b69be40b69" name="Supplier_Category_Name" displayName="分类" description="" help="" />
+      <Column id="587adf68-4465-40a2-96bd-1d39939ee512" name="SupplierContact_Contact_DefaultFaxNum" displayName="传真" description="" help="" />
+      <Column id="dde632d6-0c1e-49ff-a5e3-9a5f34ebeb70" name="APTotalMoney" displayName="应付余额" description="" help="" />
+      <Column id="4bf729e1-c6fc-4a25-a624-b67448f9f40c" name="Supplier_StateTaxNo" displayName="税号" description="" help="" />
+      <Column id="830ef715-0150-4323-9f4f-a05a9e871d99" name="SupplierBankAccount_Name" displayName="开户银行" description="" help="" />
+      <Column id="abc12505-7419-490e-a34d-43087f6d7495" name="Supplier_OfficialLocation_Name" displayName="办公地址" description="" help="" />
+      <Column id="049d9216-cf85-4f10-ba3f-c9a51b892503" name="Supplier_Purchaser_Name" displayName="采购员" description="" help="" />
+      <Column id="853da9bf-78e2-43da-9f72-3c920eeeb5bf" name="Supplier_Description" displayName="说明" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="1f11bc50-4578-4461-95d5-0037351adc26" name="Supplier_Code" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

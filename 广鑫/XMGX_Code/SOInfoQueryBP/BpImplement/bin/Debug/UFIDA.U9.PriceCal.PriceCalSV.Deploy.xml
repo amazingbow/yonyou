@@ -1,0 +1,3009 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PriceCal.PriceCalSV.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData">
+            <summary>
+            费用行 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.#ctor(System.Int32,System.Decimal,System.Int64,System.Boolean,System.Int64,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData,System.Boolean,System.Int32,System.Int64,UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData,System.Boolean,System.Int64,System.Decimal,System.Boolean,System.Boolean,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_baseType">
+            <summary>
+            费用计算依据
+            费用行.Misc.费用计算依据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_coefficient">
+            <summary>
+            计费系数
+            费用行.Misc.计费系数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_isTaxable">
+            <summary>
+            是否计税
+            费用行.Misc.是否计税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeExcludeTax">
+            <summary>
+            无税费用金额(费币)
+            费用行.Misc.无税费用金额(费币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_tax">
+            <summary>
+            税额(费币)
+            费用行.Misc.税额(费币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeIncludeTax">
+            <summary>
+            含税费用金额(费币)
+            费用行.Misc.含税费用金额(费币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_priceInfo">
+            <summary>
+            单据行
+            费用行.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_isEnterPricee">
+            <summary>
+            是否记入价格
+            费用行.Misc.是否记入价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeType">
+            <summary>
+            费用类型(整单费用,行费用)
+            费用行.Misc.费用类型(整单费用,行费用)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_iD">
+            <summary>
+            ID
+            费用行.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_doc">
+            <summary>
+            单据
+            费用行.Misc.单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_isAllocated">
+            <summary>
+            是否已分摊
+            费用行.Misc.是否已分摊
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_parent">
+            <summary>
+            父费用行ID
+            费用行.Misc.父费用行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_taxRate">
+            <summary>
+            税率
+            费用行.Misc.税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_isApporInCost">
+            <summary>
+            是否计入成本
+            费用行.Misc.是否计入成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_isForeign">
+            <summary>
+            是否国外费用
+            费用行.Misc.是否国外费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeCToTCRate">
+            <summary>
+            费币-交易币汇率
+            费用行.Misc.费币-交易币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeCToACRate">
+            <summary>
+            费币-核币汇率
+            费用行.Misc.费币-核币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeCToFCRate">
+            <summary>
+            核币-本币汇率
+            费用行.Misc.核币-本币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeIncTaxTC">
+            <summary>
+            含税费用金额(交易币)
+            费用行.Misc.含税费用金额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeExcTaxTC">
+            <summary>
+            无税费用金额(交易币)
+            费用行.Misc.无税费用金额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeTaxTC">
+            <summary>
+            费用税额(交易币)
+            费用行.Misc.费用税额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeIncTaxAC">
+            <summary>
+            含税费用金额(核币)
+            费用行.Misc.含税费用金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeExcTaxAC">
+            <summary>
+            无税费用金额(核币)
+            费用行.Misc.无税费用金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeTaxAC">
+            <summary>
+            费用税额(核币)
+            费用行.Misc.费用税额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeIncTaxFC">
+            <summary>
+            含税费用金额(本币)
+            费用行.Misc.含税费用金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeExcTaxFC">
+            <summary>
+            无税费用金额(本币)
+            费用行.Misc.无税费用金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.m_feeTaxFC">
+            <summary>
+            费用税额(本币)
+            费用行.Misc.费用税额(本币)
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.Uom_SKey">
+            <summary>
+            计费单位 序列化Key属性。（传递跨组织序列列字段）
+            费用行.Misc.计费单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.Uom">
+            <summary>
+            计费单位
+            费用行.Misc.计费单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.TaxSchedule_SKey">
+            <summary>
+            税组合 序列化Key属性。（传递跨组织序列列字段）
+            费用行.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.TaxSchedule">
+            <summary>
+            税组合
+            费用行.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.FeeC_SKey">
+            <summary>
+            费用币种 序列化Key属性。（传递跨组织序列列字段）
+            费用行.Misc.费用币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.FeeC">
+            <summary>
+            费用币种
+            费用行.Misc.费用币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.Carrier_SKey">
+            <summary>
+            承运商 序列化Key属性。（传递跨组织序列列字段）
+            费用行.Misc.承运商
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.FeeLineData.Carrier">
+            <summary>
+            承运商
+            费用行.Misc.承运商
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData">
+            <summary>
+            折扣行 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.#ctor(System.Int64,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData,System.Boolean,System.Int32,UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData,System.Boolean,System.Int64,System.Decimal,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_lineNumber">
+            <summary>
+            序号
+            折扣行.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_baseType">
+            <summary>
+            折扣依据枚举(金额、价格)
+            折扣行.Misc.折扣依据枚举(金额、价格)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_direction">
+            <summary>
+            折扣方向枚举(正扣、倒扣)
+            折扣行.Misc.折扣方向枚举(正扣、倒扣)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_discountRate">
+            <summary>
+            折扣率
+            折扣行.Misc.折扣率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_discountAmount">
+            <summary>
+            折扣额
+            折扣行.Misc.折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_price">
+            <summary>
+            折后单价
+            折扣行.Misc.折后单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_priceLine">
+            <summary>
+            单据行
+            折扣行.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_isManual">
+            <summary>
+            是否手工折扣
+            折扣行.Misc.是否手工折扣
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_discountType">
+            <summary>
+            折扣类型枚举(行折扣、整单折扣)
+            折扣行.Misc.折扣类型枚举(行折扣、整单折扣)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_doc">
+            <summary>
+            单据
+            折扣行.Misc.单据
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_isAllocated">
+            <summary>
+            是否已分摊
+            折扣行.Misc.是否已分摊
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_discountItem">
+            <summary>
+            折扣项目ID
+            折扣行.Misc.折扣项目ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_calAmount">
+            <summary>
+            扣额
+            折扣行.Misc.扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData.m_discountCode">
+            <summary>
+            折扣编码
+            折扣行.Misc.折扣编码
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData">
+            <summary>
+            DocPriceInfo DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.#ctor(System.Int64,System.Int64,System.Int64,System.Int64,System.DateTime,System.Int32,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.FeeLineData},System.Boolean,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData},System.String,System.String,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData},System.Decimal,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData},System.Boolean,System.Int64,System.Int64,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_iD">
+            <summary>
+            单据ID
+            DocPriceInfo.Misc.单据ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_partner">
+            <summary>
+            合作伙伴
+            DocPriceInfo.Misc.合作伙伴
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_partnerSite">
+            <summary>
+            合作伙伴地址
+            DocPriceInfo.Misc.合作伙伴地址
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_date">
+            <summary>
+            业务日期
+            DocPriceInfo.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_tradeCondition">
+            <summary>
+            贸易条件
+            DocPriceInfo.Misc.贸易条件
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyTC">
+            <summary>
+            总金额
+            DocPriceInfo.Misc.总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalTaxTC">
+            <summary>
+            总税额
+            DocPriceInfo.Misc.总税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyExcludeTaxTC">
+            <summary>
+            未税总金额
+            DocPriceInfo.Misc.未税总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_taxRate">
+            <summary>
+            税率
+            DocPriceInfo.Misc.税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_headFeeTC">
+            <summary>
+            整单费用
+            DocPriceInfo.Misc.整单费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_feeTaxTC">
+            <summary>
+            费用税额
+            DocPriceInfo.Misc.费用税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalFeeTC">
+            <summary>
+            总费用
+            DocPriceInfo.Misc.总费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_feeDetails">
+            <summary>
+            整单费用行
+            DocPriceInfo.Misc.整单费用行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_isPriceIncludeTax">
+            <summary>
+            单价是否含税
+            DocPriceInfo.Misc.单价是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_taxLines">
+            <summary>
+            计税结果明细
+            DocPriceInfo.Misc.计税结果明细
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_partnerName">
+            <summary>
+            合作伙伴名称
+            DocPriceInfo.Misc.合作伙伴名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_partnerSiteName">
+            <summary>
+            合作伙伴地址名称
+            DocPriceInfo.Misc.合作伙伴地址名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_discounts">
+            <summary>
+            整单折扣行
+            DocPriceInfo.Misc.整单折扣行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalDiscount">
+            <summary>
+            总折扣
+            DocPriceInfo.Misc.总折扣
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_tCToACRate">
+            <summary>
+            交易币到核币汇率
+            DocPriceInfo.Misc.交易币到核币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_aCToFCRate">
+            <summary>
+            核币到本币汇率
+            DocPriceInfo.Misc.核币到本币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyAC">
+            <summary>
+            总金额(核币)
+            DocPriceInfo.Misc.总金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyFC">
+            <summary>
+            总金额(本币)
+            DocPriceInfo.Misc.总金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalTaxAC">
+            <summary>
+            总税额(核币)
+            DocPriceInfo.Misc.总税额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalTaxFC">
+            <summary>
+            总税额(本币)
+            DocPriceInfo.Misc.总税额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyExcludeTaxAC">
+            <summary>
+            未税总金额(核币)
+            DocPriceInfo.Misc.未税总金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_totalMoneyExcludeTaxFC">
+            <summary>
+            未税总金额(本币)
+            DocPriceInfo.Misc.未税总金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_lines">
+            <summary>
+            单据行
+            DocPriceInfo.Misc.单据行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_isRTN">
+            <summary>
+            是否退货
+            DocPriceInfo.Misc.是否退货
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_bargainMode">
+            <summary>
+            成交方式
+            DocPriceInfo.Misc.成交方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_exchangeRateType">
+            <summary>
+            汇率类型
+            DocPriceInfo.Misc.汇率类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.m_isAutoAllocateFee">
+            <summary>
+            头费用是否自动分摊
+            DocPriceInfo.Misc.头费用是否自动分摊
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.Org">
+            <summary>
+            组织
+            DocPriceInfo.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.TaxSchedule_SKey">
+            <summary>
+            税组合 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.TaxSchedule">
+            <summary>
+            税组合
+            DocPriceInfo.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.TC_SKey">
+            <summary>
+            交易币 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.交易币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.TC">
+            <summary>
+            交易币
+            DocPriceInfo.Misc.交易币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.AC_SKey">
+            <summary>
+            核币 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.核币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.AC">
+            <summary>
+            核币
+            DocPriceInfo.Misc.核币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.FC_SKey">
+            <summary>
+            本币 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.本币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.FC">
+            <summary>
+            本币
+            DocPriceInfo.Misc.本币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.ShipPort_SKey">
+            <summary>
+            装运港 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.装运港
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.ShipPort">
+            <summary>
+            装运港
+            DocPriceInfo.Misc.装运港
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.AimPort_SKey">
+            <summary>
+            目的港 序列化Key属性。（传递跨组织序列列字段）
+            DocPriceInfo.Misc.目的港
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData.AimPort">
+            <summary>
+            目的港
+            DocPriceInfo.Misc.目的港
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData">
+            <summary>
+            LinePriceInfo DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.#ctor(System.Int64,System.Int64,System.DateTime,System.Int64,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Boolean,System.Boolean,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,UFIDA.U9.CBO.DTOs.SingleQuantityData,UFIDA.U9.CBO.DTOs.SingleQuantityData,UFIDA.U9.CBO.DTOs.SingleQuantityData,UFIDA.U9.CBO.DTOs.SingleQuantityData,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Int32,UFIDA.U9.Base.DTOs.MoneyData,UFIDA.U9.CBO.DTOs.SingleQuantityData,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Decimal,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData},System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.FeeLineData},System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.DiscountLineData},System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData},System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData,System.Int64,System.Int64,System.Decimal,System.String,System.Int64,System.Decimal,System.Boolean,System.Int32,System.Int64,System.Decimal,System.Int64,System.Int64,System.Int32,System.Boolean,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Int64,System.Int64,System.Decimal,System.Int64,System.Int64,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_iD">
+            <summary>
+            单据行ID
+            LinePriceInfo.Misc.单据行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_date">
+            <summary>
+            业务日期
+            LinePriceInfo.Misc.业务日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_partner">
+            <summary>
+            合作伙伴
+            LinePriceInfo.Misc.合作伙伴
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_partnerSite">
+            <summary>
+            合作伙伴地址
+            LinePriceInfo.Misc.合作伙伴地址
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_priceList">
+            <summary>
+            价目表
+            LinePriceInfo.Misc.价目表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_itemInfo">
+            <summary>
+            物料信息
+            LinePriceInfo.Misc.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalTaxTC">
+            <summary>
+            税额
+            LinePriceInfo.Misc.税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_taxRate">
+            <summary>
+            税率
+            LinePriceInfo.Misc.税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyExcludeTaxTC">
+            <summary>
+            未税金额
+            LinePriceInfo.Misc.未税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyIncludeTaxTC">
+            <summary>
+            含税金额
+            LinePriceInfo.Misc.含税金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalFeeTC">
+            <summary>
+            费用
+            LinePriceInfo.Misc.费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_apportionFeeTC">
+            <summary>
+            摊平金额
+            LinePriceInfo.Misc.摊平金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalDiscountTC">
+            <summary>
+            折扣额
+            LinePriceInfo.Misc.折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_isPriceIncludeTax">
+            <summary>
+            定价是否含税
+            LinePriceInfo.Misc.定价是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_isFromPL">
+            <summary>
+            价格是否取自价表
+            LinePriceInfo.Misc.价格是否取自价表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_orderPrice">
+            <summary>
+            定价
+            LinePriceInfo.Misc.定价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_systemPrice">
+            <summary>
+            系统价
+            LinePriceInfo.Misc.系统价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_apportionPrice">
+            <summary>
+            摊平价格
+            LinePriceInfo.Misc.摊平价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_finallyPrice">
+            <summary>
+            最终价
+            LinePriceInfo.Misc.最终价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qtyPriceUOM">
+            <summary>
+            计价单位数量
+            LinePriceInfo.Misc.计价单位数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qty2">
+            <summary>
+            计量单位2数量
+            LinePriceInfo.Misc.计量单位2数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qty3">
+            <summary>
+            计量单位3数量
+            LinePriceInfo.Misc.计量单位3数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qty4">
+            <summary>
+            计量单位4数量
+            LinePriceInfo.Misc.计量单位4数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qty5">
+            <summary>
+            计量单位5数量
+            LinePriceInfo.Misc.计量单位5数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_priceSourceEnum">
+            <summary>
+            定价方式
+            LinePriceInfo.Misc.定价方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_costMoney">
+            <summary>
+            成本金额
+            LinePriceInfo.Misc.成本金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_weight">
+            <summary>
+            重量
+            LinePriceInfo.Misc.重量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_volume">
+            <summary>
+            体积
+            LinePriceInfo.Misc.体积
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_packageCount">
+            <summary>
+            件数
+            LinePriceInfo.Misc.件数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_taxLines">
+            <summary>
+            计税结果明细
+            LinePriceInfo.Misc.计税结果明细
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_feeDetails">
+            <summary>
+            费用行
+            LinePriceInfo.Misc.费用行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_discountLines">
+            <summary>
+            折扣行
+            LinePriceInfo.Misc.折扣行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_priceLogInfoes">
+            <summary>
+            价格计算日志
+            LinePriceInfo.Misc.价格计算日志
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_partnerName">
+            <summary>
+            合作伙伴名称
+            LinePriceInfo.Misc.合作伙伴名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_partnerSiteName">
+            <summary>
+            合作伙伴地址名称
+            LinePriceInfo.Misc.合作伙伴地址名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_tCToACRate">
+            <summary>
+            交易币到核币汇率
+            LinePriceInfo.Misc.交易币到核币汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalTaxAC">
+            <summary>
+            税额(核币)
+            LinePriceInfo.Misc.税额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyExcludeTaxAC">
+            <summary>
+            未税金额(核币)
+            LinePriceInfo.Misc.未税金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyIncludeTaxAC">
+            <summary>
+            含税金额(核币)
+            LinePriceInfo.Misc.含税金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalFeeAC">
+            <summary>
+            费用(核币)
+            LinePriceInfo.Misc.费用(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_apportionFeeAC">
+            <summary>
+            摊平费用(核币)
+            LinePriceInfo.Misc.摊平费用(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalDiscountAC">
+            <summary>
+            折扣额(核币)
+            LinePriceInfo.Misc.折扣额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalFeeFC">
+            <summary>
+            费用(本币)
+            LinePriceInfo.Misc.费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_apportionFeeFC">
+            <summary>
+            摊平费用(本币)
+            LinePriceInfo.Misc.摊平费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalDiscountFC">
+            <summary>
+            折扣额(本币)
+            LinePriceInfo.Misc.折扣额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalTaxFC">
+            <summary>
+            税额(本币)
+            LinePriceInfo.Misc.税额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyExcludeTaxFC">
+            <summary>
+            未税金额(本币)
+            LinePriceInfo.Misc.未税金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_totalMoneyIncludeTaxFC">
+            <summary>
+            含税金额(本币)
+            LinePriceInfo.Misc.含税金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_docPriceInfo">
+            <summary>
+            DocPriceInfo
+            LinePriceInfo.Misc.DocPriceInfo
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_fIConfirmTerm">
+            <summary>
+            应收/应付立账条件ID
+            LinePriceInfo.Misc.应收/应付立账条件ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_payTerm">
+            <summary>
+            收/付款条件ID
+            LinePriceInfo.Misc.收/付款条件ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_qtyForPrice">
+            <summary>
+            用来确定价格的计价单位数量
+            LinePriceInfo.Misc.用来确定价格的计价单位数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_errMsg">
+            <summary>
+            异常提示信息
+            LinePriceInfo.Misc.异常提示信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_useReturnMnyTC">
+            <summary>
+            销售返还使用金额
+            LinePriceInfo.Misc.销售返还使用金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_isAutoChangePriceSource">
+            <summary>
+            是否自动转换定价方式
+            LinePriceInfo.Misc.是否自动转换定价方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_defaultPriceSource">
+            <summary>
+            默认价格来源
+            LinePriceInfo.Misc.默认价格来源
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_pCLineID">
+            <summary>
+            合同行ID
+            LinePriceInfo.Misc.合同行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_finalDiscountRate">
+            <summary>
+            折扣率
+            LinePriceInfo.Misc.折扣率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_docLine">
+            <summary>
+            单据行线索
+            LinePriceInfo.Misc.单据行线索
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_docType">
+            <summary>
+            取价单据类型
+            LinePriceInfo.Misc.取价单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_isDiscountPriceList">
+            <summary>
+            是否折扣价表
+            LinePriceInfo.Misc.是否折扣价表
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_originalCust">
+            <summary>
+            原始客户
+            LinePriceInfo.Misc.原始客户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_originalCustCategory">
+            <summary>
+            原始客户分类
+            LinePriceInfo.Misc.原始客户分类
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_originalPriceTC">
+            <summary>
+            原始价格
+            LinePriceInfo.Misc.原始价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_originalExchRate">
+            <summary>
+            原始汇率
+            LinePriceInfo.Misc.原始汇率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_originalDiscountRate">
+            <summary>
+            结算扣率
+            LinePriceInfo.Misc.结算扣率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_boxNum">
+            <summary>
+            件数
+            LinePriceInfo.Misc.件数
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.m_outBoxPerVol">
+            <summary>
+            外箱单位体积
+            LinePriceInfo.Misc.外箱单位体积
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Org">
+            <summary>
+            组织
+            LinePriceInfo.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TaxSchedule_SKey">
+            <summary>
+            税组合 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TaxSchedule">
+            <summary>
+            税组合
+            LinePriceInfo.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Manufacturer_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Manufacturer">
+            <summary>
+            厂牌
+            LinePriceInfo.Misc.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Territory_SKey">
+            <summary>
+            地区 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Territory">
+            <summary>
+            地区
+            LinePriceInfo.Misc.地区
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TerritoryFrom_SKey">
+            <summary>
+            始发地 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.始发地
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TerritoryFrom">
+            <summary>
+            始发地
+            LinePriceInfo.Misc.始发地
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TerritoryTo_SKey">
+            <summary>
+            目的地 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.目的地
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.TerritoryTo">
+            <summary>
+            目的地
+            LinePriceInfo.Misc.目的地
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.OutBox_SKey">
+            <summary>
+            外箱 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.外箱
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.OutBox">
+            <summary>
+            外箱
+            LinePriceInfo.Misc.外箱
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Container_SKey">
+            <summary>
+            货柜 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.货柜
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.Container">
+            <summary>
+            货柜
+            LinePriceInfo.Misc.货柜
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.OutBoxVolUOM_SKey">
+            <summary>
+            外箱体积单位 序列化Key属性。（传递跨组织序列列字段）
+            LinePriceInfo.Misc.外箱体积单位
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData.OutBoxVolUOM">
+            <summary>
+            外箱体积单位
+            LinePriceInfo.Misc.外箱体积单位
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData">
+            <summary>
+            PriceLogInfo DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Object,System.Boolean,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_lineNumber">
+            <summary>
+            序号
+            PriceLogInfo.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_buckets">
+            <summary>
+            预算
+            PriceLogInfo.Misc.预算
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_phases">
+            <summary>
+            阶段
+            PriceLogInfo.Misc.阶段
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_precedence">
+            <summary>
+            优先级
+            PriceLogInfo.Misc.优先级
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_qualifier">
+            <summary>
+            适用对像
+            PriceLogInfo.Misc.适用对像
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_modifier">
+            <summary>
+            折扣对像
+            PriceLogInfo.Misc.折扣对像
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_discountOfRate">
+            <summary>
+            折扣率
+            PriceLogInfo.Misc.折扣率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_discountAMToffperqty">
+            <summary>
+            单位折扣额
+            PriceLogInfo.Misc.单位折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_lusumpAMT">
+            <summary>
+            折扣额
+            PriceLogInfo.Misc.折扣额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_subtotal">
+            <summary>
+            小计
+            PriceLogInfo.Misc.小计
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_objects">
+            <summary>
+            对象
+            PriceLogInfo.Misc.对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_isLimitQty">
+            <summary>
+            折扣限量
+            PriceLogInfo.Misc.折扣限量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceLogInfoData.m_saleDiscountPolicyLine">
+            <summary>
+            折扣单行ID
+            PriceLogInfo.Misc.折扣单行ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData">
+            <summary>
+            PriceInSameDoc DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.#ctor(System.Int64,System.String,UFIDA.U9.Base.DTOs.MoneyData,UFIDA.U9.Base.DTOs.MoneyData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.m_itemID">
+            <summary>
+            物料ID
+            PriceInSameDoc.Misc.物料ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.m_itemVersion">
+            <summary>
+            物料版本
+            PriceInSameDoc.Misc.物料版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.m_orderPrice">
+            <summary>
+            定价
+            PriceInSameDoc.Misc.定价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceInSameDocData.m_systemPrice">
+            <summary>
+            系统价
+            PriceInSameDoc.Misc.系统价
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData">
+            <summary>
+            前台模型价格行的改变参数 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.#ctor(System.Int32,System.Int32,System.Int64,System.String,System.Object,System.Object,System.Int32,System.Int64,System.Object,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_sequence">
+            <summary>
+            序号
+            前台模型价格行的改变参数.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_objectName">
+            <summary>
+            改变单据对象类型
+            前台模型价格行的改变参数.Misc.改变单据对象类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_iD">
+            <summary>
+            ID
+            前台模型价格行的改变参数.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_fieldName">
+            <summary>
+            改变字段名称
+            前台模型价格行的改变参数.Misc.改变字段名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_oldValue">
+            <summary>
+            改变之前的值
+            前台模型价格行的改变参数.Misc.改变之前的值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_newValue">
+            <summary>
+            改变之后的值
+            前台模型价格行的改变参数.Misc.改变之后的值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_actionEnum">
+            <summary>
+            执行动作枚举(增、删、改、不变)
+            前台模型价格行的改变参数.Misc.执行动作枚举(增、删、改、不变)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_ownerID">
+            <summary>
+            OwnerID
+            前台模型价格行的改变参数.Misc.OwnerID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.m_deleteObject">
+            <summary>
+            删除对象
+            前台模型价格行的改变参数.Misc.删除对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.ToCurrency_SKey">
+            <summary>
+            改变的币种 序列化Key属性。（传递跨组织序列列字段）
+            前台模型价格行的改变参数.Misc.改变的币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.UIChangeInfoData.ToCurrency">
+            <summary>
+            改变的币种
+            前台模型价格行的改变参数.Misc.改变的币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData">
+            <summary>
+            价格计算上下文 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.#ctor(System.Int64,System.Int64,System.Int64,System.Boolean,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData})">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.m_taxDiffTo">
+            <summary>
+            税的尾差处理
+            价格计算上下文.Misc.税的尾差处理
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.m_discountDiffTo">
+            <summary>
+            折扣的尾差处理
+            价格计算上下文.Misc.折扣的尾差处理
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.m_feeDiffTo">
+            <summary>
+            费用的尾差处理
+            价格计算上下文.Misc.费用的尾差处理
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.m_isReCalFeeAfterBaseChange">
+            <summary>
+            计费依据修改后是否重新计算费用
+            价格计算上下文.Misc.计费依据修改后是否重新计算费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceCalContextData.m_feeDiffToList">
+            <summary>
+            费用的尾差处理
+            价格计算上下文.Misc.费用的尾差处理
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.TaxResultLineDetailDTOData">
+            <summary>
+            计税结果明细数据传输对象 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxResultLineDetailDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxResultLineDetailDTOData.#ctor(System.Int64,UFIDA.U9.CBO.FI.Tax.TaxResultLineDetailData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxResultLineDetailDTOData.m_iD">
+            <summary>
+            序号
+            计税结果明细数据传输对象.Misc.序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxResultLineDetailDTOData.m_taxResultLineDetail">
+            <summary>
+            计税结果明细
+            计税结果明细数据传输对象.Misc.计税结果明细
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData">
+            <summary>
+            整单费用尾差处理对照 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData.#ctor(System.Int64,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData.m_feeID">
+            <summary>
+            费用行的ID
+            整单费用尾差处理对照.Misc.费用行的ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.DocFeeDiffIDMapData.m_feeDiffTo">
+            <summary>
+            尾差处理订单行的ID
+            整单费用尾差处理对照.Misc.尾差处理订单行的ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData">
+            <summary>
+            报价价格信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.#ctor(System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData},System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Boolean,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.FeeLineData},System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData},System.DateTime,System.String,System.Int64,System.Int32,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int64,System.Decimal,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_quotationPriceLineDTOs">
+            <summary>
+            报价价格行信息集合
+            报价价格信息.Misc.报价价格行信息集合
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_iD">
+            <summary>
+            单据行ID/序号
+            报价价格信息.Misc.单据行ID/序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyTC">
+            <summary>
+            交易币总金额
+            报价价格信息.金额币种信息.交易币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalTaxTC">
+            <summary>
+            交易币总税额
+            报价价格信息.金额币种信息.交易币总税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyExcludeTaxTC">
+            <summary>
+            交易币未税总金额
+            报价价格信息.金额币种信息.交易币未税总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_taxRate">
+            <summary>
+            税率
+            报价价格信息.Misc.税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_profitTC">
+            <summary>
+            毛利
+            报价价格信息.Misc.毛利
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_profitRate">
+            <summary>
+            毛利率
+            报价价格信息.Misc.毛利率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_isPriceIncludeTax">
+            <summary>
+            单价是否含税
+            报价价格信息.Misc.单价是否含税
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_feeDetails">
+            <summary>
+            整单费用行
+            报价价格信息.Misc.整单费用行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_taxLines">
+            <summary>
+            税行
+            报价价格信息.Misc.税行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_docDate">
+            <summary>
+            单据日期
+            报价价格信息.Misc.单据日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_hiteMessage">
+            <summary>
+            提示信息
+            报价价格信息.Misc.提示信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_quotationType">
+            <summary>
+            报价单类型(0内1F2C)
+            报价价格信息.Misc.报价单类型(0内1F2C)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_bargainType">
+            <summary>
+            成交方式
+            报价价格信息.Misc.成交方式
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyFC">
+            <summary>
+            本币总金额
+            报价价格信息.金额币种信息.本币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalTaxFC">
+            <summary>
+            本币总税额
+            报价价格信息.金额币种信息.本币总税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyExcludeTaxFC">
+            <summary>
+            交易币未税总金额
+            报价价格信息.金额币种信息.交易币未税总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyAC">
+            <summary>
+            核币总金额
+            报价价格信息.金额币种信息.核币总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalTaxAC">
+            <summary>
+            核币总税额
+            报价价格信息.金额币种信息.核币总税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_totalMoneyExcludeTaxAC">
+            <summary>
+            核币未税总金额
+            报价价格信息.金额币种信息.核币未税总金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_tCToAC">
+            <summary>
+            交易币对核算币的转化率
+            报价价格信息.金额币种信息.交易币对核算币的转化率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.m_aCToFC">
+            <summary>
+            核算币对本币的转化率
+            报价价格信息.金额币种信息.核算币对本币的转化率
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            报价价格信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.Org">
+            <summary>
+            组织
+            报价价格信息.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.TC_SKey">
+            <summary>
+            币种 序列化Key属性。（传递跨组织序列列字段）
+            报价价格信息.金额币种信息.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.TC">
+            <summary>
+            币种
+            报价价格信息.金额币种信息.币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.TaxSchedule_SKey">
+            <summary>
+            税组合 序列化Key属性。（传递跨组织序列列字段）
+            报价价格信息.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.TaxSchedule">
+            <summary>
+            税组合
+            报价价格信息.Misc.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.FC_SKey">
+            <summary>
+            本位币 序列化Key属性。（传递跨组织序列列字段）
+            报价价格信息.金额币种信息.本位币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.FC">
+            <summary>
+            本位币
+            报价价格信息.金额币种信息.本位币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.AC_SKey">
+            <summary>
+            核算币种 序列化Key属性。（传递跨组织序列列字段）
+            报价价格信息.金额币种信息.核算币种
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData.AC">
+            <summary>
+            核算币种
+            报价价格信息.金额币种信息.核算币种
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData">
+            <summary>
+            报价价格行信息 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.#ctor(UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTOData,System.Int64,System.Int64,UFIDA.U9.CBO.SCM.Item.ItemInfoData,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.CBO.DTOs.SingleQuantityData,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData},System.Collections.Generic.List{UFIDA.U9.PriceCal.PriceCalSV.FeeLineData},System.Int64,System.Int64,System.Int64,System.Int64,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.String,System.String,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Int32,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_quotationPriceDTO">
+            <summary>
+            报价价格信息
+            报价价格行信息.A_基本信息.报价价格信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_iD">
+            <summary>
+            单据行ID/序号
+            报价价格行信息.A_基本信息.单据行ID/序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_itemInfo">
+            <summary>
+            物料信息
+            报价价格行信息.A_基本信息.物料信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_finallyPrice">
+            <summary>
+            最终价
+            报价价格行信息.D_最终价相关.最终价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_profit">
+            <summary>
+            毛利
+            报价价格行信息.E_毛利及退税率.毛利
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_profitRate">
+            <summary>
+            毛利率
+            报价价格行信息.E_毛利及退税率.毛利率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_apportionFee">
+            <summary>
+            费用合计
+            报价价格行信息.C_费用相关.费用合计
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_apportionPrice">
+            <summary>
+            摊平价格
+            报价价格行信息.C_费用相关.摊平价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyExcludeTax">
+            <summary>
+            未税金额(交易币)
+            报价价格行信息.A_基本信息.未税金额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyIncludeTax">
+            <summary>
+            含税金额(交易币)
+            报价价格行信息.A_基本信息.含税金额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalTax">
+            <summary>
+            税额(交易币)
+            报价价格行信息.A_基本信息.税额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_taxRate">
+            <summary>
+            税率
+            报价价格行信息.A_基本信息.税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_qtyPriceUOM">
+            <summary>
+            计价单位数量
+            报价价格行信息.A_基本信息.计价单位数量
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costPrice">
+            <summary>
+            成本单价
+            报价价格行信息.B_物料成本相关.成本单价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costMoney">
+            <summary>
+            成本金额
+            报价价格行信息.B_物料成本相关.成本金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastMaterialCost">
+            <summary>
+            预估直接材料
+            报价价格行信息.B_物料成本相关.预估直接材料
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastSalaryCost">
+            <summary>
+            预估直接人工
+            报价价格行信息.B_物料成本相关.预估直接人工
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastMachineCost">
+            <summary>
+            预估机器成本
+            报价价格行信息.B_物料成本相关.预估机器成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastcommissionFee">
+            <summary>
+            预估委外费用
+            报价价格行信息.B_物料成本相关.预估委外费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastManuFee">
+            <summary>
+            预估制造费用
+            报价价格行信息.B_物料成本相关.预估制造费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastPurCost">
+            <summary>
+            预估采购成本
+            报价价格行信息.B_物料成本相关.预估采购成本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_taxLines">
+            <summary>
+            税行
+            报价价格行信息.A_基本信息.税行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_feeDetails">
+            <summary>
+            费用行
+            报价价格行信息.A_基本信息.费用行
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastMaterialCostFC">
+            <summary>
+            预估直接材料(本币)
+            报价价格行信息.B_物料成本相关.预估直接材料(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastSalaryCostFC">
+            <summary>
+            预估直接人工(本币)
+            报价价格行信息.B_物料成本相关.预估直接人工(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastMachineCostFC">
+            <summary>
+            预估机器成本(本币)
+            报价价格行信息.B_物料成本相关.预估机器成本(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastcommissionFeeFC">
+            <summary>
+            预估委外费用(本币)
+            报价价格行信息.B_物料成本相关.预估委外费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastManuFeeFC">
+            <summary>
+            预估制造费用(本币)
+            报价价格行信息.B_物料成本相关.预估制造费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_forcastPurCostFC">
+            <summary>
+            预估采购成本(本币)
+            报价价格行信息.B_物料成本相关.预估采购成本(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costPriceFC">
+            <summary>
+            成本单价(本币)
+            报价价格行信息.B_物料成本相关.成本单价(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costMoneyFC">
+            <summary>
+            成本金额(本币)
+            报价价格行信息.B_物料成本相关.成本金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_profitFC">
+            <summary>
+            毛利(本币)
+            报价价格行信息.E_毛利及退税率.毛利(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_backTaxRate">
+            <summary>
+            退税率
+            报价价格行信息.E_毛利及退税率.退税率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_backTaxMoney">
+            <summary>
+            退税额
+            报价价格行信息.E_毛利及退税率.退税额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_apportionFeeFC">
+            <summary>
+            费用合计(本币)
+            报价价格行信息.C_费用相关.费用合计(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_othersFeeFC">
+            <summary>
+            其他成本费用(本币)
+            报价价格行信息.C_费用相关.其他成本费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_innerFeeFC">
+            <summary>
+            国内费用(本币)
+            报价价格行信息.C_费用相关.国内费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_outterFeeFC">
+            <summary>
+            国外费用(本币)
+            报价价格行信息.C_费用相关.国外费用(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_backTaxMoneyFC">
+            <summary>
+            退税额(本币)
+            报价价格行信息.E_毛利及退税率.退税额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_othersFee">
+            <summary>
+            其他成本费用
+            报价价格行信息.C_费用相关.其他成本费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_innerFee">
+            <summary>
+            国内费用
+            报价价格行信息.C_费用相关.国内费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_outterFee">
+            <summary>
+            国外费用
+            报价价格行信息.C_费用相关.国外费用
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_fOBPrice">
+            <summary>
+            FOB价
+            报价价格行信息.D_最终价相关.FOB价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_cIFPrice">
+            <summary>
+            CIF价
+            报价价格行信息.D_最终价相关.CIF价
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_fOBPriceFC">
+            <summary>
+            FOB价(本币)
+            报价价格行信息.D_最终价相关.FOB价(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_cIFPriceFC">
+            <summary>
+            CIF价(本币)
+            报价价格行信息.D_最终价相关.CIF价(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_finallyPriceFC">
+            <summary>
+            最终价(本币)
+            报价价格行信息.D_最终价相关.最终价(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_apportionPriceFC">
+            <summary>
+            摊平价格(本币)
+            报价价格行信息.C_费用相关.摊平价格(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_othersFeePrice">
+            <summary>
+            其他成本费用价格
+            报价价格行信息.C_费用相关.其他成本费用价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_othersFeePriceFC">
+            <summary>
+            其他成本费用价格(本币)
+            报价价格行信息.C_费用相关.其他成本费用价格(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_innerFeePrice">
+            <summary>
+            国内费用价格
+            报价价格行信息.C_费用相关.国内费用价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_innerFeePriceFC">
+            <summary>
+            国内费用价格(本币)
+            报价价格行信息.C_费用相关.国内费用价格(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_outterFeePrice">
+            <summary>
+            国外费用价格
+            报价价格行信息.C_费用相关.国外费用价格
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_outterFeePriceFC">
+            <summary>
+            国外费用价格(本币)
+            报价价格行信息.C_费用相关.国外费用价格(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costTaxTC">
+            <summary>
+            成本税额(交易币)
+            报价价格行信息.B_物料成本相关.成本税额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costTaxFC">
+            <summary>
+            成本税额(本币)
+            报价价格行信息.B_物料成本相关.成本税额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_alternateTypesEnum">
+            <summary>
+            生产目的
+            报价价格行信息.Misc.生产目的
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_bOMVersion">
+            <summary>
+            BOM版本
+            报价价格行信息.Misc.BOM版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_routingVersion">
+            <summary>
+            工艺版本
+            报价价格行信息.Misc.工艺版本
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyExcludeTaxAC">
+            <summary>
+            未税金额(核币)
+            报价价格行信息.A_基本信息.未税金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyIncludeTaxAC">
+            <summary>
+            含税金额(核币)
+            报价价格行信息.A_基本信息.含税金额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalTaxAC">
+            <summary>
+            税额(核币)
+            报价价格行信息.A_基本信息.税额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyExcludeTaxFC">
+            <summary>
+            未税金额(本币)
+            报价价格行信息.A_基本信息.未税金额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalMoneyIncludeTaxFC">
+            <summary>
+            含税金额(本币))
+            报价价格行信息.A_基本信息.含税金额(本币))
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_totalTaxFC">
+            <summary>
+            税额(本币))
+            报价价格行信息.A_基本信息.税额(本币))
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_costTypeEnumForCost">
+            <summary>
+            成本来源
+            报价价格行信息.A_基本信息.成本来源
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.m_priceScheme">
+            <summary>
+            取价方案
+            报价价格行信息.A_基本信息.取价方案
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Org">
+            <summary>
+            组织
+            报价价格行信息.A_基本信息.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.TaxSchedule_SKey">
+            <summary>
+            税组合 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.TaxSchedule">
+            <summary>
+            税组合
+            报价价格行信息.A_基本信息.税组合
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.SupplyOrg_SKey">
+            <summary>
+            供应组织 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.供应组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.SupplyOrg">
+            <summary>
+            供应组织
+            报价价格行信息.A_基本信息.供应组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Warehouse_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Warehouse">
+            <summary>
+            存储地点
+            报价价格行信息.A_基本信息.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.OwnerOrg_SKey">
+            <summary>
+            货主组织 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.OwnerOrg">
+            <summary>
+            货主组织
+            报价价格行信息.A_基本信息.货主组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Supplier_SKey">
+            <summary>
+            厂牌 序列化Key属性。（传递跨组织序列列字段）
+            报价价格行信息.A_基本信息.厂牌
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceLineDTOData.Supplier">
+            <summary>
+            厂牌
+            报价价格行信息.A_基本信息.厂牌
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData">
+            <summary>
+            TaxLineDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.#ctor(System.Int64,UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfoData,System.Int64,System.Decimal,System.Decimal,System.Decimal,UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfoData,System.Decimal)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_iD">
+            <summary>
+            行ID
+            TaxLineDTO.Misc.行ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_priceInfo">
+            <summary>
+            价格信息
+            TaxLineDTO.Misc.价格信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_taxTC">
+            <summary>
+            税额(交易币)
+            TaxLineDTO.Misc.税额(交易币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_taxAC">
+            <summary>
+            税额(核币)
+            TaxLineDTO.Misc.税额(核币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_taxFC">
+            <summary>
+            税额(本币)
+            TaxLineDTO.Misc.税额(本币)
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_docPriceInfo">
+            <summary>
+            DocPriceInfo
+            TaxLineDTO.Misc.DocPriceInfo
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.m_taxRate">
+            <summary>
+            税率
+            TaxLineDTO.Misc.税率
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.Tax_SKey">
+            <summary>
+            税别 序列化Key属性。（传递跨组织序列列字段）
+            TaxLineDTO.Misc.税别
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.TaxLineDTOData.Tax">
+            <summary>
+            税别
+            TaxLineDTO.Misc.税别
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData">
+            <summary>
+            PriceRateDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.#ctor(System.Decimal,System.Decimal,System.Decimal,System.Int32)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.m_numerator">
+            <summary>
+            分子
+            PriceRateDTO.Misc.分子
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.m_denominator">
+            <summary>
+            分母
+            PriceRateDTO.Misc.分母
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.m_rate">
+            <summary>
+            转换率
+            PriceRateDTO.Misc.转换率
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.PriceCal.PriceCalSV.PriceRateDTOData.m_precise">
+            <summary>
+            精度
+            PriceRateDTO.Misc.精度
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.NotSupportTaxBaseException">
+            <summary>
+            异常类型: 不支持的税基类型异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportTaxBaseException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不支持的税基类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportTaxBaseException.#ctor">
+            <summary>
+            异常类型: 不支持的税基类型异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportTaxBaseException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不支持的税基类型异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByQuantityException">
+            <summary>
+            异常类型: 整单不支持按数量计算费用异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByQuantityException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 整单不支持按数量计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByQuantityException.#ctor">
+            <summary>
+            异常类型: 整单不支持按数量计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByQuantityException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 整单不支持按数量计算费用异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByVolumeException">
+            <summary>
+            异常类型: 整单不支持按体积计算费用异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByVolumeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 整单不支持按体积计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByVolumeException.#ctor">
+            <summary>
+            异常类型: 整单不支持按体积计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByVolumeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 整单不支持按体积计算费用异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByWeightException">
+            <summary>
+            异常类型: 整单不支持按重量计算费用异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByWeightException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 整单不支持按重量计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByWeightException.#ctor">
+            <summary>
+            异常类型: 整单不支持按重量计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByWeightException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 整单不支持按重量计算费用异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByPackAgeException">
+            <summary>
+            异常类型: 整单不支持按件数计算费用异常
+            
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByPackAgeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 整单不支持按件数计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByPackAgeException.#ctor">
+            <summary>
+            异常类型: 整单不支持按件数计算费用异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.NotSupportCalculateByPackAgeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 整单不支持按件数计算费用异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistLineException">
+             <summary>
+             异常类型: 订单中不存在某一明细行的异常
+             在CalObjectLocator中在查找订单的某一个明细行时，
+            在找不到情况下会抛出此异常。
+              单据编号: {0}单据中不存在明细行号为{1}的明细。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单中不存在某一明细行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistLineException.#ctor">
+            <summary>
+            异常类型: 订单中不存在某一明细行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单中不存在某一明细行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistFeeException">
+             <summary>
+             异常类型: 订单中不存在某一费用行的异常
+             在CalObjectLocator中在查找订单的某一个费用行时，
+            在找不到情况下会抛出此异常。
+              单据编号: {0}单据中不存在费用行号: {1}明细。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistFeeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单中不存在某一费用行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistFeeException.#ctor">
+            <summary>
+            异常类型: 订单中不存在某一费用行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistFeeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单中不存在某一费用行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistDiscountException">
+             <summary>
+             异常类型: 订单中不存在某一折扣行的异常
+             在CalObjectLocator中在查找订单的某一个折扣行时，
+            在找不到情况下会抛出此异常。
+              单据编号:{0}单据中不存在折扣行号:{1}明细。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistDiscountException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单中不存在某一折扣行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistDiscountException.#ctor">
+            <summary>
+            异常类型: 订单中不存在某一折扣行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistDiscountException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单中不存在某一折扣行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistTaxLineException">
+             <summary>
+             异常类型: 订单中不存在某一税行的异常
+             在CalObjectLocator中在查找订单的某一个税行时，
+            在找不到情况下会抛出此异常。
+              单据编号:{0}单据中不存在税行号:{1}明细。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistTaxLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单中不存在某一税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistTaxLineException.#ctor">
+            <summary>
+            异常类型: 订单中不存在某一税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DocNotExistTaxLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单中不存在某一税行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistFeeException">
+             <summary>
+             异常类型: 订单行中不存在某一费用行的异常
+             在CalObjectLocator中在查找订单行的某一个费用行时，
+            在找不到情况下会抛出此异常。
+              单据编号:{0}单据中明细行号:{1}不存在费用行号为:{2}的费用行。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistFeeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单行中不存在某一费用行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistFeeException.#ctor">
+            <summary>
+            异常类型: 订单行中不存在某一费用行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistFeeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单行中不存在某一费用行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistDiscountException">
+             <summary>
+             异常类型: 订单行中不存在某一折扣行的异常
+             在CalObjectLocator中在查找订单行的某一个折扣行时，
+            在找不到情况下会抛出此异常。
+              单据中明细行号:{0}不存在折扣行号为:{1}的折扣行。
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistDiscountException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单行中不存在某一折扣行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistDiscountException.#ctor">
+            <summary>
+            异常类型: 订单行中不存在某一折扣行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistDiscountException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单行中不存在某一折扣行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistTaxLineException">
+             <summary>
+             异常类型: 订单行中不存在某一税行的异常
+             在CalObjectLocator中在查找订单行的某一个税行时，
+            在找不到情况下会抛出此异常。
+              
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistTaxLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 订单行中不存在某一税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistTaxLineException.#ctor">
+            <summary>
+            异常类型: 订单行中不存在某一税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineNotExistTaxLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 订单行中不存在某一税行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.InvokeCalcTaxEngineException">
+            <summary>
+            异常类型: 调用CalcTaxEngine时计算结果为空
+            在调用CalTaxEngine时所得计算结果为空时会抛出此异常。
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.InvokeCalcTaxEngineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 调用CalcTaxEngine时计算结果为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.InvokeCalcTaxEngineException.#ctor">
+            <summary>
+            异常类型: 调用CalcTaxEngine时计算结果为空 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.InvokeCalcTaxEngineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 调用CalcTaxEngine时计算结果为空 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.AllocateFeeException">
+            <summary>
+            异常类型: 非整单费用不能分摊的异常
+            在费用分摊时，如待分摊的费用不是整单费用，抛出此异常。
+             非整单费用，不能分摊!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.AllocateFeeException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 非整单费用不能分摊的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.AllocateFeeException.#ctor">
+            <summary>
+            异常类型: 非整单费用不能分摊的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.AllocateFeeException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 非整单费用不能分摊的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.TaxScheduleIsNullException">
+             <summary>
+             异常类型: 税组合为空的异常
+             能过税组合的实体Key获行税组合的实体时，如果
+            为空则抛出此异常。
+              
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxScheduleIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 税组合为空的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxScheduleIsNullException.#ctor">
+            <summary>
+            异常类型: 税组合为空的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.TaxScheduleIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 税组合为空的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.UOMIsNullException">
+            <summary>
+            异常类型: 计量单位为空的异常
+            计量单位为空时抛出此异常。
+             
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.UOMIsNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 计量单位为空的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.UOMIsNullException.#ctor">
+            <summary>
+            异常类型: 计量单位为空的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.UOMIsNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 计量单位为空的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.LineFeeNotSupporCalculateByDoctException">
+             <summary>
+             异常类型: 行费用无法按单据计算异常
+             行费用计算时，如果费用计算依据类型为按单据时
+            抛出此异常。
+              
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineFeeNotSupporCalculateByDoctException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 行费用无法按单据计算异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineFeeNotSupporCalculateByDoctException.#ctor">
+            <summary>
+            异常类型: 行费用无法按单据计算异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.LineFeeNotSupporCalculateByDoctException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 行费用无法按单据计算异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DeleteTaxLineException">
+            <summary>
+            异常类型: 不允许删除税行的异常
+            在删除税行时会抛出此异常，税行不允许删除。
+             不允许删除税行!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DeleteTaxLineException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不允许删除税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DeleteTaxLineException.#ctor">
+            <summary>
+            异常类型: 不允许删除税行的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DeleteTaxLineException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不允许删除税行的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.ModifyDocTaxAmountException">
+             <summary>
+             异常类型: 不允许修改整单税额的异常
+             在修改整单税额时会抛出此异常，整单
+            税额不允许修改。
+              单头为行税时不能修改整单的税额!
+             </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ModifyDocTaxAmountException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不允许修改整单税额的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ModifyDocTaxAmountException.#ctor">
+            <summary>
+            异常类型: 不允许修改整单税额的异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ModifyDocTaxAmountException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 不允许修改整单税额的异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.WeightBeNullWhenFeeBaseException">
+            <summary>
+            异常类型: 费用依据为重量时重量为空异常
+            
+             费用依据为重量时，重量和重量单位不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.WeightBeNullWhenFeeBaseException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 费用依据为重量时重量为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.WeightBeNullWhenFeeBaseException.#ctor">
+            <summary>
+            异常类型: 费用依据为重量时重量为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.WeightBeNullWhenFeeBaseException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 费用依据为重量时重量为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.VolumeBeNullWhenFeeBaseException">
+            <summary>
+            异常类型: 费用依据为体积时体积为空异常
+            
+             费用依据为体积时，体积和体积单位不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.VolumeBeNullWhenFeeBaseException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 费用依据为体积时体积为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.VolumeBeNullWhenFeeBaseException.#ctor">
+            <summary>
+            异常类型: 费用依据为体积时体积为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.VolumeBeNullWhenFeeBaseException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 费用依据为体积时体积为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.DoNotHasTheUpdateException">
+            <summary>
+            异常类型: 没有此项修改异常
+            
+             没有此项修改，修改项目{0}，修改字段{1}。
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DoNotHasTheUpdateException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有此项修改异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DoNotHasTheUpdateException.#ctor">
+            <summary>
+            异常类型: 没有此项修改异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.DoNotHasTheUpdateException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 没有此项修改异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.IDDoNotInTheListException">
+            <summary>
+            异常类型: ID不在列表中异常
+            
+             该ID不在列表中!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.IDDoNotInTheListException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: ID不在列表中异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.IDDoNotInTheListException.#ctor">
+            <summary>
+            异常类型: ID不在列表中异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.IDDoNotInTheListException.#ctor(System.Exception)">
+            <summary>
+            异常类型: ID不在列表中异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.HasNoFeeLinesException">
+            <summary>
+            异常类型: 未指定费用行异常
+            
+             价格计算涉及费用,未指定费用行!
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.HasNoFeeLinesException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未指定费用行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.HasNoFeeLinesException.#ctor">
+            <summary>
+            异常类型: 未指定费用行异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.HasNoFeeLinesException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未指定费用行异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.ProfitRateBaseEqualZeroException">
+            <summary>
+            异常类型: 毛利计算基准为零异常
+            
+             作为毛利计算基准的最终价格或最终成本为零！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ProfitRateBaseEqualZeroException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 毛利计算基准为零异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ProfitRateBaseEqualZeroException.#ctor">
+            <summary>
+            异常类型: 毛利计算基准为零异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.ProfitRateBaseEqualZeroException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 毛利计算基准为零异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.CostPercentageEqualZeroException">
+            <summary>
+            异常类型: 成本占比为零异常
+            
+             不合理数据导致成本占比为0！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CostPercentageEqualZeroException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 成本占比为零异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CostPercentageEqualZeroException.#ctor">
+            <summary>
+            异常类型: 成本占比为零异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CostPercentageEqualZeroException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 成本占比为零异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.PriceSchemeCanNotBeNullException">
+            <summary>
+            异常类型: 取价方案不能为空异常
+            
+             取价方案不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceSchemeCanNotBeNullException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 取价方案不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceSchemeCanNotBeNullException.#ctor">
+            <summary>
+            异常类型: 取价方案不能为空异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.PriceSchemeCanNotBeNullException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 取价方案不能为空异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.CanNotBeNullException">
+            <summary>
+            异常类型: 不能为空异常
+            
+             ${Name}不能为空！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CanNotBeNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不能为空异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CanNotBeNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 不能为空异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.CanNotBeNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 不能为空异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.CanNotBeNullException.Name">
+            <summary>
+            属性名
+            不能为空异常.Misc.属性名
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.MustMoreThanZeroException">
+            <summary>
+            异常类型: 必须大于0异常
+            
+             ${Name}必须大于0！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.MustMoreThanZeroException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 必须大于0异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.MustMoreThanZeroException.#ctor(System.String)">
+            <summary>
+            异常类型: 必须大于0异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+        </member>
+        <member name="M:UFIDA.U9.PriceCal.PriceCalSV.MustMoreThanZeroException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 必须大于0异常 Constructor
+            </summary>
+            <param name="name">属性名</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.MustMoreThanZeroException.Name">
+            <summary>
+            属性名
+            必须大于0异常.Misc.属性名
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.PriceCal.PriceCalSV.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.ATP.ATPSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryTotalATPProxy.ATPQueryDTOList">
+            <summary>
+            查询集合 (该属性可为空,且无默认值)
+            ATP汇总查询.Misc.查询集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryTotalATPProxy.FromLayer">
+            <summary>
+            从层 (该属性可为空,但有默认值)
+            ATP汇总查询.Misc.从层
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPLayerEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryTotalATPProxy.ToLayer">
+            <summary>
+            到层 (该属性可为空,但有默认值)
+            ATP汇总查询.Misc.到层
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPLayerEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPProxy.ATPQueryDTO">
+            <summary>
+            ATP查询 (该属性可为空,且无默认值)
+            ATP查询.Misc.ATP查询
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPQueryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPProxy.FromLayer">
+            <summary>
+            从层 (该属性可为空,但有默认值)
+            ATP查询.Misc.从层
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPLayerEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPDetailProxy.ATPQueryDTO">
+            <summary>
+            ATP查询 (该属性可为空,且无默认值)
+            ATP明细查询.Misc.ATP查询
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPQueryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPDetailProxy.StartDate">
+            <summary>
+            开始日期 (该属性可为空,且无默认值)
+            ATP明细查询.Misc.开始日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPDetailProxy.EndDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            ATP明细查询.Misc.结束日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.QueryATPDetailProxy.QueryAttitude">
+            <summary>
+            查询纬度 (该属性可为空,且无默认值)
+            ATP明细查询.Misc.查询纬度
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.RegisterATPDemandChangeProxy.ATPDemandDTOList">
+            <summary>
+            需求集合 (该属性可为空,且无默认值)
+            ATP需求变化登记.Misc.需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.RegisterATPSupplyChangeProxy.ATPSupplyDTOList">
+            <summary>
+            供应集合 (该属性可为空,且无默认值)
+            ATP供应变化登记.Misc.供应集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.RegisterATPBatchProxy.ATPQueryDTOList">
+            <summary>
+            ATPQueryDTOList (该属性可为空,且无默认值)
+            ATP需求供给批量刷新.Misc.ATPQueryDTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.RegisterATPBatchProxy.DemandPriority">
+            <summary>
+            需求处理次序 (该属性可为空,但有默认值)
+            ATP需求供给批量刷新.Misc.需求处理次序
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.DemandPriorityEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.ReserveDetailListToObjectListSVProxy.ReserveDetailDTOLst">
+            <summary>
+            ReserveDetailDTO集合 (该属性可为空,且无默认值)
+            预留明细转化为弱类型服务.Misc.ReserveDetailDTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.SupplyListToObjectListSVProxy.SupplyReserveDTOLst">
+            <summary>
+            SupplyReserveDTO集合 (该属性可为空,且无默认值)
+            预留供应信息转化为弱类型服务.Misc.SupplyReserveDTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.EOnlineCalculateATPProxy.ATPDemandDTOList">
+            <summary>
+            需求集合 (该属性可为空,且无默认值)
+            ATP在线计算服务(改良).Misc.需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.EOnlineCalculateATPProxy.IsComponent">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            ATP在线计算服务(改良).Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.EOnlineCalculateATPProxy.IsBatchCal">
+            <summary>
+            是否ATP批量计算 (该属性可为空,但有默认值)
+            ATP在线计算服务(改良).Misc.是否ATP批量计算
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.EOnlineCalculateATPProxy.IsLackSupply">
+            <summary>
+            是否缺料分析 (该属性可为空,但有默认值)
+            ATP在线计算服务(改良).Misc.是否缺料分析
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.OSATPQuerySVProxy.OSATPQueries">
+            <summary>
+            查询条件DTO集合 (该属性可为空,且无默认值)
+            有限产能排产可用量查询.Misc.查询条件DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.CalculateATPBatchProxy.ItemList_SKey">
+            <summary>
+            计算物料集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.CalculateATPBatchProxy.ItemList">
+            <summary>
+            计算物料集合 (该属性可为空,且无默认值)
+            ATP批量计算.Misc.计算物料集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.CalculateATPBatchProxy.WhList_SKey">
+            <summary>
+            计算仓库集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.CalculateATPBatchProxy.WhList">
+            <summary>
+            计算仓库集合 (该属性可为空,且无默认值)
+            ATP批量计算.Misc.计算仓库集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.CalculateATPBatchProxy.ATPDemandDTOList">
+            <summary>
+            需求集合 (该属性可为空,且无默认值)
+            ATP批量计算.Misc.需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.ECalculateATPSVProxy.QueryDTO">
+            <summary>
+            查询DTO (该属性可为空,且无默认值)
+            计算ATP服务.Misc.查询DTO
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPQueryDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.ECalculateATPSVProxy.FromLayer">
+            <summary>
+            从层 (该属性可为空,但有默认值)
+            计算ATP服务.Misc.从层
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPLayerEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.ATP.Proxy.ECalculateATPSVProxy.ToLayer">
+            <summary>
+            到层 (该属性可为空,但有默认值)
+            计算ATP服务.Misc.到层
+            </summary>
+            <value>UFIDA.U9.ATP.ATP.ATPLayerEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveSRVProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            需求订单自动预留供应.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveSRVProxy.NeedBackCall">
+            <summary>
+            不回写备料 (该属性可为空,但有默认值)
+            需求订单自动预留供应.Misc.不回写备料
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveSRVProxy.IsNotSyncDelete">
+            <summary>
+            是否不同步删除预留需求表  (该属性可为空,但有默认值)
+            需求订单自动预留供应.Misc.是否不同步删除预留需求表 
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandCloseReserveSRVProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            需求订单关闭还原预留.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveSRVProxy.SupplyInfoList">
+            <summary>
+            供应信息集合 (该属性可为空,且无默认值)
+            供应订单自动预留需求.Misc.供应信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveSRVProxy.NeedNotBackCall">
+            <summary>
+            是否不回写（LRP） (该属性可为空,但有默认值)
+            供应订单自动预留需求.Misc.是否不回写（LRP）
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyCloseReserveSRVProxy.SupplyInfoList">
+            <summary>
+            供应信息集合 (该属性可为空,且无默认值)
+            供应订单关闭还原预留.Misc.供应信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.InBoundReversedProcessProxy.SupplyInfoList">
+            <summary>
+            供应信息集合 (该属性可为空,且无默认值)
+            供应入库预留处理.Misc.供应信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.OutBoundReversedProcessProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            需求出库预留处理.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTransferProxy.FromSupplyInfoList">
+            <summary>
+            原供应集合 (该属性可为空,且无默认值)
+            供应预留转移.Misc.原供应集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTransferProxy.ToSupplyInfoList">
+            <summary>
+            目标供应集合 (该属性可为空,且无默认值)
+            供应预留转移.Misc.目标供应集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTransferProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            供应预留转移.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTransferProxy.TransQtyList">
+            <summary>
+            转移量集合 (该属性可为空,且无默认值)
+            供应预留转移.Misc.转移量集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTransferProxy.NeedToCreate">
+            <summary>
+            需创建 (该属性可为空,但有默认值)
+            供应预留转移.Misc.需创建
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.FromDemandInfoList">
+            <summary>
+            原需求集合 (该属性可为空,且无默认值)
+            需求预留转移.Misc.原需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.ToDemandInfoList">
+            <summary>
+            目标需求集合 (该属性可为空,且无默认值)
+            需求预留转移.Misc.目标需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.SupplyInfoList">
+            <summary>
+            供应信息集合 (该属性可为空,且无默认值)
+            需求预留转移.Misc.供应信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.TransQtyList">
+            <summary>
+            转移量集合 (该属性可为空,且无默认值)
+            需求预留转移.Misc.转移量集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.NeedToCreate">
+            <summary>
+            需创建 (该属性可为空,但有默认值)
+            需求预留转移.Misc.需创建
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandReserveTransferProxy.IsSub">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            需求预留转移.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTotalQuerySVProxy.QueryDTOList">
+            <summary>
+            查询集合 (该属性可为空,且无默认值)
+            供应预留汇总查询服务.Misc.查询集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTotalQuerySVProxy.Latitude">
+            <summary>
+            当前查询纬度 (该属性可为空,且无默认值)
+            供应预留汇总查询服务.Misc.当前查询纬度
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTotalQuerySVProxy.PreLatitude">
+            <summary>
+            前驱查询纬度 (该属性可为空,且无默认值)
+            供应预留汇总查询服务.Misc.前驱查询纬度
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveTotalQuerySVProxy.IsSubItem">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            供应预留汇总查询服务.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.GetDocReserveTypeProxy.DocList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            获取单据预留类型.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.GetDocReserveTypeProxy.DocType">
+            <summary>
+            供需类型 (该属性可为空,但有默认值)
+            获取单据预留类型.Misc.供需类型
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.LRPDemandUpdateDetailProxy.DemandInfoDTO">
+            <summary>
+            需求预留信息 (该属性可为空,且无默认值)
+            需求订单修改需求明细.Misc.需求预留信息
+            </summary>
+            <value>UFIDA.U9.ATP.Reserve.DemandReserveDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.UpdateItemQtyStateSVProxy.ReportRQDTOList">
+            <summary>
+            回写集合 (该属性可为空,且无默认值)
+            更新物料数量状况表服务.Misc.回写集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.UpdateDocResSingleOrgSVProxy.ReportDTOList">
+            <summary>
+            回写集合 (该属性可为空,且无默认值)
+            单组织预留回写服务.Misc.回写集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.UpdateDocResSingleOrgSVProxy.IsBackCall">
+            <summary>
+            是否回写备料 (该属性可为空,但有默认值)
+            单组织预留回写服务.Misc.是否回写备料
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.GetReserveItemForMFGSVProxy.QueryDTOList">
+            <summary>
+            查询信息集合 (该属性可为空,且无默认值)
+            获取制造所需预留信息.Misc.查询信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQuerySVProxy.SupplyDocList">
+            <summary>
+            供应单据集合 (该属性可为空,且无默认值)
+            预留记录查询.Misc.供应单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQuerySVProxy.SupplyDetailList">
+            <summary>
+            供应明细集合 (该属性可为空,且无默认值)
+            预留记录查询.Misc.供应明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQuerySVProxy.DemandDocList">
+            <summary>
+            需求单据集合 (该属性可为空,且无默认值)
+            预留记录查询.Misc.需求单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQuerySVProxy.DemandDetailList">
+            <summary>
+            需求明细集合 (该属性可为空,且无默认值)
+            预留记录查询.Misc.需求明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQuerySVProxy.IsMustEqual">
+            <summary>
+            是否严格匹配 (该属性可为空,但有默认值)
+            预留记录查询.Misc.是否严格匹配
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandSubItemReserveTransferSVProxy.TransferDocList">
+            <summary>
+            被转移单据集合 (该属性可为空,且无默认值)
+            需求订单子件预留转移服务.Misc.被转移单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandSubItemReserveTransferSVProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            需求订单子件预留转移服务.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQueryForLackSupplySVProxy.DemandDocList">
+            <summary>
+            需求单据集合 (该属性可为空,且无默认值)
+            缺料分析查询预留记录.Misc.需求单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQueryForLackSupplySVProxy.SupplyDocList">
+            <summary>
+            供应单据集合 (该属性可为空,且无默认值)
+            缺料分析查询预留记录.Misc.供应单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQueryForLackSupplySVProxy.SupplyDetailList">
+            <summary>
+            供应明细集合 (该属性可为空,且无默认值)
+            缺料分析查询预留记录.Misc.供应明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveQueryForLackSupplySVProxy.DemandDetailList">
+            <summary>
+            需求明细集合 (该属性可为空,且无默认值)
+            缺料分析查询预留记录.Misc.需求明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReverseDemandByDocSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            供应预留需求单据服务.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.HandGetDemandDocReserveInfoSVProxy.ReserveDetailDTOList">
+            <summary>
+            预留明细信息集合 (该属性可为空,且无默认值)
+            手工预留获取需求单据预留信息服务.Misc.预留明细信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.HandGetDemandDocReserveInfoSVProxy.QueryType">
+            <summary>
+            查询类型 (该属性可为空,但有默认值)
+            手工预留获取需求单据预留信息服务.Misc.查询类型
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.SupplyDocList">
+            <summary>
+            供应单据集合 (该属性可为空,且无默认值)
+            预留库存记录查询.Misc.供应单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.SupplyDetailList">
+            <summary>
+            供应明细集合 (该属性可为空,且无默认值)
+            预留库存记录查询.Misc.供应明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.DemandDocList">
+            <summary>
+            需求单据集合 (该属性可为空,且无默认值)
+            预留库存记录查询.Misc.需求单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.DemandDetailList">
+            <summary>
+            需求明细集合 (该属性可为空,且无默认值)
+            预留库存记录查询.Misc.需求明细集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.IsMustEqual">
+            <summary>
+            是否严格匹配 (该属性可为空,但有默认值)
+            预留库存记录查询.Misc.是否严格匹配
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ReserveStockQuerySVProxy.IsIncludeInCompact">
+            <summary>
+            是否查询软预留记录 (该属性可为空,但有默认值)
+            预留库存记录查询.Misc.是否查询软预留记录
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.RegistReserveDemandSVProxy.DocInfoDTOList">
+            <summary>
+            单据预留信息集合 (该属性可为空,且无默认值)
+            预留需求注册.Misc.单据预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.RegistReserveSupplySVProxy.DocInfoDTOList">
+            <summary>
+            单据预留信息集合 (该属性可为空,且无默认值)
+            预留供应注册.Misc.单据预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ATPReserveAdjustSRVProxy.DemandInfoList">
+            <summary>
+            需求信息集合 (该属性可为空,且无默认值)
+            ATP预留调整服务.Misc.需求信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.FromDemandInfoList">
+            <summary>
+            原需求集合 (该属性可为空,且无默认值)
+            需求预留转移服务.Misc.原需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.ToDemandInfoList">
+            <summary>
+            目标需求集合 (该属性可为空,且无默认值)
+            需求预留转移服务.Misc.目标需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.SupplyInfoList">
+            <summary>
+            供应信息集合 (该属性可为空,且无默认值)
+            需求预留转移服务.Misc.供应信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.TransQtyList">
+            <summary>
+            转移量集合 (该属性可为空,且无默认值)
+            需求预留转移服务.Misc.转移量集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.NeedToCreate">
+            <summary>
+            需创建 (该属性可为空,但有默认值)
+            需求预留转移服务.Misc.需创建
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ADemandReserveTransferProxy.IsSub">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            需求预留转移服务.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.QueryRsvQtyByDocSVProxy.DocClewList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            查询单据预留数量.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ClearReserveSVProxy.DocClewList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            清除预留服务.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.ClearReserveSVProxy.InfoType">
+            <summary>
+            单据类型 (该属性可为空,但有默认值)
+            清除预留服务.Misc.单据类型
+            </summary>
+            <value>UFIDA.U9.ATP.Reserve.ReserveTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.LRPTraceInfoQuerySVProxy.Layer">
+            <summary>
+            层级 (该属性可为空,但有默认值)
+            LRP追踪信息查询服务.Misc.层级
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.LRPTraceInfoQuerySVProxy.DocClewDTOList">
+            <summary>
+            单据信息集合 (该属性可为空,且无默认值)
+            LRP追踪信息查询服务.Misc.单据信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.LRPTraceInfoQuerySVProxy.ShowAll">
+            <summary>
+            是否全部展示 (该属性可为空,但有默认值)
+            LRP追踪信息查询服务.Misc.是否全部展示
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.QueryRsvExtByDocSVProxy.DocClewList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            查询单据预留相关信息服务.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandRevSupplyByScopeSVProxy.IsSubItem">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            需求预留供应服务-范围.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandRevSupplyByScopeSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            需求预留供应服务-范围.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandRevSupplyByDocSVProxy.IsSubItem">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            需求预留供应服务-单据.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.DemandRevSupplyByDocSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            需求预留供应服务-单据.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyRevDemandByScopeSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            供应预留需求服务-范围.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyRevDemandByDocSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            供应预留需求服务-单据.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.StockReserveDemandByDocSVProxy.ManuRsvInfoList">
+            <summary>
+            手工预留信息集合 (该属性可为空,且无默认值)
+            库存预留需求服务-单据.Misc.手工预留信息集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.StockReserveDemandByDocSVProxy.IsSub">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            库存预留需求服务-单据.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveDetailQuerySVProxy.QueryDTO">
+            <summary>
+            查询DTO (该属性可为空,且无默认值)
+            供应预留明细查询服务.Misc.查询DTO
+            </summary>
+            <value>UFIDA.U9.ATP.Reserve.DemandQuerySupplyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveDetailQuerySVProxy.IsSubItem">
+            <summary>
+            是否子件 (该属性可为空,但有默认值)
+            供应预留明细查询服务.Misc.是否子件
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SupplyReserveDetailQuerySVProxy.TopDetailDTO">
+            <summary>
+            第一行预留明细 (该属性可为空,且无默认值)
+            供应预留明细查询服务.Misc.第一行预留明细
+            </summary>
+            <value>UFIDA.U9.ATP.Reserve.ReserveDetailDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.OutBoundTransferProcessProxy.DemandInfoList">
+            <summary>
+            需求集合 (该属性可为空,且无默认值)
+            出库更新异动预留处理服务.Misc.需求集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.SourceDocReserveAvailableQtySVProxy.OutBoundDocList">
+            <summary>
+            出库集合 (该属性可为空,且无默认值)
+            来源单据库存预留余量查询服务.Misc.出库集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.Reserve.Proxy.OutBoundReserveQuerySVProxy.DocClewList">
+            <summary>
+            出库集合 (该属性可为空,且无默认值)
+            出库预留占用查询服务.Misc.出库集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.LackSupply.Proxy.LackQuerySVProxy.DocClewList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            缺料查询服务.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.LackSupply.Proxy.GetAvaliabledDateProxy.CalDateDTOList">
+            <summary>
+            可用日期集合 (该属性可为空,且无默认值)
+            获取可用日期计算服务.Misc.可用日期集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.ATP.LackSupply.Proxy.UpdateRsvQtySVProxy.UpdateRsvDTOList">
+            <summary>
+            更新预留量集合 (该属性可为空,且无默认值)
+            更新缺料预留量服务.Misc.更新预留量集合
+            </summary>
+            <value></value>
+        </member>
+    </members>
+</doc>

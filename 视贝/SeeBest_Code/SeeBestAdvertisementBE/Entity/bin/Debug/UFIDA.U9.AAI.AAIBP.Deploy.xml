@@ -1,0 +1,1529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.AAI.AAIBP.Deploy</name>
+    </assembly>
+    <members>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData">
+            <summary>
+            影响因素数据来源DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.#ctor(System.String,System.String,System.Int64,System.Int64,System.Int32,System.Int32,System.Int64,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_entityFullName">
+            <summary>
+            单据类型
+            影响因素数据来源DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_expression">
+            <summary>
+            取值规则
+            影响因素数据来源DTO.Misc.取值规则
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_biDerication">
+            <summary>
+            借贷方向
+            影响因素数据来源DTO.Misc.借贷方向
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_status">
+            <summary>
+            因素来源状态
+            影响因素数据来源DTO.Misc.因素来源状态
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_iD">
+            <summary>
+            ID
+            影响因素数据来源DTO.Misc.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.m_oPType">
+            <summary>
+            操作类型
+            影响因素数据来源DTO.Misc.操作类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.Factor_SKey">
+            <summary>
+            因素 序列化Key属性。（传递跨组织序列列字段）
+            影响因素数据来源DTO.Misc.因素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.Factor">
+            <summary>
+            因素
+            影响因素数据来源DTO.Misc.因素
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.AABizType_SKey">
+            <summary>
+            自动会计业务类型 序列化Key属性。（传递跨组织序列列字段）
+            影响因素数据来源DTO.Misc.自动会计业务类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.AABizType">
+            <summary>
+            自动会计业务类型
+            影响因素数据来源DTO.Misc.自动会计业务类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.GlobalSegDef_SKey">
+            <summary>
+            全局段 序列化Key属性。（传递跨组织序列列字段）
+            影响因素数据来源DTO.Misc.全局段
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.GlobalSegDef">
+            <summary>
+            全局段
+            影响因素数据来源DTO.Misc.全局段
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.ExpressionDisplay">
+            <summary>
+            取值规则显示
+            影响因素数据来源DTO.Misc.取值规则显示
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.Multi_ExpressionDisplay">
+            <summary>
+            多语属性: 取值规则显示
+            影响因素数据来源DTO.Misc.取值规则显示
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.EntityTypeName">
+            <summary>
+            单据类型名称
+            影响因素数据来源DTO.Misc.单据类型名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.FactorDatasourceDTOData.Multi_EntityTypeName">
+            <summary>
+            多语属性: 单据类型名称
+            影响因素数据来源DTO.Misc.单据类型名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException">
+            <summary>
+            异常类型: 没有找到因素数据来源异常
+            
+             没有为因素（${FactorName}）找到符合业务类型（${BEClassFullName}）的因素数据来源
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到因素数据来源异常 Constructor
+            </summary>
+            <param name="factorName">因素名称</param>
+            <param name="bEClassFullName">BE类型名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 没有找到因素数据来源异常 Constructor
+            </summary>
+            <param name="factorName">因素名称</param>
+            <param name="bEClassFullName">BE类型名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 没有找到因素数据来源异常 Constructor
+            </summary>
+            <param name="factorName">因素名称</param>
+            <param name="bEClassFullName">BE类型名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException.FactorName">
+            <summary>
+            因素名称
+            没有找到因素数据来源异常.Misc.因素名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIFactorDataSourceNotFoundException.BEClassFullName">
+            <summary>
+            BE类型名称
+            没有找到因素数据来源异常.Misc.BE类型名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException">
+            <summary>
+            异常类型: 无效的会计科目组合码异常
+            
+             生成的会计科目组合码（${CombineCode}）不能通过账簿（${SOBName}）的科目弹性域结构检查，请检查科目模板的设置
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 无效的会计科目组合码异常 Constructor
+            </summary>
+            <param name="combineCode">会计科目组合码</param>
+            <param name="sOBName">SOB名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 无效的会计科目组合码异常 Constructor
+            </summary>
+            <param name="combineCode">会计科目组合码</param>
+            <param name="sOBName">SOB名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 无效的会计科目组合码异常 Constructor
+            </summary>
+            <param name="combineCode">会计科目组合码</param>
+            <param name="sOBName">SOB名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException.CombineCode">
+            <summary>
+            会计科目组合码
+            无效的会计科目组合码异常.Misc.会计科目组合码
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIInvalidAccountCombinationCodeException.SOBName">
+            <summary>
+            SOB名称
+            无效的会计科目组合码异常.Misc.SOB名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException">
+            <summary>
+            异常类型: 没有找到会计科目异常
+            
+             在账簿（${SOBName}）中找不到会计科目（${CombineCode}）不能通过账簿（${SOBName}），请确认是否在该账簿中创建了该会计科目
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到会计科目异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="combineCode">会计科目组合码</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 没有找到会计科目异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="combineCode">会计科目组合码</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 没有找到会计科目异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="combineCode">会计科目组合码</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException.SOBName">
+            <summary>
+            SOB名称
+            没有找到会计科目异常.Misc.SOB名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountNotFoundException.CombineCode">
+            <summary>
+            会计科目组合码
+            没有找到会计科目异常.Misc.会计科目组合码
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException">
+            <summary>
+            异常类型: 没有找到会计科目模板异常
+            
+             没有在账簿(${SOBName})中找到预设科目(${PreAccountName})对应的会计科目模板，请检查是否定义了合适的会计科目模板
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有找到会计科目模板异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="preAccountName">预设科目名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 没有找到会计科目模板异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="preAccountName">预设科目名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 没有找到会计科目模板异常 Constructor
+            </summary>
+            <param name="sOBName">SOB名称</param>
+            <param name="preAccountName">预设科目名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException.SOBName">
+            <summary>
+            SOB名称
+            没有找到会计科目模板异常.Misc.SOB名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.PredeterminedAccount.AAIAccountTempletNotFoundException.PreAccountName">
+            <summary>
+            预设科目名称
+            没有找到会计科目模板异常.Misc.预设科目名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.PredAccountFactorsNotDefException">
+            <summary>
+            异常类型: 未定义预设科目的影响因素异常
+            
+             未定义预设科目的影响因素
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.PredAccountFactorsNotDefException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 未定义预设科目的影响因素异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.PredAccountFactorsNotDefException.#ctor">
+            <summary>
+            异常类型: 未定义预设科目的影响因素异常 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.PredAccountFactorsNotDefException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 未定义预设科目的影响因素异常 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.PredeterminedAccount.CopyAcctStdCannotEqualException">
+            <summary>
+            异常类型: 来源会计准则和目的会计准则不能相同
+            
+             来源会计准则和目的会计准则不能相同
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.CopyAcctStdCannotEqualException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源会计准则和目的会计准则不能相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.CopyAcctStdCannotEqualException.#ctor">
+            <summary>
+            异常类型: 来源会计准则和目的会计准则不能相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.PredeterminedAccount.CopyAcctStdCannotEqualException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源会计准则和目的会计准则不能相同 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.ExpressionContextDTOData">
+            <summary>
+            表达式计算上下文环境 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.ExpressionContextDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.ExpressionContextDTOData.#ctor(System.Object)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ExpressionContextDTOData.m_expressionContext">
+            <summary>
+            表达式上下文
+            表达式计算上下文环境.Misc.表达式上下文
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData">
+            <summary>
+            实体类型全名－自动会计业务类型字典 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData.#ctor(System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData.m_entityFullName">
+            <summary>
+            实体类型全名
+            实体类型全名－自动会计业务类型字典.Misc.实体类型全名
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData.AABizType_SKey">
+            <summary>
+            业务类型 序列化Key属性。（传递跨组织序列列字段）
+            实体类型全名－自动会计业务类型字典.Misc.业务类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AABizTypeCacheDTOData.AABizType">
+            <summary>
+            业务类型
+            实体类型全名－自动会计业务类型字典.Misc.业务类型
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData">
+            <summary>
+            实体－模版关系 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.#ctor(UFSoft.UBF.Business.BusinessEntity.EntityKey,System.Int64,System.Object,UFIDA.U9.AAI.Templet.TransEntryHeadTempletData)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.m_entity">
+            <summary>
+            实体
+            实体－模版关系.Misc.实体
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.m_context">
+            <summary>
+            上下文对象
+            实体－模版关系.Misc.上下文对象
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.m_templet">
+            <summary>
+            头模板
+            实体－模版关系.Misc.头模板
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.SOB_SKey">
+            <summary>
+            帐簿 序列化Key属性。（传递跨组织序列列字段）
+            实体－模版关系.Misc.帐簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.EntityTempletRelationDTOData.SOB">
+            <summary>
+            帐簿
+            实体－模版关系.Misc.帐簿
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.RestTemplDTOData">
+            <summary>
+            重置模版DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Int64,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_sOB_Name">
+            <summary>
+            账薄名称
+            重置模版DTO.Misc.账薄名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_templ_Code">
+            <summary>
+            模版Code
+            重置模版DTO.Misc.模版Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_templ_Name">
+            <summary>
+            模版名称
+            重置模版DTO.Misc.模版名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_aABizType_Name">
+            <summary>
+            自动会计名称
+            重置模版DTO.Misc.自动会计名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_isTransferToGL">
+            <summary>
+            转总账
+            重置模版DTO.Misc.转总账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_id">
+            <summary>
+            id
+            重置模版DTO.Misc.id
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_sOB_Code">
+            <summary>
+            账簿Code
+            重置模版DTO.Misc.账簿Code
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.RestTemplDTOData.m_org_Name">
+            <summary>
+            组织名称
+            重置模版DTO.Misc.组织名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData">
+            <summary>
+            重新生成交易分录DTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.#ctor(System.String,System.String,System.String,System.DateTime,System.String,System.Int64)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_docType">
+            <summary>
+            单据类型
+            重新生成交易分录DTO.Misc.单据类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_errMessage">
+            <summary>
+            错误信息
+            重新生成交易分录DTO.Misc.错误信息
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_bizType">
+            <summary>
+            业务类型
+            重新生成交易分录DTO.Misc.业务类型
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_docDate">
+            <summary>
+            单据日期
+            重新生成交易分录DTO.Misc.单据日期
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_docNo">
+            <summary>
+            单据号
+            重新生成交易分录DTO.Misc.单据号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.ReGenerateAAIDTOData.m_docID">
+            <summary>
+            单据ID
+            重新生成交易分录DTO.Misc.单据ID
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData">
+            <summary>
+            复制模版结果 DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.#ctor(System.String,System.String,System.Int64,System.String,System.String,System.String,System.DateTime,System.String,System.Boolean)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_templetCode">
+            <summary>
+            模版编码
+            复制模版结果.Misc.模版编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_templetName">
+            <summary>
+            模版名称
+            复制模版结果.Misc.模版名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_sobID">
+            <summary>
+            目的帐簿ID
+            复制模版结果.Misc.目的帐簿ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_sobCode">
+            <summary>
+            目的帐簿编码
+            复制模版结果.Misc.目的帐簿编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_sobName">
+            <summary>
+            来源帐簿名称
+            复制模版结果.Misc.来源帐簿名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_creatUser">
+            <summary>
+            操作用户
+            复制模版结果.Misc.操作用户
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_executeTime">
+            <summary>
+            执行时间
+            复制模版结果.Misc.执行时间
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_failReason">
+            <summary>
+            失败原因
+            复制模版结果.Misc.失败原因
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.TransEntry.CopyTempletResultDTOData.m_isSuccess">
+            <summary>
+            是否成功
+            复制模版结果.Misc.是否成功
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException">
+            <summary>
+            异常类型: 不能依据路径找到子对象异常
+            
+             不能在父对象(${ParentObjectType})中找到属性名称为${SubPropName}的子对象，请检查模板的属性路径设置是否正确
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 不能依据路径找到子对象异常 Constructor
+            </summary>
+            <param name="subPropName">子对象属性名称</param>
+            <param name="parentObjectType">父对象类型名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 不能依据路径找到子对象异常 Constructor
+            </summary>
+            <param name="subPropName">子对象属性名称</param>
+            <param name="parentObjectType">父对象类型名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 不能依据路径找到子对象异常 Constructor
+            </summary>
+            <param name="subPropName">子对象属性名称</param>
+            <param name="parentObjectType">父对象类型名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException.SubPropName">
+            <summary>
+            子对象属性名称
+            不能依据路径找到子对象异常.Misc.子对象属性名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.CBOAAICanntGetSubObjectException.ParentObjectType">
+            <summary>
+            父对象类型名称
+            不能依据路径找到子对象异常.Misc.父对象类型名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException">
+            <summary>
+            异常类型: 自动会计不支持类型异常
+            
+             在（${Application}）系统中,不支持实体全名为（${EntityDisplayName}）的自动会计业务类型
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException.#ctor(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动会计不支持类型异常 Constructor
+            </summary>
+            <param name="application">应用</param>
+            <param name="entityDisplayName">实体显示名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException.#ctor(System.String,System.String)">
+            <summary>
+            异常类型: 自动会计不支持类型异常 Constructor
+            </summary>
+            <param name="application">应用</param>
+            <param name="entityDisplayName">实体显示名称</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 自动会计不支持类型异常 Constructor
+            </summary>
+            <param name="application">应用</param>
+            <param name="entityDisplayName">实体显示名称</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException.Application">
+            <summary>
+            应用
+            自动会计不支持类型异常.Misc.应用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AABizTypeNotSupportException.EntityDisplayName">
+            <summary>
+            实体显示名称
+            自动会计不支持类型异常.Misc.实体显示名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException">
+            <summary>
+            异常类型: 没有指定任何交易分录头模版异常
+            
+             在(${AccountStandard})会计准则，(${SOB})账簿,(${Org})组织下,(${EntityDisplayName})没有指定任何交易分录头模版
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.#ctor(System.String,System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 没有指定任何交易分录头模版异常 Constructor
+            </summary>
+            <param name="entityDisplayName">实体显示名称</param>
+            <param name="accountStandard">会计准则</param>
+            <param name="sOB">账簿</param>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            异常类型: 没有指定任何交易分录头模版异常 Constructor
+            </summary>
+            <param name="entityDisplayName">实体显示名称</param>
+            <param name="accountStandard">会计准则</param>
+            <param name="sOB">账簿</param>
+            <param name="org">组织</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.#ctor(System.String,System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 没有指定任何交易分录头模版异常 Constructor
+            </summary>
+            <param name="entityDisplayName">实体显示名称</param>
+            <param name="accountStandard">会计准则</param>
+            <param name="sOB">账簿</param>
+            <param name="org">组织</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.EntityDisplayName">
+            <summary>
+            实体显示名称
+            没有指定任何交易分录头模版异常.Misc.实体显示名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.AccountStandard">
+            <summary>
+            会计准则
+            没有指定任何交易分录头模版异常.Misc.会计准则
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.SOB">
+            <summary>
+            账簿
+            没有指定任何交易分录头模版异常.Misc.账簿
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.TransEntryHeadTempletNotDefException.Org">
+            <summary>
+            组织
+            没有指定任何交易分录头模版异常.Misc.组织
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.EntityAccessPathErrorException">
+            <summary>
+            异常类型: 实体数据访问路径错误
+            
+             实体数据访问路径错误,无法访问到数据
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntityAccessPathErrorException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 实体数据访问路径错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntityAccessPathErrorException.#ctor">
+            <summary>
+            异常类型: 实体数据访问路径错误 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntityAccessPathErrorException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 实体数据访问路径错误 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.AAIExpressionExecuteException">
+            <summary>
+            异常类型: 自动会计表达式计算异常
+            
+             自动会计表达式计算异常:${Expression}
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AAIExpressionExecuteException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 自动会计表达式计算异常 Constructor
+            </summary>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AAIExpressionExecuteException.#ctor(System.String)">
+            <summary>
+            异常类型: 自动会计表达式计算异常 Constructor
+            </summary>
+            <param name="expression">表达式</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AAIExpressionExecuteException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 自动会计表达式计算异常 Constructor
+            </summary>
+            <param name="expression">表达式</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AAIExpressionExecuteException.Expression">
+            <summary>
+            表达式
+            自动会计表达式计算异常.Misc.表达式
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.VoucherNullException">
+            <summary>
+            异常类型: 凭证类型为空异常
+            
+             凭证类型空，请修改交易分录模板上的凭证类型，或增加组织(${OrgCode}),(${OrgName})中参数{${AppCode}+999}的默认凭证类型
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.VoucherNullException.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 凭证类型为空异常 Constructor
+            </summary>
+            <param name="orgCode">组织CODE</param>
+            <param name="orgName">组织名称</param>
+            <param name="appCode">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.VoucherNullException.#ctor(System.String,System.String,System.String)">
+            <summary>
+            异常类型: 凭证类型为空异常 Constructor
+            </summary>
+            <param name="orgCode">组织CODE</param>
+            <param name="orgName">组织名称</param>
+            <param name="appCode">属性</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.VoucherNullException.#ctor(System.String,System.String,System.String,System.Exception)">
+            <summary>
+            异常类型: 凭证类型为空异常 Constructor
+            </summary>
+            <param name="orgCode">组织CODE</param>
+            <param name="orgName">组织名称</param>
+            <param name="appCode">属性</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.VoucherNullException.OrgCode">
+            <summary>
+            组织CODE
+            凭证类型为空异常.Misc.组织CODE
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.VoucherNullException.OrgName">
+            <summary>
+            组织名称
+            凭证类型为空异常.Misc.组织名称
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.VoucherNullException.AppCode">
+            <summary>
+            属性
+            凭证类型为空异常.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.AbstractNotNullException">
+            <summary>
+            异常类型: 转总帐摘要不能为空异常
+            
+             转总账分录,分录摘要不能为空(${AbstractExpr})取值表达式为空 : 取值路径(${AbstractExpr})没有取到值
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AbstractNotNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 转总帐摘要不能为空异常 Constructor
+            </summary>
+            <param name="abstractExpr">摘要表达式</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AbstractNotNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 转总帐摘要不能为空异常 Constructor
+            </summary>
+            <param name="abstractExpr">摘要表达式</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.AbstractNotNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 转总帐摘要不能为空异常 Constructor
+            </summary>
+            <param name="abstractExpr">摘要表达式</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.AbstractNotNullException.AbstractExpr">
+            <summary>
+            摘要表达式
+            转总帐摘要不能为空异常.Misc.摘要表达式
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.HeadTempletVoucherTypeNullException">
+            <summary>
+            异常类型: 模版头凭证类型为空异常
+            
+             模版编码为(${HeadTempletCode})下,凭证类型不允许为空,请输入凭证类型
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.HeadTempletVoucherTypeNullException.#ctor(System.String,System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 模版头凭证类型为空异常 Constructor
+            </summary>
+            <param name="headTempletCode">模版头Code</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.HeadTempletVoucherTypeNullException.#ctor(System.String)">
+            <summary>
+            异常类型: 模版头凭证类型为空异常 Constructor
+            </summary>
+            <param name="headTempletCode">模版头Code</param>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.HeadTempletVoucherTypeNullException.#ctor(System.String,System.Exception)">
+            <summary>
+            异常类型: 模版头凭证类型为空异常 Constructor
+            </summary>
+            <param name="headTempletCode">模版头Code</param>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="P:UFIDA.U9.AAI.TransEntry.HeadTempletVoucherTypeNullException.HeadTempletCode">
+            <summary>
+            模版头Code
+            模版头凭证类型为空异常.Misc.模版头Code
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.TowTplsInOneSOBException">
+            <summary>
+            异常类型: 同一单据下匹配到两个账簿相同的交易分录模版，请检查！
+            
+             同一单据下匹配到两个账簿相同的交易分录模版，请检查！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TowTplsInOneSOBException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 同一单据下匹配到两个账簿相同的交易分录模版，请检查！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TowTplsInOneSOBException.#ctor">
+            <summary>
+            异常类型: 同一单据下匹配到两个账簿相同的交易分录模版，请检查！ Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.TowTplsInOneSOBException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 同一单据下匹配到两个账簿相同的交易分录模版，请检查！ Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.SourceTempletNotFoundException">
+            <summary>
+            异常类型: 来源模版没有找到
+            
+             来源模版没有找到
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.SourceTempletNotFoundException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源模版没有找到 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.SourceTempletNotFoundException.#ctor">
+            <summary>
+            异常类型: 来源模版没有找到 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.SourceTempletNotFoundException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源模版没有找到 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.CopySobCannotEqualException">
+            <summary>
+            异常类型: 来源账簿与目的帐簿不能相同
+            
+             来源账簿与目的帐簿不能相同
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CopySobCannotEqualException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 来源账簿与目的帐簿不能相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CopySobCannotEqualException.#ctor">
+            <summary>
+            异常类型: 来源账簿与目的帐簿不能相同 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.CopySobCannotEqualException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 来源账簿与目的帐簿不能相同 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.EntryTempletUsedException">
+            <summary>
+            异常类型: 分录模版被使用
+            
+             由于该模版与对应的预置模版分录行数量不同，并且该模版已经使用，不能删除分录行，导致重置失败！
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntryTempletUsedException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 分录模版被使用 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntryTempletUsedException.#ctor">
+            <summary>
+            异常类型: 分录模版被使用 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.EntryTempletUsedException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 分录模版被使用 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.TransEntry.PredAcctNotExistException">
+            <summary>
+            异常类型: 预设科目不存在
+            
+             预设科目不存在
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.PredAcctNotExistException.#ctor(System.String,System.Int64,System.String)">
+            <summary>
+            异常类型: 预设科目不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.PredAcctNotExistException.#ctor">
+            <summary>
+            异常类型: 预设科目不存在 Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.TransEntry.PredAcctNotExistException.#ctor(System.Exception)">
+            <summary>
+            异常类型: 预设科目不存在 Constructor
+            </summary>
+            <param name="innerException">InnerException</param>
+        </member>
+        <member name="T:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData">
+            <summary>
+            AccountTransactionEntryQryDTO DTO :自定义的数据传输类型 
+            
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.#ctor(System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.String,System.Int64,System.String,System.Int64,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor Full Argument
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_code">
+            <summary>
+            编码
+            AccountTransactionEntryQryDTO.分录头模版.编码
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_isTransferToGL">
+            <summary>
+            转总账
+            AccountTransactionEntryQryDTO.分录头模版.转总账
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_AccoutSide">
+            <summary>
+            分录模版_方向
+            AccountTransactionEntryQryDTO.分录模版.分录模版_方向
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_AbstractExprDisp">
+            <summary>
+            分录模版_摘要显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_摘要显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_account">
+            <summary>
+            账簿科目
+            AccountTransactionEntryQryDTO.会计科目模版.账簿科目
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_iD">
+            <summary>
+            ID
+            AccountTransactionEntryQryDTO.分录模版.ID
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue1Name">
+            <summary>
+            科目段1取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段1取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue2Name">
+            <summary>
+            科目段2取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段2取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue3Name">
+            <summary>
+            科目段3取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段3取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue4Name">
+            <summary>
+            科目段4取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段4取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue5Name">
+            <summary>
+            科目段5取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段5取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue6Name">
+            <summary>
+            科目段6取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段6取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue7Name">
+            <summary>
+            科目段7取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段7取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue8Name">
+            <summary>
+            科目段8取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段8取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue9Name">
+            <summary>
+            科目段9取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段9取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue10Name">
+            <summary>
+            科目段10取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段10取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue11Name">
+            <summary>
+            科目段11取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段11取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue12Name">
+            <summary>
+            科目段12取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段12取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue13Name">
+            <summary>
+            科目段13取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段13取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue14Name">
+            <summary>
+            科目段14取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段14取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue15Name">
+            <summary>
+            科目段15取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段15取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue16Name">
+            <summary>
+            科目段16取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段16取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue17Name">
+            <summary>
+            科目段17取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段17取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue18Name">
+            <summary>
+            科目段18取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段18取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue19Name">
+            <summary>
+            科目段19取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段19取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue20Name">
+            <summary>
+            科目段20取值名称
+            AccountTransactionEntryQryDTO.会计科目模版.科目段20取值名称
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue1">
+            <summary>
+            科目段1取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段1取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue2">
+            <summary>
+            科目段2取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段2取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue3">
+            <summary>
+            科目段3取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段3取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue4">
+            <summary>
+            科目段4取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段4取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue5">
+            <summary>
+            科目段5取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段5取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue6">
+            <summary>
+            科目段6取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段6取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue7">
+            <summary>
+            科目段7取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段7取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue8">
+            <summary>
+            科目段8取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段8取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue9">
+            <summary>
+            科目段9取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段9取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue10">
+            <summary>
+            科目段10取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段10取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue11">
+            <summary>
+            科目段11取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段11取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue12">
+            <summary>
+            科目段12取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段12取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue13">
+            <summary>
+            科目段13取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段13取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue14">
+            <summary>
+            科目段14取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段14取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue15">
+            <summary>
+            科目段15取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段15取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue16">
+            <summary>
+            科目段16取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段16取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue17">
+            <summary>
+            科目段17取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段17取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue18">
+            <summary>
+            科目段18取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段18取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue19">
+            <summary>
+            科目段19取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段19取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_accountSegValue20">
+            <summary>
+            科目段20取值
+            AccountTransactionEntryQryDTO.会计科目模版.科目段20取值
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_SeqNum">
+            <summary>
+            分录模版_序号
+            AccountTransactionEntryQryDTO.分录模版.分录模版_序号
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_IsAllowModifySide">
+            <summary>
+            分录模版_方向可改
+            AccountTransactionEntryQryDTO.分录模版.分录模版_方向可改
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_ExcludeExprDisp">
+            <summary>
+            分录模版_排除条件显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_排除条件显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_OriginalCurrencyExprDisp">
+            <summary>
+            分录模版_币种显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_币种显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_OriginalAmountExprDisp">
+            <summary>
+            分录模版_原币金额
+            AccountTransactionEntryQryDTO.分录模版.分录模版_原币金额
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_ExchRateTypeExprDisp">
+            <summary>
+            分录模版_汇率类型显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_汇率类型显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_ExchRateExprDisp">
+            <summary>
+            分录模版_汇率显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_汇率显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_QuantityExprDisp">
+            <summary>
+            分录模版_数量显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_数量显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_UOMExprDisp">
+            <summary>
+            分录模版_单位显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_单位显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_ProjectExprDisp">
+            <summary>
+            分录模版_项目显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_项目显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_TaskExprDisp">
+            <summary>
+            分录模版_任务显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_任务显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_IncomeExpendItemExprDisp">
+            <summary>
+            分录模版_收支项目显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_收支项目显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_SettleMethodExprDisp">
+            <summary>
+            分录模版_结算方式显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_结算方式显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_BankAcctCombinExprDisp">
+            <summary>
+            分录模版_银行账号组合显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_银行账号组合显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_transEntryTemplets_BudgetProjectExprDisp">
+            <summary>
+            分录模版_预算专项显示
+            AccountTransactionEntryQryDTO.分录模版.分录模版_预算专项显示
+            </summary>
+        </member>
+        <member name="F:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.m_voucherTypePropExpr">
+            <summary>
+            凭证类型
+            AccountTransactionEntryQryDTO.分录头模版.凭证类型
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.SOB_SKey">
+            <summary>
+            账簿 序列化Key属性。（传递跨组织序列列字段）
+            AccountTransactionEntryQryDTO.分录头模版.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.SOB">
+            <summary>
+            账簿
+            AccountTransactionEntryQryDTO.分录头模版.账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.PredeterminedAccount_Name">
+            <summary>
+            预设科目名称
+            AccountTransactionEntryQryDTO.会计科目模版.预设科目名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.Multi_PredeterminedAccount_Name">
+            <summary>
+            多语属性: 预设科目名称
+            AccountTransactionEntryQryDTO.会计科目模版.预设科目名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.SOB_Name">
+            <summary>
+            分录模版账簿
+            AccountTransactionEntryQryDTO.分录头模版.分录模版账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.Multi_SOB_Name">
+            <summary>
+            多语属性: 分录模版账簿
+            AccountTransactionEntryQryDTO.分录头模版.分录模版账簿
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.Name">
+            <summary>
+            分录模版名称
+            AccountTransactionEntryQryDTO.分录头模版.分录模版名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.Multi_Name">
+            <summary>
+            多语属性: 分录模版名称
+            AccountTransactionEntryQryDTO.分录头模版.分录模版名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.AABizType_Name">
+            <summary>
+            自动会计类型名称
+            AccountTransactionEntryQryDTO.分录头模版.自动会计类型名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AccountTransactionEntryQry.AccountTransactionEntryQryDTOData.Multi_AABizType_Name">
+            <summary>
+            多语属性: 自动会计类型名称
+            AccountTransactionEntryQryDTO.分录头模版.自动会计类型名称
+            </summary>
+        </member>
+        <member name="T:UFIDA.U9.AAI.AAIBP.Resource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AAIBP.Resource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.AAI.AAIBP.Resource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

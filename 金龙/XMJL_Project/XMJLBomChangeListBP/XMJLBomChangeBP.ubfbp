@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Component id="ce11d8e2-fab7-443b-8f41-9a13f22620ce" name="XMJLBomChangeBP" displayName="XMJLBomChangeBP" description="" help="" type="BP" assemblyName="UFIDA.U9.Cust.XMJL.XMJLBomChangeListBP">
+  <Namespace id="9508bd3d-862c-4ccf-bf1b-c638ef9c70a4" name="UFIDA.U9.Cust.XMJL.XMJLBomChangeBP" displayName="XMJLBomChangeBP" description="" help="">
+    <PropertyType id="ebe6f963-7f3c-433c-8063-cc99e94a70b6" name="BomInfoDTO" displayName="缺件车辆信息" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="818012fd-c067-4afc-9686-47f13fde8630" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="81b61e62-59bb-4d52-8ae5-9226c11f4db7" name="CarNoId" displayName="车号" description="" help="缺件车辆信息.Misc.车号" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="cb2428a3-314e-4173-a236-10dbf0fed984" name="CarNoCode" displayName="车号Code" description="" help="缺件车辆信息.Misc.车号Code" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="75c433d2-8601-4555-9921-95333910c4eb" name="CarNoName" displayName="车号Name" description="" help="缺件车辆信息.Misc.车号Name" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="c3f62765-ea1e-4e5f-aad7-8bb4573a6433" name="ContractNo" displayName="合同号" description="" help="缺件车辆信息.Misc.合同号" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="98ddb52a-6858-4686-ba71-781d983d0a56" name="CarType" displayName="属性" description="" help="缺件车辆信息.Misc.属性" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="4" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <PropertyType id="31417dae-4b25-4c1d-b0f6-ef5629124526" name="ItemSupplyDTO" displayName="料品供应商" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="062316dc-369b-4974-b93e-55e30c83acae" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="a01c8096-8a25-43b6-a93c-b4c04d22f4f1" name="ItemId" displayName="料品ID" description="" help="料品供应商.Misc.料品ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="8f697c93-d935-4a32-af59-76e0af1964ab" name="Supply" displayName="供应商ID" description="" help="料品供应商.Misc.供应商ID" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="0" length="8" precise="19" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="57e70e13-8503-4b9e-a70a-2e35cfdf0f7c" name="SupplyCode" displayName="供应商Code" description="" help="料品供应商.Misc.供应商Code" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="a29db349-c654-4e8c-955b-7a819582f1af" name="SupplyName" displayName="供应商Name" description="" help="料品供应商.Misc.供应商Name" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="3" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <PropertyType id="de5989ec-7b8b-462c-abe6-4111864e4b62" name="SplitCarDTO" displayName="拆分车号数据传输对象" description="" help="" mD_ParentClass_ID="" isFactEntity="False" isQuery="False" isPersistence="False">
+      <Groups>
+        <Group id="58d58316-1d71-4b48-9dcb-d1796db8b96a" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="7cf8ff66-e929-4ac2-934c-feb18f62e460" name="PlsID" displayName="生产线料品日计划ID" description="" help="拆分车号数据传输对象.Misc.生产线料品日计划ID" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="74fa8545-dfdd-4a9c-868f-bd7d2b259717" name="ManufactureNo" displayName="车号" description="" help="拆分车号数据传输对象.Misc.车号" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="1" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+        <Attribute id="52029c09-6d53-423f-a96b-581e73c02938" name="Sequence" displayName="车序" description="" help="拆分车号数据传输对象.Misc.车序" dataTypeID="d7c6031e-d3fe-41aa-a397-5edd86c10cae" isKey="False" defaultValue="0" length="4" precise="10" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="2" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+    </PropertyType>
+    <Operation id="0c9fcf7f-a05c-483e-a028-799a794d341a" name="GetBomInfoByCarNoBP" displayName="获取缺件信息" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="ebe6f963-7f3c-433c-8063-cc99e94a70b6" isService="False" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="c9dd33ac-e491-48dd-b15b-4514d7c7f358" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="97f01fd5-d09d-471d-9576-431246b56017" name="CarIdList" displayName="车号" description="" help="获取缺件信息.Misc.车号" isCollection="True" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="e53bea5e-29af-4f91-af40-68bdbb9c87c8" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="ebe6f963-7f3c-433c-8063-cc99e94a70b6" isService="False" isDefault="True" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Operation id="4610069b-58b1-4461-b557-2bd4691c77f1" name="ChangeBomBP" displayName="更改缺件表" description="根据车号新增一条缺件表" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="116880a1-e4cd-4f35-8e26-d94f9a46a848" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="7f891603-6889-4759-9e6c-0193bc9454eb" name="BomChangeIdList" displayName="缺件变更ID列表" description="" help="更改缺件表.Misc.缺件变更ID列表" isCollection="True" dataTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="e9976797-0ad5-4d06-aff9-c9157f70d6d7" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="3d174255-fd12-47f7-8844-3b5e4fae9e8c" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Operation id="8a22fdc2-bc60-47c1-a484-61792dd51e2c" name="GetItemMainSupBP" displayName="获取料品主供应商信息" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="31417dae-4b25-4c1d-b0f6-ef5629124526" isService="False" isDefault="False" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="e35753c9-4550-4d84-8efa-4b14b698695b" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="f303e373-eba6-4434-a79a-2ec43dae98dc" name="ItemIds" displayName="料品ID " description="" help="获取料品主供应商信息.Misc.料品ID " isCollection="True" dataTypeID="ba391065-6c27-4c82-acc8-b52b1c93a910" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="1e83c71d-fea9-4931-bd7d-6806a08f7c87" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="31417dae-4b25-4c1d-b0f6-ef5629124526" isService="False" isDefault="True" isReturnCollection="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Operation id="e796d532-8132-48ed-8a92-998e5aaf33c9" name="SplitCarNoToPls" displayName="生产线料品日计划拆分车号" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" isService="False" isDefault="False" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False">
+      <Groups>
+        <Group id="438ea5f4-4c4a-4460-a39b-799591e0eae4" name="Misc" displayName="Misc" description="" help="" />
+      </Groups>
+      <Attributes>
+        <Attribute id="9c0508e2-5337-4179-bf63-787d7d506b2f" name="SplitCarDTOList" displayName="拆分车号数据列表" description="" help="生产线料品日计划拆分车号.Misc.拆分车号数据列表" isCollection="True" dataTypeID="de5989ec-7b8b-462c-abe6-4111864e4b62" isKey="False" defaultValue="" length="50" precise="5" scale="0" isNullable="True" isReadOnly="False" isHide="False" isCalculation="False" valueExpression="" maxValue="" minValue="" sequence="0" isDefaultDimensionAttribute="False" isDefaultMeasureAttribute="False" isGlobalization="False" idGenerator="" groupName="Misc" isEntityKey="False" isEntityData="True" isSystem="False" isBusinessKey="False" isSyncDictionary="False" dictionaryKey="" isExtendCode="False" isQuery="True" isForAsso="True" isModifyControl="False" isDynamic="False" isImpressible="False" isInCache="False" isKeySerializable="False" isColumnDefine="True" isFilterDefine="True" isSortDefine="True" isDefaultColumn="True" forOBAImport="False" />
+      </Attributes>
+      <Implements>
+        <Operation id="3b8a72f6-88e1-4d10-81de-867965451f5c" name="Impement" displayName="实现" description="" help="" mD_ParentClass_ID="" isFactEntity="False" returnTypeID="5efeea06-cae7-4cc0-82e9-20a789e4e582" isService="False" isDefault="True" isEntityKey="False" transactionType="2" isAuthorization="True" isISV="False" />
+      </Implements>
+    </Operation>
+    <Diagram id="f376cec3-043a-42dd-b5d1-0b1e077cf434" name="XMJLBomChangeBP" displayName="XMJLBomChangeBP">
+      <Class Editable="True" ID="440424fa-3e64-42e6-8e93-106bbebdeaf7" Type="PropertyType" ADID="ebe6f963-7f3c-433c-8063-cc99e94a70b6">
+        <Location X="156" Y="14" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="d3ad0c59-4f83-43ce-8487-591340e04a3b" Type="PropertyType" ADID="31417dae-4b25-4c1d-b0f6-ef5629124526">
+        <Location X="155" Y="75" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="86acef1f-a701-4b98-886b-5b7cc8397c23" Type="PropertyType" ADID="de5989ec-7b8b-462c-abe6-4111864e4b62">
+        <Location X="522" Y="11" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="c3632a49-9682-4260-93b4-fcda9b12204f" Type="Operation" ADID="0c9fcf7f-a05c-483e-a028-799a794d341a">
+        <Location X="29" Y="9" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="b4130b2b-adc0-4e1b-ae14-ae09fd46b4a8" Type="Operation" ADID="4610069b-58b1-4461-b557-2bd4691c77f1">
+        <Location X="28" Y="73" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="712612e0-8a85-4737-957b-b86c3fbb91df" Type="Operation" ADID="8a22fdc2-bc60-47c1-a484-61792dd51e2c">
+        <Location X="25" Y="136" />
+        <Size width="120" height="58" />
+      </Class>
+      <Class Editable="True" ID="44441fcb-77d4-4782-80af-d0d374492b46" Type="Operation" ADID="e796d532-8132-48ed-8a92-998e5aaf33c9">
+        <Location X="397" Y="10" />
+        <Size width="120" height="58" />
+      </Class>
+    </Diagram>
+  </Namespace>
+</Component>

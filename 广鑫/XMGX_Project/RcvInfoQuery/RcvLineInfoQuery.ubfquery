@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryComponent id="6eeeebb8-430a-4096-a012-58e80107791f" name="RcvLineInfoQuery" displayName="RcvLineInfoQuery" description="" help="" QueryType="DTOQuery" QueryURI="6f91448c-7e21-47bd-8994-e133e49161b4" QuerySourceFullName="UIFIA.U9.Cust.FJGX.RcvLineQryBP.RcvLineQryDTO" UIViewDragType="DragUp" RefInfoLoadType="Cache">
+  <BasicInfo id="8d5592bc-d744-49a5-a1d1-0627f7229bf1" name="" displayName="" description="" help="" RefToken="" RootDescContextValue="" FilterTabVisible="True" ColumnTabVisible="True" SortTabVisible="True" FilterExpandLevel="3" ColumnExpandLevel="3" SortExpandLevel="3" />
+  <BPRefInfo id="19edb3ad-3360-48af-86aa-c1f06b885b37" name="RcvLine" displayName="RcvLine" description="" help="" ProjectID="" ProjectPath="" BPItemID="b4595bdc-f131-4c31-8916-46fb7d9b4f13" BPOperationID="d926b0e5-22cb-4266-9a9e-feb33ec21f4a" DTOID="66bd6e1a-5460-49f3-bb61-3d4e974752be" BPAgentDll="UIFIA.U9.Cust.FJGX.RcvInfoQueryBP.Agent" BPAgentProxy="UIFIA.U9.Cust.FJGX.RcvLineQryBP.Proxy.QueryBPProxy" />
+  <UIRefInfo id="b7e22fca-8d07-44d3-8be9-0706a30bfea6" name="" displayName="" description="" help="" ProjectID="" ProjectPath="" UIModelItemID="c9d562cf-b666-43a2-a0e9-e527cabc1c59" UIFormItemID="cbb3d378-8480-4057-97dd-29726bc75b80" UIModelID="9f27a851-808b-4171-8ff9-bf20811ba9d1" />
+  <FilterDefines>
+    <FilterDefine id="bc256983-3e8f-443b-becc-d862caafdaf4" name="BusinessDate" displayName="BusinessDate" description="" help="" ParentName="" Alias="BusinessDate" IsFixed="False" IsAllowBlank="True" Visible="True" DescFieldContextValue="" FilterNodeType="Item" DateDisplayType="Date" RaiseChangedEvent="False" IsBuildWhereStr="True" OperatorList="Equal,NotEqual,GreaterThan,LessThan,GreaterThanEqual,LessThanEqual,Between" />
+  </FilterDefines>
+  <ColumnDefines>
+    <ColumnDefine id="730a3ebe-b4d8-405f-9c5f-213bac7ccad0" name="TradeUOM_Round_Precision" displayName="TradeUOM_Round_Precision" description="" help="" ParentName="" Alias="TradeUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="3b7360d0-2676-499a-9684-f56d70777282" name="TradeUOM_Round_RoundType" displayName="TradeUOM_Round_RoundType" description="" help="" ParentName="" Alias="TradeUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="c898e1f0-8ed6-4f2d-b7cb-a7cf26be8983" name="TradeUOM_Round_RoundValue" displayName="TradeUOM_Round_RoundValue" description="" help="" ParentName="" Alias="TradeUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="954fe636-809d-47c8-a2da-ff6fb888aae1" name="StoreUOM_Round_Precision" displayName="StoreUOM_Round_Precision" description="" help="" ParentName="" Alias="StoreUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="3704718d-4080-4857-86eb-c7b693ab168a" name="StoreUOM_Round_RoundType" displayName="StoreUOM_Round_RoundType" description="" help="" ParentName="" Alias="StoreUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="a20c6842-69e0-4653-b881-37e880b27c2f" name="StoreUOM_Round_RoundValue" displayName="StoreUOM_Round_RoundValue" description="" help="" ParentName="" Alias="StoreUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="0f50ef6f-ac5e-4653-bf6e-e08d98cc4a8e" name="CostUOM_Round_Precision" displayName="CostUOM_Round_Precision" description="" help="" ParentName="" Alias="CostUOM_Round_Precision" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="3aa186ec-53e3-4c2c-8803-a53e4fb3249c" name="CostUOM_Round_RoundType" displayName="CostUOM_Round_RoundType" description="" help="" ParentName="" Alias="CostUOM_Round_RoundType" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" AlwaysLoaded="True" />
+    <ColumnDefine id="d8ea5209-4f5f-46f2-a60d-1fba7a7b17a7" name="CostUOM_Round_RoundValue" displayName="CostUOM_Round_RoundValue" description="" help="" ParentName="" Alias="CostUOM_Round_RoundValue" IsFixed="False" Visible="False" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" Point="2" />
+    <ColumnDefine id="ffff6f3e-27d2-4919-b494-df91af73370f" name="QtySU" displayName="QtySU" description="" help="" ParentName="" Alias="QtySU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="StoreUOM_Round_Precision" RoundTypeField="StoreUOM_Round_RoundType" RoundValueField="StoreUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="11990b58-69e3-454b-a049-c2ee374bd96f" name="QtyCU" displayName="QtyCU" description="" help="" ParentName="" Alias="QtyCU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="CostUOM_Round_Precision" RoundTypeField="CostUOM_Round_RoundType" RoundValueField="CostUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="ec2d18e1-2988-4e6b-8e1d-64b9de4a7280" name="FinallyPriceTC" displayName="FinallyPriceTC" description="" help="" ParentName="" Alias="FinallyPriceTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="6" />
+    <ColumnDefine id="a09af91d-fa4d-4880-8900-6684e03d817a" name="ArriveTotalMnyTC" displayName="ArriveTotalMnyTC" description="" help="" ParentName="" Alias="ArriveTotalMnyTC" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Currency" Point="2" />
+    <ColumnDefine id="01152aa0-7f66-466c-9ecf-83e757dca7e2" name="QtyTU" displayName="QtyTU" description="" help="" ParentName="" Alias="QtyTU" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Dynamic" ScaleField="TradeUOM_Round_Precision" RoundTypeField="TradeUOM_Round_RoundType" RoundValueField="TradeUOM_Round_RoundValue" Point="2" />
+    <ColumnDefine id="c8b53e98-1409-4a0a-a593-423f7b64394b" name="Ratio" displayName="Ratio" description="" help="" ParentName="" Alias="Ratio" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="False" DateDisplayType="" PrecisionType="Static" NumericType="Numberic" Point="4" />
+    <ColumnDefine id="16955042-376c-4dbb-acf2-ccb100382b79" name="PieceQty" displayName="PieceQty" description="" help="" ParentName="" Alias="PieceQty" IsFixed="False" Visible="True" DescFieldContextValue="" ZeroIsEmpty="True" DateDisplayType="" Point="2" />
+  </ColumnDefines>
+  <DefaultCase>
+    <BasicFilters>
+      <BasicFilter id="a0dbeec2-32bc-4642-94cb-5b589bf04204" name="ItemCode" displayName="存货编码" description="" help="" />
+      <BasicFilter id="486c6e6f-095a-4d0c-aa28-3bcd517ce87e" name="ItemName" displayName="存货名称" description="" help="" />
+      <BasicFilter id="f4e1494d-9f1e-456e-a4a6-8ebba2762256" name="SPEC" displayName="规格" description="" help="" />
+      <BasicFilter id="626b0141-d6ca-414f-879a-bad2bd3918fb" name="CreatedBy" displayName="制单人" description="" help="" />
+    </BasicFilters>
+    <DefaultColumns>
+      <Column id="a3055ee3-7114-4bc1-aba9-5dd37dc6e770" name="DocLineNo" displayName="行号" description="" help="" />
+      <Column id="a0b2d260-da2d-4aa8-b7e2-d150436a8a3d" name="ItemCode" displayName="存货编码" description="" help="" />
+      <Column id="5571cada-328e-4cdc-ad7e-e37899fd17ae" name="ItemName" displayName="存货名称" description="" help="" />
+      <Column id="169d7167-d721-4370-9cb2-a2d0e6606997" name="SPEC" displayName="规格" description="" help="" />
+      <Column id="a7cab6d8-8f09-4ecd-b3d3-872a29627531" name="QtyTU" displayName="采购数量" description="" help="" />
+      <Column id="9efb42af-aab7-4e36-974c-631933ad5722" name="TradeUOMName" displayName="采购单位" description="" help="" />
+      <Column id="1971dd8a-d4f6-4371-9d0f-fc62680548c5" name="QtySU" displayName="库存数量" description="" help="" />
+      <Column id="2ae873cc-b73d-4ee0-96c6-f7cc41dc31aa" name="StoreUOMName" displayName="库存单位" description="" help="" />
+      <Column id="b85f6bea-1f62-4e4b-b935-f0c4e1618146" name="QtyCU" displayName="成本数量" description="" help="" />
+      <Column id="2fc11632-1370-437e-b2ad-aa94b213bf53" name="CostUOMName" displayName="成本单位" description="" help="" />
+      <Column id="b9909945-c28b-4c22-820f-9dc48a42c69f" name="LotCode" displayName="批号" description="" help="" />
+      <Column id="c4b06183-805a-4781-b127-df46b7feb33c" name="FinallyPriceTC" displayName="单价" description="" help="" />
+      <Column id="5527e675-8649-4889-b0d6-1f4c2797b94a" name="ArriveTotalMnyTC" displayName="金额" description="" help="" />
+      <Column id="5d7841e8-5764-40d2-b560-6399f77aa7a7" name="Ratio" displayName="换算率" description="" help="" />
+      <Column id="1ce52d75-9c24-4733-a008-65e1fa92433f" name="PieceQty" displayName="件数" description="" help="" />
+      <Column id="8a74fe08-ba54-4eff-b766-a7441c9553fa" name="CreatedBy" displayName="制单人" description="" help="" />
+      <Column id="04619315-ef84-404a-ab31-ce6b2fa9bb23" name="Memo" displayName="备注" description="" help="" />
+    </DefaultColumns>
+    <DefaultSorts>
+      <Sort id="0dae722d-396d-4260-859e-a84791df0aca" name="DocLineNo" displayName="" description="" help="" SortType="ASC" />
+    </DefaultSorts>
+  </DefaultCase>
+</QueryComponent>

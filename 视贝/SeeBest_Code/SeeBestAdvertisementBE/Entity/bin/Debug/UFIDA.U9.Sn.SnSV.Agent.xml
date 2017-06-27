@@ -1,0 +1,986 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.Sn.SnSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.SnRequestDTO">
+            <summary>
+            序列号申请DTO (该属性可为空,且无默认值)
+            获取已生成可用序列号.Misc.序列号申请DTO
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Sn.SnRequestDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.AvailableType">
+            <summary>
+            可用类型 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.可用类型
+            </summary>
+            <value>UFIDA.U9.Sn.AvailableTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.WhiteBill">
+            <summary>
+            白名单列表 (该属性可为空,且无默认值)
+            获取已生成可用序列号.Misc.白名单列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.BlackBill">
+            <summary>
+            黑名单列表 (该属性可为空,且无默认值)
+            获取已生成可用序列号.Misc.黑名单列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.StartSn">
+            <summary>
+            开始序列号 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.开始序列号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.EndSn">
+            <summary>
+            结束序列号 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.结束序列号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.IsWithUsed">
+            <summary>
+            包含使用 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.包含使用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.IsWithInvalidTime">
+            <summary>
+            包含失效 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.包含失效
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.WhQohKey">
+            <summary>
+            库存限定条件 (该属性可为空,且无默认值)
+            获取已生成可用序列号.Misc.库存限定条件
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.DTOs.WhQohKeyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.IsIn">
+            <summary>
+            排除在库 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.排除在库
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.IsOut">
+            <summary>
+            排除出库 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.排除出库
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.IsWithUse">
+            <summary>
+            是否包含可用 (该属性可为空,但有默认值)
+            获取已生成可用序列号.Misc.是否包含可用
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetCreatedValidSnSVProxy.SnDocDTO">
+            <summary>
+            单据信息 (该属性可为空,且无默认值)
+            获取已生成可用序列号.Misc.单据信息
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnOnlineSVProxy.SnRequestDTO">
+            <summary>
+            序列号申请DTO (该属性可为空,且无默认值)
+            在线生成序列号.Misc.序列号申请DTO
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Sn.SnRequestDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.TransferDocSnSVProxy.OriginalSnDocDTO">
+            <summary>
+            前向单据 (该属性可为空,且无默认值)
+            业务单据转移序列号.Misc.前向单据
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.TransferDocSnSVProxy.CurrentNewSnDocDTO">
+            <summary>
+            当前新单据 (该属性可为空,且无默认值)
+            业务单据转移序列号.Misc.当前新单据
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.TransferDocSnSVProxy.Qty">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            业务单据转移序列号.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.TransferDocSnSVProxy.IsCreate">
+            <summary>
+            属性 (该属性可为空,但有默认值)
+            业务单据转移序列号.Misc.属性
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateDocSnSVProxy.SnUsedDTOs">
+            <summary>
+            序列号使用DTO集合 (该属性可为空,且无默认值)
+            业务单据更新序列号.Misc.序列号使用DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DeleteDocSnSVProxy.SnDocDTOSet">
+            <summary>
+            序列号文档DTO集合 (该属性可为空,且无默认值)
+            业务单据取消序列号.Misc.序列号文档DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DeleteDocSnSVProxy.Status">
+            <summary>
+            状态 (该属性可为空,但有默认值)
+            业务单据取消序列号.Misc.状态
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.LotSnStatusEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.SnDocDTO">
+            <summary>
+            序列号文档DTO (该属性可为空,且无默认值)
+            业务单据查询序列号.Misc.序列号文档DTO
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.UsingOrg_SKey">
+            <summary>
+            使用组织 序列化Key属性。（传递跨组织序列列字段）
+            业务单据查询序列号.Misc.使用组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.UsingOrg">
+            <summary>
+            使用组织 (该属性可为空,且无默认值)
+            业务单据查询序列号.Misc.使用组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            业务单据查询序列号.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            业务单据查询序列号.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Quantity">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.IsNeedCreate">
+            <summary>
+            是否需要创建 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.是否需要创建
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Start">
+            <summary>
+            起始位置 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.起始位置
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.IsCreateSn">
+            <summary>
+            是否生成序列号 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.是否生成序列号
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Wh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            业务单据查询序列号.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Wh">
+            <summary>
+            存储地点 (该属性可为空,且无默认值)
+            业务单据查询序列号.Misc.存储地点
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Warehouse.Warehouse</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.IsAutoFillInSn">
+            <summary>
+            是否自动填写序列号 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.是否自动填写序列号
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.Status">
+            <summary>
+            状态 (该属性可为空,但有默认值)
+            业务单据查询序列号.Misc.状态
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.LotSnStatusEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryDocSnSVProxy.UOMQtyChangeDTO">
+            <summary>
+            数量转换DTO (该属性可为空,且无默认值)
+            业务单据查询序列号.Misc.数量转换DTO
+            </summary>
+            <value>UFIDA.U9.Sn.UOMQtyChange</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateWhQOHSnSVProxy.SnWhQohDTOs">
+            <summary>
+            SnWhQohDTO集合 (该属性可为空,且无默认值)
+            入库汇总更新序列号.Misc.SnWhQohDTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnSVProxy.SnCreateDTO">
+            <summary>
+            序列号生成信息 (该属性可为空,且无默认值)
+            批量生成序列号.Misc.序列号生成信息
+            </summary>
+            <value>UFIDA.U9.Sn.SnCreateDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnSVProxy.Quantity">
+            <summary>
+            批量个数 (该属性可为空,但有默认值)
+            批量生成序列号.Misc.批量个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.UsingOrg_SKey">
+            <summary>
+            使用组织 序列化Key属性。（传递跨组织序列列字段）
+            获取序列号清单.Misc.使用组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.UsingOrg">
+            <summary>
+            使用组织 (该属性可为空,且无默认值)
+            获取序列号清单.Misc.使用组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            获取序列号清单.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            获取序列号清单.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Quantity">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            获取序列号清单.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.DocInfo">
+            <summary>
+            单据信息 (该属性可为空,且无默认值)
+            获取序列号清单.Misc.单据信息
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.IsCreateSn">
+            <summary>
+            是否生成序列号 (该属性可为空,但有默认值)
+            获取序列号清单.Misc.是否生成序列号
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Wh_SKey">
+            <summary>
+            存储地点 序列化Key属性。（传递跨组织序列列字段）
+            获取序列号清单.Misc.存储地点
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Wh">
+            <summary>
+            存储地点 (该属性可为空,且无默认值)
+            获取序列号清单.Misc.存储地点
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Warehouse.Warehouse</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.IsAutoFillInSn">
+            <summary>
+            是否自动填写序列号 (该属性可为空,但有默认值)
+            获取序列号清单.Misc.是否自动填写序列号
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnBillSVProxy.Status">
+            <summary>
+            状态 (该属性可为空,但有默认值)
+            获取序列号清单.Misc.状态
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.LotSnStatusEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.VerifyDocSnSVProxy.SnVerifyDTOSet">
+            <summary>
+            校验DTO集合 (该属性可为空,且无默认值)
+            业务单据校验序列号.Misc.校验DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.PickOutMatchSnSVProxy.PickOutMatchSnList">
+            <summary>
+            出库匹配序列号DTO (该属性可为空,且无默认值)
+            出库拣货匹配序列号.Misc.出库匹配序列号DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.PickOutMatchSnSVProxy.NotCreateSn">
+            <summary>
+            是否不创建序列号 (该属性可为空,但有默认值)
+            出库拣货匹配序列号.Misc.是否不创建序列号
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnOnlineSVProxy.SnRequestDTO">
+            <summary>
+            序列号申请DTO (该属性可为空,且无默认值)
+            批量在线生成序列号.Misc.序列号申请DTO
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Sn.SnRequestDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnOnlineSVProxy.Quantity">
+            <summary>
+            批量个数 (该属性可为空,但有默认值)
+            批量在线生成序列号.Misc.批量个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnOnlineSVProxy.SNList">
+            <summary>
+            序列号列表 (该属性可为空,且无默认值)
+            批量在线生成序列号.Misc.序列号列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnOnlineSVProxy.IsCreateSN">
+            <summary>
+            是否强制创建序列号主档 (该属性可为空,但有默认值)
+            批量在线生成序列号.Misc.是否强制创建序列号主档
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocPrintSnSVProxy.DocList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            业务单据打印序列号服务.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetBatchSnCodingRuleProxy.ListSnRequestDTO">
+            <summary>
+            序列号申请DTO列表 (该属性可为空,且无默认值)
+            批量获取序列号编码规则.Misc.序列号申请DTO列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnBySrcDocProxy.SnCreateBySrcDocDTO">
+            <summary>
+            依据来源单据生成序列号DTO (该属性可为空,且无默认值)
+            依据来源单据生成序列号服务.Misc.依据来源单据生成序列号DTO
+            </summary>
+            <value>UFIDA.U9.Sn.SnCreateBySrcDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseQueryProxy.SnCodeList">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            序列号使用情况查询.Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseQueryProxy.SnDocDTOList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            序列号使用情况查询.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseQueryProxy.StatusList">
+            <summary>
+            批号序列号状态集合 (该属性可为空,且无默认值)
+            序列号使用情况查询.Misc.批号序列号状态集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseQueryProxy.IsTOP1">
+            <summary>
+            是否返回一条记录 (该属性可为空,但有默认值)
+            序列号使用情况查询.Misc.是否返回一条记录
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.Trans_Out_UpdateSNProxy.SnDocDtoList">
+            <summary>
+            来源单据信息列表 (该属性可为空,且无默认值)
+            异动明细调用序列号服务(是否出库标记).Misc.来源单据信息列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.Trans_Out_UpdateSNProxy.IsApproved">
+            <summary>
+            是否审核 (该属性可为空,但有默认值)
+            异动明细调用序列号服务(是否出库标记).Misc.是否审核
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.BatchCreateSnBySrcDocSVProxy.SnCreateBySrcDocDTOList">
+            <summary>
+            依据来源单据生成序列号DTO列表 (该属性可为空,且无默认值)
+            依据来源单据批量生成序列号.Misc.依据来源单据生成序列号DTO列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.PrdEndCheck_UpdateSNProxy.PrdEndChkUpdateSNDTOList">
+            <summary>
+            期末盘点更新序列号DTOList (该属性可为空,且无默认值)
+            盘点单审核更新序列号.Misc.期末盘点更新序列号DTOList
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.PrdEndCheck_UpdateSNProxy.IsApprove">
+            <summary>
+            是否审核 (该属性可为空,但有默认值)
+            盘点单审核更新序列号.Misc.是否审核
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateSnByCheckDocProxy.SnDocDTO">
+            <summary>
+            单据信息 (该属性可为空,且无默认值)
+            质检单审核更新序列号.Misc.单据信息
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateSnByCheckDocProxy.DocDate">
+            <summary>
+            单据日期 (该属性可为空,且无默认值)
+            质检单审核更新序列号.Misc.单据日期
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseDetailQueryProxy.SnCodeList">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            序列号使用情况明细查询.Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseDetailQueryProxy.SnDocDTOList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            序列号使用情况明细查询.Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnUseDetailQueryProxy.StatusList">
+            <summary>
+            批号序列号状态集合 (该属性可为空,且无默认值)
+            序列号使用情况明细查询.Misc.批号序列号状态集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBalanceQueryProxy.FromDate">
+            <summary>
+            开始日期 (该属性可为空,且无默认值)
+            序列号结存档查询.Misc.开始日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBalanceQueryProxy.ToDate">
+            <summary>
+            结束日期 (该属性可为空,且无默认值)
+            序列号结存档查询.Misc.结束日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBalanceQueryProxy.WhQohList">
+            <summary>
+            在手量ID (该属性可为空,且无默认值)
+            序列号结存档查询.Misc.在手量ID
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBalanceQueryProxy.SncodeList">
+            <summary>
+            序列号列表 (该属性可为空,且无默认值)
+            序列号结存档查询.Misc.序列号列表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateDocSnPackProxy.NowDocs">
+            <summary>
+            SnUsedDTO 集合 (该属性可为空,且无默认值)
+            业务单据更新序列号封装服务.Misc.SnUsedDTO 集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.MoCreateSnSvProxy.CreateSnDocInfoDTOList">
+            <summary>
+            创建序列号 (该属性可为空,且无默认值)
+            MO自动产生序列号.Misc.创建序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.MoCreateSnSvProxy.DeleteSnDocInfoDTOList">
+            <summary>
+            删除序列号 (该属性可为空,且无默认值)
+            MO自动产生序列号.Misc.删除序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.MoCreateSnSvProxy.UpdateSnDocInfoDTOList">
+            <summary>
+            更新序列号 (该属性可为空,且无默认值)
+            MO自动产生序列号.Misc.更新序列号
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnAfterDocCreateProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            单据新增序列号.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DeleteDocSnProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            删除单据序列号.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocEditUpdateSnProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            单据保存处理序列号.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocCheckSnProxy.SnDocInfoDTOList">
+            <summary>
+            不传入序列号明细 (该属性可为空,且无默认值)
+            单据校验序列号.Misc.不传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SearchSnBeUsedQtySvProxy.SnDocDTO">
+            <summary>
+            序列号使用DTO (该属性可为空,且无默认值)
+            查询使用档数量服务.Misc.序列号使用DTO
+            </summary>
+            <value>UFIDA.U9.Sn.SnDocDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SearchSnBeUsedQtySvProxy.SeachMode">
+            <summary>
+            查询模式 (该属性可为空,但有默认值)
+            查询使用档数量服务.Misc.查询模式
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocUpdateSnWhenExistDocSnTableProxy.SnDocInfoDTOList">
+            <summary>
+            单据序列号信息 (该属性可为空,且无默认值)
+            单据更新序列号－有序列号子表.Misc.单据序列号信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBeUsedQuerySvProxy.SnCodeList">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            序列号使用情况查询服务(高效查询).Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBeUsedQuerySvProxy.SnDocDTOList">
+            <summary>
+            单据集合 (该属性可为空,且无默认值)
+            序列号使用情况查询服务(高效查询).Misc.单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBeUsedQuerySvProxy.StatusList">
+            <summary>
+            批号序列号状态集合 (该属性可为空,且无默认值)
+            序列号使用情况查询服务(高效查询).Misc.批号序列号状态集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.SnBeUsedQuerySvProxy.IsShowSnbalance">
+            <summary>
+            是否显示结存 (该属性可为空,但有默认值)
+            序列号使用情况查询服务(高效查询).Misc.是否显示结存
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.NewBatchCreateSnBySrcDocSVProxy.CreateSnBySrcDocDTOList">
+            <summary>
+            来源单据和当前单据信息 (该属性可为空,且无默认值)
+            根据来源单据批量创建序列号服务(高效).Misc.来源单据和当前单据信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.NewBatchCreateSnBySrcDocSVProxy.IsDeleteSrcDoc">
+            <summary>
+            是否删除源单 (该属性可为空,但有默认值)
+            根据来源单据批量创建序列号服务(高效).Misc.是否删除源单
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CanRecedeSnQuerySVProxy.IssueDocDTOList">
+            <summary>
+            领料单据集合 (该属性可为空,且无默认值)
+            可退序列号查询.Misc.领料单据集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.LotCreateSnSVProxy.SnCreateDTO">
+            <summary>
+            序列号生成信息 (该属性可为空,且无默认值)
+            序列号主档批量生成序列号.Misc.序列号生成信息
+            </summary>
+            <value>UFIDA.U9.Sn.SnCreateDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.LotCreateSnSVProxy.Quantity">
+            <summary>
+            批量个数 (该属性可为空,但有默认值)
+            序列号主档批量生成序列号.Misc.批量个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.LotCreateSnSVProxy.SnCodeList">
+            <summary>
+            序列号编号集合 (该属性可为空,且无默认值)
+            序列号主档批量生成序列号.Misc.序列号编号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocConfirmUpdateSNProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            单据审核服务.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocCancelConfirmUpdateSNProxy.SnDocInfoDTOList">
+            <summary>
+             传入序列号明细 (该属性可为空,且无默认值)
+            单据取消确认更新序列号状态.Misc. 传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocConfirmAndCancelUpdateSNProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            单据审核弃审服务.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.DocConfirmAndCancelUpdateSNProxy.DocStatus">
+            <summary>
+            单据状态 (该属性可为空,但有默认值)
+            单据审核弃审服务.Misc.单据状态
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.UpdateSnVerticalProxy.SnDocInfoDTOList">
+            <summary>
+            传入序列号明细 (该属性可为空,且无默认值)
+            更新垂直档服务.Misc.传入序列号明细
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            创建序列号.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            创建序列号.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            创建序列号.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            创建序列号.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.ItemCode">
+            <summary>
+            料号 (该属性可为空,且无默认值)
+            创建序列号.Misc.料号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.CreateSnByItemProxy.SnDTOList">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            创建序列号.Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryOnHandSnProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            查询在库序列号服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryOnHandSnProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            查询在库序列号服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryOnHandSnProxy.StartSn">
+            <summary>
+            开始序列号 (该属性可为空,且无默认值)
+            查询在库序列号服务.Misc.开始序列号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryOnHandSnProxy.EndSn">
+            <summary>
+            结束序列号 (该属性可为空,且无默认值)
+            查询在库序列号服务.Misc.结束序列号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryOnHandSnProxy.WhQoh">
+            <summary>
+            库存业务主键 (该属性可为空,且无默认值)
+            查询在库序列号服务.Misc.库存业务主键
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.DTOs.WhQohKeyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.SnCount">
+            <summary>
+            个数 (该属性可为空,但有默认值)
+            查询未使用序列号服务.Misc.个数
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            查询未使用序列号服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            查询未使用序列号服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.Item_SKey">
+            <summary>
+            物料 序列化Key属性。（传递跨组织序列列字段）
+            查询未使用序列号服务.Misc.物料
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.Item">
+            <summary>
+            物料 (该属性可为空,且无默认值)
+            查询未使用序列号服务.Misc.物料
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryNoUsedSnProxy.ItemCode">
+            <summary>
+            料号 (该属性可为空,且无默认值)
+            查询未使用序列号服务.Misc.料号
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnMasterProxy.SnDTOList">
+            <summary>
+            序列号信息 (该属性可为空,且无默认值)
+            获取序列号主档.Misc.序列号信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.Org_SKey">
+            <summary>
+            组织 序列化Key属性。（传递跨组织序列列字段）
+            获取可用序列号服务.Misc.组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.Org">
+            <summary>
+            组织 (该属性可为空,且无默认值)
+            获取可用序列号服务.Misc.组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.SrcSnDocDTOList">
+            <summary>
+            来源单据 (该属性可为空,且无默认值)
+            获取可用序列号服务.Misc.来源单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.WhQohKeyDTO">
+            <summary>
+            库存业务主键DTO (该属性可为空,且无默认值)
+            获取可用序列号服务.Misc.库存业务主键DTO
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.DTOs.WhQohKeyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.LotSnBizTypeEnum">
+            <summary>
+            批号序列号业务分类 (该属性可为空,但有默认值)
+            获取可用序列号服务.Misc.批号序列号业务分类
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.LotSnBizTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.PageSize">
+            <summary>
+            页大小 (该属性可为空,但有默认值)
+            获取可用序列号服务.Misc.页大小
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.CurPage">
+            <summary>
+            当前页 (该属性可为空,但有默认值)
+            获取可用序列号服务.Misc.当前页
+            </summary>
+            <value>System.Int32</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetUsableSNProxy.SnSearchDTOList">
+            <summary>
+            序列号查询DTO (该属性可为空,且无默认值)
+            获取可用序列号服务.Misc.序列号查询DTO
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QuerySnStatusProxy.SnDTOList">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            序列号状态查询服务.Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryQohBySnSrvProxy.SnMasters_SKey">
+            <summary>
+            序列号集合 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryQohBySnSrvProxy.SnMasters">
+            <summary>
+            序列号集合 (该属性可为空,且无默认值)
+            依据序列号查询在手量维度服务.Misc.序列号集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryQohBySnSrvProxy.UsingOrg_SKey">
+            <summary>
+            使用组织 序列化Key属性。（传递跨组织序列列字段）
+            依据序列号查询在手量维度服务.Misc.使用组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.QueryQohBySnSrvProxy.UsingOrg">
+            <summary>
+            使用组织 (该属性可为空,且无默认值)
+            依据序列号查询在手量维度服务.Misc.使用组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetSnByWhQohProxy.WhQohSnList">
+            <summary>
+            库存在手量业务主键DTO集合 (该属性可为空,且无默认值)
+            按照在手量全维度查询序列号.Misc.库存在手量业务主键DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.UseOrg_SKey">
+            <summary>
+            使用组织 序列化Key属性。（传递跨组织序列列字段）
+            获取单据可用序列号服务.Misc.使用组织
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.UseOrg">
+            <summary>
+            使用组织 (该属性可为空,且无默认值)
+            获取单据可用序列号服务.Misc.使用组织
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.SrcSnDocDTOList">
+            <summary>
+            来源单据 (该属性可为空,且无默认值)
+            获取单据可用序列号服务.Misc.来源单据
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.WhQohKeyDTO">
+            <summary>
+            库存业务主键DTO (该属性可为空,且无默认值)
+            获取单据可用序列号服务.Misc.库存业务主键DTO
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.DTOs.WhQohKeyDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.Biztype">
+            <summary>
+            批号序列号业务分类 (该属性可为空,但有默认值)
+            获取单据可用序列号服务.Misc.批号序列号业务分类
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.LotSnBizTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.Item_SKey">
+            <summary>
+            料品 序列化Key属性。（传递跨组织序列列字段）
+            获取单据可用序列号服务.Misc.料品
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Sn.Proxy.GetDocAvailableSnProxy.Item">
+            <summary>
+            料品 (该属性可为空,且无默认值)
+            获取单据可用序列号服务.Misc.料品
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Item.ItemMaster</value>
+        </member>
+    </members>
+</doc>

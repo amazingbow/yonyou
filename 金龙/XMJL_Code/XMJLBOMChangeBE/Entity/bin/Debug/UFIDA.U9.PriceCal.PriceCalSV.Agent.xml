@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.PriceCal.PriceCalSV.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalculateFeeSVProxy.Fees">
+            <summary>
+            Fees (该属性可为空,且无默认值)
+            费用行的费用计算.Misc.Fees
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalculateFeeSVProxy.PriceInfo">
+            <summary>
+            PriceInfo (该属性可为空,且无默认值)
+            费用行的费用计算.Misc.PriceInfo
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalculateDiscountSVProxy.Line">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            折扣行的折扣计算.Misc.属性
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocFeeLinesSVProxy.Fees">
+            <summary>
+            费用 (该属性可为空,且无默认值)
+            转单时的费用处理.Misc.费用
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocFeeLinesSVProxy.Source">
+            <summary>
+            Source (该属性可为空,且无默认值)
+            转单时的费用处理.Misc.Source
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocFeeLinesSVProxy.Target">
+            <summary>
+            Target (该属性可为空,且无默认值)
+            转单时的费用处理.Misc.Target
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocFeeLinesSVProxy.FeeBaseType">
+            <summary>
+            费用计算依据 (该属性可为空,但有默认值)
+            转单时的费用处理.Misc.费用计算依据
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.FeeTypeBaseEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocDiscountLinesSVProxy.Discounts">
+            <summary>
+            折扣 (该属性可为空,且无默认值)
+            转单时的折扣处理.Misc.折扣
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocDiscountLinesSVProxy.Source">
+            <summary>
+            Source单头或单行 (该属性可为空,且无默认值)
+            转单时的折扣处理.Misc.Source单头或单行
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CreateTargetDocDiscountLinesSVProxy.Target">
+            <summary>
+            Target单头或单行 (该属性可为空,且无默认值)
+            转单时的折扣处理.Misc.Target单头或单行
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateMoneyBPProxy.Amount">
+            <summary>
+            待分摊的金额 (该属性可为空,且无默认值)
+            折扣费用的分摊.Misc.待分摊的金额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateMoneyBPProxy.Lines">
+            <summary>
+            单头或单行 (该属性可为空,且无默认值)
+            折扣费用的分摊.Misc.单头或单行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateMoneyBPProxy.BaseType">
+            <summary>
+            分摊依据类型，数量、含税金额 (该属性可为空,但有默认值)
+            折扣费用的分摊.Misc.分摊依据类型，数量、含税金额
+            </summary>
+            <value>UFIDA.U9.CBO.Enums.FeeTypeBaseEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateMoneyBPProxy.LineID">
+            <summary>
+            LineID (该属性可为空,但有默认值)
+            折扣费用的分摊.Misc.LineID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceLineCalProxy.Line">
+            <summary>
+            LinePriceInfo (该属性可为空,且无默认值)
+            计算采购订单行价格.Misc.LinePriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceLineCalProxy.Changes">
+            <summary>
+            变化的字段的集合 (该属性可为空,且无默认值)
+            计算采购订单行价格.Misc.变化的字段的集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceLineCalProxy.ObjectContext">
+            <summary>
+            修改前的字段的值 (该属性可为空,且无默认值)
+            计算采购订单行价格.Misc.修改前的字段的值
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceLineCalProxy.Prices">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            计算采购订单行价格.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalDocPriceProxy.Doc">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            采购整单价格计算.Misc.属性
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalDocPriceProxy.LineNumber">
+            <summary>
+            出现税计算尾差时，将尾差记入的行 (该属性可为空,但有默认值)
+            采购整单价格计算.Misc.出现税计算尾差时，将尾差记入的行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalDocPriceProxy.ObjectContext">
+            <summary>
+            行对应的改变信息 (该属性可为空,且无默认值)
+            采购整单价格计算.Misc.行对应的改变信息
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceLineCalProxy.Line">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            计算销售订单行价格.Misc.属性
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceLineCalProxy.Changes">
+            <summary>
+            变化的字段的集合 (该属性可为空,且无默认值)
+            计算销售订单行价格.Misc.变化的字段的集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceLineCalProxy.ObjectContext">
+            <summary>
+            修改前的字段的值 (该属性可为空,且无默认值)
+            计算销售订单行价格.Misc.修改前的字段的值
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceLineCalProxy.Prices">
+            <summary>
+            属性1 (该属性可为空,且无默认值)
+            计算销售订单行价格.Misc.属性1
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalSpecifiedFieldsProxy.Line">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            采购订单指定计算内容.Misc.属性
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalSpecifiedFieldsProxy.SpecifiedFields">
+            <summary>
+            指定的计算内容的集合 (该属性可为空,且无默认值)
+            采购订单指定计算内容.Misc.指定的计算内容的集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalSpecifiedFieldsProxy.Prices">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            采购订单指定计算内容.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalSpecifiedFieldsProxy.CurrencyRateTable">
+            <summary>
+            币种汇率 (该属性可为空,且无默认值)
+            采购订单指定计算内容.Misc.币种汇率
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalculateFeeBPProxy.Fees">
+            <summary>
+            费用行 (该属性可为空,且无默认值)
+            费用计算.Misc.费用行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalDocSumProxy.Doc">
+            <summary>
+            整单 (该属性可为空,且无默认值)
+            整单汇总金额计算.Misc.整单
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalDocTaxProxy.Doc">
+            <summary>
+            DocPriceInfo (该属性可为空,且无默认值)
+            整单税额计算.Misc.DocPriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.CalDocTaxProxy.LineNumber">
+            <summary>
+            出现税计算尾差时，将尾差记入的行 (该属性可为空,但有默认值)
+            整单税额计算.Misc.出现税计算尾差时，将尾差记入的行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceCalOtherFieldsProxy.Line">
+            <summary>
+            LinePriceInft (该属性可为空,且无默认值)
+            计算采购订单除指定字段外的其它字段.Misc.LinePriceInft
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceCalOtherFieldsProxy.ExcludeFields">
+            <summary>
+            计算除指定字段外的其它字段 (该属性可为空,且无默认值)
+            计算采购订单除指定字段外的其它字段.Misc.计算除指定字段外的其它字段
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurPriceCalOtherFieldsProxy.Prices">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            计算采购订单除指定字段外的其它字段.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceCalOtherFieldsProxy.Line">
+            <summary>
+            LinePriceInfo (该属性可为空,且无默认值)
+            计算销售订单除指定字段外的其它字段.Misc.LinePriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceCalOtherFieldsProxy.ExcludeFields">
+            <summary>
+            计算除指定字段外的其它字段 (该属性可为空,且无默认值)
+            计算销售订单除指定字段外的其它字段.Misc.计算除指定字段外的其它字段
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDPriceCalOtherFieldsProxy.Prices">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            计算销售订单除指定字段外的其它字段.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalDocPriceProxy.Doc">
+            <summary>
+            DocPriceInfo (该属性可为空,且无默认值)
+            销售整单价格计算.Misc.DocPriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalDocPriceProxy.LineNumber">
+            <summary>
+            出现税计算尾差时，将尾差记入的行 (该属性可为空,但有默认值)
+            销售整单价格计算.Misc.出现税计算尾差时，将尾差记入的行
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalDocPriceProxy.ObjectContext">
+            <summary>
+            行对应的改变信息 (该属性可为空,且无默认值)
+            销售整单价格计算.Misc.行对应的改变信息
+            </summary>
+            <value>System.Object</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalSpecifiedFieldsProxy.Line">
+            <summary>
+            LinePriceInfo (该属性可为空,且无默认值)
+            销售订单指定计算内容.Misc.LinePriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.LinePriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalSpecifiedFieldsProxy.SpecifiedFields">
+            <summary>
+            指定的计算内容的集合 (该属性可为空,且无默认值)
+            销售订单指定计算内容.Misc.指定的计算内容的集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalSpecifiedFieldsProxy.Prices">
+            <summary>
+            属性 (该属性可为空,且无默认值)
+            销售订单指定计算内容.Misc.属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalSpecifiedFieldsProxy.CurrencyRateTable">
+            <summary>
+            币种汇率 (该属性可为空,且无默认值)
+            销售订单指定计算内容.Misc.币种汇率
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalculatePriceProxy.Doc">
+            <summary>
+            DocPriceInfo (该属性可为空,且无默认值)
+            销售价格计算.Misc.DocPriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalculatePriceProxy.Changes">
+            <summary>
+            UIChangeInfo (该属性可为空,且无默认值)
+            销售价格计算.Misc.UIChangeInfo
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.SDCalculatePriceProxy.Ctx">
+            <summary>
+            PriceCalContext (该属性可为空,且无默认值)
+            销售价格计算.Misc.PriceCalContext
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateDiscountProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            折扣分摊.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateDiscountProxy.Discount">
+            <summary>
+            待分摊的折扣行 (该属性可为空,且无默认值)
+            折扣分摊.Misc.待分摊的折扣行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateDiscountProxy.Ctx">
+            <summary>
+            当前单据记录的汇率表 (该属性可为空,且无默认值)
+            折扣分摊.Misc.当前单据记录的汇率表
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateFeeProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            费用分摊.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateFeeProxy.Fees">
+            <summary>
+            待分摊的费用行 (该属性可为空,且无默认值)
+            费用分摊.Misc.待分摊的费用行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateFeeProxy.CurrencyRates">
+            <summary>
+            当前单据记录的汇率表 (该属性可为空,且无默认值)
+            费用分摊.Misc.当前单据记录的汇率表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateFeeProxy.Owners">
+            <summary>
+            指定分摊费用的订单行的序号/ID集合 (该属性可为空,且无默认值)
+            费用分摊.Misc.指定分摊费用的订单行的序号/ID集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.AllocateFeeProxy.FeeDiff">
+            <summary>
+            尾差处理的ID (该属性可为空,但有默认值)
+            费用分摊.Misc.尾差处理的ID
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.ReCalDocPriceProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            销售整单价格重算.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.ReCalDocPriceProxy.Ctx">
+            <summary>
+            价格计算上下文 (该属性可为空,且无默认值)
+            销售整单价格重算.Misc.价格计算上下文
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.ReCalLinePriceProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            销售单据行价格重算.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.ReCalLinePriceProxy.LineID">
+            <summary>
+            单据行编号 (该属性可为空,但有默认值)
+            销售单据行价格重算.Misc.单据行编号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.ReCalLinePriceProxy.Ctx">
+            <summary>
+            价格计算上下文 (该属性可为空,且无默认值)
+            销售单据行价格重算.Misc.价格计算上下文
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.UnAllocateFeeProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            取消费用分摊.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.UnAllocateFeeProxy.Fees">
+            <summary>
+            费用行 (该属性可为空,且无默认值)
+            取消费用分摊.Misc.费用行
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.UnAllocateFeeProxy.CurrencyRates">
+            <summary>
+            当前单据记录的汇率表 (该属性可为空,且无默认值)
+            取消费用分摊.Misc.当前单据记录的汇率表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalculatePriceProxy.Doc">
+            <summary>
+            DocPriceInfo (该属性可为空,且无默认值)
+            采购价格计算.Misc.DocPriceInfo
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalculatePriceProxy.Changes">
+            <summary>
+            UIChangeInfo (该属性可为空,且无默认值)
+            采购价格计算.Misc.UIChangeInfo
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurCalculatePriceProxy.Ctx">
+            <summary>
+            PriceCalContext (该属性可为空,且无默认值)
+            采购价格计算.Misc.PriceCalContext
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurReCalLinePriceProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            采购订单行价格重算.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurReCalLinePriceProxy.LineID">
+            <summary>
+            单据行编号 (该属性可为空,但有默认值)
+            采购订单行价格重算.Misc.单据行编号
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurReCalLinePriceProxy.Ctx">
+            <summary>
+            价格计算上下文 (该属性可为空,且无默认值)
+            采购订单行价格重算.Misc.价格计算上下文
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurReCalDocPriceProxy.Doc">
+            <summary>
+            单据 (该属性可为空,且无默认值)
+            采购整单价格重算.Misc.单据
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.DocPriceInfo</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.PurReCalDocPriceProxy.Ctx">
+            <summary>
+            价格计算上下文 (该属性可为空,且无默认值)
+            采购整单价格重算.Misc.价格计算上下文
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.PriceCalContext</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.QuotationCaculatePriceProxy.QuotationPriceInfo">
+            <summary>
+            报价价格信息 (该属性可为空,且无默认值)
+            报价价格计算.Misc.报价价格信息
+            </summary>
+            <value>UFIDA.U9.PriceCal.PriceCalSV.QuotationPriceDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.QuotationCaculatePriceProxy.ExchangeRateTable">
+            <summary>
+            当前汇率表 (该属性可为空,且无默认值)
+            报价价格计算.Misc.当前汇率表
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.QuotationCaculatePriceProxy.Changes">
+            <summary>
+            UIChangeInfo (该属性可为空,且无默认值)
+            报价价格计算.Misc.UIChangeInfo
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.PriceCal.PriceCalSV.Proxy.QuotationCaculatePriceProxy.TaxDiffTo">
+            <summary>
+            税的尾差处理 (该属性可为空,但有默认值)
+            报价价格计算.Misc.税的尾差处理
+            </summary>
+            <value>System.Int64</value>
+        </member>
+    </members>
+</doc>

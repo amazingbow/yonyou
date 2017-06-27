@@ -1,0 +1,1723 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.UIFormPersonalization</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.ActionDetail">
+            <summary>
+            ActionDetail
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.DoBefore">
+            <summary>
+            DoBefore
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DoBefore.InitControl(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            init current control
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.DelayDo">
+            <summary>
+            delay to do
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DelayDo.FindControlByClientID(System.String)">
+            <summary>
+            根据服务器控件的ClientID找到该服务器端控件
+            </summary>
+            <param name="clientID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustCndRequiredManage.IsRequired(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            当前控件是否为必输项。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.SetCtrlMoveToTabTageID(System.String,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            跨页签移动控件时，对于分页签移动，需要给控件赋移向的目标页签ID
+            </summary>
+            <param name="item"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.SetCtrlIsPersonalMovedToAnotherTabPage(System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            对所有参与跨页签移动的控件赋IsPersonalMovedToAnotherTabPage
+            </summary>
+            <param name="item"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.ReSetLabelTitle(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            对核心控件的Label进行修改名称的操作
+            </summary>
+            <param name="item"></param>
+            <param name="controlLabel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.GetCtrlLabel(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            返回控件所关联的Label
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.GetRelatedControls(System.Web.UI.Control)">
+            <summary>
+            获取核心控件所关联的控件
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.GetCtrlBindingFieldName(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            获取绑定控件的UIField的Name
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.GetRequireFlagID(System.Object)">
+            <summary>
+            获取关联的requireFlag的ID
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.CloneContainer(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.Controls.IGridLayout,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            Clone container
+            </summary>
+            <param name="container">source container</param>
+            <param name="item">taget position</param>
+            <param name="gridLayout">source layout</param>
+            <returns>new container</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.BuildNewItemAndContainer(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.Controls.IGridLayout,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            在目标容器为被移动的控件加上UFCard
+            </summary>
+            <param name="container"></param>
+            <param name="toContainer"></param>
+            <param name="item"></param>
+            <param name="gridLayout"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.GetAdjustItemModel(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,System.String,System.String)">
+            <summary>
+            创建新的AdjustItemModel实例
+            </summary>
+            <param name="item"></param>
+            <param name="newCtrlIDForMoveTo"></param>
+            <param name="soureCtrlID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.isExistMovedItem(System.String,System.String)">
+            <summary>
+            判断是否存在Item
+            </summary>
+            <param name="itemID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.MoveRelatedCtrlsBetweenTab(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            把所有相关的关联控件也随着核心控件移动到目标TabPage容器
+            </summary>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.FindControlAttrabuteName(System.Web.UI.Control)">
+            <summary>
+            在指定的容器控件及其子控件中遍历，缓存key为attrabuteName，value为Control的hashtable，为以后查找控件使用。注意仅供个性化使用！
+            </summary>
+            <param name="container"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.MoveRelatedCtrlsToGrid(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            把所有相关的关联控件也随着核心控件移动到Grid所在的容器
+            </summary>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.SetAssociationCtrlHidden(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            设置移动所关联的控件不可见
+            </summary>
+            <param name="tempMoveCtrl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.FindUIField(UFSoft.UBF.UI.MD.Runtime.IUIView,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            获取已存在的UIField
+            </summary>
+            <param name="uiView"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.DeepClone(System.Object)">
+            <summary>
+            深度Clone
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.SetControlPersonalFormProperty(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            设置控件为个性化形态
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.LoadControlPersoanlFormProperty">
+            <summary>
+            PostBack时Load控件的PersonalForm属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.AdjustBase.Store">
+            <summary>
+            Before Do store
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustCustomCtrl.GetFormAdjustObj">
+            <summary>
+            通过反射获取WebForm中的FormAdjust实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateCustomColumn(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            创建自定义的Grid列
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.SetGridRowSize(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            设置Grid显示的行数
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.SetCustomColumn(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            设置自定义Grid列的属性
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateGridColumnByModel(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            根据模型创建新的Grid列
+            </summary>
+            <param name="itemModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildReferenceColumn(System.String,System.String,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            创建参照列
+            </summary>
+            <param name="id"></param>
+            <param name="refType"></param>
+            <param name="field"></param>
+            <param name="codeField"></param>
+            <param name="nameField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildTextBoxColumn(System.String,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            创建文本框列
+            </summary>
+            <param name="id"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildNumberColumn(System.String,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            创建数字控件列
+            </summary>
+            <param name="id"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildDatePickerColumn(System.String,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            创建日期列
+            </summary>
+            <param name="id"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildDropDownListColumn(System.String,UFSoft.UBF.UI.MD.Runtime.IUIField,System.String)">
+            <summary>
+            创建下拉控件列
+            </summary>
+            <param name="id"></param>
+            <param name="field"></param>
+            <param name="enumTypeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.BuildCheckBoxColumn(System.String,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            创建CheckBox列
+            </summary>
+            <param name="id"></param>
+            <param name="field"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.AdjustCommonProperties(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            处理Grid列的一般性属性，如列的显示名称、必输、是否显示、列宽等
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.AdjustGridCoordinates(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            调整Grid列的顺序
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.RestSumColumn(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            设置合计列
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.RestFixedColumn(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            设置固定列
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CheckColumnReuired(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel})">
+            <summary>
+            保存时必输项的检查
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.AddColumnForMoveFromUFCard(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControlAdapter.UFWebLabelAdapter)">
+            <summary>
+            处理从卡片上移动控件到Grid上；控件创建个性化列的入口
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.GetErrorMessage(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,System.String,System.String)">
+            <summary>
+            获取错误提示信息
+            </summary>
+            <param name="column"></param>
+            <param name="strFieldName"></param>
+            <param name="strV"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateRelatedColumn(UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            创建核心控件的相关控件对应的个性化列
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateDynamicPrecColumns(UFSoft.UBF.UI.ControlModel.INumber)">
+            <summary>
+            创建动态精度列
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateColumn(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControls.UFLabel,System.Boolean)">
+            <summary>
+            处理从卡片上移动控件到Grid上来，创建对应的列
+            </summary>
+            <param name="model"></param>
+            <param name="fromControl"></param>
+            <param name="fromLabelCtrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.IsExistColumnByCtrl(UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControls.GridColumn@)">
+            <summary>
+            判断是否已经按控件创建过该列
+            </summary>
+            <param name="uiFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.FindColumnByFieldName(System.String)">
+            <summary>
+            判断是否已经按控件创建过该列
+            </summary>
+            <param name="uiFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.CreateColumnByDescFlexField(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            从描述性扩展列中扩展段作为Grid上的列
+            </summary>
+            <param name="containerModel"></param>
+            <param name="ct"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.GetGridColumnOfFlexField(System.Object)">
+            <summary>
+            获取Grid中的扩展列中的段信息
+            </summary>
+            <param name="gridInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridAdjust.GetGridColumnOfFlexField(System.Object,System.String)">
+            <summary>
+            获取Grid中的扩展列中的段信息
+            </summary>
+            <param name="gridInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.DataCollect(System.Web.UI.Control)">
+            <summary>
+            只针对个性化的控件进行数据收集，非个性化的控件走通用的数据收集
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.AddMovedKernelControl2PageItems(UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            如果已经有不会重复加入；这里的核心控件表示真正是用户通过个性化树移动过来的控件
+            </summary>
+            <param name="kernelControl"></param>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.AddMovedControlAndPersonalGridColumn2PageItems(UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.WebControls.GridColumn,System.Web.UI.Control)">
+            <summary>
+            在个性跨页签卡片到Grid的场景中，使用该方法，将个性化『移动的控件』及其控件对应的新创建的『个性化列』以哈希表的形式加入Page的Items中，以前在生命周期的后期用控件来同步个性化列的状态
+            </summary>
+            <param name="control"></param>
+            <param name="column"></param>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.ResetPersonalGridColumnPropertyFormControl(System.Web.UI.Control)">
+            <summary>
+            在最后时机，同步控件和控件对应的个性化列的属性
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.SetMovedCtrlHidden(System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl},System.Web.UI.Control)">
+            <summary>
+            对于移到Grid的控件，设置为隐藏
+            </summary>
+            <param name="listMovedKernelControl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.IsNull(System.Boolean,System.String,System.String)">
+            <summary>
+            是否为空
+            </summary>
+            <param name="isNull">是否为空</param>
+            <param name="value">值</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.CommonHelper.GetRequireFlagID(System.Object)">
+            <summary>
+            获取关联的requireFlag的ID
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.AdjustItemCommonProperties(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            处理一些基本的属性的修改，如Title、Visible、等
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.ProcessItemLabelTitle(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            处理核心控件Label的文本
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.ProcessMenuButton(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            处理下拉菜单及普通Button的Title
+            </summary>
+            <param name="item"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.ProcessItemVisible(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            处理控件块的显示及隐藏
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+            <param name="control"></param>
+            <param name="controlLabel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.ProcessItemRequire(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            处理必输项
+            </summary>
+            <param name="item"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInCommon.CreateRequireFlag(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            创建必输项的红色*控件
+            </summary>
+            <param name="container"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindDirectAssocRelatedControlsIDList(System.Web.UI.Control)">
+            <summary>
+            查找参数控件有直接关系的控件的ID的集合，默认在参数控件所在的Form上查找。注意：不包含自身ID，包含了UFLabel（一定要包含UFLabel，因为有可能通过UFLabel再衍生二级关联）
+            </summary>
+            <param name="kernelControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindDirectAssocRelatedControlsIDList(System.Web.UI.Control,System.Web.UI.Control)">
+            <summary>
+            在指定的容器内查找与参数控件有直接关系的控件的ID的集合。注意：不包含自身ID，但是包含自身的Label（如果有的话），也包含找到的UFLabel（一定要包含UFLabel，因为有可能通过UFLabel再衍生二级关联）
+            </summary>
+            <param name="kernelControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.GetServerControlIDByParseAssocJS(UFSoft.UBF.UI.WebControls.Association.AssociationControl,System.String)">
+            <summary>
+            通过解析关联控件中CodeBlock中的JS代码，得到所有控件的服务器端ID（包含了UFLabel的ID）
+            </summary>
+            <param name="assControl"></param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.GetServerControlIDByParseAssocJS(UFSoft.UBF.UI.WebControls.Association.AssociationControl,System.String,System.Boolean)">
+            <summary>
+            通过解析关联控件中CodeBlock中的JS代码，得到所有控件的服务器端ID（可以通过参数isOnlyIncludeKernelControl指定是否仅仅包含核心控件的ID，或者也包含UFLabel等非核心控件的ID）
+            </summary>
+            <param name="assControl"></param>
+            <param name="expression"></param>
+            <param name="isOnlyIncludeKernelControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedKernelControlIDInTabPage(System.Web.UI.Control)">
+            <summary>
+            在指定的核心控件所在的TabPage内，查找所有和指定核心控件有关系（包括通过关联控件直接和间接产生的）的所有核心控件ID的集合（不包含核心控件附属的UFLabel和RelatedControlIDs）。
+            </summary>
+            <param name="kernelControl">指定的核心控件</param>
+            <returns>与指定核心控件相关联的核心控件ID集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.SetAllMoveToTabPageID4KernelControl(System.Web.UI.Control,System.String)">
+            <summary>
+            设置核心控件及与核心控件有任何相关核心控件及其非控件的MoveToTabPageID。（包括了核心控件本身的Label和RelatedControlIDs中的控件，也包含了与核心控件通过关联控件建立起来的有关联关系的其他核心控件及其自身内部的Label和RelatedControlIDs中的控件。）
+            </summary>
+            <param name="kernelControl">指定的核心控件</param>
+            <param name="moveToTabPageID">所要移动到的目标页签的ID</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.SetRelation4PersonalGridColumnAndKernelControl(UFSoft.UBF.UI.WebControls.UFGrid,UFSoft.UBF.UI.WebControls.GridColumn,System.Web.UI.Control)">
+            <summary>
+            给某一个指定核心控件设置相应的DataGrid列，以便在客户端该核心控件可以找到对应的DataGrid的列。
+            </summary>
+            <param name="grid">指定的Grid</param>
+            <param name="column">指定的Grid的列</param>
+            <param name="kernelControl">核心控件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlID(System.Web.UI.Control)">
+            <summary>
+            在当前Form内查找与核心控件所有有关联关系的控件（包括核心控件和UFLabel等）。
+            </summary>
+            <param name="kernelControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlID(System.Web.UI.Control,System.Web.UI.Control)">
+            <summary>
+            在当前指定的容器内，查找与核心控件所有有关联关系的控件。
+            </summary>
+            <param name="kernelControl"></param>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlsIDByExtent(System.Web.UI.Control)">
+            <summary>
+            默认在Form上查找。非递归做法，队列实现。
+            </summary>
+            <param name="kernelControl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlsIDByExtent(System.Web.UI.Control,System.Web.UI.Control)">
+            <summary>
+            在指定容器内查找。非递归做法，队列实现。
+            </summary>
+            <param name="kernelControl"></param>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlsIDByDeepness(System.Web.UI.Control)">
+            <summary>
+            在指定容器内查找。非递归做法，堆栈实现。
+            </summary>
+            <param name="kernelControl"></param>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindAllAssocRelatedControlsIDByDeepness(System.Web.UI.Control,System.Web.UI.Control)">
+            <summary>
+            在指定容器内查找。非递归做法，堆栈实现。
+            </summary>
+            <param name="kernelControl"></param>
+            <param name="container"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.SetMoveToTabPageID(System.Web.UI.Control,System.String)">
+            <summary>
+            给指定的控件的MoveToTabPageID赋值。如果该控件是核心控件，那么还将对及其附属控件（Label和RelatedControlIDs）页进行赋值。
+            </summary>
+            <param name="SpecialControl">控件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindControlByID(System.String,System.Web.UI.Control)">
+            <summary>
+            在指定的容器控件及其子控件中查找指定ID的控件。找不到返回值为null。注意有别于微软的FindControl()方法。
+            </summary>
+            <param name="container"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlHelper.FindControlByClientID(System.String,System.Web.UI.Control)">
+            <summary>
+            在指定的容器控件及其子控件中查找指定ClientID的控件。找不到返回值为null。
+            </summary>
+            <param name="container"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Helper.ControlsGetter">
+            <summary>
+            控件树获取，用于设计器展现
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.Common.ReferenceDataGetter.Url">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.Common.ReferenceDataGetter.KeyField">
+            <summary>
+            关键字段
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IServerRuntime.Run(UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IDefaultValueRuntimeContext)">
+            <summary>
+            开始运行
+            </summary>
+            <returns>返回是否运行成功</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IServerRuntime.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IServerRuntime.CanRunAtServer">
+            <summary>
+            是否可在服务器端运行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ControlEventRuntime.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ControlEventRuntime.CanRunAtServer">
+            <summary>
+            判断默认值设置是否可在服务器端运行
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.UFControlEventRuntime.GetCanRunAtServer">
+            <summary>
+            判断控件事件是否可在服务器端执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.UFControlEventRuntime.Control">
+            <summary>
+            参照控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceColumnEventRuntime.GetCanRunAtServer">
+            <summary>
+            判断控件事件是否可在服务器端执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceColumnEventRuntime.Grid">
+            <summary>
+            表格控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceColumnEventRuntime.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.Run(UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IDefaultValueRuntimeContext)">
+            <summary>
+            运行
+            </summary>
+            <returns>返回是否运行成功</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.GetCanRunAtServer">
+            <summary>
+            判断默认值设置是否可在服务器端运行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.CndDefine">
+            <summary>
+            默认值定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.Control">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.Value">
+            <summary>
+            控件值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.DefaultValueRuntime.CanRunAtServer">
+            <summary>
+            判断默认值设置是否可在服务器端运行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizationContainer.Model">
+            <summary>
+            个性化模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizationContainer.AssocQuery">
+            <summary>
+            个性化关联设计查询器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizeAssociationRuntime.Run(UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IDefaultValueRuntimeContext)">
+            <summary>
+            运行
+            </summary>
+            <returns>返回是否运行成功</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizeAssociationRuntime.IsJustThisControlChangedEventCanRunAtServer(System.Web.UI.WebControls.WebControl,UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IServerRuntime@)">
+            <summary>
+            判断该控件事件是否可在服务器端运行
+            <remarks>忽略个性化关联设计</remarks>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizeAssociationRuntime.InnerAssoc">
+            <summary>
+            关联控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizeAssociationRuntime.TriggerValue">
+            <summary>
+            触发源的值
+            <remarks>作为判断触发条件的依据</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.PersonalizeAssociationRuntime.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceOutRuntime.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceOutRuntime.CanRunAtServer">
+            <summary>
+            判断默认值设置是否可在服务器端运行
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.UFReferenceControlOutRuntime.Run(UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.IDefaultValueRuntimeContext)">
+            <summary>
+            执行
+            <remarks>更加参照控件Key值，调用参照画面Url获取参照数据，如果获取不到，则执行失败
+            获取到后，按参照返回绑定
+            </remarks>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.UFReferenceControlOutRuntime.Reference">
+            <summary>
+            参照控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceColumnOutRuntime.Grid">
+            <summary>
+            表格控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.DefaultValue.ReferenceColumnOutRuntime.ColumnName">
+            <summary>
+            列名
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.SerializationHelper.FromSerializeString``1(System.String)">
+            <summary>
+            将字符串反序列化成相应的T范型对象（使用Indigo的反序列化器）
+            </summary>
+            <typeparam name="T">EntityData或DTOData的类型</typeparam>
+            <param name="str">反序列化的字符串</param>
+            <returns>反序列化的对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.SerializationHelper.SerializeToString``1(``0)">
+            <summary>
+             将T对象序列化成相应的string（使用Indigo的序列化器）
+            </summary>
+            <typeparam name="T">要序列化的类型．</typeparam>
+            <param name="obj">要序列化的对象</param>
+            <returns>序列化后的串</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust">
+            <summary>
+            Form adjust class
+            Form
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessInit(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+             在WebPart的InitComplete事件中被调用，目前是个性化最早的入口
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustBeforeOnLoad(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnLoad中的第一句话中被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustBeforeOnLoad(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            OnLoad时的个性化操作时机
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustSetCtrlMoveToTabTageID(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel,UFSoft.UBF.UI.ControlModel.IUFContainer,System.String)">
+            <summary>
+            遍历个性化模型 根据当前需要render的容器重新给控件赋移向的目标页签ID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustSetNeedDataCollectCtrls(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel,UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            在OnLoad时设置TabPage需要个性化收集数据的控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustMovedCtrlsToGrid(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel,UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            在OnLoad时移动跨页签移向选中页签(包含grid的页签)的控件集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterOnLoadData(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnLoadData()结束后(UIModel被加载数据后)被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterOnLoad(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnLoad中的最后一句话中被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustBeforeOnPreRender(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在OnPreRender的第一句话中被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterBeforeUIModelBinding(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的BeforeUIModelBinding之后紧接着被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustBeforeDataCollect(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnDataCollect()中第一句被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterDataCollect(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnDataCollect()中最后一句被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustBeforeDataBinding(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的DataBinding中第一句被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterDataBinding(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的DataBinding中最后一句被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustBeforeAfterUIModelBinding(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的AfterUIModelBinding前被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAdjustAfterOnPreRender(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            在WebPart的OnPreRender事件中最后一句被调用
+            </summary>
+            <param name="part"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustBeforeOnPreRender(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            遍历个性化模型 根据当前需要render的容器重新给控件赋移向的目标页签ID
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.Page_PreRenderComplete(System.Object,System.EventArgs)">
+            <summary>
+            最后的时机，处理控件状态等
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustAfterOnPreRender(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            主要调整Layout信息
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.JudgeIsEditForm(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            判断当前是否处理编辑的状态下
+            </summary>
+            <param name="part"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustContainerCoordinate(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel,UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            调整容器下的控件的LayoutInfo
+            </summary>
+            <param name="containerModel"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.HideOutBolcks(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.Portal.Components.AdjustLayoutInfo)">
+            <summary>
+            对越界控件进行隐藏
+            </summary>
+            <param name="container"></param>
+            <param name="containerLayoutInfo"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustContainerTabIndex(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel,UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            重新调整容器的TabIndex
+            </summary>
+            <param name="containerModel"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustControlsInInit(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            处理新增控件；处理Grid的列新增，必须放在Page_OnLoad之前，否则数据的收集有问题
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustControlsSetAttr(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            处理新增控件属性设置；处理Grid的新增列属性设置，必须放在AfterUIModelBinding之后，否则UI端代码可能影响效果
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessRequireCheck(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            处理容器中的必输项
+            </summary>
+            <param name="containerModel"></param>
+            <param name="isSetErrorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ResetTabControl(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},System.Web.UI.Control)">
+            <summary>
+            处理Tab控件的个性化
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ResetWizardControl(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},System.Web.UI.Control)">
+            <summary>
+            处理向导下的控件
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.CheckRequireItems(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            容器中所有待调整控件的必输项处理
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+            <param name="isSetErrorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.CheckRequireItems(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel})">
+            <summary>
+            用于校验从弹性域扩展出来的控件的必输项的情形
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.CheckRequireItem(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            对控件的必输项进行校验
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessMoveTo(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            处理控件的移动
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustItemCommonProperties(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            调整Title、可见性等属性
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustItemCommonRequireProperty(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            处理必输项
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustItemCommonRequireProperty(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel})">
+            <summary>
+            处理对于从弹性域扩展出来的控件这种情形
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAddNewCtrl(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            处理新增控件
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessSetNewCtrlAttr(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.ControlModel.IUFContainer)">
+            <summary>
+            新增控件属性赋值
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.RequiredCheck">
+            <summary>
+            如果有个性化的必输项没录值，用于在Save的Do方法之前设置标志
+            并且在Do之后把出错信息填给UIModel中
+            </summary>
+            <param name="isSetErrorMessage"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ResetState(UFSoft.UBF.UI.MD.Runtime.IUIRecord@,System.Collections.Generic.IList{System.String})">
+            <summary>
+            如果参数Record的状态为Deleted，则设置其以及关联的子Record的状态为Unchange
+            </summary>
+            <param name="record">待处理的记录</param>
+            <param name="views">已经处理过的Views清单，防止循环处理</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ResetGridFromCard(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},UFSoft.UBF.UI.WebControls.UFGrid)">
+            <summary>
+            处理从卡片移控件到Grid的情形
+            </summary>
+            <param name="items"></param>
+            <param name="container"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AdjustFunctionBar(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            个性化扩展功能区
+            任务：新建控件
+            1、新增Button   MenuItem --> Button   Model信息在原始DDB上
+            2、新增MenuItem MenuItem --> MenuItem Model信息在原始DDB上
+            3、新增MenuItem Button --> MenuItem   Model信息在FunctionBar上
+            4、新增Seperator                      Model信息在原始DDB上
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAddMenuItemByMove_Create_Convert(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel},System.String)">
+            <summary>
+            处理新增MenuItem By （Move，Create，Conver）
+            </summary>
+            <param name="items"></param>
+            <param name="pID"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAddMenuItemFromButton(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel})">
+            <summary>
+            创建MenuItem从Button
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ResetFunctionBar(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            重设扩展功能区
+            主要任务：调整控件状态
+            </summary>
+            <param name="containerModel"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessDefaultValue(UFSoft.UBF.UI.IView.IPart,UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            处理默认值
+            </summary>
+            <param name="part"></param>
+            <param name="webpart"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ExecuteDefaultValueSet">
+            <summary>
+            执行个性化默认值设置
+            </summary>
+            <returns>返回一个值，表示是否重新执行过业务的逻辑</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessAssociationControl(UFSoft.UBF.UI.FormProcess.BaseWebForm)">
+            <summary>
+            主控件触发模板改变后会走到这里。
+            用来处理特殊情况的关联设计的特殊处理。
+            </summary>
+            <param name="baseWebForm">当前窗体</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.AnalyseItemModel4RefReturnSecondLoad(UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel})">
+            <summary>
+            分析个性化模型，筛选出需要二次加载的字段
+            注释：目前只是分析需要参照返回方式触发的二次加载的情况
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.ProcessRefReturnSndLoadOnPostBack(UFSoft.UBF.UI.IView.IPart)">
+            <summary>
+            参照改变触发了Postback的时候，如果有需要二次加载的字段，触发二次加载处理。
+            </summary>
+            <param name="part">当前part</param>
+            <returns>是否属于参照返回二次加载场景</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.SyncRefControlTag(UFSoft.UBF.UI.FormProcess.BaseWebForm,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            设置Field对应的参照控件的NeedFireReload属性
+            注释：该注释决定后续是否会发起二次加载，所以非常重要。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.GetGridColumnIsPost(UFSoft.UBF.UI.WebControls.UFGrid,System.String)">
+            <summary>
+            判断Grid的列上是否有postback
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.GetControlClientID(UFSoft.UBF.UI.FormProcess.BaseWebForm,UFSoft.UBF.UI.MD.Runtime.IUIField,UFSoft.UBF.UI.UIFormPersonalization.SndLoadFieldFrom@)">
+            <summary>
+            获取UIField对应控件的客户端ID或FieldID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.FormAdjust.GetUIFieldAllControl(UFSoft.UBF.UI.FormProcess.BaseWebForm,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            获取UIField对应的所有控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.ActionStore">
+            <summary>
+            ActionStore
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.RefSndLoadHelper.LoadUIFieldRRAttribute(UFSoft.UBF.UI.IController.IAction,UFSoft.UBF.UI.MD.Runtime.IUIFieldAttributeCollection)">
+            <summary>
+            二次加载操作
+            </summary>
+            <param name="action">IAction实例</param>
+            <param name="list">版型集合</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.RefSndLoadHelper.GetRefSndLoadData(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.Dictionary{System.String,UFSoft.UBF.UI.UIFormPersonalization.SndLoadData}})">
+            <summary>
+            获取需要二次加载的字段数据结合
+            </summary>
+            <param name="mainID">触发参照控件的客户端ID</param>
+            <param name="refNeedLoadFields">事先收集好的需要二次加载的数据结构</param>
+            <returns>需要二次加载的数据集合</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.RefSndLoadHelper.GetSndLoadAttrs(UFSoft.UBF.UI.UIFormPersonalization.SndLoadData,System.String,UFSoft.UBF.UI.MD.Runtime.IUIFieldAttributeCollection@,UFSoft.UBF.UI.MD.Runtime.IUIFieldAttributeCollection@)">
+            <summary>
+            Postback和AJAX处理参照返回的二次加载的时候，公共的部分逻辑。
+            out 类型的参数都是返回后续需要用到的。
+            </summary>
+            <param name="loadData">需要二次加载的数据集合</param>
+            <param name="FirstLoadedAttrs">第一次加载的版型集合</param>
+            <param name="SecondLoadedAttrs">第二次加载的弹性域版型集合</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.ControlRender.BasicWriter.GetClientObjectString">
+            <summary>
+            获取客户端对象字符串
+            <remarks>WriteControl中写的属性</remarks>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.ProcessSimulateTabPageChanged_CallBack(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs)">
+            <summary>
+            模拟切换页签的CallBack事件
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.DoDataCollect">
+            <summary>
+            收集数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.DoDataBind(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs,UFSoft.UBF.UI.WebControls.UFTabPage)">
+            <summary>
+            做数据绑定
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.DoBeforeUIModelBinding">
+            <summary>
+            调用开发的BeforeUIModelBinding
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.DoAfterUIModelBinding">
+            <summary>
+            调用开发的AfterUIModelBinding
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.GridInteract.GridEventProcessor.DoRenderControlAttributes(UFSoft.UBF.UI.WebControls.ClientCallBack.CustomerActionEventArgs)">
+            <summary>
+            呈现控件属性
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.CreateAssoControl(System.Xml.XmlElement)">
+            <summary>
+            根据定义创建实例
+            </summary>
+            <param name="triggerNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.CreateAssociationTrigger(System.Xml.XmlElement)">
+            <summary>
+            创建关联赋值
+            </summary>
+            <param name="triggerNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.CreateEvalutorTriggerBody(System.Xml.XmlElement,UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser@,UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ITriggerCondition@)">
+            <summary>
+            创建计算关联的主体(不包含触发源)
+            </summary>
+            <param name="triggerNode"></param>
+            <param name="responser"></param>
+            <param name="condition"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.DeserializeSingleTrigger(System.Xml.XmlElement)">
+            <summary>
+            创建单触发源的触发源实例
+            <remarks>适用于关联赋值和参照返回</remarks>
+            </summary>
+            <param name="triggerNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.DeserializeTriggerCondition(System.Xml.XmlElement)">
+            <summary>
+            创建触发条件实例
+            </summary>
+            <param name="triggerNode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.DeserializeAssoResponser(System.Xml.XmlElement)">
+            <summary>
+            创建响应控件集合
+            </summary>
+            <param name="triggerNode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.AssocControlQuery.EvalutorExpressionBuilder">
+            <summary>
+            计算关联计算表达式构造器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AsscCodeHelper.GetValue4UFWebClientAdapter_NotRef(UFSoft.UBF.UI.IView.IPart,System.String,System.String)">
+            <summary>
+            返回类似get_Value()的JS代码
+            </summary>
+            <param name="part"></param>
+            <param name="controlID"></param>
+            <param name="controlType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AsscCodeHelper.GetValue4UFWebClientAdapter_RefCtrl(UFSoft.UBF.UI.IView.IPart,System.String,System.String)">
+            <summary>
+            获取指定的propertyName的值，类似get_propertyName()的JS代码
+            </summary>
+            <param name="part"></param>
+            <param name="controlID"></param>
+            <param name="controlType"></param>
+            <param name="propertName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AsscCodeHelper.GetProcessingGridRowIndex(UFSoft.UBF.UI.WebControls.Association.Adapter.UFWebClientGridAdapter)">
+            <summary>
+            获取Grid关联控制运行时的行索引
+            <remarks>yangkuna:20100903</remarks>
+            </summary>
+            <param name="lGridAdapter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AssociationControlXmlParser.GetCondition(UFSoft.UBF.UI.IView.IPart,System.Xml.XmlNodeList)">
+            <summary>
+            检查XML节点中的控件属性，与之对应的控件是否存在于当前的页面中，如果没有触发源控件，删除触发器节点，
+            如果没有触发条件中的控件，删除触发器节点。如果没有响应控件，删除Then中的相应语句节点
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ValueSourceType">
+            <summary>
+            值来源类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ValueSourceType.ConstValue">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ValueSourceType.Control">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ValueCategory">
+            <summary>
+            值类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ValueCategory.ReferenceValue">
+            <summary>
+            参照值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator">
+            <summary>
+            算术运算符
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator.Add">
+            <summary>
+            加
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator.Subtract">
+            <summary>
+            减
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator.Multiply">
+            <summary>
+            乘
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator.Divide">
+            <summary>
+            除
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ArithOperator.Mod">
+            <summary>
+            取模
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpression">
+            <summary>
+            简单的2元表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IValueSource">
+            <summary>
+            值来源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IValueSource.GetValue">
+            <summary>
+            获取值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpression.Left">
+            <summary>
+            左部
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpression.Oper">
+            <summary>
+            运算符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpression.Right">
+            <summary>
+            右部
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.AssocExpression.Parent">
+            <summary>
+            父节点
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpressionContainer">
+            <summary>
+            表达式容器(相当于小括号部分内容)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocExpressionContainer.InnerExpression">
+            <summary>
+            内部表达式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.AssocResponser">
+            <summary>
+            关联设计响应控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser">
+            <summary>
+            关联设计响应控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser.TargetControlUnit">
+            <summary>
+            目标控件属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser.ValueSrcType">
+            <summary>
+            值来源类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser.ValueSource">
+            <summary>
+            值来源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponser.ValueType">
+            <summary>
+            值类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocResponserCollection">
+            <summary>
+            关联设计响应控件 集合
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocTrigger">
+            <summary>
+            关联设计触发源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocTrigger.Control">
+            <summary>
+            触发控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocTrigger.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocTrigger.Columns">
+            <summary>
+            列名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.AssocTrigger.Control">
+            <summary>
+            触发控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.AssocTrigger.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.AssocTrigger.Columns">
+            <summary>
+            触发列(Control为表格时)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocControlDefine">
+            <summary>
+            关联设计定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocControlDefine.TriggerSource">
+            <summary>
+            触发源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocControlDefine.Condition">
+            <summary>
+            触发条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocControlDefine.Responsers">
+            <summary>
+            响应控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IAssocControlDefine.TriggerType">
+            <summary>
+            关联设计类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.BaseAssocCtrlDefine.TriggerType">
+            <summary>
+            关联设计类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConstValueSource">
+            <summary>
+            “常量”值来源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConstValueSource.GetValue">
+            <summary>
+            获取值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ControlValueUnit">
+            <summary>
+            控件值单元
+            <remarks>定义了一个 从控件的取值的途径</remarks>
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.IControlValueUnit">
+            <summary>
+            控件值单元
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ControlValueUnit.GetValue">
+            <summary>
+            获取值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ControlValueUnit.Control">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ControlValueUnit.ControlProperty">
+            <summary>
+            属性
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ITriggerCondition">
+            <summary>
+            触发条件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ITriggerCondition.Calculate">
+            <summary>
+            计算条件值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ITriggerConditionCollection">
+            <summary>
+            触发条件集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ITriggerConditionCollection.LogicOper">
+            <summary>
+            逻辑运算符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerCondition">
+            <summary>
+            触发条件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerCondition.Left">
+            <summary>
+            左侧
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerCondition.ExpOperator">
+            <summary>
+            比较符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerCondition.Right">
+            <summary>
+            右侧
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerConditionCollection">
+            <summary>
+            触发条件 集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerConditionCollection.LogicOper">
+            <summary>
+            逻辑运算符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerConditionEvalutor">
+            <summary>
+            触发条件评估器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.TriggerConditionEvalutor.TryJudge(System.Collections.Generic.List{UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConditionEvalueData},System.Boolean@)">
+            <summary>
+            根据给定的数据尝试进行判定
+            </summary>
+            <param name="datas">给定的数据</param>
+            <param name="result">判定结果(当返回为true时该值有效)</param>
+            <returns>返回是否可判定</returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConditionEvalueData">
+            <summary>
+            评估条件数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConditionEvalueData.Control">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConditionEvalueData.Value">
+            <summary>
+            控件数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.NewAssociationControls.Common.ConditionEvalueData.Column">
+            <summary>
+            列
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.MoveToGridFromCard(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            从卡片移动控件到Grid上
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.MoveToBetweenTab(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            处理两页签间的控件移动
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.ProcessRelatedCtrlsForMove(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.Controls.IGridLayout,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            处理与核心控件关联的控件的移动
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+            <param name="gridLayout"></param>
+            <param name="ctrlBlock"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.ProcessLabelForMove(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.Controls.IGridLayout,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            处理Label的移动
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+            <param name="gridLayout"></param>
+            <param name="ctrlBlock"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.ProcessRequireForMove(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.Controls.IGridLayout,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl})">
+            <summary>
+            处理必输项的移动
+            </summary>
+            <param name="container"></param>
+            <param name="item"></param>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+            <param name="gridLayout"></param>
+            <param name="ctrlBlock"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.AdjustInDiff.SetCtrlBlockVisibled(UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFContainer,UFSoft.UBF.UI.ControlModel.IUFControl,System.Collections.Generic.List{UFSoft.UBF.UI.ControlModel.IUFControl},UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            根据页签的被选状态，决定Source块的显示/隐藏状态
+            </summary>
+            <param name="container"></param>
+            <param name="toContainer"></param>
+            <param name="control"></param>
+            <param name="ctrlBlock"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.cannotNull">
+            <summary>
+              查找类似 的值不能为空. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.Control">
+            <summary>
+              查找类似 下的控件 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.DataGridColumn">
+            <summary>
+              查找类似 DataGrid列 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.ExistDifferentTypeControl">
+            <summary>
+              查找类似 DataGrid中存与个性化要移动的控件绑定一样Field而控件类型不同的列！请检查并修改成类型一样的列！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.FieldSameButTypeDifferent">
+            <summary>
+              查找类似 二者Field一致，而各自的类型不一致！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.GridColumn">
+            <summary>
+              查找类似 Grid列 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.PersonalMoviedControl">
+            <summary>
+              查找类似 要个性化移动的控件 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.PleaseCheckModify">
+            <summary>
+              查找类似 请检查修改！ 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.TabPage">
+            <summary>
+              查找类似 页签 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Resource.UIPersonalizationRes.TypeIs">
+            <summary>
+              查找类似 类型是 的本地化字符串。
+            </summary>
+        </member>
+    </members>
+</doc>

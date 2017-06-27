@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFIDA.U9.CC.CreditBP.Agent</name>
+    </assembly>
+    <members>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditCheckProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用检查.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditCheckProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            信用检查.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditCheckProxy.CreditObjectData">
+            <summary>
+            信用对象数据 (该属性可为空,且无默认值)
+            信用检查.Misc.信用对象数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditObjectData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditUpdateProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用更新.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditUpdateProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            信用更新.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditUpdateProxy.CreditObjectData">
+            <summary>
+            信用对象数据 (该属性可为空,且无默认值)
+            信用更新.Misc.信用对象数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditObjectData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.CreditObjectPolicy_SKey">
+            <summary>
+            对象信用政策 序列化Key属性。（传递跨组织序列列字段）
+            更新动态余额.Misc.对象信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.CreditObjectPolicy">
+            <summary>
+            对象信用政策 (该属性可为空,且无默认值)
+            更新动态余额.Misc.对象信用政策
+            </summary>
+            <value>UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.CreditBalance_SKey">
+            <summary>
+            信用余额 序列化Key属性。（传递跨组织序列列字段）
+            更新动态余额.Misc.信用余额
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.CreditBalance">
+            <summary>
+            信用余额 (该属性可为空,且无默认值)
+            更新动态余额.Misc.信用余额
+            </summary>
+            <value>UFIDA.U9.CC.CreditBalance.CreditBalance</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.Date">
+            <summary>
+            业务日期 (该属性可为空,但有默认值)
+            更新动态余额.Misc.业务日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BalanceUpdateProxy.CreditData">
+            <summary>
+            信用数据 (该属性可为空,且无默认值)
+            更新动态余额.Misc.信用数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditLevelProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            得到信用等级币种.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditLevelProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            得到信用等级币种.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditLevelProxy.CreditObjectData">
+            <summary>
+            信用对象数据 (该属性可为空,且无默认值)
+            得到信用等级币种.Misc.信用对象数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditObjectData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetBalanceProxy.CreditObjectData">
+            <summary>
+            信用对象数据 (该属性可为空,且无默认值)
+            得到信用余额.Misc.信用对象数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditObjectData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetBalanceProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            得到信用余额.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetBalanceProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            得到信用余额.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditRecalculationProxy.CreditBalance_SKey">
+            <summary>
+            信用余额 序列化Key属性集合。（传递跨组织序列列字段）
+             平台使用.开发人员不可使用该属性赋值.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditRecalculationProxy.CreditBalance">
+            <summary>
+            信用余额 (该属性可为空,且无默认值)
+            信用重算.Misc.信用余额
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditRecalculationProxy.BRecalStaticBalance">
+            <summary>
+            是否重算静态余额 (该属性可为空,但有默认值)
+            信用重算.Misc.是否重算静态余额
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditRecalculationProxy.BizDate">
+            <summary>
+            重算日期 (该属性可为空,且无默认值)
+            信用重算.Misc.重算日期
+            </summary>
+            <value>System.Date</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetCreditMoneyProxy.ObjectCreditPolicy_SKey">
+            <summary>
+            对象信用政策 序列化Key属性。（传递跨组织序列列字段）
+            设置信用额度.Misc.对象信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetCreditMoneyProxy.ObjectCreditPolicy">
+            <summary>
+            对象信用政策 (该属性可为空,且无默认值)
+            设置信用额度.Misc.对象信用政策
+            </summary>
+            <value>UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetCreditMoneyProxy.CreditObjectData">
+            <summary>
+            信用对象数据 (该属性可为空,且无默认值)
+            设置信用额度.Misc.信用对象数据
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditObjectData</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditPolicyReferenceProxy.CreditPolicy_SKey">
+            <summary>
+            信用政策 序列化Key属性。（传递跨组织序列列字段）
+            信用政策是否已经被信用控制对象引用.Misc.信用政策
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditPolicyReferenceProxy.CreditPolicy">
+            <summary>
+            信用政策 (该属性可为空,且无默认值)
+            信用政策是否已经被信用控制对象引用.Misc.信用政策
+            </summary>
+            <value>UFIDA.U9.CC.CreditPolicy.CreditPolicy</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditControlObjectExistProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用控制对象是否已经存在.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditControlObjectExistProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            信用控制对象是否已经存在.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditControlObjectHaveRecordProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用控制对象是否在对象信用政策当中有记录.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsCreditControlObjectHaveRecordProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            信用控制对象是否在对象信用政策当中有记录.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditLevelExistObjectProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            对象+信用控制点是否已经在对象信用等级当中已经存在.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditLevelExistObjectProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            对象+信用控制点是否已经在对象信用等级当中已经存在.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditLevelExistObjectProxy.ControlPoint">
+            <summary>
+            信用控制点 (该属性可为空,但有默认值)
+            对象+信用控制点是否已经在对象信用等级当中已经存在.Misc.信用控制点
+            </summary>
+            <value>UFIDA.U9.CC.Enum.ControlPointEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditPolicyExistObjectProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            对象+信用控制点是否已经在对象信用政策当中已经存在.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditPolicyExistObjectProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            对象+信用控制点是否已经在对象信用政策当中已经存在.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.IsObjectCreditPolicyExistObjectProxy.ControlPoint">
+            <summary>
+            信用控制点 (该属性可为空,但有默认值)
+            对象+信用控制点是否已经在对象信用政策当中已经存在.Misc.信用控制点
+            </summary>
+            <value>UFIDA.U9.CC.Enum.ControlPointEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetObjectStateProxy.CreditObjectStatus">
+            <summary>
+            信用对象状态集合 (该属性可为空,且无默认值)
+            设置信用对象状态.Misc.信用对象状态集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetAdjustDocStateProxy.TempCreditState">
+            <summary>
+            临时额度状态 (该属性可为空,且无默认值)
+            设置临时额度状态.Misc.临时额度状态
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SetCreditLevelCheckProxy.ObjectLevelApprove">
+            <summary>
+            等级核准集合 (该属性可为空,且无默认值)
+            设置对象信用等级核准.Misc.等级核准集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.ClearCreditObjectProxy.ClearObjects">
+            <summary>
+            清除对象集合 (该属性可为空,且无默认值)
+            清除信用对象.Misc.清除对象集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditPolicyDistributeProxy.DistributePolicys">
+            <summary>
+            政策分配集合 (该属性可为空,且无默认值)
+            信用政策分配.Misc.政策分配集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditLevelDistributeProxy.DistributeLevels">
+            <summary>
+            等级分配集合 (该属性可为空,且无默认值)
+            信用等级分配.Misc.等级分配集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.HaveCreditBalanceProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            信用控制对象是否在对象信用余额当中有记录.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.HaveCreditBalanceProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            信用控制对象是否在对象信用余额当中有记录.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.ObjectCreditLimitStatProxy.ObjectCreditLevel_SKey">
+            <summary>
+            对象信用等级 序列化Key属性。（传递跨组织序列列字段）
+            对象信用额度占用统计.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.ObjectCreditLimitStatProxy.ObjectCreditLevel">
+            <summary>
+            对象信用等级 (该属性可为空,且无默认值)
+            对象信用额度占用统计.Misc.对象信用等级
+            </summary>
+            <value>UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditLevel</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.ObjectType">
+            <summary>
+            对象类型 (该属性可为空,但有默认值)
+            获得信用对象.Misc.对象类型
+            </summary>
+            <value>UFIDA.U9.CBO.DTOs.ObjectTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Customer_SKey">
+            <summary>
+            客户 序列化Key属性。（传递跨组织序列列字段）
+            获得信用对象.Misc.客户
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Customer">
+            <summary>
+            客户 (该属性可为空,且无默认值)
+            获得信用对象.Misc.客户
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.Customer</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Department_SKey">
+            <summary>
+            部门 序列化Key属性。（传递跨组织序列列字段）
+            获得信用对象.Misc.部门
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Department">
+            <summary>
+            部门 (该属性可为空,且无默认值)
+            获得信用对象.Misc.部门
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Department.Department</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Seller_SKey">
+            <summary>
+            业务员 序列化Key属性。（传递跨组织序列列字段）
+            获得信用对象.Misc.业务员
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.Seller">
+            <summary>
+            业务员 (该属性可为空,且无默认值)
+            获得信用对象.Misc.业务员
+            </summary>
+            <value>UFIDA.U9.CBO.HR.Operator.Operators</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.CustomerSite_SKey">
+            <summary>
+            客户位置 序列化Key属性。（传递跨组织序列列字段）
+            获得信用对象.Misc.客户位置
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectProxy.CustomerSite">
+            <summary>
+            客户位置 (该属性可为空,且无默认值)
+            获得信用对象.Misc.客户位置
+            </summary>
+            <value>UFIDA.U9.CBO.SCM.Customer.CustomerSite</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.PeriodBeginToBalanceProxy.CreditObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            期初转余额.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.PeriodBeginToBalanceProxy.CreditObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            期初转余额.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.PeriodBeginToBalanceProxy.Currency_SKey">
+            <summary>
+            额币 序列化Key属性。（传递跨组织序列列字段）
+            期初转余额.Misc.额币
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.PeriodBeginToBalanceProxy.Currency">
+            <summary>
+            额币 (该属性可为空,且无默认值)
+            期初转余额.Misc.额币
+            </summary>
+            <value>UFIDA.U9.Base.Currency.Currency</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.PeriodBeginToBalanceProxy.IsIncludeStaticBalance">
+            <summary>
+            IsIncludeStaticBalance (该属性可为空,但有默认值)
+            期初转余额.Misc.IsIncludeStaticBalance
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetObjectCreditPolicyAttributeProxy.CreditControlObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            取对象信用政策属性.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetObjectCreditPolicyAttributeProxy.CreditControlObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            取对象信用政策属性.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditLevelCurrencyForUIProxy.CreditLevel">
+            <summary>
+            信用等级 (该属性可为空,但有默认值)
+            获取信用等级币种子档案.Misc.信用等级
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CancelTempCreditProxy.TempCredit_SKey">
+            <summary>
+            临时额度调整单 序列化Key属性。（传递跨组织序列列字段）
+            终止临时额度调整单.Misc.临时额度调整单
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CancelTempCreditProxy.TempCredit">
+            <summary>
+            临时额度调整单 (该属性可为空,且无默认值)
+            终止临时额度调整单.Misc.临时额度调整单
+            </summary>
+            <value>UFIDA.U9.CC.CreditLimitAdjust.TempCredit</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CancelTempCreditProxy.CancelDate">
+            <summary>
+            终止时间 (该属性可为空,且无默认值)
+            终止临时额度调整单.Misc.终止时间
+            </summary>
+            <value>System.DateTime</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CancelTempCreditProxy.CancelReason">
+            <summary>
+            终止原因 (该属性可为空,且无默认值)
+            终止临时额度调整单.Misc.终止原因
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetObjectCreditPolicyKeyProxy.CreditControlObject">
+            <summary>
+            信用控制对象 (该属性可为空,但有默认值)
+            获取对象信用政策.Misc.信用控制对象
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetPeriodBeginForUIProxy.CreditControlObject_SKey">
+            <summary>
+            信用控制对象 序列化Key属性。（传递跨组织序列列字段）
+            获取期初余额操作.Misc.信用控制对象
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetPeriodBeginForUIProxy.CreditControlObject">
+            <summary>
+            信用控制对象 (该属性可为空,且无默认值)
+            获取期初余额操作.Misc.信用控制对象
+            </summary>
+            <value>UFIDA.U9.CC.CreditParameter.CreditControlObject</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetOrgInfoForUIProxy.OrgID_SKey">
+            <summary>
+            组织ID 序列化Key属性。（传递跨组织序列列字段）
+            取组织信息.Misc.组织ID
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetOrgInfoForUIProxy.OrgID">
+            <summary>
+            组织ID (该属性可为空,且无默认值)
+            取组织信息.Misc.组织ID
+            </summary>
+            <value>UFIDA.U9.Base.Organization.Organization</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.TempCreditLoadDefaultProxy.OptionalFeatureList">
+            <summary>
+            可选配特征集合 (该属性可为空,且无默认值)
+            临时额度调整单取默认值.Misc.可选配特征集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetAccountOrgProxy.OperatingOrg">
+            <summary>
+            营运组织 (该属性可为空,但有默认值)
+            取核算组织操作.Misc.营运组织
+            </summary>
+            <value>System.Int64</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.DealObjectCreditInfoProxy.CreditInfoList">
+            <summary>
+            信用信息DTO集合 (该属性可为空,且无默认值)
+            处理对象信用信息.Misc.信用信息DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.ApprovalCreditLevelAssessProxy.ApprovalLevelDTOs">
+            <summary>
+            等级核准集合 (该属性可为空,且无默认值)
+            对象信用等级评定表核准操作.Misc.等级核准集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditLevelApprovalDistributeProxy.DistributeLevelApprovals">
+            <summary>
+            等级评定分配集合 (该属性可为空,且无默认值)
+            等级评定表分配.Misc.等级评定分配集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.SubmitApprovalLevelProxy.SubmitLevelList">
+            <summary>
+            信用等级评定表提交集合 (该属性可为空,且无默认值)
+            信用等级评定表批量提交.Misc.信用等级评定表提交集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditLevelApprovalBatchOperateProxy.CreditLevelAppprovalBatchInDTOs">
+            <summary>
+            信用等级评定表列表批量操作传入DTO集合 (该属性可为空,且无默认值)
+            信用等级评定表列表批量操作.Misc.信用等级评定表列表批量操作传入DTO集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.BatchSetCreditLevelCheckProxy.BatchSetCreditLevelCheckInDTOs">
+            <summary>
+            信用评估批量操作入口参数集合 (该属性可为空,且无默认值)
+            信用评估批量操作.Misc.信用评估批量操作入口参数集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditObjectOpeningProxy.ObjectCreditLevel_SKey">
+            <summary>
+            对象信用等级 序列化Key属性。（传递跨组织序列列字段）
+            信用对象启用.Misc.对象信用等级
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditObjectOpeningProxy.ObjectCreditLevel">
+            <summary>
+            对象信用等级 (该属性可为空,且无默认值)
+            信用对象启用.Misc.对象信用等级
+            </summary>
+            <value>UFIDA.U9.CC.CreditObjectPolicy.ObjectCreditLevel</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CreditObjectOpeningProxy.IsInit">
+            <summary>
+            是否初始化 (该属性可为空,但有默认值)
+            信用对象启用.Misc.是否初始化
+            </summary>
+            <value>System.Boolean</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.CCQueryProxy.CCQueryInputDTO">
+            <summary>
+            信用状况查询传入DTO (该属性可为空,且无默认值)
+            信用状况查询.Misc.信用状况查询传入DTO
+            </summary>
+            <value>UFIDA.U9.CC.CreditBP.CCQueryInputDTO</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetCreditObjectsProxy.ObjectType">
+            <summary>
+            对象类型 (该属性可为空,但有默认值)
+            批量获得信用对象.Misc.对象类型
+            </summary>
+            <value>UFIDA.U9.CBO.DTOs.ObjectTypeEnum</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetObjectCreditLevelProxy.CustomerCode">
+            <summary>
+            客户编码 (该属性可为空,且无默认值)
+            获取对象信用等级.Misc.客户编码
+            </summary>
+            <value>System.String</value>
+        </member>
+        <member name="P:UFIDA.U9.CC.CreditBP.Proxy.GetObjectCreditLevelProxy.SrcDocType">
+            <summary>
+            来源单据类型 (该属性可为空,且无默认值)
+            获取对象信用等级.Misc.来源单据类型
+            </summary>
+            <value>System.Int32</value>
+        </member>
+    </members>
+</doc>
