@@ -1,10 +1,10 @@
 ﻿namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.ARBillRelationBP
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Text; 
-	using UFSoft.UBF.AopFrame;	
-	using UFSoft.UBF.Util.Context;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using UFSoft.UBF.AopFrame;
+    using UFSoft.UBF.Util.Context;
     using UFIDA.U9.ISV.AR.Proxy;
     using UFIDA.U9.ISV.AR;
     using UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE;
@@ -13,28 +13,29 @@
     using UFIDA.U9.Base;
     using UFIDA.U9.CBO.SCM.Item;
     using UFSoft.UBF.PL;
+    using UFSoft.UBF.Business;
 
-	/// <summary>
-	/// ARBillImportBP partial 
-	/// </summary>	
-	public partial class ARBillImportBP 
-	{	
-		internal BaseStrategy Select()
-		{
-			return new ARBillImportBPImpementStrategy();	
-		}		
-	}
-	
-	#region  implement strategy	
-	/// <summary>
-	/// Impement Implement
-	/// 
-	/// </summary>	
-	internal partial class ARBillImportBPImpementStrategy : BaseStrategy
-	{
-		public ARBillImportBPImpementStrategy() { }
+    /// <summary>
+    /// ARBillImportBP partial 
+    /// </summary>	
+    public partial class ARBillImportBP
+    {
+        internal BaseStrategy Select()
+        {
+            return new ARBillImportBPImpementStrategy();
+        }
+    }
 
-		public override object Do(object obj)
+    #region  implement strategy
+    /// <summary>
+    /// Impement Implement
+    /// 
+    /// </summary>	
+    internal partial class ARBillImportBPImpementStrategy : BaseStrategy
+    {
+        public ARBillImportBPImpementStrategy() { }
+
+        public override object Do(object obj)
 		{						
 			ARBillImportBP bpObj = (ARBillImportBP)obj;
 
@@ -56,7 +57,13 @@
                     pub.Message = "创建应收单成功！";
                     pub.DocID = data[0].ID;
                     pub.DocNo = data[0].DocNO;
-                    
+                    using (ISession session=Session.Open())
+                    {
+                        AdvApproveBE advApprove = AdvApproveBE.Finder.FindByID(bpObj.RelationId);
+                        advApprove.DescFlexField.PrivateDescSeg1 = pub.DocID.ToString();
+                        advApprove.DescFlexField.PrivateDescSeg2 = pub.DocNo;
+                        session.Commit();
+                    }
                 }
                 else
                 {
@@ -222,9 +229,9 @@
                 return null;
             }
         }
-	}
+    }
 
-	#endregion
-	
-	
+    #endregion
+
+
 }

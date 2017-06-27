@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
+using UFIDA.U9.Cust.SeeBestAdvertisementBP.ARBillRelationBP.Proxy;
 
 #endregion
 
@@ -80,7 +81,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         protected override void OnUpdated()
         {
             base.OnUpdated();
-            // TO DO: write your business code here...
+            if (this.DocStatus == AdvAppStatusEnum.Approved && string.IsNullOrEmpty(this.DescFlexField.PrivateDescSeg1))
+            {
+                ARBillImportBPProxy proxy = new ARBillImportBPProxy();
+                proxy.RelationId = this.ID;
+                var data = proxy.Do();
+            }
         }
 
 
@@ -91,6 +97,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         {
             base.OnDeleting();
             // TO DO: write your business code here...
+            //if (!string.IsNullOrEmpty(this.DescFlexField.PrivateDescSeg1))
+            //{
+            //    throw new Exception("已经生成了应收单");
+            //}
         }
 
         /// <summary>
