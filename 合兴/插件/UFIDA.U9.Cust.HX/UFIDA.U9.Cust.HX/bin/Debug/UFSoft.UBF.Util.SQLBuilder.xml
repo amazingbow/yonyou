@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Util.SQLBuilder</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Core.InnerJoin">
+            <summary>
+            InnerJoin 内连接
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin">
+            <summary>
+            SQLJoin	琛ㄨ繛鎺ョ殑鎶借薄琛ㄨ揪
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.type">
+            <summary>
+            杩炴帴绫诲瀷
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.#ctor(UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.JoinType)">
+            <summary>
+            鏋勯€犲嚱鏁?
+            </summary>
+            <param name="type">杩炴帴绫诲瀷</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.AddFunction(System.String)">
+            <summary>
+            Adds the function string if from clause is a function.
+            </summary>
+            <param name="functionString">The function string.</param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.AddJoinCondition(System.String,System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.AddJoinCondition(System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.Type">
+            <summary>
+            杩炴帴绫诲瀷
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.Conditions">
+            <summary>
+            杩炴帴鏉′欢
+            </summary>
+            <example>
+            	on Order.OrderID = OrderDetails.OrderID
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.Table">
+            <summary>
+            琛ㄦ垨select 瀛愭煡璇?
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin.JoinTable">
+            <summary>
+            璁剧疆Join鐨勮〃鍚?
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Core.LeftOuterJoin">
+            <summary>
+            LeftOutJoin 左外连接
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Core.RightOuterJoin">
+            <summary>
+            RightOuterJoin 右外连接
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.IDeleteBuilder">
+            <summary>
+            IDeleteBuilder: Delete语句Builder接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.IInsertBuilder">
+            <summary>
+            IInsertBuilder: Insert语句Builder接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99InsertBuilder.BuildInsert(UFSoft.UBF.Util.SQLBuilder.Framework.InsertConstruct)">
+            <summary>
+            Modified by yangyang 2007.7.13
+            </summary>
+            <param name="insert"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder">
+            <summary>
+            SQL99Builder			Template Method 璁捐妯″紡
+            
+            鎻愪緵 ANSI3 鍗砈QL99鏍囧噯鐨凷QLBuilder, MS SOL Server 6.0, Oracle 8i 绛夋柟瑷€搴斿綋浠庢绫绘淳鐢燂紝
+            瑕嗙洊缂虹渷瀹炵幇銆?
+            
+            SQL99Builder 浠嶲ueryStreamer缁ф壙浜嗗熀浜庢爤鐨勬祦鍖栧櫒
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.ISelectBuilder">
+            <summary>
+            ISelectBuilder: SQL Select语句的Builder接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.ISQLVisitor">
+            <summary>
+            ISQLVisitor: IQueryVisitor的直接扩展，用于SQLBuilder名空间中, 对应于
+            Query中扩展的表达式类型：
+            	SelectConstruct
+            	SQLJoin
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Framework.ISQLVisitor.VisitSelectConstruct(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct)">
+            <summary>
+            访问Select语句，SelectConstruct的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="select">SelectConstruct引用</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Framework.ISQLVisitor.VisitSQLJoin(UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin)">
+            <summary>
+            访问SQLJoin，SQLJoin的Accept方法实现调用此接口方法。
+            </summary>
+            <param name="join">SQLJoin引用</param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildSelect(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildExpressionList(UFSoft.UBF.Util.Expression.Framework.IExpressionList,System.Text.StringBuilder,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildFieldClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            Select瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildFromClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            From瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildWhereClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            Where 瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildGroupClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            Group 瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildHavingClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            Having 瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQL99SelectBuilder.BuildOrderClause(UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct,System.Text.StringBuilder)">
+            <summary>
+            Order 瀛愬彞
+            </summary>
+            <param name="s"></param>
+            <param name="builder"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.IUpdateBuilder">
+            <summary>
+            IUpdateBuilder Update语句Builder接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Core.SQLBuilderFactory">
+            <summary>
+            SQLBuilderFactory Factory Method 模式
+            创建ISelectBuilder接口的实现类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQLBuilderFactory.CreateSelectBuilder">
+            <summary>
+            根据当前的数据库配置，返回ISelectBuilder实现类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Core.SQLBuilderFactory.CreateSelectBuilder(System.String)">
+            <summary>
+            根据传入的数据库配置，返回ISelectBuilder实现类
+            </summary>
+            <param name="db"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.DeleteConstruct">
+            <summary>
+            DeleteConstruct: 表现SQL Delete语句的抽象结构
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.SQLConstruct">
+            <summary>
+            SQLConstruct SQL璇彞鐨勫叕鍏卞熀绫?
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SQLConstruct.Parameters">
+            <summary>
+            IEnumerable item type:
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.InsertConstruct">
+            <summary>
+            InsertConstruct: SQL Insert语句的抽象结构
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.ISQLBuilder">
+            <summary>
+            ISQLBuilder: SQLBuilder接口，根据Select/Update/Delete/Insert
+            抽象结构，创建Select/Update/Delete/Insert语句
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct">
+            <summary>
+            SelectConstruct Select 璇彞缁撴瀯鐨勬娊璞¤〃绀?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Accept(UFSoft.UBF.Util.Expression.Framework.IExpressionVisitor)">
+            <summary>
+            ISQLVisitor 
+            </summary>
+            <param name="visitor"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.IsDistinct">
+            <summary>
+            鏄疭elect distinct 杩樻槸Select (all)锛屼负true鏃禨elect瀛愬彞浼氬姞鍏?
+            distinct
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Top">
+            <summary>
+            
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Fields">
+            <summary>
+            Select 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            select order, account ....
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Conditions">
+            <summary>
+            Where 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            where order.orderID > 10000
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Joins">
+            <summary>
+            Join 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            	from Order
+            		inner join OrderDetails on Order.OrderID = OrderDetails.OrderID
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Groups">
+            <summary>
+            Group 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            	group by order.date, orderdetails.number
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Havings">
+            <summary>
+            Having 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            	group by order.date having order.date > 1000
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Tables">
+            <summary>
+            From 瀛愬彞閮ㄥ垎
+            </summary>
+            <example>
+            	from a, b 
+            </example>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.Framework.SelectConstruct.Orders">
+            <summary>
+            Order 瀛愬彞閮ㄥ垎
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.Framework.UpdateConstruct">
+            <summary>
+            UpdateConstruct 表现SQL Update语句的抽象结构
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.SQLBuilder.SelectBuilder">
+            <summary>
+            SelectBuilder 宸ュ叿绫伙紝鐢ㄦ潵渚挎嵎鐨勬瀯閫犳暟鎹簱鏃犲叧鐨凷elect璇彞.
+            Facade璁捐妯″紡锛岄殣钘廔SelectBuilder, SelectConstruct, ISQLVisitor鐨勫鏉傛€?
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddTable(System.String)">
+            <summary>
+            鍔犲叆琛ㄥ悕
+            </summary>
+            <param name="table">琛ㄥ悕</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddTable(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            鍔犲叆琛ㄨ〃杈惧紡
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddAllField">
+            <summary>
+            鍔犲叆select *
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddField(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            鍔犲叆Select瀛楁
+            </summary>
+            <param name="field"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddField(System.String)">
+            <summary>
+            鍔犲叆Select瀛楁 
+            </summary>
+            <param name="field"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddFieldWithAlias(System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddField(System.String,System.String)">
+            <summary>
+            鍔犲叆Select瀛楁
+            </summary>
+            <param name="table">琛ㄥ悕</param>
+            <param name="field">鍒楀悕</param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddField(System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddOrder(System.String,System.String,System.Boolean)">
+            <summary>
+            鍔犲叆Order瀛楁
+            </summary>
+            <param name="table">琛ㄥ悕</param>
+            <param name="field">鍒楀悕</param>
+            <param name="bAsc">鏄惁鍗囧簭</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddOrder(System.String,System.Boolean)">
+            <summary>
+            鍔犲叆Order瀛楁
+            </summary>
+            <param name="field">鍒楀悕</param>
+            <param name="bAsc">鏄惁鍗囧簭</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.BuildConstruct">
+            <summary>
+            鐢ㄤ簬鏋勯€犲瓙鏌ヨ
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.BuildSelect">
+            <summary>
+            鏋勯€燬elect璇彞
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddCondition(UFSoft.UBF.Util.Expression.Framework.IExpression)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddCondition(System.String)">
+            <summary>
+            浠ユ枃鏈舰寮忓姞鍏here瀛愬彞鐨勬潯浠惰〃杈惧紡锛岃皟鐢ㄨ€呭簲褰撲繚璇佽繖鏄纭殑鏉′欢璇彞.
+            </summary>
+            <param name="expr"></param>
+        </member>
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddGroup(System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddGroup(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddHaving(UFSoft.UBF.Util.Expression.Framework.IExpression)">
+            <summary>
+            鍔犲叆Group鐨勬潯浠惰〃杈惧紡
+            </summary>
+            <param name="cond"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.AddJoin(UFSoft.UBF.Util.SQLBuilder.Framework.SQLJoin)">
+            <summary>
+            鍔犲叆澶氳〃杩炴帴缁撴瀯
+            </summary>
+            <param name="join"></param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.SQLBuilder.SelectBuilder.IsDistinct">
+            <summary>
+            鏄疭elect distinct 杩樻槸Select (all)锛屼负true鏃禨elect瀛愬彞浼氬姞鍏?
+            distinct
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Service</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Service.Configuration.BaseAddressElement">
+            <summary>
+            基地址配置项
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Configuration.BaseAddressElement.CombineAddress(System.String)">
+            <summary>
+            取得基地址和指定的地址后半部分的地址
+            </summary>
+            <param name="path">地址后半部分</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Configuration.BaseAddressElement.Name">
+            <summary>
+            取得或设置服务组件的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Configuration.BaseAddressElement.Value">
+            <summary>
+            取得或设置服务组件的位置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Configuration.BaseAddressElementCollection">
+            <summary>
+            基地址集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Configuration.BaseAddressElementCollection.CreateNewElement">
+            <summary>
+            重载ConfigurationElementCollection的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Configuration.BaseAddressElementCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            重载ConfigurationElementCollection的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Configuration.BaseAddressSection">
+            <summary>
+            服务基地址节
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Configuration.BaseAddressSection.Addresses">
+            <summary>
+            取得服务组件注册项集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Agent.DirectoryAgent.GetQueryService(System.String,UFSoft.UBF.Service.Token)">
+            <summary>
+            查询指定服务所在的应用服务器地址
+            </summary>
+            <param name="name"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Agent.DirectoryAgent.GetDirectoryService">
+            <summary>
+            取得目录服务代理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Directory.IDirectoryService">
+            <summary>
+            Service-Directory Service class. It's a Indigo service.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Directory.DirectoryService.QueryService(System.String,UFSoft.UBF.Service.Token)">
+            TODO:改为用Provider直接获得Service的Address，不需要获得MetadataService的Address。
+        </member>
+        <member name="M:UFSoft.UBF.Service.IServiceCheckProvider.IsTargetOrgUserEnabled(System.Int64)">
+            <summary>
+            判断目标组织下，当前用户是否可以使用.(新增接口)
+            </summary>
+            <param name="targetOrgID">目标组织ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.DomainMarshalObjectWCF">
+            <summary>
+            应用程序域　远程应用对象．
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.DualDomainServer`1">
+            <summary>
+             多应用程序域调用引擎
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.ServiceDomain">
+            <summary>
+            后台应用程序域.
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Service.ProviderType.AllInOne">
+            <summary>
+            单机版
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Service.ProviderType.Server_Portal">
+            <summary>
+            服务器版portal调用
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Service.ProviderType.Server_Server">
+            <summary>
+            服务器版服务器调用
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Service.ProviderType.DualAppdomain">
+            <summary>
+            单进程多应用程序域版本-(可热插拔)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.DualAppdomainLocator">
+            <summary>
+            单进程多应用程序域版本实现-可以进行热插拔.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.DualAppdomainLocator.GetDualAppdomainService``1(UFSoft.UBF.Service.Token)">
+            <summary>
+             新增,for 调试版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.DomainServerDynamicProxy">
+            <summary>
+             动态代理-跨领域调用
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Local.LocalRepository">
+            <summary>
+            服务注册管理类。管理注册的服务。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Local.LocalRepository.IsServiceSystemCheck">
+            <summary>
+            是否进行系统管理服务的检查.(应用启用，服务挂载应用等...)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.ServiceDomainWCF">
+            <summary>
+            后台应用程序域.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.ServiceExceptionDetail">
+            <summary>
+            ExceptionBase的封装对象，用于异构系统间传递错误信息数据。
+            同.Net系统间通过内部Exception来传递复杂内部数据对象.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.ServiceExceptionDetail.Exception">
+            <summary>
+            内部实际异常
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.ServiceImplementAttribute">
+            <summary>
+            用于标志组件中的Service实现类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.ServiceImplementAttribute.ServiceHostType">
+            <summary>
+            取得ServiceHost类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Service.Repository">
+            <summary>
+            服务注册管理类。管理注册的服务。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Service.Repository.FindBinding(System.String)">
+            <summary>
+            取得指定名称的binding对象
+            </summary>
+            <param name="name">binding的名称</param>
+            <returns>binding对象。如果没有返回null。</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.IsServiceSystemCheck">
+            <summary>
+            是否进行系统管理服务的检查.(应用启用，服务挂载应用等...)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.IsOnlyMsmqService">
+            <summary>
+            是否只启动MSMQ的服务挂载。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.BaseAddress">
+            <summary>
+            取得服务基地址的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.BindingsConfigurations">
+            <summary>
+            取得绑定定义对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.Bindings">
+            <summary>
+            取得绑定对象集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.Item(System.String)">
+            <summary>
+            取得指定服务契约名称的服务定义项
+            </summary>
+            <param name="serviceContractName">服务契约名称</param>
+            <returns>服务定义项</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Service.Repository.Item(System.Type)">
+            <summary>
+            取得指定服务契约类型的服务定义项
+            </summary>
+            <param name="serviceContractType">服务契约类型</param>
+            <returns>服务定义项</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Service.ServiceLostException">
+            <summary>
+            当无法找到指定服务全名和通信协议的端点地址时抛出该异常
+            </summary>
+        </member>
+    </members>
+</doc>

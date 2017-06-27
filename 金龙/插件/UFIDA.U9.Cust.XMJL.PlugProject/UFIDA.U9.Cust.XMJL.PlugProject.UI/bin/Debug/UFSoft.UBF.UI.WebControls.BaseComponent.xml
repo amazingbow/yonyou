@@ -1,0 +1,2316 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.WebControls.BaseComponent</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.UI.WebControls.Common.FindeControlInternal(System.Web.UI.Control,System.String)">
+            <summary>
+            find 子控件的方法使用的内部方法。
+            </summary>
+            <param name="inputControl">控件集合</param>
+            <param name="inputID">要寻找控件id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Common.FindeControl(System.Web.UI.Control,System.String)">
+            <summary>
+            find 子控件的方法。
+            </summary>
+            <param name="inputControl">控件所在的页面</param>
+            <param name="inputID">要寻找控件id</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Common.FindControlByID(System.String,System.Web.UI.Control)">
+            <summary>
+            在指定的容器控件及其子控件中查找指定ID的控件。找不到返回值为null。注意有别于微软的FindControl()方法。
+            </summary>
+            <param name="container"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Common.FindControlByClientID(System.String,System.Web.UI.Control)">
+            <summary>
+            在指定的容器控件及其子控件中查找指定ClientID的控件。找不到返回值为null。
+            </summary>
+            <param name="container"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(System.String)">
+            <summary>
+            增加非空项，且不重复添加相同的项（默认）。如果要添加相同的项，可以使用Add的重载方法
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(UFSoft.UBF.UI.WebControls.StringList)">
+            <summary>
+            增加一个StringList中所有不存在的项，不重复添加相同的项。
+            </summary>
+            <param name="sl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(System.String,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加。默认不增加为null的项。如果需要增加null，则请使用重载
+            </summary>
+            <param name="item"></param>
+            <param name="isUniqueAdd"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(UFSoft.UBF.UI.WebControls.StringList,System.Boolean)">
+            <summary>
+            增加一个StringList中所有的项，可以指定是否重复添加相同的项（默认不添加null）。
+            </summary>
+            <param name="sl"></param>
+            <param name="isUniqueAdd"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加，可以指定是否增加为null的项
+            </summary>
+            <param name="item"></param>
+            <param name="isUniqueAdd"></param>
+            <param name="excludeNull"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.Add(UFSoft.UBF.UI.WebControls.StringList,System.Boolean,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加。可以指定是否增加为null的项
+            </summary>
+            <param name="sl"></param>
+            <param name="isUniqueAdd"></param>
+            <param name="excludeNull"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.MergeStringList(UFSoft.UBF.UI.WebControls.StringList,UFSoft.UBF.UI.WebControls.StringList)">
+            <summary>        
+            合并StringList，不重复添加相同的项。
+            </summary>
+            <param name="target"></param>
+            <param name="source"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.StringList.MergeStringList(UFSoft.UBF.UI.WebControls.StringList,UFSoft.UBF.UI.WebControls.StringList,System.Boolean)">
+            <summary>
+            合并StringList，可以指定是否重复添加相同的项。
+            </summary>
+            <param name="target"></param>
+            <param name="source"></param>
+            <param name="isUniqueMerge"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(System.Web.UI.Control)">
+            <summary>
+            不重复添加非空项。如果参数为null，则默认不会被加入ControlList中。
+            </summary>
+            <param name="control"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(UFSoft.UBF.UI.WebControls.ControlList)">
+            <summary>
+            增加一个StringList中所有不存在的项，不重复添加相同的项。
+            </summary>
+            <param name="cl"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(System.Web.UI.Control,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加。
+            </summary>
+            <param name="control"></param>
+            <param name="isUniqueAdd"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(UFSoft.UBF.UI.WebControls.ControlList,System.Boolean)">
+            <summary>
+            增加一个ControlList中所有的项，可以指定是否重复添加相同的项（默认不包括null）
+            </summary>
+            <param name="cl"></param>
+            <param name="isUniqueAdd"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(System.Web.UI.Control,System.Boolean,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加，可以指定是否增加为null的项
+            </summary>
+            <param name="control"></param>
+            <param name="isUniqueAdd"></param>
+            <param name="excludeNull"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.Add(UFSoft.UBF.UI.WebControls.ControlList,System.Boolean,System.Boolean)">
+            <summary>
+            添加项，可以指定是否重复添加。可以指定是否增加为null的项
+            </summary>
+            <param name="cl"></param>
+            <param name="isUniqueAdd"></param>
+            <param name="excludeNull"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.MergeControlList(UFSoft.UBF.UI.WebControls.ControlList,UFSoft.UBF.UI.WebControls.ControlList)">
+            <summary>        
+            合并ControlList，不重复添加相同的项。
+            </summary>
+            <param name="target"></param>
+            <param name="source"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlList.MergeControlList(UFSoft.UBF.UI.WebControls.ControlList,UFSoft.UBF.UI.WebControls.ControlList,System.Boolean)">
+            <summary>
+            合并StringList，可以指定是否重复添加相同的项。
+            </summary>
+            <param name="target"></param>
+            <param name="source"></param>
+            <param name="isUniqueMerge"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.JavaScriptQueue">
+            <summary>
+            用于输出客户端脚本执行队列
+            目前FormProcess引用了这个类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.NumberValueFormat">
+            <summary>
+            For Grid SumRow NumberFormat 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ControlPropEnum">
+            <summary>
+            数据类型和控件类型枚举类
+            </summary>
+            remark:
+            author：张建新
+            version:1.0
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.DBase.SetViewStateDirty">
+            <summary>
+            设置所有的数据都已更改
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.DBase.SetViewStateClean">
+            <summary>
+            设置所有的数据都未更改
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SelectOption">
+            <summary>
+            选择枚举
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocateFirst">
+            <summary>
+            取得定位首页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocateNext">
+            <summary>
+            取得定位下页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocatEnd">
+            <summary>
+            取得末页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.CustomFilterResource.GetLocatePrevious">
+            <summary>
+            定位上页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FilterToolRenderHelper.#ctor(UFSoft.UBF.UI.WebControls.FilterToolType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="grid"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FilterToolRenderHelper.GetInstance(UFSoft.UBF.UI.WebControls.FilterToolType)">
+            <summary>
+            取得对象实例
+            </summary>
+            <param name="grid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.LayoutManager.FlowLayoutColumnDef">
+            <summary>
+            流式布局列定义
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridLayout.InitRows(System.Int32,System.Web.UI.Control,System.Int32,System.Int32)">
+            <summary>
+            重新设置容器内的显示布局
+            </summary>
+            <param name="maxHeight"></param>
+            <param name="c"></param>
+            <param name="changeHeight"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridLayout.LayoutIsFixed(UFSoft.UBF.UI.Controls.IPanel)">
+            <summary>
+            
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridLayout.DoReset(UFSoft.UBF.UI.Controls.IPanel)">
+            <summary>
+            设置行高宽
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GridLayout.ProcessLabelCell(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.GridLayout.Cell)">
+            <summary>
+            杨小强添加以下函数，
+            为了解决UFLabel控件左边的空白问题，比如点链接线时，不会点空白处也起效
+            设背景色时，空白处不变
+            </summary>
+            <param name="writer"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridLayout.AddSize">
+            <summary>
+            布局需要调整的实际尺寸
+            分辨率为非标准时
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.GridLayout.Cell.Controls">
+            <summary>
+            获取Cell内的控件数组
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFBorderLayout">
+            <summary>
+            UFBorderLayout
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFBorderLayout.CountChangeSize">
+            <summary>
+            手工隐藏/显示某个区域后引起的布局变化
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFBorderLayout._FixedElementHeight">
+            <summary>
+            固定行  高度
+            </summary>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFBorderLayout.ResizeLayout">
+            <summary>
+            按照新的分辨率，重新调整UI布局
+            问题：是否只有Center位置才调整？
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.CenterControl">
+            <summary>
+            Center
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.NorthControl">
+            <summary>
+            North
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.SouthControl">
+            <summary>
+            South
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.EastControl">
+            <summary>
+            East
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.WestControl">
+            <summary>
+            West
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.AddSize">
+            <summary>
+            布局需要调整的实际尺寸
+            分辨率为非标准时
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayout.Resolution">
+            <summary>
+            分辨率 如果值为null，表示为1024*768
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFBorderLayoutAreaInfor">
+            <summary>
+            定义BorderLayout area infor
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayoutAreaInfor.IsFixed">
+            <summary>
+            当前区域是否随分辨率的改变自动缩放
+            default:false
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayoutAreaInfor.AreaType">
+            <summary>
+            区域类型设置
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFBorderLayoutAreaInfor.MaxHeight">
+            <summary>
+            设置最大高度
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFFlowColumnDef">
+            <summary>
+            UFIDA U9 分栏纵向流式布局管理器 列定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlowColumnDef.IsAutoSize">
+            <summary>
+            是否自动缩放列 按百分比自动缩放
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.Relayout">
+            <summary>
+            重新布局
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.ProcessLabelCell(System.Web.UI.HtmlTextWriter,UFSoft.UBF.UI.WebControls.UFFlowLayout.Cell)">
+            <summary>        
+            设背景色时，空白处不变
+            </summary>
+            <param name="writer"></param>
+            <param name="cell"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.ResizeLayout(System.Int32)">
+            <summary>
+            实现按最大高度重新规划布局行数
+            </summary>
+            <param name="maxHeight"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.AdjustColumn">
+            <summary>
+            为多语做调整
+            调整Label列以及控件列的宽度，以适应不同语种的显示
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFFlowLayout._AddSize">
+            <summary>
+            布局需要调整的实际尺寸
+            分辨率为非标准时
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.CreateDefaultRows(UFSoft.UBF.UI.Controls.IGridLayout,System.Int32)">
+            <summary>
+            创建默认行
+            </summary>
+            <param name="layout"></param>
+            <param name="rowCount"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.Adjust4Config(UFSoft.UBF.UI.WebControls.UFFlowLayout)">
+            <summary>
+            For UIConfig
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFFlowLayout.AdjustLayout(UFSoft.UBF.UI.Controls.IGridLayout)">
+            <summary>
+            调整控件布局位置
+            </summary>
+            <param name="layoutInfor"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlowLayout.RowSpacing">
+            <summary>
+            行间距
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlowLayout.ColumnSapcing">
+            <summary>
+            列间距
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlowLayout.Resolution">
+            <summary>
+            分辨率 如果值为null，表示为1024*768
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFFlowLayout.BlockInfor">
+            <summary>
+            栏位置信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlowLayout.Cell.Controls">
+            <summary>
+            获取Cell内的控件数组
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormCallbackContorl.AddFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            注册参照CallBack方法，
+            </summary>
+            <param name="eventName">事件名</param>
+            <param name="staticMethodName">静态方法名</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.FormCallbackContorl.GetParams(System.Collections.Hashtable,System.String)">
+            <summary>
+            Callback类型
+            </summary>
+            <param name="eventName">EventName</param>
+            <param name="refPart">RefPart IPart类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.InnerButton.RegisterClientScript">
+            <summary>
+            注册客户端事件脚本
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFWebControl._IsAlwaysOutputClientBehavior">
+            <summary>
+            是否强行输出客户端行为
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFWebControl.Clear">
+            <summary>
+            清除所有子控件数据信息
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFWebControl.AddFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            注册参照CallBack方法，
+            </summary>
+            <param name="eventName">事件名</param>
+            <param name="staticMethodName">静态方法名</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFWebControl.AddFormCallBackMethod(System.String,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            注册参照CallBack方法，
+            </summary>
+            <param name="eventName">事件名</param>
+            <param name="staticMethodName">静态方法名</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.IsDirtyData">
+            <summary>
+            如果LoadPostData返回为true，则说明该控件为脏数据。禁止开发人员修改IsDirtyData属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.RequiredFlagControlID">
+            <summary>
+            该控件对应的必输标志控件的ID，个性化移动时同该控件一起移动。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.RelatedControlIDs">
+            <summary>
+            与该控件有业务联系的控件的ID的集合（不是通过关联控件产生联系的），例如控件版本号之类。IUIFieldBindingDataBindControl中有定义。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.MoveToTabPageID">
+            <summary>
+            获取或设置该控件在此次页面呈现时，被个性化移动到的当前显示页签的ID。一个被个性化移动的控件在不同页签呈现的时候，此属性都应该等于当前Selected页签。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.IsPersonalMovedToAnotherTabPage">
+            <summary>
+            获取或设置该控件是可能被个性化移动到其他页签。（为什么说可能呢？因为U9是分页签Render机制，当前页签下不被个性化移动，说不定下一个页签就被个性化移动）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.SourceTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动后，原先所在的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.CurrentLocatingTabPage">
+            <summary>
+            控件所在的页签页（UFTabPage）。可能会为null，表示当前控件不在任何页签页。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.CurrentLocatingTabControl">
+            <summary>
+            控件所在的页签控件（UFTablControl）。可能会为null，表示当前控件不在任何页签控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.PersonalGridColumnClientID">
+            <summary>
+            获取或设置该控件被个性化移动到Grid后，控件对应的Grid列的标识。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.LabelControl">
+            <summary>
+            根据LabelID属性，查找当前控件对应的Label控件。注意，使用该属性时候，请确认是否LabelID属性是否有值，否则查找不到对应的Label控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWebControl.CurrentUpdatePanel">
+            <summary>
+            当前控件所属的UpdatePanel
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButton._winWidth">
+            <summary>
+            获取或设置弹出FormWidth
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButton._winHeight">
+            <summary>
+            获取或设置弹出FormHeight
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButton._hideStatusBar">
+            <summary>
+            是否隐藏弹出窗口的状态栏
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFButton.AddParams(System.String,System.String)">
+            <summary>
+            给当前弹出Form增加自定义参数
+            </summary>
+            <param name="key"></param>
+            <param name="objValue"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.AllowSetEnabled">
+            <summary>
+            是否允许设置按钮的Enabled属性。如果该属性为false，那么对按钮设置Enabled无效。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.PartID">
+            <summary>
+            获取或设置弹出Form的PartID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.WinTitle">
+            <summary>
+            获取或设置弹出Form的
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButton.CustomInParams">
+            <summary>
+            弹出Form固定参数的自定义参数。开发人员需要添加或删除自定义参数的，请使用AddParams()，RemoveParams()方法。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFButtonNormal.PerformClick">
+            <summary>
+            调用此方法，引发Click事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButtonNormal._winWidth">
+            <summary>
+            获取或设置弹出FormWidth
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButtonNormal._winHeight">
+            <summary>
+            获取或设置弹出FormHeight
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFButtonNormal._hideStatusBar">
+            <summary>
+            是否隐藏弹出窗口的状态栏
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFButtonNormal.AddParams(System.String,System.String)">
+            <summary>
+            给当前弹出Form增加自定义参数
+            </summary>
+            <param name="key"></param>
+            <param name="objValue"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.IsAsyncPostBack">
+            <summary>
+            设置或获取是否异步提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.IsClientClose">
+            <summary>
+            该属性为True时，按钮将直接关闭客户端页面
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.AllowSetEnabled">
+            <summary>
+            是否允许设置按钮的Enabled属性。如果该属性为false，那么对按钮设置Enabled无效。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.ConvertFromDDBID">
+            <summary>
+            个性化：Button如果从MenuItem转来，则记录DDB的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.ConvertFromMenuItemID">
+            <summary>
+            个性化：Button如果从MenuItem转来，则记录MenuItem的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.ConvertToDDBID">
+            <summary>
+            个性化：如果转为MenuItem，记录目标DDB的ClientID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.ConvertToMenuItemID">
+            <summary>
+            个性化：如果转为MenuItem，记录目标MenuItem的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.PartID">
+            <summary>
+            获取或设置弹出Form的PartID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.WinTitle">
+            <summary>
+            获取或设置弹出Form的
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFButtonNormal.CustomInParams">
+            <summary>
+            弹出Form固定参数的自定义参数。开发人员需要添加或删除自定义参数的，请使用AddParams()，RemoveParams()方法。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFPanel.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现到客户端
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFPanel.SetEnabled">
+            <summary>
+            设置当容器enblbe为false时，所用的内签控件enable全部为false；
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFPanel.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFPanel.IsDirtyData">
+            <summary>
+            如果LoadPostData返回为true，则说明该控件为脏数据。禁止开发人员修改IsDirtyData属性。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.InnerCheckBox.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="postDataKey"></param>
+            <param name="postCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFCheckBox.Enabled">
+            <summary>
+            转意为ReadOnly。该属性的set方法对ReadOnly进行赋值操作，而get方法返回永为true。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFCheckBox.EnabledEx">
+            <summary>
+            获取或设置微软控件的Enabled属性
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFCompositeControl.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            </summary>
+            <param name="postDataKey"></param>
+            <param name="postCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFCompositeControl.RaisePostDataChangedEvent">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFCompositeControl.Had1Border">
+            <summary>
+            是否只有一个下边框，以后多的话，可以改为枚举，默认true，false表示有四个边框
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFCompositeControl.FixHeight">
+            <summary>
+            录入控件的高度是否固定，多行文本是不固定高度的，其他固定高度
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFMenu">
+            <summary>
+            右键菜单
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFMenu.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将控件的内容提交到客户端
+            </summary>
+            <param name="output"> writer</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFMenu.AddItem(UFSoft.UBF.UI.WebControls.UFMenuItem)">
+            <summary>
+            添加新的菜单项
+            </summary>
+            <param name="menuItem">菜单项</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFMenu.RemoveItem(UFSoft.UBF.UI.WebControls.UFMenuItem)">
+            <summary>
+            删除菜单项
+            </summary>
+            <param name="menuItem">删除的菜单项</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFMenu.RemoveItem(System.String)">
+            <summary>
+            删除菜单项
+            </summary>
+            <param name="itemId">菜单项的ID</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFMenu.MenuID">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFMenuItem">
+            <summary>
+            右键菜单项
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFMenuItem.clientFunc">
+            <summary>
+            客户端脚本方法名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFMenuItem.itemId">
+            <summary>
+            菜单项Id
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFMenuItem.title">
+            <summary>
+            页面上显示的文本
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFMenuItem.render">
+            <summary>
+            产生menutime的Client端的html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFLine">
+             <summary>--For Design Time
+             UFLine
+             为设计期提供的接口：
+            （1）控件整体高度：int Length
+            （2）控件整体宽度：string LineStyle
+            （3）控件中legend的可见性:       bool Visible
+            （4）FieldSet中Legend的标题位置：string LegendAlign
+            （5）FieldSet中Legend的标题：    string LegendValue
+             </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLine._isGroupLine">
+             <summary>
+            是否分组线，没有太好的机制来处理，只能通过有没有标题来判断 yxq 2008/09/23
+             </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFLine.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            提交控件内容到服务器端
+            </summary>
+            <param name="output"> HTML 读写器</param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLine.gridX">
+            <summary>
+            Grid
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLine.gridY">
+            <summary>
+            Grid布局时的Y坐标
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLine.gridWidth">
+            <summary>
+            Grid布局时的宽度
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLine.gridHeight">
+            <summary>
+            Grid布局时的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.Length">
+            <summary>
+            Line的长度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.LineStyle">
+            <summary>
+            Line的类型，横或竖
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.Display">
+            <summary>
+            UFImage的特有属性，微软相应控件无此属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.Visible">
+            <summary>
+            实际上就是Display
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.RequiredFlagControlID">
+            <summary>
+            该控件对应的必输标志控件的ID，个性化移动时同该控件一起移动。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.RelatedControlIDs">
+            <summary>
+            与该控件有业务联系的控件的ID的集合（不是通过关联控件产生联系的），例如控件版本号之类。IUIFieldBindingDataBindControl中有定义。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.MoveToTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动到的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.SourceTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动后，原先所在的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.CurrentLocatingTabPage">
+            <summary>
+            控件所在的页签页（UFTabPage）。可能会为null，表示当前控件不在任何页签页。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.CurrentLocatingTabControl">
+            <summary>
+            控件所在的页签控件（UFTablControl）。可能会为null，表示当前控件不在任何页签控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.PersonalGridColumnClientID">
+            <summary>
+            获取或设置该控件被个性化移动到Grid后，控件对应的Grid列的标识。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.LabelControl">
+            <summary>
+            根据LabelID属性，查找当前控件对应的Label控件。注意，使用该属性时候，请确认是否LabelID属性是否有值，否则查找不到对应的Label控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLine.TagKey">
+            <summary>b
+            输出HTML串尾
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDateTimePicker.Text">
+            Output.
+            
+             d :08/17/2000
+             D :Thursday, August 17, 2000
+             f :Thursday, August 17, 2000 16:32
+             F :Thursday, August 17, 2000 16:32:32
+             g :08/17/2000 16:32
+             G :08/17/2000 16:32:32
+             m :August 17
+             r :Thu, 17 Aug 2000 23:32:32 GMT
+             s :2000-08-17T16:32:32
+             t :16:32
+             T :16:32:32
+             u :2000-08-17 23:32:32Z
+             U :Thursday, August 17, 2000 23:32:32
+             y :August, 2000
+             dddd, MMMM dd yyyy :Thursday, August 17 2000
+             ddd, MMM d "'"yy :Thu, Aug 17 '00
+             dddd, MMMM dd :Thursday, August 17
+             M/yy :8/00
+             dd-MM-yy :17-08-00
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDateTimePicker.IsCustomDateTimeFormat">
+            <summary>
+            是否启用自定义格式，应用于多交期场景。可以指定该属性为true，日期控件将根据CustomDateTimeFormat属性的值显示用户自定义的日期格式。默认值为false，即不启用自定义显示格式。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDateTimePicker.CustomDateTimeFormat">
+            <summary>
+            指定用户启用的自定义格式，应用于多交期场景。如果IsCustomDateTimeFormat属性为true，日期控件将根据CustomDateTimeFormat属性的值显示用户自定义的日期格式。默认值为"..."。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.WebComponent">
+            <summary>
+            WebComponent是Web组件的基类
+            实现接口IGeneratorComponent
+            </summary>
+            remark:
+            author：张建新
+            version:1.0
+            2004-12 程树林修改增加实现IGridLayout接口
+            2005-2  程树林恢复丢失的代码
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.IGeneratorComponent">
+            <summary>
+            控件接口
+            所有控件必须实现这个接口
+            </summary>
+            remark:
+            author：张建新
+            version:1.0
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.#ctor">
+            WebComponent 构造子注解。
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.generateContent(System.Web.UI.HtmlTextWriter,System.String)">
+            生成html内容
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.getId">
+            唯一标识属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.getPreferredSize">
+            返回优化尺寸
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.getValue">
+            值属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.getVisible">
+            可视
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.isEnabled">
+            激活状态属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setAlign(UFSoft.UBF.UI.WebControls.Align)">
+            对齐属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setBackground(System.Drawing.Color)">
+            色彩属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setBorder(UFSoft.UBF.UI.WebControls.Border)">
+            边框属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setBounds(System.Drawing.Rectangle)">
+            设置边界
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setFont(System.Drawing.Font)">
+            字体属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setLabel(System.String)">
+            文本属性操作
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.setSize(System.Drawing.Size)">
+            位置属性设置
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.WebComponent.addEventListener(System.Int32)">
+            注册事件(需要测试，将要存储在Session中)
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WebComponent.Position">
+            设置坐标方式
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WebComponent.GridHeight">
+            <summary>
+            布局的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WebComponent.GridWidth">
+            <summary>
+            布局的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WebComponent.GridX">
+            <summary>
+            布局的横向坐标
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WebComponent.GridY">
+            <summary>
+            布局的纵向坐标
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.DropDownMenu">
+            <summary>
+            设置下拉菜单属性
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.AutoPostBack">
+            <summary>
+            是否立即页面回传
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.DropDownImageUrl">
+            <summary>
+            下拉的图片路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.SubmitEventFlag">
+            <summary>
+            回传参数标示隐藏域
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.ImageUrl">
+            <summary>
+            设置显示图标的url
+            </summary>
+            <value></value>
+            
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.DropDownStyleClass">
+            <summary>
+            设置显示图标的url
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.HtcPath">
+            <summary>
+            控件绑定htc文件的路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.NeedConfirmSave">
+            <summary>
+            其下的MenuItem被点击时，是否需要客户端保存提示。默认为false，不需要提示。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.DropDownButton.Top">
+            <summary>
+            设置具顶的像素值.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFDropDownList">
+            <summary>
+            下拉选择控件
+            继承 ListControl 更合适？？
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFDropDownList.showItemNos">
+            <summary>
+            在Items中可以使用的项目，其他项目排斥
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFDropDownList.hideItemNos">
+            <summary>
+            在Items中排斥不可以使用的项目，其他项目可以使用
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFDropDownList._IsAlwaysOutputClientBehavior">
+            <summary>
+            是否强行输出客户端行为
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.IsDirtyData">
+            <summary>
+            如果LoadPostData返回为true，则说明该控件为脏数据。禁止开发人员修改IsDirtyData属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.Had1Border">
+            <summary>
+            是否只有一个下边框，以后多的话，可以改为枚举，默认true，false表示有四个边框
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.ShowItemNos">
+            <summary>
+            在客户端动态显示的枚举值（Value）的集合；枚举值之间使用分隔符（Spliter1）分割。例如："0" + Spliter1 + "3" + Spliter1 + "5"
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.HideItemNos">
+            <summary>
+            在客户端动态隐藏的枚举值（Value）的集合；枚举值之间使用分隔符（Spliter1）分割。例如："0" + Spliter1 + "3" + Spliter1 + "5"
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.StartItemValue">
+            <summary>
+            起始枚举项值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.EndItemValue">
+            <summary>
+            结束枚举项值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.IsRefSelected">
+            <summary>
+            是否采用参照选择方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.CustomRefUri">
+            <summary>
+            参照显示方式时的自定义参照画面
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.HideRequiredFlag">
+            <summary>
+            不可为空 但是不显示Required标志
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.RequiredFlagControlID">
+            <summary>
+            该控件对应的必输标志控件的ID，个性化移动时同该控件一起移动。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.RelatedControlIDs">
+            <summary>
+            与该控件有业务联系的控件的ID的集合，例如控件版本号之类。IUIFieldBindingDataBindControl中有定义。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.MoveToTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动到的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.IsPersonalMovedToAnotherTabPage">
+            <summary>
+            获取或设置该控件是可能被个性化移动到其他页签。（为什么说可能呢？因为U9是分页签Render机制，当前页签下不被个性化移动，说不定下一个页签就被个性化移动）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.SourceTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动后，原先所在的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.CurrentLocatingTabPage">
+            <summary>
+            控件所在的页签页（UFTabPage）。可能会为null，表示当前控件不在任何页签页。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.CurrentLocatingTabControl">
+            <summary>
+            控件所在的页签控件（UFTabControl）。可能会为null，表示当前控件不在任何页签控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.PersonalGridColumnClientID">
+            <summary>
+            获取或设置该控件被个性化移动到Grid后，控件对应的Grid列的标识。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFDropDownList.LabelControl">
+            <summary>
+            根据LabelID属性，查找当前控件对应的Label控件。注意，使用该属性时候，请确认是否LabelID属性是否有值，否则查找不到对应的Label控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlexField.MaxLength">
+            <summary>
+            最大长度显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFFlexField.CallBackEventHandler">
+            <summary>
+            弹性域通过个性化扩展成界面控件后，控件值变化触发PostBack时的回调方法(回调逻辑由开发补充)
+             (yxq,fjf 2009-12-08)
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFGlobalInput">
+            <summary>
+            国际化数据录入控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGlobalInput.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            取得回传的数据
+            </summary>
+            <param name="postDataKey">key</param>
+            <param name="postCollection">集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.GlobalInputCollection.CreateByXml(System.String,System.Collections.IDictionary,System.Web.UI.Page)">
+            <summary>
+            根据xml创建对象
+            </summary>
+            <param name="inputString">xml字符串</param>
+            <returns>GlobalInputCollection对象</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFGroupBox.OnPreRender(System.EventArgs)">
+            <summary>
+             add by lzhm
+             用于屏蔽 父类 UFPanel 输出的ajax引用的js脚本
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFGroupBox.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLabel._WinWidth">
+            <summary>
+            弹出页面Width
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFLabel._WinHeight">
+            <summary>
+            弹出页面Height
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFLabel.AddFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            注册参照CallBack方法，
+            </summary>
+            <param name="eventName">事件名</param>
+            <param name="staticMethodName">静态方法名</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFLabel.AddFormCallBackMethod(System.String,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            注册参照CallBack方法，
+            </summary>
+            <param name="eventName">事件名</param>
+            <param name="staticMethodName">静态方法名</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.ReadOnly">
+            <summary>
+            Lable控件是否只读
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.Enabled">
+            <summary>
+            实际上是表达ReadOnly，但get属性永远为true，如想获取是否是只读，可以通过ReadOnly属性来获取是否是只读状态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.EnabledEx">
+            <summary>
+            获取或设置微软Label控件的Enabled属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.MoveToTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动到的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.IsPersonalMovedToAnotherTabPage">
+            <summary>
+            获取或设置该控件是可能被个性化移动到其他页签。（为什么说可能呢？因为U9是分页签Render机制，当前页签下不被个性化移动，说不定下一个页签就被个性化移动）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.SourceTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动后，原先所在的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.CurrentLocatingTabPage">
+            <summary>
+            控件所在的页签页（UFTabPage）。可能会为null，表示当前控件不在任何页签页。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFLabel.CurrentLocatingTabControl">
+            <summary>
+            控件所在的页签控件（UFTablControl）。可能会为null，表示当前控件不在任何页签控件。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFNumberic.m_zeroIsNull">
+            <summary>
+            自动将零变为空属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFNumberic.MaxLength">
+            <summary>
+            最大值控制
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFNumberic.RoundType">
+            <summary>
+            舍入规则类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFNumberic.RoundValue">
+            <summary>
+            按值舍入时的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFNumberic.ShowInvalidMessage">
+            <summary>
+            是否显示UI客户端的数值合法性校验信息，默认值为true。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFNumberic.CalculatorsIDList">
+            <summary>
+            个性化需要知道计算用到的所有关联的集合
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFReference.textBoxReadOnly">
+            <summary>
+            设置文本框的只读属性
+            设置此属性为true后，客户端TextBox中不可输入数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFReference._refType">
+            <summary>
+            参照Type
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFReference.refTitle">
+            <summary>
+            参照页面Title
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFReference.refWidth">
+            <summary>
+            参照页面Width
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFReference.refHeight">
+            <summary>
+            参照页面Height
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFReference.AddTypeParams(System.Object,System.Object)">
+            <summary>
+            增加类型化的参照参数.-默认为值.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFReference.AddTypeParams(System.Object,System.Object,UFSoft.UBF.UI.WebControls.UFReference.ParmamValueType)">
+            <summary>
+            增加类型化的参照参数.
+            如果为UIField型：　UIField的Value值应该是：UIViewName.UIFieldName 例：SOView.Code 或SOLineView.AC
+                为控件类型：   应自动生成控件相应的JS代码．
+            如果UIField和控件类型的Key相同，则自动先取控件的值，如果取不到再取UIField的值.??
+            （目前没有支持控件类型.）
+            </summary>
+            <param name="key">Key</param>
+            <param name="objValue"></param>
+            <param name="vType">参数类型：可值，UIField，控件(目前暂不支持)</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFReference.SplitString1">
+            <summary>
+            参照结果从客户端传回服务器端时keys、values、texts之间的分隔符
+            例如：1;2|001;002|北京,beijing;上海,shanghai
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFReference.SplitString2">
+            <summary>
+            多个key、value或者text之间的分隔符
+            例如：1;2|001;002|北京,beijing;上海,shanghai
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFReference.AllowClientCache">
+            <summary>
+            是否允许客户端参照缓存
+            <remarks>默认为false</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFReference.IsFireClientOnValueChangedEvent">
+            <summary>
+            当客户端参照的内容变为空时，是否触发参照客户端值改变事件，默认触发
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFReference.ReferenceOutParams">
+            <summary>
+            参照输出参数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFMultiReference.Key">
+            <summary>
+            包含多个key的字符串，以SplitString2为分隔符，如果要取单个的key，请用Keys[0]
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFRichImage.extension">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFRichImage.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFRichImage.Culture">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.TabPageNavButton.RenderContent(System.Web.UI.HtmlTextWriter,System.Boolean)">
+            <summary>
+            分左右输出导航按钮
+            </summary>
+            <param name="writer"></param>
+            <param name="isPre">是否是向前</param>
+            
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFErrorToolTip">
+            <summary>
+            错误信息提示控件
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.AddUFErrorInfo(System.Web.UI.Control,System.String,System.Int64,System.String)">
+            <summary>
+            增加错误信息
+            </summary>
+            <param name="targetControl">错误信息目标控件</param>
+            <param name="errorMessage">错误信息</param>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.AddUFErrorInfo(System.Web.UI.Control,System.String)">
+            <summary>
+            增加错误信息
+            </summary>
+            <param name="targetControl">错误信息目标控件</param>
+            <param name="errorMessage">错误信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.AddUFErrorInfo(System.Web.UI.Control,System.String,System.Int64)">
+            <summary>
+            给Grid增加错误信息
+            </summary>
+            <param name="targetControl">错误信息目标控件</param>
+            <param name="errorMessage">错误信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.AddUFErrorInfo(System.Web.UI.Control,System.String,System.Int64,System.Int64)">
+            <summary>
+            给Grid增加错误信息合集
+            </summary>
+            <param name="targetControl">错误信息目标控件</param>
+            <param name="errorMessage">错误信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.GetUFErrorInfo(System.Web.UI.Control)">
+            <summary>
+            看控件是否已有错误信息
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFErrorToolTip.GetUFErrorInfo(System.Web.UI.Control,System.Int64)">
+            <summary>
+            看控件是否已有错误信息
+            </summary>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFSubErrorToolTip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSubErrorToolTip.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSubErrorToolTip.TargetID">
+            <summary>
+            错误信息对应的目标控件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSubErrorToolTip.ErrorImageSrc">
+            <summary>
+            错误信息提示图片路径
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFErrorInfo">
+            <summary>
+            错误信息描述类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFErrorInfo.TargetControl">
+            <summary>
+            错误信息目标控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFErrorInfo.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.GridHeight">
+            <summary>
+            布局的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.GridWidth">
+            <summary>
+            布局的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.GridX">
+            <summary>
+            布局的横向坐标
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.GridY">
+            <summary>
+            布局的纵向坐标
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.Display">
+            <summary>
+            UFImage的特有属性，微软相应控件无此属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.Visible">
+            <summary>
+            实际上就是Display
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.RequiredFlagControlID">
+            <summary>
+            该控件对应的必输标志控件的ID，个性化移动时同该控件一起移动。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.RelatedControlIDs">
+            <summary>
+            与该控件有业务联系的控件的ID的集合（不是通过关联控件产生联系的），例如控件版本号之类。IUIFieldBindingDataBindControl中有定义。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.MoveToTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动到的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.SourceTabPageID">
+            <summary>
+            获取或设置该控件被个性化移动后，原先所在的页签的ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.CurrentLocatingTabPage">
+            <summary>
+            控件所在的页签页（UFTabPage）。可能会为null，表示当前控件不在任何页签页。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.CurrentLocatingTabControl">
+            <summary>
+            控件所在的页签控件（UFTablControl）。可能会为null，表示当前控件不在任何页签控件。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.PersonalGridColumnClientID">
+            <summary>
+            获取或设置该控件被个性化移动到Grid后，控件对应的Grid列的标识。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFImage.LabelControl">
+            <summary>
+            根据LabelID属性，查找当前控件对应的Label控件。注意，使用该属性时候，请确认是否LabelID属性是否有值，否则查找不到对应的Label控件。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFListBox">
+            <summary>
+            listbox控件主类
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFListBox.AutoPostBack">
+            <summary>
+            是否每次菜单项点击都立刻回传事件
+            </summary>
+            <value>是否回传</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFListBox.HtcPath">
+            <summary>
+            控件绑定htc文件的路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SelectType">
+            <summary>
+            选择类型枚举
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.ListItemClickEventArgs.sender">
+            <summary>
+            域 sender 的说明：事件发送者
+            </summary>	
+            <remarks>
+            域 sender 的备注：
+            </remarks>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ListItemClickEventArgs.Sender">
+            <summary>
+            属性 Sender 的说明：产生事件的控件
+            </summary>
+            <remarks>
+            属性 Sender 的备注：。
+            </remarks>
+            <value>属性 Sender 访问域成员sender</value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.MultiSelection">
+            <summary>
+            类 ListToList 的摘要说明：ListToList控件
+            </summary>
+            <version>
+            1.0
+            </version>
+            
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_lbLeftTitle">
+            <summary>
+            域  m_lbLeftTitle 的说明：左标题
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_lbRightTitle">
+            <summary>
+            域  m_lbRightTitle 的说明：右标题
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_listLeft">
+            <summary>
+            域  m_listLeft 的说明：左边listbox
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_listRight">
+            <summary>
+            域  m_listRight 的说明：右边listbox
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_btnSelectOne">
+            <summary>
+            域  m_btnSelectOne 的说明：单选按钮
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_btnSelectAll">
+            <summary>
+            域  m_btnSelectAll 的说明：全选按钮
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_btnRemoveOne">
+            <summary>
+            域  m_btnRemoveOne 的说明：单个移除按钮
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_btnRemoveAll">
+            <summary>
+            域  m_btnRemoveAll 的说明：全部移除按钮
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_hiddenLeftValues">
+            <summary>
+            域  m_hiddenLeftValues 的说明：左边listbox数据
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MultiSelection.m_hiddenRightValues">
+            <summary>
+            域  m_hiddenRightValues 的说明：右边listbox数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MultiSelection.getControls">
+            <summary>
+            方法getControls描述：组织界面控件
+            </summary>
+            <returns>Panel</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MultiSelection.GetItems(System.String)">
+            <summary>
+            方法GetItems说明：根据字符串解析生成ListItem.
+            </summary>
+            <param name="strValue">要解析的字符串</param>
+            <returns>ListItemCollection</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MultiSelection.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            方法Render说明：重载夫类方法。
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.SplitFlag_Item">
+            <summary>
+            属性SplitFlag_Item 说明:用于客户端缓存Items是作为Item之间的分隔符
+            </summary>
+            <value></value>
+        </member>
+        <!-- 对于成员“P:UFSoft.UBF.UI.WebControls.MultiSelection.SplitFlag_ValueText”忽略有格式错误的 XML 注释 -->
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.LabelLeft">
+            <summary>
+            属性LabelLeft 说明:左标题
+            </summary>
+            <value>>属性LabelLeft访问域m_lbLeftTitle</value>
+            
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.LabelRight">
+            <summary>
+            属性LabelRight 说明:右标题
+            </summary>
+            <value>>属性LabelRight访问域m_lbRightTitle</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ListLeft">
+            <summary>
+            属性ListLeft 说明:左listbox
+            </summary>
+            <value>>属性ListLeft访问域m_listLeft</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ListRight">
+            <summary>
+            属性ListRight 说明:右listbox
+            </summary>
+            <value>>属性ListRight访问域m_listRight</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ButtonSelectOne">
+            <summary>
+            属性ButtonSelectOne 说明:单选按钮
+            </summary>
+            <value>>属性ButtonSelectOne访问域m_btnSelectOne</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ButtonSelectAll">
+            <summary>
+            属性ButtonSelectAll 说明:全选按钮
+            </summary>
+            <value>>属性ButtonSelectAll访问域m_btnSelectAll</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ButtonRemoveOne">
+            <summary>
+            属性ButtonRemoveOne 说明:单个移除按钮
+            </summary>
+            <value>>属性ButtonRemoveOne访问域m_btnRemoveOne</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.ButtonRemoveAll">
+            <summary>
+            属性ButtonRemoveAll 说明:全部移除按钮
+            </summary>
+            <value>>属性ButtonRemoveAll访问域m_btnRemoveAll</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.HiddenLeftValue">
+            <summary>
+            属性HiddenLeftValue 说明:左边listbox数据
+            </summary>
+            <value>>属性HiddenLeftValue访问域m_hiddenLeftValues</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.HiddenRightValue">
+            <summary>
+            属性HiddenRightValue 说明:右边listbox数据
+            </summary>
+            <value>>属性HiddenRightValue访问域m_hiddenRightValues</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.Width">
+            <summary>
+            属性Width 说明:控件宽度，重载父类的属性。
+            </summary>
+            <value>>属性Width访问base.Width</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.Height">
+            <summary>
+            属性Width 说明:控件高度，重载父类的属性。
+            </summary>
+            <value>>属性Width访问base.Width</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MultiSelection.SelectedItems">
+            <summary>
+            属性SelectedItems 说明:当前选中项
+            </summary>
+            <value>属性SelectedItems 通过客户端隐藏域m_hiddenRightValues的值生成</value>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.MenuItems.ResetInitIndexs">
+            <summary>
+            用于个性化，在调整按钮顺序之前记录初始Index
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.PopMenuItem._WinWidth">
+            <summary>
+            弹出页面Width
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.PopMenuItem._WinHeight">
+            <summary>
+            弹出页面Height
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.PopMenuItem._hideStatusBar">
+            <summary>
+            是否隐藏弹出窗口的状态栏
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.PopMenuItem.initIndex">
+            <summary>
+            初始ItemIndex，用于个性化调整顺序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.ImageUrl">
+            <summary>
+            菜单项图标的url地址
+            </summary>
+            <value>url路径</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.Text">
+            <summary>
+            显示的文字
+            </summary>
+            <value> 显示的文字</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.Value">
+            <summary>
+             Item的value值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.Enabled">
+            <summary>
+             Item的value值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.Visible">
+            <summary>
+             Item的value值
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.Selected">
+            <summary>
+            是否被选中
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.IsPersonalCreate">
+            <summary>
+            是否是个性化创建
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.IsPersonalHidden">
+            <summary>
+            是否个性化隐藏
+            </summary>        
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.NeedConfirmSave">
+            <summary>
+            其下的MenuItem被点击时，是否需要客户端保存提示。默认为false，不需要提示。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.ConvertFromBtnID">
+            <summary>
+            如果是从按钮转换而来，则记录原按钮的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.ConvertToBtnID">
+            <summary>
+            个性化：转换为按钮，则记录目标按钮的ClienID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.MoveFromDDBID">
+            <summary>
+            个性化：如果从MenuItem转来，则记录源DDB的ClientID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.MoveFromMenuItemID">
+            <summary>
+            个性化：如果从MenuItem转来，则记录源MenuItem的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.MoveToDDBID">
+            <summary>
+            个性化：MenuItem被转出，记录转到的DDB的ClientID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopMenuItem.MoveToMenuItemID">
+            <summary>
+            个性化：MenuItem被转出，记录转到的 MenuItem ID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.PopUpMenu.OnPreRender(System.EventArgs)">
+            <summary>
+            Sets the hidden helper's data if a hidden helper is needed.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.AutoPostBack">
+            <summary>
+            是否每次菜单项点击都立刻回传事件
+            </summary>
+            <value>是否回传</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.HtcPath">
+            <summary>
+            控件绑定htc文件的路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.BaseURL">
+            <summary>
+            获取站点的虚拟路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.Items">
+            <summary>
+            菜单项的集合
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.NeedConfirmSave">
+            <summary>
+            设置或获取该菜单下的菜单项被点击时，是否需要客户端保存提示。如果设置了该属性，会导致其下所有的菜单项均被设置。默认为false，不需要提示。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.PopUpMenu.EventStyle">
+            <summary>
+            记录触发事件的方式(是整个菜单只有一个click事件,还是每个菜单项都有click事件)
+            </summary>
+            <value></value>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs.sender">
+            <summary>
+            域 sender 的说明：事件发送者
+            </summary>	
+            <remarks>
+            域 sender 的备注：
+            </remarks>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.MenuItemClickEventArgs.Sender">
+            <summary>
+            属性 Sender 的说明：产生事件的控件
+            </summary>
+            <remarks>
+            属性 Sender 的备注：。
+            </remarks>
+            <value>属性 Sender 访问域成员sender</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSearch.AutoPostBack">
+            <summary>
+            执行postback查询还是通过callback查询
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSearch.OnClientSearch">
+            <summary>
+            执行postback查询还是通过callback查询
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFSearch.HtcPath">
+            <summary>
+            控件绑定htc文件的路径
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SearchGridMakePageDelegate">
+            <summary>
+            查找参数委托
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.SearchEventArgs">
+            <summary>
+            查找事件参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ControlItemCollection.CreateDataTable">
+            <summary>
+            根据column生成dataTable
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFTabPage.CurrentLocatingTabControl">
+            <summary>
+            当前TabPage控件所在的页签控件（UFTablControl）。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFTabControl.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.NavButtonClickEventArgs.ClickNavButtonType">
+            <summary>
+            导航控件的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.CustomFilterClickEventArgs.ClickButtonType">
+            <summary>
+            导航控件的类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ItemCollection">
+            <summary>
+            控件集合容器类。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ToolbarItemEventHandler">
+            <summary>
+            ToolbarItem的事件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ToolbarButton">
+            <summary>
+            Toolbar按钮
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.ToolbarButton.text">
+            <summary>
+            显示的文本
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarButton.#ctor">
+            <summary>
+            构造方法
+            </summary>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarButton.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现到客户端
+            </summary>6
+            <param name="writer">HtmlTextWriter参数</param>
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarButton.OnPreRender(System.EventArgs)">
+            <summary>
+            Sets the hidden helper's data if a hidden helper is needed.
+            </summary>
+            <param name="e">The event data.</param>
+        </member>
+        <member name="E:UFSoft.UBF.UI.WebControls.ToolbarButton.ButtonClick">
+            <summary>
+            鼠标单击事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ToolbarButton.ImgPath">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ToolbarButton.DisabledImgPath">
+            <summary>
+            灰化的图片
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.ToolbarButton.ClassName">
+            <summary>
+            设置MenuButton的样式类。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ToolbarItem">
+            <summary>
+            Toolbar上的项 基类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarItem.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.ToolbarItem.parent">
+            <summary>
+            工具项所在的工具条
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarItem.SetParentToolbar(UFSoft.UBF.UI.WebControls.UFToolbar)">
+            <summary>
+            内部使用，设置父工具条
+            </summary>
+            <param name="parent"></param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.ToolbarItem.clientScript">
+            <summary>
+            客户端脚本
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.ToolbarItem.autoPostBack">
+            <summary>
+            是否自动提交
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarItem.GetClientScript">
+            <summary>
+            获得当前的客户端脚本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.ToolbarItem.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            展现到客户端
+            </summary>
+            <param name="writer">HtmlTextWriter文本流</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.ToolbarSeparator">
+            <summary>
+            分割项
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.UFToolbar">
+            <summary>
+            工具条
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFToolbar.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFToolbar.items">
+            <summary>
+            工具项的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFToolbar.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFTree.databindcontrol">
+            <summary>
+            数据绑定控件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFTree.datasource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFTree.DataSource">
+            <summary>
+            数据源
+            </summary>
+            <value>datasource</value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFTree.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.Align">
+            <summary>
+            对齐属性类
+            </summary>
+            remark:
+            author：张建新
+            version:1.0
+            
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Align.#ctor(System.Int32)">
+            缺省结构函数
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.Align.getValue">
+            返回对齐方式
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.Border">
+            <summary>
+            Border
+            </summary>
+            remark:
+            author：张建新
+            version:1.0
+            
+        </member>
+        <member name="T:UFSoft.UBF.UI.DataBind.IDataBind">
+            <summary>
+            数据绑定
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.FormCallbackDelegate">
+            <summary>
+            弹出页面或参照的回调方法代理类型.
+            </summary>
+            <param name="eventName">回调事件名</param>
+            <param name="refPart">回调的webpart</param>
+            <returns>回调结果</returns>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.FormCallbackType.OnLoad">
+            <summary>
+            弹出Form OnLoad之前。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.FormCallbackType.OnLoadData">
+            <summary>
+            参照加载数据时事件
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.FormCallbackType.BeforeFormReturn">
+            <summary>
+            弹出窗体确定返回时。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFWizard.SetWizardPageVisible(System.Int32)">
+            <summary>
+            设置可见页的索引
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFWizard.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            将控件展现到客户端
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWizard.UserData">
+            <summary>
+            用户存储UserData
+            2.1版本此属性不做客户端服务器端同步，不缓存
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.UFWizard.CurrentPageIndex">
+            <summary>
+            当前页索引
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.WebControls.WizardPage.PageVisible">
+            <summary>
+            当前页面是否可见
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:UFSoft.UBF.UI.WebControls.WebTextField">
+             <summary>
+             TextField
+             </summary>
+             remark:
+             author：张建新
+             version:1.0
+            
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFCheckBoxList.gridX">
+            <summary>
+            Grid
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFCheckBoxList.gridY">
+            <summary>
+            Grid布局时的Y坐标
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFCheckBoxList.gridWidth">
+            <summary>
+            Grid布局时的宽度
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFCheckBoxList.gridHeight">
+            <summary>
+            Grid布局时的高度
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.WebControls.UFRadioBoxList.OnPreRender(System.EventArgs)">
+            <summary>
+            提交
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFRadioBoxList.gridX">
+            <summary>
+            Grid
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFRadioBoxList.gridY">
+            <summary>
+            Grid布局时的Y坐标
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFRadioBoxList.gridWidth">
+            <summary>
+            Grid布局时的宽度
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.WebControls.UFRadioBoxList.gridHeight">
+            <summary>
+            Grid布局时的高度
+            </summary>
+        </member>
+    </members>
+</doc>

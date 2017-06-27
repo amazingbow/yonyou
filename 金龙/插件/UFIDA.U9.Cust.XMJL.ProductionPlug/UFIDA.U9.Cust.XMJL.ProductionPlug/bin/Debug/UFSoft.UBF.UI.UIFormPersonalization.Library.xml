@@ -1,0 +1,706 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.UIFormPersonalization.Library</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel">
+            <summary>
+            AdjustContainerModel
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.FireChangeTemplateControl">
+            <summary>
+            是否触发切换模板事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.KeyControls">
+            <summary>
+            是否关键字段，用于多套template的key
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.IsDefaultTemplate">
+            <summary>
+            是否默认template
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.NewAssoControl">
+            <summary>
+            新增关联控件描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.GridCoordinates">
+            <summary>
+            当容器为Grid时，用来记录Grid控件的X、Y的坐标信息，
+            压缩的Base64String串Y值都为-1
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.ContainerLayoutInfo">
+            <summary>
+            记录调整过后的容器的列集合信息、所含的控件的GridLayoutInfo及超出范围的控件块的
+            核心控件的ID列表压缩的Base64String串
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.FixColumnName">
+            <summary>
+            Grid中的固定列的列名，一个Grid中只有一列可为固定列，这列之前的都固定
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.TemplateDisplayName">
+            <summary>
+            模板的显示用名称，每次[另存为]模板的时候由用户指定。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.CtrlTemplateMapping">
+            <summary>
+            表示主触发器控件和控件值与当前From的模板关联映射关系的XML
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.DefaultTemplateID">
+            <summary>
+            默认的个性化模板ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.EditTemplateID">
+            <summary>
+            正在编辑的个性化模板ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.TemplateID">
+            <summary>
+            个性化模板自身的ID(GUID串)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel.DefautlValueModel">
+            <summary>
+            持久化默认值模板序列化后的结果。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustFormModel">
+            <summary>
+            Init form personal data
+            ToXML(): Get personal data for save
+            </summary>    
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustFormModel.parseItem(System.Xml.XmlNode)">
+            <summary>
+            parse item 
+            </summary>
+            <param name="itemNode">current item detail</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustFormModel.Load">
+            <summary>
+            load personal xml data to my object
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustFormModel.ToXml">
+            <summary>
+            to xml for save
+            </summary>
+            <returns>xml personal data for save</returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.NewControl">
+            <summary>
+            新增控件描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.NewCtrlIDForMoveTo">
+            <summary>
+            移动后产生的新的控件块的核心控件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.GridColumnWidth">
+            <summary>
+            设置Grid的列宽
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.AssociationControlsIDList">
+            <summary>
+            移动时需要随核心控件一起移动的所有与之相关控件的ID的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.FlexFieldContextValue">
+            <summary>
+            用于记录描述性弹性域的上下文值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.OrignFlexFieldID">
+            <summary>
+            对于扩展出来的Grid列，用于记录其原始的节点名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.OrignCtrlID">
+            <summary>
+            对于从卡片移到Grid上产生的列，用该属性记录原始的控件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel.IsSumColumn">
+            <summary>
+            Grid上的数字列是否合计
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustHelper.CloneAdjustContainerModelModel(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustContainerModel)">
+            <summary>
+            Clone容器模型
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustHelper.CloneAdjustItemModel(UFSoft.UBF.UI.UIFormPersonalization.Model.AdjustItemModel)">
+            <summary>
+            Clone调整Item模型
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CtrlTemplateMappingModel.TriggerCtlID">
+            <summary>
+            主触发器控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CtrlTemplateMappingModel.CtrlTemplateMappingItems">
+            <summary>
+            控件值和个性化模版的映射集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CtrlTemplateMappingItem.TemplateDisplayName">
+            <summary>
+            个性化模版的显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CtrlTemplateMappingItem.TemplateID">
+            <summary>
+            个性化模版ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CtrlTemplateMappingItem.CtlValue">
+            <summary>
+            控件值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlDefines.Item(System.Int32)">
+            <summary>
+            定义索引器 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue.Value">
+            <summary>
+            表示除了参照意外类型的控件值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue.Text">
+            <summary>
+            对于枚举，记录显示文本内容
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue.ReferenceValue">
+            <summary>
+            参照的控件值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue.IsReferenceControl">
+            <summary>
+            是否为参照
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValues.Add(UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValue)">
+            <summary>
+            增加对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndControlValues.Item(System.Int32)">
+            <summary>
+            定义索引器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmCndControlDataType">
+            <summary>
+            控件数据类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmCndReferenceType">
+            <summary>
+            描述参照的类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmDefaultValueType">
+            <summary>
+            控件值类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmCndOperatorType">
+            <summary>
+            条件操作符集合定义 
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmDefineType">
+            <summary>
+            控件定义类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enmDateTimeValue">
+            <summary>
+            日期控件的相对匹配值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReference.Type">
+            <summary>
+            参照类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReference.ReferenceObject">
+            <summary>
+            参照对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReference.EnumeratorKeyPairs">
+            <summary>
+            枚举对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReference.EntityClassId">
+            <summary>
+            关联参照的实体类型(枚举类型)ID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject">
+            <summary>
+            描述参照内容的参照对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.ReferenceID">
+            <summary>
+            参照ID号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.KeyField">
+            <summary>
+            参照ID号 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.ValueField">
+            <summary>
+            关联参照的字段名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.TextField">
+            <summary>
+            关联参照的字段描述
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.InputField">
+            <summary>
+            视图上绑定的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.DisplayField">
+            <summary>
+            视图上绑定的字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.ReturnValueField">
+            <summary>
+            返回值的字段名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.RefHeight">
+            <summary>
+            参照界面的高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.RefWidth">
+            <summary>
+            参照界面的宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.CtrlId">
+            <summary>
+            记录UFWebReferenceAdapter里的CtrlId属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndReferenceObject.RefCondCollection">
+            <summary>
+            参照条件集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndEnumeratorKeyPairs.Item(System.Int32)">
+            <summary>
+            定义索引器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition.IsFixed">
+            <summary>
+            是否为固定条件参照
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition.IsContext">
+            <summary>
+            是否采用“变量机制”
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefConditions.Insert(System.Int32,UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition)">
+            <summary>
+            插入对象  
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefConditions.RemoveAt(System.Int32)">
+            <summary>
+            删除指定位置的对象
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefConditions.Remove(UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition)">
+            <summary>
+            删除指定的对象
+            </summary>
+            <param name="source"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefConditions.IndexOf(UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition)">
+            <summary>
+            取得对象的索引
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefConditions.Contains(UFSoft.UBF.UI.UIFormPersonalization.Model.CndRefCondition)">
+            <summary>
+            对象是否包含
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.GetDisplayName(System.String)">
+            <summary>
+            按语种获取控件的显示名称
+            </summary>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.GetDescription(System.String)">
+            <summary>
+            按语种获取控件的ToolTip信息
+            </summary>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.Name">
+            <summary>
+            控件名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.CtrlGlobalInfoList">
+            <summary>
+            控件的语种、显示名称及ToolTip信息列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.DataLength">
+            <summary>
+            数据长度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.IsReadOnly">
+            <summary>
+            是否只读
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.IsRequire">
+            <summary>
+            是否输项
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.ValueSetDefID">
+            <summary>
+            当节点为描述性弹性域时的值集定义信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.DescFieldContextValue">
+            <summary>
+            描述性弹性域的上下文值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.IsGlobalized">
+            <summary>
+            UI模型是否国际化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.AttributeName">
+            <summary>
+            元数据发布后用此属性保存将来要创建的UIField的AttributeName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.AttributeID">
+            <summary>
+            用此属性保存控件对应元数据字段的AttributeID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.AttributeType">
+            <summary>
+            元数据字段的类型FullName
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.BaseCtrlModel.AttributeTypeID">
+            <summary>
+             元数据字段的类型GUID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel">
+            <summary>
+            自定义控件的模型
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.DeepClone(System.Object)">
+            <summary>
+            深度Clone
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.CtrlType">
+            <summary>
+            控件的类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.CtrCreateType">
+            <summary>
+            创建新增控件的方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.CtrlModel">
+            <summary>
+            控件的模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.EntityFullName">
+            <summary>
+            新增控件对应的实体名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.UiModelID">
+            <summary>
+            新增控件对应的UIModel的名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.CustomCtrlModel.ContainerID">
+            <summary>
+            记录新增的控件的容器ID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.TextAlign">
+            <summary>
+            文本对齐的方式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enuControlType">
+            <summary>
+            可支持的自定义控件类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enuCtrlCreateType">
+            <summary>
+            新增控件的类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Model.enuDataType">
+            <summary>
+            控件对应的数据类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.DateTimeCtrlModel.DateFormat">
+            <summary>
+            时间显示格式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.DropDownListCtrlModel.EnumName">
+            <summary>
+            枚举类型名称（FullName）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.DropDownListCtrlModel.EnumDisplayName">
+            <summary>
+            枚举类型显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ValueSetDefItem.ValidateType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.GlobalInputCtrlModel.MultiLine">
+            <summary>
+            文本及多语控件是否多行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.GlobalInputCtrlModel.Align">
+            <summary>
+            文本对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.GlobalInputCtrlModel.Mask">
+            <summary>
+            屏蔽字符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.RoundType">
+            <summary>
+            舍入规则类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.RoundValue">
+            <summary>
+            按值舍入时的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.NumberFormat">
+            <summary>
+            数字格式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.CurrencySymbol">
+            <summary>
+            货币符号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.DecimalDigits">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.ZeroIsNull">
+            <summary>
+            是否显示0值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.NumbericCtrlMode.Align">
+            <summary>
+            文本对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.ValueIsGlobalized">
+            <summary>
+            UI模型是否国际化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.TextIsGlobalized">
+            <summary>
+            UI模型是否国际化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.KeyField">
+            <summary>
+            值字段名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.ValueField">
+            <summary>
+            Value（鼠标进入参照控件时显示值）字段名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.TextField">
+            <summary>
+            Text（鼠标离开参照控件时显示值）字段名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefSource">
+            <summary>
+            参照来源（内部属性，外部实体）
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.InParameters">
+            <summary>
+            传入参数集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.OutParameters">
+            <summary>
+            返回值集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefType">
+            <summary>
+            参照的GUID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefName">
+            <summary>
+            参照UI名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefDisplayName">
+            <summary>
+            参照UI显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefHeight">
+            <summary>
+            参照窗体高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefWidth">
+            <summary>
+            参照窗体宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.ReferenceCtrlModel.RefTitle">
+            <summary>
+            参照窗体Title显示值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.TextBoxCtrlModel.MultiLine">
+            <summary>
+            文本及多语控件是否多行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.TextBoxCtrlModel.Align">
+            <summary>
+            文本对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.UIFormPersonalization.Model.TextBoxCtrlModel.Mask">
+            <summary>
+            屏蔽字符
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Defines">
+            <summary>
+            常量定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.UIFormPersonalization.Library.Helper">
+            <summary>
+            Personalization helper class
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Library.Helper.GetServerControlByClientName(System.String,System.String,System.Web.UI.Control)">
+            <summary>
+            Get server control by client id 
+            </summary>
+            <param name="strClientID"></param>
+            <param name="strPartID"></param>
+            <param name="control"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary`2.ReadXml(System.Xml.XmlReader)">
+            
+            <summary>
+            从对象的 XML 表示形式生成该对象
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.UIFormPersonalization.Model.SerializableDictionary`2.WriteXml(System.Xml.XmlWriter)">
+            
+            <summary>
+            将对象转换为其 XML 表示形式
+            </summary>
+            <param name="writer"></param>
+        </member>
+    </members>
+</doc>

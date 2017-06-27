@@ -1,0 +1,1856 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.IView</name>
+    </assembly>
+    <members>
+        <member name="M:UFSoft.UBF.UI.IProvider.ILoginLogoutEventProvider.DoPortalLogin(UFSoft.UBF.UI.IProvider.ILoginLogoutInfo)">
+            <summary>
+            登录
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.ILoginLogoutEventProvider.DoPortalLogout(UFSoft.UBF.UI.IProvider.ILoginLogoutInfo)">
+            <summary>
+            注销（会话结束）
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.IMenuEventProvider.DoMenuClick(UFSoft.UBF.UI.IProvider.IMenuClickInfo)">
+            <summary>
+            点击菜单
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.IActionEventProvider.DoActionClick(UFSoft.UBF.UI.IProvider.IActionClickInfo)">
+            <summary>
+            点击动作事件
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.SessionID">
+            <summary>
+            会话ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.UserID">
+            <summary>
+            当前操作用户ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.UserName">
+            <summary>
+            当前操作用户名
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.OrgID">
+            <summary>
+            当前登录组织ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.IPAddress">
+            <summary>
+            客户端IP地址
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IBaseActionInfo.EnterpriseID">
+            <summary>
+            连接串
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IActionClickInfo.ActionID">
+            <summary>
+            点击动作的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IActionClickInfo.Url">
+            <summary>
+            点击的页面ID.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IProvider.IMenuClickInfo.MenuID">
+            <summary>
+            点击菜单的ID
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.ActionEventProvider.DoMenuClick(UFSoft.UBF.UI.IProvider.IMenuClickInfo)">
+            <summary>
+            点击菜单
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.ActionEventProvider.DoPortalLogin(UFSoft.UBF.UI.IProvider.ILoginLogoutInfo)">
+            <summary>
+            登录
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IProvider.ActionEventProvider.DoPortalLogout(UFSoft.UBF.UI.IProvider.ILoginLogoutInfo)">
+            <summary>
+            注销（会话结束）
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.PartShowType">
+            <summary>
+            View部件状态
+            没有使用 Flag 目前只可能为一种状态.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IController.IAction">
+            <summary>
+            Action 接口 -实现抽象MVC的接口互访
+            Action作为业务操作的封装,独立与Form的操作和变化,靠近M边.
+            对于V的操作,只可为抽象部分.(目前可暂不让进行V的操作)
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IController.IAction.MainView">
+            <summary>
+            当前主容器所对应的视图。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IController.IController">
+            <summary>
+            Controller 接口 -实现抽象MVC的接口互访
+            Controller作为界面操作的封装,独立与Form的操作和变化,靠近V边.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IController.INavigator.Navigate(System.String)">
+            <summary>
+            跳转请求
+            </summary>
+            <param name="nextNode"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IController.INavigator.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IController.INavigator.CurrentState">
+            <summary>
+            当前请求状态信息
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.IPart">
+            <summary>
+             qihw -　抽象的UIPart接口．
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.GetContainerByName(System.String)">
+            <summary>
+            通过名称得到抽象容器．
+            </summary>
+            <param name="name">控件ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.GetViewContainerByUIViewName(System.String)">
+            <summary>
+            通过UIView名称得到其绑定的容器控件．
+            </summary>
+            <param name="name">UIView Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.GetViewContainersByUIViewName(System.String)">
+            <summary>
+            通过UIView名称得到其绑定的容器控件列表．
+            </summary>
+            <param name="name">UIView Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.GetUIFieldBindingControl(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl,System.String)">
+            <summary>
+            通过UIView绑定的容器，和UIField的名字，查找绑定UIField的控件
+            </summary>
+            <param name="viewContainer"></param>
+            <param name="name">UIField Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.GetUFControlByName(UFSoft.UBF.UI.ControlModel.IContainer,System.String)">
+            <summary>
+            在指定容器中查找控件
+            </summary>
+            <param name="container"></param>
+            <param name="name">控件ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.NavigatePage(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            导航到其他页面
+            </summary>
+            <param name="pageURI">pageURI</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.NavigatePage(System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            可加锚点的导航页面
+            </summary>
+            <param name="pageURI">页面URI</param>
+            <param name="querystrings">参数集合</param>
+            <param name="anchor">锚点名称（不包括#）</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.NavigateForm(System.String,System.Collections.Specialized.NameValueCollection)">
+             <summary>
+             导航到其他页面
+             </summary>
+             <param name="pageURI">pageURI</param>
+            void Navigate(string pageURI, NameValueCollection querystrings);
+             <summary>
+             弹出的Form之间的导航
+             </summary>
+             <param name="partId"></param>
+             <param name="querystrings"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.ShowModalDialog(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            弹出Form方法
+            </summary>
+            <param name="partId">弹出Form的PartID(可从代码生成的Form上的得到)</param>
+            <param name="title">标题</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="parentTaskID">当前Form的TaskID</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.ShowModalDialog(System.String,System.String,System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            弹出Form方法
+            </summary>
+            <param name="partId">弹出Form的PartID(可从代码生成的Form上的得到)</param>
+            <param name="title">标题</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="parentTaskID">当前Form的TaskID</param>
+            <param name="qeury">参数列表</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.ShowWindowStatus(System.String)">
+            <summary>
+            在客户端的状态栏中显示指定的信息
+            </summary>
+            <param name="message">在客户端状态栏中要显示的信息</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.CloseDialog">
+            <summary>
+            关闭当前Form
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.CloseDialog(System.Boolean)">
+            <summary>
+            关闭当前Form,是否刷新父窗体
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.DataBinding">
+            <summary>
+            数据绑定(从当前的UIModel->From)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.DataBinding(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            针对指定的容器数据绑定(从UIView->Container)
+            </summary>
+            <param name="container">指定的容器</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.DataCollect">
+            <summary>
+            数据收集(从当前的From->UIModel)
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.DataCollect(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            针对指定的容器进行数据收集(Container->UIView)
+            </summary>
+            <param name="container">指定的容器</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.Clear">
+            <summary>
+            清除Form上的控件数据.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.IPart.Clear(UFSoft.UBF.UI.ControlModel.IUIViewBindingControl)">
+            <summary>
+            清除Form上的控件数据.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.FormID">
+            <summary>
+            Part 的元数据ID. 表示唯一的Part模型．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.CurrentState">
+            <summary>
+            当前缓存对象
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.IsDataBinding">
+            <summary>
+            是否数据绑定--目前应该不能使用．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.PageStatus">
+            <summary>
+            Part状态,表示Part
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.PartShowType">
+            <summary>
+            WebPart显示类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.TaskId">
+            <summary>
+            State管理的唯一主键，由自动创建．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.ParentTaskID">
+            <summary>
+            弹出Form或导航Form时,可指定相应的自己的TaskID,弹出的From中可在此处可获取.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.Model">
+            <summary>
+             UIModel 访问M
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.Action">
+            <summary>
+             UIAction 
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.EnumTypeList">
+            <summary>
+            枚举类型列表
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.EnumControlsMap">
+            <summary>
+            枚举类型控件和其父控件的映射
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.ViewContainers">
+            <summary>
+            抽象容器视图集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.TopLevelContainer">
+            <summary>
+            顶级容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.ErrorControl">
+            <summary>
+            错误控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.NameValues">
+            <summary>
+            QueryString中传来的名值对
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.ParameterValues">
+            <summary>
+            WebPart参数的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.KeyValues4Favorite">
+            <summary>
+            为收藏夹用的名值对
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.FocusContainerID">
+            <summary>
+            当前页面的焦点容器控件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.MainContainer">
+            <summary>
+            主抽象容器．一个Part只有一个主抽象窗口．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.IsProviding">
+            <summary>
+            在WebPart关联中是否提供数据,默认false.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.IsConsuming">
+            <summary>
+            在WebPart关联中是否消费数据,默认true.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.DirtyDataSaveSuccessFlag">
+            <summary>
+            获取或设置保存操作后页面保存成功的标记。如果保存成功，则不认为是脏数据。三种状态其中之一"Success"、"UnSuccess"或string.Empty
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.IsCheckDirtyData">
+            <summary>
+            获取或设置当前Form离开时是否检查脏数据，默认为True。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.IView.IPart.IsDirtyData">
+            <summary>
+            获取或设置该页面是否是脏数据。默认为false。目前规范规定复制数据会认为是脏数据。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.ITask">
+            <summary>
+            一个请求过程信息的标识
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.ITask.Get">
+            <summary>
+            获取ITask的标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.IView.ITask.Create(System.Guid)">
+            <summary>
+            根据标识创建请求过程信息及状态
+            </summary>
+            <param name="taskId"></param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.PartStateType">
+            <summary>
+            View部件状态
+            没有使用 Flag 目前只可能为一种状态.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.PartTypeEnum">
+            <summary>
+             Part的显示类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.PartID">
+            <summary>
+            Form的GUID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.WinTitle">
+            <summary>
+            获取或设置弹出页面的标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.WinWidth">
+            <summary>
+            页面Width
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.WinHeight">
+            <summary>
+            页面Height
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.CustomInParams">
+            <summary>
+            自己定义的输入参数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IPopupForm.IsHideStatusBar">
+            <summary>
+            是否隐藏弹出窗口的状态栏
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.SelectOption">
+            <summary>
+            选择记录选项
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.EventResponseType">
+            <summary>
+            TabControl的页签单击事件响应类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.LayoutStyles">
+            <summary>
+            布局类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.BorderLayoutLocation">
+            <summary>
+            Border布局中的位置属性。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.EventType">
+            <summary>
+            事件类型，是PostBack还是CallBack
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ChangedType">
+            <summary>
+            控件被改变的类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ToolbarLocation">
+            <summary>
+            工具条在视图中的放置位置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ControlTypes">
+            <summary>
+            Item显示的控件类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ControlAction">
+            <summary>
+            控件动作。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.LineOrientation">
+            <summary>
+            线方向
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.TitleLocationStyles">
+            <summary>
+            标题文本位置
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.TitleAlign">
+            <summary>
+            标题对齐方式
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.EditStatus">
+            <summary>
+            编辑状态
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.MessageBoxIcon">
+            <summary>Specifies constants defining which information to display.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.None">
+            <summary>The message box contain no symbols.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Error">
+            <summary>The message box contains a symbol consisting of white X in a circle with a red background.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Hand">
+            <summary>The message box contains a symbol consisting of a white X in a circle with a red background.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Stop">
+            <summary>The message box contains a symbol consisting of white X in a circle with a red background.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Question">
+            <summary>The message box contains a symbol consisting of a question mark in a circle.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Exclamation">
+            <summary>The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Warning">
+            <summary>The message box contains a symbol consisting of an exclamation point in a triangle with a yellow background.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Information">
+            <summary>The message box contains a symbol consisting of a lowercase letter i in a circle.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxIcon.Asterisk">
+            <summary>The message box contains a symbol consisting of a lowercase letter i in a circle.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.MessageBoxButtons">
+            <summary>Specifies constants defining which buttons to display on a <see cref="T:System.Windows.Forms.MessageBox" />.</summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.OK">
+            <summary>The message box contains an OK button.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.OKCancel">
+            <summary>The message box contains OK and Cancel buttons.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.AbortRetryIgnore">
+            <summary>The message box contains Abort, Retry, and Ignore buttons.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.YesNoCancel">
+            <summary>The message box contains Yes, No, and Cancel buttons.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.YesNo">
+            <summary>The message box contains Yes and No buttons.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.MessageBoxButtons.RetryCancel">
+            <summary>The message box contains Retry and Cancel buttons.</summary>
+            <filterpriority>1</filterpriority>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ControlEvents">
+            <summary>
+            控件事件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ChartTypeEnum">
+            <summary>
+            图表类型枚举
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.ClusterHBar">
+            <summary>
+            簇状柱形图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.CumuliHBar">
+            <summary>
+            堆积柱形图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.ClusterVBar">
+            <summary>
+            簇状条形图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.CumuliVBar">
+            <summary>
+            堆积条形图
+            </summary>    
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.FoldedLine">
+            <summary>
+            折线图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.CumuliFoldedLine">
+            <summary>
+            堆积折线图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.LineDot">
+            <summary>
+            点折线图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.Cake2D">
+            <summary>
+            二维饼图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.Cake3D">
+            <summary>
+            三维饼图
+            </summary>     
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.ClusterHistogram">
+            <summary>
+            簇状柱状图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.CumuliHistogram">
+            <summary>
+            堆积柱状图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.FunnelChart">
+            <summary>
+            漏斗图
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ChildChartTypeEnum.GanttChart">
+            <summary>
+            干特图
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IContainer">
+            <summary>
+            容器的接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IContainer.Layout">
+            <summary>
+            取得或设置布局器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IContainer.LeftPadding">
+            容器上下左右边距
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IContainerClear">
+            <summary>
+            清空容器数据
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IContainerClear.Clear">
+            <summary>
+            清空数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IContainerDoubleDataBind">
+            <summary>
+            容器双向数据绑定接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IContainerDoubleDataBind.BindData">
+            <summary>
+            绑定数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IContainerDoubleDataBind.CollectData">
+            <summary>
+            收集数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IContainerDoubleDataBind.FocusedRecord">
+            <summary>
+            焦点行数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IContainerDoubleDataBind.HasData">
+            <summary>
+            是否有数据
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IControlDoubleDataBind">
+            <summary>
+            控件双向数据绑定接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IControlDoubleDataBind.BindData(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            绑定数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IControlDoubleDataBind.CollectData(UFSoft.UBF.UI.MD.Runtime.IUIRecord)">
+            <summary>
+            收集数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IDatePicker.DateTimeType">
+            <summary>
+            日期格式类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IDatePicker.DateTimeFormat">
+            <summary>
+            日期格式化
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IDatePicker.MinDate">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IDatePicker.MaxDate">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IGridLocation">
+            <summary>
+            有关容器是网格布局时，网格位置有关的信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IGridLocation.GridX">
+            单元格位于第几行
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IGridLocation.GridY">
+            单元格位于第几列
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IGridLocation.GridWidth">
+            单元格跨几行
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IGridLocation.GridHeight">
+            单元格跨几列
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IHyperLink.ImageUrl">
+            <summary>
+            图片Url
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IHyperLink.NavigateUrl">
+            <summary>
+            连接到的Url
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IHyperLink.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IHyperLink.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IListControl.RemoveItem(System.String)">
+            <summary>
+            根据值删除指定的下拉列表项目
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IListControl.ClearItems">
+            <summary>
+            清空下拉列表项目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IListControl.ExtEnumTypeID">
+            <summary>
+            扩展枚举的Guid
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.Culture">
+            <summary>
+            国家语种
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.MaxValue">
+            <summary>
+            最大值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.MinValue">
+            <summary>
+            最小值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.IsDisplayZero">
+            <summary>
+            0值在数字控件中是否显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.NumbericType">
+            <summary>
+            数字控件类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.DecimalDigits">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.NumberFormat">
+            <summary>
+            数字控件格式化信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.ScaleField">
+            <summary>
+            数字控件小数位数绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.RoundTypeField">
+            <summary>
+            数字控件舍入规则类型绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.RoundValueField">
+            <summary>
+            数字控件舍入规则类型是按值舍入时具体值绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.INumber.CurrencySymbolField">
+            <summary>
+            货币数字控件格式化用的货币符号绑定的UIField
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IReference">
+            <summary>
+            参照模型接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefType">
+            <summary>
+            参照类型，对应参照设计器中的参照ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefTitle">
+            <summary>
+            参照页面Title。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefWidth">
+            <summary>
+            参照页面Width。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefHeight">
+            <summary>
+            参照页面Height。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefPkField">
+            <summary>
+            参照主键字段。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefCodeField">
+            <summary>
+            参照录入值字段。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.RefDisplayNameField">
+            <summary>
+            参照显示字段
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.InputField">
+            <summary>
+            参照录入值字段绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.DisplayField">
+            <summary>
+            参照显示字段绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.IsMultiSelect">
+            <summary>
+            是否允许返回多个参照
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IReference.CustomInParams">
+            <summary>
+            自己定义的输入参数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ITextBox">
+            <summary>
+            TextBox模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.ITextBox.MultiLine">
+            <summary>
+            多行文本
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.ITextBox.MaxLength">
+            <summary>
+            允许输入的最大字符长度
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFBorderLayoutContainer">
+            <summary>
+            所有边界布局容器的接口
+            1	边界布局有关的信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFBorderLayoutContainer.BorderLeftSpace">
+            <summary>
+            边界布局上下左右边距
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFControl">
+            <summary>
+            所有控件接口，所有控件都直接或者间接实现这个接口，以处理：
+            有关布局有关的信息
+            
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFComponent">
+            <summary>
+            组件接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFComponent.ID">
+            <summary>
+            组件ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFComponent.ToolTip">
+            <summary>
+            提示信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFComponent.AuthorizationType">
+            <summary>
+            组件类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFControl.Width">
+            <summary>
+            Location 和Size是存取控件绝对布局信息
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFControl.UFTabIndex">
+            <summary>
+            WebControl 默认的TabIndex会导致我们控制不了，所以使用自定义的属性
+            </summary>
+        </member>
+        <member name="E:UFSoft.UBF.UI.ControlModel.IUFButton.Click">
+            <summary>
+            按钮单击事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFButton.IsAuthorization">
+            <summary>
+            是否启用权限控制
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFButton.Text">
+            <summary>
+            按钮标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFButton.EnableNotNullVerify">
+            <summary>
+            是否启用非空校验
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFButton.AutoPostBack">
+            <summary>
+            是否自动提交
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFButton.TopPanelClientID">
+            <summary>
+            顶层容器的ClientID
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFCard">
+            <summary>
+            卡片抽象控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFContainer">
+            <summary>
+            所有容器的接口，所有容器都直接或者间接实现这个接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUIViewBindingControl">
+            <summary>
+            与当前Form的UIModel下的某个UIView绑定的容器控件接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUIViewBinding">
+            <summary>
+            与当前Form的UIModel下的某个UIView的绑定接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IViewContainer">
+            <summary>
+            视图容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IViewContainer.ParentContainerID">
+            <summary>
+            父容器的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IViewContainer.ViewContainerType">
+            <summary>
+            ViewContainer容器类型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IViewContainer.PageSize">
+            <summary>
+            每页的行数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl">
+            <summary>
+            与当前Form的UIModel下的某个UIView下的UIField的绑定的控件并且需要进行控件级的数据绑定和收集
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl">
+            <summary>
+            与当前Form的UIModel下的某个UIView下的UIField的绑定的控件接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUIFieldBinding">
+            <summary>
+            与当前Form的UIModel下的某个UIView下的UIField的绑定接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.UIField">
+            <summary>
+            当前的绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.UIFieldID">
+            <summary>
+            UIFieldID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.IsBindProperty">
+            <summary>
+            是否为绑定到属性字段．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.UIProperty">
+            <summary>
+            当前所绑定的属性．　
+            　－－　直接将其Property的属性Value与控件值进行交互．不用管该属性是在View上还是在Model上．
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.PropertyContainerID">
+            <summary>
+            绑定属性时，属性的父容器ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBinding.CurrentPart">
+            <summary>
+            通过CurrentPart，绑定属性时，可以取属性的实例
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.TextAlign">
+            <summary>
+            文本框中的文本对齐样式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.DisplayFormat">
+            <summary>
+            显示格式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.IsNull">
+            <summary>
+            是否可以为空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.DataType">
+            <summary>
+            数据类型，以后改为枚举
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.IsProperty">
+            <summary>
+            绑定的是UIProperty，而不是UIField
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.Value">
+            <summary>
+            控件的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.Text">
+            <summary>
+            控件的显示值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingControl.ErrorMessage">
+            <summary>
+            错误信息内容
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl.HasBorder">
+            <summary>
+            是否有边框，凭证中把TextBox当成Label使用时提出的这个需求
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl.LabelID">
+            <summary>
+            对应的Label控件的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl.RequiredFlagControlID">
+            <summary>
+            对应的必输标志控件的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl.RelatedControlIDs">
+            <summary>
+            与该控件有业务联系的控件的ID的集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUIFieldBindingDataBindControl.ReadOnly">
+            <summary>
+            是否只读属性
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFGridFormCallback">
+            <summary>
+            Grid的列标题与参照列的FormCallback
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFGridFormCallback.AddTitleFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加列标题的弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFGridFormCallback.AddTitleFormCallBackMethod(System.String,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加列标题的弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型名</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFGridFormCallback.AddColumnFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加参照列的弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFGridFormCallback.AddColumnFormCallBackMethod(System.String,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加参照列的弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型名</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Visible">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Enabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.HasEvent">
+            <summary>
+            是否有事件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.HasSum">
+            <summary>
+            是否合计
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.SumValueFrom">
+            <summary>
+            合计值来源，当HasSum为真是有效
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.ShowBorderLine">
+            <summary>
+            是否显示GridColumn的边框线
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Width">
+            <summary>
+            列宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Point">
+            <summary>
+            精度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Caption">
+            <summary>
+            显示内容
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.IsSequence">
+            <summary>
+            是否自动产生顺序号作为临时主键，默认false
+            比较别扭的做法
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.DefaultValue">
+            <summary>
+            默认值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.Frozen">
+            <summary>
+            是否冻结，用于显示
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.BackgroundColor">
+            <summary>
+            列背景色
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.FontColor">
+            <summary>
+            列前景色
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.AllowSort">
+            <summary>
+            允许排序
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridColumn.AllowFilter">
+            <summary>
+            允许过滤
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFDataGrid">
+            <summary>
+            网格控件接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer">
+            <summary>
+            网格容器控件接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.FirstRecordIndex">
+            <summary>
+            Grid中第一条记录在View中的索引号.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.PageIndex">
+            <summary>
+            容器的当前分页序号.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.PageCount">
+            <summary>
+            当前的数据分页的总页数.
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.SelectRowIndexs">
+            <summary>
+            选中行的行号，如果选中多行的话，那么就是用，分开的字符串
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.FocusCol">
+            <summary>
+            焦点列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGridContainer.FocusRow">
+            <summary>
+            焦点行
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFDataGrid.ApplyAdapterColumns">
+            <summary>
+            变更DataGrid中的ColumnCollection为适配器的
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.DisplayName">
+            <summary>
+            Grid控件的显示名称
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.DisplayMessage">
+            <summary>
+            Grid控件提示信息
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.IsMultiSelect">
+            <summary>
+            是否允许返回多条记录
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllowSelectAllPage">
+            <summary>
+            是否可全选所有页数据
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllPageSelected">
+            <summary>
+            全选中所有页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.Paging">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.SelTable">
+            <summary>
+            选中行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.Head">
+            <summary>
+            多表头
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.HasMenu">
+            <summary>
+            是否显示编辑菜单
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.ShowAllMenuButton">
+            <summary>
+            显示编辑菜单中所有按钮
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllowAddRow">
+            <summary>
+            是否允许增加行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllowDeleteRow">
+            <summary>
+            是否允许删除行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllowInsertRow">
+            <summary>
+            是否允许插入行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AllowCopyRow">
+            <summary>
+            是否允许复制行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.DisableDefaultCopyRowAction">
+            <summary>
+            是否禁用默认的复制行逻辑
+            <remarks>默认为false; 如果禁用，需开发自己完成复制View数据的功能</remarks>
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.PageAction">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.AutoEditModel">
+            <summary>
+            自动增加行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.FrozenControlColumn">
+            <summary>
+            冻结控制列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDataGrid.IsSortSelectRecords">
+            <summary>
+            是否按选择顺序返回结果集
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFDoubleUnit">
+            <summary>
+            双计量单位接口，是4个控件的组合控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDoubleUnit.IsDoubleMetricUnit">
+            <summary>
+            是否是双计量单位
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDoubleUnit.NumberOne">
+            <summary>
+            第一组计量单位
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFDoubleUnit.NumberTwo">
+            <summary>
+            第二组计量单位
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList">
+            <summary>
+            下拉列表控件接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.Items">
+            <summary>
+            摘要:
+                获取列表控件项的集合。
+            返回结果:
+                表示列表项的 System.Web.UI.WebControls.ListItemCollection。默认值是空列表。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.SelectedValue">
+            <summary>
+            当前选中项的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.SelectedText">
+            <summary>
+            当前选中项的显示文本
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.SelectedIndex">
+            <summary>
+            当前选中项的索引号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.OldSelectedIndex">
+            <summary>
+            上次选中项的索引号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.OldSelectedValue">
+            <summary>
+            上次选中项的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldDropDownList.OldSelectedItem">
+            <summary>
+            上次选中项
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFDropDownListColumn">
+            <summary>
+            下拉列表列接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFldFileUpload">
+            <summary>
+            上传文件控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFilter">
+            <summary>
+            控件
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFldReference">
+            <summary>
+            参照控件模型接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFormCallback">
+            <summary>
+            Form回调接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFFormCallback.AddFormCallBackMethod(UFSoft.UBF.UI.ControlModel.FormCallbackType,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFFormCallback.AddFormCallBackMethod(System.String,UFSoft.UBF.UI.ControlModel.FormCallbackDelegate)">
+            <summary>
+            增加弹出form或参照的回调方法.－－增加到相应的链接中．
+            </summary>
+            <param name="eventType">事件类型名</param>
+            <param name="method">注册方法代理</param>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam">
+            <summary>
+            参照弹出Form的参数接口.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam.AddTypeParams(System.Object,UFSoft.UBF.UI.ControlModel.IUFControl)">
+            <summary>
+            对参照控件增加相应的参数.(参数会抛到相应的客户端，产生URL输出)
+            </summary>
+            <param name="key">参数名</param>
+            <param name="control">参数值控件(客户端取该控件值作为参数值)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam.AddTypeParams(System.Object,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            对参照控件增加相应的参数.(参数会抛到相应的客户端，产生URL输出)
+            </summary>
+            <param name="key">参数名</param>
+            <param name="control">参数值字段(弹出的Form将获取该字段的值作为参数值)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam.AddTypeParams(System.Object,UFSoft.UBF.UI.ControlModel.IUFControl,UFSoft.UBF.UI.MD.Runtime.IUIField)">
+            <summary>
+            对参照控件增加相应的参数.(参数会抛到相应的客户端，产生URL输出)
+            优先获取控件的值，如果取不到控件，则取UIField的值作为参数值.
+            </summary>
+            <param name="key">参数名</param>
+            <param name="control">参数值控件(客户端取该控件值作为参数值)</param>
+            <param name="field">参数值字段(弹出的Form将获取该字段的值作为参数值)</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam.AddTypeParams(System.Object,System.Object)">
+            <summary>
+            对参照控件增加相应的参数.(参数会抛到相应的客户端，产生URL输出)
+            </summary>
+            <param name="key">参数名</param>
+            <param name="objValue">参数值.</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFRefTypeParam.AddTypeParams(System.Object,System.Object,UFSoft.UBF.UI.WebControls.UFReference.ParmamValueType)">
+            <summary>
+            对参照控件增加相应的参数.(参数会抛到相应的客户端，产生URL输出)
+            </summary>
+            <param name="key">参数名</param>
+            <param name="objValue">参数值.</param>
+            <param name="vType">参数值的类型.可为控件,UIField,直接值</param>
+            <returns></returns>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.MaskChars">
+            <summary>
+            不允许输入的字符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.PartID">
+            <summary>
+            Form的GUID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.WinWidth">
+            <summary>
+            页面Width
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.WinHeight">
+            <summary>
+            页面Height
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.AssoControl">
+            <summary>
+            页面AssoControl
+            </summary>
+            
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.StructControl">
+            <summary>
+            页面StructID
+            </summary>
+            
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldFlexFieldPicker.DescContextValue">
+            <summary>
+            弹性域上下文值。个性化专用。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFldGlobalInput">
+            <summary>
+            国际化录入控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFFldTextBox">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldTextBox.MaskChars">
+            <summary>
+            不允许输入的字符
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldGlobalInput.Culture">
+            <summary>
+            当前语种
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldGlobalInput.Items">
+            <summary>
+            各个语种项目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldGlobalInput.DataSource">
+            <summary>
+            多语数据来源
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFGroupBox.Title">
+            <summary>
+            显示标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFLabel.TitleAlign">
+            <summary>
+            标题对齐方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFLabel.Text">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFLine.Text">
+            <summary>
+            显示内容
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFMultiLangInput">
+            <summary>
+            多语录入控件模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldNumberControl.ReadOnly">
+            <summary>
+            是否只读属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFPopUpMenu.IsAuthorization">
+            <summary>
+            是否启用权限控制
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFPopUpMenu.Text">
+            <summary>
+            按钮标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFPopUpMenu.EnableNotNullVerify">
+            <summary>
+            是否启用非空校验
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFPopUpMenu.AutoPostBack">
+            <summary>
+            是否自动提交
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFRefRelation">
+            <summary>
+            参照返回关联其他控件模型接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRefRelation.FieldName">
+            <summary>
+            获取或设置参照UIModel的FieldName。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRefRelation.TargetID">
+            <summary>
+            获取或设置参照返回关联的目标控件/目标列ID。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRefRelation.TargetProperty">
+            <summary>
+            获取或设置参照返回关联的目标控件/目标列的某个属性。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFRefRelationCollection">
+            <summary>
+            参照关联集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRequireFlagControl.Required">
+            <summary>
+            是否必输
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRequireFlagControl.RequiredWidth">
+            <summary>
+            输入项的宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFRequireFlagControl.InputControl">
+            <summary>
+            Control
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IUFSeparator">
+            <summary>
+            Toolbar中的分割器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFFldSourceLabel.LabelID">
+            <summary>
+            对应的Label控件的ID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFTabControl.IsAutoDataCollectCurrentTabPage">
+            <summary>
+            获取或设置当前TabControl在切换页签时，如果当前TabPage中数据为脏数据，且UIModel中没有对应记录，则自动收集到UIModel中。默认为false。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFTextBoxColumn.MaskChars">
+            <summary>
+            不允许输入的字符
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.ControlModel.IUFTreeControl.BindSpecifyNode(Telerik.WebControls.RadTreeNode)">
+            <summary>
+            在指定节点绑定其子节点，懒加载指定节点的所有直接子节点
+            </summary>
+            <param name="inputNode">指定节点</param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFTreeControl.CheckBoxes">
+            <summary>
+            是否显示复选框
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFTreeControl.LoadOnDemand">
+            <summary>
+            按需加载
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFTreeControl.MultipleSelect">
+            <summary>
+            支持多选
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.IsMonikerValid(System.String)">
+            <summary>
+            Tests a moniker retrieved from context to see if it matches the NavGraphName:CurrentViewName:TaskGuid pattern.
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.GetFromSession(System.Guid)">
+            <summary>
+            Gets the session moniker related to the specified task.
+            </summary>
+            <param name="taskId">The task identifier (a GUID associated with the task). The session moniker for this task will be retrieved.</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.GetAllFromSession">
+            <summary>
+            Gets all session monikers actually stored in the user session.
+            </summary>
+            <returns>An array of session monikers.</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.FormProcess.SessionMoniker.StoreInSession">
+            <summary>
+            Stores the session moniker in the user session.
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.IView.UIContainerType">
+            <summary>
+            容器类型 -- 对应相应的一个UIView（一个数据表单）。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.IView.UIContainerType.Grid">
+            GridPanel
+        </member>
+        <member name="F:UFSoft.UBF.UI.IView.UIContainerType.Tree">
+            Grid
+        </member>
+        <member name="F:UFSoft.UBF.UI.IView.UIContainerType.ListBox">
+            树
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.ViewContainerType">
+            <summary>
+            容器类型 -- 对应相应的一个UIView（一个数据表单）。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ViewContainerType.Grid">
+            GridPanel
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ViewContainerType.Tree">
+            Grid
+        </member>
+        <member name="F:UFSoft.UBF.UI.ControlModel.ViewContainerType.ListBox">
+            树
+        </member>
+        <member name="T:UFSoft.UBF.UI.ControlModel.IAutoRowNo">
+            <summary>
+            IAutoRowNo模型
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IAutoRowNo.Sequence">
+            <summary>
+            列自动客户端产生序列号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IAutoRowNo.SequenceStart">
+            <summary>
+            开始行号
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IAutoRowNo.SequenceStep">
+            <summary>
+            步长定义
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFExpression.PartID">
+            <summary>
+            Form的GUID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFExpression.WinWidth">
+            <summary>
+            页面Width
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFExpression.WinHeight">
+            <summary>
+            页面Height
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFExpression.InputField">
+            <summary>
+            录入值字段绑定的UIFiled
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.ControlModel.IUFExpression.DisplayField">
+            <summary>
+            显示字段绑定的UIFiled
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,441 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.UI.Controls.Interface</name>
+    </assembly>
+    <members>
+        <member name="F:UFSoft.UBF.UI.Controls.BehaviorRenderType.GetRender">
+            没次页面请求都render
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.RoundType">
+            <summary>
+            舍入规则类型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IAutoSizeLayout">
+            <summary>
+            自动缩放布局器接口定义
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.ILayout">
+            <summary>
+            布局器接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Controls.ILayout.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            输出控件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.ILayout.Owner">
+            <summary>
+            取得或设置布局器的宿主控件
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.ILayout.Controls">
+            <summary>
+            取得布局器内的控件集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Controls.IAutoSizeLayout.ResizeLayout(System.Int32)">
+            <summary>
+            重新计算排列当前容器以及子容器的布局
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IAutoSizeLayout.Resolution">
+            <summary>
+            分辨率 int[0]:Width   int[1]:Height
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IControl.UFTabIndex">
+            <summary>
+            WebControl 默认的TabIndex会导致我们控制不了，所以使用自定义的属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IControl.ErrorMessage">
+            <summary>
+            错误信息内容
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.ICallBackPersonalHandler.IsPersonalForm">
+            <summary>
+            是否为个性化形态
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IInputControl.TextAlign">
+            <summary>
+            文本框中的文本对齐样式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IInputControl.Required">
+            <summary>
+            是否可以为空
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IInputControl.RequiredWidth">
+            <summary>
+            必输项占的宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IInputControl.Display">
+            <summary>
+            输入校验器集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IListControl.IsRefSelected">
+            <summary>
+            是否采用参照选择方式
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGlobalInput.MaxLength">
+            <summary>
+            允许输入的最大字符长度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGlobalInput.Culture">
+            <summary>
+            当前语种
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGlobalInput.Items">
+            <summary>
+            各个语种项目
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGlobalInput.MaskChars">
+            <summary>
+            不允许输入的字符
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Controls.IGridLayout.AddControl(UFSoft.UBF.UI.Controls.IGridLayoutInfo,System.Web.UI.Control)">
+            <summary>
+            增加控件
+            </summary>
+            <param name="info">网格布局信息对象</param>
+            <param name="ctrl">控件</param>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Controls.IGridLayout.ResizeLayout(System.Int32)">
+            <summary>
+            重新计算排列当前容器以及子容器的尺寸
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayout.Rows">
+            <summary>
+            取得网格的行定义集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayout.Columns">
+            <summary>
+            取得网格的列定义集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayout.RowSpacing">
+            <summary>
+            取得或设置行间距
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayout.ColumnSapcing">
+            <summary>
+            取得或设置列间距
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayout.AddSize">
+            <summary>
+            布局变化量
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IGridColumn">
+            <summary>
+            网格的列定义接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridColumn.Width">
+            <summary>
+            取得或设置网格宽度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridColumn.IsFixed">
+            <summary>
+            列宽是否固定
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IGridRow">
+            <summary>
+            网格行定义接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridRow.Height">
+            <summary>
+            取得或设置网格高度
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridRow.IsFixed">
+            <summary>
+            行高是否固定
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.ILayoutable">
+            <summary>
+            布局器支持接口。所有可见的控件都要实现该接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.ILayoutable.LayoutInfo">
+            <summary>
+            取得或设置控件布局信息对象
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.ILayoutInfo">
+            <summary>
+            布局信息接口。每种布局器会在该接口上派生特定的接口并提供实现。
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IGridLayoutInfo">
+            <summary>
+            网格布局信息接口
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.X">
+            <summary>
+            取得或设置控件所在网格的列值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.Y">
+            <summary>
+            取得或设置控件所在网格的行值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.XSapn">
+            <summary>
+            取得或设置控件横向所占网格数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.YSapn">
+            <summary>
+            取得或设置控件纵向所占网格数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.EndX">
+            <summary>
+            取得结束列
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.EndY">
+            <summary>
+            取得结束行
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.AutoSize">
+            <summary>
+            取得或设置自动计算控件大小标志。如果该值为True，则忽略控件的有关高度和宽度的指定。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.Width">
+            <summary>
+            取得或设置控件的宽度。该值与Width属性互斥，如果设置了该值则忽略Width属性。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IGridLayoutInfo.Height">
+            <summary>
+            取得或设置控件的高度。该值与Height属性互斥，如果设置了该值则忽略Height属性。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.Controls.IPanel.Initialize">
+            <summary>
+            初始化容器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.Layout">
+            <summary>
+            取得或设置布局器
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.Controls">
+            <summary>
+            取得子控件集合
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.TopPadding">
+            <summary>
+            取得或设置顶端空白大小
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.BottomPadding">
+            <summary>
+            取得或设置底端空白大小
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.LeftPadding">
+            <summary>
+            取得或设置左侧空白大小
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.RightPadding">
+            <summary>
+            取得或设置右侧空白大小
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPanel.HasBorder">
+            <summary>
+            取得或设置边框支持属性
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.PartID">
+            <summary>
+            Form的GUID
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.WinTitle">
+            <summary>
+            获取或设置弹出页面的标题
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.WinWidth">
+            <summary>
+            页面Width
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.WinHeight">
+            <summary>
+            页面Height
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.CustomInParams">
+            <summary>
+            自己定义的输入参数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.UI.Controls.IPopupForm.HideStatusBar">
+            <summary>
+            是否隐藏弹出窗口的状态栏
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoButton">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.EnumClientAssoControlReadOnly">
+            <summary>
+            组件接口
+            </summary>
+            
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoContainer">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoDatePicker">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoDocument">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoDropDownList">
+            <summary>
+            下拉列表控件接口
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoGrid">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoHidden">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoImageButton">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoLabel">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoNumber">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoRefControl">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoTabControl">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoTextBox">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientAssoWizad">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.IUFClientCheckBox">
+            <summary>
+            TextBox控件模型
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.UI.Controls.NumbericType">
+            <summary>
+            数字控件显示格式类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Controls.NumbericType.Currency">
+            <summary>
+            货币
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Controls.NumbericType.Numberic">
+            <summary>
+            数字
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Controls.NumbericType.Percent">
+            <summary>
+            百分号
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Controls.NumbericType.FixedPoint">
+            <summary>
+            非格式化的数字，数字文本,利用toString的F进行格式化
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.UI.Controls.NumbericType.Permillage">
+            <summary>
+            千分号
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.UI.JsonHelper.GetJson``1(``0)">
+            <summary>
+            把对象序列化 JSON 字符串 
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="obj">对象实体</param>
+            <returns>JSON字符串</returns>
+        </member>
+        <member name="M:UFSoft.UBF.UI.JsonHelper.ParseFormJson``1(System.String)">
+            <summary>
+            把JSON字符串还原为对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="szJson">JSON字符串</param>
+            <returns>对象实体</returns>
+        </member>
+    </members>
+</doc>
