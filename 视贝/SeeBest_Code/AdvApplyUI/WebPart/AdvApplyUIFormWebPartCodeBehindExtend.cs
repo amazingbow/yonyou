@@ -109,6 +109,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     newRecord.Name = item.Name;
                     newRecord.Description = item.Description;
                     newRecord.IsSelected = true;
+                    newRecord.SetParentRecord(this.Model.AdvApplyBE.FocusedRecord);
                 }
             }
             BtnSave_Click_DefaultImpl(sender, e);
@@ -294,6 +295,17 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     newRecord.Name = item.Name;
                     newRecord.Description = item.Description;
                     newRecord.IsSelected = false;
+                    if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                    {
+                        foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                        {
+                            if (about.Code == item.Code)
+                            {
+                                newRecord.IsSelected = true;
+                                break;
+                            }
+                        }
+                    }
                     //this.Model.AdvApplyBE_AdvAboutBE.Records.Add(newRecord);
                 }
             }

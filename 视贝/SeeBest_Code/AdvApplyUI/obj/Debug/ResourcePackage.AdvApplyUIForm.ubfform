@@ -4,13 +4,13 @@
   </Columns>
   <Rows>
     <Row Fixed="True" Height="28" Name="Row0" />
-    <Row Fixed="True" Height="30" Name="Row3" />
+    <Row Fixed="True" Height="36" Name="Row3" />
     <Row Fixed="False" Height="611" Name="Row1" />
     <Row Fixed="True" Height="32" Name="Row4" />
   </Rows>
   <Providers />
   <InParameters />
-  <TabControl ID="1ff87d76-f72b-4339-8399-3680cbeeffb6" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="611" Name="TabControl6" TabIndex="3" TabStop="True" Width="1000" X="0" Y="68">
+  <TabControl ID="1ff87d76-f72b-4339-8399-3680cbeeffb6" GridHeight="1" GridWidth="1" GridX="0" GridY="2" Height="611" Name="TabControl6" TabIndex="3" TabStop="True" Width="1000" X="0" Y="74">
     <TabPage ID="3b4f3759-9fe7-45de-9467-c38efbeea061" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="相关资料" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="16" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage25" TabIndex="1" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
@@ -148,15 +148,24 @@
         <RelationControls />
         <Events />
       </Label>
-      <Reference ID="76ee49ff-bd7f-4123-9561-df213bf5424d" DisplayFormat="19.0" Enabled="True" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ApplyDept233" RelationControl="lblApplyDept233" TabIndex="28" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDept" UIViewID="AdvApplyBE" Visible="True" Width="120" X="120" Y="35">
+      <Reference ID="76ee49ff-bd7f-4123-9561-df213bf5424d" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ApplyDept_Code" CodeFieldUIViewID="AdvApplyBE" DisplayFormat="19.0" Enabled="True" EntityName="ID" GridHeight="1" GridWidth="1" GridX="2" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" Name="ApplyDept233" NameAttributeName="Name" NameFieldUIFieldID="ApplyDept_Name" NameFieldUIViewID="AdvApplyBE" PkeyField="ID" RefType="874cc1b6-f844-486c-b3f5-f8cca21fe1e0" RelationControl="lblApplyDept233" TabIndex="28" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ApplyDept" UIViewID="AdvApplyBE" Visible="True" Width="120" WindowHeight="408" WindowWidth="580" X="120" Y="35">
         <Events />
         <RelationControls />
-        <RefNameFields />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="ApplyDept233" TargetProperty="Key" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" TargetControlType="ReferenceModel" TargetID="ApplyDept233" TargetProperty="Value" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" TargetControlType="ReferenceModel" TargetID="ApplyDept233" TargetProperty="Text" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="客户分类名称" ColumnID="CustomerCategory_Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="组织机构名称" ColumnID="Org_Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="私有段14" ColumnID="DescFlexField_PrivateDescSeg14" TargetControlType="" TargetID="" TargetProperty="" />
+        <RefNameFields>
+          <RefNameField UIFieldID="Name" />
+        </RefNameFields>
         <UIFilterBar Name="ReferenceFilter" />
         <Events />
       </Reference>
     </TabPage>
-    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="29" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
+    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -175,35 +184,36 @@
         <Column Fixed="True" Name="Column14" Width="120" />
       </Columns>
       <Rows>
-        <Row Fixed="True" Height="20" Name="Row0" />
-        <Row Fixed="True" Height="20" Name="Row1" />
-        <Row Fixed="True" Height="20" Name="Row2" />
-        <Row Fixed="True" Height="20" Name="Row3" />
-        <Row Fixed="True" Height="20" Name="Row4" />
-        <Row Fixed="True" Height="20" Name="Row5" />
-        <Row Fixed="True" Height="20" Name="Row6" />
-        <Row Fixed="True" Height="20" Name="Row7" />
-        <Row Fixed="True" Height="20" Name="Row8" />
-        <Row Fixed="True" Height="20" Name="Row9" />
-        <Row Fixed="True" Height="20" Name="Row10" />
-        <Row Fixed="True" Height="20" Name="Row11" />
-        <Row Fixed="True" Height="20" Name="Row12" />
-        <Row Fixed="True" Height="20" Name="Row13" />
-        <Row Fixed="True" Height="20" Name="Row14" />
-        <Row Fixed="True" Height="20" Name="Row15" />
-        <Row Fixed="True" Height="20" Name="Row16" />
-        <Row Fixed="True" Height="20" Name="Row17" />
-        <Row Fixed="True" Height="20" Name="Row18" />
-        <Row Fixed="True" Height="20" Name="Row19" />
-        <Row Fixed="True" Height="20" Name="Row20" />
-        <Row Fixed="True" Height="20" Name="Row21" />
-        <Row Fixed="True" Height="20" Name="Row22" />
-        <Row Fixed="True" Height="20" Name="Row23" />
+        <Row Fixed="False" Height="20" Name="Row0" />
+        <Row Fixed="False" Height="20" Name="Row1" />
+        <Row Fixed="False" Height="20" Name="Row2" />
+        <Row Fixed="False" Height="20" Name="Row3" />
+        <Row Fixed="False" Height="20" Name="Row4" />
+        <Row Fixed="False" Height="20" Name="Row5" />
+        <Row Fixed="False" Height="20" Name="Row6" />
+        <Row Fixed="False" Height="20" Name="Row7" />
+        <Row Fixed="False" Height="20" Name="Row8" />
+        <Row Fixed="False" Height="20" Name="Row9" />
+        <Row Fixed="False" Height="20" Name="Row10" />
+        <Row Fixed="False" Height="20" Name="Row11" />
+        <Row Fixed="False" Height="20" Name="Row12" />
+        <Row Fixed="False" Height="20" Name="Row13" />
+        <Row Fixed="False" Height="20" Name="Row14" />
+        <Row Fixed="False" Height="20" Name="Row15" />
+        <Row Fixed="False" Height="20" Name="Row16" />
+        <Row Fixed="False" Height="20" Name="Row17" />
+        <Row Fixed="False" Height="20" Name="Row18" />
+        <Row Fixed="False" Height="20" Name="Row19" />
+        <Row Fixed="False" Height="20" Name="Row20" />
+        <Row Fixed="False" Height="20" Name="Row21" />
+        <Row Fixed="False" Height="20" Name="Row22" />
+        <Row Fixed="False" Height="20" Name="Row23" />
         <Row Fixed="True" Height="20" Name="Row24" />
         <Row Fixed="True" Height="19" Name="Row25" />
         <Row Fixed="True" Height="20" Name="Row26" />
         <Row Fixed="True" Height="20" Name="Row27" />
         <Row Fixed="True" Height="20" Name="Row28" />
+        <Row Fixed="False" Height="20" Name="Row29" />
       </Rows>
       <Line ID="005cdc8b-0b79-4e7c-a684-d4467f18f419" DisplayName="尺寸信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="0" Height="20" Name="Line3" TabIndex="0" TabStop="True" Width="950" X="10" Y="10" />
       <Label ID="80707eec-a117-49e6-a387-c50d5728c412" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblQty693" RelationControl="Qty693" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="490" Y="35">
@@ -466,7 +476,7 @@
     </TabPage>
     <Events />
   </TabControl>
-  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="30" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
+  <Card ID="8a34bf70-88a8-45c7-9a48-931ca74dca61" ChildLabelWidth="60" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="11" GridColumnSpace="0" GridHeight="1" GridLeftMargin="5" GridRightMargin="5" GridRowCount="1" GridRowSpace="5" GridTopMargin="5" GridWidth="1" GridX="0" GridY="1" Height="36" Name="Card7" TabStop="False" Width="1000" X="0" Y="33">
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -615,7 +625,7 @@
       </Events>
     </Button>
   </Toolbar>
-  <Card ID="615fb65d-1a69-4a22-bc25-7c3b8ec96b02" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="3" Height="32" LayoutType="GridBag" Name="Card8" TabIndex="3" TabStop="False" Width="1000" X="0" Y="684">
+  <Card ID="615fb65d-1a69-4a22-bc25-7c3b8ec96b02" ChildLabelWidth="60" ChildRefWidth="20" FunctionBar="FunctionBar" GridBottomMargin="2" GridColumnCount="22" GridColumnSpace="0" GridHeight="1" GridLeftMargin="10" GridRightMargin="10" GridRowCount="1" GridRowSpace="5" GridTopMargin="3" GridWidth="1" GridX="0" GridY="3" Height="32" LayoutType="GridBag" Name="Card8" TabIndex="3" TabStop="False" Width="1000" X="0" Y="690">
     <Columns>
       <Column Fixed="True" Name="Column0" Type="Spacing" Width="80" />
       <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
