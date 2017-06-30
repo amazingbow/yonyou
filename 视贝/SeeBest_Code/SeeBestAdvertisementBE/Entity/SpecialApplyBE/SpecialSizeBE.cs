@@ -621,6 +621,47 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 广告载体 (该属性不可为空,且无默认值)
+			/// 专柜尺寸.Misc.广告载体
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvCarrier
+			{
+				get
+				{
+					if (AdvCarrierKey == null)
+						return null ;
+					UFIDA.U9.CBO.SCM.Item.ItemMaster value =  (UFIDA.U9.CBO.SCM.Item.ItemMaster)AdvCarrierKey.GetEntity();
+					return value ;
+				}
+			}
+		
+
+
+   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
+		/// <summary>
+		/// EntityKey 属性
+		/// 广告载体 的Key (该属性不可为空,且无默认值)
+		/// 专柜尺寸.Misc.广告载体
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvCarrierKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvCarrier") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvCarrierKey==null || m_AdvCarrierKey.ID != key )
+					m_AdvCarrierKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
+				return m_AdvCarrierKey ;
+			}
+		}
+
 		
 
 			#endregion
@@ -1173,6 +1214,70 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+		
+			/// <summary>
+		/// 广告载体 (该属性不可为空,且无默认值)
+		/// 专柜尺寸.Misc.广告载体
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.CBO.SCM.Item.ItemMaster AdvCarrier
+		{
+			get
+			{
+				object  obj = this.GetRelation("AdvCarrier");
+				if (obj == null)
+				{
+					return null ;
+				}
+				else
+				{
+					UFIDA.U9.CBO.SCM.Item.ItemMaster value  = (UFIDA.U9.CBO.SCM.Item.ItemMaster)obj;
+					return value;
+				 }
+			}
+				set
+			{
+				
+				this.SetRelation("AdvCarrier", value);
+					 
+			}
+		}
+	
+
+
+   		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
+		/// <summary>
+		/// 广告载体 的Key (该属性不可为空,且无默认值)
+		/// 专柜尺寸.Misc.广告载体
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey AdvCarrierKey
+		{
+			get 
+			{
+				object obj = base.GetValue("AdvCarrier") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_AdvCarrierKey==null || m_AdvCarrierKey.ID != key )
+					m_AdvCarrierKey = new UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey(key); 
+				return m_AdvCarrierKey ;
+			}
+			set
+			{	
+				if (AdvCarrierKey==value)
+					return ;
+				this.SetRelation("AdvCarrier", null);
+				m_AdvCarrierKey = value ;
+				if (value != null) 
+				{
+					base.SetValue("AdvCarrier",value.ID);
+				}
+				else
+					base.SetValue("AdvCarrier",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
+
 	
 
 		#endregion
@@ -1272,6 +1377,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_DescFlexField　{ get { return EntityRes.GetResource("DescFlexField");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvCarrier")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvCarrier　{ get { return EntityRes.GetResource("AdvCarrier");　}　}
 		#endregion 
 
 
@@ -1695,6 +1805,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			/// 属性类型属性展开:DescFlexField.CombineName的名称
 			/// </summary>
 			public static string DescFlexField_CombineName { get { return "DescFlexField.CombineName";　}　}
+				
+			/// <summary>
+			/// 属性: 广告载体 的名称
+			/// </summary>
+			public static string AdvCarrier　{ get { return "AdvCarrier";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1705,7 +1820,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 																														
 				if (attrName.StartsWith("DescFlexField."))
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetPropertyResource(DescFlexField_TypeFullName, attrName);
-		
+				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1841,6 +1956,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg29","DescFlexField_PrivateDescSeg29");
 			this.exdMultiLangAttrs.Add("DescFlexField.PrivateDescSeg30","DescFlexField_PrivateDescSeg30");
 			this.multiLangAttrs.Add("DescFlexField.CombineName","DescFlexField_CombineName");
+			this.exdMultiLangAttrs.Add("AdvCarrier","AdvCarrier");
         }
 	#endregion 
 
@@ -1860,7 +1976,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 																																																		
 																																																																																																																																																																																																																																																						
 
-
+			
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1910,6 +2026,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			
 
 			
+
+			if (data.AdvCarrier == -1 && data.AdvCarrier_SKey!=null)
+				data.AdvCarrier = data.AdvCarrier_SKey.GetEntity().ID ;
+	
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -1982,6 +2102,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 								this.SetTypeValue("Memo",data.Memo);
 		
 								this.DescFlexField.FromEntityData(data.DescFlexField);
+		
+								this.SetTypeValue("AdvCarrier",data.AdvCarrier);
 		
 			#endregion 
 
@@ -2131,6 +2253,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				data.DescFlexField=this.DescFlexField.ToEntityData();
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("AdvCarrier");
+				if (obj != null)
+					data.AdvCarrier=(System.Int64)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2180,6 +2309,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			//调用UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegments属性类型的内置校验方法.
 			this.DescFlexField.OnValidate() ;
 	
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -2193,6 +2323,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
 					DisplayProductType_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
 				this.PropertyExceptions.Add(DisplayProductType_Exception);
+			}
+
+			if (Convert.ToInt64(base.GetValue("AdvCarrier")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvCarrier_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialSizeBE","AdvCarrier","029c7c3f-bb49-4a83-8717-359417cb65f2");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvCarrier_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvCarrier_Exception);
 			}
 
 			

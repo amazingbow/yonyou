@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// <returns>Instance</returns>
 		public  static SpecialApplyBE Create() {
 			SpecialApplyBE entity = (SpecialApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																 
+																																																			 
 			return entity;
 		}
 
@@ -723,6 +723,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 关闭 (该属性可为空,但有默认值)
+			/// 专柜申请单.Misc.关闭
+			/// </summary>
+			/// <value></value>
+			public  System.Boolean IsClose
+			{
+				get
+				{
+					System.Boolean value  = (System.Boolean)base.GetValue("IsClose");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1222,6 +1241,30 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+		
+			/// <summary>
+		/// 关闭 (该属性可为空,但有默认值)
+		/// 专柜申请单.Misc.关闭
+		/// </summary>
+		/// <value></value>
+			public  System.Boolean IsClose
+		{
+			get
+			{
+				System.Boolean value  = (System.Boolean)base.GetValue("IsClose");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("IsClose", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1345,6 +1388,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_WFOriginalState　{ get { return EntityRes.GetResource("WFOriginalState");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsClose")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_IsClose　{ get { return EntityRes.GetResource("IsClose");　}　}
 		#endregion 
 
 
@@ -1441,6 +1489,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			/// 属性: 之前状态 的名称
 			/// </summary>
 			public static string WFOriginalState　{ get { return "WFOriginalState";　}　}
+				
+			/// <summary>
+			/// 属性: 关闭 的名称
+			/// </summary>
+			public static string IsClose　{ get { return "IsClose";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1448,7 +1501,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																
+																																		
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1610,6 +1663,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			this.exdMultiLangAttrs.Add("Status","Status");
 			this.exdMultiLangAttrs.Add("WFCurrentState","WFCurrentState");
 			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
+			this.exdMultiLangAttrs.Add("IsClose","IsClose");
         }
 	#endregion 
 
@@ -1626,7 +1680,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			switch(propstr)
 			{
 			
-																																													
+																																																
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1672,6 +1726,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			if (data.SpecialApplyDocType == -1 && data.SpecialApplyDocType_SKey!=null)
 				data.SpecialApplyDocType = data.SpecialApplyDocType_SKey.GetEntity().ID ;
 	
+
+			
 
 			
 
@@ -1743,6 +1799,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 								this.SetTypeValue("WFCurrentState",data.WFCurrentState);
 		
 								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
+		
+								this.SetTypeValue("IsClose",data.IsClose);
 		
 			#endregion 
 
@@ -1902,6 +1960,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 					data.WFOriginalState=(System.Int32)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("IsClose");
+				if (obj != null)
+					data.IsClose=(System.Boolean)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -1948,6 +2013,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

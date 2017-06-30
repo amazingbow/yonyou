@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ReferenceComponent id="40f9b5a0-1f46-4c51-8036-11e1fcd8ab08" name="ItemMasterSeeBestRef" displayName="料品" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.AdvApplyUI.ItemMasterSeeBestRef" Classify="" ForMultOrg="False">
+<ReferenceComponent id="40f9b5a0-1f46-4c51-8036-11e1fcd8ab08" name="ItemMasterSeeBestRef" displayName="广告载体" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.AdvApplyUI.ItemMasterSeeBestRef" Classify="" ForMultOrg="False">
   <References>
     <Reference id="db0d55e4-5a8b-4521-aff4-896b4e923ce1" name="cRef" displayName="cRef" description="" help="料品" refEntityId="636d3e47-48aa-47fc-aca4-e6322bce775b" refEntityName="UFIDA.U9.CBO.SCM.Item.ItemMaster" refType="1" isMain="False">
       <RefFields>
         <RefField id="01798e62-60ff-4a97-816b-31caefd86733" name="ID" displayName="ID" description="" help="料品.Key.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:ID" displayNameIndexStr="2" />
-        <RefField id="ad98b09f-803c-4b1b-a616-2375da4f12b1" name="Code" displayName="料品料号" description="" help="料品.料品.料号" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Code" displayNameIndexStr="" />
-        <RefField id="a54b37e2-9022-4479-b9ee-81e44251bdb8" name="Name" displayName="料品品名" description="" help="料品.料品.品名" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="320" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Name" displayNameIndexStr="" />
-        <RefField id="b5ec011c-51f8-4ad6-9f22-5502ab8dbd3a" name="Description" displayName="料品描述" description="" help="料品.料品.描述" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Description" displayNameIndexStr="" />
+        <RefField id="ad98b09f-803c-4b1b-a616-2375da4f12b1" name="Code" displayName="料号" description="" help="料品.料品.料号" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Code" displayNameIndexStr="2" />
+        <RefField id="a54b37e2-9022-4479-b9ee-81e44251bdb8" name="Name" displayName="品名" description="" help="料品.料品.品名" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="320" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Name" displayNameIndexStr="2" />
+        <RefField id="b5ec011c-51f8-4ad6-9f22-5502ab8dbd3a" name="Description" displayName="描述" description="" help="料品.料品.描述" isKey="False" isEdit="False" isName="False" isVisible="True" isParent="False" sequence="0" length="100" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Description" displayNameIndexStr="2" />
       </RefFields>
-      <Filter />
+      <OrderFields>
+        <OrderField id="b3f003ce-4ea7-4531-a7bc-dfc2517a3cfc" name="Code" displayName="料号" description="" help="料品.料品.料号" direction="0" sequence="0" refAttributeName="UFIDA.U9.CBO.SCM.Item.ItemMaster:Code" />
+      </OrderFields>
+      <Filter>UFIDA::U9::CBO::SCM::Item::ItemMaster.Org.ID=#Context.OrgID#</Filter>
     </Reference>
   </References>
 </ReferenceComponent>

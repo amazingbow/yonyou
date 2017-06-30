@@ -34,6 +34,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
                         
                                         knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBEData));
                                         knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.DescFlexField.DescFlexSegmentsData));
+                                        knownTypes.Add(typeof(UFIDA.U9.CBO.SCM.Item.ItemMasterData));
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -59,6 +60,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	     							Thick=0m; 
 	     							Qty=0m; 
 	     							Area=0m; 
+	     			
 	     			
 	     			
 	     			
@@ -423,10 +425,57 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			}
 		}
 		
+
+		
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_advCarrier_SKey ;
+		/// <summary>
+		/// 广告载体 序列化Key属性。（传递跨组织序列列字段）
+		/// 专柜尺寸.Misc.广告载体
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey AdvCarrier_SKey
+		{
+			get 
+			{
+				return m_advCarrier_SKey ;					
+			}
+			set
+			{
+				 m_advCarrier_SKey = value ;	
+			}
+		}
+		/// <summary>
+		/// 广告载体
+		/// 专柜尺寸.Misc.广告载体
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public System.Int64 AdvCarrier
+		{
+			get	
+			{	
+				if (AdvCarrier_SKey == null)
+					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
+				else
+					return AdvCarrier_SKey.ID ;
+			}
+			set	
+			{	
+				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
+					AdvCarrier_SKey = null ;
+				else
+				{
+					if (AdvCarrier_SKey == null )
+						AdvCarrier_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.CBO.SCM.Item.ItemMaster") ;
+					else
+						AdvCarrier_SKey.ID = value ;
+				}
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-															
+																
 		#endregion 		
 	}	
 

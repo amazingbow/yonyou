@@ -645,6 +645,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["SpecialApplyDocType_ApproveType"]; }
 		}
+		public IUIField FieldIsClose
+		{
+			get { return this.Fields["IsClose"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -789,6 +793,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"Status", typeof(Int32), true,"0","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum", "Status", true,true, false, "",false,(UIFieldType)2,"8afc5e31-561f-4522-9d38-9deb778a04ba","5894fb42-f027-47d9-aa26-3a82c3d91655");
 			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "SpecialApplyDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","3249c7d7-a33c-471a-bd77-c404c4a71faf");
 			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "SpecialApplyDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","aa7ca7e5-7e7c-4834-a9c9-cdf4ef1f3d74");
+			UIModelRuntimeFactory.AddNewUIField(this,"IsClose", typeof(Boolean), true,"false","System.Boolean", "IsClose", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","50af7b5b-4545-407a-a711-b3af60762ec5");
 
 
 			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
@@ -2554,6 +2559,19 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 				this[this.uiviewSpecialApplyBE.FieldSpecialApplyDocType_ApproveType] = value;
 			}
 		}
+		
+		
+		public  Boolean? IsClose
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldIsClose] ;
+				//return (Boolean?)value;
+				return GetValue<Boolean?>(this.uiviewSpecialApplyBE.FieldIsClose);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldIsClose] = value;
+			}
+		}
 		#endregion
 	}
 	
@@ -3000,8 +3018,25 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["DescFlexField_CombineName"]; }
 		}
+		public IUIField FieldAdvCarrier
+		{
+			get { return this.Fields["AdvCarrier"]; }
+		}
+		public IUIField FieldAdvCarrier_Code
+		{
+			get { return this.Fields["AdvCarrier_Code"]; }
+		}
+		public IUIField FieldAdvCarrier_Name
+		{
+			get { return this.Fields["AdvCarrier_Name"]; }
+		}
 
 
+		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
+		public SpecialApplyBE_SpecialSizeBEDefaultFilterFilter DefaultFilter
+		{
+			get { return (SpecialApplyBE_SpecialSizeBEDefaultFilterFilter)this.CurrentFilter; }
+		}
 		#endregion
 
 		#region Init
@@ -3105,8 +3140,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg29", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg29", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fb1a3a8c-36c6-4ae2-b4a7-61048c0adf0e");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg30", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg30", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a69444fa-97f5-46d8-984b-fa5e276598bb");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_CombineName", typeof(String), true,"","System.String", "DescFlexField.CombineName", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","03f78fcd-c338-4a25-bb8e-b381ea25daa0");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCarrier", typeof(Int64), false,"","UFIDA.U9.CBO.SCM.Item.ItemMaster", "AdvCarrier", true,true, false, "",false,(UIFieldType)4,"636d3e47-48aa-47fc-aca4-e6322bce775b","b0e2ead3-2d88-461a-bd0b-c63a0b749efb");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCarrier_Code", typeof(String), false,"","System.String", "AdvCarrier.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","6c7dfacc-7c59-4e42-a817-b2ee862dceb0");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCarrier_Name", typeof(String), false,"","System.String", "AdvCarrier.Name", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2fde7e09-e4c7-4c7d-8224-155c16f47cbb");
 
 
+			this.CurrentFilter = new SpecialApplyBE_SpecialSizeBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -4427,9 +4466,77 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldDescFlexField_CombineName] = value;
 			}
 		}
+		
+		
+		public  Int64 AdvCarrier
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier] ;
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier] = value;
+			}
+		}
+		
+		
+		public  String AdvCarrier_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Code] = value;
+			}
+		}
+		
+		
+		public  String AdvCarrier_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE_SpecialSizeBE.FieldAdvCarrier_Name] = value;
+			}
+		}
 		#endregion
 	}
 	
+	[Serializable]
+	public class SpecialApplyBE_SpecialSizeBEDefaultFilterFilter : UIFilter
+	{
+		#region Constructor
+		public SpecialApplyBE_SpecialSizeBEDefaultFilterFilter(IUIView view) 
+			: base("DefaultFilter",view,@"",@"")
+		{
+			InitClass();
+		}
+		//for Clone Constructor
+		private SpecialApplyBE_SpecialSizeBEDefaultFilterFilter()
+			: base("DefaultFilter",null,"","")
+		{}
+		protected override IUIFilter CreateCloneInstance()
+		{
+			return new SpecialApplyBE_SpecialSizeBEDefaultFilterFilter();
+		}
+		#endregion
+
+		#region property
+		#endregion
+		
+		#region function
+		private void InitClass()
+		{
+		}
+		#endregion
+
+	}
 
 
 
