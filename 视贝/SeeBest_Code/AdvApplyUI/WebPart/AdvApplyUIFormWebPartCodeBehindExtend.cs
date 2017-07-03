@@ -64,6 +64,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.TotalArea = this.Model.AdvApplyBE.FocusedRecord.BMArea * this.Model.AdvApplyBE.FocusedRecord.Qty;
+
             BMArea187_TextChanged_DefaultImpl(sender, e);
         }
         //DZWidth187_TextChanged...
@@ -84,6 +85,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         //BtnSave_Click...
         private void BtnSave_Click_Extend(object sender, EventArgs e)
         {
+            var errorMsg = CheckAdvDisplayItem();
+            if (!string.IsNullOrEmpty(errorMsg))
+            {
+                throw new Exception(errorMsg);
+            }
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
             {
@@ -334,6 +340,36 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 isAF = record.AdvApplyDocType_ConfirmType == Convert.ToInt32(UFIDA.U9.Base.Doc.ConfirmTypeEnumData.ApproveFlow);
             }
             return isAF;
+        }
+
+        private string CheckAdvDisplayItem()
+        {
+            string errorMsg = string.Empty;
+            if (this.Model.AdvApplyBE.FocusedRecord.BMArea > 4)
+            {
+                if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 2)
+                {
+                    errorMsg = "版面面积大于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+                    return errorMsg;
+                }
+                foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                {
+                    if (item.Code != "001" && item.Code != "002" && item.Code != "003")
+                    {
+                        errorMsg = "版面面积大于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+                        return errorMsg;
+                    }
+                }
+            }
+            else
+            {
+                if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 1)
+                {
+                    errorMsg = "版面面积小于4的时候，广告体现项目只能选1个";
+                    return errorMsg;
+                }
+            }
+            return errorMsg;
         }
 
         private void AssignDefaultValues()
