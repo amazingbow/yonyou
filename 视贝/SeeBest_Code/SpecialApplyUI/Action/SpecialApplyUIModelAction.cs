@@ -362,6 +362,32 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
  
 
 		}
+		/// <summary>
+		/// Help: 关闭
+		/// </summary>
+		public void OnDocClose(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.OnDocClose_Extend);
+		}
+		private void OnDocClose_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
+		/// <summary>
+		/// Help: 打开
+		/// </summary>
+		public void OnDocOpen(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.OnDocOpen_Extend);
+		}
+		private void OnDocOpen_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

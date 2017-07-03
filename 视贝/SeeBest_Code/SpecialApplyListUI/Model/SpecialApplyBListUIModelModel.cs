@@ -106,6 +106,11 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		}
 
 
+		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
+		public SpecialApplyBEDefaultFilterFilter DefaultFilter
+		{
+			get { return (SpecialApplyBEDefaultFilterFilter)this.CurrentFilter; }
+		}
 		#endregion
 
 		#region Init
@@ -114,6 +119,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","9758e043-d91d-4125-bae4-f4fba8e5dfd0");
 
 
+			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -176,6 +182,35 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		#endregion
 	}
 	
+	[Serializable]
+	public class SpecialApplyBEDefaultFilterFilter : UIFilter
+	{
+		#region Constructor
+		public SpecialApplyBEDefaultFilterFilter(IUIView view) 
+			: base("DefaultFilter",view,@"",@"")
+		{
+			InitClass();
+		}
+		//for Clone Constructor
+		private SpecialApplyBEDefaultFilterFilter()
+			: base("DefaultFilter",null,"","")
+		{}
+		protected override IUIFilter CreateCloneInstance()
+		{
+			return new SpecialApplyBEDefaultFilterFilter();
+		}
+		#endregion
+
+		#region property
+		#endregion
+		
+		#region function
+		private void InitClass()
+		{
+		}
+		#endregion
+
+	}
 
 
 

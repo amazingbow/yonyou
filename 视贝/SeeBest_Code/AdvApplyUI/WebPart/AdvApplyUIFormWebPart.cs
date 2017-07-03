@@ -978,10 +978,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				this.AdvCarrier146 = UIControlBuilder.BuilderRefrenceControl(_UFTabPage,"AdvCarrier146",true,true, true,230, 20, 2, 1, 3, 1, "100","49",false,false,true,"lblAdvCarrier146","96260a2b-42a8-4ec6-baf8-a0dfd338337a","938746bd-11dc-4c75-b7c9-9fda862371f9");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCarrier146, "False", "AdvCarrier", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvCarrier, "AdvApplyBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.AdvCarrier146,"40f9b5a0-1f46-4c51-8036-11e1fcd8ab08", 580,408, "","Code","ID", this.Model.AdvApplyBE.FieldAdvCarrier_Code,this.Model.AdvApplyBE.FieldAdvCarrier_Name);
+			UIControlBuilder.SetReferenceControlRefInfo(this.AdvCarrier146,"40f9b5a0-1f46-4c51-8036-11e1fcd8ab08", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldAdvCarrier_Code,this.Model.AdvApplyBE.FieldAdvCarrier_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvCarrier146,"AdvCarrier146",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvCarrier146","ID","Key"),new ReferenceOutputParam("AdvCarrier146","Code","Value"),new ReferenceOutputParam("AdvCarrier146","Name","Text"),new ReferenceOutputParam("","Description",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvCarrier146,"AdvCarrier146",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","Description",""),});
 				
 
 		
@@ -1124,7 +1124,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 1000, 36, 0, 1, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 5, 5, 5, 5, 5);
 			InitViewBindingContainer(this, _UFCard,  this.Model.AdvApplyBE, "AdvApplyBE", "", null, 1, "广告申请单");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(160,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
             this.Card7 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
@@ -1216,7 +1216,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode605, "10");		
 
 
-				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "False", "100"
+				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 160, 20, 2, 0, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode605","","50","a5994f4f-99b6-42c9-9506-1579b4ef175d","c7576af6-9d8a-4564-83f5-231c49082691");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode605, "False", "AdvCode", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvCode, "AdvApplyBE");
 

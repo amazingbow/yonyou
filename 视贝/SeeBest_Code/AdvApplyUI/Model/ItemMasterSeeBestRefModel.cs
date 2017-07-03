@@ -241,7 +241,7 @@ namespace ItemMasterSeeBestRef
 	{
 		#region Constructor
 		public cRefDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
+			: base("DefaultFilter",view,@"Org.ID=#Context.OrgID#",@" order by Code asc")
 		{
 			InitClass();
 		}

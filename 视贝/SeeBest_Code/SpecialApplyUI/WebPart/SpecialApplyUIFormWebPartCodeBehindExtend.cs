@@ -146,6 +146,42 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 
             BtnUndoApprove_Click_DefaultImpl(sender, e);
+        }
+
+        //MenuDocClose_Click...
+        private void MenuDocClose_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
+                {
+                    this.Model.SpecialApplyBE.FocusedRecord.IsClose = true;
+                }
+            }
+
+            BtnSave_Click_DefaultImpl(sender, e);
+
+            //MenuDocClose_Click_DefaultImpl(sender, e);
+        }
+
+        //MenuDocOpen_Click...
+        private void MenuDocOpen_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+            if (this.Model.SpecialApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
+                {
+                    this.Model.SpecialApplyBE.FocusedRecord.IsClose = false;
+                }
+            }
+
+            BtnSave_Click_DefaultImpl(sender, e);
+
+            //MenuDocOpen_Click_DefaultImpl(sender, e);
         }	
 		 
 				//BtnFind_Click...
@@ -257,7 +293,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 		#region 自定义数据初始化加载和数据收集
 		private void OnLoadData_Extend(object sender)
-		{	
+		{
 			OnLoadData_DefaultImpl(sender);
 		}
 		private void OnDataCollect_Extend(object sender)
@@ -352,6 +388,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                     this.Model.SpecialApplyBE.FocusedRecord.DocNo = System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
                 }
 
+                if (this.Model.SpecialApplyBE_SpecialSizeBE.Records.Count == 0)
+                {
+                    SpecialApplyBE_SpecialSizeBERecord record = this.Model.SpecialApplyBE_SpecialSizeBE.AddNewUIRecord();
+                    record.SetParentRecord(this.Model.SpecialApplyBE.FocusedRecord);
+                }
+
             }
         }
 
@@ -406,17 +448,71 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                 {
                     this.BtnDelete.Enabled = true;
                     this.BtnCopy.Enabled = true;
+                    if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                    {
+                        if (this.Model.SpecialApplyBE.FocusedRecord.IsClose == true)
+                        {
+                            this.MenuDocClose.Enabled = false;
+                            this.MenuDocOpen.Enabled = true;
+                            this.BtnSave.Enabled = false;
+                            this.BtnCancel.Enabled = false;
+                            this.BtnDelete.Enabled = false;
+                            this.BtnCopy.Enabled = false;
+                            this.BtnUndoApprove.Enabled = false;
+                            this.SpecialApplyDocType154.Enabled = false;
+                            this.ApplyDept71.Enabled = false;
+                            this.Phone155.Enabled = false;
+                            this.Applier86.Enabled = false;
+                            this.QQ149.Enabled = false;
+                            this.CustName104.Enabled = false;
+                            this.CustPhone77.Enabled = false;
+                            this.CustConterName149.Enabled = false;
+                            this.CustAddress121.Enabled = false;
+                            this.SpecialDesignStyle119.Enabled = false;
+                            this.DataGrid14.Enabled = false;
+                        }
+                        else
+                        {
+                            this.MenuDocClose.Enabled = true;
+                            this.MenuDocOpen.Enabled = false;
+                            this.BtnSave.Enabled = true;
+                            this.BtnCancel.Enabled = true;
+                            this.BtnDelete.Enabled = true;
+                            this.BtnCopy.Enabled = true;
+                            this.BtnUndoApprove.Enabled = true;
+                            this.SpecialApplyDocType154.Enabled = true;
+                            this.ApplyDept71.Enabled = true;
+                            this.Phone155.Enabled = true;
+                            this.Applier86.Enabled = true;
+                            this.QQ149.Enabled = true;
+                            this.CustName104.Enabled = true;
+                            this.CustPhone77.Enabled = true;
+                            this.CustConterName149.Enabled = true;
+                            this.CustAddress121.Enabled = true;
+                            this.SpecialDesignStyle119.Enabled = true;
+                            this.DataGrid14.Enabled = true;
+                        }
+                    }
+                    else
+                    {
+                        this.MenuDocClose.Enabled = false;
+                        this.MenuDocOpen.Enabled = false;
+                    }
                 }
                 else
                 {
                     this.BtnDelete.Enabled = false;
                     this.BtnCopy.Enabled = false;
+                    this.MenuDocClose.Enabled = false;
+                    this.MenuDocOpen.Enabled = false;
                 }
             }
             else
             {
                 this.BtnDelete.Enabled = false;
                 this.BtnCopy.Enabled = false;
+                this.MenuDocClose.Enabled = false;
+                this.MenuDocOpen.Enabled = false;
             }
 
 		}
