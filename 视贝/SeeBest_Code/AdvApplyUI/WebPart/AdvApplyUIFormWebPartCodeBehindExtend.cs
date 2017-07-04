@@ -85,12 +85,19 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         //BtnSave_Click...
         private void BtnSave_Click_Extend(object sender, EventArgs e)
         {
-            var errorMsg = CheckAdvDisplayItem();
-            if (!string.IsNullOrEmpty(errorMsg))
-            {
-                throw new Exception(errorMsg);
-            }
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApplyBE.FocusedRecord.ID > 0L)
+                {
+                    DataParamList lst1 = new DataParamList();
+                    lst1.Add(DataParamFactory.CreateInput("@AdvApplyBEID", this.Model.AdvApplyBE.FocusedRecord.ID, System.Data.DbType.Int64));
+
+                    DataAccessor.RunSQL(DataAccessor.GetConn(), "delete Cust_SeeBest_AdvAbout where AdvApplyBE=@AdvApplyBEID", lst1);
+
+                }
+            }
+            this.Model.AdvApplyBE_AdvAboutBE.Clear();
             foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
             {
                 if (item.IsSelected.Value)
@@ -118,6 +125,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     newRecord.SetParentRecord(this.Model.AdvApplyBE.FocusedRecord);
                 }
             }
+            var errorMsg = CheckAdvDisplayItem();
+            if (!string.IsNullOrEmpty(errorMsg))
+            {
+                throw new Exception(errorMsg);
+            }
             BtnSave_Click_DefaultImpl(sender, e);
         }
 
@@ -128,6 +140,33 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnCancel_Click_DefaultImpl(sender, e);
+            #region 列表默认值
+            this.Model.AdvCarrierList.Clear();
+            GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
+            proxy.ValueCode = "Z106";
+            var data = proxy.Do();
+            foreach (var item in data)
+            {
+                var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
+                newRecord.Code = item.Code;
+                newRecord.Name = item.Name;
+                newRecord.Description = item.Description;
+                newRecord.IsSelected = false;
+                if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (about.Code == item.Code)
+                        {
+                            newRecord.IsSelected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            AssignDefaultValues();
         }
 
         //BtnNew_Click...
@@ -137,6 +176,33 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnNew_Click_DefaultImpl(sender, e);
+            #region 列表默认值
+            this.Model.AdvCarrierList.Clear();
+            GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
+            proxy.ValueCode = "Z106";
+            var data = proxy.Do();
+            foreach (var item in data)
+            {
+                var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
+                newRecord.Code = item.Code;
+                newRecord.Name = item.Name;
+                newRecord.Description = item.Description;
+                newRecord.IsSelected = false;
+                if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (about.Code == item.Code)
+                        {
+                            newRecord.IsSelected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            AssignDefaultValues();
         }
 
         //BtnDelete_Click...
@@ -145,7 +211,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
 
-            BtnDelete_Click_DefaultImpl(sender, e);
+            
             if (this.Model.AdvApplyBE.FocusedRecord != null)
             {
                 if (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 2)
@@ -153,6 +219,34 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     throw new Exception("这张专柜申请单已经被审核，不能删除！");
                 }
             }
+            BtnDelete_Click_DefaultImpl(sender, e);
+            #region 列表默认值
+            this.Model.AdvCarrierList.Clear();
+            GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
+            proxy.ValueCode = "Z106";
+            var data = proxy.Do();
+            foreach (var item in data)
+            {
+                var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
+                newRecord.Code = item.Code;
+                newRecord.Name = item.Name;
+                newRecord.Description = item.Description;
+                newRecord.IsSelected = false;
+                if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (about.Code == item.Code)
+                        {
+                            newRecord.IsSelected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            AssignDefaultValues();
         }
 
         //BtnCopy_Click...
@@ -210,6 +304,32 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnFind_Click_DefaultImpl(sender, e);
+
+            #region 列表默认值
+            this.Model.AdvCarrierList.Clear();
+            GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
+            proxy.ValueCode = "Z106";
+            var data = proxy.Do();
+            foreach (var item in data)
+            {
+                var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
+                newRecord.Code = item.Code;
+                newRecord.Name = item.Name;
+                newRecord.Description = item.Description;
+                newRecord.IsSelected = false;
+                if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (about.Code == item.Code)
+                        {
+                            newRecord.IsSelected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            #endregion
         }
 
         //BtnList_Click...
@@ -219,6 +339,31 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
             BtnList_Click_DefaultImpl(sender, e);
+            #region 列表默认值
+            this.Model.AdvCarrierList.Clear();
+            GetValueSetInfoProxy proxy = new GetValueSetInfoProxy();
+            proxy.ValueCode = "Z106";
+            var data = proxy.Do();
+            foreach (var item in data)
+            {
+                var newRecord = this.Model.AdvCarrierList.AddNewUIRecord();
+                newRecord.Code = item.Code;
+                newRecord.Name = item.Name;
+                newRecord.Description = item.Description;
+                newRecord.IsSelected = false;
+                if (this.Model.AdvApplyBE_AdvAboutBE.Records.Count > 0)
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord about in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (about.Code == item.Code)
+                        {
+                            newRecord.IsSelected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            #endregion
         }
 
         //BtnFlow_Click...
@@ -345,18 +490,18 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private string CheckAdvDisplayItem()
         {
             string errorMsg = string.Empty;
-            if (this.Model.AdvApplyBE.FocusedRecord.BMArea > 4)
+            if (this.Model.AdvApplyBE.FocusedRecord.BMArea >= 4)
             {
                 if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 2)
                 {
-                    errorMsg = "版面面积大于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+                    errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
                     return errorMsg;
                 }
                 foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
                 {
                     if (item.Code != "001" && item.Code != "002" && item.Code != "003")
                     {
-                        errorMsg = "版面面积大于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+                        errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
                         return errorMsg;
                     }
                 }

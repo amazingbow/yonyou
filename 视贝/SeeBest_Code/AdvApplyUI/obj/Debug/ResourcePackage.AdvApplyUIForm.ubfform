@@ -1,4 +1,4 @@
-<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" AllowPersonalization="False" ChildLabelWidth="56" ChildRefWidth="20" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="5" GridTopMargin="0" Height="728" IsAutoSize="True" IsClientExtend="False" IsMainForm="True" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1024" X="10" Y="10">
+<View ID="e64f3280-ab80-447f-83b3-41dfdbad9053" AllowPersonalization="False" ChildLabelWidth="56" ChildRefWidth="20" DisplayName="广告申请单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="5" GridColumnCount="1" GridColumnSpace="24" GridLeftMargin="0" GridRightMargin="0" GridRowCount="4" GridRowSpace="5" GridTopMargin="0" Height="728" IsAutoSize="True" IsClientExtend="False" IsMainForm="True" LayoutType="GridBag" Name="AdvApplyUIForm" Namespace="UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel" TabStop="False" TemplateCode="UI_MutilCardMutilGrid" TemplateType="CustomTemplate" UIModelID="ae8c587c-5655-44f8-afad-1376a8ba10ac" URI=".UI_多卡多表WebPart" ViewID="4983" Width="1024" X="10" Y="10">
   <Columns>
     <Column Fixed="False" Name="Column0" Type="Title" Width="1000" />
   </Columns>
@@ -164,8 +164,51 @@
         <UIFilterBar Name="ReferenceFilter" />
         <Events />
       </Reference>
+      <Line ID="1626608f-ddc5-4dc9-93da-5cd781c26a58" DisplayName="广告体现项目" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="6" Height="20" Name="Line14" TabIndex="33" TabStop="True" Width="950" X="10" Y="160" />
+      <DataGrid ID="ba9d71a9-e6a2-46d3-8c8f-5433adc9e60e" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="8" GridWidth="12" GridX="0" GridY="7" HasSum="False" Height="195" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="34" TabStop="True" Width="720" X="10" Y="185">
+        <Events />
+        <Header ID="744eefc1-8433-4fd2-b135-76bda52e052d" Name="Header11">
+          <HeaderRow ID="c4947f08-90b2-427a-8ab7-33cab1dbe551" Name="DefaultRow">
+            <HeaderCell ID="3fe3cb41-2de7-4658-ad24-44dcd33c5c1d" ColSpan="1" Name="HeaderCell41" OwnerColName="ID71" RowSpan="1" />
+            <HeaderCell ID="08995dff-7415-4b78-9b28-2ed3f04ceb89" ColSpan="1" Name="HeaderCell42" OwnerColName="SysVersion96" RowSpan="1" />
+            <HeaderCell ID="137ee1f1-32d4-4022-8659-2ec70a9e4399" ColSpan="1" Name="HeaderCell43" OwnerColName="IsSelected1" RowSpan="1" />
+            <HeaderCell ID="49ce2650-5087-46ef-abf2-45a9e46725f2" ColSpan="1" Name="HeaderCell44" OwnerColName="Code1" RowSpan="1" />
+            <HeaderCell ID="f5e66341-c5da-4357-8a42-9c048d419692" ColSpan="1" Name="HeaderCell45" OwnerColName="Name1" RowSpan="1" />
+            <HeaderCell ID="cd297f87-24fc-4835-af44-cd027d4eb7a5" ColSpan="1" Name="HeaderCell46" OwnerColName="Description1" RowSpan="1" />
+          </HeaderRow>
+        </Header>
+        <UIFilterBar Name="LocateBar" />
+        <Columns>
+          <NumberColumn ID="954716df-4feb-4a0d-9952-e0ee07bbfdd4" DefaultValue="" DisplayFormat="" Enabled="True" Help="Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID71" NPos="1" Point="0" UIFieldID="ID" UIViewID="AdvCarrierList" Visible="False">
+            <PrecisionBind />
+            <RoundRuleBind />
+            <ValueOfRoundByValueBind />
+            <CurrencyType />
+            <Events />
+          </NumberColumn>
+          <NumberColumn ID="22f677a8-5057-45cc-a197-bd93ce52d092" DefaultValue="" DisplayFormat="" Enabled="True" Help="Sys.SysVersion" IsNull="False" IsProperty="False" IsSequence="False" Name="SysVersion96" NPos="2" Point="0" UIFieldID="SysVersion" UIViewID="AdvCarrierList" Visible="False">
+            <PrecisionBind />
+            <RoundRuleBind />
+            <ValueOfRoundByValueBind />
+            <CurrencyType />
+            <Events />
+          </NumberColumn>
+          <CheckBoxColumn ID="8547daa1-3697-4a01-a9fa-0fdfa7627ef6" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="Misc.是否被选用" IsNull="True" IsProperty="False" IsSequence="False" Name="IsSelected1" NPos="3" Point="0" UIFieldID="IsSelected" UIViewID="AdvCarrierList" Visible="True" Width="120">
+            <Events />
+          </CheckBoxColumn>
+          <TextBoxColumn ID="96049b61-aa2a-4182-8703-453e68bbd055" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="Code1" NPos="4" Point="0" TextAlign="Left" UIFieldID="Code" UIViewID="AdvCarrierList" Visible="True" Width="120">
+            <Events />
+          </TextBoxColumn>
+          <TextBoxColumn ID="b150356a-f08e-47d2-a668-a791dcc713bb" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="Name1" NPos="5" Point="0" TextAlign="Left" UIFieldID="Name" UIViewID="AdvCarrierList" Visible="True" Width="150">
+            <Events />
+          </TextBoxColumn>
+          <TextBoxColumn ID="788cc7c2-2755-494a-8be1-4807b399ec95" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.简码描述" IsNull="True" IsProperty="False" IsSequence="False" Name="Description1" NPos="6" Point="0" TextAlign="Left" UIFieldID="Description" UIViewID="AdvCarrierList" Visible="True" Width="120">
+            <Events />
+          </TextBoxColumn>
+        </Columns>
+      </DataGrid>
     </TabPage>
-    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="30" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
+    <TabPage ID="c73192be-1408-46bf-9ba8-f74e7a93701c" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="广告信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="20" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage32" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
         <Column Fixed="True" Name="Column0" Type="Title" Width="100" />
         <Column Fixed="True" Name="Column1" Type="Spacing" Width="10" />
@@ -204,16 +247,6 @@
         <Row Fixed="False" Height="20" Name="Row17" />
         <Row Fixed="False" Height="20" Name="Row18" />
         <Row Fixed="False" Height="20" Name="Row19" />
-        <Row Fixed="False" Height="20" Name="Row20" />
-        <Row Fixed="False" Height="20" Name="Row21" />
-        <Row Fixed="False" Height="20" Name="Row22" />
-        <Row Fixed="False" Height="20" Name="Row23" />
-        <Row Fixed="True" Height="20" Name="Row24" />
-        <Row Fixed="True" Height="19" Name="Row25" />
-        <Row Fixed="True" Height="20" Name="Row26" />
-        <Row Fixed="True" Height="20" Name="Row27" />
-        <Row Fixed="True" Height="20" Name="Row28" />
-        <Row Fixed="False" Height="20" Name="Row29" />
       </Rows>
       <Line ID="005cdc8b-0b79-4e7c-a684-d4467f18f419" DisplayName="尺寸信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="0" Height="20" Name="Line3" TabIndex="0" TabStop="True" Width="950" X="10" Y="10" />
       <Label ID="80707eec-a117-49e6-a387-c50d5728c412" Enabled="True" GridHeight="1" GridWidth="1" GridX="8" GridY="1" Height="20" IsNull="True" IsSequence="False" Name="lblQty693" RelationControl="Qty693" TabIndex="3" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="490" Y="35">
@@ -347,7 +380,6 @@
         <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
         <CurrencyType Name="CurrencyType8" />
       </NumberControl>
-      <Line ID="e91ee868-d4e6-4df8-96a1-0bec6f755371" DisplayName="广告体现项目" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="18" Height="20" Name="Line7" TabIndex="33" TabStop="True" Width="950" X="10" Y="460" />
       <Line ID="6cd0b020-c5ce-46cc-8359-942d05f2e65e" DisplayName="设计信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="15" GridX="0" GridY="5" Height="20" Name="Line12" TabIndex="23" TabStop="True" Width="950" X="10" Y="135" />
       <Label ID="558b31da-225f-42fb-9b44-f13a9eef6a81" Enabled="True" GridHeight="1" GridWidth="1" GridX="0" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblAdvDisplayType588" RelationControl="AdvDisplayType588" TabIndex="35" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="10" Y="160">
         <Events />
@@ -358,9 +390,9 @@
         <Events />
         <RelationControls />
       </DropDownList>
-      <Image ID="dd51941f-960e-4429-9793-bed30acc1903" DisplayName="横版版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="5" GridWidth="5" GridX="0" GridY="7" Height="120" ImageUrl="/Images/CustU9/1.bmp" Name="Image12" TabIndex="41" TabStop="True" Width="340" X="10" Y="185" />
-      <Image ID="370eb641-6b70-4bf0-9d17-b542d33bd366" DisplayName="竖版版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="11" GridWidth="1" GridX="6" GridY="7" Height="270" ImageUrl="/Images/CustU9/2.bmp" Name="Image13" TabIndex="42" TabStop="True" Width="120" X="360" Y="185" />
-      <Image ID="d7381f91-0dc3-4d96-85c0-e16e2d33cb35" DisplayName="方形版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="10" GridWidth="4" GridX="8" GridY="7" Height="245" ImageUrl="/Images/CustU9/3.bmp" Name="Image14" TabIndex="43" TabStop="True" Width="240" X="490" Y="185" />
+      <Image ID="dd51941f-960e-4429-9793-bed30acc1903" DisplayName="横版版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="4" GridWidth="3" GridX="2" GridY="7" Height="95" ImageUrl="/Images/CustU9/1.bmp" Name="Image12" TabIndex="41" TabStop="True" Width="230" X="120" Y="185" />
+      <Image ID="370eb641-6b70-4bf0-9d17-b542d33bd366" DisplayName="竖版版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="7" GridWidth="1" GridX="6" GridY="7" Height="170" ImageUrl="/Images/CustU9/2.bmp" Name="Image13" TabIndex="42" TabStop="True" Width="120" X="360" Y="185" />
+      <Image ID="d7381f91-0dc3-4d96-85c0-e16e2d33cb35" DisplayName="方形版面" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="7" GridWidth="3" GridX="8" GridY="7" Height="170" ImageUrl="/Images/CustU9/3.bmp" Name="Image14" TabIndex="43" TabStop="True" Width="230" X="490" Y="185" />
       <Label ID="2c670da9-0242-4d8c-9000-943d86e16645" Enabled="True" GridHeight="1" GridWidth="1" GridX="4" GridY="6" Height="20" IsNull="True" IsSequence="False" Name="lblAdvDispInfo111851" RelationControl="AdvDispInfo111851" TabIndex="44" TabStop="True" TitleAlign="Right" TitleLocation="Left" UIFieldID="" UIViewID="" Visible="True" Width="100" X="250" Y="160">
         <Events />
         <RelationControls />
@@ -397,40 +429,6 @@
         <UIFilterBar Name="ReferenceFilter" />
         <Events />
       </Reference>
-      <DataGrid ID="5d05e8fd-c0a4-4d04-ba39-fb75044c6573" AllowAddRow="False" AllowDelRow="False" AllowInsertRow="False" AutoEditModel="False" EditStatus="edit" Enabled="True" GridHeight="9" GridWidth="7" GridX="0" GridY="19" HasSum="False" Height="219" Name="DataGrid0" PageSize="20" Paging="True" ShowEditBar="False" TabIndex="50" TabStop="True" Width="470" X="10" Y="485">
-        <Events />
-        <Header ID="cf867cec-698e-46a0-b9b5-c36c768a5a16" Name="Header0">
-          <HeaderRow ID="978e3ada-2592-409a-a830-7691a7cc63ff" Name="DefaultRow">
-            <HeaderCell ID="ab1274a5-2fd7-48e2-a246-609a45103d11" ColSpan="1" Name="HeaderCell1" OwnerColName="IsSelected0" RowSpan="1" />
-            <HeaderCell ID="085e0874-8300-409e-872f-500a54605a02" ColSpan="1" Name="HeaderCell2" OwnerColName="Code0" RowSpan="1" />
-            <HeaderCell ID="c0c859bf-3d06-4f62-bf3c-ecf5006056c0" ColSpan="1" Name="HeaderCell3" OwnerColName="Name0" RowSpan="1" />
-            <HeaderCell ID="a68014e4-c44d-47d9-b65f-6e8e563a89e2" ColSpan="1" Name="HeaderCell4" OwnerColName="Description0" RowSpan="1" />
-            <HeaderCell ID="dd90b6f8-9578-4f67-a307-49e306150ff4" ColSpan="1" Name="HeaderCell5" OwnerColName="ID72" RowSpan="1" />
-          </HeaderRow>
-        </Header>
-        <UIFilterBar Name="LocateBar" />
-        <Columns>
-          <CheckBoxColumn ID="73402eab-3423-489c-a318-49719a49187f" DefaultValue="false" DisplayFormat="1" Enabled="True" Help="Misc.是否被选用" IsNull="True" IsProperty="False" IsSequence="False" Name="IsSelected0" NPos="1" Point="0" UIFieldID="IsSelected" UIViewID="AdvCarrierList" Visible="True" Width="120">
-            <Events />
-          </CheckBoxColumn>
-          <TextBoxColumn ID="4220e31d-af6c-46b4-b4bd-e93305c9e107" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.编码" IsNull="True" IsProperty="False" IsSequence="False" Name="Code0" NPos="2" Point="0" TextAlign="Left" UIFieldID="Code" UIViewID="AdvCarrierList" Visible="True">
-            <Events />
-          </TextBoxColumn>
-          <TextBoxColumn ID="7a02df4f-8d7d-4227-80a5-63923d6452f6" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.名称" IsNull="True" IsProperty="False" IsSequence="False" Name="Name0" NPos="3" Point="0" TextAlign="Left" UIFieldID="Name" UIViewID="AdvCarrierList" Visible="True">
-            <Events />
-          </TextBoxColumn>
-          <TextBoxColumn ID="45ebdc50-cb71-421e-bb41-ee7f6a008df9" DefaultValue="" DisplayFormat="50" Enabled="False" Help="Misc.简码描述" IsNull="True" IsProperty="False" IsSequence="False" Name="Description0" NPos="4" Point="0" TextAlign="Left" UIFieldID="Description" UIViewID="AdvCarrierList" Visible="True">
-            <Events />
-          </TextBoxColumn>
-          <NumberColumn ID="d88aa9e2-475c-4e0d-b52a-9ad7c3f5b8f2" DefaultValue="" DisplayFormat="" Enabled="True" Help="Key.ID" IsNull="False" IsProperty="False" IsSequence="True" Name="ID72" NPos="5" Point="0" UIFieldID="ID" UIViewID="AdvCarrierList" Visible="False">
-            <PrecisionBind Name="PrecisionBind11" />
-            <RoundRuleBind Name="RoundRuleBind11" />
-            <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind11" />
-            <CurrencyType Name="CurrencyType11" />
-            <Events />
-          </NumberColumn>
-        </Columns>
-      </DataGrid>
     </TabPage>
     <TabPage ID="036fb0c2-cef8-43eb-88da-2f78d09f64fb" ChildLabelWidth="60" ChildRefWidth="20" DisplayName="客户排版文字信息" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridBottomMargin="10" GridColumnCount="15" GridColumnSpace="0" GridLeftMargin="10" GridRightMargin="10" GridRowCount="18" GridRowSpace="5" GridTopMargin="10" Height="581" Name="TabPage33" TabStop="False" Width="992" X="0" Y="0">
       <Columns>
