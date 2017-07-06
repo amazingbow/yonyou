@@ -128,6 +128,10 @@ namespace SpecialApplyCustomerRef
 		{
 			get { return this.Fields["DescFlexField_PrivateDescSeg14"]; }
 		}
+		public IUIField FieldDescFlexField_PrivateDescSeg11
+		{
+			get { return this.Fields["DescFlexField_PrivateDescSeg11"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -147,6 +151,7 @@ namespace SpecialApplyCustomerRef
 			UIModelRuntimeFactory.AddNewUIField(this,"Description", typeof(String), true,"","System.String", "Description", true,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","9bc42768-5335-405a-b0b4-bd6292c28e13");
 			UIModelRuntimeFactory.AddNewUIField(this,"Org_Name", typeof(String), true,"","System.String", "Org.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b0e87a4e-b4c2-4e0e-9497-28c41acee24c");
 			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg14", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg14", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d48db892-f7f5-4ab4-b4d8-c25ae0526bf2");
+			UIModelRuntimeFactory.AddNewUIField(this,"DescFlexField_PrivateDescSeg11", typeof(String), true,"","System.String", "DescFlexField.PrivateDescSeg11", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","92c05269-1b5b-4bb7-8502-b68624fe3886");
 
 
 			this.CurrentFilter = new cRefDefaultFilterFilter(this);
@@ -285,6 +290,19 @@ namespace SpecialApplyCustomerRef
 			}
 			set{
 				this[this.uiviewcRef.FieldDescFlexField_PrivateDescSeg14] = value;
+			}
+		}
+		
+		
+		public  String DescFlexField_PrivateDescSeg11
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldDescFlexField_PrivateDescSeg11] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewcRef.FieldDescFlexField_PrivateDescSeg11);
+			}
+			set{
+				this[this.uiviewcRef.FieldDescFlexField_PrivateDescSeg11] = value;
 			}
 		}
 		#endregion

@@ -704,7 +704,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		}
 
 		#endregion 
-			
+		
         #region Grid控件DataGrid0的分页事件	
         void UFGridDataGrid0_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
         {
@@ -720,7 +720,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridCustomFilter",this.Action,this.DataGrid0,e);
         }
         #endregion
-		
+			
         #endregion
         
     }
