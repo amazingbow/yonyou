@@ -258,6 +258,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         //BtnGetApplyInfo_Click...
         private void BtnGetApplyInfo_Click_Extend(object sender, EventArgs e)
         {
+            BtnGetApplyInfo_Click_DefaultImpl(sender, e);
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount > 0)
             {
@@ -291,14 +292,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                         record.ApplyAdvCode = item.ApplyAdvCode;
                         record.AdvCarrier = item.AdvCarrier;
                         record.OtherInfo = item.ApplyId;
+                        //record.BuildStatus=
+                        record.SetParentRecord(this.Model.AdvApproveBE.FocusedRecord);
                     }
                 }
                 else
                 {
                     throw new Exception("请输入办事处，开始日期，结束日期！");
                 }
+
+                this.DataGrid0.PageCount=this.Model.AdvApproveBE_AdvApproveLine.RecordCount;
+                this.DataGrid0.CollectData();
+                this.DataGrid0.BindData();
             }
-            BtnGetApplyInfo_Click_DefaultImpl(sender, e);
         }
         #region 自定义数据初始化加载和数据收集
         private void OnLoadData_Extend(object sender)
@@ -336,6 +342,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             }
             #endregion
             //业务日期赋默认值
+            if (this.Model.AdvApproveBE.FocusedRecord == null)
+                this.Model.AdvApproveBE.FocusedRecord = this.Model.AdvApproveBE.AddNewUIRecord();
             if (this.Model.AdvApproveBE.FocusedRecord.BusinessDate == null || this.Model.AdvApproveBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
             {
                 this.Model.AdvApproveBE.FocusedRecord.BusinessDate = System.DateTime.Now;

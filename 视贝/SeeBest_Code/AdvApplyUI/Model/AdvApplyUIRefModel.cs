@@ -277,7 +277,7 @@ namespace AdvApplyUIRef
 	{
 		#region Constructor
 		public cRefDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"ApplyDept.DescFlexField.PrivateDescSeg14=='#Context.UserCode#' ",@" order by AdvCode asc")
+			: base("DefaultFilter",view,@"((ApplyDept.DescFlexField.PrivateDescSeg14='#Context.UserCode#' and ApplyDept.Org.ID=#Context.OrgID# and ('#Context.UserCode#' like '%BSC%') ) or (('#Context.UserCode#' not like '%BSC%') and ApplyDept.Org.ID=#Context.OrgID#)) and (Org.ID=#Context.OrgID#) ",@" order by AdvCode asc")
 		{
 			InitClass();
 		}

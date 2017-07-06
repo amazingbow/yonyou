@@ -61,8 +61,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             #region 获取4位码
             this.Flow4Bit = 100;
             string sql = "select top 1 Flow4Bit  from Cust_SeeBest_AdvApply where ApplyDept=" + this.ApplyDept.ID + " order by CreatedOn,Flow4Bit desc ";
-            DataSet data = null;
-            DataAccessor.RunSQL(DatabaseManager.CurrentConnection, sql, null, out data);
+            DataSet data = new DataSet();
+            DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out data);
             if (data.Tables.Count > 0)
             {
                 if (data.Tables[0].Rows.Count > 0)

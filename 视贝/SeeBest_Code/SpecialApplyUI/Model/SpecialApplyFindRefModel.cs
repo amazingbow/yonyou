@@ -120,6 +120,10 @@ namespace SpecialApplyFindRef
 		{
 			get { return this.Fields["Status"]; }
 		}
+		public IUIField FieldIsClose
+		{
+			get { return this.Fields["IsClose"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -137,6 +141,7 @@ namespace SpecialApplyFindRef
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Name", typeof(String), true,"","System.String", "ApplyDept.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","d6c02561-78e2-469a-abbc-b8d1a98f266b");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","882d216a-a20a-41fe-8ace-6e496d39b977");
 			UIModelRuntimeFactory.AddNewUIField(this,"Status", typeof(Int32), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum", "Status", true,true, false, "",false,(UIFieldType)2,"8afc5e31-561f-4522-9d38-9deb778a04ba","7dc39d72-8b4e-4e4d-b883-236c69d8c514");
+			UIModelRuntimeFactory.AddNewUIField(this,"IsClose", typeof(Boolean), true,"","System.Boolean", "IsClose", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","16716bbb-d7a4-4671-85d3-998bd0bfc4c2");
 
 
 			this.CurrentFilter = new cRefDefaultFilterFilter(this);
@@ -249,6 +254,19 @@ namespace SpecialApplyFindRef
 			}
 			set{
 				this[this.uiviewcRef.FieldStatus] = value;
+			}
+		}
+		
+		
+		public  Boolean? IsClose
+		{
+			get{
+				//object value = this[this.uiviewcRef.FieldIsClose] ;
+				//return (Boolean?)value;
+				return GetValue<Boolean?>(this.uiviewcRef.FieldIsClose);
+			}
+			set{
+				this[this.uiviewcRef.FieldIsClose] = value;
 			}
 		}
 		#endregion

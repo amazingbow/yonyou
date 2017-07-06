@@ -35,6 +35,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -61,7 +62,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	     			
 	     							SpecialDesignStyle= 0; 			     			
 	     			
-	     							Status= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 		
+	     							Status= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							IsClose=false; 
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -454,10 +456,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 关闭
+		/// 专柜申请单.Misc.关闭
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Boolean m_isClose ;
+		public System.Boolean IsClose
+		{
+			get	
+			{	
+				return m_isClose  ;
+			}
+			set	
+			{	
+				m_isClose = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																
+																	
 		#endregion 		
 	}	
 

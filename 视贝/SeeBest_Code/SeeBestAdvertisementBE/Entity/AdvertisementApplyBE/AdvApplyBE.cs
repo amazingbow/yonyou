@@ -493,7 +493,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 联系电话 (该属性不可为空,且无默认值)
+			/// 联系电话 (该属性可为空,且无默认值)
 			/// 广告申请单.Misc.联系电话
 			/// </summary>
 			/// <value></value>
@@ -1278,7 +1278,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 联系电话 (该属性不可为空,且无默认值)
+		/// 联系电话 (该属性可为空,且无默认值)
 		/// 广告申请单.Misc.联系电话
 		/// </summary>
 		/// <value></value>
@@ -3235,13 +3235,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
 					ApplyDept_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
 				this.PropertyExceptions.Add(ApplyDept_Exception);
-			}
-
-			if (string.IsNullOrEmpty((string)base.GetValue("Phone"))){
-				UFSoft.UBF.Business.AttributeInValidException Phone_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","Phone","65c3a0ee-211c-453c-98db-637fdcb65dea");
-				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
-					Phone_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
-				this.PropertyExceptions.Add(Phone_Exception);
 			}
 
 

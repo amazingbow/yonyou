@@ -111,6 +111,8 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         IUFFldFlexFieldPicker FlexFieldPicker0;
         IUFLabel lblApplyDept233;
         IUFFldReference ApplyDept233;
+        IUFLine Line14;
+        IUFDataGrid DataGrid0;
         IUFTabPage TabPage32;
         IUFLine Line3;
         IUFLabel lblQty693;
@@ -133,7 +135,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         IUFFldNumberControl DZThick224;
         IUFLabel lblDZArea338;
         IUFFldNumberControl DZArea338;
-        IUFLine Line7;
         IUFLine Line12;
         IUFLabel lblAdvDisplayType588;
         IUFFldDropDownList AdvDisplayType588;
@@ -146,7 +147,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         IUFFldDropDownList AdvDispInfo222913;
         IUFLabel lblAdvCarrier146;
         IUFFldReference AdvCarrier146;
-        IUFDataGrid DataGrid0;
         IUFTabPage TabPage33;
         IUFLine Line8;
         IUFFldTextBox AdvMemo802;
@@ -254,12 +254,12 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			((PopMenuItem)this.CloseClick).MethodName = "CloseClick_Click";				
 				
 
-			
+		
 			//Grid控件的分页事件				
 			((UFWebDataGridAdapter)this.DataGrid0).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid0_GridMakePageEventHandler);
              //Grid控件的客户化筛选，定位事件
             ((UFWebDataGridAdapter)this.DataGrid0).GridCustomFilterHandler += new GridCustomFilterDelegate(UFGridDataGrid0_GridCustomFilterHandler);
-		
+			
             AfterEventBind();
         }
         #endregion            
@@ -357,7 +357,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApplyUIForm",true,1024,728);
             CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 4, 0, 5, 0, 0, 0, 5);
 			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 5,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(30,bool.Parse("True")),new GridRowDef(611,bool.Parse("False")),new GridRowDef(32,bool.Parse("True")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 5,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(36,bool.Parse("True")),new GridRowDef(611,bool.Parse("False")),new GridRowDef(32,bool.Parse("True")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -654,21 +654,36 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				this.ApplyDept233 = UIControlBuilder.BuilderRefrenceControl(_UFTabPage,"ApplyDept233",false,true, true,120, 20, 2, 1, 1, 1, "100","28",false,false,true,"lblApplyDept233","4173579c-5182-48af-9c2b-1906636a232e","76ee49ff-bd7f-4123-9561-df213bf5424d");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ApplyDept233, "False", "ApplyDept", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldApplyDept, "AdvApplyBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.ApplyDept233,"", 580,408, "","","", null,null);
+			UIControlBuilder.SetReferenceControlRefInfo(this.ApplyDept233,"874cc1b6-f844-486c-b3f5-f8cca21fe1e0", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldApplyDept_Code,this.Model.AdvApplyBE.FieldApplyDept_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
+			ScriptBuilder.BuildReferenceControlOuputScript(this.ApplyDept233,"ApplyDept233",new ReferenceOutputParam[]{new ReferenceOutputParam("ApplyDept233","ID","Key"),new ReferenceOutputParam("ApplyDept233","Code","Value"),new ReferenceOutputParam("ApplyDept233","Name","Text"),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Description",""),new ReferenceOutputParam("","Org_Name",""),new ReferenceOutputParam("","DescFlexField_PrivateDescSeg14",""),});
 				
 
 		
 			UIControlBuilder.BuilderUFControl(this.ApplyDept233, "28");		
 		 
 
+				this.Line14 = UIControlBuilder.BuilderUFLine(_UFTabPage, "Line14", 950, "Horizontal", "True", 950, 20, 0, 6, 15, 1, "100","1626608f-ddc5-4dc9-93da-5cd781c26a58","1626608f-ddc5-4dc9-93da-5cd781c26a58");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.Line14, "33");		
+
+
+	
+			_BuilderControl_DataGrid0(_UFTabPage);
+
+		
+			UIControlBuilder.BuilderUFControl(this.DataGrid0, "34");		
+
+
 
 																									
 			this.ApplyDept233.IsMultiOrg  = false ;
 			this.lblApplyDept233.SetMultiOrgInfo(this.ApplyDept233,false);
 			
-
+		
 
             this.TabPage25 = _UFTabPage;
             return _UFTabPage;
@@ -676,12 +691,67 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				
 
+				
+
+
+
+
+
+       
+        private void _BuilderControl_DataGrid0(IUFContainer container)
+        {
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, false,false,false,false,true,20,false, false) ;
+  			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "34");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 720, 195, 0, 7, 12, 8, "100");
+			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvCarrierList, "AdvCarrierList", "", null, 20, "");
+			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
+			_UFGrid.AllowSelectAllPage=false;
+			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
+		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
+            this.DataGrid0 = _UFGrid;
+            container.Controls.Add(_UFGrid);
+
+
+
+			IUFDataGridColumn column ;
+			GridColumn gridColumn ;
+	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID71","NumberColumnModel", "", 0,this.Model.AdvCarrierList.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, false, 7, 100, "",true, false,"","55a5e707-4f40-4ca6-a5c0-f42feb0e3f93","55a5e707-4f40-4ca6-a5c0-f42feb0e3f93","954716df-4feb-4a0d-9952-e0ee07bbfdd4");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SysVersion96","NumberColumnModel", "", 0,this.Model.AdvCarrierList.Fields["SysVersion"]/*SysVersion*/,"SysVersion", false, false, true, false, false, false, 7, 100, "",true, false,"","a455ff08-a34f-437c-8f88-c6f7387f152f","a455ff08-a34f-437c-8f88-c6f7387f152f","22f677a8-5057-45cc-a197-bd93ce52d092");
+			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
+			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"IsSelected1","CheckBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["IsSelected"]/*IsSelected*/,"IsSelected", false, true, true, false, false, true, 22, 120, "1",true, false,"false","9798c1d3-c13c-400f-941d-0636a1be7266","9798c1d3-c13c-400f-941d-0636a1be7266","8547daa1-3697-4a01-a9fa-0fdfa7627ef6");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code1","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Code"]/*Code*/,"Code", false, true, false, false, false, true, 0, 120, "50",true, false,"","d9dbcbae-7f0f-4ae9-838c-9c87116f4a08","d9dbcbae-7f0f-4ae9-838c-9c87116f4a08","96049b61-aa2a-4182-8703-453e68bbd055");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Name1","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Name"]/*Name*/,"Name", false, true, false, false, false, true, 0, 150, "50",true, false,"","708d9a03-9b22-4446-b217-8f94a441a9d8","708d9a03-9b22-4446-b217-8f94a441a9d8","b150356a-f08e-47d2-a668-a791dcc713bb");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Description1","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Description"]/*Description*/,"Description", false, true, false, false, false, true, 0, 120, "50",true, false,"","d6c8effe-41f3-413c-b060-c053334ade7f","d6c8effe-41f3-413c-b060-c053334ade7f","788cc7c2-2755-494a-8be1-4807b399ec95");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 
+        }
+
 	        private IUFTabPage _BuilderControl_TabPage32(IUFTabControl container)
         {
             IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage32",true, true, "0","c73192be-1408-46bf-9ba8-f74e7a93701c","c73192be-1408-46bf-9ba8-f74e7a93701c");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 15, 29, 0, 5, 10, 10, 10, 10);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 15, 20, 0, 5, 10, 10, 10, 10);
 			InitViewBindingContainer(this, _UFTabPage,  this.Model.AdvApplyBE, "AdvApplyBE", "", null, 1, "广告申请单");
-			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(118,bool.Parse("True")),new GridColumnDef(12,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(19,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(118,bool.Parse("True")),new GridColumnDef(12,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
@@ -874,13 +944,6 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.DZArea338, "22");		
 		 
 
-				this.Line7 = UIControlBuilder.BuilderUFLine(_UFTabPage, "Line7", 950, "Horizontal", "True", 950, 20, 0, 18, 15, 1, "100","e91ee868-d4e6-4df8-96a1-0bec6f755371","e91ee868-d4e6-4df8-96a1-0bec6f755371");
-	
-
-		
-			UIControlBuilder.BuilderUFControl(this.Line7, "33");		
-
-
 				this.Line12 = UIControlBuilder.BuilderUFLine(_UFTabPage, "Line12", 950, "Horizontal", "True", 950, 20, 0, 5, 15, 1, "100","6cd0b020-c5ce-46cc-8359-942d05f2e65e","6cd0b020-c5ce-46cc-8359-942d05f2e65e");
 	
 
@@ -977,29 +1040,22 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 				this.AdvCarrier146 = UIControlBuilder.BuilderRefrenceControl(_UFTabPage,"AdvCarrier146",true,true, true,230, 20, 2, 1, 3, 1, "100","49",false,false,true,"lblAdvCarrier146","96260a2b-42a8-4ec6-baf8-a0dfd338337a","938746bd-11dc-4c75-b7c9-9fda862371f9");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCarrier146, "False", "AdvCarrier", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvCarrier, "AdvApplyBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.AdvCarrier146,"40f9b5a0-1f46-4c51-8036-11e1fcd8ab08", 580,408, "","Code","ID", this.Model.AdvApplyBE.FieldAdvCarrier_Code,this.Model.AdvApplyBE.FieldAdvCarrier_Name);
+			UIControlBuilder.SetReferenceControlRefInfo(this.AdvCarrier146,"40f9b5a0-1f46-4c51-8036-11e1fcd8ab08", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldAdvCarrier_Code,this.Model.AdvApplyBE.FieldAdvCarrier_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvCarrier146,"AdvCarrier146",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvCarrier146","ID","Key"),new ReferenceOutputParam("AdvCarrier146","Code","Value"),new ReferenceOutputParam("AdvCarrier146","Name","Text"),new ReferenceOutputParam("","Description",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvCarrier146,"AdvCarrier146",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","Description",""),});
 				
 
 		
 			UIControlBuilder.BuilderUFControl(this.AdvCarrier146, "49");		
 		 
 
-	
-			_BuilderControl_DataGrid0(_UFTabPage);
 
-		
-			UIControlBuilder.BuilderUFControl(this.DataGrid0, "50");		
-
-
-
-																																		
+																																	
 			this.AdvCarrier146.IsMultiOrg  = false ;
 			this.lblAdvCarrier146.SetMultiOrgInfo(this.AdvCarrier146,false);
 			
-	
+
 
             this.TabPage32 = _UFTabPage;
             return _UFTabPage;
@@ -1009,7 +1065,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             IUFImage _Image = UIControlBuilder.BuildImageControl(container,"Image12",true, true, "41");
 			_Image.ImageUrl = @"~\/Images/CustU9/1.bmp";
-			CommonBuilder.GridLayoutPropBuilder(container, _Image, 340, 120, 0, 7, 5, 5, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _Image, 230, 95, 2, 7, 3, 4, "100");
             this.Image12 = _Image;
         }
 
@@ -1017,7 +1073,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             IUFImage _Image = UIControlBuilder.BuildImageControl(container,"Image13",true, true, "42");
 			_Image.ImageUrl = @"~\/Images/CustU9/2.bmp";
-			CommonBuilder.GridLayoutPropBuilder(container, _Image, 120, 270, 6, 7, 1, 11, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _Image, 120, 170, 6, 7, 1, 7, "100");
             this.Image13 = _Image;
         }
 
@@ -1025,61 +1081,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             IUFImage _Image = UIControlBuilder.BuildImageControl(container,"Image14",true, true, "43");
 			_Image.ImageUrl = @"~\/Images/CustU9/3.bmp";
-			CommonBuilder.GridLayoutPropBuilder(container, _Image, 240, 245, 8, 7, 4, 10, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _Image, 230, 170, 8, 7, 3, 7, "100");
             this.Image14 = _Image;
         }
 
 				
-
-				
-
-
-
-
-
-       
-        private void _BuilderControl_DataGrid0(IUFContainer container)
-        {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, false,false,false,false,true,20,false, false) ;
-  			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "50");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 470, 219, 0, 19, 7, 9, "100");
-			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvCarrierList, "AdvCarrierList", "", null, 20, "");
-			((UFSoft.UBF.UI.WebControlAdapter.UFWebDataGridAdapter)_UFGrid).PagingStrategy=UFSoft.UBF.UI.ControlModel.GridPagingStrategy.Auto;
-			_UFGrid.AllowSelectAllPage=false;
-			((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumAllData=false;
-		        ((UFSoft.UBF.UI.WebControls.UFGrid)_UFGrid).IsSumSelectedData=false;
-            this.DataGrid0 = _UFGrid;
-            container.Controls.Add(_UFGrid);
-
-
-
-			IUFDataGridColumn column ;
-			GridColumn gridColumn ;
-	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"IsSelected0","CheckBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["IsSelected"]/*IsSelected*/,"IsSelected", false, true, true, false, false, true, 22, 120, "1",true, false,"false","9798c1d3-c13c-400f-941d-0636a1be7266","9798c1d3-c13c-400f-941d-0636a1be7266","73402eab-3423-489c-a318-49719a49187f");
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code0","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Code"]/*Code*/,"Code", false, true, false, false, false, true, 0, 100, "50",true, false,"","d9dbcbae-7f0f-4ae9-838c-9c87116f4a08","d9dbcbae-7f0f-4ae9-838c-9c87116f4a08","4220e31d-af6c-46b4-b4bd-e93305c9e107");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Name0","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Name"]/*Name*/,"Name", false, true, false, false, false, true, 0, 100, "50",true, false,"","708d9a03-9b22-4446-b217-8f94a441a9d8","708d9a03-9b22-4446-b217-8f94a441a9d8","7a02df4f-8d7d-4227-80a5-63923d6452f6");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Description0","TextBoxColumnModel", "", 0,this.Model.AdvCarrierList.Fields["Description"]/*Description*/,"Description", false, true, false, false, false, true, 0, 100, "50",true, false,"","d6c8effe-41f3-413c-b060-c053334ade7f","d6c8effe-41f3-413c-b060-c053334ade7f","45ebdc50-cb71-421e-bb41-ee7f6a008df9");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID72","NumberColumnModel", "", 0,this.Model.AdvCarrierList.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, false, 7, 100, "",true, false,"","55a5e707-4f40-4ca6-a5c0-f42feb0e3f93","55a5e707-4f40-4ca6-a5c0-f42feb0e3f93","d88aa9e2-475c-4e0d-b52a-9ad7c3f5b8f2");
-			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
-			,true,"",false,"1","1");
-	  
-		 
-        }
 
 	        private IUFTabPage _BuilderControl_TabPage33(IUFTabControl container)
         {
@@ -1120,10 +1126,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private IUFCard _BuilderControl_Card7(IUFContainer container)
         {
             IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card7",false,"none", true, true, "0","a3a90268-cecf-429a-ba35-1cb4c309cb2d","8a34bf70-88a8-45c7-9a48-931ca74dca61");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 1000, 30, 0, 1, 1, 1, "100");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 1000, 36, 0, 1, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 5, 5, 5, 5, 5);
 			InitViewBindingContainer(this, _UFCard,  this.Model.AdvApplyBE, "AdvApplyBE", "", null, 1, "广告申请单");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(160,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
             this.Card7 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
@@ -1215,7 +1221,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode605, "10");		
 
 
-				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "False", "100"
+				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 160, 20, 2, 0, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode605","","50","a5994f4f-99b6-42c9-9506-1579b4ef175d","c7576af6-9d8a-4564-83f5-231c49082691");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode605, "False", "AdvCode", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvCode, "AdvApplyBE");
 
