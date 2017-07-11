@@ -45,7 +45,7 @@ using System.Collections.Specialized;
  ***********************************************************************************************/
 namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.AdvApproveUI","UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart", "UFIDA.U9.Cust.AdvApproveUI.WebPart", "8167d4d5-c646-47b4-8ac0-570732c35302","WebPart", "True", 1032, 504)] 
+	[FormRegister("UFIDA.U9.Cust.AdvApproveUI","UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart", "UFIDA.U9.Cust.AdvApproveUI.WebPart", "8167d4d5-c646-47b4-8ac0-570732c35302","WebPart", "True", 1032, 624)] 
 	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.AdvApproveUI', 'UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel.AdvApproveUIFormWebPart', 'UFIDA.U9.Cust.AdvApproveUI.WebPart', '8167d4d5-c646-47b4-8ac0-570732c35302')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=8167d4d5-c646-47b4-8ac0-570732c35302" title="AdvApproveUIForm"/>
     public partial class AdvApproveUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
@@ -127,7 +127,14 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         IUFFldDatePicker StartDate230;
         IUFLabel lblEndDate212;
         IUFFldDatePicker EndDate212;
+        IUFLabel lblAdvApproveDocType_Code242;
+        IUFFldTextBox AdvApproveDocType_Code242;
+        IUFFldTextBox DescFlexField_PrivateDescSeg1251;
         IUFDataGrid DataGrid0;
+        IUFLabel Label1795;
+        IUFLabel Label1796;
+        IUFLabel Label1797;
+        IUFLabel Label1798;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -310,10 +317,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         #region view Create Contorls
         private void CreateFormChildControls()
         {
-            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApproveUIForm",true,1032,504);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 2, 0, 8, 0, 0, 0, 5);
+            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApproveUIForm",true,1032,624);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 6, 0, 8, 0, 0, 0, 5);
 			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -338,8 +345,44 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.Card4, "2");		
 
 
+				this.Label1795 = UIControlBuilder.BuilderUFLabel(_panel, "Label1795", "", "True", "True", "Left", 1000, 20, 0, 2, 1, 1, "100","f01ebb01-8e66-4f86-b207-380b72a741d5","f01ebb01-8e66-4f86-b207-380b72a741d5");
+
+
+								
 
 		
+			UIControlBuilder.BuilderUFControl(this.Label1795, "3");		
+
+
+				this.Label1796 = UIControlBuilder.BuilderUFLabel(_panel, "Label1796", "", "True", "True", "Left", 1000, 20, 0, 3, 1, 1, "100","863998b7-e761-415b-aab7-29bc778f99a2","863998b7-e761-415b-aab7-29bc778f99a2");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.Label1796, "4");		
+
+
+				this.Label1797 = UIControlBuilder.BuilderUFLabel(_panel, "Label1797", "", "True", "True", "Left", 1000, 20, 0, 4, 1, 1, "100","ed394c6e-764f-40a9-966b-425079c01459","ed394c6e-764f-40a9-966b-425079c01459");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.Label1797, "5");		
+
+
+				this.Label1798 = UIControlBuilder.BuilderUFLabel(_panel, "Label1798", "", "True", "True", "Left", 1000, 20, 0, 5, 1, 1, "100","b2ba7981-915f-4587-8437-dd6f85a74577","b2ba7981-915f-4587-8437-dd6f85a74577");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.Label1798, "6");		
+
+
+
+						
      
 			
 			
@@ -529,10 +572,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
 				this.AdvApplyCust95 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"AdvApplyCust95",true,true, true,140, 20, 2, 0, 1, 1, "100","1",false,false,true,"lblAdvApplyCust95","54043f33-6248-4fda-9b0f-be0e8c952b0b","04702be2-013d-4d06-bc5a-f104df943d8c");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApplyCust95, "False", "AdvApplyCust", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldAdvApplyCust, "AdvApproveBE");
-			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApplyCust95,"d6428416-2436-4ab4-af0f-1464119d76e7", 580,408, "Name","Code","ID", this.Model.AdvApproveBE.FieldAdvApplyCust_Code,this.Model.AdvApproveBE.FieldAdvApplyCust_Name);
+			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApplyCust95,"874cc1b6-f844-486c-b3f5-f8cca21fe1e0", 580,408, "Name","Code","ID", this.Model.AdvApproveBE.FieldAdvApplyCust_Code,this.Model.AdvApproveBE.FieldAdvApplyCust_Name);
             //foreach Reference's input filter parameter
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvApplyCust95,"AdvApplyCust95",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvApplyCust95","ID","Key"),new ReferenceOutputParam("AdvApplyCust95","Code","Value"),new ReferenceOutputParam("AdvApplyCust95","Name","Text"),new ReferenceOutputParam("","Department_ID",""),new ReferenceOutputParam("","Department_Code",""),new ReferenceOutputParam("","Department_Name",""),new ReferenceOutputParam("","Saleser_ID",""),new ReferenceOutputParam("","Saleser_Code",""),new ReferenceOutputParam("","Saleser_Name",""),new ReferenceOutputParam("","TradeCurrency_ID",""),new ReferenceOutputParam("","TradeCurrency_Code",""),new ReferenceOutputParam("","TradeCurrency_Name",""),new ReferenceOutputParam("","ShortName",""),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Territory_Name",""),new ReferenceOutputParam("","TradeCurrency_Symbol",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_PriceRound_RoundType",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_Precision",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundValue",""),new ReferenceOutputParam("","TradeCurrency_MoneyRound_RoundType",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.AdvApplyCust95,"AdvApplyCust95",new ReferenceOutputParam[]{new ReferenceOutputParam("AdvApplyCust95","ID","Key"),new ReferenceOutputParam("AdvApplyCust95","Code","Value"),new ReferenceOutputParam("AdvApplyCust95","Name","Text"),new ReferenceOutputParam("","CustomerCategory_Name",""),new ReferenceOutputParam("","Description",""),new ReferenceOutputParam("","Org_Name",""),new ReferenceOutputParam("","DescFlexField_PrivateDescSeg14",""),new ReferenceOutputParam("DescFlexField_PrivateDescSeg1251","DescFlexField_PrivateDescSeg11","Value"),});
 				
 
 		
@@ -670,6 +713,33 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.EndDate212, "21");		
 		 
 
+				this.lblAdvApproveDocType_Code242 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApproveDocType_Code242", "", "True", "True", "Right", 100, 20, 4, 1, 1, 1, "100","3cb163a4-b559-4847-a7f3-09770c054044","c670f990-977e-4c36-a77d-e18a9abf16d4");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblAdvApproveDocType_Code242, "22");		
+
+
+				this.AdvApproveDocType_Code242 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvApproveDocType_Code242", "False", "True", "True", "False", "Left", 0, 60, 0, 140, 20, 6, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblAdvApproveDocType_Code242","","50","3cb163a4-b559-4847-a7f3-09770c054044","f74484af-7a57-4715-aa6c-0e5031dc8c1c");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApproveDocType_Code242, "False", "AdvApproveDocType_Code", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldAdvApproveDocType_Code, "AdvApproveBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.AdvApproveDocType_Code242, "23");		
+		 
+
+				this.DescFlexField_PrivateDescSeg1251 = UIControlBuilder.BuilderTextBox(_UFCard, "DescFlexField_PrivateDescSeg1251", "True", "True", "False", "False", "Left", 0, 60, 0, 140, 20, 10, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"","","1000","c4cf7548-9f9f-4e32-94d8-fd285cb26247","f1421f88-cb0c-44bc-95f9-12a22896258f");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DescFlexField_PrivateDescSeg1251, "False", "DescFlexField_PrivateDescSeg1", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldDescFlexField_PrivateDescSeg1, "AdvApproveBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.DescFlexField_PrivateDescSeg1251, "25");		
+		 
+
 
 		
 			this.AdvApplyCust95.IsMultiOrg  = false ;
@@ -679,7 +749,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			this.AdvApproveDocType803.IsMultiOrg  = false ;
 			this.lblAdvApproveDocType803.SetMultiOrgInfo(this.AdvApproveDocType803,false);
 			
-				
+							
 
             
             container.Controls.Add(_UFCard);
@@ -723,11 +793,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SysVersion258","NumberColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["SysVersion"]/*SysVersion*/,"SysVersion", false, false, true, false, false, true, 7, 100, "19.0",true, false,"0","326949eb-5fde-471b-b198-06b6b9a0272e","326949eb-5fde-471b-b198-06b6b9a0272e","84e46651-63b3-4acb-bd0f-0417dfb28d42");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
-	  
-		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApplyAdvCode0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["ApplyAdvCode"]/*ApplyAdvCode*/,"ApplyAdvCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","49c26963-1dc0-4523-ae55-00c31dd23c1d","49c26963-1dc0-4523-ae55-00c31dd23c1d","9e646a3f-50b3-419b-80fe-49bb50ef65da");
-         
-			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvAppCustName0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["AdvAppCustName"]/*AdvAppCustName*/,"AdvAppCustName", false, true, false, false, false, true, 0, 100, "50",true, false,"","983c42d1-3efe-457b-b921-22e7d7bf0fcb","983c42d1-3efe-457b-b921-22e7d7bf0fcb","8f60e8bf-64e0-4e0a-84fb-2ec8cf1152c2");
@@ -783,6 +848,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Area0","NumberColumnModel", "", 2,this.Model.AdvApproveBE_AdvApproveLine.Fields["Area"]/*Area*/,"Area", false, true, false, false, false, true, 8, 100, "24.9",true, false,"","448b2763-2815-4bfd-9790-67152e6ea0b4","448b2763-2815-4bfd-9790-67152e6ea0b4","bb88e6ca-0f4b-4b9e-b6f6-c3836c38a0e3");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
+	  
+		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ApplyAdvCode0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["ApplyAdvCode"]/*ApplyAdvCode*/,"ApplyAdvCode", false, true, false, false, false, true, 0, 100, "50",true, false,"","49c26963-1dc0-4523-ae55-00c31dd23c1d","49c26963-1dc0-4523-ae55-00c31dd23c1d","9e646a3f-50b3-419b-80fe-49bb50ef65da");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvCarrier0","TextBoxColumnModel", "", 0,this.Model.AdvApproveBE_AdvApproveLine.Fields["AdvCarrier"]/*AdvCarrier*/,"AdvCarrier", false, true, false, false, false, true, 0, 100, "50",true, false,"","43420188-bde0-46d6-8af5-09ccb88795e5","43420188-bde0-46d6-8af5-09ccb88795e5","f6eb8ce4-32a7-4aeb-b139-fbd979bd6774");
