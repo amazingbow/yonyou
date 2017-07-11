@@ -349,8 +349,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             {
                 this.Model.AdvApproveBE.FocusedRecord.BusinessDate = System.DateTime.Now;
             }
-            this.lblDescription.Text = @"说明：
-        (1)汇总表格每月5日，由品牌部洪秀仁（QQ851324511）发给办事处，便于办事处统计广告任务达成情况及作为办事处广告费用报销表";
         }
         internal static bool SetIsApprovalDoc(IUIModel model)
         {
