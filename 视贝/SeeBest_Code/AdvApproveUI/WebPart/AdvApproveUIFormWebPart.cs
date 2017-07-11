@@ -699,7 +699,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
        
         private void _BuilderControl_DataGrid0(IUFContainer container)
         {
-            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, true, false,true,false,false,true,20,false, false) ;
+            IUFDataGrid _UFGrid = UIControlBuilder.BuildGridControl("DataGrid0", UFSoft.UBF.UI.ControlModel.EditStatus.Edit, false, true,true,true,false,true,20,false, false) ;
   			UIControlBuilder.BuilderUFControl(_UFGrid, "True", "True", "2");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFGrid, 971, 328, 0, 1, 1, 1, "100");
 			InitViewBindingContainer(this, _UFGrid,  this.Model.AdvApproveBE_AdvApproveLine, "AdvApproveBE_AdvApproveLine", "", null, 20, "广告核销单.Misc.广告核销单行");

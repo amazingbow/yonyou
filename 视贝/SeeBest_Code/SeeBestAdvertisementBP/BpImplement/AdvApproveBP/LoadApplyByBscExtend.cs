@@ -32,6 +32,10 @@
         {
             LoadApplyByBsc bpObj = (LoadApplyByBsc)obj;
             List<ApplyInfoDto> appDtoLst = new List<ApplyInfoDto>();
+            if (true)
+            {
+                
+            }
             AdvApplyBE.EntityList applyLst = AdvApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
                 + " and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd") + "')");
             SpecialApplyBE.EntityList speLst = SpecialApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
