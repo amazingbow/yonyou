@@ -141,9 +141,10 @@
           <HeaderCell ID="d7083d5f-4115-4166-a5e5-74e4b3ce1de2" ColSpan="1" DisplayName="存储地点_编码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell37" OwnerColName="Wh_Code0" RowSpan="1" />
           <HeaderCell ID="1ef775b6-d144-41ec-923c-6d20ffdfce66" ColSpan="1" Name="HeaderCell7" OwnerColName="Wh_Name0" RowSpan="1" />
           <HeaderCell ID="9a27a351-26f5-473b-ba24-ad2359cd3986" ColSpan="1" DisplayName="库存数量" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell11" OwnerColName="WhQty0" RowSpan="1" />
+          <HeaderCell ID="9028caf0-4e8a-416f-8ffc-65b804cc4aa5" ColSpan="1" DisplayName="请购执行数量" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell59" OwnerColName="DoingPrQty0" RowSpan="1" />
           <HeaderCell ID="6959f476-2342-4e89-a79d-3d4cd9f99669" ColSpan="1" Name="HeaderCell8" OwnerColName="DoingQty0" RowSpan="1" />
+          <HeaderCell ID="5b1f5bf7-90f3-4e91-b02b-1481c7ce6c6e" ColSpan="1" DisplayName="收货执行数量" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell63" OwnerColName="RecQty0" RowSpan="1" />
           <HeaderCell ID="36672553-990a-41c3-8b09-38b846d349d8" ColSpan="1" Name="HeaderCell10" OwnerColName="PrQty0" RowSpan="1" />
-          <HeaderCell ID="1f5863d7-aa10-4c6f-ba35-83440efa7243" ColSpan="1" DisplayName="收货执行数量" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell56" OwnerColName="RecQty74" RowSpan="1" />
           <HeaderCell ID="a4768724-b6fa-46d5-80bb-21e5b34b126f" ColSpan="1" Name="HeaderCell54" OwnerColName="ReqData1" RowSpan="1" />
         </HeaderRow>
       </Header>
@@ -163,7 +164,7 @@
           <CurrencyType Name="CurrencyType3" />
           <Events />
         </NumberColumn>
-        <CheckBoxColumn ID="fc850424-512d-474e-a8b0-4b05b7d5b109" DefaultValue="0" DisplayFormat="1" Enabled="True" Help="Misc.是否请购" IsNull="False" IsProperty="False" IsSequence="False" Name="IsReqPR0" NPos="3" Point="0" ShowBorderLine="False" UIFieldID="IsReqPR" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="80">
+        <CheckBoxColumn ID="fc850424-512d-474e-a8b0-4b05b7d5b109" DefaultValue="0" DisplayFormat="1" Enabled="True" Help="Misc.是否请购" IsNull="False" IsProperty="False" IsSequence="False" Name="IsReqPR0" NPos="3" Point="0" ShowBorderLine="False" UIFieldID="IsReqPR" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="70">
           <Events />
         </CheckBoxColumn>
         <ReferenceColumn ID="9a4c019f-346f-456b-bd85-1f1853b05a44" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="ShowSpecificitemInfoMainView" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" ForMultOrg="True" Help="Misc.料品" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster0" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="ShowSpecificitemInfoMainView" NPos="4" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="ItemMaster" UIViewID="ShowSpecificitemInfoMainView" Visible="True" WindowHeight="408" WindowWidth="580">
@@ -210,31 +211,42 @@
         <TextBoxColumn ID="314f50a8-dc99-4485-a81a-c423dcb9301e" DefaultValue="0" DisplayFormat="50" Enabled="False" Help="Misc.存储地点_名称" IsNull="False" IsProperty="False" IsSequence="False" Name="Wh_Name0" NPos="9" Point="0" TextAlign="Left" UIFieldID="Wh_Name" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
           <Events />
         </TextBoxColumn>
-        <NumberColumn ID="bf0e881a-acb0-4aad-8d1f-f5d42efb7ba3" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.库存数量" IsNull="False" IsProperty="False" IsSequence="False" Name="WhQty0" NPos="10" Point="0" UIFieldID="WhQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <NumberColumn ID="bf0e881a-acb0-4aad-8d1f-f5d42efb7ba3" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.库存数量" IsNull="False" IsProperty="False" IsSequence="False" Name="WhQty0" NPos="10" Point="2" UIFieldID="WhQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind4" />
           <RoundRuleBind Name="RoundRuleBind4" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
           <CurrencyType Name="CurrencyType4" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="f07d6b8d-e0ab-42d4-ab1b-c083cdda5584" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.执行采购量" IsNull="False" IsProperty="False" IsSequence="False" Name="DoingQty0" NPos="11" Point="0" UIFieldID="DoingQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <NumberColumn ID="50817a55-6ca0-4f06-8ec4-ec6ba51a23de" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.请购执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="DoingPrQty0" NPos="11" Point="2" UIFieldID="DoingPrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="f07d6b8d-e0ab-42d4-ab1b-c083cdda5584" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.执行采购量" IsNull="False" IsProperty="False" IsSequence="False" Name="DoingQty0" NPos="12" Point="2" UIFieldID="DoingQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind5" />
           <RoundRuleBind Name="RoundRuleBind5" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
           <CurrencyType Name="CurrencyType5" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="1cdaf6d6-5def-4ef3-ac98-442cfa7b5a0c" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.请购数量" IsNull="False" IsProperty="False" IsSequence="False" Name="PrQty0" NPos="12" Point="0" UIFieldID="PrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <NumberColumn ID="a9bf71e8-de10-4fee-8cad-66aad82b5268" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.收货执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="RecQty0" NPos="13" Point="2" UIFieldID="RecQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+          <PrecisionBind />
+          <RoundRuleBind />
+          <ValueOfRoundByValueBind />
+          <CurrencyType />
+          <Events />
+        </NumberColumn>
+        <NumberColumn ID="1cdaf6d6-5def-4ef3-ac98-442cfa7b5a0c" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.请购数量" IsNull="False" IsProperty="False" IsSequence="False" Name="PrQty0" NPos="14" Point="2" UIFieldID="PrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind6" />
           <RoundRuleBind Name="RoundRuleBind6" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
           <CurrencyType Name="CurrencyType6" />
           <Events />
         </NumberColumn>
-        <TextBoxColumn ID="78cf0aae-40c2-40f7-9751-d91ba6b8e87f" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.收货执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="RecQty74" NPos="13" Point="0" TextAlign="Left" UIFieldID="RecQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
-          <Events />
-        </TextBoxColumn>
-        <DatePickerColumn ID="35c26e62-01d1-4004-bea8-a2dfca2b8bbc" DefaultValue="" DisplayFormat="8" Enabled="True" Help="Misc.需求日期" IsNull="True" IsProperty="False" IsSequence="False" Name="ReqData1" NPos="14" Point="0" UIFieldID="ReqData" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <DatePickerColumn ID="35c26e62-01d1-4004-bea8-a2dfca2b8bbc" DefaultValue="" DisplayFormat="8" Enabled="True" Help="Misc.需求日期" IsNull="True" IsProperty="False" IsSequence="False" Name="ReqData1" NPos="15" Point="0" UIFieldID="ReqData" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="80">
           <Events />
         </DatePickerColumn>
       </Columns>
