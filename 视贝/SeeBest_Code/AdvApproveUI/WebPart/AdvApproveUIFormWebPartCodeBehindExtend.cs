@@ -293,6 +293,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                         record.AdvCarrier = item.AdvCarrier;
                         record.OtherInfo = item.ApplyId;
                         //record.BuildStatus=
+                        //record.ActualApproveQty=
                         record.SetParentRecord(this.Model.AdvApproveBE.FocusedRecord);
                     }
                 }
@@ -347,11 +348,6 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             if (this.Model.AdvApproveBE.FocusedRecord.BusinessDate == null || this.Model.AdvApproveBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
             {
                 this.Model.AdvApproveBE.FocusedRecord.BusinessDate = System.DateTime.Now;
-            }
-            //单号赋默认值
-            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
-            {
-                this.Model.AdvApproveBE.FocusedRecord.DocNo = "AdvApprove" + System.DateTime.Now.ToString("yyyyMMddHHmmssfff");
             }
         }
         internal static bool SetIsApprovalDoc(IUIModel model)

@@ -54,7 +54,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         protected override void OnInserting()
         {
             base.OnInserting();
-            // TO DO: write your business code here...
+            //单号赋默认值 -- 客户简称+YYMM+2流水号
+            this.DocNo=this.DescFlexField.PrivateDescSeg1+ System.DateTime.Now.ToString("yyMM");
         }
 
         /// <summary>
