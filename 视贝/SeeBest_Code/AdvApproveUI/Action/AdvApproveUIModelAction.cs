@@ -362,6 +362,32 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
  
 
 		}
+		/// <summary>
+		/// Help: 
+		/// </summary>
+		public void GetApplyInfoClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.GetApplyInfoClick_Extend);
+		}
+		private void GetApplyInfoClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
+		/// <summary>
+		/// Help: 
+		/// </summary>
+		public void CreateAdvApproveClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.CreateAdvApproveClick_Extend);
+		}
+		private void CreateAdvApproveClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

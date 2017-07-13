@@ -38,6 +38,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		
 		
 					ApplyId = 0; 
+					Area = 0m; 
+					ApplyQty = 0m; 
 
 		}
 
@@ -282,10 +284,44 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 				base.SetValue("ApplyId",value);
 			}
 		}
+				/// <summary>
+		/// 面积 (该属性可为空,但有默认值)
+		/// 申请单信息.Misc.面积
+		/// </summary>
+		/// <value>System.Decimal</value>
+		public System.Decimal Area
+		{
+			get	
+			{	
+				return (System.Decimal)base.GetValue("Area",typeof(System.Decimal));
+			}
+
+			 set	
+			{
+				base.SetValue("Area",value);
+			}
+		}
+				/// <summary>
+		/// 数量 (该属性可为空,但有默认值)
+		/// 申请单信息.Misc.数量
+		/// </summary>
+		/// <value>System.Decimal</value>
+		public System.Decimal ApplyQty
+		{
+			get	
+			{	
+				return (System.Decimal)base.GetValue("ApplyQty",typeof(System.Decimal));
+			}
+
+			 set	
+			{
+				base.SetValue("ApplyQty",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-														
+																
 		#endregion 
 
 		#region ModelResource
@@ -349,6 +385,14 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		/// 申请单ID的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_ApplyId　{ get { return "";　}　}
+		/// <summary>
+		/// 面积的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_Area　{ get { return "";　}　}
+		/// <summary>
+		/// 数量的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_ApplyQty　{ get { return "";　}　}
 		#endregion 
 
 
@@ -361,6 +405,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		private void DeSerializeKey(ApplyInfoDtoData data)
 		{
 		
+
+
 
 
 
@@ -423,6 +469,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 
 			this.ApplyId = data.ApplyId;
 
+			this.Area = data.Area;
+
+			this.ApplyQty = data.ApplyQty;
+
 		}
 
 		/// <summary>
@@ -477,6 +527,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			data.AdvItem = this.AdvItem;
 
 			data.ApplyId = this.ApplyId;
+
+			data.Area = this.Area;
+
+			data.ApplyQty = this.ApplyQty;
 
 			return data ;
 		}

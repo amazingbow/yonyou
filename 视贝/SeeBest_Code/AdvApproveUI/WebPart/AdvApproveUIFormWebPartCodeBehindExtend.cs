@@ -27,6 +27,7 @@ using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP.Proxy;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP;
 using System.Collections.Generic;
 using UFSoft.UBF.UI.FormProcess;
+using UFSoft.UBF.Util.DataAccess;
 
 
 
@@ -95,6 +96,25 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             //    }
             //}
             #endregion
+
+            if (this.Model.AdvApproveBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApproveBE.FocusedRecord.ID > 0L)
+                {
+                    if (this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord != null)
+                    {
+                        if (this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord.DataRecordState == DataRowState.Added)
+                        {
+                            DataParamList lst1 = new DataParamList();
+                            lst1.Add(DataParamFactory.CreateInput("@AdvApproveBEID", this.Model.AdvApproveBE.FocusedRecord.ID, System.Data.DbType.Int64));
+
+                            DataAccessor.RunSQL(DataAccessor.GetConn(), "delete Cust_SeeBest_AdvApproveLine where AdvApproveBE=@AdvApproveBEID", lst1);
+                        }
+                    }
+
+                }
+            }
+
             BtnSave_Click_DefaultImpl(sender, e);
         }
 
@@ -279,18 +299,22 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                     {
                         AdvApproveBE_AdvApproveLineRecord record = this.Model.AdvApproveBE_AdvApproveLine.AddNewUIRecord();
                         record.Location = item.Location;
-                        record.Location = item.Location;
+                        //record.Location = item.Location;
                         record.AdvAppCustName = item.AdvAppCustName;
                         record.Country = item.Country;
                         record.CustCounterName = item.CustCounterName;
                         record.RelPeople = item.RelPeople;
-                        record.RelPhone = item.RelPeople;
+                        record.RelPhone = item.RelPhone;
                         record.CustAddress = item.CustAddress;
                         record.Width = item.Width;
                         record.Thick = item.Thick;
                         record.Height = item.Height;
+                        record.Area = item.Area;
+                        record.ApplyQty = item.ApplyQty;
+                        record.ActualApproveQty = item.ApplyQty;
                         record.ApplyAdvCode = item.ApplyAdvCode;
                         record.AdvCarrier = item.AdvCarrier;
+                        record.AdvItem = item.AdvItem;
                         record.OtherInfo = item.ApplyId;
                         //record.BuildStatus=
                         //record.ActualApproveQty=
@@ -306,6 +330,38 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                 this.DataGrid0.CollectData();
                 this.DataGrid0.BindData();
             }
+        }
+        //BtnCreateAdvApprove_Click...
+        private void BtnCreateAdvApprove_Click_Extend(object sender, EventArgs e)
+        {
+            BtnCreateAdvApprove_Click_DefaultImpl(sender, e);
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+            if (this.Model.AdvApproveBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApproveBE.FocusedRecord.StartDate != null
+                    && this.Model.AdvApproveBE.FocusedRecord.EndDate != null)
+                {
+                    BatchCreateAdvApproveProxy proxy = new BatchCreateAdvApproveProxy();
+                    proxy.StartDate = this.Model.AdvApproveBE.FocusedRecord.StartDate.Value;
+                    proxy.EndDate = this.Model.AdvApproveBE.FocusedRecord.EndDate.Value;
+                    int iBatchCreateQty = proxy.Do();
+
+                    if (iBatchCreateQty > 0)
+                    {
+                        UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('批量生成" + iBatchCreateQty + "条核销单成功！');", true);
+                    }
+                    else
+                    {
+                        UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('该日期范围内没有需要创建的核销单！');", true);
+                    }
+                }
+                else
+                {
+                    throw new Exception("请输入开始日期，结束日期！");
+                }
+            }
+
         }
         #region 自定义数据初始化加载和数据收集
         private void OnLoadData_Extend(object sender)
@@ -336,6 +392,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             //绑定注册弹出对话框到删除按钮
             PDFormMessage.ShowConfirmDialog(this.Page, message, "", this.BtnDelete);
             PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
+            PDFormMessage.ShowConfirmDialog(this.Page, "确认按照开始日期与结束日期，批量生成所有办事处的核销单？", "批量生成核销单确认", this.BtnCreateAdvApprove);
             #region 根据单据状态控制页面控件可用
             if (this.Model.AdvApproveBE.FocusedRecord.DocStatus.Value != 0)
             {
@@ -348,6 +405,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             if (this.Model.AdvApproveBE.FocusedRecord.BusinessDate == null || this.Model.AdvApproveBE.FocusedRecord.BusinessDate == System.DateTime.MinValue)
             {
                 this.Model.AdvApproveBE.FocusedRecord.BusinessDate = System.DateTime.Now;
+            }
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "自动编号";
             }
         }
         internal static bool SetIsApprovalDoc(IUIModel model)

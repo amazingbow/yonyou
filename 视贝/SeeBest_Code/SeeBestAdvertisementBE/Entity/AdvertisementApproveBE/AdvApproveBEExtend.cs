@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using UFIDA.U9.Base;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.ARBillRelationBP.Proxy;
+using UFSoft.UBF.Util.DataAccess;
 
 #endregion
 
@@ -55,7 +56,44 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         {
             base.OnInserting();
             //单号赋默认值 -- 客户简称+YYMM+2流水号
-            this.DocNo=this.DescFlexField.PrivateDescSeg1+ System.DateTime.Now.ToString("yyMM");
+            string strCustomerAbbreviation = "";
+            if (this.AdvApplyCust != null)
+            {
+                if (string.IsNullOrEmpty(this.AdvApplyCust.DescFlexField.PrivateDescSeg11))
+                {
+                    strCustomerAbbreviation = "";
+                }
+                else
+                {
+                    strCustomerAbbreviation = this.AdvApplyCust.DescFlexField.PrivateDescSeg11;
+                }
+            }
+
+            string strNo = strCustomerAbbreviation + System.DateTime.Now.ToString("yyMM") + "%";
+            string strRunningCode = "";
+
+            DataParamList lst1 = new DataParamList();
+            lst1.Add(DataParamFactory.CreateInput("@strNo", strNo, System.Data.DbType.String));
+            System.Data.DataSet ds1 = new System.Data.DataSet();
+
+            DataAccessor.RunSQL(DataAccessor.GetConn(), "select top 1 case when convert(int,substring(DocNo,len(DocNo)-1,2))=99 then '01' else right('00'+convert(varchar(2),(convert(int,substring(DocNo,len(DocNo)-1,2))+1)),2) end as Flow2Bit from Cust_SeeBest_AdvApprove where DocNo like @strNo order by CreatedOn desc", lst1, out ds1);
+
+            if (ds1 != null && ds1.Tables.Count > 0)
+            {
+                if (ds1.Tables[0].Rows.Count > 0)
+                {
+                    if (Convert.ToInt32(ds1.Tables[0].Rows[0]["Flow2Bit"].ToString()) > 0)
+                    {
+                        strRunningCode = ds1.Tables[0].Rows[0]["Flow2Bit"].ToString();
+                    }
+                }
+                else
+                {
+                    strRunningCode = "01";
+                }
+            }
+
+            this.DocNo = strCustomerAbbreviation + System.DateTime.Now.ToString("yyMM") + strRunningCode;
         }
 
         /// <summary>

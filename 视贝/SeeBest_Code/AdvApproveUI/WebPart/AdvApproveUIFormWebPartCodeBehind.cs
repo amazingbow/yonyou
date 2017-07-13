@@ -606,7 +606,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			
         }
 		 
-				//MethodName:BtnGetApplyInfo_Click ActionName:
+				//MethodName:BtnGetApplyInfo_Click ActionName:GetApplyInfoClick
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
@@ -631,7 +631,40 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
 			//通用事件模版定义的相应操作内容.	
 
-			//throw new NotImplementedException() ;
+	
+		Action.GetApplyInfoClick(sender,new UIActionEventArgs());
+
+		
+			
+        }
+		 
+				//MethodName:BtnCreateAdvApprove_Click ActionName:CreateAdvApproveClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnCreateAdvApprove_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnCreateAdvApprove_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnCreateAdvApprove_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+
+			//通用事件模版定义的相应操作内容.	
+
+	
+		Action.CreateAdvApproveClick(sender,new UIActionEventArgs());
 
 		
 			

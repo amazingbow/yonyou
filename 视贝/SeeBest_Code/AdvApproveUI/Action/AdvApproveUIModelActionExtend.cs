@@ -199,6 +199,18 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             this.UndoApproveClick_DefaultImpl(sender, e);
         }
 
+        private void GetApplyInfoClick_Extend(object sender, UIActionEventArgs e)
+        {
+            //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
+            this.GetApplyInfoClick_DefaultImpl(sender, e);
+        }
+
+        private void CreateAdvApproveClick_Extend(object sender, UIActionEventArgs e)
+        {
+            //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
+            this.CreateAdvApproveClick_DefaultImpl(sender, e);
+        }
+
         #region UBF 内置两数据处理Action
         //数据加载的扩展
         private void OnLoadData_Extend(object sender, UIActionEventArgs e)
