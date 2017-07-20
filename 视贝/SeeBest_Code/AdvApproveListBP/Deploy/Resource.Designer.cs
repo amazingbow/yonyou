@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UFIDA.U9.Cust.AdvApproveListBP {
+namespace UFIDA.U9.Cust..AdvApproveListBP {
     using System;
     
     

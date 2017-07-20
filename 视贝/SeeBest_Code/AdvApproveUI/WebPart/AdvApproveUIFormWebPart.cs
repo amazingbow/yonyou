@@ -127,9 +127,10 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         IUFFldDatePicker StartDate230;
         IUFLabel lblEndDate212;
         IUFFldDatePicker EndDate212;
-        IUFLabel lblAdvApproveDocType_Code242;
-        IUFFldTextBox AdvApproveDocType_Code242;
         IUFFldTextBox DescFlexField_PrivateDescSeg1251;
+        IUFLabel lblDocNo86;
+        IUFFldTextBox DocNo86;
+        IUFButton BtnCreateAdvApprove;
         IUFDataGrid DataGrid0;
         IUFLabel Label1795;
         IUFLabel Label1796;
@@ -215,6 +216,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 						
 				//Button控件事件
 			this.BtnGetApplyInfo.Click += new EventHandler(BtnGetApplyInfo_Click);		
+						
+				//Button控件事件
+			this.BtnCreateAdvApprove.Click += new EventHandler(BtnCreateAdvApprove_Click);		
 						
 
 		
@@ -320,7 +324,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"AdvApproveUIForm",true,1032,624);
             CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 6, 0, 8, 0, 0, 0, 5);
 			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 8,new GridColumnDef[]{new GridColumnDef(1000,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(441,bool.Parse("False")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -582,7 +586,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.AdvApplyCust95, "1");		
 		 
 
-				this.BtnGetApplyInfo = UIControlBuilder.BuilderUFButton(_UFCard, true, "BtnGetApplyInfo", true, true, 100, 20, 4, 2, 1, 1, "100","", this.Model.ElementID,"",false,"f4506f28-fed3-4d88-ada3-562568d14bbf","","f4506f28-fed3-4d88-ada3-562568d14bbf");
+				this.BtnGetApplyInfo = UIControlBuilder.BuilderUFButton(_UFCard, true, "BtnGetApplyInfo", true, true, 100, 20, 4, 2, 1, 1, "100","", this.Model.ElementID,"GetApplyInfoClick",false,"f4506f28-fed3-4d88-ada3-562568d14bbf","","f4506f28-fed3-4d88-ada3-562568d14bbf");
 	
 
 		
@@ -713,25 +717,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.EndDate212, "21");		
 		 
 
-				this.lblAdvApproveDocType_Code242 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApproveDocType_Code242", "", "True", "True", "Right", 100, 20, 4, 1, 1, 1, "100","3cb163a4-b559-4847-a7f3-09770c054044","c670f990-977e-4c36-a77d-e18a9abf16d4");
-
-
-								
-
-		
-			UIControlBuilder.BuilderUFControl(this.lblAdvApproveDocType_Code242, "22");		
-
-
-				this.AdvApproveDocType_Code242 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvApproveDocType_Code242", "False", "True", "True", "False", "Left", 0, 60, 0, 140, 20, 6, 1, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblAdvApproveDocType_Code242","","50","3cb163a4-b559-4847-a7f3-09770c054044","f74484af-7a57-4715-aa6c-0e5031dc8c1c");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApproveDocType_Code242, "False", "AdvApproveDocType_Code", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldAdvApproveDocType_Code, "AdvApproveBE");
-
-
-		
-			UIControlBuilder.BuilderUFControl(this.AdvApproveDocType_Code242, "23");		
-		 
-
-				this.DescFlexField_PrivateDescSeg1251 = UIControlBuilder.BuilderTextBox(_UFCard, "DescFlexField_PrivateDescSeg1251", "True", "True", "False", "False", "Left", 0, 60, 0, 140, 20, 10, 1, 1, 1, "False", "100"
+				this.DescFlexField_PrivateDescSeg1251 = UIControlBuilder.BuilderTextBox(_UFCard, "DescFlexField_PrivateDescSeg1251", "True", "False", "False", "False", "Left", 0, 60, 0, 140, 20, 0, 0, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"","","1000","c4cf7548-9f9f-4e32-94d8-fd285cb26247","f1421f88-cb0c-44bc-95f9-12a22896258f");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DescFlexField_PrivateDescSeg1251, "False", "DescFlexField_PrivateDescSeg1", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldDescFlexField_PrivateDescSeg1, "AdvApproveBE");
 
@@ -739,6 +725,31 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		
 			UIControlBuilder.BuilderUFControl(this.DescFlexField_PrivateDescSeg1251, "25");		
 		 
+
+				this.lblDocNo86 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblDocNo86", "", "True", "True", "Right", 100, 20, 4, 1, 1, 1, "100","9b1075ec-542f-4433-b089-f665a61319d0","c12c2799-0820-4d74-a711-8a2a9885a0d9");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblDocNo86, "26");		
+
+
+				this.DocNo86 = UIControlBuilder.BuilderTextBox(_UFCard, "DocNo86", "False", "True", "False", "False", "Left", 0, 60, 0, 140, 20, 6, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblDocNo86","","50","9b1075ec-542f-4433-b089-f665a61319d0","a278f34f-d6a1-4f17-9180-49e0a96530cc");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DocNo86, "False", "DocNo", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldDocNo, "AdvApproveBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.DocNo86, "27");		
+		 
+
+				this.BtnCreateAdvApprove = UIControlBuilder.BuilderUFButton(_UFCard, true, "BtnCreateAdvApprove", true, true, 140, 20, 6, 2, 1, 1, "100","", this.Model.ElementID,"CreateAdvApproveClick",false,"02265ac7-7add-4aa0-b3ad-02b12e8eafc9","","02265ac7-7add-4aa0-b3ad-02b12e8eafc9");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.BtnCreateAdvApprove, "28");		
+
 
 
 		
@@ -749,7 +760,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			this.AdvApproveDocType803.IsMultiOrg  = false ;
 			this.lblAdvApproveDocType803.SetMultiOrgInfo(this.AdvApproveDocType803,false);
 			
-							
+								
 
             
             container.Controls.Add(_UFCard);
@@ -835,7 +846,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 2,this.Model.AdvApproveBE_AdvApproveLine.Fields["Thick"]/*Thick*/,"Thick", false, true, false, false, false, false, 8, 100, "24.9",true, false,"","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","940820be-3fe0-4127-a242-83647b64e7c6");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Thick0","NumberColumnModel", "", 2,this.Model.AdvApproveBE_AdvApproveLine.Fields["Thick"]/*Thick*/,"Thick", false, true, false, false, false, true, 8, 100, "24.9",true, false,"","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","b62ba3cd-9cb8-4f3e-8d49-6b5807b6c655","940820be-3fe0-4127-a242-83647b64e7c6");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  

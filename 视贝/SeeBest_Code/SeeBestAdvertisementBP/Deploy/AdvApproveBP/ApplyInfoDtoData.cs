@@ -21,7 +21,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-                                                                                                                                                                                      
+                                                                                                                                                                                                                
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -48,7 +48,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		
 		
 					ApplyId= 0; 
-		
+							Area=0m; 
+					ApplyQty=0m; 
+
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
 		}
@@ -65,13 +67,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			if (dict[this] != null)
 				return ;
 			dict[this] = this;
-	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public ApplyInfoDtoData(  System.String location  , System.String advAppCustName  , System.String country  , System.String custCounterName  , System.String relPeople  , System.String relPhone  , System.String custAddress  , System.Decimal width  , System.Decimal thick  , System.Decimal height  , System.String applyAdvCode  , System.String advCarrier  , System.String advItem  , System.Int64 applyId  )
+		public ApplyInfoDtoData(  System.String location  , System.String advAppCustName  , System.String country  , System.String custCounterName  , System.String relPeople  , System.String relPhone  , System.String custAddress  , System.Decimal width  , System.Decimal thick  , System.Decimal height  , System.String applyAdvCode  , System.String advCarrier  , System.String advItem  , System.Int64 applyId  , System.Decimal area  , System.Decimal applyQty  )
 		{
 			initData();
 			this.Location = location;
@@ -88,6 +90,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			this.AdvCarrier = advCarrier;
 			this.AdvItem = advItem;
 			this.ApplyId = applyId;
+			this.Area = area;
+			this.ApplyQty = applyQty;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -375,10 +379,50 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			}
 		}
 			
+		
+
+		/// <summary>
+		/// 面积
+		/// 申请单信息.Misc.面积
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Decimal m_area ;
+		public System.Decimal Area
+		{
+			get	
+			{	
+				return m_area ;
+			}
+			set	
+			{	
+				m_area = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 数量
+		/// 申请单信息.Misc.数量
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Decimal m_applyQty ;
+		public System.Decimal ApplyQty
+		{
+			get	
+			{	
+				return m_applyQty ;
+			}
+			set	
+			{	
+				m_applyQty = value ;	
+			}
+		}
+			
 		#endregion	
 
 		#region Multi_Fields
-																												
+																																
 		#endregion 
 	} 	
 }
