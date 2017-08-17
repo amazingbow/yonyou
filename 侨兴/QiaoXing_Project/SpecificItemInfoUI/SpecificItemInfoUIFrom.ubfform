@@ -96,17 +96,13 @@
         <RelationControls />
         <Events />
       </Label>
-      <Reference ID="7f5dc2f1-bc61-4193-b968-bbfb8a06ca30" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="FindSpecificItemInfoMainView" DisplayFormat="19.0" Enabled="True" EntityName="ID" ForMultOrg="True" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ItemMaster92" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="FindSpecificItemInfoMainView" PkeyField="ID" RefType="220d5b81-a3b8-4124-af76-8faa43801268" RelationControl="lblItemMaster92" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ItemMaster" UIViewID="FindSpecificItemInfoMainView" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="488" Y="5">
+      <Reference ID="7f5dc2f1-bc61-4193-b968-bbfb8a06ca30" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="FindSpecificItemInfoMainView" DisplayFormat="19.0" Enabled="True" EntityName="ID" ForMultOrg="True" GridHeight="1" GridWidth="1" GridX="6" GridY="0" Height="20" IsNull="True" IsProperty="False" IsSequence="False" Name="ItemMaster92" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="FindSpecificItemInfoMainView" PkeyField="ID" RefType="6e238bd9-9e6a-499a-8fde-c5f962b1f5bb" RelationControl="lblItemMaster92" TabIndex="11" TabStop="True" TextAlign="Right" TitleAlign="Left" TitleLocation="Left" UIFieldID="ItemMaster" UIViewID="FindSpecificItemInfoMainView" Visible="True" Width="152" WindowHeight="408" WindowWidth="580" X="488" Y="5">
         <Events />
         <RelationControls />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="ReferenceModel" TargetID="ItemMaster92" TargetProperty="Key" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="ReferenceModel" TargetID="ItemMaster92" TargetProperty="Value" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="ReferenceModel" TargetID="ItemMaster92" TargetProperty="Text" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" TargetControlType="" TargetID="" TargetProperty="" />
+        <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" TargetControlType="" TargetID="" TargetProperty="" />
         <ReferenceRelation Action="Clear" ColumnDisplayName="料品规格" ColumnID="SPECS" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="当前版本" ColumnID="Version" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="杂项料品" ColumnID="IsMISC" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="标准等级" ColumnID="StandardGrade" TargetControlType="" TargetID="" TargetProperty="" />
-        <ReferenceRelation Action="Clear" ColumnDisplayName="标准成分" ColumnID="StandardPotency" TargetControlType="" TargetID="" TargetProperty="" />
         <ReferenceRelation Action="Clear" ColumnDisplayName="描述" ColumnID="Description" TargetControlType="" TargetID="" TargetProperty="" />
         <RefNameFields>
           <RefNameField UIFieldID="Name" />
@@ -150,8 +146,9 @@
           <HeaderCell ID="e2cd1650-3769-4ee8-a04a-c3ce4a8d3651" ColSpan="1" Name="HeaderCell0" OwnerColName="ID73" RowSpan="1" />
           <HeaderCell ID="8fa348d8-7c02-48ce-8abc-3319982b2c77" ColSpan="1" Name="HeaderCell1" OwnerColName="SysVersion57" RowSpan="1" />
           <HeaderCell ID="6677267b-c820-45dd-8432-e9ecd760b3d9" ColSpan="1" Name="HeaderCell2" OwnerColName="IsReqPR0" RowSpan="1" />
+          <HeaderCell ID="fd335eae-91b6-4a68-8d00-5ff96c1a250e" ColSpan="1" DisplayName="料品_编码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell67" OwnerColName="ItemMaster_Code0" RowSpan="1" />
           <HeaderCell ID="a3d36a4b-7ba6-46e8-b2f8-bb16e292c130" ColSpan="1" Name="HeaderCell3" OwnerColName="ItemMaster0" RowSpan="1" />
-          <HeaderCell ID="31615c49-8dea-41ef-9e31-e18663ed7899" ColSpan="1" Name="HeaderCell4" OwnerColName="ItemMaster_Code0" RowSpan="1" />
+          <HeaderCell ID="88bfe64b-8b86-451a-b27a-7f98073347e7" ColSpan="1" DisplayName="规格" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell68" OwnerColName="SPECS0" RowSpan="1" />
           <HeaderCell ID="696cc28b-ed53-419b-936d-a1213dad450f" ColSpan="1" Name="HeaderCell5" OwnerColName="ItemMaster_Name0" RowSpan="1" />
           <HeaderCell ID="6f51bf14-4139-4388-b113-1ea0df335318" ColSpan="1" Name="HeaderCell6" OwnerColName="Wh84" RowSpan="1" />
           <HeaderCell ID="f0537501-5c92-42d2-976f-6d3c297f2d0f" ColSpan="1" DisplayName="存储地点_编码" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" Name="HeaderCell65" OwnerColName="Wh_Code0" RowSpan="1" />
@@ -182,7 +179,10 @@
         <CheckBoxColumn ID="fc850424-512d-474e-a8b0-4b05b7d5b109" DefaultValue="0" DisplayFormat="1" Enabled="True" Help="Misc.是否请购" IsNull="False" IsProperty="False" IsSequence="False" Name="IsReqPR0" NPos="3" Point="0" ShowBorderLine="False" UIFieldID="IsReqPR" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="70">
           <Events />
         </CheckBoxColumn>
-        <ReferenceColumn ID="9a4c019f-346f-456b-bd85-1f1853b05a44" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="ShowSpecificitemInfoMainView" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" ForMultOrg="True" Help="Misc.料品" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster0" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="ShowSpecificitemInfoMainView" NPos="4" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="ItemMaster" UIViewID="ShowSpecificitemInfoMainView" Visible="True" WindowHeight="408" WindowWidth="580">
+        <TextBoxColumn ID="39d50129-e6e9-4c61-81d6-ae96abe925e7" DefaultValue="0" DisplayFormat="50" Enabled="False" Help="Misc.料品_编码" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster_Code0" NPos="4" Point="0" TextAlign="Left" UIFieldID="ItemMaster_Code" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+          <Events />
+        </TextBoxColumn>
+        <ReferenceColumn ID="9a4c019f-346f-456b-bd85-1f1853b05a44" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="ItemMaster_Code" CodeFieldUIViewID="ShowSpecificitemInfoMainView" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" ForMultOrg="True" Help="Misc.料品" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster0" NameAttributeName="Name" NameFieldUIFieldID="ItemMaster_Name" NameFieldUIViewID="ShowSpecificitemInfoMainView" NPos="5" PkeyField="ID" Point="0" RefType="beedebc3-5398-46b5-a237-5a3a4d13ad4f" TextAlign="Right" UIFieldID="ItemMaster" UIViewID="ShowSpecificitemInfoMainView" Visible="True" WindowHeight="408" WindowWidth="580">
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation18" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="料号" ColumnID="Code" Name="ReferenceRelation19" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="品名" ColumnID="Name" Name="ReferenceRelation20" TargetControlType="" TargetID="" TargetProperty="" />
@@ -203,13 +203,13 @@
           <UIFilterBar Name="ReferenceFilter" />
           <Events />
         </ReferenceColumn>
-        <TextBoxColumn ID="39d50129-e6e9-4c61-81d6-ae96abe925e7" DefaultValue="0" DisplayFormat="50" Enabled="False" Help="Misc.料品_编码" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster_Code0" NPos="5" Point="0" TextAlign="Left" UIFieldID="ItemMaster_Code" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <TextBoxColumn ID="a9316402-0b7d-47aa-a539-f926203cdb27" DefaultValue="" DisplayFormat="50" Enabled="True" Help="Misc.规格" IsNull="True" IsProperty="False" IsSequence="False" Name="SPECS0" NPos="6" Point="0" TextAlign="Left" UIFieldID="SPECS" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
           <Events />
         </TextBoxColumn>
-        <TextBoxColumn ID="5779f7cb-b70f-499e-9307-cc0504bf9e3f" DefaultValue="0" DisplayFormat="50" Enabled="False" Help="Misc.料品_名称" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster_Name0" NPos="6" Point="0" TextAlign="Left" UIFieldID="ItemMaster_Name" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <TextBoxColumn ID="5779f7cb-b70f-499e-9307-cc0504bf9e3f" DefaultValue="0" DisplayFormat="50" Enabled="False" Help="Misc.料品_名称" IsNull="False" IsProperty="False" IsSequence="False" Name="ItemMaster_Name0" NPos="7" Point="0" TextAlign="Left" UIFieldID="ItemMaster_Name" UIViewID="ShowSpecificitemInfoMainView" Visible="False">
           <Events />
         </TextBoxColumn>
-        <ReferenceColumn ID="01a2ffe1-5ed6-4780-b95a-0e0414f69d6b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Wh_Code" CodeFieldUIViewID="ShowSpecificitemInfoMainView" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="Misc.存储地点" IsNull="False" IsProperty="False" IsSequence="False" Name="Wh84" NameAttributeName="Name" NameFieldUIFieldID="Wh_Name" NameFieldUIViewID="ShowSpecificitemInfoMainView" NPos="7" PkeyField="ID" Point="0" RefType="1dc5d0ff-a06e-4dd8-a056-f1b266104b57" TextAlign="Right" UIFieldID="Wh" UIViewID="ShowSpecificitemInfoMainView" Visible="True" WindowHeight="408" WindowWidth="580">
+        <ReferenceColumn ID="01a2ffe1-5ed6-4780-b95a-0e0414f69d6b" CodeAttributeName="Code" CodeField="Code" CodeFieldUIFieldID="Wh_Code" CodeFieldUIViewID="ShowSpecificitemInfoMainView" DefaultValue="" DisplayFormat="19.0" Enabled="False" EntityName="ID" Help="Misc.存储地点" IsNull="False" IsProperty="False" IsSequence="False" Name="Wh84" NameAttributeName="Name" NameFieldUIFieldID="Wh_Name" NameFieldUIViewID="ShowSpecificitemInfoMainView" NPos="8" PkeyField="ID" Point="0" RefType="1dc5d0ff-a06e-4dd8-a056-f1b266104b57" TextAlign="Right" UIFieldID="Wh" UIViewID="ShowSpecificitemInfoMainView" Visible="True" WindowHeight="408" WindowWidth="580">
           <ReferenceRelation Action="Clear" ColumnDisplayName="ID" ColumnID="ID" Name="ReferenceRelation14" TargetControlType="" TargetID="" TargetProperty="" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="编码" ColumnID="Code" Name="ReferenceRelation15" TargetControlType="TextBoxColumnModel" TargetID="Wh_Code" TargetProperty="Value" />
           <ReferenceRelation Action="Clear" ColumnDisplayName="名称" ColumnID="Name" Name="ReferenceRelation16" TargetControlType="TextBoxColumnModel" TargetID="Wh_Name" TargetProperty="Value" />
@@ -220,45 +220,45 @@
           <UIFilterBar Name="ReferenceFilter" />
           <Events />
         </ReferenceColumn>
-        <TextBoxColumn ID="679b4dc9-277e-4ce7-be98-af055246df58" DefaultValue="0" DisplayFormat="50" Enabled="True" Help="Misc.存储地点_编码" IsNull="True" IsProperty="False" IsSequence="False" Name="Wh_Code0" NPos="8" Point="0" TextAlign="Left" UIFieldID="Wh_Code" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
+        <TextBoxColumn ID="679b4dc9-277e-4ce7-be98-af055246df58" DefaultValue="0" DisplayFormat="50" Enabled="True" Help="Misc.存储地点_编码" IsNull="True" IsProperty="False" IsSequence="False" Name="Wh_Code0" NPos="9" Point="0" TextAlign="Left" UIFieldID="Wh_Code" UIViewID="ShowSpecificitemInfoMainView" Visible="True">
           <Events />
         </TextBoxColumn>
-        <NumberColumn ID="bf0e881a-acb0-4aad-8d1f-f5d42efb7ba3" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.库存数量" IsNull="False" IsProperty="False" IsSequence="False" Name="WhQty0" NPos="9" Point="2" UIFieldID="WhQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+        <NumberColumn ID="bf0e881a-acb0-4aad-8d1f-f5d42efb7ba3" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.库存数量" IsNull="False" IsProperty="False" IsSequence="False" Name="WhQty0" NPos="10" Point="2" UIFieldID="WhQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind4" />
           <RoundRuleBind Name="RoundRuleBind4" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind4" />
           <CurrencyType Name="CurrencyType4" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="50817a55-6ca0-4f06-8ec4-ec6ba51a23de" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.请购执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="DoingPrQty0" NPos="10" Point="2" UIFieldID="DoingPrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+        <NumberColumn ID="50817a55-6ca0-4f06-8ec4-ec6ba51a23de" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.请购执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="DoingPrQty0" NPos="11" Point="2" UIFieldID="DoingPrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind7" />
           <RoundRuleBind Name="RoundRuleBind7" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind7" />
           <CurrencyType Name="CurrencyType7" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="f07d6b8d-e0ab-42d4-ab1b-c083cdda5584" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.执行采购量" IsNull="False" IsProperty="False" IsSequence="False" Name="DoingQty0" NPos="11" Point="2" UIFieldID="DoingQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+        <NumberColumn ID="f07d6b8d-e0ab-42d4-ab1b-c083cdda5584" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.执行采购量" IsNull="False" IsProperty="False" IsSequence="False" Name="DoingQty0" NPos="12" Point="2" UIFieldID="DoingQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind5" />
           <RoundRuleBind Name="RoundRuleBind5" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind5" />
           <CurrencyType Name="CurrencyType5" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="a9bf71e8-de10-4fee-8cad-66aad82b5268" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.收货执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="RecQty0" NPos="12" Point="2" UIFieldID="RecQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+        <NumberColumn ID="a9bf71e8-de10-4fee-8cad-66aad82b5268" DefaultValue="" DisplayFormat="18.0" Enabled="True" Help="Misc.收货执行数量" IsNull="True" IsProperty="False" IsSequence="False" Name="RecQty0" NPos="13" Point="2" UIFieldID="RecQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind8" />
           <RoundRuleBind Name="RoundRuleBind8" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind8" />
           <CurrencyType Name="CurrencyType8" />
           <Events />
         </NumberColumn>
-        <NumberColumn ID="1cdaf6d6-5def-4ef3-ac98-442cfa7b5a0c" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.请购数量" IsNull="False" IsProperty="False" IsSequence="False" Name="PrQty0" NPos="13" Point="2" UIFieldID="PrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
+        <NumberColumn ID="1cdaf6d6-5def-4ef3-ac98-442cfa7b5a0c" DefaultValue="0" DisplayFormat="18.0" Enabled="True" Help="Misc.请购数量" IsNull="False" IsProperty="False" IsSequence="False" Name="PrQty0" NPos="14" Point="2" UIFieldID="PrQty" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="90">
           <PrecisionBind Name="PrecisionBind6" />
           <RoundRuleBind Name="RoundRuleBind6" />
           <ValueOfRoundByValueBind Name="ValueOfRoundByValueBind6" />
           <CurrencyType Name="CurrencyType6" />
           <Events />
         </NumberColumn>
-        <DatePickerColumn ID="35c26e62-01d1-4004-bea8-a2dfca2b8bbc" DefaultValue="" DisplayFormat="8" Enabled="True" Help="Misc.需求日期" IsNull="True" IsProperty="False" IsSequence="False" Name="ReqData1" NPos="14" Point="0" UIFieldID="ReqData" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="80">
+        <DatePickerColumn ID="35c26e62-01d1-4004-bea8-a2dfca2b8bbc" DefaultValue="" DisplayFormat="8" Enabled="True" Help="Misc.需求日期" IsNull="True" IsProperty="False" IsSequence="False" Name="ReqData1" NPos="15" Point="0" UIFieldID="ReqData" UIViewID="ShowSpecificitemInfoMainView" Visible="True" Width="80">
           <Events />
         </DatePickerColumn>
       </Columns>

@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UFSoft.UBF.Util.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor">
+            <summary>
+            数据访问器的抽象基类
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.IDataAccessor">
+            <summary>
+            数据访问器的接口
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.IDataAccessor.Execute(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.CommandType)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.IDataAccessor.ExecuteWithTableParam(System.Data.IDbConnection,System.String,System.Data.SqlClient.SqlParameter)">
+            <summary>
+            利用sqlserver2008的表参数更新数据。注意这个方法专用于sqlserver2008
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="SqlParameter">表参数</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.IDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@,System.Data.CommandType)">
+            <summary>
+            查询返回单个值
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="obj">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.IDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.DataSet@,System.Data.CommandType)">
+            <summary>
+            查询返回IDataReader
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="ds">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.IDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.IDataReader@,System.Data.CommandType)">
+            <summary>
+            查询返回DataSet
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="dr">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.IDataAccessor.NeedCloseConn">
+            <summary>
+            是否自动关闭连接
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.CreateAdapter(System.Data.IDbCommand)">
+            <summary>
+            创建IDbDataAdapter的实例
+            </summary>
+            <param name="cmd">IDbCommand</param>
+            <returns>创建的实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.CreateCommand(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.CommandType)">
+            <summary>
+            创建IDbCommand的实例
+            </summary>
+            <param name="con">连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="cmdType">命令类型</param>
+            <param name="autoClose">是否自动关闭连接</param>
+            <returns>创建的实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.PushParams(System.Data.IDbCommand,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            绑定参数
+            </summary>
+            <param name="cmd"></param>
+            <param name="dataParams"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.PopParams(System.Data.IDbCommand,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            获取返回的参数值
+            </summary>
+            <param name="cmd">命令</param>
+            <param name="dataParams">参数集合</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.OpenConn(System.Data.IDbConnection)">
+            <summary>
+            打开连接
+            </summary>
+            <param name="con"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.CloseConn(System.Data.IDbConnection)">
+            <summary>
+            关闭连接
+            </summary>
+            <param name="con"></param>
+            <param name="autoClose"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.ExecuteWithTableParam(System.Data.IDbConnection,System.String,System.Data.SqlClient.SqlParameter)">
+            <summary>
+            基于sqlserver2008的表变量更新数据,注意这个方式是专用于sqlserver2008数据库
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.Execute(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.CommandType)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.AdjustForSupportIDListParam(System.String)">
+            <summary>
+            调整SQL语句，支持IDList作为查询参数
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@,System.Data.CommandType)">
+            <summary>
+            查询返回单个值
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="obj">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.DataSet@,System.Data.CommandType)">
+            <summary>
+            查询返回DataSet
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="ds">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.Query(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.IDataReader@,System.Data.CommandType)">
+            <summary>
+            查询返回IDataReader
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">命令参数</param>
+            <param name="dr">结果</param>
+            <param name="cmdType">命令类型</param>
+            <returns>受影响的行数</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.AbstractDataAccessor.NeedCloseConn">
+            <summary>
+            是否自动关闭连接
+            名字起得不太合适，意思是
+            如果为false，表示让用户自己维护连接，包括开和关，如果为true，表示系统自动处理连接的开关
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataAccessLog">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataAccessor">
+            <summary>
+            数据访问的Facade类
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            执行sql
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQLWithTableParam(System.Data.IDbConnection,System.String,System.Data.SqlClient.SqlParameter)">
+            <summary>
+            执行sql
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Boolean)">
+            <summary>
+            执行sql
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@)">
+            <summary>
+            执行sql，输出object
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="obj">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@,System.Boolean)">
+            <summary>
+            执行sql，输出object
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="obj">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.String,System.Data.DataSet@)">
+            <summary>
+            执行sql，输出DataSet
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param nane="mulitTableName">多语言表</param>
+            <param name="ds">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.DataSet@)">
+            <summary>
+            执行sql，输出DataSet
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="ds">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.String,System.Boolean,System.Data.DataSet@)">
+            <summary>
+            执行sql，输出DataSet
+            注意，这个接口方法多一个needCloseConn参数决定是否处理IDbConnection的开关
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="ds">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.IDataReader@)">
+            <summary>
+            执行sql，输出IDataReader
+            如果连接没有打开，则自动打开连接，同时如果发生异常，则自动关闭连接
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="dr">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSQL(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Boolean,System.Data.IDataReader@)">
+            <summary>
+            执行sql，输出IDataReader
+            注意，这个接口方法多一个needCloseConn参数决定是否处理IDbConnection的开关
+            </summary>
+            <param name="con">数据库连接</param>
+            <param name="commandText">命令文本</param>
+            <param name="dataParams">参数</param>
+            <param name="dr">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.String,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            执行存储过程
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@)">
+            <summary>
+            执行存储过程，输出object
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="obj">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.DataSet@)">
+            <summary>
+            执行存储过程，输出DataSet
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="ds">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.IDataReader@)">
+            <summary>
+            执行存储过程，输出IDataReader
+            如果连接没有打开，则自动打开连接，同时如果发生异常，则自动关闭连接
+            </summary>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="dr">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            执行存储过程
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="conn">数据库连接</param>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Object@)">
+            <summary>
+            执行存储过程，输出object
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="conn">数据库连接</param>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="obj">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.DataSet@)">
+            <summary>
+            执行存储过程，输出DataSet
+            如果连接没有打开，则自动打开并关闭连接
+            </summary>
+            <param name="conn">数据库连接</param>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="ds">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.RunSP(System.Data.IDbConnection,System.String,UFSoft.UBF.Util.DataAccess.DataParamList,System.Data.IDataReader@)">
+            <summary>
+            执行存储过程，输出IDataReader
+            如果连接没有打开，则自动打开连接，同时如果发生异常，则自动关闭连接
+            </summary>
+            <param name="conn">数据库连接</param>
+            <param name="sprocName">存储过程名</param>
+            <param name="dataParams">参数</param>
+            <param name="dr">运行结果</param>
+            <returns>影响的行数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessor.GetConn">
+            <summary>
+            取得数据库的连接,因该从context中提取，目前临时从配置文件读取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataAccessorFactory">
+            <summary>
+            数据访问器的工厂
+            暂时只实现对SqlServer的支持
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataAccessorFactory.CreateAccessor(System.Data.IDbConnection)">
+            <summary>
+            创建数据访问器
+            </summary>
+            <param name="con">数据库连接</param>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataParam">
+            <summary>
+            参数基类
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._paramName">
+            <summary>
+            取得带@的参数名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._name">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._value">
+            <summary>
+            参数值，默认null
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._direction">
+            <summary>
+            指示参数的方向：是只可输入、只可输出、双向还是存储过程返回值参数一。
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._size">
+            <summary>
+            参数的大小
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._type">
+            <summary>
+            参数的数据类型
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam._IsNullable">
+            <summary>
+            是否允许为空，默认不允许
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.DataParam.SourceColumn">
+            <summary>
+            源列的名称
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParam.#ctor(System.String,System.Data.ParameterDirection)">
+            <summary>
+            根据参数名和参数的方向创建实例，默认参数类型为字符串
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramDirection">参数的方向</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParam.#ctor(System.String,System.Object,System.Data.ParameterDirection)">
+            <summary>
+            根据参数名、参数值和参数的方向创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramDirection">参数的方向</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParam.#ctor(System.String,System.Object,System.Data.ParameterDirection,System.Data.DbType,System.Int32)">
+            <summary>
+            根据参数名、参数值和参数的方向创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramDirection">参数的方向</param>
+            <param name="paramType">参数的数据类型</param>
+            <param name="paramSize">参数的大小</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParam.#ctor(System.String,System.Object,System.Data.ParameterDirection,System.Data.DbType,System.Int32,System.Boolean)">
+            <summary>
+            根据参数名、参数值和参数的方向创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramDirection">参数的方向</param>
+            <param name="paramType">参数的数据类型</param>
+            <param name="paramSize">参数的大小</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParam.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.InputDataParam">
+            <summary>
+            输入参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputDataParam.#ctor(System.String,System.Object)">
+            <summary>
+            根据参数名和参数值创建实例，默认参数类型为字符串
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputDataParam.#ctor(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            根据参数名、参数值和类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="type">参数类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputDataParam.#ctor(System.String,System.Object,System.Data.DbType,System.Int32)">
+            <summary>
+            根据参数名、参数值、类型和大小创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="type">参数类型</param>
+            <param name="size">参数大小</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.OutputDataParam">
+            <summary>
+            输出参数，默认参数名称包含了@
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.OutputDataParam.#ctor(System.String,System.Data.DbType)">
+            <summary>
+            根据参数名和参数类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="type">参数类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.OutputDataParam.#ctor(System.String,System.Data.DbType,System.Int32)">
+            <summary>
+            根据参数名和参数类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="type">参数类型</param>
+            <param name="size">参数大小</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.InputOutputDataParam">
+            <summary>
+            输入/输出参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputOutputDataParam.#ctor(System.String,System.Object)">
+            <summary>
+            根据参数名和参数类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputOutputDataParam.#ctor(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            根据参数名和参数类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="type">参数类型</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.InputOutputDataParam.#ctor(System.String,System.Object,System.Data.DbType,System.Int32)">
+            <summary>
+            根据参数名和参数类型创建实例
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="type">参数类型</param>
+            <param name="size">参数大小</param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.ReturnDataParam">
+            <summary>
+            存储过程返回值参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.ReturnDataParam.#ctor(System.String)">
+            <summary>
+            根据参数名创建实例
+            </summary>
+            <param name="paramName"></param>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataParamFactory">
+            <summary>
+            参数工厂
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput(System.String,System.String)">
+            <summary>
+            创建输入参数，默认类型为string
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInput(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            创建输入参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramType">参数类型</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateTableParam(System.String,System.String,System.Object)">
+            <summary>
+            创建输入参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramType">参数类型</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateOutput(System.String,System.Data.DbType)">
+            <summary>
+            创建输出参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramType">参数类型</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateInputOutput(System.String,System.Object,System.Data.DbType)">
+            <summary>
+            创建输入输出参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramType">参数类型</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.CreateReturn(System.String)">
+            <summary>
+            创建存储过程返回值参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <returns>参数</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamFactory.Create(System.String,System.Object,System.Data.ParameterDirection,System.Data.DbType,System.Int32)">
+            <summary>
+            创建存储过程返回值参数
+            </summary>
+            <param name="paramName">参数名</param>
+            <param name="paramValue">参数值</param>
+            <param name="paramDirection">参数的方向</param>
+            <param name="paramType">参数的数据类型</param>
+            <param name="paramSize">参数的大小</param>
+            <returns>参数</returns>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataParamList">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.#ctor">
+            <summary>
+            参数集合
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.#ctor(UFSoft.UBF.Util.DataAccess.DataParam)">
+            <summary>
+            创建参数集合，并添加第一个参数
+            </summary>
+            <param name="dataParam">第一个要添加的参数</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.#ctor(UFSoft.UBF.Util.DataAccess.DataParam[])">
+            <summary>
+            参数集合
+            </summary>
+            <param name="dataParams">参数集合</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.Add(UFSoft.UBF.Util.DataAccess.DataParam)">
+            <summary>
+            增加参数
+            </summary>
+            <param name="dataParam"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.Remove(System.String)">
+            <summary>
+            增加参数
+            </summary>
+            <param name="dataParam"></param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.Clear">
+            <summary>
+            清空参数
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DataParamList.GetParamsValuesStr(UFSoft.UBF.Util.DataAccess.DataParamList)">
+            <summary>
+            输出sql语句和参数
+            </summary>
+            <param name="sql">sql语句</param>
+            <param name="paramList">参数</param>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DataParamList.Item(System.Int32)">
+            <summary>
+            根据索引获取参数
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DataParamList.Item(System.String)">
+            <summary>
+            根据索引获取参数
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DataParamList.DataParamListEnumerator">
+            <summary>
+            参数集合枚举器
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.DbDataReader">
+            <summary>
+            IDataReader 的实现
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.#ctor(System.Data.IDataReader,System.Data.IDbConnection,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dr">IDataReader</param>
+            <param name="con">连接</param>
+            <param name="autoClose">是否自动关闭连接</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetEnumerator">
+            <summary>
+            获取枚举器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.Close">
+            <summary>
+            关闭 IDataReader Object。
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.NextResult">
+            <summary>
+            当读取批处理 SQL 语句的结果时，使数据读取器前进到下一个结果。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.Read">
+            <summary>
+            使 IDataReader 前进到下一条记录。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetSchemaTable">
+            <summary>
+            返回一个 DataTable，它描述 IDataReader 的列元数据。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetName(System.Int32)">
+            <summary>
+            获取要查找的字段的名称。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetDataTypeName(System.Int32)">
+            <summary>
+            获取指定字段的数据类型信息。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetFieldType(System.Int32)">
+            <summary>
+            获取与从 GetValue 返回的 Object 类型对应的 Type 信息。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetValue(System.Int32)">
+            <summary>
+            返回指定字段的值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetValues(System.Object[])">
+            <summary>
+            返回指定字段的值。
+            </summary>
+            <param name="values"></param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetOrdinal(System.String)">
+            <summary>
+            返回命名字段的索引。
+            </summary>
+            <param name="name">字段名</param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetBoolean(System.Int32)">
+            <summary>
+            获取指定列的布尔值形式的值。
+            </summary>
+            <param name="i">从零开始的列序号。 </param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetByte(System.Int32)">
+            <summary>
+            获取指定列的 8 位无符号整数值。
+            </summary>
+            <param name="i">从零开始的列序号。 </param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            从指定的列偏移量将字节流作为数组从给定的缓冲区偏移量开始读入缓冲区。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <param name="fieldOffset">字段中的索引，从其开始读取操作。 </param>
+            <param name="buffer">要将字节流读入的缓冲区。 </param>
+            <param name="bufferoffset">开始读取操作的 buffer 的索引。</param>
+            <param name="length">要读取的字节数。</param>
+            <returns>读取的实际字节数。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetChar(System.Int32)">
+            <summary>
+            获取指定列的字符值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns>列的值。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            从指定的列偏移量将字符流作为数组从给定的缓冲区偏移量开始读入缓冲区。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <param name="fieldoffset">行中的索引，从其开始读取操作。 </param>
+            <param name="buffer">要将字节流读入的缓冲区。 </param>
+            <param name="bufferoffset">开始读取操作的 buffer 的索引。 </param>
+            <param name="length">要读取的字节数。</param>
+            <returns>读取的实际字符数。</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetGuid(System.Int32)">
+            <summary>
+            返回指定字段的 GUID 值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetInt16(System.Int32)">
+            <summary>
+            获取指定字段的 16 位有符号整数值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetInt32(System.Int32)">
+            <summary>
+            获取指定字段的 32 位有符号整数值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetInt64(System.Int32)">
+            <summary>
+            获取指定字段的 64 位有符号整数值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetFloat(System.Int32)">
+            <summary>
+            获取指定字段的单精度浮点数。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetDouble(System.Int32)">
+            <summary>
+            获取指定字段的双精度浮点数。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetString(System.Int32)">
+            <summary>
+            获取指定字段的字符串值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetDecimal(System.Int32)">
+            <summary>
+            获取指定字段的固定位置的数值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetDateTime(System.Int32)">
+            <summary>
+            获取指定字段的日期和时间数据值。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.GetData(System.Int32)">
+            <summary>
+            获取将在字段指向更多的远程结构化数据时使用的 IDataReader。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns></returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.DbDataReader.IsDBNull(System.Int32)">
+            <summary>
+            返回是否将指定字段设置为空。
+            </summary>
+            <param name="i">从零开始的列序号。</param>
+            <returns>如果将指定字段设置为空，则为 true，否则为 false。</returns>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.Connection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.Depth">
+            <summary>
+            获取一个值，该值指示当前行的嵌套深度。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.IsClosed">
+            <summary>
+            获取一个值，该值指示数据读取器是否已关闭。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.RecordsAffected">
+            <summary>
+            通过执行 SQL 语句获取更改、插入或删除的行数。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.FieldCount">
+            <summary>
+            获取当前行中的列数。
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.Item(System.Int32)">
+            <summary>
+            根据索引获取字段的值
+            </summary>
+        </member>
+        <member name="P:UFSoft.UBF.Util.DataAccess.DbDataReader.Item(System.String)">
+            <summary>
+            根据字段名获取字段的值
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.MsSqlAccessor">
+            <summary>
+            SqlServer数据库的数据访问器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.MsSqlAccessor.CreateAdapter(System.Data.IDbCommand)">
+            <summary>
+            创建IDbDataAdapter的实例
+            </summary>
+            <param name="cmd">IDbCommand</param>
+            <returns>创建的实例</returns>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.MultiHelp.AddMultiTableToDataSet(System.Data.IDbConnection,System.String,System.Data.DataSet@,UFSoft.UBF.Util.DataAccess.IDataAccessor)">
+            <summary>
+            注意参数mulitTableName，目前暂时为String，其实因该为mulitTableName的list,因为可能会处理多个多语言的表，目前
+            还没有这个需求
+            </summary>
+            <param name="con"></param>
+            <param name="mulitTableName"></param>
+            <param name="ds"></param>
+            <param name="accessor"></param>
+            <returns></returns>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.Config.SupportNoLimitCommandTimeout">
+            <summary>
+            Command的时间限制
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.Config.BatchSize">
+            <summary>
+            Command批处理大小
+            </summary>
+        </member>
+        <member name="T:UFSoft.UBF.Util.DataAccess.KeyGenerator">
+            <summary>
+            Key产生器
+            </summary>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.KeyGenerator.NewValue">
+            <summary>
+            产生新的属性值.新的方式，通过存储过程产生19位的id号 siteID(3) + date (8) + sn (8)
+            </summary>
+            <param name="attr">属性</param>
+        </member>
+        <member name="M:UFSoft.UBF.Util.DataAccess.KeyGenerator.GetNewIDByStep">
+            <summary>
+            生成一个新的id,注意这个id是按一个分配长度产生ID，即随取随用
+            </summary>
+            <param name="attr">属性</param>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.Tools.UBF_DBType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.Tools.UBF_DBType.Sqlserver2005">
+            <summary>
+            Sqlserver 2005
+            </summary>
+        </member>
+        <member name="F:UFSoft.UBF.Util.DataAccess.Tools.UBF_DBType.Sqlserver2008">
+            <summary>
+            Sqlserver2008
+            </summary>
+        </member>
+    </members>
+</doc>
