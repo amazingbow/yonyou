@@ -27,12 +27,13 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
             if (string.IsNullOrEmpty(this.Model.FindSpecificItemInfoMainView.FocusedRecord.Wh.ToString())) return;
             lst.Add(DataParamFactory.CreateInput("@ID", this.Model.FindSpecificItemInfoMainView.FocusedRecord.Wh.Value, System.Data.DbType.Int64));
             stb.Append(@"Select Wh,A.StorageType,C.Code as Wh_Code,B.Name as Wh_Name,ItemInfo_ItemID,ItemInfo_ItemCode,ItemInfo_ItemName,
+(select top 1 SPECS from CBO_ItemMaster it where it.ID=ItemInfo_ItemID) as SPECS,
                 ISNULL(StoreQtyCU,0) as StoreQtyCU,
-                isnull((Select SUM(p.CurOrgToPOQtyTU) from PR_PRLine p where p.DemandCode=3348 and p.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as CurOrgToPOQtyTU, 
-                isnull((Select SUM(p.ApprovedQtyPU) from PR_PRLine p where p.DemandCode=3348 and p.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as PRQty,
-                isnull((Select SUM(pm.PurQtyTU) from PM_POLine pm inner join PM_PurchaseOrder pmp on pm.PurchaseOrder=pmp.ID  where pm.DemondCode=3348 and pm.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as PMQty,
-                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where rcv.ItemInfo_ItemID=A.ItemInfo_ItemID and rcv.DescFlexSegments_PrivateDescSeg1='3348'),0) as PMOutQty,
-                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where rcv.[Status] in (0,3) and rcv.ItemInfo_ItemID=A.ItemInfo_ItemID and rcv.DescFlexSegments_PrivateDescSeg1='3348'),0) as RcvQty 
+                isnull((Select SUM(p.CurOrgToPOQtyTU) from PR_PRLine p where p.DemandCode=3362 and p.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as CurOrgToPOQtyTU, 
+                isnull((Select SUM(p.ApprovedQtyPU) from PR_PRLine p where p.DemandCode=3362 and p.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as PRQty,
+                isnull((Select SUM(pm.PurQtyTU) from PM_POLine pm inner join PM_PurchaseOrder pmp on pm.PurchaseOrder=pmp.ID  where pm.DemondCode=3362 and pm.ItemInfo_ItemID=A.ItemInfo_ItemID),0) as PMQty,
+                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where rcv.ItemInfo_ItemID=A.ItemInfo_ItemID and rcv.DescFlexSegments_PrivateDescSeg1='3362'),0) as PMOutQty,
+                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where rcv.[Status] in (0,3) and rcv.ItemInfo_ItemID=A.ItemInfo_ItemID and rcv.DescFlexSegments_PrivateDescSeg1='3362'),0) as RcvQty 
                 from InvTrans_WhQoh A inner join CBO_Wh_Trl B on A.Wh=B.ID and B.SysMLFlag='zh-CN' inner join CBO_Wh C on A.Wh=C.ID where A.Wh=@ID");            
             switch (string.IsNullOrEmpty(this.ItemMaster92.Value.ToString()))
             {
@@ -76,6 +77,7 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
                     Record.ItemMaster = long.Parse(item["ItemInfo_ItemID"].ToString());
                     Record.ItemMaster_Code = item["ItemInfo_ItemCode"].ToString();
                     Record.ItemMaster_Name = item["ItemInfo_ItemName"].ToString();
+                    Record.SPECS = item["SPECS"].ToString();
                     Record.Wh = long.Parse(item["Wh"].ToString());
                     Record.Wh_Code = item["Wh_Code"].ToString();
                     Record.Wh_Name = item["Wh_Name"].ToString();
@@ -100,13 +102,13 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
                     System.Data.DataSet Dds = new System.Data.DataSet();
                     //运行RunSQl传递oql查询条件.给缓存数据集中添加相应的查询字段
                     DataAccessor.RunSQL(DataAccessor.GetConn(),
-                    @"Select top 1 A.ID,A.Code as ItemCode,A.Name as ItemName,
+                    @"Select top 1 A.ID,A.Code as ItemCode,A.Name as ItemName,SPECS,
                 0 as StoreQtyCU,
-                isnull((Select SUM(p.CurOrgToPOQtyTU) from PR_PRLine p where p.DemandCode=3348 and p.ItemInfo_ItemID=A.ID),0) as CurOrgToPOQtyTU, 
-                isnull((Select SUM(p.ApprovedQtyPU) from PR_PRLine p where p.DemandCode=3348 and p.ItemInfo_ItemID=A.ID),0) as PRQty,
-                isnull((Select SUM(pm.PurQtyTU) from PM_POLine pm inner join PM_PurchaseOrder pmp on pm.PurchaseOrder=pmp.ID where pm.DemondCode=3348 and pm.ItemInfo_ItemID=A.ID),0) as PMQty,
-                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where  rcv.ItemInfo_ItemID=A.ID and rcv.DescFlexSegments_PrivateDescSeg1='3348'),0) as PMOutQty,
-                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where  rcv.[Status] in (0,3) and rcv.ItemInfo_ItemID=A.ID and rcv.DescFlexSegments_PrivateDescSeg1='3348'),0) as RcvQty from CBO_ItemMaster A where A.Code =@Code", Dlst, out Dds);
+                isnull((Select SUM(p.CurOrgToPOQtyTU) from PR_PRLine p where p.DemandCode=3362 and p.ItemInfo_ItemID=A.ID),0) as CurOrgToPOQtyTU, 
+                isnull((Select SUM(p.ApprovedQtyPU) from PR_PRLine p where p.DemandCode=3362 and p.ItemInfo_ItemID=A.ID),0) as PRQty,
+                isnull((Select SUM(pm.PurQtyTU) from PM_POLine pm inner join PM_PurchaseOrder pmp on pm.PurchaseOrder=pmp.ID where pm.DemondCode=3362 and pm.ItemInfo_ItemID=A.ID),0) as PMQty,
+                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where  rcv.ItemInfo_ItemID=A.ID and rcv.DescFlexSegments_PrivateDescSeg1='3362'),0) as PMOutQty,
+                Isnull((select SUM(rcv.ArriveQtyPU) from PM_RcvLine rcv where  rcv.[Status] in (0,3) and rcv.ItemInfo_ItemID=A.ID and rcv.DescFlexSegments_PrivateDescSeg1='3362'),0) as RcvQty from CBO_ItemMaster A where A.Code =@Code", Dlst, out Dds);
                     if (Dds != null && Dds.Tables.Count > 0)
                     {
                         //将缓存的数据集用表承载
@@ -118,6 +120,7 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
                             Record.ItemMaster = long.Parse(Ditem["ID"].ToString());
                             Record.ItemMaster_Code = List;
                             Record.ItemMaster_Name = Ditem["ItemName"].ToString();
+                            Record.SPECS = Ditem["SPECS"].ToString();
                             Record.Wh = long.Parse(this.Wh83.Key);
                             Record.Wh_Code = this.Wh83.Value.ToString();
                             Record.Wh_Name = this.Wh83.Text;

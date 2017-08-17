@@ -77,7 +77,7 @@
                             Code = specificItemInfo.Wh_Code,
                         };
                         pRLine.RequiredDeliveryDate = specificItemInfo.ReqDate;
-                        pRLine.DemandCode = 3348;
+                        pRLine.DemandCode = 3362;
                         //pRLine.DemandCode = 2001;
                         pRLine.ReqQtyTU = specificItemInfo.ReqPRQty;
                         pRLine.SysState = ObjectState.Inserted;

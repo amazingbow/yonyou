@@ -403,14 +403,14 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
 
 				this.ItemMaster92 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"ItemMaster92",true,true, true,152, 20, 6, 0, 1, 1, "100","11",false,false,true,"lblItemMaster92","bac2f976-9b6b-4000-b1ae-1d842df87552","7f5dc2f1-bc61-4193-b968-bbfb8a06ca30");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ItemMaster92, "False", "ItemMaster", this.Model.FindSpecificItemInfoMainView, this.Model.FindSpecificItemInfoMainView.FieldItemMaster, "FindSpecificItemInfoMainView");
-			UIControlBuilder.SetReferenceControlRefInfo(this.ItemMaster92,"220d5b81-a3b8-4124-af76-8faa43801268", 580,408, "Name","Code","ID", this.Model.FindSpecificItemInfoMainView.FieldItemMaster_Code,this.Model.FindSpecificItemInfoMainView.FieldItemMaster_Name);
+			UIControlBuilder.SetReferenceControlRefInfo(this.ItemMaster92,"6e238bd9-9e6a-499a-8fde-c5f962b1f5bb", 580,408, "Name","Code","ID", this.Model.FindSpecificItemInfoMainView.FieldItemMaster_Code,this.Model.FindSpecificItemInfoMainView.FieldItemMaster_Name);
             //foreach Reference's input filter parameter
 			ScriptBuilder.BuildReferenceControlInputScript(this.ItemMaster92,"ItemMaster92",new ReferenceInputParam[]{new ReferenceInputParam("CurDate","DateTime","Value","",2),});
  			//for personal
 		 
          		
             //foreach Reference's output set data, columnID锛屽弬鐓ц繑鍥炲垪鐨凢ieldID
-			ScriptBuilder.BuildReferenceControlOuputScript(this.ItemMaster92,"ItemMaster92",new ReferenceOutputParam[]{new ReferenceOutputParam("ItemMaster92","ID","Key"),new ReferenceOutputParam("ItemMaster92","Code","Value"),new ReferenceOutputParam("ItemMaster92","Name","Text"),new ReferenceOutputParam("","SPECS",""),new ReferenceOutputParam("","Version",""),new ReferenceOutputParam("","IsMISC",""),new ReferenceOutputParam("","StandardGrade",""),new ReferenceOutputParam("","StandardPotency",""),new ReferenceOutputParam("","Description",""),});
+			ScriptBuilder.BuildReferenceControlOuputScript(this.ItemMaster92,"ItemMaster92",new ReferenceOutputParam[]{new ReferenceOutputParam("","ID",""),new ReferenceOutputParam("","Name",""),new ReferenceOutputParam("","Code",""),new ReferenceOutputParam("","SPECS",""),new ReferenceOutputParam("","Description",""),});
 				
 
 		
@@ -523,6 +523,11 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"IsReqPR0","CheckBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["IsReqPR"]/*IsReqPR*/,"IsReqPR", false, true, true, false, false, false, 22, 70, "1",false, false,"0","2896065f-29f0-45ff-870c-31ea738da144","2896065f-29f0-45ff-870c-31ea738da144","fc850424-512d-474e-a8b0-4b05b7d5b109");
 	  
 		 	                     
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemMaster_Code0","TextBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["ItemMaster_Code"]/*ItemMaster_Code*/,"ItemMaster_Code", false, true, false, false, false, false, 0, 100, "50",true, false,"0","f6f70f58-96bc-4786-9c0f-3ea842a41e7d","f6f70f58-96bc-4786-9c0f-3ea842a41e7d","39d50129-e6e9-4c61-81d6-ae96abe925e7");
+         
+			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
+	  
+		 	                     
 			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemMaster0","ReferenceColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["ItemMaster"]/*ItemMaster*/,"ItemMaster", false, true, false, false, false, false, 7, 100, "19.0",true, false,"","e7e20c0d-e285-4e2e-a995-b88b48873016","e7e20c0d-e285-4e2e-a995-b88b48873016","9a4c019f-346f-456b-bd85-1f1853b05a44");
 			GridControlBuilder.GridReferenceColumnBuilder((IUFFldReferenceColumn)column, ColumnTextAlign.Right, "ID", "Code", "Name", this.Model.ShowSpecificitemInfoMainView.FieldItemMaster_Code/*ItemMaster_Code*/, this.Model.ShowSpecificitemInfoMainView.FieldItemMaster_Name/*ItemMaster_Name*/, "beedebc3-5398-46b5-a237-5a3a4d13ad4f"
 			,false,true,580,408);
@@ -549,12 +554,12 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
             ((IUFFldReferenceColumn)column).ApplyRefRelations();
 			  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemMaster_Code0","TextBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["ItemMaster_Code"]/*ItemMaster_Code*/,"ItemMaster_Code", false, true, false, false, false, false, 0, 100, "50",true, false,"0","f6f70f58-96bc-4786-9c0f-3ea842a41e7d","f6f70f58-96bc-4786-9c0f-3ea842a41e7d","39d50129-e6e9-4c61-81d6-ae96abe925e7");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"SPECS0","TextBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["SPECS"]/*SPECS*/,"SPECS", false, true, true, false, false, true, 0, 100, "50",true, false,"","017894f8-3d5b-48a9-8840-00a3bcddefa4","017894f8-3d5b-48a9-8840-00a3bcddefa4","a9316402-0b7d-47aa-a539-f926203cdb27");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemMaster_Name0","TextBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["ItemMaster_Name"]/*ItemMaster_Name*/,"ItemMaster_Name", false, true, false, false, false, false, 0, 100, "50",true, false,"0","38e99e91-fe81-49f2-9a39-5641e0631281","38e99e91-fe81-49f2-9a39-5641e0631281","5779f7cb-b70f-499e-9307-cc0504bf9e3f");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ItemMaster_Name0","TextBoxColumnModel", "", 0,this.Model.ShowSpecificitemInfoMainView.Fields["ItemMaster_Name"]/*ItemMaster_Name*/,"ItemMaster_Name", false, false, false, false, false, false, 0, 100, "50",true, false,"0","38e99e91-fe81-49f2-9a39-5641e0631281","38e99e91-fe81-49f2-9a39-5641e0631281","5779f7cb-b70f-499e-9307-cc0504bf9e3f");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","50") ;          
 	  

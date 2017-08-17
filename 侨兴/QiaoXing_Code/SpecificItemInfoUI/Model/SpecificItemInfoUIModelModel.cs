@@ -641,6 +641,10 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
 		{
 			get { return this.Fields["ReqData"]; }
 		}
+		public IUIField FieldSPECS
+		{
+			get { return this.Fields["SPECS"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -672,6 +676,7 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"RecQty", typeof(Decimal), true,"0","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","525c0076-8a59-4375-838e-7e01250b94a1");
 			UIModelRuntimeFactory.AddNewUIField(this,"PrQty", typeof(Decimal), true,"0","System.Decimal", "", false,false, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","0388aa9b-b0e5-4ab1-b65a-5adc72deab0a");
 			UIModelRuntimeFactory.AddNewUIField(this,"ReqData", typeof(DateTime), true,"","System.Date", "", false,false, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","0a1af256-1be5-40a2-a0f9-eaf8908ca6e1");
+			UIModelRuntimeFactory.AddNewUIField(this,"SPECS", typeof(String), true,"","System.String", "", false,false, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","017894f8-3d5b-48a9-8840-00a3bcddefa4");
 
 
 			this.CurrentFilter = new ShowSpecificitemInfoMainViewDefaultFilterFilter(this);
@@ -966,6 +971,19 @@ namespace UFIDA.U9.Cust.XMQX.SpecificItemInfoUI.SpecificItemInfoUIModel
 			}
 			set{
 				this[this.uiviewShowSpecificitemInfoMainView.FieldReqData] = value;
+			}
+		}
+		
+		
+		public  String SPECS
+		{
+			get{
+				//object value = this[this.uiviewShowSpecificitemInfoMainView.FieldSPECS] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewShowSpecificitemInfoMainView.FieldSPECS);
+			}
+			set{
+				this[this.uiviewShowSpecificitemInfoMainView.FieldSPECS] = value;
 			}
 		}
 		#endregion
