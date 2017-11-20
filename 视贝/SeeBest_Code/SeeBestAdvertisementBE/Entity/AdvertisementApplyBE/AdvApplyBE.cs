@@ -452,7 +452,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 下单人 (该属性可为空,且无默认值)
+			/// 下单人 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.下单人
 			/// </summary>
 			/// <value></value>
@@ -493,7 +493,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 联系电话 (该属性可为空,且无默认值)
+			/// 联系电话 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.联系电话
 			/// </summary>
 			/// <value></value>
@@ -512,7 +512,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// QQ (该属性可为空,且无默认值)
+			/// QQ (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.QQ
 			/// </summary>
 			/// <value></value>
@@ -531,7 +531,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户店名 (该属性可为空,且无默认值)
+			/// 客户店名 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.客户店名
 			/// </summary>
 			/// <value></value>
@@ -588,7 +588,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 联系人 (该属性可为空,且无默认值)
+			/// 联系人 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.联系人
 			/// </summary>
 			/// <value></value>
@@ -607,7 +607,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户联系电话 (该属性可为空,且无默认值)
+			/// 客户联系电话 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.客户联系电话
 			/// </summary>
 			/// <value></value>
@@ -626,7 +626,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户地址 (该属性可为空,且无默认值)
+			/// 客户地址 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.客户地址
 			/// </summary>
 			/// <value></value>
@@ -645,7 +645,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 广告载体 (该属性可为空,且无默认值)
+			/// 广告载体 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.广告载体
 			/// </summary>
 			/// <value></value>
@@ -665,7 +665,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
    		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
 		/// <summary>
 		/// EntityKey 属性
-		/// 广告载体 的Key (该属性可为空,且无默认值)
+		/// 广告载体 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
@@ -857,7 +857,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 版面类型 (该属性可为空,但有默认值)
+			/// 版面类型 (该属性不可为空,但有默认值)
 			/// 广告申请单.Misc.版面类型
 			/// </summary>
 			/// <value></value>
@@ -877,7 +877,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 版面要求1 (该属性可为空,但有默认值)
+			/// 版面要求1 (该属性不可为空,但有默认值)
 			/// 广告申请单.Misc.版面要求1
 			/// </summary>
 			/// <value></value>
@@ -897,7 +897,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 版面要求2 (该属性可为空,但有默认值)
+			/// 版面要求2 (该属性不可为空,但有默认值)
 			/// 广告申请单.Misc.版面要求2
 			/// </summary>
 			/// <value></value>
@@ -1051,7 +1051,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 单据类型 (该属性可为空,且无默认值)
+			/// 单据类型 (该属性不可为空,且无默认值)
 			/// 广告申请单.Misc.单据类型
 			/// </summary>
 			/// <value></value>
@@ -1071,7 +1071,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
    		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApplyDocTypeKey ;
 		/// <summary>
 		/// EntityKey 属性
-		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 单据类型 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -1229,7 +1229,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 下单人 (该属性可为空,且无默认值)
+		/// 下单人 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.下单人
 		/// </summary>
 		/// <value></value>
@@ -1278,7 +1278,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 联系电话 (该属性可为空,且无默认值)
+		/// 联系电话 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.联系电话
 		/// </summary>
 		/// <value></value>
@@ -1302,7 +1302,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// QQ (该属性可为空,且无默认值)
+		/// QQ (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.QQ
 		/// </summary>
 		/// <value></value>
@@ -1326,7 +1326,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 客户店名 (该属性可为空,且无默认值)
+		/// 客户店名 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.客户店名
 		/// </summary>
 		/// <value></value>
@@ -1398,7 +1398,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 联系人 (该属性可为空,且无默认值)
+		/// 联系人 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.联系人
 		/// </summary>
 		/// <value></value>
@@ -1422,7 +1422,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 客户联系电话 (该属性可为空,且无默认值)
+		/// 客户联系电话 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.客户联系电话
 		/// </summary>
 		/// <value></value>
@@ -1446,7 +1446,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 客户地址 (该属性可为空,且无默认值)
+		/// 客户地址 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.客户地址
 		/// </summary>
 		/// <value></value>
@@ -1470,7 +1470,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 广告载体 (该属性可为空,且无默认值)
+		/// 广告载体 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
@@ -1501,7 +1501,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
    		private UFIDA.U9.CBO.SCM.Item.ItemMaster.EntityKey m_AdvCarrierKey ;
 		/// <summary>
-		/// 广告载体 的Key (该属性可为空,且无默认值)
+		/// 广告载体 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.广告载体
 		/// </summary>
 		/// <value></value>
@@ -1750,7 +1750,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 版面类型 (该属性可为空,但有默认值)
+		/// 版面类型 (该属性不可为空,但有默认值)
 		/// 广告申请单.Misc.版面类型
 		/// </summary>
 		/// <value></value>
@@ -1778,7 +1778,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 版面要求1 (该属性可为空,但有默认值)
+		/// 版面要求1 (该属性不可为空,但有默认值)
 		/// 广告申请单.Misc.版面要求1
 		/// </summary>
 		/// <value></value>
@@ -1806,7 +1806,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 版面要求2 (该属性可为空,但有默认值)
+		/// 版面要求2 (该属性不可为空,但有默认值)
 		/// 广告申请单.Misc.版面要求2
 		/// </summary>
 		/// <value></value>
@@ -2006,7 +2006,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 		
 			/// <summary>
-		/// 单据类型 (该属性可为空,且无默认值)
+		/// 单据类型 (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -2037,7 +2037,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
    		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApplyDocTypeKey ;
 		/// <summary>
-		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 单据类型 的Key (该属性不可为空,且无默认值)
 		/// 广告申请单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -3237,7 +3237,91 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 				this.PropertyExceptions.Add(ApplyDept_Exception);
 			}
 
+			if (string.IsNullOrEmpty((string)base.GetValue("Applier"))){
+				UFSoft.UBF.Business.AttributeInValidException Applier_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","Applier","dc9feed5-98b0-4720-b27e-96e23c172812");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					Applier_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(Applier_Exception);
+			}
 
+			if (string.IsNullOrEmpty((string)base.GetValue("Phone"))){
+				UFSoft.UBF.Business.AttributeInValidException Phone_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","Phone","65c3a0ee-211c-453c-98db-637fdcb65dea");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					Phone_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(Phone_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("QQ"))){
+				UFSoft.UBF.Business.AttributeInValidException QQ_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","QQ","72a421d2-ca88-44a8-88d2-d641d58fd56c");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					QQ_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(QQ_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("CustConterName"))){
+				UFSoft.UBF.Business.AttributeInValidException CustConterName_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","CustConterName","82151947-7858-4455-9889-c756e8cb2dfb");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					CustConterName_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(CustConterName_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("RelPeople"))){
+				UFSoft.UBF.Business.AttributeInValidException RelPeople_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","RelPeople","d4ccdeaf-094c-4f67-bfb7-c4bea90f86a1");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					RelPeople_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(RelPeople_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("CustPhone"))){
+				UFSoft.UBF.Business.AttributeInValidException CustPhone_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","CustPhone","0e09c324-056d-4ca8-a21b-1b50dbeb073d");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					CustPhone_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(CustPhone_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("CustAddress"))){
+				UFSoft.UBF.Business.AttributeInValidException CustAddress_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","CustAddress","2274573d-d4b3-4197-833b-d3db96ca2b1e");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					CustAddress_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(CustAddress_Exception);
+			}
+
+			if (Convert.ToInt64(base.GetValue("AdvCarrier")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvCarrier_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvCarrier","e3da45c7-8d64-4db1-b036-708c38313b81");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvCarrier_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvCarrier_Exception);
+			}
+
+			if (Convert.ToInt32(base.GetValue("AdvDisplayType")) == UFSoft.UBF.PL.Tool.Constant.Enum_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvDisplayType_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvDisplayType","9c1f6596-ebef-44b6-bd3a-23885e14fbac");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvDisplayType_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvDisplayType_Exception);
+			}
+
+			if (Convert.ToInt32(base.GetValue("AdvDispInfo1")) == UFSoft.UBF.PL.Tool.Constant.Enum_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvDispInfo1_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvDispInfo1","5132b0a1-403d-473c-9d79-a854e6678481");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvDispInfo1_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvDispInfo1_Exception);
+			}
+
+			if (Convert.ToInt32(base.GetValue("AdvDispInfo2")) == UFSoft.UBF.PL.Tool.Constant.Enum_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvDispInfo2_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvDispInfo2","401d16a6-859f-43d4-8160-4343371ea2b3");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvDispInfo2_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvDispInfo2_Exception);
+			}
+
+
+
+			if (Convert.ToInt64(base.GetValue("AdvApplyDocType")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvApplyDocType_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE.AdvApplyBE","AdvApplyDocType","2ff6669c-203c-4e8b-b33f-a6cb21dea009");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvApplyDocType_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvApplyDocType_Exception);
+			}
 
 			
 		}

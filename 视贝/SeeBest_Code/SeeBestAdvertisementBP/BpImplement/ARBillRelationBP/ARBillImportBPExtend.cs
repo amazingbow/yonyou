@@ -171,53 +171,56 @@
 
                 foreach (AdvApproveLine advApproveLine in advApprove.AdvApproveLine)
                 {
-                    ImportARBillLineDTOData arBillDTOLine = new ImportARBillLineDTOData();
-
-                    arBillDTOLine.AccrueTerm = new CommonArchiveDataDTOData();//立账条件
-                    arBillDTOLine.RecTerm = new CommonArchiveDataDTOData();//收款条件 
-                    if (advApprove.AdvApplyCust != null)
+                    if (advApproveLine.ActualApproveQty > 0 && advApproveLine.ApproveMoney > 0)
                     {
-                        if (advApprove.AdvApplyCust.ARConfirmTerm != null)
-                        {
-                            arBillDTOLine.AccrueTerm.Code = advApprove.AdvApplyCust.ARConfirmTerm.Code;
-                        }
-                        if (advApprove.AdvApplyCust.RecervalTerm != null)
-                        {
-                            arBillDTOLine.RecTerm.Code = advApprove.AdvApplyCust.RecervalTerm.Code;
-                        }
-                    }
-                    arBillDTOLine.ShipToCustSite = arBillDTO.AccrueCustSite;//收货客户位置 
-                    arBillDTOLine.IsIncludeTax = true;//是否含税
-                    arBillDTOLine.IsOccupyCredit = true;//是否占用额度
-                    arBillDTOLine.IsQA = false;//质保金
-                    //料品 
-                    arBillDTOLine.Item = new CBO.SCM.Item.ItemInfoData();
-                    if (string.IsNullOrEmpty(advApproveLine.AdvCarrier))
-                    {
+                        ImportARBillLineDTOData arBillDTOLine = new ImportARBillLineDTOData();
 
-                    }
-                    else
-                    {
-                        if (advApprove.Org != null)
+                        arBillDTOLine.AccrueTerm = new CommonArchiveDataDTOData();//立账条件
+                        arBillDTOLine.RecTerm = new CommonArchiveDataDTOData();//收款条件 
+                        if (advApprove.AdvApplyCust != null)
                         {
-                            ItemMaster itemMaster = ItemMaster.Finder.Find("Code=@Code and Org.ID=@IOC", new OqlParam[2] { new OqlParam(advApproveLine.AdvCarrier), new OqlParam(advApprove.Org.ID) });
-
-                            if (itemMaster != null)
+                            if (advApprove.AdvApplyCust.ARConfirmTerm != null)
                             {
-                                arBillDTOLine.Item.ItemCode = itemMaster.Code;
+                                arBillDTOLine.AccrueTerm.Code = advApprove.AdvApplyCust.ARConfirmTerm.Code;
                             }
+                            if (advApprove.AdvApplyCust.RecervalTerm != null)
+                            {
+                                arBillDTOLine.RecTerm.Code = advApprove.AdvApplyCust.RecervalTerm.Code;
+                            }
+                        }
+                        arBillDTOLine.ShipToCustSite = arBillDTO.AccrueCustSite;//收货客户位置 
+                        arBillDTOLine.IsIncludeTax = true;//是否含税
+                        arBillDTOLine.IsOccupyCredit = true;//是否占用额度
+                        arBillDTOLine.IsQA = false;//质保金
+                        //料品 
+                        arBillDTOLine.Item = new CBO.SCM.Item.ItemInfoData();
+                        if (string.IsNullOrEmpty(advApproveLine.AdvCarrierCode))
+                        {
 
                         }
+                        else
+                        {
+                            if (advApprove.Org != null)
+                            {
+                                ItemMaster itemMaster = ItemMaster.Finder.Find("Code=@Code and Org.ID=@IOC", new OqlParam[2] { new OqlParam(advApproveLine.AdvCarrierCode), new OqlParam(advApprove.Org.ID) });
+
+                                if (itemMaster != null)
+                                {
+                                    arBillDTOLine.Item.ItemCode = itemMaster.Code;
+                                }
+
+                            }
+                        }
+                        arBillDTOLine.Maturity = System.DateTime.Now;//到期日
+                        arBillDTOLine.ReceiveInvoiceDate = System.DateTime.Now;//收票日期 
+                        arBillDTOLine.TDMode = 0;//贸易方式：0为一般贸易
+                        arBillDTOLine.RequisitionAdjustMode = 0;//通知单调整方式：0为调量
+
+                        arBillDTOLine.PUAmount = advApproveLine.ActualApproveQty;//数量
+                        arBillDTOLine.UnitPrice = advApproveLine.ActualPrice * advApproveLine.Area * advApproveLine.Discount;//单价
+
+                        arBillDTO.ImportARBillLineDTOs.Add(arBillDTOLine);
                     }
-                    arBillDTOLine.Maturity = System.DateTime.Now;//到期日
-                    arBillDTOLine.ReceiveInvoiceDate = System.DateTime.Now;//收票日期 
-                    arBillDTOLine.TDMode = 0;//贸易方式：0为一般贸易
-                    arBillDTOLine.RequisitionAdjustMode = 0;//通知单调整方式：0为调量
-
-                    arBillDTOLine.PUAmount = advApproveLine.ActualApproveQty;//数量
-                    arBillDTOLine.UnitPrice = advApproveLine.ActualPrice * advApproveLine.Area * advApproveLine.Discount;//单价
-
-                    arBillDTO.ImportARBillLineDTOs.Add(arBillDTOLine);
                 }
 
                 #endregion

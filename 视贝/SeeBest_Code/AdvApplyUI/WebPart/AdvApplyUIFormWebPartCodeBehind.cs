@@ -38,11 +38,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:Qty693_TextChanged ActionName:
+		//MethodName:Qty860_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void Qty693_TextChanged(object sender, EventArgs e)
+        public void Qty860_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -51,13 +51,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,Qty693_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,Qty860_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void Qty693_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void Qty860_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 
@@ -73,11 +73,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:BMWidth146_TextChanged ActionName:
+		//MethodName:BMWidth272_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void BMWidth146_TextChanged(object sender, EventArgs e)
+        public void BMWidth272_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -86,13 +86,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,BMWidth146_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,BMWidth272_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void BMWidth146_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void BMWidth272_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 
@@ -108,11 +108,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:BMHight124_TextChanged ActionName:
+		//MethodName:BMHight213_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void BMHight124_TextChanged(object sender, EventArgs e)
+        public void BMHight213_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -121,13 +121,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,BMHight124_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,BMHight213_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void BMHight124_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void BMHight213_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 
@@ -143,11 +143,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:BMArea187_TextChanged ActionName:
+		//MethodName:BMArea309_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void BMArea187_TextChanged(object sender, EventArgs e)
+        public void BMArea309_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -156,13 +156,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,BMArea187_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,BMArea309_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void BMArea187_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void BMArea309_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 
@@ -178,11 +178,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:DZWidth187_TextChanged ActionName:
+		//MethodName:DZWidth321_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void DZWidth187_TextChanged(object sender, EventArgs e)
+        public void DZWidth321_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -191,13 +191,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,DZWidth187_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,DZWidth321_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void DZWidth187_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void DZWidth321_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 
@@ -213,11 +213,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 			
 
-		//MethodName:DZThick224_TextChanged ActionName:
+		//MethodName:DZThick292_TextChanged ActionName:
         /// <summary>
         /// Help Info : {varEvent.Help}
         /// </summary>
-        public void DZThick224_TextChanged(object sender, EventArgs e)
+        public void DZThick292_TextChanged(object sender, EventArgs e)
         {
 			
 				OnDataCollect(this); //当前事件先执行数据收集		    
@@ -226,13 +226,13 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
 			this.IsConsuming = false;
 					
-			this.InvokeMethod(sender,e,DZThick224_TextChanged_Extend) ;
+			this.InvokeMethod(sender,e,DZThick292_TextChanged_Extend) ;
 	
 			
         }
 
         //default implement by tpl ...
-        private void DZThick224_TextChanged_DefaultImpl(object sender, EventArgs e)
+        private void DZThick292_TextChanged_DefaultImpl(object sender, EventArgs e)
         {
 			//Template (tpl) Code here...
 

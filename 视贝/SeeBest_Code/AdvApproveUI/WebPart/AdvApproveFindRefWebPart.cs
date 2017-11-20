@@ -324,7 +324,7 @@ namespace AdvApproveFindRef
 	                   
         private IUFCard _BuilderControl_Card4(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "1","","4e8904b9-5a40-4126-b5e1-23fba6f1f3bb");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "1","","a9828923-0190-4b5f-825f-20784ce32a7d");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -337,7 +337,7 @@ namespace AdvApproveFindRef
 
 
 
-				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 45, 20, 0, 0, 1, 1, "100","9bf97f14-74b9-4a4f-b2fc-d5bfb9c95e3a","c732effc-fa2e-41f3-8ece-714acd572559");
+				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 45, 20, 0, 0, 1, 1, "100","9bf97f14-74b9-4a4f-b2fc-d5bfb9c95e3a","0639d8f8-c66d-4871-90b8-40c765de9df9");
 
 
 								
@@ -346,7 +346,7 @@ namespace AdvApproveFindRef
 			UIControlBuilder.BuilderUFControl(this.Label0, "0");		
 
 
-		        this.SelectList = UIControlBuilder.BuilderDropDownList(_UFCard, "SelectList", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "100",true,false,"","","4a185bab-de9b-401b-b0e3-b1c38748cb23");
+		        this.SelectList = UIControlBuilder.BuilderDropDownList(_UFCard, "SelectList", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "100",true,false,"","","dddcf92d-fdc8-4796-8cde-e08554eeeba5");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SelectList, "False", "", null, null, "");
 			EnumControlsMap.Add(this.SelectList, _UFCard);
 		
@@ -362,7 +362,7 @@ namespace AdvApproveFindRef
 			UIControlBuilder.BuilderUFControl(this.WizardControl0, "2");		
 
 
-				this.lblContinueCheckBox = UIControlBuilder.BuilderUFLabel(_UFCard, "lblContinueCheckBox", "", "False", "True", "Right", 80, 20, 6, 0, 1, 1, "100","0aead14b-b05a-4582-9aca-34da4f4bf7a0","5cd8360a-4484-4ae2-9fde-11b1f9724403");
+				this.lblContinueCheckBox = UIControlBuilder.BuilderUFLabel(_UFCard, "lblContinueCheckBox", "", "False", "True", "Right", 80, 20, 6, 0, 1, 1, "100","0aead14b-b05a-4582-9aca-34da4f4bf7a0","48f00652-a415-406c-9b33-8902ac3ebca2");
 
 
 								
@@ -371,7 +371,7 @@ namespace AdvApproveFindRef
 			UIControlBuilder.BuilderUFControl(this.lblContinueCheckBox, "3");		
 
 
-				this.ContinueCheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "ContinueCheckBox", false, true, "Left", 60, 0, 30, 20, 8, 0, 1, 1, "100",true,"lblContinueCheckBox","","bdcdb57e-c15c-41cb-b139-cd7547e3d403");
+				this.ContinueCheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "ContinueCheckBox", false, true, "Left", 60, 0, 30, 20, 8, 0, 1, 1, "100",true,"lblContinueCheckBox","","0b0f8c93-8ca1-440c-9ca2-07a3b9222eb2");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ContinueCheckBox, "False", "", null, null, "");
 		
 
@@ -379,14 +379,14 @@ namespace AdvApproveFindRef
 			UIControlBuilder.BuilderUFControl(this.ContinueCheckBox, "4");		
 		 
 
-				this.FindButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "FindButton", true, true, 60, 20, 10, 0, 1, 1, "100","R", this.Model.ElementID,"",false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","9427e952-4f8b-45e6-b105-f3417c55feb1");
+				this.FindButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "FindButton", true, true, 60, 20, 10, 0, 1, 1, "100","R", this.Model.ElementID,"",false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","989ed83b-947c-42b5-8313-2066cf4830ac");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.FindButton, "4");		
 
 
-				this.CheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "CheckBox", false, true, "Left", 60, 0, 30, 20, 0, 0, 1, 1, "100",false,"","","2cafc7b6-06aa-4953-819a-c246815075c8");
+				this.CheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "CheckBox", false, true, "Left", 60, 0, 30, 20, 0, 0, 1, 1, "100",false,"","","08c7b39e-372b-4a7d-a64e-b35518931896");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CheckBox, "False", "", null, null, "");
 		
 
@@ -419,7 +419,7 @@ namespace AdvApproveFindRef
 	                   
         private IUFCard _BuilderControl_Card6(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"FunctionBar", true, true, "0","","8069ef48-42e1-46c2-be81-b3b8db85ea32");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"FunctionBar", true, true, "0","","9aa09bad-ae0b-437d-9705-bfc229d51ddd");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 3, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -457,7 +457,7 @@ namespace AdvApproveFindRef
 	                   
         private IUFCard _BuilderControl_CardForRefQueryCase(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"CardForRefQueryCase",false,"none", true, true, "0","","b64bfc47-db5d-485e-a5bf-450b1fc75ac4");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"CardForRefQueryCase",false,"none", true, true, "0","","a8bcf5f1-3cd2-43c9-8d17-682e6cffa45a");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 360, 20, 0, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 6, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -470,14 +470,14 @@ namespace AdvApproveFindRef
 
 
 
-				this.QryButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "QryButton", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"",false,"3664768b-36ca-44ab-9583-8d85fb432e43","3664768b-36ca-44ab-9583-8d85fb432e43","c97ca614-892d-49c2-aff5-12b99c1edee2");
+				this.QryButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "QryButton", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"",false,"3664768b-36ca-44ab-9583-8d85fb432e43","3664768b-36ca-44ab-9583-8d85fb432e43","c11451f0-e333-438f-b925-daf016aa916e");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.QryButton, "1");		
 
 
-				this.lbCase = UIControlBuilder.BuilderUFLabel(_UFCard, "lbCase", "", "True", "True", "Right", 80, 20, 3, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","f221aba3-799f-4f92-a9e3-d8156ca252e4");
+				this.lbCase = UIControlBuilder.BuilderUFLabel(_UFCard, "lbCase", "", "True", "True", "Right", 80, 20, 3, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","07e81cd4-a536-47b4-9386-4c26a18201cf");
 
 
 								
@@ -486,7 +486,7 @@ namespace AdvApproveFindRef
 			UIControlBuilder.BuilderUFControl(this.lbCase, "1");		
 
 
-		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 150, 20, 5, 0, 1, 1, "100",true,false,"","","484d79c8-a10c-4bd4-8b1f-6bb108d158f1");
+		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 150, 20, 5, 0, 1, 1, "100",true,false,"","","a6116761-c248-4169-9927-7cf46f0a5815");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DDLCase, "False", "", null, null, "");
 			EnumControlsMap.Add(this.DDLCase, _UFCard);
 			this.DDLCase.ContentChanged += new EventHandler(DDLCase_TextChanged);
@@ -508,7 +508,7 @@ namespace AdvApproveFindRef
 	                   
         private IUFCard _BuilderControl_Card1(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card1",false,"none", true, true, "0","","301b9de1-ec58-42f1-82af-3b9abca4352c");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card1",false,"none", true, true, "0","","407a2c4f-298c-41c5-aa3f-2f18eec23ea7");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 170, 20, 2, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -521,14 +521,14 @@ namespace AdvApproveFindRef
 
 
 
-				this.ConfirmButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "ConfirmButton", true, true, 80, 20, 0, 0, 1, 1, "100","O", this.Model.ElementID,"",false,"626ebf9b-f65a-4dd5-8f32-96f84919878c","626ebf9b-f65a-4dd5-8f32-96f84919878c","f5eb4881-9262-43db-972e-a36d8936009e");
+				this.ConfirmButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "ConfirmButton", true, true, 80, 20, 0, 0, 1, 1, "100","O", this.Model.ElementID,"",false,"626ebf9b-f65a-4dd5-8f32-96f84919878c","626ebf9b-f65a-4dd5-8f32-96f84919878c","b223bdaf-9161-48aa-9202-085b3058f9fe");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.ConfirmButton, "3");		
 
 
-				this.CancelButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "CancelButton", true, true, 80, 20, 2, 0, 1, 1, "100","C", this.Model.ElementID,"",false,"020a5365-8f12-4970-b8df-17ce3ae60a68","020a5365-8f12-4970-b8df-17ce3ae60a68","6c5e19f2-f506-49b2-9c91-dc9a4af35c3b");
+				this.CancelButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "CancelButton", true, true, 80, 20, 2, 0, 1, 1, "100","C", this.Model.ElementID,"",false,"020a5365-8f12-4970-b8df-17ce3ae60a68","020a5365-8f12-4970-b8df-17ce3ae60a68","40dec217-3a95-41c3-88d9-41c792b67dad");
 	
 
 		
@@ -568,7 +568,7 @@ namespace AdvApproveFindRef
 			IUFDataGridColumn column ;
 			GridColumn gridColumn ;
 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID0","NumberColumnModel", "", 0,this.Model.cRef.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, true, 7, 80, "8",true, false,"","0ed180eb-5663-4bcf-9f13-0a6580bf67a7","0ed180eb-5663-4bcf-9f13-0a6580bf67a7","3eb156a2-ae98-4b12-bbee-c02268854ffc");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID0","NumberColumnModel", "", 0,this.Model.cRef.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, true, 7, 80, "8",true, false,"","0ed180eb-5663-4bcf-9f13-0a6580bf67a7","0ed180eb-5663-4bcf-9f13-0a6580bf67a7","8bfebeab-9e74-4c8c-a7da-206ad485bb8e");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.FixedPoint, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
@@ -578,29 +578,29 @@ namespace AdvApproveFindRef
             return;
     }
 	 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DocNo0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DocNo"]/*DocNo*/,"DocNo", false, true, true, false, false, true, 0, 80, "5",true, false,"","fe8e9fb4-e4b9-40ab-9076-a11bac35dbb5","fe8e9fb4-e4b9-40ab-9076-a11bac35dbb5","e25550d1-19b9-43c1-95f4-989d1afc3dd9");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DocNo0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DocNo"]/*DocNo*/,"DocNo", false, true, true, false, false, true, 0, 80, "5",true, false,"","fe8e9fb4-e4b9-40ab-9076-a11bac35dbb5","fe8e9fb4-e4b9-40ab-9076-a11bac35dbb5","ca0e24bb-78cd-4fbc-b58d-15db59ab566d");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DocStatus0","DropDownListColumnModel", "", 0,this.Model.cRef.Fields["DocStatus"]/*DocStatus*/,"DocStatus", false, true, true, false, false, true, 2, 80, "5",true, false,"","40913b1f-105f-4058-926f-97901aff7e30","40913b1f-105f-4058-926f-97901aff7e30","366271b6-0905-49ce-b89a-708172c7c5f2");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DocStatus0","DropDownListColumnModel", "", 0,this.Model.cRef.Fields["DocStatus"]/*DocStatus*/,"DocStatus", false, true, true, false, false, true, 2, 80, "5",true, false,"","40913b1f-105f-4058-926f-97901aff7e30","40913b1f-105f-4058-926f-97901aff7e30","74434f2a-6742-47b2-b327-bb3952041fc3");
 			((IUFDropDownListColumn)column).EnumTypeID  = "UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum";
 			EnumTypeList.Add("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvAppStatusEnum");
 			EnumControlsMap.Add(column, _UFGrid);
 			  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"StartDate0","DatePickerColumnModel", "", 0,this.Model.cRef.Fields["StartDate"]/*StartDate*/,"StartDate", false, true, true, false, false, true, 3, 80, "0",true, false,"","9c9d4280-0eba-4230-8437-c51e034151cc","9c9d4280-0eba-4230-8437-c51e034151cc","7badc0cd-6191-4e64-a0bb-d9ee1cec0dae");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"StartDate0","DatePickerColumnModel", "", 0,this.Model.cRef.Fields["StartDate"]/*StartDate*/,"StartDate", false, true, true, false, false, true, 3, 80, "0",true, false,"","9c9d4280-0eba-4230-8437-c51e034151cc","9c9d4280-0eba-4230-8437-c51e034151cc","221f4ea6-7b57-42a3-8781-25873ccc3540");
                    
 			((IUFDatePickerColumn)column).DateTimeType = DateTimeType.Date;
             ((IUFDatePickerColumn)column).DateTimeFormat = CurrentState._I18N._DateTimeFormatInfo;
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvApplyCust_Code0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["AdvApplyCust_Code"]/*AdvApplyCust_Code*/,"AdvApplyCust_Code", false, true, true, false, false, true, 0, 80, "5",true, false,"","c14a6b3f-7a46-466c-96f8-93ba927bcf7c","c14a6b3f-7a46-466c-96f8-93ba927bcf7c","1cc7a2eb-7888-4b35-9fc5-5975fdd63638");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"AdvApplyCust_Code0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["AdvApplyCust_Code"]/*AdvApplyCust_Code*/,"AdvApplyCust_Code", false, true, true, false, false, true, 0, 80, "5",true, false,"","c14a6b3f-7a46-466c-96f8-93ba927bcf7c","c14a6b3f-7a46-466c-96f8-93ba927bcf7c","25992e13-9200-4da9-a882-25ba58d6d52e");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"EndDate0","DatePickerColumnModel", "", 0,this.Model.cRef.Fields["EndDate"]/*EndDate*/,"EndDate", false, true, true, false, false, true, 3, 80, "0",true, false,"","0aa4126e-107d-4231-b617-3e4d8095cd0b","0aa4126e-107d-4231-b617-3e4d8095cd0b","e2d2f3c4-dc6f-482d-bc7f-9ba3af46c781");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"EndDate0","DatePickerColumnModel", "", 0,this.Model.cRef.Fields["EndDate"]/*EndDate*/,"EndDate", false, true, true, false, false, true, 3, 80, "0",true, false,"","0aa4126e-107d-4231-b617-3e4d8095cd0b","0aa4126e-107d-4231-b617-3e4d8095cd0b","52fe41cb-26f8-4eed-b33a-ebeb4889bb35");
                    
 			((IUFDatePickerColumn)column).DateTimeType = DateTimeType.Date;
             ((IUFDatePickerColumn)column).DateTimeFormat = CurrentState._I18N._DateTimeFormatInfo;
@@ -615,13 +615,13 @@ namespace AdvApproveFindRef
             this.MatchTypeRadioBoxList = _UFListControl;
             ///foreach CheckBoxList和RadioBoxList下的所有子项
             ListItem listItem = null ;
-            listItem = UIControlBuilder.BuildListItem(container,"0", true,false,"130bc338-9958-4133-9b7f-9c185bc2455a","05189c65-b4bb-46a9-9411-76668228b592");
+            listItem = UIControlBuilder.BuildListItem(container,"0", true,false,"130bc338-9958-4133-9b7f-9c185bc2455a","bfba6c98-dca0-4d25-9d32-1d129cf1c265");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"49790074-95af-497d-ae37-16bb697f3ce6","4ca13b66-7215-401e-97d5-70802a166a06");
+            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"49790074-95af-497d-ae37-16bb697f3ce6","092d5a5c-5893-476f-8a6d-f02f957a9b0c");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"2", true,true,"517d6f15-ca0d-4e3b-aa58-3c85a5b2ae66","3875b313-7fc9-4337-8336-ae3df76c3db5");
+            listItem = UIControlBuilder.BuildListItem(container,"2", true,true,"517d6f15-ca0d-4e3b-aa58-3c85a5b2ae66","1459fc8b-ee4f-4167-8d16-d430236bda04");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"ea7795fe-8961-4c3f-8ed1-b5128be2cd75","d3034f2a-0d0b-49b5-b79f-3be58871ae36");
+            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"ea7795fe-8961-4c3f-8ed1-b5128be2cd75","34d7ea02-5509-4100-828f-829f66d7be9c");
             _UFListControl.Items.Add(listItem);
         }
 

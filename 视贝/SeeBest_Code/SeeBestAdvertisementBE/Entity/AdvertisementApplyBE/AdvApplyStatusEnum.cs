@@ -36,6 +36,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             innerEnums.Add(1,approving) ;
             approved = new AdvApplyStatusEnum(2,"Approved") ;
             innerEnums.Add(2,approved) ;
+            closed = new AdvApplyStatusEnum(3,"Closed") ;
+            innerEnums.Add(3,closed) ;
             empty = new AdvApplyStatusEnum(-1,"") ;
 			innerEnums.Add(-1,empty) ;
         }
@@ -82,6 +84,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
         				return this.Res_Approving; 
         			case "Approved":
         				return this.Res_Approved; 
+        			case "Closed":
+        				return this.Res_Closed; 
         			default :
         			    return String.Empty;
         		}
@@ -124,6 +128,18 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             get
             {
                 return  approved ;
+            }
+        }
+        private static AdvApplyStatusEnum closed ;
+        /// <summary>
+        /// 枚举值: 关闭  Value:3  
+        /// 广告申请单状态枚举.Misc.关闭
+        /// </summary>
+        public static AdvApplyStatusEnum Closed
+        {
+            get
+            {
+                return  closed ;
             }
         }
         #endregion
@@ -215,6 +231,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// </summary>
         [Obsolete("")]
 		public string Res_Approved　{ get {return EnumRes.GetResource("Approved");}　}
+		/// <summary>
+		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+		/// </summary>
+        [Obsolete("")]
+		public string Res_Closed　{ get {return EnumRes.GetResource("Closed");}　}
 		#endregion 
 		
 		#region EnumRes

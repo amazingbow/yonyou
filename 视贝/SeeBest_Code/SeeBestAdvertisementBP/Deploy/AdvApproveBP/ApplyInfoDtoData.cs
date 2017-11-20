@@ -21,7 +21,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		public static IList<Type> GetKnownTypes()
         {
             IList<Type> knownTypes = new List<Type>();
-                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                    
             knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
         }
@@ -50,6 +50,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 					ApplyId= 0; 
 							Area=0m; 
 					ApplyQty=0m; 
+		
+					ActualPrice=0m; 
+		
+		
 
 			//调用默认值初始化服务进行配置方式初始化
 			UFSoft.UBF.Service.DTOService.InitConfigDefault(this);
@@ -67,13 +71,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			if (dict[this] != null)
 				return ;
 			dict[this] = this;
-	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
+	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        	        
 		}
 		#endregion 
 		/// <summary>
 		/// Constructor Full Argument
 		/// </summary>
-		public ApplyInfoDtoData(  System.String location  , System.String advAppCustName  , System.String country  , System.String custCounterName  , System.String relPeople  , System.String relPhone  , System.String custAddress  , System.Decimal width  , System.Decimal thick  , System.Decimal height  , System.String applyAdvCode  , System.String advCarrier  , System.String advItem  , System.Int64 applyId  , System.Decimal area  , System.Decimal applyQty  )
+		public ApplyInfoDtoData(  System.String location  , System.String advAppCustName  , System.String country  , System.String custCounterName  , System.String relPeople  , System.String relPhone  , System.String custAddress  , System.Decimal width  , System.Decimal thick  , System.Decimal height  , System.String applyAdvCode  , System.String advCarrier  , System.String advItem  , System.Int64 applyId  , System.Decimal area  , System.Decimal applyQty  , System.String memo  , System.Decimal actualPrice  , System.DateTime applyDate  , System.String advCarrierCode  )
 		{
 			initData();
 			this.Location = location;
@@ -92,6 +96,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			this.ApplyId = applyId;
 			this.Area = area;
 			this.ApplyQty = applyQty;
+			this.Memo = memo;
+			this.ActualPrice = actualPrice;
+			this.ApplyDate = applyDate;
+			this.AdvCarrierCode = advCarrierCode;
 		}
 		#region System Fields 
 		//--系统字段,目前没有.EntityData上有相应的字段,用于保存相关的实体状态信息,DTO上没有状态信息.	
@@ -419,10 +427,90 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			}
 		}
 			
+		
+
+		/// <summary>
+		/// 备注
+		/// 申请单信息.Misc.备注
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_memo ;
+		public System.String Memo
+		{
+			get	
+			{	
+				return m_memo ;
+			}
+			set	
+			{	
+				m_memo = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 核销单价
+		/// 申请单信息.Misc.核销单价
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.Decimal m_actualPrice ;
+		public System.Decimal ActualPrice
+		{
+			get	
+			{	
+				return m_actualPrice ;
+			}
+			set	
+			{	
+				m_actualPrice = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 下单日期
+		/// 申请单信息.Misc.下单日期
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.DateTime m_applyDate ;
+		public System.DateTime ApplyDate
+		{
+			get	
+			{	
+				return m_applyDate ;
+			}
+			set	
+			{	
+				m_applyDate = value ;	
+			}
+		}
+			
+		
+
+		/// <summary>
+		/// 广告载体编号
+		/// 申请单信息.Misc.广告载体编号
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_advCarrierCode ;
+		public System.String AdvCarrierCode
+		{
+			get	
+			{	
+				return m_advCarrierCode ;
+			}
+			set	
+			{	
+				m_advCarrierCode = value ;	
+			}
+		}
+			
 		#endregion	
 
 		#region Multi_Fields
-																																
+																																								
 		#endregion 
 	} 	
 }

@@ -120,12 +120,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         protected override void OnUpdated()
         {
             base.OnUpdated();
-            if (this.DocStatus == AdvAppStatusEnum.Approved && string.IsNullOrEmpty(this.DescFlexField.PrivateDescSeg1))
-            {
-                ARBillImportBPProxy proxy = new ARBillImportBPProxy();
-                proxy.RelationId = this.ID;
-                var data = proxy.Do();
-            }
+            //if (this.DocStatus == AdvAppStatusEnum.Approved && string.IsNullOrEmpty(this.DescFlexField.PrivateDescSeg1))
+            //{
+            //    ARBillImportBPProxy proxy = new ARBillImportBPProxy();
+            //    proxy.RelationId = this.ID;
+            //    var data = proxy.Do();
+            //}
         }
 
 

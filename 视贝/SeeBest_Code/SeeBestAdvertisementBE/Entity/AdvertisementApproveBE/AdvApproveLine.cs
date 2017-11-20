@@ -900,6 +900,66 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 核销异常说明 (该属性可为空,且无默认值)
+			/// 广告核销单行.Misc.核销异常说明
+			/// </summary>
+			/// <value></value>
+			public  System.String ApproveExDeclaration
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("ApproveExDeclaration");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 下单日期 (该属性可为空,且无默认值)
+			/// 广告核销单行.Misc.下单日期
+			/// </summary>
+			/// <value></value>
+			public  System.DateTime ApplyDate
+			{
+				get
+				{
+					object obj = base.GetValue("ApplyDate");
+					if (obj == null)
+						return System.DateTime.MinValue;
+					else
+					       return (System.DateTime)obj;
+				}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 广告载体编号 (该属性可为空,且无默认值)
+			/// 广告核销单行.ApplyInfo.广告载体编号
+			/// </summary>
+			/// <value></value>
+			public  System.String AdvCarrierCode
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("AdvCarrierCode");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -1708,6 +1768,79 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 
 
+		
+			/// <summary>
+		/// 核销异常说明 (该属性可为空,且无默认值)
+		/// 广告核销单行.Misc.核销异常说明
+		/// </summary>
+		/// <value></value>
+			public  System.String ApproveExDeclaration
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("ApproveExDeclaration");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("ApproveExDeclaration", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 下单日期 (该属性可为空,且无默认值)
+		/// 广告核销单行.Misc.下单日期
+		/// </summary>
+		/// <value></value>
+			public  System.DateTime ApplyDate
+		{
+			get
+			{
+				System.DateTime value  = (System.DateTime)base.GetValue("ApplyDate");
+				return value.Date ;
+				}
+				set
+			{
+				
+				
+				base.SetValue("ApplyDate", value.Date);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 广告载体编号 (该属性可为空,且无默认值)
+		/// 广告核销单行.ApplyInfo.广告载体编号
+		/// </summary>
+		/// <value></value>
+			public  System.String AdvCarrierCode
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("AdvCarrierCode");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("AdvCarrierCode", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1887,6 +2020,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_OtherInfo　{ get { return EntityRes.GetResource("OtherInfo");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApproveExDeclaration")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_ApproveExDeclaration　{ get { return EntityRes.GetResource("ApproveExDeclaration");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ApplyDate")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_ApplyDate　{ get { return EntityRes.GetResource("ApplyDate");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("AdvCarrierCode")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_AdvCarrierCode　{ get { return EntityRes.GetResource("AdvCarrierCode");　}　}
 		#endregion 
 
 
@@ -2058,6 +2206,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			/// 属性: 用于定位行 的名称
 			/// </summary>
 			public static string OtherInfo　{ get { return "OtherInfo";　}　}
+				
+			/// <summary>
+			/// 属性: 核销异常说明 的名称
+			/// </summary>
+			public static string ApproveExDeclaration　{ get { return "ApproveExDeclaration";　}　}
+				
+			/// <summary>
+			/// 属性: 下单日期 的名称
+			/// </summary>
+			public static string ApplyDate　{ get { return "ApplyDate";　}　}
+				
+			/// <summary>
+			/// 属性: 广告载体编号 的名称
+			/// </summary>
+			public static string AdvCarrierCode　{ get { return "AdvCarrierCode";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2065,7 +2228,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																														
+																																																																				
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2136,6 +2299,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			this.exdMultiLangAttrs.Add("ApproveMoney","ApproveMoney");
 			this.exdMultiLangAttrs.Add("AdvItem","AdvItem");
 			this.exdMultiLangAttrs.Add("OtherInfo","OtherInfo");
+			this.exdMultiLangAttrs.Add("ApproveExDeclaration","ApproveExDeclaration");
+			this.exdMultiLangAttrs.Add("ApplyDate","ApplyDate");
+			this.exdMultiLangAttrs.Add("AdvCarrierCode","AdvCarrierCode");
         }
 	#endregion 
 
@@ -2152,7 +2318,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			switch(propstr)
 			{
 			
-																																																																																													
+																																																																																																						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2173,6 +2339,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		private void DeSerializeKey(AdvApproveLineData data)
 		{
 		
+			
+
+			
+
+			
+
 			
 
 			
@@ -2336,6 +2508,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 								this.SetTypeValue("AdvItem",data.AdvItem);
 		
 								this.SetTypeValue("OtherInfo",data.OtherInfo);
+		
+								this.SetTypeValue("ApproveExDeclaration",data.ApproveExDeclaration);
+		
+								this.SetTypeValue("ApplyDate",data.ApplyDate);
+		
+								this.SetTypeValue("AdvCarrierCode",data.AdvCarrierCode);
 		
 			#endregion 
 
@@ -2598,6 +2776,27 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 					data.OtherInfo=(System.Int64)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("ApproveExDeclaration");
+				if (obj != null)
+					data.ApproveExDeclaration=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("ApplyDate");
+				if (obj != null)
+					data.ApplyDate=(System.DateTime)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("AdvCarrierCode");
+				if (obj != null)
+					data.AdvCarrierCode=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2629,6 +2828,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
+
+
 
 
 

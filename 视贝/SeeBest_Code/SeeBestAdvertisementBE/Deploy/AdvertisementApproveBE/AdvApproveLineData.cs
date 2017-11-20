@@ -50,6 +50,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
                         
                         
                         
+                        
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -93,7 +96,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 	     							Discount=0m; 
 	     							ApproveMoney=0m; 
 	     			
-	     							OtherInfo= 0; 		
+	     							OtherInfo= 0; 			     			
+	     			
+	     			
+
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
 			
@@ -730,10 +736,67 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 核销异常说明
+		/// 广告核销单行.Misc.核销异常说明
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_approveExDeclaration ;
+		public System.String ApproveExDeclaration
+		{
+			get	
+			{	
+				return m_approveExDeclaration  ;
+			}
+			set	
+			{	
+				m_approveExDeclaration = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 下单日期
+		/// 广告核销单行.Misc.下单日期
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.DateTime m_applyDate ;
+		public System.DateTime ApplyDate
+		{
+			get	
+			{	
+				return m_applyDate  ;
+			}
+			set	
+			{	
+				m_applyDate = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 广告载体编号
+		/// 广告核销单行.ApplyInfo.广告载体编号
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_advCarrierCode ;
+		public System.String AdvCarrierCode
+		{
+			get	
+			{	
+				return m_advCarrierCode  ;
+			}
+			set	
+			{	
+				m_advCarrierCode = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																															
+																																		
 		#endregion 		
 	}	
 

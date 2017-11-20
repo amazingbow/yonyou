@@ -388,6 +388,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
  
 
 		}
+		/// <summary>
+		/// Help: 生成应收单
+		/// </summary>
+		public void CreateARBillClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.CreateARBillClick_Extend);
+		}
+		private void CreateARBillClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

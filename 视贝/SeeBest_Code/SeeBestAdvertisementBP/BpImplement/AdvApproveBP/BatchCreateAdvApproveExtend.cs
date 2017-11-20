@@ -137,6 +137,9 @@
                                         AdvApproveLine docline = AdvApproveLine.Create(doc);
 
                                         docline.Location = app.LocationQY;
+                                        string strVerificationLevel = "";
+                                        string strAdvCarrierCode = "";
+                                        strVerificationLevel = app.ApplyDept.DescFlexField.PrivateDescSeg13;
                                         docline.AdvAppCustName = app.ApplyDept.Name;
                                         docline.Country = app.LocationXZ;
                                         docline.CustCounterName = app.CustConterName;
@@ -153,17 +156,51 @@
                                         if (app.AdvCarrier != null)
                                         {
                                             docline.AdvCarrier = app.AdvCarrier.Name;
+                                            docline.AdvCarrierCode = app.AdvCarrier.Code;
+                                            strAdvCarrierCode = app.AdvCarrier.Code;
                                         }
                                         else
                                         {
                                             docline.AdvCarrier = "";
+                                            docline.AdvCarrierCode = "";
+                                            strAdvCarrierCode = "";
                                         }
+                                        #region 根据办事处核销等级、广告载体物料自动匹配广告载体报销价目表的价格
+                                        decimal deActualPrice = 0M;
+                                        if (string.IsNullOrEmpty(strVerificationLevel) || string.IsNullOrEmpty(strAdvCarrierCode))
+                                        {
+                                            deActualPrice = 0;
+                                        }
+                                        else
+                                        {
+                                            UFIDA.U9.SPR.SalePriceList.SalePriceLine salePriceLine = UFIDA.U9.SPR.SalePriceList.SalePriceLine.Finder.Find("DescFlexField.PubDescSeg2='" + strVerificationLevel
+                                        + "' and ItemInfo.ItemCode='" + strAdvCarrierCode
+                                        + "' and (ToDate>='" + app.ApplyDate.ToString("yyyy-MM-dd") + "' and FromDate<='" + app.ApplyDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                                            if (salePriceLine != null)
+                                            {
+                                                deActualPrice = salePriceLine.Price;
+                                            }
+                                        }
+                                        #endregion
+                                        docline.ActualPrice = deActualPrice;
+                                        docline.Discount = 1;
                                         foreach (var item in app.AdvAboutBE)
                                         {
-                                            docline.AdvItem += item.Description + "/";
+                                            docline.AdvItem += item.Code + "/";
                                         }
-                                        docline.AdvItem = docline.AdvItem.TrimEnd('/');
+                                        if (docline.AdvItem != null)
+                                        {
+                                            docline.AdvItem = docline.AdvItem.TrimEnd('/');
+                                        }
+                                        else
+                                        {
+                                            docline.AdvItem = "";
+                                        }
                                         docline.OtherInfo = app.ID;
+                                        docline.Momo = "";
+                                        docline.ApplyDate = app.ApplyDate;
+                                        docline.TotalMoney = docline.Price * docline.ApplyQty * docline.Area;
+                                        docline.ApproveMoney = docline.ActualApproveQty * docline.Area * docline.ActualPrice * docline.Discount;
 
                                         #region 如果广告申请单封底的面积>0，再新增一行数据
                                         if (app.DZArea > 0)
@@ -187,17 +224,32 @@
                                             if (app.AdvCarrier != null)
                                             {
                                                 docline1.AdvCarrier = app.AdvCarrier.Name;
+                                                docline1.AdvCarrierCode = app.AdvCarrier.Code;
                                             }
                                             else
                                             {
                                                 docline1.AdvCarrier = "";
+                                                docline1.AdvCarrierCode = "";
                                             }
                                             foreach (var item in app.AdvAboutBE)
                                             {
-                                                docline1.AdvItem += item.Description + "/";
+                                                docline1.AdvItem += item.Code + "/";
                                             }
-                                            docline1.AdvItem = docline1.AdvItem.TrimEnd('/');
+                                            if (docline1.AdvItem != null)
+                                            {
+                                                docline1.AdvItem = docline1.AdvItem.TrimEnd('/');
+                                            }
+                                            else
+                                            {
+                                                docline1.AdvItem = "";
+                                            }
+                                            docline1.ActualPrice = deActualPrice;
+                                            docline1.Discount = 1;
                                             docline1.OtherInfo = app.ID;
+                                            docline1.Momo = "封底";
+                                            docline1.ApplyDate = app.ApplyDate;
+                                            docline1.TotalMoney = docline1.Price * docline1.Area;
+                                            docline1.ApproveMoney = docline1.Area * docline1.ActualPrice * docline1.Discount;
                                         }
                                         #endregion
                                     }
@@ -217,6 +269,9 @@
                                             AdvApproveLine docline = AdvApproveLine.Create(doc);
 
                                             docline.Location = "";
+                                            string strVerificationLevel = "";
+                                            string strAdvCarrierCode = "";
+                                            strVerificationLevel = spe.ApplyDept.DescFlexField.PrivateDescSeg13;
                                             docline.AdvAppCustName = spe.ApplyDept.Name;
                                             docline.Country = "";
                                             docline.CustCounterName = spe.CustConterName;
@@ -233,11 +288,34 @@
                                             if (item.AdvCarrier != null)
                                             {
                                                 docline.AdvCarrier = item.AdvCarrier.Name;
+                                                docline.AdvCarrierCode = item.AdvCarrier.Code;
+                                                strAdvCarrierCode = item.AdvCarrier.Code;
                                             }
                                             else
                                             {
                                                 docline.AdvCarrier = "";
+                                                docline.AdvCarrierCode = "";
+                                                strAdvCarrierCode = "";
                                             }
+                                            #region 根据办事处核销等级、广告载体物料自动匹配广告载体报销价目表的价格
+                                            decimal deActualPrice = 0M;
+                                            if (string.IsNullOrEmpty(strVerificationLevel) || string.IsNullOrEmpty(strAdvCarrierCode))
+                                            {
+                                                deActualPrice = 0;
+                                            }
+                                            else
+                                            {
+                                                UFIDA.U9.SPR.SalePriceList.SalePriceLine salePriceLine = UFIDA.U9.SPR.SalePriceList.SalePriceLine.Finder.Find("DescFlexField.PubDescSeg2='" + strVerificationLevel
+                                        + "' and ItemInfo.ItemCode='" + strAdvCarrierCode
+                                        + "' and (ToDate>='" + spe.ApplyDate.ToString("yyyy-MM-dd") + "' and FromDate<='" + spe.ApplyDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                                                if (salePriceLine != null)
+                                                {
+                                                    deActualPrice = salePriceLine.Price;
+                                                }
+                                            }
+                                            #endregion
+                                            docline.ActualPrice = deActualPrice;
+                                            docline.Discount = 1;
                                             if (item.DisplayProductType != null)
                                             {
                                                 docline.AdvItem = item.DisplayProductType.Description;
@@ -247,6 +325,10 @@
                                                 docline.AdvItem = "";
                                             }
                                             docline.OtherInfo = spe.ID;
+                                            docline.Momo = "";
+                                            docline.ApplyDate = spe.ApplyDate;
+                                            docline.TotalMoney = docline.Price * docline.ApplyQty * docline.Area;
+                                            docline.ApproveMoney = docline.ActualApproveQty * docline.Area * docline.ActualPrice * docline.Discount;
                                         }
                                     }
                                 }

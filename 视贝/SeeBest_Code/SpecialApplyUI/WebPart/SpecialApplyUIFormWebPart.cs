@@ -674,7 +674,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblApplyDate131, "10");		
 
 
-				this.ApplyDate131 = UIControlBuilder.BuilderDatePicker(_UFTabPage, "ApplyDate131", true, true, true, "Date","Left", 3, 60, 0, 149, 20, 10, 1, 1, 1, "100",true,false,"lblApplyDate131","e2c2c8ab-558d-40b2-8eeb-499d6ae816ec","95aa52bc-fcc0-4192-9cdb-595fe46b4aca");
+				this.ApplyDate131 = UIControlBuilder.BuilderDatePicker(_UFTabPage, "ApplyDate131", true, true, true, "Date","Left", 3, 60, 0, 149, 20, 10, 1, 1, 1, "100",true,true,"lblApplyDate131","e2c2c8ab-558d-40b2-8eeb-499d6ae816ec","95aa52bc-fcc0-4192-9cdb-595fe46b4aca");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ApplyDate131, "False", "ApplyDate", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldApplyDate, "SpecialApplyBE");
 
 
@@ -1168,8 +1168,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode72, "4");		
 
 
-				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "True", "True", "False", "False", "Left", 0, 60, 0, 150, 20, 2, 0, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblAdvCode72","","50","effe8553-8301-4475-bc58-6563f3ba5074","4a78e514-b96c-4bc5-9759-a4ce6a259357");
+				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 0, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode72","","50","effe8553-8301-4475-bc58-6563f3ba5074","4a78e514-b96c-4bc5-9759-a4ce6a259357");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode72, "False", "AdvCode", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldAdvCode, "SpecialApplyBE");
 
 
@@ -1207,7 +1207,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblStatus101, "8");		
 
 
-		        this.Status101 = UIControlBuilder.BuilderDropDownList(_UFCard, "Status101", "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum", true,  true, true, "Left", 2, 60, 0, 150, 20, 10, 0, 1, 1, "100",true,false,"lblStatus101","5894fb42-f027-47d9-aa26-3a82c3d91655","52fd906b-47dd-4566-978e-8dc4617fb30f");
+		        this.Status101 = UIControlBuilder.BuilderDropDownList(_UFCard, "Status101", "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum", true,  true, true, "Left", 2, 60, 0, 150, 20, 10, 0, 1, 1, "100",true,true,"lblStatus101","5894fb42-f027-47d9-aa26-3a82c3d91655","52fd906b-47dd-4566-978e-8dc4617fb30f");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Status101, "False", "Status", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldStatus, "SpecialApplyBE");
 			EnumTypeList.Add("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum");
 			EnumControlsMap.Add(this.Status101, _UFCard);

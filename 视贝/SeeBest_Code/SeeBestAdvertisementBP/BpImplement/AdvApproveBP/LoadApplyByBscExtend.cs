@@ -45,13 +45,17 @@
                 //app.ApplyDate
                 ApplyInfoDto appDto = new ApplyInfoDto();
                 appDto.Location = app.LocationQY;
+                string strVerificationLevel = "";
+                string strAdvCarrierCode = "";
                 if (app.ApplyDept != null)
                 {
                     appDto.AdvAppCustName = app.ApplyDept.Name;
+                    strVerificationLevel = app.ApplyDept.DescFlexField.PrivateDescSeg13;
                 }
                 else
                 {
                     appDto.AdvAppCustName = "";
+                    strVerificationLevel = "";
                 }
                 appDto.Country = app.LocationXZ;
                 appDto.CustCounterName = app.CustConterName;
@@ -67,17 +71,48 @@
                 if (app.AdvCarrier != null)
                 {
                     appDto.AdvCarrier = app.AdvCarrier.Name;
+                    appDto.AdvCarrierCode = app.AdvCarrier.Code;
+                    strAdvCarrierCode = app.AdvCarrier.Code;
                 }
                 else
                 {
                     appDto.AdvCarrier = "";
+                    appDto.AdvCarrierCode = "";
+                    strAdvCarrierCode = "";
                 }
+                #region 根据办事处核销等级、广告载体物料自动匹配广告载体报销价目表的价格
+                decimal deActualPrice = 0M;
+                if (string.IsNullOrEmpty(strVerificationLevel) || string.IsNullOrEmpty(strAdvCarrierCode))
+                {
+                    deActualPrice = 0;
+                }
+                else
+                {
+                    UFIDA.U9.SPR.SalePriceList.SalePriceLine salePriceLine = UFIDA.U9.SPR.SalePriceList.SalePriceLine.Finder.Find("DescFlexField.PubDescSeg2='" + strVerificationLevel
+                + "' and ItemInfo.ItemCode='" + strAdvCarrierCode
+                + "' and (ToDate>='" + app.ApplyDate.ToString("yyyy-MM-dd") + "' and FromDate<='" + app.ApplyDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                    if (salePriceLine != null)
+                    {
+                        deActualPrice = salePriceLine.Price;
+                    }
+                }
+                #endregion
+                appDto.ActualPrice = deActualPrice;
                 appDto.ApplyId = app.ID;
+                appDto.Memo = "";
+                appDto.ApplyDate = app.ApplyDate;
                 foreach (var item in app.AdvAboutBE)
                 {
-                    appDto.AdvItem += item.Description + "/";
+                    appDto.AdvItem += item.Code + "/";
                 }
-                appDto.AdvItem = appDto.AdvItem.TrimEnd('/');
+                if (appDto.AdvItem != null)
+                {
+                    appDto.AdvItem = appDto.AdvItem.TrimEnd('/');
+                }
+                else
+                {
+                    appDto.AdvItem = "";
+                }
                 appDtoLst.Add(appDto);
 
                 #region 如果广告申请单封底的面积>0，再新增一行数据
@@ -107,17 +142,29 @@
                     if (app.AdvCarrier != null)
                     {
                         appDto1.AdvCarrier = app.AdvCarrier.Name;
+                        appDto1.AdvCarrierCode = app.AdvCarrier.Code;
                     }
                     else
                     {
                         appDto1.AdvCarrier = "";
+                        appDto1.AdvCarrierCode = "";
                     }
+                    appDto1.ActualPrice = deActualPrice;
                     appDto1.ApplyId = app.ID;
+                    appDto1.Memo = "封底";
+                    appDto1.ApplyDate = app.ApplyDate;
                     foreach (var item in app.AdvAboutBE)
                     {
-                        appDto1.AdvItem += item.Description + "/";
+                        appDto1.AdvItem += item.Code + "/";
                     }
-                    appDto1.AdvItem = appDto1.AdvItem.TrimEnd('/');
+                    if (appDto1.AdvItem != null)
+                    {
+                        appDto1.AdvItem = appDto1.AdvItem.TrimEnd('/');
+                    }
+                    else
+                    {
+                        appDto1.AdvItem = "";
+                    }
                     appDtoLst.Add(appDto1);
                 }
 
@@ -129,13 +176,17 @@
                 foreach (var item in spe.SpecialSizeBE)
                 {
                     ApplyInfoDto appDto = new ApplyInfoDto();
+                    string strVerificationLevel = "";
+                    string strAdvCarrierCode = "";
                     if (spe.ApplyDept != null)
                     {
                         appDto.AdvAppCustName = spe.ApplyDept.Name;
+                        strVerificationLevel = spe.ApplyDept.DescFlexField.PrivateDescSeg13;
                     }
                     else
                     {
                         appDto.AdvAppCustName = "";
+                        strVerificationLevel = "";
                     }
                     appDto.CustCounterName = spe.CustConterName;
                     appDto.RelPhone = spe.CustPhone;
@@ -149,11 +200,33 @@
                     if (item.AdvCarrier != null)
                     {
                         appDto.AdvCarrier = item.AdvCarrier.Name;
+                        appDto.AdvCarrierCode = item.AdvCarrier.Code;
+                        strAdvCarrierCode = item.AdvCarrier.Code;
                     }
                     else
                     {
                         appDto.AdvCarrier = "";
+                        appDto.AdvCarrierCode = "";
+                        strAdvCarrierCode = "";
                     }
+                    #region 根据办事处核销等级、广告载体物料自动匹配广告载体报销价目表的价格
+                    decimal deActualPrice = 0M;
+                    if (string.IsNullOrEmpty(strVerificationLevel) || string.IsNullOrEmpty(strAdvCarrierCode))
+                    {
+                        deActualPrice = 0;
+                    }
+                    else
+                    {
+                        UFIDA.U9.SPR.SalePriceList.SalePriceLine salePriceLine = UFIDA.U9.SPR.SalePriceList.SalePriceLine.Finder.Find("DescFlexField.PubDescSeg2='" + strVerificationLevel
+                + "' and ItemInfo.ItemCode='" + strAdvCarrierCode
+                + "' and (ToDate>='" + spe.ApplyDate.ToString("yyyy-MM-dd") + "' and FromDate<='" + spe.ApplyDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                        if (salePriceLine != null)
+                        {
+                            deActualPrice = salePriceLine.Price;
+                        }
+                    }
+                    #endregion
+                    appDto.ActualPrice = deActualPrice;
                     if (item.DisplayProductType != null)
                     {
                         appDto.AdvItem = item.DisplayProductType.Description;
@@ -163,6 +236,8 @@
                         appDto.AdvItem = "";
                     }
                     appDto.ApplyId = spe.ID;
+                    appDto.Memo = "";
+                    appDto.ApplyDate = spe.ApplyDate;
                     appDtoLst.Add(appDto);
                 }
             }

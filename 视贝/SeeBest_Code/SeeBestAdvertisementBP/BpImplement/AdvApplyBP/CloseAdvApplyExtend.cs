@@ -40,6 +40,7 @@
                 if (advApply != null)
                 {
                     advApply.IsClose = true;
+                    advApply.DocStatus = AdvApplyStatusEnum.Closed;
                     result = true;
                 }
                 else

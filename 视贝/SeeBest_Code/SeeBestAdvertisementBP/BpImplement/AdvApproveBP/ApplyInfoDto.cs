@@ -40,6 +40,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 					ApplyId = 0; 
 					Area = 0m; 
 					ApplyQty = 0m; 
+		
+					ActualPrice = 0m; 
+		
+		
 
 		}
 
@@ -318,10 +322,78 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 				base.SetValue("ApplyQty",value);
 			}
 		}
+				/// <summary>
+		/// 备注 (该属性可为空,且无默认值)
+		/// 申请单信息.Misc.备注
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String Memo
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("Memo",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("Memo",value);
+			}
+		}
+				/// <summary>
+		/// 核销单价 (该属性可为空,但有默认值)
+		/// 申请单信息.Misc.核销单价
+		/// </summary>
+		/// <value>System.Decimal</value>
+		public System.Decimal ActualPrice
+		{
+			get	
+			{	
+				return (System.Decimal)base.GetValue("ActualPrice",typeof(System.Decimal));
+			}
+
+			 set	
+			{
+				base.SetValue("ActualPrice",value);
+			}
+		}
+				/// <summary>
+		/// 下单日期 (该属性可为空,且无默认值)
+		/// 申请单信息.Misc.下单日期
+		/// </summary>
+		/// <value>System.DateTime</value>
+		public System.DateTime ApplyDate
+		{
+			get	
+			{	
+				return (System.DateTime)base.GetValue("ApplyDate",typeof(System.DateTime));
+			}
+
+			 set	
+			{
+				base.SetValue("ApplyDate",value);
+			}
+		}
+				/// <summary>
+		/// 广告载体编号 (该属性可为空,且无默认值)
+		/// 申请单信息.Misc.广告载体编号
+		/// </summary>
+		/// <value>System.String</value>
+		public System.String AdvCarrierCode
+		{
+			get	
+			{	
+				return (System.String)base.GetValue("AdvCarrierCode",typeof(System.String));
+			}
+
+			 set	
+			{
+				base.SetValue("AdvCarrierCode",value);
+			}
+		}
 		
 		#endregion	
 		#region Multi_Fields
-																
+																				
 		#endregion 
 
 		#region ModelResource
@@ -393,6 +465,22 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		/// 数量的显示名称资源 -- 已经废弃，不使用.
 		/// </summary>
 		public string Res_ApplyQty　{ get { return "";　}　}
+		/// <summary>
+		/// 备注的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_Memo　{ get { return "";　}　}
+		/// <summary>
+		/// 核销单价的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_ActualPrice　{ get { return "";　}　}
+		/// <summary>
+		/// 下单日期的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_ApplyDate　{ get { return "";　}　}
+		/// <summary>
+		/// 广告载体编号的显示名称资源 -- 已经废弃，不使用.
+		/// </summary>
+		public string Res_AdvCarrierCode　{ get { return "";　}　}
 		#endregion 
 
 
@@ -405,6 +493,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 		private void DeSerializeKey(ApplyInfoDtoData data)
 		{
 		
+
+
+
+
 
 
 
@@ -473,6 +565,14 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 
 			this.ApplyQty = data.ApplyQty;
 
+			this.Memo = data.Memo;
+
+			this.ActualPrice = data.ActualPrice;
+
+			this.ApplyDate = data.ApplyDate;
+
+			this.AdvCarrierCode = data.AdvCarrierCode;
+
 		}
 
 		/// <summary>
@@ -531,6 +631,14 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApproveBP
 			data.Area = this.Area;
 
 			data.ApplyQty = this.ApplyQty;
+
+			data.Memo = this.Memo;
+
+			data.ActualPrice = this.ActualPrice;
+
+			data.ApplyDate = this.ApplyDate;
+
+			data.AdvCarrierCode = this.AdvCarrierCode;
 
 			return data ;
 		}

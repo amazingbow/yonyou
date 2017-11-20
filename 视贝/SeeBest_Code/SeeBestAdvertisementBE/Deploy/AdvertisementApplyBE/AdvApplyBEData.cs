@@ -89,7 +89,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     							DZWidth=0m; 
 	     							DZThick=0m; 
 	     							DZArea=0m; 
-	     							AdvDisplayType= 0; 			     							AdvDispInfo1= 0; 			     							AdvDispInfo2= 0; 			     			
+	     							AdvDisplayType= -1; 			     							AdvDispInfo1= -1; 			     							AdvDispInfo2= -1; 			     			
 	     							ApproveQty=0m; 
 	     			
 	     							IsClose=false; 

@@ -417,8 +417,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             this.BtnPrevPage.Visible = false;
             this.BtnNextPage.Visible = false;
             this.BtnLastPage.Visible = false;
-            this.ApplyDate131.Enabled = false;
-            this.Status101.Enabled = false;
+            //this.ApplyDate131.Enabled = false;
+            //this.Status101.Enabled = false;
 		}
 
 		public void AfterUIModelBinding()

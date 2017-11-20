@@ -76,10 +76,14 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
                         }
                     }
                 }
-                if (strDivisionCode.Substring(strDivisionCode.Length - 1, 1) == "/")
-                {
-                    strDivisionCode = strDivisionCode.Substring(0, strDivisionCode.Length - 1);
-                }
+                //if (strDivisionCode.Length > 0)
+                //{
+                //    if (strDivisionCode.Substring(strDivisionCode.Length - 1, 1) == "/")
+                //    {
+                //        strDivisionCode = strDivisionCode.Substring(0, strDivisionCode.Length - 1);
+                //    }
+                //}
+                strDivisionCode = strDivisionCode.TrimEnd('/');
                 strDivisionCode = "(" + strDivisionCode + ")";
             }
 

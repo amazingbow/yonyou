@@ -2632,6 +2632,18 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		{
 			get { return this.Fields["OtherInfo"]; }
 		}
+		public IUIField FieldApproveExDeclaration
+		{
+			get { return this.Fields["ApproveExDeclaration"]; }
+		}
+		public IUIField FieldApplyDate
+		{
+			get { return this.Fields["ApplyDate"]; }
+		}
+		public IUIField FieldAdvCarrierCode
+		{
+			get { return this.Fields["AdvCarrierCode"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -2675,6 +2687,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ApproveMoney", typeof(Decimal), true,"0","System.Decimal", "ApproveMoney", true,true, false, "",false,(UIFieldType)1,"91031687-94bb-4988-a939-df7bf999ef4f","b46a26a9-0c4c-4a2f-ad3b-5d3bdf261601");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvItem", typeof(String), true,"","System.String", "AdvItem", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","195843a5-0a6a-4207-9749-749470b7ae99");
 			UIModelRuntimeFactory.AddNewUIField(this,"OtherInfo", typeof(Int64), true,"0","System.Int64", "OtherInfo", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","b40a0df2-028f-4a85-9bfd-48e50b81fa3d");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApproveExDeclaration", typeof(String), true,"","System.String", "ApproveExDeclaration", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","2cd8e5c5-e1ae-4c8f-a336-9579a868a6f3");
+			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","8b36fa96-417f-47af-9bbe-3bc399560241");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvCarrierCode", typeof(String), true,"","System.String", "AdvCarrierCode", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","7ed71fcd-da10-48a8-af7a-8051d675f125");
 
 
 			this.CurrentFilter = new AdvApproveBE_AdvApproveLineDefaultFilterFilter(this);
@@ -3125,6 +3140,45 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			}
 			set{
 				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldOtherInfo] = value;
+			}
+		}
+		
+		
+		public  String ApproveExDeclaration
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldApproveExDeclaration] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveBE_AdvApproveLine.FieldApproveExDeclaration);
+			}
+			set{
+				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldApproveExDeclaration] = value;
+			}
+		}
+		
+		
+		public  DateTime? ApplyDate
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldApplyDate] ;
+				//return (DateTime?)value;
+				return GetValue<DateTime?>(this.uiviewAdvApproveBE_AdvApproveLine.FieldApplyDate);
+			}
+			set{
+				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldApplyDate] = value;
+			}
+		}
+		
+		
+		public  String AdvCarrierCode
+		{
+			get{
+				//object value = this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvCarrierCode] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvCarrierCode);
+			}
+			set{
+				this[this.uiviewAdvApproveBE_AdvApproveLine.FieldAdvCarrierCode] = value;
 			}
 		}
 		#endregion

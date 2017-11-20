@@ -60,7 +60,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             // 自动生成编码（编号规则：闽厦+4位流水码（初始码0100）+事业部简码（L/Q...)+下单日期（YYMMDD）
             #region 获取4位码
             this.Flow4Bit = 100;
-            string sql = "select top 1 Flow4Bit  from Cust_SeeBest_AdvApply where ApplyDept=" + this.ApplyDept.ID + " order by CreatedOn,Flow4Bit desc ";
+            int intYear;
+            if (this.ApplyDate == null || this.ApplyDate == System.DateTime.MinValue)
+            {
+                intYear = System.DateTime.Now.Year;
+            }
+            else
+            {
+                intYear = this.ApplyDate.Year;
+            }
+            string sql = "select top 1 Flow4Bit  from Cust_SeeBest_AdvApply where ApplyDept=" + this.ApplyDept.ID + " and year(ApplyDate)=" + intYear + " order by Flow4Bit desc ";
             DataSet data = new DataSet();
             DataAccessor.RunSQL(DataAccessor.GetConn(), sql, null, out data);
             if (data.Tables.Count > 0)
@@ -84,7 +93,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             string temp = string.Empty;
             foreach (var item in this.AdvAboutBE)
             {
-                temp += item.Description + "/";
+                temp += item.Code + "/";
             }
             temp = temp.TrimEnd('/');
 
@@ -108,6 +117,39 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
         {
             base.OnUpdating();
             // TO DO: write your business code here...
+            //当广告体现项目变更，编号跟着变更
+            if (string.IsNullOrEmpty(this.AdvCode))
+            {
+
+            }
+            else
+            {
+                int AdvCodeLength = 0;
+                AdvCodeLength = this.AdvCode.Length;
+                int a = 0;
+                if (string.IsNullOrEmpty(this.ApplyDept.DescFlexField.PrivateDescSeg11))
+                {
+                    a = 0;
+                }
+                else
+                {
+                    a = this.ApplyDept.DescFlexField.PrivateDescSeg11.Length;
+                }
+                int b = 0;
+                b = AdvCodeLength - (a + 4) - 6;
+                string strBefore = "";
+                strBefore = this.AdvCode.Substring(0, a + 4);
+                string strAfter = "";
+                strAfter = this.AdvCode.Substring(a + 4 + b, 6);
+                string temp = string.Empty;
+                foreach (var item in this.AdvAboutBE)
+                {
+                    temp += item.Code + "/";
+                }
+                temp = temp.TrimEnd('/');
+
+                this.AdvCode = strBefore + temp + strAfter;
+            }
         }
 
         /// <summary>
@@ -146,6 +188,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             base.OnValidate();
             this.SelfEntityValidator();
             // TO DO: write your business code here...
+            //if (this.AdvAboutBE.Count == 0)
+            //{
+            //    throw new Exception("广告体现项目不能为空！");
+            //}
         }
         #endregion
 

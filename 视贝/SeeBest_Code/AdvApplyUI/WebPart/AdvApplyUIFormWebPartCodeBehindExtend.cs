@@ -38,48 +38,50 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
     public partial class AdvApplyUIFormWebPart
     {
         #region Custome eventBind
-        //Qty693_TextChanged...
-        private void Qty693_TextChanged_Extend(object sender, EventArgs e)
+        //Qty860_TextChanged...
+        private void Qty860_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.TotalArea = this.Model.AdvApplyBE.FocusedRecord.BMArea * this.Model.AdvApplyBE.FocusedRecord.Qty;
-            Qty693_TextChanged_DefaultImpl(sender, e);
+            Qty860_TextChanged_DefaultImpl(sender, e);
         }
-        //BMWidth146_TextChanged...
-        private void BMWidth146_TextChanged_Extend(object sender, EventArgs e)
+        //BMWidth272_TextChanged...
+        private void BMWidth272_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.BMArea = this.Model.AdvApplyBE.FocusedRecord.BMWidth * this.Model.AdvApplyBE.FocusedRecord.BMHight;
-            BMWidth146_TextChanged_DefaultImpl(sender, e);
+            this.Model.AdvApplyBE.FocusedRecord.TotalArea = this.Model.AdvApplyBE.FocusedRecord.BMArea * this.Model.AdvApplyBE.FocusedRecord.Qty;
+            BMWidth272_TextChanged_DefaultImpl(sender, e);
         }
-        //BMHight124_TextChanged...
-        private void BMHight124_TextChanged_Extend(object sender, EventArgs e)
+        //BMHight213_TextChanged...
+        private void BMHight213_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.BMArea = this.Model.AdvApplyBE.FocusedRecord.BMWidth * this.Model.AdvApplyBE.FocusedRecord.BMHight;
-            BMHight124_TextChanged_DefaultImpl(sender, e);
+            this.Model.AdvApplyBE.FocusedRecord.TotalArea = this.Model.AdvApplyBE.FocusedRecord.BMArea * this.Model.AdvApplyBE.FocusedRecord.Qty;
+            BMHight213_TextChanged_DefaultImpl(sender, e);
         }
-        //BMArea187_TextChanged...
-        private void BMArea187_TextChanged_Extend(object sender, EventArgs e)
+        //BMArea309_TextChanged...
+        private void BMArea309_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.TotalArea = this.Model.AdvApplyBE.FocusedRecord.BMArea * this.Model.AdvApplyBE.FocusedRecord.Qty;
 
-            BMArea187_TextChanged_DefaultImpl(sender, e);
+            BMArea309_TextChanged_DefaultImpl(sender, e);
         }
-        //DZWidth187_TextChanged...
-        private void DZWidth187_TextChanged_Extend(object sender, EventArgs e)
+        //DZWidth321_TextChanged...
+        private void DZWidth321_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.DZArea = this.Model.AdvApplyBE.FocusedRecord.DZThick * this.Model.AdvApplyBE.FocusedRecord.DZWidth;
-            DZWidth187_TextChanged_DefaultImpl(sender, e);
+            DZWidth321_TextChanged_DefaultImpl(sender, e);
         }
-        //DZThick224_TextChanged...
-        private void DZThick224_TextChanged_Extend(object sender, EventArgs e)
+        //DZThick292_TextChanged...
+        private void DZThick292_TextChanged_Extend(object sender, EventArgs e)
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             this.Model.AdvApplyBE.FocusedRecord.DZArea = this.Model.AdvApplyBE.FocusedRecord.DZThick * this.Model.AdvApplyBE.FocusedRecord.DZWidth;
-            DZThick224_TextChanged_DefaultImpl(sender, e);
+            DZThick292_TextChanged_DefaultImpl(sender, e);
         }
 
         //BtnSave_Click...
@@ -88,15 +90,14 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             if (this.Model.AdvApplyBE.FocusedRecord != null)
             {
-                if (this.Model.AdvApplyBE.FocusedRecord.ID > 0L)
+                if (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 2 || this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 3)
                 {
-                    DataParamList lst1 = new DataParamList();
-                    lst1.Add(DataParamFactory.CreateInput("@AdvApplyBEID", this.Model.AdvApplyBE.FocusedRecord.ID, System.Data.DbType.Int64));
-
-                    DataAccessor.RunSQL(DataAccessor.GetConn(), "delete Cust_SeeBest_AdvAbout where AdvApplyBE=@AdvApplyBEID", lst1);
-
+                    this.Model.ClearErrorMessage();
+                    throw new Exception("这张广告申请单已经被审核或关闭，不能再修改保存！");
                 }
             }
+
+            
             this.Model.AdvApplyBE_AdvAboutBE.Clear();
             foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
             {
@@ -125,10 +126,23 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                     newRecord.SetParentRecord(this.Model.AdvApplyBE.FocusedRecord);
                 }
             }
-            var errorMsg = CheckAdvDisplayItem();
+            string errorMsg = "";
+            errorMsg = CheckAdvDisplayItem();
             if (!string.IsNullOrEmpty(errorMsg))
             {
+                this.Model.ClearErrorMessage();
                 throw new Exception(errorMsg);
+            }
+            if (this.Model.AdvApplyBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApplyBE.FocusedRecord.ID > 0L)
+                {
+                    DataParamList lst1 = new DataParamList();
+                    lst1.Add(DataParamFactory.CreateInput("@AdvApplyBEID", this.Model.AdvApplyBE.FocusedRecord.ID, System.Data.DbType.Int64));
+
+                    DataAccessor.RunSQL(DataAccessor.GetConn(), "delete Cust_SeeBest_AdvAbout where AdvApplyBE=@AdvApplyBEID", lst1);
+
+                }
             }
             BtnSave_Click_DefaultImpl(sender, e);
         }
@@ -214,9 +228,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             
             if (this.Model.AdvApplyBE.FocusedRecord != null)
             {
-                if (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 2)
+                if (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 2 || this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value == 3)
                 {
-                    throw new Exception("这张专柜申请单已经被审核，不能删除！");
+                    this.Model.ClearErrorMessage();
+                    throw new Exception("这张广告申请单已经被审核或关闭，不能删除！");
                 }
             }
             BtnDelete_Click_DefaultImpl(sender, e);
@@ -392,7 +407,11 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             if (this.Model.AdvApplyBE.FocusedRecord != null)
             {
                 proxy.ID = this.Model.AdvApplyBE.FocusedRecord.ID;
-                proxy.Do();
+                bool retbool = proxy.Do();
+                if (retbool)
+                {
+                    this.Action.NavigateAction.Refresh(null, false);
+                }
             }
             CloseClick_Click_DefaultImpl(sender, e);
         }
@@ -490,19 +509,46 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         private string CheckAdvDisplayItem()
         {
             string errorMsg = string.Empty;
+
+            if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount == 0)
+            {
+                errorMsg = "广告体现项目不能为空！";
+                return errorMsg;
+            }
+
+            string strMore = "";
+            string strLess = "";
+            foreach (AdvCarrierListRecord caItem in this.Model.AdvCarrierList.Records)
+            {
+                if (caItem.Description != "小于4")
+                {
+                    strMore = strMore + caItem.Name + "、";
+                }
+                if (caItem.Description != "大于等于4")
+                {
+                    strLess = strLess + caItem.Name + "、";
+                }
+            }
+
+            strMore = strMore.TrimEnd('、');
+            strLess = strLess.TrimEnd('、');
+
             if (this.Model.AdvApplyBE.FocusedRecord.BMArea >= 4)
             {
-                if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 2)
+                if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 1)
                 {
-                    errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+                    errorMsg = "版面面积大于等于4平米的时候，广告体现项目只能从" + strMore + "中选择，且只能选1个";
                     return errorMsg;
                 }
-                foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                else
                 {
-                    if (item.Code != "001" && item.Code != "002" && item.Code != "003")
+                    foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
                     {
-                        errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
-                        return errorMsg;
+                        if (item.Description == "小于4")
+                        {
+                            errorMsg = "版面面积大于等于4平米的时候，广告体现项目只能从" + strMore + "中选择，且只能选1个";
+                            return errorMsg;
+                        }
                     }
                 }
             }
@@ -510,10 +556,45 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             {
                 if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 1)
                 {
-                    errorMsg = "版面面积小于4的时候，广告体现项目只能选1个";
+                    errorMsg = "版面面积小于4平米的时候，广告体现项目只能从" + strLess + "中选择，且只能选1个";
                     return errorMsg;
                 }
+                else
+                {
+                    foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
+                    {
+                        if (item.Description == "大于等于4")
+                        {
+                            errorMsg = "版面面积小于4平米的时候，广告体现项目只能从" + strLess + "中选择，且只能选1个";
+                            return errorMsg;
+                        }
+                    }
+                }
             }
+            //if (this.Model.AdvApplyBE.FocusedRecord.BMArea >= 4)
+            //{
+            //    if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 2)
+            //    {
+            //        errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+            //        return errorMsg;
+            //    }
+            //    foreach (AdvApplyBE_AdvAboutBERecord item in this.Model.AdvApplyBE_AdvAboutBE.Records)
+            //    {
+            //        if (item.Code != "001" && item.Code != "002" && item.Code != "003")
+            //        {
+            //            errorMsg = "版面面积大于等于4的时候，广告体现项目只能从LED照明、墙壁开光、插座选择，且只能选2个";
+            //            return errorMsg;
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    if (this.Model.AdvApplyBE_AdvAboutBE.RecordCount > 1)
+            //    {
+            //        errorMsg = "版面面积小于4的时候，广告体现项目只能选1个";
+            //        return errorMsg;
+            //    }
+            //}
             return errorMsg;
         }
 
@@ -586,19 +667,28 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 this.BtnSubmit.Enabled = true;
                 this.BtnApprove.Enabled = true;
                 this.BtnUndoApprove.Enabled = true;
+                this.DropDownButton0.MenuItems[0].Enabled = true;
                 switch (this.Model.AdvApplyBE.FocusedRecord.DocStatus.Value)
                 {
                     case 0:
                         this.BtnApprove.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
+                        this.DropDownButton0.MenuItems[0].Enabled = false;
                         break;
                     case 1:
                         this.BtnSubmit.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
+                        this.DropDownButton0.MenuItems[0].Enabled = false;
                         break;
                     case 2:
                         this.BtnSubmit.Enabled = false;
                         this.BtnApprove.Enabled = false;
+                        break;
+                    case 3:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnApprove.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        this.DropDownButton0.MenuItems[0].Enabled = false;
                         break;
                 }
 
@@ -606,17 +696,20 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 {
                     this.BtnDelete.Enabled = true;
                     this.BtnCopy.Enabled = true;
+                    this.ApplyDept233.ReadOnly = true;
                 }
                 else
                 {
                     this.BtnDelete.Enabled = false;
                     this.BtnCopy.Enabled = false;
+                    this.ApplyDept233.ReadOnly = false;
                 }
             }
             else
             {
                 this.BtnDelete.Enabled = false;
                 this.BtnCopy.Enabled = false;
+                this.ApplyDept233.ReadOnly = false;
             }
 
         }
