@@ -17,7 +17,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		public SpecialApplyBListUIModelModel() : base("SpecialApplyBListUIModel")
 		{
 			InitClass();
-			this.SetResourceInfo("ded2757c-69de-4d0d-81ca-da47cf0e6866");
+			this.SetResourceInfo("cbda7724-1214-41c7-ae9a-519678742877");
             try{
 			    AfterInitModel();
             }catch(Exception exception){
@@ -62,7 +62,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		private void InitClass()
 		{
 			this.viewSpecialApplyBE = new SpecialApplyBEView(this);
-			this.viewSpecialApplyBE.SetResourceInfo("f35af3a1-fe37-4f74-a64d-8348457ba393");
+			this.viewSpecialApplyBE.SetResourceInfo("f7a3789e-1cf5-4637-9092-effc0246e7c4");
 			this.Views.Add(this.viewSpecialApplyBE);			
 
 			
@@ -106,20 +106,14 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		}
 
 
-		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
-		public SpecialApplyBEDefaultFilterFilter DefaultFilter
-		{
-			get { return (SpecialApplyBEDefaultFilterFilter)this.CurrentFilter; }
-		}
 		#endregion
 
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","9758e043-d91d-4125-bae4-f4fba8e5dfd0");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","f8a632a2-ffc1-47d9-9194-e8b36bc0e6b5");
 
 
-			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -182,35 +176,6 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 		#endregion
 	}
 	
-	[Serializable]
-	public class SpecialApplyBEDefaultFilterFilter : UIFilter
-	{
-		#region Constructor
-		public SpecialApplyBEDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
-		{
-			InitClass();
-		}
-		//for Clone Constructor
-		private SpecialApplyBEDefaultFilterFilter()
-			: base("DefaultFilter",null,"","")
-		{}
-		protected override IUIFilter CreateCloneInstance()
-		{
-			return new SpecialApplyBEDefaultFilterFilter();
-		}
-		#endregion
-
-		#region property
-		#endregion
-		
-		#region function
-		private void InitClass()
-		{
-		}
-		#endregion
-
-	}
 
 
 

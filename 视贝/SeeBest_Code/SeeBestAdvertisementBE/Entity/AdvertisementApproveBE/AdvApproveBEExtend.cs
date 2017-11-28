@@ -112,6 +112,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
         {
             base.OnUpdating();
             // TO DO: write your business code here...
+            //广告核销单价与实际核销单价必输，即为空就不能审核
+            if (this.DocStatus == AdvAppStatusEnum.Approved && this.OriginalData.DocStatus == AdvAppStatusEnum.Approving)
+            {
+                string strcheck = "";
+                int i = 1;
+                foreach (AdvApproveLine line in this.AdvApproveLine)
+                {
+                    if (line.Price <= 0 || line.ActualPrice <= 0)
+                    {
+                        strcheck = strcheck + i.ToString() + "、";
+                    }
+                    i++;
+                }
+                strcheck = strcheck.TrimEnd('、');
+                if (strcheck != "")
+                {
+                    throw new Exception("第" + strcheck + "行，单价或者核销单价没有维护，不能审核！");
+                }
+            }
         }
 
         /// <summary>

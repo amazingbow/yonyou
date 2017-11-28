@@ -7,6 +7,7 @@
     using UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE;
     using UFSoft.UBF.AopFrame;
     using UFSoft.UBF.Util.Context;
+    using UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE;
 
     /// <summary>
     /// LoadApplyByBsc partial 
@@ -36,10 +37,32 @@
             {
                 
             }
-            AdvApplyBE.EntityList applyLst = AdvApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
-                + " and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
-            SpecialApplyBE.EntityList speLst = SpecialApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
-                + " and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            AdvApproveLine.EntityList approveLineLst = AdvApproveLine.Finder.FindAll("1=1");
+            string strIDLst = "";
+            foreach (var approveLine in approveLineLst)
+            {
+                strIDLst = strIDLst + approveLine.OtherInfo.ToString() + ",";
+            }
+            strIDLst = strIDLst.TrimEnd(',');
+            AdvApplyBE.EntityList applyLst;
+            SpecialApplyBE.EntityList speLst;
+            if (strIDLst == "" || string.IsNullOrEmpty(strIDLst))
+            {
+                applyLst = AdvApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
+                    + " and DocStatus=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                speLst = SpecialApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
+                    + " and Status=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            }
+            else
+            {
+                strIDLst = "(" + strIDLst + ")";
+                applyLst = AdvApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
+                    + " and (ID not in " + strIDLst
+                    + ") and DocStatus=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                speLst = SpecialApplyBE.Finder.FindAll("ApplyDept.ID=" + bpObj.CustBscID
+                    + " and (ID not in " + strIDLst
+                    + ") and Status=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            }
             foreach (var app in applyLst)
             {
                 //app.ApplyDate
@@ -97,7 +120,8 @@
                     }
                 }
                 #endregion
-                appDto.ActualPrice = deActualPrice;
+                //appDto.ActualPrice = deActualPrice;
+                appDto.ActualPrice = 0;
                 appDto.ApplyId = app.ID;
                 appDto.Memo = "";
                 appDto.ApplyDate = app.ApplyDate;
@@ -149,7 +173,8 @@
                         appDto1.AdvCarrier = "";
                         appDto1.AdvCarrierCode = "";
                     }
-                    appDto1.ActualPrice = deActualPrice;
+                    //appDto1.ActualPrice = deActualPrice;
+                    appDto1.ActualPrice = 0;
                     appDto1.ApplyId = app.ID;
                     appDto1.Memo = "封底";
                     appDto1.ApplyDate = app.ApplyDate;
@@ -188,6 +213,9 @@
                         appDto.AdvAppCustName = "";
                         strVerificationLevel = "";
                     }
+                    appDto.Location = spe.LocationQY;
+                    appDto.Country = spe.LocationXZ;
+                    appDto.RelPeople = spe.CustName;
                     appDto.CustCounterName = spe.CustConterName;
                     appDto.RelPhone = spe.CustPhone;
                     appDto.CustAddress = spe.CustAddress;
@@ -226,7 +254,8 @@
                         }
                     }
                     #endregion
-                    appDto.ActualPrice = deActualPrice;
+                    //appDto.ActualPrice = deActualPrice;
+                    appDto.ActualPrice = 0;
                     if (item.DisplayProductType != null)
                     {
                         appDto.AdvItem = item.DisplayProductType.Description;

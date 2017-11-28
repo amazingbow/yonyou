@@ -649,6 +649,14 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["IsClose"]; }
 		}
+		public IUIField FieldLocationQY
+		{
+			get { return this.Fields["LocationQY"]; }
+		}
+		public IUIField FieldLocationXZ
+		{
+			get { return this.Fields["LocationXZ"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -778,10 +786,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept", typeof(Int64), false,"","UFIDA.U9.CBO.SCM.Customer.Customer", "ApplyDept", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","47ba4445-3a49-4325-bb22-6d9535a8b5c1");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Code", typeof(String), false,"","System.String", "ApplyDept.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8815311e-4cb7-42b0-b173-9624b926dc44");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDept_Name", typeof(String), true,"","System.String", "ApplyDept.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","15598cd1-04e4-453c-84fb-ef79fd6486f7");
-			UIModelRuntimeFactory.AddNewUIField(this,"Applier", typeof(String), true,"","System.String", "Applier", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","86805d91-9115-44a7-a690-ffa7807d2966");
+			UIModelRuntimeFactory.AddNewUIField(this,"Applier", typeof(String), false,"","System.String", "Applier", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","86805d91-9115-44a7-a690-ffa7807d2966");
 			UIModelRuntimeFactory.AddNewUIField(this,"ApplyDate", typeof(DateTime), true,"","System.Date", "ApplyDate", true,true, false, "",false,(UIFieldType)1,"c9e6bc50-2e39-4f27-9519-da0c7859d37e","e2c2c8ab-558d-40b2-8eeb-499d6ae816ec");
-			UIModelRuntimeFactory.AddNewUIField(this,"Phone", typeof(String), true,"","System.String", "Phone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","96253916-1787-4f20-a11e-e5fb4a332ef7");
-			UIModelRuntimeFactory.AddNewUIField(this,"QQ", typeof(String), true,"","System.String", "QQ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","dc39c36e-8866-4711-bfc8-a3f655efb523");
+			UIModelRuntimeFactory.AddNewUIField(this,"Phone", typeof(String), false,"","System.String", "Phone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","96253916-1787-4f20-a11e-e5fb4a332ef7");
+			UIModelRuntimeFactory.AddNewUIField(this,"QQ", typeof(String), false,"","System.String", "QQ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","dc39c36e-8866-4711-bfc8-a3f655efb523");
 			UIModelRuntimeFactory.AddNewUIField(this,"CustConterName", typeof(String), false,"","System.String", "CustConterName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","07451c37-bef9-41b5-9f6a-05e7cb872c70");
 			UIModelRuntimeFactory.AddNewUIField(this,"CustName", typeof(String), false,"","System.String", "CustName", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","0074206b-e493-44b2-bf21-784ac2b62b11");
 			UIModelRuntimeFactory.AddNewUIField(this,"CustPhone", typeof(String), false,"","System.String", "CustPhone", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","bb269534-1699-4559-99d4-a6a836be05ba");
@@ -794,6 +802,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "SpecialApplyDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","3249c7d7-a33c-471a-bd77-c404c4a71faf");
 			UIModelRuntimeFactory.AddNewUIField(this,"SpecialApplyDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "SpecialApplyDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","aa7ca7e5-7e7c-4834-a9c9-cdf4ef1f3d74");
 			UIModelRuntimeFactory.AddNewUIField(this,"IsClose", typeof(Boolean), true,"false","System.Boolean", "IsClose", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","50af7b5b-4545-407a-a711-b3af60762ec5");
+			UIModelRuntimeFactory.AddNewUIField(this,"LocationQY", typeof(String), true,"","System.String", "LocationQY", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5463bdc5-da7b-4fe6-ba6d-aeb8bfcbadee");
+			UIModelRuntimeFactory.AddNewUIField(this,"LocationXZ", typeof(String), true,"","System.String", "LocationXZ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","df5d4c5b-cf93-454c-89db-31325f004683");
 
 
 			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
@@ -2570,6 +2580,32 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			}
 			set{
 				this[this.uiviewSpecialApplyBE.FieldIsClose] = value;
+			}
+		}
+		
+		
+		public  String LocationQY
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldLocationQY] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldLocationQY);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldLocationQY] = value;
+			}
+		}
+		
+		
+		public  String LocationXZ
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldLocationXZ] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldLocationXZ);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldLocationXZ] = value;
 			}
 		}
 		#endregion

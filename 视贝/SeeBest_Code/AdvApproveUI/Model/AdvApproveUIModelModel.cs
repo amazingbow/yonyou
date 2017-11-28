@@ -757,7 +757,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust", typeof(Int64), true,"","UFIDA.U9.CBO.SCM.Customer.Customer", "AdvApplyCust", true,true, false, "",false,(UIFieldType)4,"8508f308-9d66-4b1d-abf4-e28dab8e926d","54043f33-6248-4fda-9b0f-be0e8c952b0b");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Code", typeof(String), false,"","System.String", "AdvApplyCust.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","87458380-ad30-4b0f-bdbd-ec61521d3606");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyCust_Name", typeof(String), true,"","System.String", "AdvApplyCust.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","f11c2809-6327-456b-8287-79c0d8cdc83d");
-			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType", typeof(Int64), true,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType", "AdvApproveDocType", true,true, false, "",false,(UIFieldType)4,"0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a","752fe996-c5b0-4f32-ad7c-448cd4edde2e");
+			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType", typeof(Int64), false,"","UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType", "AdvApproveDocType", true,true, false, "",false,(UIFieldType)4,"0ab4dca1-e716-4d53-8bb2-0ef1483d9f4a","752fe996-c5b0-4f32-ad7c-448cd4edde2e");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_Code", typeof(String), false,"","System.String", "AdvApproveDocType.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","3cb163a4-b559-4847-a7f3-09770c054044");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApproveDocType_Name", typeof(String), true,"","System.String", "AdvApproveDocType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","536dc124-3662-4d65-8953-382e2b2abd20");
 			UIModelRuntimeFactory.AddNewUIField(this,"WFCurrentState", typeof(Int32), false,"-1","System.Int32", "WFCurrentState", true,true, false, "",false,(UIFieldType)1,"d7c6031e-d3fe-41aa-a397-5edd86c10cae","74bbd383-c38f-46b3-8d73-75230490a7b4");
@@ -2326,12 +2326,12 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 		}
 		
 		
-		public  Int64? AdvApproveDocType
+		public  Int64 AdvApproveDocType
 		{
 			get{
 				//object value = this[this.uiviewAdvApproveBE.FieldAdvApproveDocType] ;
-				//return (Int64?)value;
-				return GetValue<Int64?>(this.uiviewAdvApproveBE.FieldAdvApproveDocType);
+				//return (Int64)value;
+				return GetValue<Int64>(this.uiviewAdvApproveBE.FieldAdvApproveDocType);
 			}
 			set{
 				this[this.uiviewAdvApproveBE.FieldAdvApproveDocType] = value;

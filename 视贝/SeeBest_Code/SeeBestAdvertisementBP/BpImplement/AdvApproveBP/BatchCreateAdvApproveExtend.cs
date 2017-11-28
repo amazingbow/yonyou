@@ -37,8 +37,28 @@
 
             int iBatchCreateQty = 0;
 
-            AdvApplyBE.EntityList applyLst = AdvApplyBE.Finder.FindAll("(ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
-            SpecialApplyBE.EntityList speLst = SpecialApplyBE.Finder.FindAll("(ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            AdvApproveLine.EntityList approveLineLst = AdvApproveLine.Finder.FindAll("1=1");
+            string strIDLst = "";
+            foreach (var approveLine in approveLineLst)
+            {
+                strIDLst = strIDLst + approveLine.OtherInfo.ToString() + ",";
+            }
+            strIDLst = strIDLst.TrimEnd(',');
+            AdvApplyBE.EntityList applyLst = AdvApplyBE.Finder.FindAll("1=0");
+            SpecialApplyBE.EntityList speLst = SpecialApplyBE.Finder.FindAll("1=0");
+            if (strIDLst == "" || string.IsNullOrEmpty(strIDLst))
+            {
+                applyLst = AdvApplyBE.Finder.FindAll("DocStatus=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                speLst = SpecialApplyBE.Finder.FindAll("Status=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            }
+            else
+            {
+                strIDLst = "(" + strIDLst + ")";
+                applyLst = AdvApplyBE.Finder.FindAll("(ID not in " + strIDLst
+                    + ") and DocStatus=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+                speLst = SpecialApplyBE.Finder.FindAll("(ID not in " + strIDLst
+                    + ") and Status=2 and (ApplyDate>='" + bpObj.StartDate.ToString("yyyy-MM-dd") + "' and ApplyDate<='" + bpObj.EndDate.ToString("yyyy-MM-dd 23:59:59") + "')");
+            }
 
             if (applyLst.Count > 0 || speLst.Count > 0)
             {
@@ -182,7 +202,8 @@
                                             }
                                         }
                                         #endregion
-                                        docline.ActualPrice = deActualPrice;
+                                        //docline.ActualPrice = deActualPrice;
+                                        docline.ActualPrice = 0;
                                         docline.Discount = 1;
                                         foreach (var item in app.AdvAboutBE)
                                         {
@@ -243,7 +264,8 @@
                                             {
                                                 docline1.AdvItem = "";
                                             }
-                                            docline1.ActualPrice = deActualPrice;
+                                            //docline1.ActualPrice = deActualPrice;
+                                            docline1.ActualPrice = 0;
                                             docline1.Discount = 1;
                                             docline1.OtherInfo = app.ID;
                                             docline1.Momo = "封底";
@@ -273,9 +295,10 @@
                                             string strAdvCarrierCode = "";
                                             strVerificationLevel = spe.ApplyDept.DescFlexField.PrivateDescSeg13;
                                             docline.AdvAppCustName = spe.ApplyDept.Name;
-                                            docline.Country = "";
+                                            docline.Location = spe.LocationQY;
+                                            docline.Country = spe.LocationXZ;
                                             docline.CustCounterName = spe.CustConterName;
-                                            docline.RelPeople = "";
+                                            docline.RelPeople = spe.CustName;
                                             docline.RelPhone = spe.CustPhone;
                                             docline.CustAddress = spe.CustAddress;
                                             docline.Width = item.Width;
@@ -314,7 +337,8 @@
                                                 }
                                             }
                                             #endregion
-                                            docline.ActualPrice = deActualPrice;
+                                            //docline.ActualPrice = deActualPrice;
+                                            docline.ActualPrice = 0;
                                             docline.Discount = 1;
                                             if (item.DisplayProductType != null)
                                             {

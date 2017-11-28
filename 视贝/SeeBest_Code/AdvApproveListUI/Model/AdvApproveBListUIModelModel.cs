@@ -62,7 +62,7 @@ namespace UFIDA.U9.Cust.AdvApproveBListUIModel
 		private void InitClass()
 		{
 			this.viewAdvApproveBE = new AdvApproveBEView(this);
-			this.viewAdvApproveBE.SetResourceInfo("21fc0641-3717-43f7-b501-608a9263db92");
+			this.viewAdvApproveBE.SetResourceInfo("33f73e7a-31c1-4494-bdcd-97778f08efb9");
 			this.Views.Add(this.viewAdvApproveBE);			
 
 			
@@ -106,20 +106,14 @@ namespace UFIDA.U9.Cust.AdvApproveBListUIModel
 		}
 
 
-		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
-		public AdvApproveBEDefaultFilterFilter DefaultFilter
-		{
-			get { return (AdvApproveBEDefaultFilterFilter)this.CurrentFilter; }
-		}
 		#endregion
 
 		#region Init
 		private void InitClass()
 		{
-			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","9f5482f3-4d40-415b-a1ba-ad30d313bbce");
+			UIModelRuntimeFactory.AddNewUIField(this,"ID", typeof(Int64), false,"","System.Int64", "ID", true,true, false, "",false,(UIFieldType)1,"ba391065-6c27-4c82-acc8-b52b1c93a910","4bfd7d29-6099-4b4a-8f3a-84b023d9ae2f");
 
 
-			this.CurrentFilter = new AdvApproveBEDefaultFilterFilter(this);
 		}
 		#endregion
 		
@@ -182,35 +176,6 @@ namespace UFIDA.U9.Cust.AdvApproveBListUIModel
 		#endregion
 	}
 	
-	[Serializable]
-	public class AdvApproveBEDefaultFilterFilter : UIFilter
-	{
-		#region Constructor
-		public AdvApproveBEDefaultFilterFilter(IUIView view) 
-			: base("DefaultFilter",view,@"",@"")
-		{
-			InitClass();
-		}
-		//for Clone Constructor
-		private AdvApproveBEDefaultFilterFilter()
-			: base("DefaultFilter",null,"","")
-		{}
-		protected override IUIFilter CreateCloneInstance()
-		{
-			return new AdvApproveBEDefaultFilterFilter();
-		}
-		#endregion
-
-		#region property
-		#endregion
-		
-		#region function
-		private void InitClass()
-		{
-		}
-		#endregion
-
-	}
 
 
 

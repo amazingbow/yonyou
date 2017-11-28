@@ -656,7 +656,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
         public void BeforeUIModelBinding()
         {
-
+            this.BtnPrint.Visible = false;
         }
 
         public void AfterUIModelBinding()

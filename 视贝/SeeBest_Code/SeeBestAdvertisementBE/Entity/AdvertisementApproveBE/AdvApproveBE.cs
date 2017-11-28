@@ -455,7 +455,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 单据类型 (该属性可为空,且无默认值)
+			/// 单据类型 (该属性不可为空,且无默认值)
 			/// 广告核销单.Misc.单据类型
 			/// </summary>
 			/// <value></value>
@@ -475,7 +475,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
    		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApproveDocTypeKey ;
 		/// <summary>
 		/// EntityKey 属性
-		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 单据类型 的Key (该属性不可为空,且无默认值)
 		/// 广告核销单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -714,7 +714,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
 		
 			/// <summary>
-		/// 单据类型 (该属性可为空,且无默认值)
+		/// 单据类型 (该属性不可为空,且无默认值)
 		/// 广告核销单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -745,7 +745,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 
    		private UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocType.EntityKey m_AdvApproveDocTypeKey ;
 		/// <summary>
-		/// 单据类型 的Key (该属性可为空,且无默认值)
+		/// 单据类型 的Key (该属性不可为空,且无默认值)
 		/// 广告核销单.Misc.单据类型
 		/// </summary>
 		/// <value></value>
@@ -1445,6 +1445,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE
 		{
 			base.SelfNullableVlidator();
 		
+			if (Convert.ToInt64(base.GetValue("AdvApproveDocType")) == UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag){
+				UFSoft.UBF.Business.AttributeInValidException AdvApproveDocType_Exception = new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE","AdvApproveDocType","be195051-6202-44ef-8195-928668bea73f");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					AdvApproveDocType_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(AdvApproveDocType_Exception);
+			}
+
 
 
 			

@@ -401,6 +401,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
  
 
 		}
+		/// <summary>
+		/// Help: 获取核销单价
+		/// </summary>
+		public void GetActualPriceClick(object sender, UIActionEventArgs e)
+		{
+			//调用基类委托..
+			this.InvokeAction(sender,e,this.GetActualPriceClick_Extend);
+		}
+		private void GetActualPriceClick_DefaultImpl(object sender, UIActionEventArgs e)
+		{
+ 
+
+		}
 		#region Action的内置两个Action.
 		/// <summary>
 		/// Help: 数据加载(发生在Form的初始化加载时)

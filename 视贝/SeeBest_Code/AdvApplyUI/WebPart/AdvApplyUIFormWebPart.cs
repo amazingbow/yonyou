@@ -1129,7 +1129,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 1000, 36, 0, 1, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 5, 5, 5, 5, 5);
 			InitViewBindingContainer(this, _UFCard,  this.Model.AdvApplyBE, "AdvApplyBE", "", null, 1, "广告申请单");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(160,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(160,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(100,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("False")),});
             this.Card7 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
@@ -1138,7 +1138,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 
 
 
-				this.lblAdvApplyDocType216 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApplyDocType216", "", "True", "True", "Right", 100, 20, 4, 0, 1, 1, "100","a3a90268-cecf-429a-ba35-1cb4c309cb2d","a593540c-c3b9-45da-8a0e-37402c1ac30e");
+				this.lblAdvApplyDocType216 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvApplyDocType216", "", "True", "True", "Right", 100, 20, 0, 0, 1, 1, "100","a3a90268-cecf-429a-ba35-1cb4c309cb2d","a593540c-c3b9-45da-8a0e-37402c1ac30e");
 
 
 								
@@ -1147,7 +1147,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvApplyDocType216, "2");		
 
 
-				this.AdvApplyDocType216 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"AdvApplyDocType216",false,true, true,120, 20, 6, 0, 1, 1, "100","3",false,false,true,"lblAdvApplyDocType216","a3a90268-cecf-429a-ba35-1cb4c309cb2d","f83243d4-3e34-4ac1-b584-8acde1e5caea");
+				this.AdvApplyDocType216 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"AdvApplyDocType216",false,true, true,120, 20, 2, 0, 1, 1, "100","3",false,false,true,"lblAdvApplyDocType216","a3a90268-cecf-429a-ba35-1cb4c309cb2d","f83243d4-3e34-4ac1-b584-8acde1e5caea");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvApplyDocType216, "False", "AdvApplyDocType", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvApplyDocType, "AdvApplyBE");
 			UIControlBuilder.SetReferenceControlRefInfo(this.AdvApplyDocType216,"11ab3eef-9012-47dd-8cc2-f377e148a2c1", 580,408, "Name","Code","ID", this.Model.AdvApplyBE.FieldAdvApplyDocType_Code,this.Model.AdvApplyBE.FieldAdvApplyDocType_Name);
             //foreach Reference's input filter parameter
@@ -1212,7 +1212,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.SysVersion94, "9");		
 		 
 
-				this.lblAdvCode605 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvCode605", "", "True", "True", "Right", 100, 20, 0, 0, 1, 1, "100","a5994f4f-99b6-42c9-9506-1579b4ef175d","9677d0b5-5ba8-4931-9af8-ec2d6ed718e0");
+				this.lblAdvCode605 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvCode605", "", "True", "True", "Right", 100, 20, 4, 0, 1, 1, "100","a5994f4f-99b6-42c9-9506-1579b4ef175d","9677d0b5-5ba8-4931-9af8-ec2d6ed718e0");
 
 
 								
@@ -1221,7 +1221,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode605, "10");		
 
 
-				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 160, 20, 2, 0, 1, 1, "False", "100"
+				this.AdvCode605 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode605", "True", "True", "True", "False", "Left", 0, 60, 0, 160, 20, 6, 0, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode605","","50","a5994f4f-99b6-42c9-9506-1579b4ef175d","c7576af6-9d8a-4564-83f5-231c49082691");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode605, "False", "AdvCode", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldAdvCode, "AdvApplyBE");
 

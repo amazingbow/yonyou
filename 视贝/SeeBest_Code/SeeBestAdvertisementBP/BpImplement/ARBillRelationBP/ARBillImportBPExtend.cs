@@ -171,7 +171,7 @@
 
                 foreach (AdvApproveLine advApproveLine in advApprove.AdvApproveLine)
                 {
-                    if (advApproveLine.ActualApproveQty > 0 && advApproveLine.ApproveMoney > 0)
+                    if ((advApproveLine.ActualApproveQty > 0 && advApproveLine.ApproveMoney > 0) || (advApproveLine.Momo == "封底" && advApproveLine.ApproveMoney > 0))
                     {
                         ImportARBillLineDTOData arBillDTOLine = new ImportARBillLineDTOData();
 
@@ -216,7 +216,14 @@
                         arBillDTOLine.TDMode = 0;//贸易方式：0为一般贸易
                         arBillDTOLine.RequisitionAdjustMode = 0;//通知单调整方式：0为调量
 
-                        arBillDTOLine.PUAmount = advApproveLine.ActualApproveQty;//数量
+                        if (advApproveLine.Momo == "封底")
+                        {
+                            arBillDTOLine.PUAmount = 1;//数量
+                        }
+                        else
+                        {
+                            arBillDTOLine.PUAmount = advApproveLine.ActualApproveQty;//数量
+                        }
                         arBillDTOLine.UnitPrice = advApproveLine.ActualPrice * advApproveLine.Area * advApproveLine.Discount;//单价
 
                         arBillDTO.ImportARBillLineDTOs.Add(arBillDTOLine);

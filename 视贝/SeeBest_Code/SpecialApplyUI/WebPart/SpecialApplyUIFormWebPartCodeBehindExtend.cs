@@ -47,9 +47,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
             if (this.Model.SpecialApplyBE.FocusedRecord != null)
             {
-                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2 || this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 3)
                 {
-                    throw new Exception("这张专柜申请单已经被审核，不能再做修改！");
+                    this.Model.ClearErrorMessage();
+                    throw new Exception("这张专柜申请单已经被审核或关闭，不能再做修改！");
                 }
             }
 
@@ -87,9 +88,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
             if (this.Model.SpecialApplyBE.FocusedRecord != null)
             {
-                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2 || this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 3)
                 {
-                    throw new Exception("这张专柜申请单已经被审核，不能删除！");
+                    this.Model.ClearErrorMessage();
+                    throw new Exception("这张专柜申请单已经被审核或关闭，不能删除！");
                 }
             }
 		
@@ -158,6 +160,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                 if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
                 {
                     this.Model.SpecialApplyBE.FocusedRecord.IsClose = true;
+                    this.Model.SpecialApplyBE.FocusedRecord.Status = 3;
                 }
             }
 
@@ -176,6 +179,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                 if (this.Model.SpecialApplyBE.FocusedRecord.ID > 0L)
                 {
                     this.Model.SpecialApplyBE.FocusedRecord.IsClose = false;
+                    this.Model.SpecialApplyBE.FocusedRecord.Status = 2;
                 }
             }
 
@@ -417,6 +421,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             this.BtnPrevPage.Visible = false;
             this.BtnNextPage.Visible = false;
             this.BtnLastPage.Visible = false;
+            this.BtnOutput.Visible = false;
+            this.BtnPrint.Visible = false;
             //this.ApplyDate131.Enabled = false;
             //this.Status101.Enabled = false;
 		}
@@ -428,19 +434,34 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                 this.BtnSubmit.Enabled = true;
                 this.BtnApprove.Enabled = true;
                 this.BtnUndoApprove.Enabled = true;
+                this.MenuDocClose.Enabled = true;
+                this.MenuDocOpen.Enabled = true;
                 switch (this.Model.SpecialApplyBE.FocusedRecord.Status.Value)
                 {
                     case 0:
                         this.BtnApprove.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
+                        this.MenuDocClose.Enabled = false;
+                        this.MenuDocOpen.Enabled = false;
                         break;
                     case 1:
                         this.BtnSubmit.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
+                        this.MenuDocClose.Enabled = false;
+                        this.MenuDocOpen.Enabled = false;
                         break;
                     case 2:
                         this.BtnSubmit.Enabled = false;
                         this.BtnApprove.Enabled = false;
+                        this.MenuDocClose.Enabled = true;
+                        this.MenuDocOpen.Enabled = false;
+                        break;
+                    case 3:
+                        this.BtnSubmit.Enabled = false;
+                        this.BtnApprove.Enabled = false;
+                        this.BtnUndoApprove.Enabled = false;
+                        this.MenuDocClose.Enabled = false;
+                        this.MenuDocOpen.Enabled = true;
                         break;
                 }
 
@@ -448,71 +469,71 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
                 {
                     this.BtnDelete.Enabled = true;
                     this.BtnCopy.Enabled = true;
-                    if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
-                    {
-                        if (this.Model.SpecialApplyBE.FocusedRecord.IsClose == true)
-                        {
-                            this.MenuDocClose.Enabled = false;
-                            this.MenuDocOpen.Enabled = true;
-                            this.BtnSave.Enabled = false;
-                            this.BtnCancel.Enabled = false;
-                            this.BtnDelete.Enabled = false;
-                            this.BtnCopy.Enabled = false;
-                            this.BtnUndoApprove.Enabled = false;
-                            this.SpecialApplyDocType154.Enabled = false;
-                            this.ApplyDept71.Enabled = false;
-                            this.Phone155.Enabled = false;
-                            this.Applier86.Enabled = false;
-                            this.QQ149.Enabled = false;
-                            this.CustName104.Enabled = false;
-                            this.CustPhone77.Enabled = false;
-                            this.CustConterName149.Enabled = false;
-                            this.CustAddress121.Enabled = false;
-                            this.SpecialDesignStyle119.Enabled = false;
-                            this.DataGrid14.Enabled = false;
-                        }
-                        else
-                        {
-                            this.MenuDocClose.Enabled = true;
-                            this.MenuDocOpen.Enabled = false;
-                            this.BtnSave.Enabled = true;
-                            this.BtnCancel.Enabled = true;
-                            this.BtnDelete.Enabled = true;
-                            this.BtnCopy.Enabled = true;
-                            this.BtnUndoApprove.Enabled = true;
-                            this.SpecialApplyDocType154.Enabled = true;
-                            this.ApplyDept71.Enabled = true;
-                            this.Phone155.Enabled = true;
-                            this.Applier86.Enabled = true;
-                            this.QQ149.Enabled = true;
-                            this.CustName104.Enabled = true;
-                            this.CustPhone77.Enabled = true;
-                            this.CustConterName149.Enabled = true;
-                            this.CustAddress121.Enabled = true;
-                            this.SpecialDesignStyle119.Enabled = true;
-                            this.DataGrid14.Enabled = true;
-                        }
-                    }
-                    else
-                    {
-                        this.MenuDocClose.Enabled = false;
-                        this.MenuDocOpen.Enabled = false;
-                    }
+                    //if (this.Model.SpecialApplyBE.FocusedRecord.Status.Value == 2)
+                    //{
+                    //    if (this.Model.SpecialApplyBE.FocusedRecord.IsClose == true)
+                    //    {
+                    //        this.MenuDocClose.Enabled = false;
+                    //        this.MenuDocOpen.Enabled = true;
+                    //        this.BtnSave.Enabled = false;
+                    //        this.BtnCancel.Enabled = false;
+                    //        this.BtnDelete.Enabled = false;
+                    //        this.BtnCopy.Enabled = false;
+                    //        this.BtnUndoApprove.Enabled = false;
+                    //        this.SpecialApplyDocType154.Enabled = false;
+                    //        this.ApplyDept71.Enabled = false;
+                    //        this.Phone155.Enabled = false;
+                    //        this.Applier86.Enabled = false;
+                    //        this.QQ149.Enabled = false;
+                    //        this.CustName104.Enabled = false;
+                    //        this.CustPhone77.Enabled = false;
+                    //        this.CustConterName149.Enabled = false;
+                    //        this.CustAddress121.Enabled = false;
+                    //        this.SpecialDesignStyle119.Enabled = false;
+                    //        this.DataGrid14.Enabled = false;
+                    //    }
+                    //    else
+                    //    {
+                    //        this.MenuDocClose.Enabled = true;
+                    //        this.MenuDocOpen.Enabled = false;
+                    //        this.BtnSave.Enabled = true;
+                    //        this.BtnCancel.Enabled = true;
+                    //        this.BtnDelete.Enabled = true;
+                    //        this.BtnCopy.Enabled = true;
+                    //        this.BtnUndoApprove.Enabled = true;
+                    //        this.SpecialApplyDocType154.Enabled = true;
+                    //        this.ApplyDept71.Enabled = true;
+                    //        this.Phone155.Enabled = true;
+                    //        this.Applier86.Enabled = true;
+                    //        this.QQ149.Enabled = true;
+                    //        this.CustName104.Enabled = true;
+                    //        this.CustPhone77.Enabled = true;
+                    //        this.CustConterName149.Enabled = true;
+                    //        this.CustAddress121.Enabled = true;
+                    //        this.SpecialDesignStyle119.Enabled = true;
+                    //        this.DataGrid14.Enabled = true;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    this.MenuDocClose.Enabled = false;
+                    //    this.MenuDocOpen.Enabled = false;
+                    //}
                 }
                 else
                 {
                     this.BtnDelete.Enabled = false;
                     this.BtnCopy.Enabled = false;
-                    this.MenuDocClose.Enabled = false;
-                    this.MenuDocOpen.Enabled = false;
+                    //this.MenuDocClose.Enabled = false;
+                    //this.MenuDocOpen.Enabled = false;
                 }
             }
             else
             {
                 this.BtnDelete.Enabled = false;
                 this.BtnCopy.Enabled = false;
-                this.MenuDocClose.Enabled = false;
-                this.MenuDocOpen.Enabled = false;
+                //this.MenuDocClose.Enabled = false;
+                //this.MenuDocOpen.Enabled = false;
             }
 
 		}

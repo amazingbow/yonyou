@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// <returns>Instance</returns>
 		public  static SpecialApplyBE Create() {
 			SpecialApplyBE entity = (SpecialApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																			 
+																																																									 
 			return entity;
 		}
 
@@ -452,7 +452,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 下单人 (该属性可为空,且无默认值)
+			/// 下单人 (该属性不可为空,且无默认值)
 			/// 专柜申请单.Misc.下单人
 			/// </summary>
 			/// <value></value>
@@ -493,7 +493,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 联系电话 (该属性可为空,且无默认值)
+			/// 联系电话 (该属性不可为空,且无默认值)
 			/// 专柜申请单.Misc.联系电话
 			/// </summary>
 			/// <value></value>
@@ -512,7 +512,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// QQ (该属性可为空,且无默认值)
+			/// QQ (该属性不可为空,且无默认值)
 			/// 专柜申请单.Misc.QQ
 			/// </summary>
 			/// <value></value>
@@ -550,8 +550,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户名称 (该属性不可为空,且无默认值)
-			/// 专柜申请单.Misc.客户名称
+			/// 联系人 (该属性不可为空,且无默认值)
+			/// 专柜申请单.Misc.联系人
 			/// </summary>
 			/// <value></value>
 			public  System.String CustName
@@ -569,8 +569,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				
 			/// <summary>
 			///  OrginalData属性。只可读。
-			/// 客户电话 (该属性不可为空,且无默认值)
-			/// 专柜申请单.Misc.客户电话
+			/// 客户联系电话 (该属性不可为空,且无默认值)
+			/// 专柜申请单.Misc.客户联系电话
 			/// </summary>
 			/// <value></value>
 			public  System.String CustPhone
@@ -742,6 +742,44 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 区域 (该属性可为空,且无默认值)
+			/// 专柜申请单.Misc.区域
+			/// </summary>
+			/// <value></value>
+			public  System.String LocationQY
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("LocationQY");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 乡镇 (该属性可为空,且无默认值)
+			/// 专柜申请单.Misc.乡镇
+			/// </summary>
+			/// <value></value>
+			public  System.String LocationXZ
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("LocationXZ");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -882,7 +920,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 			/// <summary>
-		/// 下单人 (该属性可为空,且无默认值)
+		/// 下单人 (该属性不可为空,且无默认值)
 		/// 专柜申请单.Misc.下单人
 		/// </summary>
 		/// <value></value>
@@ -931,7 +969,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 			/// <summary>
-		/// 联系电话 (该属性可为空,且无默认值)
+		/// 联系电话 (该属性不可为空,且无默认值)
 		/// 专柜申请单.Misc.联系电话
 		/// </summary>
 		/// <value></value>
@@ -955,7 +993,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 			/// <summary>
-		/// QQ (该属性可为空,且无默认值)
+		/// QQ (该属性不可为空,且无默认值)
 		/// 专柜申请单.Misc.QQ
 		/// </summary>
 		/// <value></value>
@@ -1003,8 +1041,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 			/// <summary>
-		/// 客户名称 (该属性不可为空,且无默认值)
-		/// 专柜申请单.Misc.客户名称
+		/// 联系人 (该属性不可为空,且无默认值)
+		/// 专柜申请单.Misc.联系人
 		/// </summary>
 		/// <value></value>
 			public  System.String CustName
@@ -1027,8 +1065,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 		
 			/// <summary>
-		/// 客户电话 (该属性不可为空,且无默认值)
-		/// 专柜申请单.Misc.客户电话
+		/// 客户联系电话 (该属性不可为空,且无默认值)
+		/// 专柜申请单.Misc.客户联系电话
 		/// </summary>
 		/// <value></value>
 			public  System.String CustPhone
@@ -1265,6 +1303,54 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+		
+			/// <summary>
+		/// 区域 (该属性可为空,且无默认值)
+		/// 专柜申请单.Misc.区域
+		/// </summary>
+		/// <value></value>
+			public  System.String LocationQY
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("LocationQY");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("LocationQY", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 乡镇 (该属性可为空,且无默认值)
+		/// 专柜申请单.Misc.乡镇
+		/// </summary>
+		/// <value></value>
+			public  System.String LocationXZ
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("LocationXZ");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("LocationXZ", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -1393,6 +1479,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_IsClose　{ get { return EntityRes.GetResource("IsClose");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LocationQY")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_LocationQY　{ get { return EntityRes.GetResource("LocationQY");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LocationXZ")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_LocationXZ　{ get { return EntityRes.GetResource("LocationXZ");　}　}
 		#endregion 
 
 
@@ -1446,12 +1542,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			public static string CustConterName　{ get { return "CustConterName";　}　}
 				
 			/// <summary>
-			/// 属性: 客户名称 的名称
+			/// 属性: 联系人 的名称
 			/// </summary>
 			public static string CustName　{ get { return "CustName";　}　}
 				
 			/// <summary>
-			/// 属性: 客户电话 的名称
+			/// 属性: 客户联系电话 的名称
 			/// </summary>
 			public static string CustPhone　{ get { return "CustPhone";　}　}
 				
@@ -1494,6 +1590,16 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			/// 属性: 关闭 的名称
 			/// </summary>
 			public static string IsClose　{ get { return "IsClose";　}　}
+				
+			/// <summary>
+			/// 属性: 区域 的名称
+			/// </summary>
+			public static string LocationQY　{ get { return "LocationQY";　}　}
+				
+			/// <summary>
+			/// 属性: 乡镇 的名称
+			/// </summary>
+			public static string LocationXZ　{ get { return "LocationXZ";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1501,7 +1607,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																		
+																																						
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1664,6 +1770,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			this.exdMultiLangAttrs.Add("WFCurrentState","WFCurrentState");
 			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
 			this.exdMultiLangAttrs.Add("IsClose","IsClose");
+			this.exdMultiLangAttrs.Add("LocationQY","LocationQY");
+			this.exdMultiLangAttrs.Add("LocationXZ","LocationXZ");
         }
 	#endregion 
 
@@ -1680,7 +1788,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			switch(propstr)
 			{
 			
-																																																
+																																																						
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1726,6 +1834,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			if (data.SpecialApplyDocType == -1 && data.SpecialApplyDocType_SKey!=null)
 				data.SpecialApplyDocType = data.SpecialApplyDocType_SKey.GetEntity().ID ;
 	
+
+			
+
+			
 
 			
 
@@ -1801,6 +1913,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
 		
 								this.SetTypeValue("IsClose",data.IsClose);
+		
+								this.SetTypeValue("LocationQY",data.LocationQY);
+		
+								this.SetTypeValue("LocationXZ",data.LocationXZ);
 		
 			#endregion 
 
@@ -1967,6 +2083,20 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 					data.IsClose=(System.Boolean)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("LocationQY");
+				if (obj != null)
+					data.LocationQY=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("LocationXZ");
+				if (obj != null)
+					data.LocationXZ=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2030,6 +2160,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+
+
 			//调用实体自身校验器代码.
             return true; 
         }
@@ -2043,6 +2175,27 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
 					ApplyDept_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
 				this.PropertyExceptions.Add(ApplyDept_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("Applier"))){
+				UFSoft.UBF.Business.AttributeInValidException Applier_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE","Applier","4d7ad8a8-0cd8-451b-9742-6d3d39f68ede");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					Applier_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(Applier_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("Phone"))){
+				UFSoft.UBF.Business.AttributeInValidException Phone_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE","Phone","2487e091-85cb-425b-bd71-e70593992aea");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					Phone_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(Phone_Exception);
+			}
+
+			if (string.IsNullOrEmpty((string)base.GetValue("QQ"))){
+				UFSoft.UBF.Business.AttributeInValidException QQ_Exception =new UFSoft.UBF.Business.AttributeInValidException("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE","QQ","62b31dc3-8a0b-4f32-8ee4-fe9ad2836c9a");
+				if (UFSoft.UBF.PL.Tool.ConfigParm.SupportNullableVlidatorStackTrace)
+					QQ_Exception.MyStackTrace =  new System.Diagnostics.StackTrace(true).ToString();
+				this.PropertyExceptions.Add(QQ_Exception);
 			}
 
 			if (string.IsNullOrEmpty((string)base.GetValue("CustConterName"))){

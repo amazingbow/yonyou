@@ -36,6 +36,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
                         
                         
                         
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -63,6 +65,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	     							SpecialDesignStyle= 0; 			     			
 	     			
 	     							Status= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							IsClose=false; 
+	     			
+	     			
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -316,8 +320,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		
 
 				/// <summary>
-		/// 客户名称
-		/// 专柜申请单.Misc.客户名称
+		/// 联系人
+		/// 专柜申请单.Misc.联系人
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.String m_custName ;
@@ -335,8 +339,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		
 
 				/// <summary>
-		/// 客户电话
-		/// 专柜申请单.Misc.客户电话
+		/// 客户联系电话
+		/// 专柜申请单.Misc.客户联系电话
 		/// </summary>
 		[DataMember(IsRequired=false)]
 		private System.String m_custPhone ;
@@ -475,10 +479,48 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 区域
+		/// 专柜申请单.Misc.区域
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_locationQY ;
+		public System.String LocationQY
+		{
+			get	
+			{	
+				return m_locationQY  ;
+			}
+			set	
+			{	
+				m_locationQY = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 乡镇
+		/// 专柜申请单.Misc.乡镇
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_locationXZ ;
+		public System.String LocationXZ
+		{
+			get	
+			{	
+				return m_locationXZ  ;
+			}
+			set	
+			{	
+				m_locationXZ = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																	
+																			
 		#endregion 		
 	}	
 

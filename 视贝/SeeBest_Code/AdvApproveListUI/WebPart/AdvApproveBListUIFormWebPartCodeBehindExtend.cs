@@ -50,17 +50,21 @@ namespace UFIDA.U9.Cust.AdvApproveBListUIModel
 		{
 			//调用模版提供的默认实现.--默认实现可能会调用相应的Action.
             string strcheck = "";
+            int i = 1;
             foreach (IUIRecord record in this.Model.AdvApproveBE.Cache.GetSelectRecord())
             {
-                if (record["Status"].ToString() == "2")
+                if (record["DocStatus"].ToString() == "2")
                 {
-                    strcheck = strcheck + record["AdvCode"].ToString() + ",";
+                    strcheck = strcheck + i.ToString() + "、";
                 }
+                i++;
             }
+            strcheck = strcheck.TrimEnd('、');
 
             if (strcheck != "")
             {
-                throw new Exception("所选单据中，编号：" + strcheck + "已经被审核，不能再做删除操作！");
+                this.Model.ClearErrorMessage();
+                throw new Exception("所选单据中，存在已经被审核的单据，不能再做删除操作！");
             }
 		
 			BtnDelete_Click_DefaultImpl(sender,e);

@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
     <IncrementalBuild>false</IncrementalBuild>
   </PropertyGroup>
-	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />  
-	<Import Project="UFIDA.U9.Cust.AdvApplyListUI.WebPart.target" />  
-
+  <ItemGroup>
+    <Reference Include="UFIDA.U9.UI.BusinessHelper">
+      <HintPath>..\..\..\U9V50\Portal\ApplicationLib\UFIDA.U9.UI.BusinessHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="UFIDA.U9.Cust.AdvApplyListUI.WebPart.target" />
 </Project>

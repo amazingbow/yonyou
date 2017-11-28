@@ -133,6 +133,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         IUFLabel lblCustAddress121;
         IUFFldTextBox CustAddress121;
         IUFFldFlexFieldPicker FlexFieldPicker0;
+        IUFLabel lblLocationQY83;
+        IUFFldTextBox LocationQY83;
+        IUFLabel lblLocationXZ108;
+        IUFFldTextBox LocationXZ108;
         IUFTabPage TabPage32;
         IUFLabel lblSpecialDesignStyle119;
         IUFFldDropDownList SpecialDesignStyle119;
@@ -620,7 +624,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblApplier86, "4");		
 
 
-				this.Applier86 = UIControlBuilder.BuilderTextBox(_UFTabPage, "Applier86", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 2, 1, 1, "False", "100"
+				this.Applier86 = UIControlBuilder.BuilderTextBox(_UFTabPage, "Applier86", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 2, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblApplier86","","50","86805d91-9115-44a7-a690-ffa7807d2966","1820f940-a4bc-4820-97c7-6e8c5ab4972b");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Applier86, "False", "Applier", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldApplier, "SpecialApplyBE");
 
@@ -638,7 +642,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblPhone155, "6");		
 
 
-				this.Phone155 = UIControlBuilder.BuilderTextBox(_UFTabPage, "Phone155", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 1, 1, 1, "False", "100"
+				this.Phone155 = UIControlBuilder.BuilderTextBox(_UFTabPage, "Phone155", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 1, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblPhone155","","50","96253916-1787-4f20-a11e-e5fb4a332ef7","bd2951ea-cb25-4fc3-8d4c-e267e0729e2b");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Phone155, "False", "Phone", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldPhone, "SpecialApplyBE");
 
@@ -656,7 +660,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblQQ149, "8");		
 
 
-				this.QQ149 = UIControlBuilder.BuilderTextBox(_UFTabPage, "QQ149", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 2, 1, 1, "False", "100"
+				this.QQ149 = UIControlBuilder.BuilderTextBox(_UFTabPage, "QQ149", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 2, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblQQ149","","50","dc39c36e-8866-4711-bfc8-a3f655efb523","dbf8ca64-ea30-44a9-aa34-d1b696997322");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.QQ149, "False", "QQ", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldQQ, "SpecialApplyBE");
 
@@ -682,7 +686,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.ApplyDate131, "11");		
 		 
 
-				this.lblCustName104 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustName104", "", "True", "True", "Right", 150, 20, 0, 4, 1, 1, "100","0074206b-e493-44b2-bf21-784ac2b62b11","daecc4f6-0f9b-4a28-99b1-a538aeb12a39");
+				this.lblCustName104 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustName104", "", "True", "True", "Right", 150, 20, 4, 4, 1, 1, "100","0074206b-e493-44b2-bf21-784ac2b62b11","daecc4f6-0f9b-4a28-99b1-a538aeb12a39");
 
 
 								
@@ -691,7 +695,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblCustName104, "12");		
 
 
-				this.CustName104 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustName104", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 4, 1, 1, "False", "100"
+				this.CustName104 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustName104", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 4, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblCustName104","","100","0074206b-e493-44b2-bf21-784ac2b62b11","5d4ac7fe-6c53-4ce3-aef2-ccbff742cc40");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CustName104, "False", "CustName", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldCustName, "SpecialApplyBE");
 
@@ -700,7 +704,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.CustName104, "13");		
 		 
 
-				this.lblCustPhone77 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustPhone77", "", "True", "True", "Right", 150, 20, 0, 5, 1, 1, "100","bb269534-1699-4559-99d4-a6a836be05ba","f5362e60-bc9b-4a45-a1b3-f0681c075c73");
+				this.lblCustPhone77 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustPhone77", "", "True", "True", "Right", 150, 20, 4, 5, 1, 1, "100","bb269534-1699-4559-99d4-a6a836be05ba","f5362e60-bc9b-4a45-a1b3-f0681c075c73");
 
 
 								
@@ -709,7 +713,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblCustPhone77, "14");		
 
 
-				this.CustPhone77 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustPhone77", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 5, 1, 1, "False", "100"
+				this.CustPhone77 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustPhone77", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 5, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblCustPhone77","","50","bb269534-1699-4559-99d4-a6a836be05ba","b91002a1-47f4-4879-ad62-0d91571d1aac");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CustPhone77, "False", "CustPhone", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldCustPhone, "SpecialApplyBE");
 
@@ -718,7 +722,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.CustPhone77, "15");		
 		 
 
-				this.lblCustConterName149 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustConterName149", "", "True", "True", "Right", 150, 20, 4, 4, 1, 1, "100","07451c37-bef9-41b5-9f6a-05e7cb872c70","b73bd394-4ac9-4be6-9720-769cb9286b2a");
+				this.lblCustConterName149 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustConterName149", "", "True", "True", "Right", 150, 20, 0, 4, 1, 1, "100","07451c37-bef9-41b5-9f6a-05e7cb872c70","b73bd394-4ac9-4be6-9720-769cb9286b2a");
 
 
 								
@@ -727,7 +731,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblCustConterName149, "16");		
 
 
-				this.CustConterName149 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustConterName149", "False", "True", "True", "False", "Left", 0, 60, 0, 474, 20, 6, 4, 6, 1, "False", "100"
+				this.CustConterName149 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustConterName149", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 4, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblCustConterName149","","500","07451c37-bef9-41b5-9f6a-05e7cb872c70","4d02af1a-1f77-4d0c-a9fd-2960220f6743");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CustConterName149, "False", "CustConterName", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldCustConterName, "SpecialApplyBE");
 
@@ -736,7 +740,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.CustConterName149, "17");		
 		 
 
-				this.lblCustAddress121 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustAddress121", "", "True", "True", "Right", 150, 20, 4, 5, 1, 1, "100","272d005b-3401-44ca-93b5-3cb4dd4ac8f6","48a01baf-40a7-4457-8989-927e779b8d65");
+				this.lblCustAddress121 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblCustAddress121", "", "True", "True", "Right", 150, 20, 0, 5, 1, 1, "100","272d005b-3401-44ca-93b5-3cb4dd4ac8f6","48a01baf-40a7-4457-8989-927e779b8d65");
 
 
 								
@@ -745,7 +749,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblCustAddress121, "18");		
 
 
-				this.CustAddress121 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustAddress121", "False", "True", "True", "False", "Left", 0, 60, 0, 474, 20, 6, 5, 6, 1, "False", "100"
+				this.CustAddress121 = UIControlBuilder.BuilderTextBox(_UFTabPage, "CustAddress121", "False", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 5, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblCustAddress121","","500","272d005b-3401-44ca-93b5-3cb4dd4ac8f6","69d8eb4a-e84a-4b0d-9d35-bc8e1a5c9f6e");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CustAddress121, "False", "CustAddress", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldCustAddress, "SpecialApplyBE");
 
@@ -770,12 +774,48 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.FlexFieldPicker0, "20");		
 		 
 
+				this.lblLocationQY83 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblLocationQY83", "", "True", "True", "Right", 149, 20, 8, 4, 1, 1, "100","5463bdc5-da7b-4fe6-ba6d-aeb8bfcbadee","303b5e7c-37c2-4fe6-be4d-dd11ab1a4199");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblLocationQY83, "21");		
+
+
+				this.LocationQY83 = UIControlBuilder.BuilderTextBox(_UFTabPage, "LocationQY83", "True", "True", "True", "False", "Left", 0, 60, 0, 149, 20, 10, 4, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblLocationQY83","","50","5463bdc5-da7b-4fe6-ba6d-aeb8bfcbadee","db39724d-fe3c-4834-a62d-b75ca0aea475");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.LocationQY83, "False", "LocationQY", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldLocationQY, "SpecialApplyBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.LocationQY83, "22");		
+		 
+
+				this.lblLocationXZ108 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblLocationXZ108", "", "True", "True", "Right", 149, 20, 8, 5, 1, 1, "100","df5d4c5b-cf93-454c-89db-31325f004683","24a29a29-c750-49ce-acf9-b793638d3ddd");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblLocationXZ108, "23");		
+
+
+				this.LocationXZ108 = UIControlBuilder.BuilderTextBox(_UFTabPage, "LocationXZ108", "True", "True", "True", "False", "Left", 0, 60, 0, 149, 20, 10, 5, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblLocationXZ108","","50","df5d4c5b-cf93-454c-89db-31325f004683","0c18e3a4-759d-4164-8c4a-d12bdc99cc5f");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.LocationXZ108, "False", "LocationXZ", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldLocationXZ, "SpecialApplyBE");
+
+
+		
+			UIControlBuilder.BuilderUFControl(this.LocationXZ108, "24");		
+		 
+
 
 				
 			this.ApplyDept71.IsMultiOrg  = false ;
 			this.lblApplyDept71.SetMultiOrgInfo(this.ApplyDept71,false);
 			
-																	
+																					
 
             this.TabPage31 = _UFTabPage;
             return _UFTabPage;
@@ -1159,7 +1199,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.SysVersion56, "3");		
 		 
 
-				this.lblAdvCode72 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvCode72", "", "True", "True", "Right", 150, 20, 0, 0, 1, 1, "100","effe8553-8301-4475-bc58-6563f3ba5074","88cbbce9-6055-4115-8797-b0c957feffe9");
+				this.lblAdvCode72 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblAdvCode72", "", "True", "True", "Right", 150, 20, 4, 0, 1, 1, "100","effe8553-8301-4475-bc58-6563f3ba5074","88cbbce9-6055-4115-8797-b0c957feffe9");
 
 
 								
@@ -1168,7 +1208,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblAdvCode72, "4");		
 
 
-				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 2, 0, 1, 1, "False", "100"
+				this.AdvCode72 = UIControlBuilder.BuilderTextBox(_UFCard, "AdvCode72", "True", "True", "True", "False", "Left", 0, 60, 0, 150, 20, 6, 0, 1, 1, "False", "100"
 			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblAdvCode72","","50","effe8553-8301-4475-bc58-6563f3ba5074","4a78e514-b96c-4bc5-9759-a4ce6a259357");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.AdvCode72, "False", "AdvCode", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldAdvCode, "SpecialApplyBE");
 
@@ -1177,7 +1217,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.AdvCode72, "5");		
 		 
 
-				this.lblSpecialApplyDocType154 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblSpecialApplyDocType154", "", "True", "True", "Right", 150, 20, 4, 0, 1, 1, "100","aa348215-bed5-44e6-a81f-8f5629648e17","87a6d953-03d9-4dbb-868d-5ce26c1524cb");
+				this.lblSpecialApplyDocType154 = UIControlBuilder.BuilderUFLabel(_UFCard, "lblSpecialApplyDocType154", "", "True", "True", "Right", 150, 20, 0, 0, 1, 1, "100","aa348215-bed5-44e6-a81f-8f5629648e17","87a6d953-03d9-4dbb-868d-5ce26c1524cb");
 
 
 								
@@ -1186,7 +1226,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblSpecialApplyDocType154, "6");		
 
 
-				this.SpecialApplyDocType154 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"SpecialApplyDocType154",false,true, true,150, 20, 6, 0, 1, 1, "100","7",false,false,true,"lblSpecialApplyDocType154","aa348215-bed5-44e6-a81f-8f5629648e17","ea9bbb99-fe93-4e97-9281-d751418673ce");
+				this.SpecialApplyDocType154 = UIControlBuilder.BuilderRefrenceControl(_UFCard,"SpecialApplyDocType154",false,true, true,150, 20, 2, 0, 1, 1, "100","7",false,false,true,"lblSpecialApplyDocType154","aa348215-bed5-44e6-a81f-8f5629648e17","ea9bbb99-fe93-4e97-9281-d751418673ce");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SpecialApplyDocType154, "False", "SpecialApplyDocType", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldSpecialApplyDocType, "SpecialApplyBE");
 			UIControlBuilder.SetReferenceControlRefInfo(this.SpecialApplyDocType154,"8dcb9af8-0bad-45d2-bff6-001388b09f77", 580,408, "Name","Code","ID", this.Model.SpecialApplyBE.FieldSpecialApplyDocType_Code,this.Model.SpecialApplyBE.FieldSpecialApplyDocType_Name);
             //foreach Reference's input filter parameter

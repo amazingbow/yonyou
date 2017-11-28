@@ -41,15 +41,15 @@ using UFIDA.U9.UI.PDHelper;
 
 
 /***********************************************************************************************
- * Form ID:d6e376ff-752a-4106-999b-6e6d3ab1c944 
+ * Form ID:f1e6735c-6e73-4c8d-9e1d-e5c2bfd1c6d4 
  * Form Name:SpecialApplyBListUIForm
  * UIFactory Auto Generator
  ***********************************************************************************************/
 namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.SpecialApplyListUI","UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel.SpecialApplyBListUIFormWebPart", "UFIDA.U9.Cust.SpecialApplyListUI.WebPart", "d6e376ff-752a-4106-999b-6e6d3ab1c944","WebPart", "True", 992, 504)] 
-	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.SpecialApplyListUI', 'UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel.SpecialApplyBListUIFormWebPart', 'UFIDA.U9.Cust.SpecialApplyListUI.WebPart', 'd6e376ff-752a-4106-999b-6e6d3ab1c944')
-	///<siteMapNode url="~/erp/simple.aspx?lnk=d6e376ff-752a-4106-999b-6e6d3ab1c944" title="SpecialApplyBListUIForm"/>
+	[FormRegister("UFIDA.U9.Cust.SpecialApplyListUI","UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel.SpecialApplyBListUIFormWebPart", "UFIDA.U9.Cust.SpecialApplyListUI.WebPart", "f1e6735c-6e73-4c8d-9e1d-e5c2bfd1c6d4","WebPart", "True", 992, 504)] 
+	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.SpecialApplyListUI', 'UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel.SpecialApplyBListUIFormWebPart', 'UFIDA.U9.Cust.SpecialApplyListUI.WebPart', 'f1e6735c-6e73-4c8d-9e1d-e5c2bfd1c6d4')
+	///<siteMapNode url="~/erp/simple.aspx?lnk=f1e6735c-6e73-4c8d-9e1d-e5c2bfd1c6d4" title="SpecialApplyBListUIForm"/>
     public partial class SpecialApplyBListUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
     {
 		#region Page Controller/Code Behind
@@ -108,7 +108,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
         #region constructor
         public SpecialApplyBListUIFormWebPart()
         {
-            FormID = "d6e376ff-752a-4106-999b-6e6d3ab1c944";
+            FormID = "f1e6735c-6e73-4c8d-9e1d-e5c2bfd1c6d4";
             IsAutoSize = bool.Parse("True");
         }
         #endregion
@@ -295,23 +295,23 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
             this.Toolbar1 = _Toolbar;
             
             ///foreach Toolbar下的所有控件，增加到此容器
-                            this.BtnNew = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnNew", "True", "True", 35, 28,"1", "N",true,false,"19478b02-d2a9-4d7e-b7af-00070c61ff2d","19478b02-d2a9-4d7e-b7af-00070c61ff2d","475a859b-e365-4b89-af52-fb28e014e771");
+                            this.BtnNew = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnNew", "True", "True", 35, 28,"1", "N",true,false,"19478b02-d2a9-4d7e-b7af-00070c61ff2d","19478b02-d2a9-4d7e-b7af-00070c61ff2d","fd63f6bb-3d94-4958-8e19-7862f12f468d");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnNew);
             this.BtnNew.UIModel = this.Model.ElementID;
             this.BtnNew.Action = "OnNew";
-	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"2", "R",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","89b08d2a-dd27-4242-9750-ec051b89aed7");
+	                            this.BtnDelete = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnDelete", "True", "True", 35, 28,"2", "R",true,false,"0467218f-229b-4954-b2d4-3c5976467f76","0467218f-229b-4954-b2d4-3c5976467f76","c8d28f9b-ea77-443e-9ab9-2ca861ce9887");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnDelete);
             this.BtnDelete.UIModel = this.Model.ElementID;
             this.BtnDelete.Action = "OnDelete";
 	                            _Toolbar.Controls.Add(new UFWebToolbarSeparatorAdapter());
-			                            this.BtnOutPut = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnOutPut", "True", "True", 35, 28,"4", "O",true,false,"688fd549-5a92-49cc-8072-6d5377f6409a","688fd549-5a92-49cc-8072-6d5377f6409a","1d0a66cb-7149-485a-a678-103614e79773");
+			                            this.BtnOutPut = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnOutPut", "True", "True", 35, 28,"4", "O",true,false,"688fd549-5a92-49cc-8072-6d5377f6409a","688fd549-5a92-49cc-8072-6d5377f6409a","84fa684d-31cf-4a21-9e84-ccc651ea0f13");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnOutPut);
             this.BtnOutPut.UIModel = this.Model.ElementID;
             this.BtnOutPut.Action = "OnOutPut";
-	                            this.BtnPrint = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrint", "True", "True", 35, 28,"5", "P",true,false,"27b5c615-cde5-458c-be74-833317249568","27b5c615-cde5-458c-be74-833317249568","3b92b48f-a46c-4fb4-848a-884e8ecc5a84");
+	                            this.BtnPrint = UIControlBuilder.BuilderToolbarButton(_Toolbar, "True", "BtnPrint", "True", "True", 35, 28,"5", "P",true,false,"27b5c615-cde5-458c-be74-833317249568","27b5c615-cde5-458c-be74-833317249568","5920be44-9bca-4c1d-8b5b-0ee114b5e8ea");
 		
             UIControlBuilder.SetButtonAccessKey(this.BtnPrint);
             this.BtnPrint.UIModel = this.Model.ElementID;
@@ -326,7 +326,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 	                   
         private IUFCard _BuilderControl_Card0(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card0",false,"FunctionBar", true, true, "3","","35484e37-dced-428f-871d-a41ffb186db7");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card0",false,"FunctionBar", true, true, "3","","3a2e8ad5-f661-45b9-854a-8c9cdae90605");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 25, 0, 2, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 17, 1, 0, 5, 10, 3, 10, 2);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -339,7 +339,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 
 
 
-				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 80, 20, 13, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","315cf18b-1914-4087-9dc0-0e38a7491671");
+				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 80, 20, 13, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","082f8e77-b295-47a0-a29b-222cb09bfd3a");
 
 
 								
@@ -348,7 +348,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 			UIControlBuilder.BuilderUFControl(this.Label0, "2");		
 
 
-		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 15, 0, 1, 1, "100",true,false,"","","abdff3b6-a16a-473b-8c80-f716ac2699cd");
+		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 15, 0, 1, 1, "100",true,false,"","","52749015-b255-4ccf-b46a-6ad61d40a6d9");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DDLCase, "False", "", null, null, "");
 			EnumControlsMap.Add(this.DDLCase, _UFCard);
 			this.DDLCase.ContentChanged += new EventHandler(DDLCase_TextChanged);
@@ -359,7 +359,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 			UIControlBuilder.BuilderUFControl(this.DDLCase, "3");		
 		 
 
-				this.OnLookCase = UIControlBuilder.BuilderUFButton(_UFCard, true, "OnLookCase", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"OnLookCase",false,"4fa381cb-f494-4b0e-90bb-b6eda72e7392","4fa381cb-f494-4b0e-90bb-b6eda72e7392","736e7806-d9ee-418a-bf6d-3cd0e05de040");
+				this.OnLookCase = UIControlBuilder.BuilderUFButton(_UFCard, true, "OnLookCase", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"OnLookCase",false,"f5a6e9aa-ebab-431c-ba67-7929441c640c","f5a6e9aa-ebab-431c-ba67-7929441c640c","2440bdd4-bc3a-4181-97db-c940a2279d76");
 	
 
 		
@@ -377,7 +377,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 	                   
         private IUFCard _BuilderControl_Card3(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card3",false,"none", true, true, "2","","723f5956-0a1c-4585-bdf9-bd5d82490795");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card3",false,"none", true, true, "2","","fa0fc961-704e-4695-8c9f-702b41611830");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 421, 0, 1, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 2, 0, 5, 10, 0, 10, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -478,7 +478,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 
 		private void AfterUIModelBinding_Qry_DefaultImpl()
 		{
-			QryService.BindEnum("DDLCase", this, "a6e804b7-7d16-4c3b-aa42-ea8a40327629");
+			QryService.BindEnum("DDLCase", this, "0db980b2-3d58-473b-b7e8-40e32dee79a3");
 		}
 
         #endregion

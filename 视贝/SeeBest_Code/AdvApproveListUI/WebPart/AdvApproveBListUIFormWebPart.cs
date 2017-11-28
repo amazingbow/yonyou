@@ -109,7 +109,7 @@ namespace UFIDA.U9.Cust.AdvApproveBListUIModel
         public AdvApproveBListUIFormWebPart()
         {
             FormID = "21255ecd-ec88-445a-8fbf-2468d4c85d54";
-            IsAutoSize = bool.Parse("False");
+            IsAutoSize = bool.Parse("True");
         }
         #endregion
 

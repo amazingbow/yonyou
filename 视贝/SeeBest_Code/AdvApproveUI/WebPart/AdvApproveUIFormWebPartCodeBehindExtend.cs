@@ -107,6 +107,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                     this.Model.ClearErrorMessage();
                     throw new Exception("这张广告核销单已经被审核，不能再修改保存！");
                 }
+                if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount == 0)
+                {
+                    this.Model.ClearErrorMessage();
+                    throw new Exception("广告核销单行不能为空！");
+                }
             }
 
             if (this.Model.AdvApproveBE.FocusedRecord != null)
@@ -137,6 +142,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
 
             BtnCancel_Click_DefaultImpl(sender, e);
+
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "自动编号";
+            }
         }
 
         //BtnAdd_Click...
@@ -146,6 +156,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
 
             BtnAdd_Click_DefaultImpl(sender, e);
+
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "自动编号";
+            }
         }
 
         //BtnDelete_Click...
@@ -163,6 +178,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             }
 
             BtnDelete_Click_DefaultImpl(sender, e);
+
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "自动编号";
+            }
         }
 
         //BtnCopy_Click...
@@ -172,6 +192,11 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
 
             BtnCopy_Click_DefaultImpl(sender, e);
+
+            if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DocNo))
+            {
+                this.Model.AdvApproveBE.FocusedRecord.DocNo = "自动编号";
+            }
         }
 
         //BtnSubmit_Click...
@@ -201,6 +226,32 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         {
             //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
 
+            this.Model.ClearErrorMessage();
+            if (this.Model.AdvApproveBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApproveBE.FocusedRecord.ID > 0L)
+                {
+                    if (string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DescFlexField_PrivateDescSeg1) || string.IsNullOrEmpty(this.Model.AdvApproveBE.FocusedRecord.DescFlexField_PrivateDescSeg2))
+                    {
+
+                    }
+                    else
+                    {
+                        ARBillDeleteBPProxy proxy = new ARBillDeleteBPProxy();
+                        proxy.RelationId = this.Model.AdvApproveBE.FocusedRecord.ID;
+                        SeeBestAdvertisementBP.ARBillRelationBP.ARBillReturnDTOData returnVal;
+                        returnVal = proxy.Do();
+                        if (returnVal.Flag)
+                        {
+                            
+                        }
+                        else
+                        {
+                            throw new Exception(returnVal.Message);
+                        }
+                    }
+                }
+            }
 
             BtnUndoApprove_Click_DefaultImpl(sender, e);
         }
@@ -444,6 +495,76 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
         }
 
+        //BtnGetActualPrice_Click...
+        private void BtnGetActualPrice_Click_Extend(object sender, EventArgs e)
+        {
+            //根据办事处核销等级、广告载体物料自动匹配广告载体报销价目表的价格
+            if (this.Model.AdvApproveBE.FocusedRecord != null)
+            {
+                if (this.Model.AdvApproveBE.FocusedRecord.ID > 0L)
+                {
+                    if (this.Model.AdvApproveBE.FocusedRecord.AdvApplyCust > 0L)
+                    {
+                        foreach (AdvApproveBE_AdvApproveLineRecord lineRecord in this.Model.AdvApproveBE_AdvApproveLine.Records)
+                        {
+                            if (string.IsNullOrEmpty(lineRecord.AdvCarrierCode))
+                            {
+
+                            }
+                            else
+                            {
+                                DataParamList lst1 = new DataParamList();
+                                lst1.Add(DataParamFactory.CreateInput("@AdvApplyCustID", this.Model.AdvApproveBE.FocusedRecord.AdvApplyCust, System.Data.DbType.Int64));//办事处ID
+                                lst1.Add(DataParamFactory.CreateInput("@AdvCarrierCode", lineRecord.AdvCarrierCode, System.Data.DbType.String));//广告载体物料Code
+                                lst1.Add(DataParamFactory.CreateInput("@ToDate", lineRecord.ApplyDate, System.Data.DbType.DateTime));//下单日期结束
+                                lst1.Add(DataParamFactory.CreateInput("@FromDate", lineRecord.ApplyDate, System.Data.DbType.DateTime));//下单日期开始
+                                System.Data.DataSet ds1 = new System.Data.DataSet();
+
+                                DataAccessor.RunSQL(DataAccessor.GetConn(), "select top 1 A.Price from SPR_SalePriceLine A left join SPR_SalePriceList B on B.ID=A.SalePriceList where B.Status=2 and A.DescFlexField_PubDescSeg2=(select top 1 C.DescFlexField_PrivateDescSeg13 from CBO_Customer C where C.ID=@AdvApplyCustID) and A.ItemInfo_ItemCode=@AdvCarrierCode and A.ToDate>=@ToDate and A.FromDate<=@FromDate and A.Active=1 order by A.FromDate desc", lst1, out ds1);
+
+                                if (ds1 != null && ds1.Tables.Count > 0)
+                                {
+                                    if (ds1.Tables[0].Rows.Count > 0)
+                                    {
+                                        decimal deActualPrice = 0;
+                                        deActualPrice = Convert.ToDecimal(ds1.Tables[0].Rows[0]["Price"].ToString());
+                                        if (deActualPrice > 0M)
+                                        {
+                                            lineRecord.ActualPrice = deActualPrice;
+                                            if (lineRecord.Momo == "封底")
+                                            {
+                                                lineRecord.ApproveMoney = lineRecord.Area * lineRecord.ActualPrice * lineRecord.Discount;
+                                            }
+                                            else
+                                            {
+                                                lineRecord.ApproveMoney = lineRecord.ActualApproveQty * lineRecord.Area * lineRecord.ActualPrice * lineRecord.Discount;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('获取不到对应的核销单价！');", true);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('获取不到对应的核销单价！');", true);
+                                    }
+                                }
+                                else
+                                {
+                                    UFSoft.UBF.UI.AtlasHelper.RegisterAtlasStartupScript(this.Page, this.Page.GetType(), "JavaScriptExecQueue", "alert('获取不到对应的核销单价！');", true);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+            BtnGetActualPrice_Click_DefaultImpl(sender, e);
+
+        }
+
         #region 自定义数据初始化加载和数据收集
         private void OnLoadData_Extend(object sender)
         {
@@ -475,6 +596,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             PDFormMessage.ShowConfirmDialog(this.Page, "确认放弃当前记录？", "", this.BtnCancel);
             PDFormMessage.ShowConfirmDialog(this.Page, "确认按照开始日期与结束日期，批量生成所有办事处的核销单？", "批量生成核销单确认", this.BtnCreateAdvApprove);
             PDFormMessage.ShowConfirmDialog(this.Page, "确认生成这张广告核销单对应的应收单嘛？", "生成应收单确认", this.BtnCreateARBill);
+            PDFormMessage.ShowConfirmDialog(this.Page, "确认获取核销单价嘛？", "获取核销单价确认", this.BtnGetActualPrice);
             #region 根据单据状态控制页面控件可用
             //if (this.Model.AdvApproveBE.FocusedRecord.DocStatus.Value != 0)
             //{
@@ -514,6 +636,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
 
             RegisterGridCellDataChangedCallBack();
+            RegisterGridCellDataChangedCallBack1();
+            Register_DataGrid_Customer_PoskBack();
         }
 
         #region CallBack
@@ -585,6 +709,110 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
             return args;
         }
 
+        /// <summary>
+        /// 注册表格单元格内容改变的回调事件
+        /// </summary>
+        private void RegisterGridCellDataChangedCallBack1()
+        {
+            AssociationControl gridCellDataChangedASC = new AssociationControl();       //基本固定代码
+            gridCellDataChangedASC.SourceServerControl = this.DataGrid0;
+            gridCellDataChangedASC.SourceControl.EventName = "OnCellDataChanged";
+
+
+            //CallBack处理方案
+            ((IUFClientAssoGrid)gridCellDataChangedASC.SourceControl).FireEventCols.Add("ApplyQty");
+            ClientCallBackFrm gridCellDataChangedCBF = new ClientCallBackFrm();
+            gridCellDataChangedCBF.ParameterControls.Add(this.DataGrid0);
+
+            gridCellDataChangedCBF.DoCustomerAction += new ClientCallBackFrm.ActionCustomer(gridCellDataChangedCBF_DoCustomerActionOfSubvillage1);
+            gridCellDataChangedCBF.Add(gridCellDataChangedASC);
+            this.Controls.Add(gridCellDataChangedCBF);
+
+        }
+
+        /// <summary>
+        /// 表格的CallBack处理方式
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        private object gridCellDataChangedCBF_DoCustomerActionOfSubvillage1(CustomerActionEventArgs args)
+        {
+            UFWebClientGridAdapter grid = new UFWebClientGridAdapter(this.DataGrid0);
+
+            //取表格数据（当前行）
+            ArrayList list = (ArrayList)args.ArgsHash[UFWebClientGridAdapter.ALL_GRIDDATA_SelectedRows]; //基本固定代码
+            int curIndex = int.Parse(list[0].ToString());
+            Hashtable table = (Hashtable)((ArrayList)args.ArgsHash[this.DataGrid0.ClientID])[curIndex];
+            decimal Area = decimal.Parse(table["Area"].ToString());
+            decimal ApplyQty = decimal.Parse(table["ApplyQty"].ToString());
+            decimal Price = decimal.Parse(table["Price"].ToString());
+            decimal ActualApproveQty = decimal.Parse(table["ActualApproveQty"].ToString());
+            decimal ActualPrice = decimal.Parse(table["ActualPrice"].ToString());
+            decimal Discount = decimal.Parse(table["Discount"].ToString());
+            decimal TotalMoney = 0M;
+            decimal ApproveMoney = 0M;
+            ActualApproveQty = ApplyQty;
+            if (table["Momo"].ToString() == "封底")
+            {
+                TotalMoney = Price * Area;
+                ApproveMoney = Area * ActualPrice * Discount;
+            }
+            else
+            {
+                TotalMoney = Price * ApplyQty * Area;
+                ApproveMoney = ActualApproveQty * Area * ActualPrice * Discount;
+            }
+
+            //实际核销数量
+            grid.CellValue.Add(new object[] { curIndex, "ActualApproveQty", new string[] { ActualApproveQty.ToString(), ActualApproveQty.ToString(), ActualApproveQty.ToString() } });
+            //核销金额
+            grid.CellValue.Add(new object[] { curIndex, "ApproveMoney", new string[] { ApproveMoney.ToString(), ApproveMoney.ToString(), ApproveMoney.ToString() } });
+            args.ArgsResult.Add(grid.ClientInstanceWithValue);
+            //..........(略)
+            return args;
+        }
+
+        #endregion
+
+        #region PoskBack
+        private void Register_DataGrid_Customer_PoskBack()
+        {
+            AssociationControl assocControl = new AssociationControl();
+            assocControl.SourceServerControl = this.DataGrid0;
+            assocControl.SourceControl.EventName = "OnCellDataChanged";
+            ((IUFClientAssoGrid)assocControl.SourceControl).FireEventCols.Add("Price");
+            ((IUFClientAssoGrid)assocControl.SourceControl).FireEventCols.Add("ActualPrice");
+
+            CodeBlock cb = new CodeBlock();
+            UFWebClientGridAdapter gridAdapter = new UFWebClientGridAdapter(this.DataGrid0);
+            gridAdapter.IsPostBack = true;
+            gridAdapter.PostBackTag = "OnCellDataChanged";
+            cb.TargetControls.addControl(gridAdapter);
+            assocControl.addBlock(cb);
+            UFGrid itemGrid = this.DataGrid0 as UFGrid;
+            itemGrid.GridCustomerPostBackEvent += new GridCustomerPostBackDelegate(itemGriding_GridCustomerPostBackEvent);
+        }
+
+        void itemGriding_GridCustomerPostBackEvent(object sender, GridCustomerPostBackEventArgs e)
+        {
+            this.OnDataCollect(this);
+            this.IsDataBinding = true; //当前事件执行后会进行数据绑定
+            this.IsConsuming = false;
+
+            //if (this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord != null)
+            //{
+            //    UFGrid grid0 = this.DataGrid0 as UFGrid;
+            //    if (this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord.ActualPrice > this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord.Price)
+            //    {
+            //        grid0.SetCellStyle(this.Model.AdvApproveBE_AdvApproveLine.FocusedRecord.Index, "ActualPrice", "", "#FF0000");
+            //    }
+            //}
+
+            this.DataGrid0.CollectData();
+            this.DataGrid0.BindData();
+
+            //自己代码
+        }
         #endregion
 
         public void AfterEventBind()
@@ -593,7 +821,13 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 
         public void BeforeUIModelBinding()
         {
-
+            this.BtnOutput.Visible = false;
+            this.BtnPrint.Visible = false;
+            this.BtnFirstPage.Visible = false;
+            this.BtnPrevPage.Visible = false;
+            this.BtnNextPage.Visible = false;
+            this.BtnLastPage.Visible = false;
+            this.BtnCopy.Visible = false;
         }
 
         public void AfterUIModelBinding()
@@ -609,19 +843,19 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                     case 0:
                         this.BtnApprove.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
-                        this.BtnGetApplyInfo.Enabled = true;
+                        //this.BtnGetApplyInfo.Enabled = true;
                         this.BtnCreateARBill.Enabled = false;
                         break;
                     case 1:
                         this.BtnSubmit.Enabled = false;
                         this.BtnUndoApprove.Enabled = false;
-                        this.BtnGetApplyInfo.Enabled = false;
+                        //this.BtnGetApplyInfo.Enabled = false;
                         this.BtnCreateARBill.Enabled = false;
                         break;
                     case 2:
                         this.BtnSubmit.Enabled = false;
                         this.BtnApprove.Enabled = false;
-                        this.BtnGetApplyInfo.Enabled = false;
+                        //this.BtnGetApplyInfo.Enabled = false;
                         this.BtnCreateARBill.Enabled = true;
                         break;
                 }
@@ -630,17 +864,44 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
                 {
                     this.BtnDelete.Enabled = true;
                     this.BtnCopy.Enabled = true;
+                    this.BtnGetApplyInfo.Enabled = false;
+                    this.AdvApplyCust95.ReadOnly = true;
+                    this.StartDate230.ReadOnly = true;
+                    this.EndDate212.ReadOnly = true;
+                    this.BtnGetActualPrice.Enabled = true;
                 }
                 else
                 {
                     this.BtnDelete.Enabled = false;
                     this.BtnCopy.Enabled = false;
+                    this.BtnGetApplyInfo.Enabled = true;
+                    this.AdvApplyCust95.ReadOnly = false;
+                    this.StartDate230.ReadOnly = false;
+                    this.EndDate212.ReadOnly = false;
+                    this.BtnGetActualPrice.Enabled = false;
                 }
             }
             else
             {
                 this.BtnDelete.Enabled = false;
                 this.BtnCopy.Enabled = false;
+                this.BtnGetActualPrice.Enabled = false;
+            }
+
+            UFGrid grid1 = this.DataGrid0 as UFGrid;
+            if (this.Model.AdvApproveBE_AdvApproveLine.RecordCount > 0)
+            {
+                int i = 0;
+                grid1.ClearRowStyles();
+                grid1.AlwaysFocus = false;
+                foreach (AdvApproveBE_AdvApproveLineRecord lineRcd in this.Model.AdvApproveBE_AdvApproveLine.Records)
+                {
+                    if (lineRcd.ActualPrice > lineRcd.Price)
+                    {
+                        grid1.SetCellStyle(i, "ActualPrice", "", "#FF0000");
+                    }
+                    i++;
+                }
             }
 
         }

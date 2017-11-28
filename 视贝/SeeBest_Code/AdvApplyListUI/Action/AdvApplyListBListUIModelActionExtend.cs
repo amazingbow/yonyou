@@ -93,10 +93,30 @@ namespace UFIDA.U9.Cust.AdvApplyListBListUIModel
         private void OnDelete_Extend(object sender, UIActionEventArgs e)
         {
 
-
+            IList<IUIRecord> selectedSecords = UIRuntimeHelper.Instance.GetSelectRecordFromCache(this.MainView);
+            if (selectedSecords.Count == 0)
+            {
+                return;
+            }
+            UFIDA.U9.UI.BusinessHelper.ListHelp listhelper = new UFIDA.U9.UI.BusinessHelper.ListHelp();
+            listhelper.Delete_Doc(this, e, GetMainID(selectedSecords), "SysVersion", this.CurrentModel.AdvApplyBE.EntityFullName);
 
             //调用模版定义的默认实现方法.如需扩展,请直接在此编程.			
-            this.OnDelete_DefaultImpl(sender, e);
+            //this.OnDelete_DefaultImpl(sender, e);
+        }
+
+        internal static string GetMainID(IList<IUIRecord> selectedSecords)
+        {
+            if (selectedSecords.Count == 0)
+            {
+                return "ID";
+            }
+            IUIRecord record = selectedSecords[0];
+            if (record["MainID"] == null || record["MainID"].ToString().Length == 0)
+            {
+                return "ID";
+            }
+            return "MainID";
         }
 
         #region UBF 内置两数据处理Action

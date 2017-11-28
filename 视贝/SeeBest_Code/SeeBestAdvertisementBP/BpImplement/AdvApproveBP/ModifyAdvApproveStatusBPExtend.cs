@@ -53,6 +53,8 @@
                                     break;
                                 case 2:
                                     advApprove.StateMachineInstance.ApprovedState_UndoApproveEventDriven(new UndoApproveEvent());
+                                    advApprove.DescFlexField.PrivateDescSeg1 = "";
+                                    advApprove.DescFlexField.PrivateDescSeg2 = "";
                                     break;
                             }
                             #endregion
@@ -70,6 +72,8 @@
                                     break;
                                 case 2:
                                     advApprove.DocStatus = AdvAppStatusEnum.OpenL;
+                                    advApprove.DescFlexField.PrivateDescSeg1 = "";
+                                    advApprove.DescFlexField.PrivateDescSeg2 = "";
                                     break;
                             }
                             #endregion

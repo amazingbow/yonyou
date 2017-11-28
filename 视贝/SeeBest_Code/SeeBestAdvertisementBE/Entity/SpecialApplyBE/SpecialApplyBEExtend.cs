@@ -91,11 +91,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
             string strApplyDate = "";//下单日期
             if (this.ApplyDate == null || this.ApplyDate == System.DateTime.MinValue)
             {
-                strApplyDate = System.DateTime.Now.ToString("yyyyMMdd");
+                strApplyDate = System.DateTime.Now.ToString("yyMMdd");
             }
             else
             {
-                strApplyDate = this.ApplyDate.ToString("yyyyMMdd");
+                strApplyDate = this.ApplyDate.ToString("yyMMdd");
             }
 
             //流水码（4位）：流水码从0001开始，所有办事处每年都从0001开始，每年依据下单日期的年份；
@@ -132,7 +132,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
             }
 
             //编码规则："ZG"+事业部简码+下单日期+流水码（4位）
-            this.AdvCode = "ZG" + strDivisionCode + strApplyDate + strRunningCode;
+            this.AdvCode = "ZG" + strDivisionCode + strApplyDate + "-" + strRunningCode;
 
             #endregion
         }
@@ -151,6 +151,49 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
 		protected override void OnUpdating() {
 			base.OnUpdating();
 			// TO DO: write your business code here...
+            //当展示产品类型变更，编号跟着变更
+            if (string.IsNullOrEmpty(this.AdvCode))
+            {
+
+            }
+            else
+            {
+                int AdvCodeLength = 0;
+                AdvCodeLength = this.AdvCode.Length;
+                int a = 0;
+                a = AdvCodeLength - 2 - 11;
+                string strBefore = "";
+                strBefore = this.AdvCode.Substring(0, 2);
+                string strAfter = "";
+                strAfter = this.AdvCode.Substring(2 + a, 11);
+                //事业部简码：由产品类型决定，产品类型与事业部简码对应；如果选定的产品类型涉及多个事业部，则事业部简码通过“/”连接起来；
+                string strDivisionCode = "";//事业部简码
+                if (this.SpecialSizeBE.Count > 0)
+                {
+                    for (int i = 0; i < this.SpecialSizeBE.Count; i++)
+                    {
+                        if (strDivisionCode.Contains(this.SpecialSizeBE[i].DisplayProductType.Description))
+                        {
+
+                        }
+                        else
+                        {
+                            if (i == (this.SpecialSizeBE.Count - 1))
+                            {
+                                strDivisionCode = strDivisionCode + this.SpecialSizeBE[i].DisplayProductType.Description;
+                            }
+                            else
+                            {
+                                strDivisionCode = strDivisionCode + this.SpecialSizeBE[i].DisplayProductType.Description + "/";
+                            }
+                        }
+                    }
+                    strDivisionCode = strDivisionCode.TrimEnd('/');
+                    strDivisionCode = "(" + strDivisionCode + ")";
+                }
+
+                this.AdvCode = strBefore + strDivisionCode + strAfter;
+            }
 		}
 
 		/// <summary>

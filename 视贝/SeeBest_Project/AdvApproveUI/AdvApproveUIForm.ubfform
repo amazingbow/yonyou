@@ -251,7 +251,7 @@
         <RelationControls />
         <Events />
       </Label>
-      <TextBox ID="a278f34f-d6a1-4f17-9180-49e0a96530cc" DisplayFormat="50" Enabled="False" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocNo86" RelationControl="lblDocNo86" TabIndex="27" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocNo" UIViewID="AdvApproveBE" Visible="True" Width="140" X="380" Y="30">
+      <TextBox ID="a278f34f-d6a1-4f17-9180-49e0a96530cc" DisplayFormat="50" Enabled="True" GridHeight="1" GridWidth="1" GridX="6" GridY="1" Height="20" IsNull="False" IsProperty="False" IsSequence="False" MultiLine="False" Name="DocNo86" ReadOnly="True" RelationControl="lblDocNo86" TabIndex="27" TabStop="True" TextAlign="Left" TitleAlign="Left" TitleLocation="Left" UIFieldID="DocNo" UIViewID="AdvApproveBE" Visible="True" Width="140" X="380" Y="30">
         <Events />
         <RelationControls />
       </TextBox>
@@ -263,6 +263,11 @@
       <Button ID="37f5e1bb-5cb1-49ca-b7d6-ba24a78bff8d" AccessKey="" DisplayName="生成应收单" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="8" GridY="2" Height="20" IsAuthorization="True" Name="BtnCreateARBill" TabIndex="29" TabStop="True" Width="100" X="540" Y="60">
         <Events>
           <Event ActionName="CreateARBillClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
+        </Events>
+      </Button>
+      <Button ID="85807768-ba25-43d5-b76f-257fce213927" AccessKey="" DisplayName="获取核销单价" DisplayNameIndexStr="" DisplayNameResourceID="" DisplaySrcType="Custom" DisplaySrcUIFieldID="" DisplaySrcUIViewID="" GridHeight="1" GridWidth="1" GridX="10" GridY="2" Height="20" IsAuthorization="True" Name="BtnGetActualPrice" TabIndex="30" TabStop="True" Width="140" X="650" Y="60">
+        <Events>
+          <Event ActionName="GetActualPriceClick" EnableEvent="True" EventType="PostBack" IsDataBinding="True" IsDataCollect="True" Name="Click" Parameter="" Template="" />
         </Events>
       </Button>
     </Card>

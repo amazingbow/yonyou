@@ -132,6 +132,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
         IUFFldTextBox DocNo86;
         IUFButton BtnCreateAdvApprove;
         IUFButton BtnCreateARBill;
+        IUFButton BtnGetActualPrice;
         IUFDataGrid DataGrid0;
         IUFLabel Label1795;
         IUFLabel Label1796;
@@ -223,6 +224,9 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 						
 				//Button控件事件
 			this.BtnCreateARBill.Click += new EventHandler(BtnCreateARBill_Click);		
+						
+				//Button控件事件
+			this.BtnGetActualPrice.Click += new EventHandler(BtnGetActualPrice_Click);		
 						
 
 		
@@ -739,8 +743,8 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.lblDocNo86, "26");		
 
 
-				this.DocNo86 = UIControlBuilder.BuilderTextBox(_UFCard, "DocNo86", "False", "True", "False", "False", "Left", 0, 60, 0, 140, 20, 6, 1, 1, 1, "False", "100"
-			,"",TextBoxMode.SingleLine,TextAlign.Left, true,false,"lblDocNo86","","50","9b1075ec-542f-4433-b089-f665a61319d0","a278f34f-d6a1-4f17-9180-49e0a96530cc");
+				this.DocNo86 = UIControlBuilder.BuilderTextBox(_UFCard, "DocNo86", "False", "True", "True", "False", "Left", 0, 60, 0, 140, 20, 6, 1, 1, 1, "False", "100"
+			,"",TextBoxMode.SingleLine,TextAlign.Left, true,true,"lblDocNo86","","50","9b1075ec-542f-4433-b089-f665a61319d0","a278f34f-d6a1-4f17-9180-49e0a96530cc");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DocNo86, "False", "DocNo", this.Model.AdvApproveBE, this.Model.AdvApproveBE.FieldDocNo, "AdvApproveBE");
 
 
@@ -762,6 +766,13 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			UIControlBuilder.BuilderUFControl(this.BtnCreateARBill, "29");		
 
 
+				this.BtnGetActualPrice = UIControlBuilder.BuilderUFButton(_UFCard, true, "BtnGetActualPrice", true, true, 140, 20, 10, 2, 1, 1, "100","", this.Model.ElementID,"GetActualPriceClick",false,"85807768-ba25-43d5-b76f-257fce213927","","85807768-ba25-43d5-b76f-257fce213927");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.BtnGetActualPrice, "30");		
+
+
 
 		
 			this.AdvApplyCust95.IsMultiOrg  = false ;
@@ -771,7 +782,7 @@ namespace UFIDA.U9.Cust.AdvApproveUI.AdvApproveUIModel
 			this.AdvApproveDocType803.IsMultiOrg  = false ;
 			this.lblAdvApproveDocType803.SetMultiOrgInfo(this.AdvApproveDocType803,false);
 			
-									
+										
 
             
             container.Controls.Add(_UFCard);

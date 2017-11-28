@@ -53,7 +53,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
             string strcheck = "";
             foreach (IUIRecord record in this.Model.SpecialApplyBE.Cache.GetSelectRecord())
             {
-                if (record["Status"].ToString() == "2")
+                if (record["Status"].ToString() == "2" || record["Status"].ToString() == "3")
                 {
                     strcheck = strcheck + record["AdvCode"].ToString() + ",";
                 }
@@ -61,7 +61,7 @@ namespace UFIDA.U9.Cust.SpecialApplyListUI.SpecialApplyBListUIModel
 
             if (strcheck != "")
             {
-                throw new Exception("所选单据中，编号：" + strcheck + "已经被审核，不能再做删除操作！");
+                throw new Exception("所选单据中，编号：" + strcheck + "已经被审核或关闭，不能再做删除操作！");
             }
 		
 			BtnDelete_Click_DefaultImpl(sender,e);

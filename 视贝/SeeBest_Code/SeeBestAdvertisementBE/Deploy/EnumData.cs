@@ -157,6 +157,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		Approved = 2,
 		/// <summary>
+		/// 关闭
+		/// </summary>
+		Closed = 3,
+		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 

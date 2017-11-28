@@ -2381,14 +2381,14 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.AdvApproveDocType">
             <summary>
-            单据类型 (该属性可为空,且无默认值)
+            单据类型 (该属性不可为空,且无默认值)
             广告核销单.Misc.单据类型
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.AdvApproveDocTypeKey">
             <summary>
-            单据类型 的Key (该属性可为空,且无默认值)
+            单据类型 的Key (该属性不可为空,且无默认值)
             广告核销单.Misc.单据类型
             </summary>
             <value></value>
@@ -2574,7 +2574,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.AdvApproveDocType">
             <summary>
              OrginalData属性。只可读。
-            单据类型 (该属性可为空,且无默认值)
+            单据类型 (该属性不可为空,且无默认值)
             广告核销单.Misc.单据类型
             </summary>
             <value></value>
@@ -2582,7 +2582,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApproveBE.AdvApproveBE.EntityOriginal.AdvApproveDocTypeKey">
             <summary>
             EntityKey 属性
-            单据类型 的Key (该属性可为空,且无默认值)
+            单据类型 的Key (该属性不可为空,且无默认值)
             广告核销单.Misc.单据类型
             </summary>
             <value></value>
@@ -3360,7 +3360,7 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Applier">
             <summary>
-            下单人 (该属性可为空,且无默认值)
+            下单人 (该属性不可为空,且无默认值)
             专柜申请单.Misc.下单人
             </summary>
             <value></value>
@@ -3374,14 +3374,14 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Phone">
             <summary>
-            联系电话 (该属性可为空,且无默认值)
+            联系电话 (该属性不可为空,且无默认值)
             专柜申请单.Misc.联系电话
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.QQ">
             <summary>
-            QQ (该属性可为空,且无默认值)
+            QQ (该属性不可为空,且无默认值)
             专柜申请单.Misc.QQ
             </summary>
             <value></value>
@@ -3395,15 +3395,15 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustName">
             <summary>
-            客户名称 (该属性不可为空,且无默认值)
-            专柜申请单.Misc.客户名称
+            联系人 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.联系人
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.CustPhone">
             <summary>
-            客户电话 (该属性不可为空,且无默认值)
-            专柜申请单.Misc.客户电话
+            客户联系电话 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.客户联系电话
             </summary>
             <value></value>
         </member>
@@ -3460,6 +3460,20 @@
             <summary>
             关闭 (该属性可为空,但有默认值)
             专柜申请单.Misc.关闭
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.LocationQY">
+            <summary>
+            区域 (该属性可为空,且无默认值)
+            专柜申请单.Misc.区域
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.LocationXZ">
+            <summary>
+            乡镇 (该属性可为空,且无默认值)
+            专柜申请单.Misc.乡镇
             </summary>
             <value></value>
         </member>
@@ -3565,6 +3579,16 @@
             这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("IsClose")的方式取资源
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_LocationQY">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LocationQY")的方式取资源
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.Res_LocationXZ">
+            <summary>
+            这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("LocationXZ")的方式取资源
+            </summary>
+        </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityKey">
             <summary>
             Strong Class SpecialApplyBE EntityKey 
@@ -3661,7 +3685,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.Applier">
             <summary>
              OrginalData属性。只可读。
-            下单人 (该属性可为空,且无默认值)
+            下单人 (该属性不可为空,且无默认值)
             专柜申请单.Misc.下单人
             </summary>
             <value></value>
@@ -3677,7 +3701,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.Phone">
             <summary>
              OrginalData属性。只可读。
-            联系电话 (该属性可为空,且无默认值)
+            联系电话 (该属性不可为空,且无默认值)
             专柜申请单.Misc.联系电话
             </summary>
             <value></value>
@@ -3685,7 +3709,7 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.QQ">
             <summary>
              OrginalData属性。只可读。
-            QQ (该属性可为空,且无默认值)
+            QQ (该属性不可为空,且无默认值)
             专柜申请单.Misc.QQ
             </summary>
             <value></value>
@@ -3701,16 +3725,16 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustName">
             <summary>
              OrginalData属性。只可读。
-            客户名称 (该属性不可为空,且无默认值)
-            专柜申请单.Misc.客户名称
+            联系人 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.联系人
             </summary>
             <value></value>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.CustPhone">
             <summary>
              OrginalData属性。只可读。
-            客户电话 (该属性不可为空,且无默认值)
-            专柜申请单.Misc.客户电话
+            客户联系电话 (该属性不可为空,且无默认值)
+            专柜申请单.Misc.客户联系电话
             </summary>
             <value></value>
         </member>
@@ -3778,6 +3802,22 @@
             </summary>
             <value></value>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.LocationQY">
+            <summary>
+             OrginalData属性。只可读。
+            区域 (该属性可为空,且无默认值)
+            专柜申请单.Misc.区域
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.LocationXZ">
+            <summary>
+             OrginalData属性。只可读。
+            乡镇 (该属性可为空,且无默认值)
+            专柜申请单.Misc.乡镇
+            </summary>
+            <value></value>
+        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityOriginal.SpecialSizeBE">
             <summary>
             专柜尺寸 (该属性不可为空,且无默认值)
@@ -3837,12 +3877,12 @@
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.CustName">
             <summary>
-            属性: 客户名称 的名称
+            属性: 联系人 的名称
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.CustPhone">
             <summary>
-            属性: 客户电话 的名称
+            属性: 客户联系电话 的名称
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.CustAddress">
@@ -3883,6 +3923,16 @@
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.IsClose">
             <summary>
             属性: 关闭 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.LocationQY">
+            <summary>
+            属性: 区域 的名称
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyBE.EntityRes.LocationXZ">
+            <summary>
+            属性: 乡镇 的名称
             </summary>
         </member>
         <member name="T:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.ServiceOrderSubscriber">
@@ -5955,6 +6005,12 @@
             专柜申请单状态枚举.Misc.审核
             </summary>
         </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Closed">
+            <summary>
+            枚举值: 关闭  Value:3  
+            专柜申请单状态枚举.Misc.关闭
+            </summary>
+        </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Values">
             <summary>
             Get SpecialApplyStatusEnum's All Values.
@@ -5981,6 +6037,11 @@
             </summary>
         </member>
         <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_Approved">
+            <summary>
+            已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
+            </summary>
+        </member>
+        <member name="P:UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialApplyStatusEnum.Res_Closed">
             <summary>
             已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
             </summary>
