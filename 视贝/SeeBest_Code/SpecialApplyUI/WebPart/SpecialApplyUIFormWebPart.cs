@@ -1034,12 +1034,12 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             ((IUFFldReferenceColumn)column).ApplyRefRelations();
 			  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Width"]/*Width*/,"Width", false, true, true, false, false, true, 8, 80, "24.9",true, false,"0","6c76eb1d-8586-46b8-b5d7-c0ca46a812c5","6c76eb1d-8586-46b8-b5d7-c0ca46a812c5","8841e903-93d2-4b6f-a216-0f5dfa27be8f");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Width0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Width"]/*Width*/,"Width", false, true, true, false, false, false, 8, 80, "24.9",true, false,"0","6c76eb1d-8586-46b8-b5d7-c0ca46a812c5","6c76eb1d-8586-46b8-b5d7-c0ca46a812c5","8841e903-93d2-4b6f-a216-0f5dfa27be8f");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Hight0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Hight"]/*Hight*/,"Hight", false, true, true, false, false, true, 8, 80, "24.9",true, false,"0","e5c9c41c-38e4-4f92-bccd-4a64256b868b","e5c9c41c-38e4-4f92-bccd-4a64256b868b","80b26c22-3b4c-410c-b205-4a50662afaff");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Hight0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Hight"]/*Hight*/,"Hight", false, true, true, false, false, false, 8, 80, "24.9",true, false,"0","e5c9c41c-38e4-4f92-bccd-4a64256b868b","e5c9c41c-38e4-4f92-bccd-4a64256b868b","80b26c22-3b4c-410c-b205-4a50662afaff");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
@@ -1049,7 +1049,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			,true,"",false,"1","1");
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Qty0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Qty"]/*Qty*/,"Qty", false, true, true, false, false, true, 8, 80, "24.9",true, false,"0","5a2668f2-f610-4fc4-9ede-84f8a34fece2","5a2668f2-f610-4fc4-9ede-84f8a34fece2","7c6adb56-4333-483f-960b-e123a49e775f");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Qty0","NumberColumnModel", "", 2,this.Model.SpecialApplyBE_SpecialSizeBE.Fields["Qty"]/*Qty*/,"Qty", false, true, true, false, false, false, 8, 80, "24.9",true, false,"0","5a2668f2-f610-4fc4-9ede-84f8a34fece2","5a2668f2-f610-4fc4-9ede-84f8a34fece2","7c6adb56-4333-483f-960b-e123a49e775f");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.Numberic, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  

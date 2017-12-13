@@ -87,6 +87,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE {
 			base.OnValidate();
 			this.SelfEntityValidator();
 			// TO DO: write your business code here...
+            if (this.Qty <= 0 || this.Width <= 0 || this.Hight <= 0)
+            {
+                throw new Exception("数量、宽、高，都必须大于0！");
+            }
 		}
 		#endregion
 		

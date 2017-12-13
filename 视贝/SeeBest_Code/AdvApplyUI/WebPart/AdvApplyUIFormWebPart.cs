@@ -715,7 +715,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblQty860, "38");		
 
 
-				this.Qty860 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "Qty860", "True", "True", "True", "Left", 8, 60, 0, 120, 20, 10, 7, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.Qty860 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "Qty860", "False", "True", "True", "Left", 8, 60, 0, 120, 20, 10, 7, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Right,2,true,false,true,"lblQty860","24.9","578b9158-ca19-4eef-9085-976fb441113e","7035219f-6a12-4c1c-9798-29a6c62bb0b8",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.Qty860, "False", "Qty", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldQty, "AdvApplyBE");
 			this.Qty860.ContentChanged += new EventHandler(Qty860_TextChanged);
@@ -765,7 +765,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblBMWidth272, "42");		
 
 
-				this.BMWidth272 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "BMWidth272", "True", "True", "True", "Left", 8, 60, 0, 120, 20, 2, 9, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.BMWidth272 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "BMWidth272", "False", "True", "True", "Left", 8, 60, 0, 120, 20, 2, 9, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Right,2,true,false,true,"lblBMWidth272","24.9","5fdfce09-6cc4-4694-ac3d-208013aec390","a6cf2fe5-a4e5-49bf-9bda-2cd77423a798",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.BMWidth272, "False", "BMWidth", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldBMWidth, "AdvApplyBE");
 			this.BMWidth272.ContentChanged += new EventHandler(BMWidth272_TextChanged);
@@ -784,7 +784,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.lblBMHight213, "44");		
 
 
-				this.BMHight213 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "BMHight213", "True", "True", "True", "Left", 8, 60, 0, 120, 20, 2, 10, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
+				this.BMHight213 = UIControlBuilder.BuilderNumberControl(_UFTabPage, "BMHight213", "False", "True", "True", "Left", 8, 60, 0, 120, 20, 2, 10, 1, 1, NumbericType.Numberic, "100",79228162514264337593543950335m, -79228162514264337593543950335m
 			,TextAlign.Right,2,true,false,true,"lblBMHight213","24.9","ae7c9dde-fa4b-4f1d-a47b-f234a67413e0","3b931df4-05ad-417c-a458-df79754d3821",null,null,null, null);
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.BMHight213, "False", "BMHight", this.Model.AdvApplyBE, this.Model.AdvApplyBE.FieldBMHight, "AdvApplyBE");
 			this.BMHight213.ContentChanged += new EventHandler(BMHight213_TextChanged);

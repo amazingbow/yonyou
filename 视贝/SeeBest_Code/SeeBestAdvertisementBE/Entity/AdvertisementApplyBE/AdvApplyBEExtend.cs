@@ -192,6 +192,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
             //{
             //    throw new Exception("广告体现项目不能为空！");
             //}
+            if (this.Qty <= 0 || this.BMWidth <= 0 || this.BMHight <= 0)
+            {
+                throw new Exception("数量、版面-宽、版面-高，都必须大于0！");
+            }
         }
         #endregion
 
