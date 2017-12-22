@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// <returns>Instance</returns>
 		public  static AdvApplyBE Create() {
 			AdvApplyBE entity = (AdvApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																																																						 
+																																																																																																															 
 			return entity;
 		}
 
@@ -1089,6 +1089,63 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 版面-宽-备注 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.版面-宽-备注
+			/// </summary>
+			/// <value></value>
+			public  System.String BMWidthMemo
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("BMWidthMemo");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 客户占比 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.客户占比
+			/// </summary>
+			/// <value></value>
+			public  System.String CustAccountRatio
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("CustAccountRatio");
+					return value;
+						}
+			}
+		
+
+
+
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 关闭原因说明 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.关闭原因说明
+			/// </summary>
+			/// <value></value>
+			public  System.String ClosedExplanation
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("ClosedExplanation");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -2068,6 +2125,78 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 
+		
+			/// <summary>
+		/// 版面-宽-备注 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.版面-宽-备注
+		/// </summary>
+		/// <value></value>
+			public  System.String BMWidthMemo
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("BMWidthMemo");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("BMWidthMemo", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 客户占比 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.客户占比
+		/// </summary>
+		/// <value></value>
+			public  System.String CustAccountRatio
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("CustAccountRatio");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("CustAccountRatio", value);
+						 
+			}
+		}
+	
+
+
+
+		
+			/// <summary>
+		/// 关闭原因说明 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.关闭原因说明
+		/// </summary>
+		/// <value></value>
+			public  System.String ClosedExplanation
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("ClosedExplanation");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("ClosedExplanation", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -2281,6 +2410,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_AdvApplyDocType　{ get { return EntityRes.GetResource("AdvApplyDocType");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("BMWidthMemo")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_BMWidthMemo　{ get { return EntityRes.GetResource("BMWidthMemo");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("CustAccountRatio")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_CustAccountRatio　{ get { return EntityRes.GetResource("CustAccountRatio");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("ClosedExplanation")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_ClosedExplanation　{ get { return EntityRes.GetResource("ClosedExplanation");　}　}
 		#endregion 
 
 
@@ -2467,6 +2611,21 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// 属性: 单据类型 的名称
 			/// </summary>
 			public static string AdvApplyDocType　{ get { return "AdvApplyDocType";　}　}
+				
+			/// <summary>
+			/// 属性: 版面-宽-备注 的名称
+			/// </summary>
+			public static string BMWidthMemo　{ get { return "BMWidthMemo";　}　}
+				
+			/// <summary>
+			/// 属性: 客户占比 的名称
+			/// </summary>
+			public static string CustAccountRatio　{ get { return "CustAccountRatio";　}　}
+				
+			/// <summary>
+			/// 属性: 关闭原因说明 的名称
+			/// </summary>
+			public static string ClosedExplanation　{ get { return "ClosedExplanation";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2474,7 +2633,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																																				
+																																																																										
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2654,6 +2813,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("WFOriginalState","WFOriginalState");
 			this.exdMultiLangAttrs.Add("DocStatus","DocStatus");
 			this.exdMultiLangAttrs.Add("AdvApplyDocType","AdvApplyDocType");
+			this.exdMultiLangAttrs.Add("BMWidthMemo","BMWidthMemo");
+			this.exdMultiLangAttrs.Add("CustAccountRatio","CustAccountRatio");
+			this.exdMultiLangAttrs.Add("ClosedExplanation","ClosedExplanation");
         }
 	#endregion 
 
@@ -2670,7 +2832,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																																																																																																			
+																																																																																																												
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2754,6 +2916,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			if (data.AdvApplyDocType == -1 && data.AdvApplyDocType_SKey!=null)
 				data.AdvApplyDocType = data.AdvApplyDocType_SKey.GetEntity().ID ;
 	
+
+			
+
+			
+
+			
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -2853,6 +3021,12 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 								this.SetTypeValue("WFOriginalState",data.WFOriginalState);
 		
 								this.SetTypeValue("AdvApplyDocType",data.AdvApplyDocType);
+		
+								this.SetTypeValue("BMWidthMemo",data.BMWidthMemo);
+		
+								this.SetTypeValue("CustAccountRatio",data.CustAccountRatio);
+		
+								this.SetTypeValue("ClosedExplanation",data.ClosedExplanation);
 		
 			#endregion 
 
@@ -3130,6 +3304,27 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 					data.AdvApplyDocType=(System.Int64)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("BMWidthMemo");
+				if (obj != null)
+					data.BMWidthMemo=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("CustAccountRatio");
+				if (obj != null)
+					data.CustAccountRatio=(System.String)obj;
+			}
+	     
+	    
+			{
+				object obj =this.GetValue("ClosedExplanation");
+				if (obj != null)
+					data.ClosedExplanation=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -3188,6 +3383,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
+
+
 
 
 

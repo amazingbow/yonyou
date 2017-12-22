@@ -20,3 +20,5 @@ using UFSoft.UBF.Sys.Resource.Runtime;
 
 [assembly: UBFComponent("6b3c72b7-be82-4edf-b617-eec7f7acb111", "SpecialApplyDocTypeFindRef", "SpecialApplyDocTypeFindRef")]
 
+[assembly: UBFComponent("ec8b028e-04ad-4548-81fc-f65262c2b3bf", "SpecialApplyDesignStyleRef", "SpecialApplyDesignStyleRef")]
+

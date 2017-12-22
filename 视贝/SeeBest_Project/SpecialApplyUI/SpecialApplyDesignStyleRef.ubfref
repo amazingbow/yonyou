@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceComponent id="ec8b028e-04ad-4548-81fc-f65262c2b3bf" name="SpecialApplyDesignStyleRef" displayName="专柜设计风格" description="" help="" refType="1" isMultiSelect="False" isDefault="False" isClientReturn="False" width="580" height="408" isBinding="False" displayNameResourceID="" URI="UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDesignStyleRef" Classify="" ForMultOrg="False">
+  <References>
+    <Reference id="70fdc8da-0fac-4f6b-83af-da063866f320" name="cRef" displayName="cRef" description="" help="值集值定义" refEntityId="f52b36dc-e642-4513-a0e6-8bddd4f9e7fc" refEntityName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue" refType="1" isMain="False">
+      <RefFields>
+        <RefField id="e2c279cc-630e-4230-8cb9-80dc69cc7725" name="ID" displayName="ID" description="" help="值集值定义.Misc.ID" isKey="True" isEdit="False" isName="False" isVisible="False" isParent="False" sequence="0" length="80" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:ID" displayNameIndexStr="2" />
+        <RefField id="aef32f71-7206-4aed-bbf6-1e39dfd7d73d" name="Code" displayName="编码" description="" help="值集值定义.Misc.编码" isKey="False" isEdit="True" isName="False" isVisible="True" isParent="False" sequence="0" length="150" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Code" displayNameIndexStr="2" />
+        <RefField id="efa422f0-30d2-4541-be51-61eb1a33381d" name="Name" displayName="名称" description="" help="值集值定义.Misc.名称" isKey="False" isEdit="False" isName="True" isVisible="True" isParent="False" sequence="0" length="350" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Name" displayNameIndexStr="2" />
+      </RefFields>
+      <OrderFields>
+        <OrderField id="99ebcce3-309c-462c-8622-58a6a953cebb" name="Code" displayName="编码" description="" help="值集值定义.Misc.编码" direction="0" sequence="0" refAttributeName="UFIDA.U9.Base.FlexField.ValueSet.DefineValue:Code" />
+      </OrderFields>
+      <Filter>UFIDA::U9::Base::FlexField::ValueSet::DefineValue.ValueSetDef.Code='Z117' and UFIDA::U9::Base::FlexField::ValueSet::DefineValue.Effective.IsEffective=1 and UFIDA::U9::Base::FlexField::ValueSet::DefineValue.Effective.EffectiveDate&lt;='#Context.DateTime#' and UFIDA::U9::Base::FlexField::ValueSet::DefineValue.Effective.DisableDate&gt;='#Context.DateTime#'</Filter>
+    </Reference>
+  </References>
+</ReferenceComponent>

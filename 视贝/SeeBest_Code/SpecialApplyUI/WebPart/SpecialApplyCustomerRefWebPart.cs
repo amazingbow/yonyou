@@ -332,7 +332,7 @@ namespace SpecialApplyCustomerRef
 	                   
         private IUFCard _BuilderControl_Card4(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "1","","5ef8ba1c-c1fc-47d9-bdc7-30fcc9b22bc0");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card4",false,"none", true, true, "1","","9e5d7b4b-7eff-4e45-84e5-d99c00f59b01");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 11, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -345,7 +345,7 @@ namespace SpecialApplyCustomerRef
 
 
 
-				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 45, 20, 0, 0, 1, 1, "100","9bf97f14-74b9-4a4f-b2fc-d5bfb9c95e3a","0fb25d23-538a-4c7a-9b5b-6c56df17abea");
+				this.Label0 = UIControlBuilder.BuilderUFLabel(_UFCard, "Label0", "", "True", "True", "Right", 45, 20, 0, 0, 1, 1, "100","9bf97f14-74b9-4a4f-b2fc-d5bfb9c95e3a","09ae982e-924a-4530-925f-207d0ef16d70");
 
 
 								
@@ -354,7 +354,7 @@ namespace SpecialApplyCustomerRef
 			UIControlBuilder.BuilderUFControl(this.Label0, "0");		
 
 
-		        this.SelectList = UIControlBuilder.BuilderDropDownList(_UFCard, "SelectList", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "100",true,false,"","","d8a542b6-b28b-448f-ab3d-14e21bf3779d");
+		        this.SelectList = UIControlBuilder.BuilderDropDownList(_UFCard, "SelectList", "", true,  true, true, "Left", 0, 60, 0, 120, 20, 2, 0, 1, 1, "100",true,false,"","","2bcd6a23-bb92-4b4a-a18b-e4c06c61aef3");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SelectList, "False", "", null, null, "");
 			EnumControlsMap.Add(this.SelectList, _UFCard);
 		
@@ -370,7 +370,7 @@ namespace SpecialApplyCustomerRef
 			UIControlBuilder.BuilderUFControl(this.WizardControl0, "2");		
 
 
-				this.lblContinueCheckBox = UIControlBuilder.BuilderUFLabel(_UFCard, "lblContinueCheckBox", "", "False", "True", "Right", 80, 20, 6, 0, 1, 1, "100","0aead14b-b05a-4582-9aca-34da4f4bf7a0","2f82e989-b5e6-4dc9-862e-202dcc2f8153");
+				this.lblContinueCheckBox = UIControlBuilder.BuilderUFLabel(_UFCard, "lblContinueCheckBox", "", "False", "True", "Right", 80, 20, 6, 0, 1, 1, "100","0aead14b-b05a-4582-9aca-34da4f4bf7a0","67524c50-200f-4d60-922c-2b826a888d76");
 
 
 								
@@ -379,7 +379,7 @@ namespace SpecialApplyCustomerRef
 			UIControlBuilder.BuilderUFControl(this.lblContinueCheckBox, "3");		
 
 
-				this.ContinueCheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "ContinueCheckBox", false, true, "Left", 60, 0, 30, 20, 8, 0, 1, 1, "100",true,"lblContinueCheckBox","","959bee1f-4d76-4bfb-a697-3b405335d8af");
+				this.ContinueCheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "ContinueCheckBox", false, true, "Left", 60, 0, 30, 20, 8, 0, 1, 1, "100",true,"lblContinueCheckBox","","513075fa-978c-4998-9d55-012c67a6bc04");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.ContinueCheckBox, "False", "", null, null, "");
 		
 
@@ -387,14 +387,14 @@ namespace SpecialApplyCustomerRef
 			UIControlBuilder.BuilderUFControl(this.ContinueCheckBox, "4");		
 		 
 
-				this.FindButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "FindButton", true, true, 60, 20, 10, 0, 1, 1, "100","R", this.Model.ElementID,"",false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","c6696d12-786d-4d05-8db2-a9f4ab6570ab");
+				this.FindButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "FindButton", true, true, 60, 20, 10, 0, 1, 1, "100","R", this.Model.ElementID,"",false,"27621430-7bc7-4c0e-979e-f0108439d13e","27621430-7bc7-4c0e-979e-f0108439d13e","c38ddb2f-24ec-4bc1-82a6-6f551c2e5221");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.FindButton, "4");		
 
 
-				this.CheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "CheckBox", false, true, "Left", 60, 0, 30, 20, 0, 0, 1, 1, "100",false,"","","f9c98c48-364a-4602-93a8-f08addb62df5");
+				this.CheckBox = UIControlBuilder.BuilderUFCheckbox(_UFCard, "CheckBox", false, true, "Left", 60, 0, 30, 20, 0, 0, 1, 1, "100",false,"","","43f1ee4b-37a1-42b5-9c8f-c43c8367ef7b");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.CheckBox, "False", "", null, null, "");
 		
 
@@ -427,7 +427,7 @@ namespace SpecialApplyCustomerRef
 	                   
         private IUFCard _BuilderControl_Card6(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"FunctionBar", true, true, "0","","2b8293a0-8ac3-4077-9de4-137c93f7e598");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"FunctionBar", true, true, "0","","e2c22f4e-a924-48d5-ab1e-3e0e12740ad8");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 560, 20, 0, 3, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -465,7 +465,7 @@ namespace SpecialApplyCustomerRef
 	                   
         private IUFCard _BuilderControl_CardForRefQueryCase(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"CardForRefQueryCase",false,"none", true, true, "0","","f1a92511-6966-4a30-bc00-2593694bb8e4");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"CardForRefQueryCase",false,"none", true, true, "0","","ed28b762-e3b2-449b-83f0-7b04512dd378");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 360, 20, 0, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 6, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -478,14 +478,14 @@ namespace SpecialApplyCustomerRef
 
 
 
-				this.QryButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "QryButton", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"",false,"3664768b-36ca-44ab-9583-8d85fb432e43","3664768b-36ca-44ab-9583-8d85fb432e43","1c9355b7-a74f-4087-8488-29ed283fc3c3");
+				this.QryButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "QryButton", true, true, 80, 20, 0, 0, 1, 1, "100","", this.Model.ElementID,"",false,"3664768b-36ca-44ab-9583-8d85fb432e43","3664768b-36ca-44ab-9583-8d85fb432e43","9f9552f7-fd00-450d-aa5e-0e68965946a2");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.QryButton, "1");		
 
 
-				this.lbCase = UIControlBuilder.BuilderUFLabel(_UFCard, "lbCase", "", "True", "True", "Right", 80, 20, 3, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","a31fbd68-86c9-4e71-963a-3163b3d0c7b1");
+				this.lbCase = UIControlBuilder.BuilderUFLabel(_UFCard, "lbCase", "", "True", "True", "Right", 80, 20, 3, 0, 1, 1, "100","7fb97e0d-d794-43d8-9b10-4ea28a2d6bd3","3365deb8-5c4c-4eb0-9e8a-aeb0044f176f");
 
 
 								
@@ -494,7 +494,7 @@ namespace SpecialApplyCustomerRef
 			UIControlBuilder.BuilderUFControl(this.lbCase, "1");		
 
 
-		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 150, 20, 5, 0, 1, 1, "100",true,false,"","","1b9dfaee-0540-445c-aafa-7002feee3e2a");
+		        this.DDLCase = UIControlBuilder.BuilderDropDownList(_UFCard, "DDLCase", "", true,  true, true, "Left", 0, 60, 0, 150, 20, 5, 0, 1, 1, "100",true,false,"","","f3989b8e-219b-4c99-8b05-e014af8dfb07");
 			UIControlBuilder.BuilderUIFieldBindingControl(this, this.DDLCase, "False", "", null, null, "");
 			EnumControlsMap.Add(this.DDLCase, _UFCard);
 			this.DDLCase.ContentChanged += new EventHandler(DDLCase_TextChanged);
@@ -516,7 +516,7 @@ namespace SpecialApplyCustomerRef
 	                   
         private IUFCard _BuilderControl_Card1(IUFContainer container)
         {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card1",false,"none", true, true, "0","","8e8c210a-7d8c-49d8-a220-755fd76ad388");
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card1",false,"none", true, true, "0","","db6931c9-eb09-4277-8818-f8f6776a7db0");
 			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 170, 20, 2, 0, 1, 1, "100");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 3, 1, 0, 0, 0, 0, 0, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
@@ -529,14 +529,14 @@ namespace SpecialApplyCustomerRef
 
 
 
-				this.ConfirmButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "ConfirmButton", true, true, 80, 20, 0, 0, 1, 1, "100","O", this.Model.ElementID,"",false,"626ebf9b-f65a-4dd5-8f32-96f84919878c","626ebf9b-f65a-4dd5-8f32-96f84919878c","a69150e8-4b1c-4067-967c-5bc7d9b2a029");
+				this.ConfirmButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "ConfirmButton", true, true, 80, 20, 0, 0, 1, 1, "100","O", this.Model.ElementID,"",false,"626ebf9b-f65a-4dd5-8f32-96f84919878c","626ebf9b-f65a-4dd5-8f32-96f84919878c","4a15a9fd-50fe-44a7-95e2-1ef1e4bbaf20");
 	
 
 		
 			UIControlBuilder.BuilderUFControl(this.ConfirmButton, "3");		
 
 
-				this.CancelButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "CancelButton", true, true, 80, 20, 2, 0, 1, 1, "100","C", this.Model.ElementID,"",false,"020a5365-8f12-4970-b8df-17ce3ae60a68","020a5365-8f12-4970-b8df-17ce3ae60a68","95138b4b-8649-4ec7-977e-9f6c806c5cb1");
+				this.CancelButton = UIControlBuilder.BuilderUFButton(_UFCard, true, "CancelButton", true, true, 80, 20, 2, 0, 1, 1, "100","C", this.Model.ElementID,"",false,"020a5365-8f12-4970-b8df-17ce3ae60a68","020a5365-8f12-4970-b8df-17ce3ae60a68","ec7cde05-ea44-4b28-9728-d4eeccf1280f");
 	
 
 		
@@ -576,7 +576,7 @@ namespace SpecialApplyCustomerRef
 			IUFDataGridColumn column ;
 			GridColumn gridColumn ;
 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID0","NumberColumnModel", "", 0,this.Model.cRef.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, true, 7, 80, "8",true, false,"","0ea056c6-6b3c-4e6b-86b2-66be02d191a7","0ea056c6-6b3c-4e6b-86b2-66be02d191a7","e91decf2-ed6e-4087-80b8-02ece9fbd785");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"ID0","NumberColumnModel", "", 0,this.Model.cRef.Fields["ID"]/*ID*/,"ID", true, false, true, false, false, true, 7, 80, "8",true, false,"","0ea056c6-6b3c-4e6b-86b2-66be02d191a7","0ea056c6-6b3c-4e6b-86b2-66be02d191a7","53bbc8c5-7267-41e3-ade3-01cb7a0d89b3");
 			GridControlBuilder.GridNumberColumnBuilder((IUFNumberColumn)column, NumbericType.FixedPoint, 79228162514264337593543950335m, -79228162514264337593543950335m, null, null, null, null
 			,true,"",false,"1","1");
 	  
@@ -586,37 +586,37 @@ namespace SpecialApplyCustomerRef
             return;
     }
 	 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Code"]/*Code*/,"Code", false, true, true, false, false, true, 0, 100, "5",true, false,"","76076d7e-5677-48c0-bda7-92b32255a9bb","76076d7e-5677-48c0-bda7-92b32255a9bb","5eb58921-0caf-4835-a08e-dff223a5c23d");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Code0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Code"]/*Code*/,"Code", false, true, true, false, false, true, 0, 100, "5",true, false,"","76076d7e-5677-48c0-bda7-92b32255a9bb","76076d7e-5677-48c0-bda7-92b32255a9bb","0a90718a-45b4-4dc5-b3fa-56947322a3d5");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Name"]/*Name*/,"Name", false, true, true, false, false, true, 0, 150, "5",true, true,"","4b2cd224-4036-4fa4-97b1-b6e372c60513","4b2cd224-4036-4fa4-97b1-b6e372c60513","b73ecbaa-7adc-455a-829a-f0362335887b");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Name"]/*Name*/,"Name", false, true, true, false, false, true, 0, 150, "5",true, true,"","4b2cd224-4036-4fa4-97b1-b6e372c60513","4b2cd224-4036-4fa4-97b1-b6e372c60513","5f20c663-824b-4dfb-8c0d-178d63b45e42");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerCategory_Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["CustomerCategory_Name"]/*CustomerCategory_Name*/,"CustomerCategory_Name", false, false, true, false, false, true, 0, 120, "5",true, true,"","0668eb68-aa27-41f2-af48-2754bfe5442d","0668eb68-aa27-41f2-af48-2754bfe5442d","635c86aa-784b-4ff2-956e-6029c80fd71a");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"CustomerCategory_Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["CustomerCategory_Name"]/*CustomerCategory_Name*/,"CustomerCategory_Name", false, false, true, false, false, true, 0, 120, "5",true, true,"","0668eb68-aa27-41f2-af48-2754bfe5442d","0668eb68-aa27-41f2-af48-2754bfe5442d","a33fa4cb-f3e9-42f5-b0de-9df39ce1f3eb");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Description0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Description"]/*Description*/,"Description", false, true, true, false, false, true, 0, 150, "5",true, true,"","9bc42768-5335-405a-b0b4-bd6292c28e13","9bc42768-5335-405a-b0b4-bd6292c28e13","7ec1692c-7340-4186-949f-d4534157ab81");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Description0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Description"]/*Description*/,"Description", false, true, true, false, false, true, 0, 150, "5",true, true,"","9bc42768-5335-405a-b0b4-bd6292c28e13","9bc42768-5335-405a-b0b4-bd6292c28e13","a4bb28d8-6e1a-482f-a445-3722f0a96444");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Org_Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Org_Name"]/*Org_Name*/,"Org_Name", false, false, true, false, false, true, 0, 120, "5",true, true,"","b0e87a4e-b4c2-4e0e-9497-28c41acee24c","b0e87a4e-b4c2-4e0e-9497-28c41acee24c","12051f7f-fa6d-4568-ade2-0e7bbba4b606");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"Org_Name0","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["Org_Name"]/*Org_Name*/,"Org_Name", false, false, true, false, false, true, 0, 120, "5",true, true,"","b0e87a4e-b4c2-4e0e-9497-28c41acee24c","b0e87a4e-b4c2-4e0e-9497-28c41acee24c","83e1906b-fccd-4288-bab8-81d995691984");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DescFlexField_PrivateDescSeg140","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DescFlexField_PrivateDescSeg14"]/*DescFlexField_PrivateDescSeg14*/,"DescFlexField_PrivateDescSeg14", false, false, true, false, false, true, 0, 120, "5",true, false,"","d48db892-f7f5-4ab4-b4d8-c25ae0526bf2","d48db892-f7f5-4ab4-b4d8-c25ae0526bf2","dfa465c2-6eb6-4cc3-b094-4c9d7a26e20c");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DescFlexField_PrivateDescSeg140","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DescFlexField_PrivateDescSeg14"]/*DescFlexField_PrivateDescSeg14*/,"DescFlexField_PrivateDescSeg14", false, false, true, false, false, true, 0, 120, "5",true, false,"","d48db892-f7f5-4ab4-b4d8-c25ae0526bf2","d48db892-f7f5-4ab4-b4d8-c25ae0526bf2","21873339-1634-4fa9-91e2-5a443b47ecdc");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
 		 	                     
-			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DescFlexField_PrivateDescSeg110","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DescFlexField_PrivateDescSeg11"]/*DescFlexField_PrivateDescSeg11*/,"DescFlexField_PrivateDescSeg11", false, false, true, false, false, true, 0, 120, "5",true, false,"","92c05269-1b5b-4bb7-8502-b68624fe3886","92c05269-1b5b-4bb7-8502-b68624fe3886","1e7aeb94-7574-4b2d-9acf-db9c43d57f22");
+			column = GridControlBuilder.GridColumnBuilder(_UFGrid,"DescFlexField_PrivateDescSeg110","TextBoxColumnModel", "", 0,this.Model.cRef.Fields["DescFlexField_PrivateDescSeg11"]/*DescFlexField_PrivateDescSeg11*/,"DescFlexField_PrivateDescSeg11", false, false, true, false, false, true, 0, 120, "5",true, false,"","92c05269-1b5b-4bb7-8502-b68624fe3886","92c05269-1b5b-4bb7-8502-b68624fe3886","7d342e13-b7e8-47c7-b32f-fd74f8a2dd5c");
          
 			GridControlBuilder.GridTextBoxColumnBuilder((IUFTextBoxColumn)column,"",TextAlign.Left, false,"",false,"1","1","5") ;          
 	  
@@ -630,13 +630,13 @@ namespace SpecialApplyCustomerRef
             this.MatchTypeRadioBoxList = _UFListControl;
             ///foreach CheckBoxList和RadioBoxList下的所有子项
             ListItem listItem = null ;
-            listItem = UIControlBuilder.BuildListItem(container,"0", true,false,"130bc338-9958-4133-9b7f-9c185bc2455a","d0e519b7-0d09-40d0-bd39-7552640adc8c");
+            listItem = UIControlBuilder.BuildListItem(container,"0", true,false,"130bc338-9958-4133-9b7f-9c185bc2455a","e7a7d874-2f30-4bca-af5c-30f8b8ccfc64");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"49790074-95af-497d-ae37-16bb697f3ce6","61f62fcf-995d-4323-8b31-e4b080c6e5d0");
+            listItem = UIControlBuilder.BuildListItem(container,"1", true,false,"49790074-95af-497d-ae37-16bb697f3ce6","165e3a2d-2d42-428d-b32b-9785490bdaaf");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"2", true,true,"517d6f15-ca0d-4e3b-aa58-3c85a5b2ae66","0930ca74-98e3-445a-a0d4-9e2b86f1c184");
+            listItem = UIControlBuilder.BuildListItem(container,"2", true,true,"517d6f15-ca0d-4e3b-aa58-3c85a5b2ae66","5a5b5500-c4de-4846-ad0c-adea2d8f3203");
             _UFListControl.Items.Add(listItem);
-            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"ea7795fe-8961-4c3f-8ed1-b5128be2cd75","cb0a136b-8ad7-4221-aa10-e54e2853bd68");
+            listItem = UIControlBuilder.BuildListItem(container,"3", true,false,"ea7795fe-8961-4c3f-8ed1-b5128be2cd75","6e77b820-b7a4-4ade-84a3-16974664db60");
             _UFListControl.Items.Add(listItem);
         }
 

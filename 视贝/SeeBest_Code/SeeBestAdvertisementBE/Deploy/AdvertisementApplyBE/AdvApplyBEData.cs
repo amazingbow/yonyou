@@ -53,6 +53,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
                         
                         
                                         knownTypes.Add(typeof(UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyDocTypeBE.SpecialApplyDocTypeData));
+                        
+                        
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -94,6 +97,9 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     			
 	     							IsClose=false; 
 	     							Flow4Bit= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 			     			
+	     			
+	     			
+	     			
 
 
 			//设置组合的集合属性为List<>对象. -目前直接在属性上处理.
@@ -855,10 +861,67 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 版面-宽-备注
+		/// 广告申请单.Misc.版面-宽-备注
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_bMWidthMemo ;
+		public System.String BMWidthMemo
+		{
+			get	
+			{	
+				return m_bMWidthMemo  ;
+			}
+			set	
+			{	
+				m_bMWidthMemo = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 客户占比
+		/// 广告申请单.Misc.客户占比
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_custAccountRatio ;
+		public System.String CustAccountRatio
+		{
+			get	
+			{	
+				return m_custAccountRatio  ;
+			}
+			set	
+			{	
+				m_custAccountRatio = value ;	
+			}
+		}
+		
+
+				/// <summary>
+		/// 关闭原因说明
+		/// 广告申请单.Misc.关闭原因说明
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_closedExplanation ;
+		public System.String ClosedExplanation
+		{
+			get	
+			{	
+				return m_closedExplanation  ;
+			}
+			set	
+			{	
+				m_closedExplanation = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																		
+																																					
 		#endregion 		
 	}	
 

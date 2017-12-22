@@ -45,7 +45,7 @@ using System.Collections.Specialized;
  ***********************************************************************************************/
 namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 {
-	[FormRegister("UFIDA.U9.Cust.SpecialApplyUI","UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel.SpecialApplyUIFormWebPart", "UFIDA.U9.Cust.SpecialApplyUI.WebPart", "50e4e7ec-2c5f-4059-af07-d546f82715e5","WebPart", "True", 992, 504)] 
+	[FormRegister("UFIDA.U9.Cust.SpecialApplyUI","UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel.SpecialApplyUIFormWebPart", "UFIDA.U9.Cust.SpecialApplyUI.WebPart", "50e4e7ec-2c5f-4059-af07-d546f82715e5","WebPart", "True", 992, 554)] 
 	///insert into aspnet_Parts (SysVersion, Path, ClassName, [Assembly], FormId) values (0, 'UFIDA.U9.Cust.SpecialApplyUI', 'UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel.SpecialApplyUIFormWebPart', 'UFIDA.U9.Cust.SpecialApplyUI.WebPart', '50e4e7ec-2c5f-4059-af07-d546f82715e5')
 	///<siteMapNode url="~/erp/simple.aspx?lnk=50e4e7ec-2c5f-4059-af07-d546f82715e5" title="SpecialApplyUIForm"/>
     public partial class SpecialApplyUIFormWebPart : UFSoft.UBF.UI.FormProcess.BaseWebForm
@@ -137,9 +137,11 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         IUFFldTextBox LocationQY83;
         IUFLabel lblLocationXZ108;
         IUFFldTextBox LocationXZ108;
+        IUFLine Line2;
+        IUFLabel Label2893;
+        IUFLabel lblSpecialDesignStyle164;
+        IUFFldDropDownList SpecialDesignStyle164;
         IUFTabPage TabPage32;
-        IUFLabel lblSpecialDesignStyle119;
-        IUFFldDropDownList SpecialDesignStyle119;
         IUFLabel Label2737;
         IUFLabel Label2738;
         IUFLabel Label2739;
@@ -151,10 +153,6 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         IUFDataGrid DataGrid14;
         IUFCard Card7;
         IUFLabel Label2742;
-        IUFCard Card9;
-        IUFDropDownButton DropDownButton1;
-        IUFMenu MenuDocClose;
-        IUFMenu MenuDocOpen;
         IUFCard Card6;
         IUFLabel lblID60;
         IUFFldNumberControl ID60;
@@ -166,6 +164,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         IUFFldReference SpecialApplyDocType154;
         IUFLabel lblStatus101;
         IUFFldDropDownList Status101;
+        IUFCard Card9;
+        IUFDropDownButton DropDownButton1;
+        IUFMenu MenuDocClose;
+        IUFMenu MenuDocOpen;
 		UpdatePanel updatePanel;
 		HiddenField wpFindID;
 		IUFContainer topLevelPanel;     
@@ -253,7 +255,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			((PopMenuItem)this.MenuDocOpen).MethodName = "MenuDocOpen_Click";				
 				
 
-			
+		
 			//Grid控件的分页事件				
 			((UFWebDataGridAdapter)this.DataGrid14).GridMakePageEventHandler += new GridMakePageDelegate(UFGridDataGrid14_GridMakePageEventHandler);
              //Grid控件的客户化筛选，定位事件
@@ -353,10 +355,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         #region view Create Contorls
         private void CreateFormChildControls()
         {
-            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"SpecialApplyUIForm",true,992,504);
-            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 3, 0, 10, 0, 0, 0, 5);
+            IUFContainer _panel = UIControlBuilder.BuildTopLevelContainer(this,"SpecialApplyUIForm",true,992,554);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_panel, 1, 4, 0, 10, 0, 0, 0, 5);
 			InitViewBindingContainer(this, _panel,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(992,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),new GridRowDef(421,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_panel, 10,new GridColumnDef[]{new GridColumnDef(992,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(28,bool.Parse("True")),new GridRowDef(25,bool.Parse("True")),new GridRowDef(430,bool.Parse("False")),new GridRowDef(35,bool.Parse("True")),});
             //???还有用么?
             topLevelPanel = _panel;    
             
@@ -388,8 +390,15 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.Card6, "0");		
 
 
+	
+			_BuilderControl_Card9(_panel);
 
-			
+		
+			UIControlBuilder.BuilderUFControl(this.Card9, "3");		
+
+
+
+				
      
 			
 			
@@ -518,10 +527,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         private IUFCard _BuilderControl_Card5(IUFContainer container)
         {
             IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card5",false,"none", true, true, "2","","187eb1f3-4582-4a1a-8d19-07a77903d8ed");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 421, 0, 2, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 4, 0, 2, 10, 0, 10, 0);
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 430, 0, 2, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 2, 3, 0, 2, 10, 0, 10, 0);
 			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 2,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(190,bool.Parse("True")),new GridRowDef(185,bool.Parse("True")),new GridRowDef(35,bool.Parse("True")),new GridRowDef(1,bool.Parse("False")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 2,new GridColumnDef[]{new GridColumnDef(971,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(240,bool.Parse("True")),new GridRowDef(185,bool.Parse("True")),new GridRowDef(1,bool.Parse("False")),});
             this.Card5 = _UFCard;
 
             ///foreach UFCard下的所有控件，增加到此容器
@@ -544,15 +553,8 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.TabControl5, "2");		
 
 
-	
-			_BuilderControl_Card9(_UFCard);
 
 		
-			UIControlBuilder.BuilderUFControl(this.Card9, "3");		
-
-
-
-			
 
             
             container.Controls.Add(_UFCard);
@@ -561,7 +563,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 	         private void _BuilderControl_TabControl4(IUFContainer container)
         {
-            IUFTabControl _UFTabControl = UIControlBuilder.BuildTabControl(container,"TabControl4",true, true, "1",EventResponseType.Client,972, 190, 0, 0, 2, 1, "100");
+            IUFTabControl _UFTabControl = UIControlBuilder.BuildTabControl(container,"TabControl4",true, true, "1",EventResponseType.Client,972, 240, 0, 0, 2, 1, "100");
             ///foreach UFTabbedPane下的所有控件，增加到此容器
             _UFTabControl.TabPages.Add(_BuilderControl_TabPage31(_UFTabControl));
             _UFTabControl.TabPages.Add(_BuilderControl_TabPage32(_UFTabControl));
@@ -571,9 +573,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 	        private IUFTabPage _BuilderControl_TabPage31(IUFTabControl container)
         {
             IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage31",true, true, "1","e6931b0d-dd0c-48b9-b491-fa2b4dbe9089","e6931b0d-dd0c-48b9-b491-fa2b4dbe9089");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 12, 6, 0, 5, 5, 5, 5, 5);
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 12, 8, 0, 5, 5, 5, 5, 5);
 			InitViewBindingContainer(this, _UFTabPage,  this.Model.SpecialApplyBE, "SpecialApplyBE", "", null, 1, "专柜申请单");
-			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(149,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(149,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),});
+			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(149,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(149,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
@@ -810,12 +812,47 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIControlBuilder.BuilderUFControl(this.LocationXZ108, "24");		
 		 
 
+				this.Line2 = UIControlBuilder.BuilderUFLine(_UFTabPage, "Line2", 953, "Horizontal", "True", 953, 20, 0, 6, 11, 1, "100","fba9514f-e398-48e9-8ffc-e7fbd73616a9","fba9514f-e398-48e9-8ffc-e7fbd73616a9");
+	
+
+		
+			UIControlBuilder.BuilderUFControl(this.Line2, "25");		
+
+
+				this.Label2893 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label2893", "", "True", "True", "Left", 150, 20, 4, 7, 1, 1, "100","5e512533-e2d9-48ed-a9c6-d78216d47c6f","5e512533-e2d9-48ed-a9c6-d78216d47c6f");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.Label2893, "28");		
+
+
+				this.lblSpecialDesignStyle164 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblSpecialDesignStyle164", "", "True", "True", "Right", 150, 20, 0, 7, 1, 1, "100","04205a3f-bdcf-4e85-bebd-d1cbee8fe60b","aa7c9640-dd33-4621-a03d-51b75d419bef");
+
+
+								
+
+		
+			UIControlBuilder.BuilderUFControl(this.lblSpecialDesignStyle164, "29");		
+
+
+		        this.SpecialDesignStyle164 = UIControlBuilder.BuilderDropDownList(_UFTabPage, "SpecialDesignStyle164", "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum", false,  true, true, "Left", 2, 60, 0, 150, 20, 2, 7, 1, 1, "100",true,false,"lblSpecialDesignStyle164","04205a3f-bdcf-4e85-bebd-d1cbee8fe60b","6fb0b2fe-7614-4d0e-b539-aa459e8be5bd");
+			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SpecialDesignStyle164, "False", "SpecialDesignStyle", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldSpecialDesignStyle, "SpecialApplyBE");
+			EnumTypeList.Add("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum");
+			EnumControlsMap.Add(this.SpecialDesignStyle164, _UFTabPage);
+		
+
+		
+			UIControlBuilder.BuilderUFControl(this.SpecialDesignStyle164, "30");		
+		 
+
 
 				
 			this.ApplyDept71.IsMultiOrg  = false ;
 			this.lblApplyDept71.SetMultiOrgInfo(this.ApplyDept71,false);
 			
-																					
+																									
 
             this.TabPage31 = _UFTabPage;
             return _UFTabPage;
@@ -825,34 +862,15 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 	        private IUFTabPage _BuilderControl_TabPage32(IUFTabControl container)
         {
-            IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage32",true, true, "2","b755828e-e8e0-47c2-b6d6-3eb2a6f77d38","b755828e-e8e0-47c2-b6d6-3eb2a6f77d38");
+            IUFTabPage _UFTabPage = UIControlBuilder.BuildTabPageControl(container,"TabPage32",false, true, "2","b755828e-e8e0-47c2-b6d6-3eb2a6f77d38","b755828e-e8e0-47c2-b6d6-3eb2a6f77d38");
             CommonBuilder.ContainerGridLayoutPropBuilder(_UFTabPage, 12, 6, 0, 5, 5, 5, 5, 5);
-			InitViewBindingContainer(this, _UFTabPage,  this.Model.SpecialApplyBE, "SpecialApplyBE", "", null, 1, "专柜申请单");
+			InitViewBindingContainer(this, _UFTabPage,  null, "", "", null, 1, "");
 			UIControlBuilder.BuildContainerGridLayout(_UFTabPage, 5,new GridColumnDef[]{new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(150,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(75,bool.Parse("True")),new GridColumnDef(20,bool.Parse("True")),new GridColumnDef(120,bool.Parse("True")),new GridColumnDef(5,bool.Parse("True")),new GridColumnDef(70,bool.Parse("True")),new GridColumnDef(1,bool.Parse("False")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),new GridRowDef(20,bool.Parse("True")),});
             ///foreach UFTab下的所有控件，增加到此容器
 
 
 
 
-
-				this.lblSpecialDesignStyle119 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "lblSpecialDesignStyle119", "", "True", "True", "Right", 120, 20, 0, 0, 1, 1, "100","04205a3f-bdcf-4e85-bebd-d1cbee8fe60b","89da71fb-b754-460a-ad4f-ff79ad2e82f1");
-
-
-								
-
-		
-			UIControlBuilder.BuilderUFControl(this.lblSpecialDesignStyle119, "0");		
-
-
-		        this.SpecialDesignStyle119 = UIControlBuilder.BuilderDropDownList(_UFTabPage, "SpecialDesignStyle119", "UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum", false,  true, true, "Left", 2, 60, 0, 150, 20, 2, 0, 1, 1, "100",true,false,"lblSpecialDesignStyle119","04205a3f-bdcf-4e85-bebd-d1cbee8fe60b","7c3b95f9-d6c4-4a53-a23e-bc924c08d20c");
-			UIControlBuilder.BuilderUIFieldBindingControl(this, this.SpecialDesignStyle119, "False", "SpecialDesignStyle", this.Model.SpecialApplyBE, this.Model.SpecialApplyBE.FieldSpecialDesignStyle, "SpecialApplyBE");
-			EnumTypeList.Add("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum");
-			EnumControlsMap.Add(this.SpecialDesignStyle119, _UFTabPage);
-		
-
-		
-			UIControlBuilder.BuilderUFControl(this.SpecialDesignStyle119, "1");		
-		 
 
 				this.Label2737 = UIControlBuilder.BuilderUFLabel(_UFTabPage, "Label2737", "", "True", "True", "Right", 120, 20, 4, 1, 1, 1, "100","b5b36797-b89c-463b-875e-d96c2112d7a8","b5b36797-b89c-463b-875e-d96c2112d7a8");
 
@@ -905,7 +923,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 
 
 
-								
+						
 
             this.TabPage32 = _UFTabPage;
             return _UFTabPage;
@@ -1105,51 +1123,6 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         }
 
 	                   
-        private IUFCard _BuilderControl_Card9(IUFContainer container)
-        {
-            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card9",false,"FunctionBar", true, true, "3","","5f1f6a1d-8183-4bf6-a8da-9b1267956a9d");
-			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 971, 35, 0, 2, 1, 1, "100");
-            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 19, 1, 0, 5, 10, 8, 10, 2);
-			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
-			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(71,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),});
-            this.Card9 = _UFCard;
-
-            ///foreach UFCard下的所有控件，增加到此容器
-
-
-
-
-
-	
-			_BuilderControl_DropDownButton1(_UFCard);
-
-		
-			UIControlBuilder.BuilderUFControl(this.DropDownButton1, "1");		
-
-
-
-	
-
-            
-            container.Controls.Add(_UFCard);
-            return _UFCard;
-        }
-
-				       
-        private void _BuilderControl_DropDownButton1(IUFContainer container)
-        {
-            IUFDropDownButton _dropDownButton = UIControlBuilder.BuildDropDownButton(container,"DropDownButton1",true, true,"1"
-            , 80, 20, 0, 0, 1, 1, "100","c4e31736-3819-479a-9f0a-2a306ba44bec","8d807536-5be4-4766-9ff3-64e939e10761");
-            this.DropDownButton1 = _dropDownButton;
-            
-            ///foreach DropDownButton下的所有控件，增加到此容器
-	                 this.MenuDocClose = UIControlBuilder.BuildDropDownButtonMenu(container,_dropDownButton,0,"MenuDocClose","", true, true,true,false,"OnDocClose","b91e7c1e-3639-4b42-ab72-94251edd9911","","b91e7c1e-3639-4b42-ab72-94251edd9911") ;
-		 			
-	                 this.MenuDocOpen = UIControlBuilder.BuildDropDownButtonMenu(container,_dropDownButton,0,"MenuDocOpen","", true, true,true,false,"OnDocOpen","9a9ae432-c75b-4fb0-a463-687f543595e9","","9a9ae432-c75b-4fb0-a463-687f543595e9") ;
-		 			
-        }
-
-	                   
         private IUFCard _BuilderControl_Card6(IUFContainer container)
         {
             IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card6",false,"none", true, true, "0","43926a76-79a3-442f-a913-fd5057c8611b","a3190c20-bb42-462c-8229-7a79f6c28965");
@@ -1270,6 +1243,51 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
         }
 
 				
+
+	                   
+        private IUFCard _BuilderControl_Card9(IUFContainer container)
+        {
+            IUFCard _UFCard = UIControlBuilder.BuildCard(container,"Card9",false,"FunctionBar", true, true, "3","","5f1f6a1d-8183-4bf6-a8da-9b1267956a9d");
+			CommonBuilder.GridLayoutPropBuilder(container, _UFCard, 992, 35, 0, 3, 1, 1, "100");
+            CommonBuilder.ContainerGridLayoutPropBuilder(_UFCard, 19, 1, 0, 5, 10, 8, 10, 2);
+			InitViewBindingContainer(this, _UFCard,  null, "", "", null, 1, "");
+			UIControlBuilder.BuildContainerGridLayout(_UFCard, 5,new GridColumnDef[]{new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(71,bool.Parse("True")),new GridColumnDef(10,bool.Parse("True")),new GridColumnDef(80,bool.Parse("True")),},new GridRowDef[]{new GridRowDef(20,bool.Parse("True")),});
+            this.Card9 = _UFCard;
+
+            ///foreach UFCard下的所有控件，增加到此容器
+
+
+
+
+
+	
+			_BuilderControl_DropDownButton1(_UFCard);
+
+		
+			UIControlBuilder.BuilderUFControl(this.DropDownButton1, "1");		
+
+
+
+	
+
+            
+            container.Controls.Add(_UFCard);
+            return _UFCard;
+        }
+
+				       
+        private void _BuilderControl_DropDownButton1(IUFContainer container)
+        {
+            IUFDropDownButton _dropDownButton = UIControlBuilder.BuildDropDownButton(container,"DropDownButton1",true, true,"1"
+            , 80, 20, 0, 0, 1, 1, "100","c4e31736-3819-479a-9f0a-2a306ba44bec","8d807536-5be4-4766-9ff3-64e939e10761");
+            this.DropDownButton1 = _dropDownButton;
+            
+            ///foreach DropDownButton下的所有控件，增加到此容器
+	                 this.MenuDocClose = UIControlBuilder.BuildDropDownButtonMenu(container,_dropDownButton,0,"MenuDocClose","", true, true,true,false,"OnDocClose","b91e7c1e-3639-4b42-ab72-94251edd9911","","b91e7c1e-3639-4b42-ab72-94251edd9911") ;
+		 			
+	                 this.MenuDocOpen = UIControlBuilder.BuildDropDownButtonMenu(container,_dropDownButton,0,"MenuDocOpen","", true, true,true,false,"OnDocOpen","9a9ae432-c75b-4fb0-a463-687f543595e9","","9a9ae432-c75b-4fb0-a463-687f543595e9") ;
+		 			
+        }
 
 
 

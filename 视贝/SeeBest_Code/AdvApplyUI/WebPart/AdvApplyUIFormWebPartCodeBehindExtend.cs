@@ -26,6 +26,10 @@ using UFIDA.U9.UI.PDHelper;
 using UFIDA.U9.Cust.SeeBestAdvertisementBP.AdvApplyBP.Proxy;
 using UFSoft.UBF.Util.DataAccess;
 using UFSoft.UBF.UI.FormProcess;
+using System.Collections.Generic;
+using UFSoft.UBF.UI;
+using UFSoft.UBF.UI.WebControls.Association;
+using UFSoft.UBF.UI.WebControls.Association.Adapter;
 
 
 
@@ -381,6 +385,15 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
             #endregion
         }
 
+        //BtnAttachment_Click...
+        private void BtnAttachment_Click_Extend(object sender, EventArgs e)
+        {
+            //调用模版提供的默认实现.--默认实现可能会调用相应的Action.
+
+
+            BtnAttachment_Click_DefaultImpl(sender, e);
+        }	
+
         //BtnFlow_Click...
         private void BtnFlow_Click_Extend(object sender, EventArgs e)
         {
@@ -648,7 +661,40 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         {
             //开启个性化
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
+
+            Register_DataGrid_Customer_PoskBack();
         }
+
+        #region PoskBack
+        private void Register_DataGrid_Customer_PoskBack()
+        {
+            AssociationControl assocControl = new AssociationControl();
+            assocControl.SourceServerControl = this.DataGrid0;
+            assocControl.SourceControl.EventName = "OnCellDataChanged";
+            ((IUFClientAssoGrid)assocControl.SourceControl).FireEventCols.Add("IsSelected");
+
+            CodeBlock cb = new CodeBlock();
+            UFWebClientGridAdapter gridAdapter = new UFWebClientGridAdapter(this.DataGrid0);
+            gridAdapter.IsPostBack = true;
+            gridAdapter.PostBackTag = "OnCellDataChanged";
+            cb.TargetControls.addControl(gridAdapter);
+            assocControl.addBlock(cb);
+            UFGrid itemGrid = this.DataGrid0 as UFGrid;
+            itemGrid.GridCustomerPostBackEvent += new GridCustomerPostBackDelegate(itemGriding_GridCustomerPostBackEvent);
+        }
+
+        void itemGriding_GridCustomerPostBackEvent(object sender, GridCustomerPostBackEventArgs e)
+        {
+            this.OnDataCollect(this);
+            this.IsDataBinding = true; //当前事件执行后会进行数据绑定
+            this.IsConsuming = false;
+
+            this.DataGrid0.CollectData();
+            this.DataGrid0.BindData();
+
+            //自己代码
+        }
+        #endregion
 
         public void AfterEventBind()
         {
@@ -712,7 +758,47 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
                 this.ApplyDept233.ReadOnly = false;
             }
 
+            //“是否被选用”功能作控管，当选中一项时，其它行选项置灰不能选
+            setCellDisabled();
+
         }
+
+        #region setCellDisabled
+        public void setCellDisabled()
+        {
+            UFGrid grid0 = this.DataGrid0 as UFGrid;
+            grid0.SetColEnable("IsSelected", true);
+
+            int count = 0;
+            if (this.Model.AdvCarrierList.Records.Count > 0)
+            {
+                foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
+                {
+                    if (item.IsSelected.Value)
+                    {
+                        count = count + 1;
+                    }
+                }
+            }
+
+            if (count > 0)
+            {
+                int i = 0;
+                foreach (AdvCarrierListRecord item in this.Model.AdvCarrierList.Records)
+                {
+                    if (item.IsSelected.Value)
+                    {
+                        
+                    }
+                    else
+                    {
+                        grid0.SetCellDisabled(i, "IsSelected");
+                    }
+                    i++;
+                }
+            }
+        }
+        #endregion
 
 
         #endregion

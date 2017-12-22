@@ -568,6 +568,37 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			
         }
 		 
+				//MethodName:BtnAttachment_Click ActionName:AttachmentClick
+        /// <summary>
+        /// Help Info : {varEvent.Help}
+        /// </summary>
+        public void BtnAttachment_Click(object sender, EventArgs e)
+        {
+			
+				OnDataCollect(this); //当前事件先执行数据收集		    
+		
+
+			this.IsDataBinding = true ; //当前事件执行后会进行数据绑定
+			this.IsConsuming = false;
+					
+			this.InvokeMethod(sender,e,BtnAttachment_Click_Extend) ;
+	
+			
+        }
+
+        //default implement by tpl ...
+        private void BtnAttachment_Click_DefaultImpl(object sender, EventArgs e)
+        {
+			//Template (tpl) Code here...
+			//加入{action.Name}的代码模版:.\UITpls\WebPart\ViewCodeBehindCommon.tpl,参数:AttachmentClick
+
+	
+		Action.AttachmentClick(sender,new UIActionEventArgs());
+
+		
+			
+        }
+		 
 				//MethodName:BtnFlow_Click ActionName:FlowClick
         /// <summary>
         /// Help Info : {varEvent.Help}
@@ -720,7 +751,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UFIDA.U9.UI.Commands.CommandFactory.DoCommand("GridCustomFilter",this.Action,this.DataGrid0,e);
         }
         #endregion
-			
+	
         #endregion
         
     }

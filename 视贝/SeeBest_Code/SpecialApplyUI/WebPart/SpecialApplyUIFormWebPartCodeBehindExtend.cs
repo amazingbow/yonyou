@@ -26,6 +26,7 @@ using UFIDA.U9.UI.PDHelper;
 using UFSoft.UBF.UI.FormProcess;
 using UFSoft.UBF.Util.DataAccess;
 using UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyDocTypeUIModel;
+using System.Drawing;
 
 
 
@@ -407,7 +408,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             //开启个性化
 
             UFIDA.U9.UI.PDHelper.PersonalizationHelper.SetPersonalizationEnable((BaseWebForm)this, true);
-		
+
+            UDC.Refresh(this, this.lblSpecialDesignStyle164, this.SpecialDesignStyle164);
+
         }
         
         public void AfterEventBind()
@@ -423,6 +426,10 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
             this.BtnLastPage.Visible = false;
             this.BtnOutput.Visible = false;
             this.BtnPrint.Visible = false;
+            UFLabel label0 = this.Label2893 as UFLabel;
+            label0.Font.Bold = true;
+            //label0.ForeColor = Color.Red;
+            label0.Style.Add("color", "#FF0000");
             //this.ApplyDate131.Enabled = false;
             //this.Status101.Enabled = false;
 		}

@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// <returns>Instance</returns>
 		public  static SpecialApplyBE Create() {
 			SpecialApplyBE entity = (SpecialApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																									 
+																																																												 
 			return entity;
 		}
 
@@ -780,6 +780,47 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 专柜设计风格 (该属性可为空,且无默认值)
+			/// 专柜申请单.Misc.专柜设计风格
+			/// </summary>
+			/// <value></value>
+			public  UFIDA.U9.Base.FlexField.ValueSet.DefineValue SpecialDesignStyle1
+			{
+				get
+				{
+					if (SpecialDesignStyle1Key == null)
+						return null ;
+					UFIDA.U9.Base.FlexField.ValueSet.DefineValue value =  (UFIDA.U9.Base.FlexField.ValueSet.DefineValue)SpecialDesignStyle1Key.GetEntity();
+					return value ;
+				}
+			}
+		
+
+
+   		private UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey m_SpecialDesignStyle1Key ;
+		/// <summary>
+		/// EntityKey 属性
+		/// 专柜设计风格 的Key (该属性可为空,且无默认值)
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey SpecialDesignStyle1Key
+		{
+			get 
+			{
+				object obj = base.GetValue("SpecialDesignStyle1") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_SpecialDesignStyle1Key==null || m_SpecialDesignStyle1Key.ID != key )
+					m_SpecialDesignStyle1Key = new UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey(key); 
+				return m_SpecialDesignStyle1Key ;
+			}
+		}
+
 		
 
 			#endregion
@@ -1351,6 +1392,70 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 
 
 
+		
+			/// <summary>
+		/// 专柜设计风格 (该属性可为空,且无默认值)
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		/// <value></value>
+			public  UFIDA.U9.Base.FlexField.ValueSet.DefineValue SpecialDesignStyle1
+		{
+			get
+			{
+				object  obj = this.GetRelation("SpecialDesignStyle1");
+				if (obj == null)
+				{
+					return null ;
+				}
+				else
+				{
+					UFIDA.U9.Base.FlexField.ValueSet.DefineValue value  = (UFIDA.U9.Base.FlexField.ValueSet.DefineValue)obj;
+					return value;
+				 }
+			}
+				set
+			{
+				
+				this.SetRelation("SpecialDesignStyle1", value);
+					 
+			}
+		}
+	
+
+
+   		private UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey m_SpecialDesignStyle1Key ;
+		/// <summary>
+		/// 专柜设计风格 的Key (该属性可为空,且无默认值)
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		/// <value></value>
+		public  UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey SpecialDesignStyle1Key
+		{
+			get 
+			{
+				object obj = base.GetValue("SpecialDesignStyle1") ;
+				if (obj == null || (Int64)obj==UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag || (Int64)obj==0)
+					return null ;
+				Int64 key = (System.Int64)obj ;
+				if (m_SpecialDesignStyle1Key==null || m_SpecialDesignStyle1Key.ID != key )
+					m_SpecialDesignStyle1Key = new UFIDA.U9.Base.FlexField.ValueSet.DefineValue.EntityKey(key); 
+				return m_SpecialDesignStyle1Key ;
+			}
+			set
+			{	
+				if (SpecialDesignStyle1Key==value)
+					return ;
+				this.SetRelation("SpecialDesignStyle1", null);
+				m_SpecialDesignStyle1Key = value ;
+				if (value != null) 
+				{
+					base.SetValue("SpecialDesignStyle1",value.ID);
+				}
+				else
+					base.SetValue("SpecialDesignStyle1",UFSoft.UBF.PL.Tool.Constant.ID_NULL_Flag);
+			}
+		}
+
 	
 
 		#endregion
@@ -1489,6 +1594,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_LocationXZ　{ get { return EntityRes.GetResource("LocationXZ");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("SpecialDesignStyle1")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_SpecialDesignStyle1　{ get { return EntityRes.GetResource("SpecialDesignStyle1");　}　}
 		#endregion 
 
 
@@ -1600,6 +1710,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			/// 属性: 乡镇 的名称
 			/// </summary>
 			public static string LocationXZ　{ get { return "LocationXZ";　}　}
+				
+			/// <summary>
+			/// 属性: 专柜设计风格 的名称
+			/// </summary>
+			public static string SpecialDesignStyle1　{ get { return "SpecialDesignStyle1";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -1607,7 +1722,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																						
+																																								
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -1772,6 +1887,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			this.exdMultiLangAttrs.Add("IsClose","IsClose");
 			this.exdMultiLangAttrs.Add("LocationQY","LocationQY");
 			this.exdMultiLangAttrs.Add("LocationXZ","LocationXZ");
+			this.exdMultiLangAttrs.Add("SpecialDesignStyle1","SpecialDesignStyle1");
         }
 	#endregion 
 
@@ -1788,7 +1904,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			switch(propstr)
 			{
 			
-																																																						
+																																																									
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -1844,6 +1960,10 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			
 
 			
+
+			if (data.SpecialDesignStyle1 == -1 && data.SpecialDesignStyle1_SKey!=null)
+				data.SpecialDesignStyle1 = data.SpecialDesignStyle1_SKey.GetEntity().ID ;
+	
 	
 			//Entity中没有EntityKey集合，不用处理。
 		}
@@ -1917,6 +2037,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 								this.SetTypeValue("LocationQY",data.LocationQY);
 		
 								this.SetTypeValue("LocationXZ",data.LocationXZ);
+		
+								this.SetTypeValue("SpecialDesignStyle1",data.SpecialDesignStyle1);
 		
 			#endregion 
 
@@ -2097,6 +2219,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 					data.LocationXZ=(System.String)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("SpecialDesignStyle1");
+				if (obj != null)
+					data.SpecialDesignStyle1=(System.Int64)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -2143,6 +2272,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

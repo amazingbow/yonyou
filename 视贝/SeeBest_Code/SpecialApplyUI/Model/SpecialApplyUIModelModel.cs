@@ -657,6 +657,18 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		{
 			get { return this.Fields["LocationXZ"]; }
 		}
+		public IUIField FieldSpecialDesignStyle1
+		{
+			get { return this.Fields["SpecialDesignStyle1"]; }
+		}
+		public IUIField FieldSpecialDesignStyle1_Code
+		{
+			get { return this.Fields["SpecialDesignStyle1_Code"]; }
+		}
+		public IUIField FieldSpecialDesignStyle1_Name
+		{
+			get { return this.Fields["SpecialDesignStyle1_Name"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -804,6 +816,9 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"IsClose", typeof(Boolean), true,"false","System.Boolean", "IsClose", true,true, false, "",false,(UIFieldType)1,"5efeea06-cae7-4cc0-82e9-20a789e4e582","50af7b5b-4545-407a-a711-b3af60762ec5");
 			UIModelRuntimeFactory.AddNewUIField(this,"LocationQY", typeof(String), true,"","System.String", "LocationQY", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","5463bdc5-da7b-4fe6-ba6d-aeb8bfcbadee");
 			UIModelRuntimeFactory.AddNewUIField(this,"LocationXZ", typeof(String), true,"","System.String", "LocationXZ", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","df5d4c5b-cf93-454c-89db-31325f004683");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle1", typeof(Int64), true,"","UFIDA.U9.Base.FlexField.ValueSet.DefineValue", "SpecialDesignStyle1", true,true, false, "",false,(UIFieldType)4,"f52b36dc-e642-4513-a0e6-8bddd4f9e7fc","aad2a530-ffbd-4455-87e2-e61f42106ee7");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle1_Code", typeof(String), false,"","System.String", "SpecialDesignStyle1.Code", false,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","251cc4ca-eee0-4db3-8cb6-869e0cd2ad7c");
+			UIModelRuntimeFactory.AddNewUIField(this,"SpecialDesignStyle1_Name", typeof(String), true,"","System.String", "SpecialDesignStyle1.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","fefd7aaf-2b88-4636-baea-e0704d83b005");
 
 
 			this.CurrentFilter = new SpecialApplyBEDefaultFilterFilter(this);
@@ -2606,6 +2621,45 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 			}
 			set{
 				this[this.uiviewSpecialApplyBE.FieldLocationXZ] = value;
+			}
+		}
+		
+		
+		public  Int64? SpecialDesignStyle1
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1] ;
+				//return (Int64?)value;
+				return GetValue<Int64?>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1] = value;
+			}
+		}
+		
+		
+		public  String SpecialDesignStyle1_Code
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Code] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Code);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Code] = value;
+			}
+		}
+		
+		
+		public  String SpecialDesignStyle1_Name
+		{
+			get{
+				//object value = this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Name] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Name);
+			}
+			set{
+				this[this.uiviewSpecialApplyBE.FieldSpecialDesignStyle1_Name] = value;
 			}
 		}
 		#endregion

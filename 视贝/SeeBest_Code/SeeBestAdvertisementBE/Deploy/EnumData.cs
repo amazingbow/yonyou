@@ -121,14 +121,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	public enum SpecialDesignStyleEnumData
 	{
 		/// <summary>
-		/// 蓝色专柜方案
-		/// </summary>
-		BlueSpecial = 1,
-		/// <summary>
-		/// 白色专柜方案
-		/// </summary>
-		WhiteSpecial = 2,
-		/// <summary>
 		/// 空值(-1)
 		/// </summary>
 		Empty  = -1 

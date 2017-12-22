@@ -1036,6 +1036,18 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		{
 			get { return this.Fields["AdvApplyDocType_ApproveType"]; }
 		}
+		public IUIField FieldBMWidthMemo
+		{
+			get { return this.Fields["BMWidthMemo"]; }
+		}
+		public IUIField FieldCustAccountRatio
+		{
+			get { return this.Fields["CustAccountRatio"]; }
+		}
+		public IUIField FieldClosedExplanation
+		{
+			get { return this.Fields["ClosedExplanation"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -1202,6 +1214,9 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_Name", typeof(String), true,"","System.String", "AdvApplyDocType.Name", false,true, false, "",true,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","b2325f25-4127-4ac8-8b54-a2a85a4676b6");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_ConfirmType", typeof(Int32), false,"0","UFIDA.U9.Base.Doc.ConfirmTypeEnum", "AdvApplyDocType.ConfirmType", false,true, false, "",false,(UIFieldType)2,"d232b8fb-1938-4ebe-a90c-41c911c0bc10","a3c563d4-337a-4ee9-9269-62bc777ba442");
 			UIModelRuntimeFactory.AddNewUIField(this,"AdvApplyDocType_ApproveType", typeof(Int32), true,"-1","UFIDA.U9.Base.Doc.ApproveTypeEnum", "AdvApplyDocType.ApproveType", false,true, false, "",false,(UIFieldType)2,"d4b6e1a9-d80d-4516-8316-4b1d436cd449","be38d181-4a6b-4767-9188-5f75a7f0920c");
+			UIModelRuntimeFactory.AddNewUIField(this,"BMWidthMemo", typeof(String), true,"","System.String", "BMWidthMemo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ae119a06-2038-41cd-a266-693a53088a46");
+			UIModelRuntimeFactory.AddNewUIField(this,"CustAccountRatio", typeof(String), true,"","System.String", "CustAccountRatio", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4d6a35b3-4ec0-4d12-b34a-4ef492486ae0");
+			UIModelRuntimeFactory.AddNewUIField(this,"ClosedExplanation", typeof(String), true,"","System.String", "ClosedExplanation", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8b58300d-4b8e-4e4b-8d1f-7613598617cb");
 
 
 			this.CurrentFilter = new AdvApplyBEDefaultFilterFilter(this);
@@ -3251,6 +3266,45 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			}
 			set{
 				this[this.uiviewAdvApplyBE.FieldAdvApplyDocType_ApproveType] = value;
+			}
+		}
+		
+		
+		public  String BMWidthMemo
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldBMWidthMemo] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE.FieldBMWidthMemo);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldBMWidthMemo] = value;
+			}
+		}
+		
+		
+		public  String CustAccountRatio
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldCustAccountRatio] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE.FieldCustAccountRatio);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldCustAccountRatio] = value;
+			}
+		}
+		
+		
+		public  String ClosedExplanation
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldClosedExplanation] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE.FieldClosedExplanation);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldClosedExplanation] = value;
 			}
 		}
 		#endregion

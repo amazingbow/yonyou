@@ -713,7 +713,7 @@ namespace UFIDA.U9.Cust.SpecialApplyUI.SpecialApplyUIModel
 		}
 
 		#endregion 
-			
+		
         #region Grid控件DataGrid14的分页事件	
         void UFGridDataGrid14_GridMakePageEventHandler(Object sender, GridMakePageEventArgs  e)
         {

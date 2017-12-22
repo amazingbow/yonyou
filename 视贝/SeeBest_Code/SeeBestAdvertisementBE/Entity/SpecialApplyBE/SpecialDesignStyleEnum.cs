@@ -30,10 +30,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
         private static void InitData()
         {
             innerEnums = new System.Collections.Generic.Dictionary<System.Int32,SpecialDesignStyleEnum>();
-            blueSpecial = new SpecialDesignStyleEnum(1,"BlueSpecial") ;
-            innerEnums.Add(1,blueSpecial) ;
-            whiteSpecial = new SpecialDesignStyleEnum(2,"WhiteSpecial") ;
-            innerEnums.Add(2,whiteSpecial) ;
             empty = new SpecialDesignStyleEnum(-1,"") ;
 			innerEnums.Add(-1,empty) ;
         }
@@ -74,10 +70,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
         	{
         		switch ( this.Name )
         		{
-        			case "BlueSpecial":
-        				return this.Res_BlueSpecial; 
-        			case "WhiteSpecial":
-        				return this.Res_WhiteSpecial; 
         			default :
         			    return String.Empty;
         		}
@@ -86,30 +78,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
         #endregion 
 
         #region public static enum member
-        private static SpecialDesignStyleEnum blueSpecial ;
-        /// <summary>
-        /// 枚举值: 蓝色专柜方案  Value:1  
-        /// 专柜设计风格.Misc.蓝色专柜方案
-        /// </summary>
-        public static SpecialDesignStyleEnum BlueSpecial
-        {
-            get
-            {
-                return  blueSpecial ;
-            }
-        }
-        private static SpecialDesignStyleEnum whiteSpecial ;
-        /// <summary>
-        /// 枚举值: 白色专柜方案  Value:2  
-        /// 专柜设计风格.Misc.白色专柜方案
-        /// </summary>
-        public static SpecialDesignStyleEnum WhiteSpecial
-        {
-            get
-            {
-                return  whiteSpecial ;
-            }
-        }
         #endregion
 
         #region public Static Property & Method 
@@ -173,6 +141,42 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
         }
         #endregion 
 
+		/// <summary>
+		/// 可扩展枚举管理器
+		/// </summary>
+		[System.Obsolete("不再使用,枚举增删改接口由元数据服务提供.")]
+        public static class ExtendManager
+        {
+            #region Common Method Operator ...
+            /// <summary>
+            /// 添加新枚举项
+            /// </summary>
+            [System.Obsolete("不再使用,新接口待提供.")]
+            public static void NewValue(string name, Int32 value, string displayName, string description)
+            {
+                //EnumValue newValue = innerExtendableEnum.NewValue(name, value.ToString(), displayName, description);
+                ////处理枚举项已经存在的情况下,比如自动创建的无name枚举项.
+                //if (innerEnums.ContainsKey(value))
+                //{
+                //    innerEnums[value].currentValue.Name = name;
+                //    innerEnums[value].currentValue.DisplayName = displayName;
+                //    innerEnums[value].currentValue.Description = description;
+                //}
+                //else
+                //    innerEnums.Add(value, new SpecialDesignStyleEnum(newValue));
+            }
+
+            /// <summary>
+            /// 删除枚举项
+            /// </summary>
+            [System.Obsolete("不再使用,新接口待提供.")]
+            public static void DeleteValue(SpecialDesignStyleEnum value)
+            {
+                //innerExtendableEnum.DeleteValue(value.Name);
+                //innerEnums.Remove(value.Value);
+            }
+            #endregion
+        }
 
 		#region ModelResource
 		/// <summary>
@@ -184,16 +188,6 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 		/// </summary>
 		public static string Res_TypeNameS {	get {return EnumRes.GetResource("UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE.SpecialDesignStyleEnum")  ;} }
 
-		/// <summary>
-		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
-		/// </summary>
-        [Obsolete("")]
-		public string Res_BlueSpecial　{ get {return EnumRes.GetResource("BlueSpecial");}　}
-		/// <summary>
-		/// 已经废弃,请直接使用 EnumRes.GetResource(枚举对象.Name)来取属性的显示资源.
-		/// </summary>
-        [Obsolete("")]
-		public string Res_WhiteSpecial　{ get {return EnumRes.GetResource("WhiteSpecial");}　}
 		#endregion 
 		
 		#region EnumRes

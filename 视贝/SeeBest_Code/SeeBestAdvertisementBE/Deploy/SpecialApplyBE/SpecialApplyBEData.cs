@@ -38,6 +38,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
                         
                         
                         
+                                        knownTypes.Add(typeof(UFIDA.U9.Base.FlexField.ValueSet.DefineValueData));
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -65,6 +66,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 	     							SpecialDesignStyle= 0; 			     			
 	     			
 	     							Status= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							IsClose=false; 
+	     			
 	     			
 	     			
 
@@ -517,10 +519,57 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.SpecialApplyBE
 			}
 		}
 		
+
+		
+		private UFSoft.UBF.Business.BusinessEntity.EntityKey m_specialDesignStyle1_SKey ;
+		/// <summary>
+		/// 专柜设计风格 序列化Key属性。（传递跨组织序列列字段）
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public UFSoft.UBF.Business.BusinessEntity.EntityKey SpecialDesignStyle1_SKey
+		{
+			get 
+			{
+				return m_specialDesignStyle1_SKey ;					
+			}
+			set
+			{
+				 m_specialDesignStyle1_SKey = value ;	
+			}
+		}
+		/// <summary>
+		/// 专柜设计风格
+		/// 专柜申请单.Misc.专柜设计风格
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		public System.Int64 SpecialDesignStyle1
+		{
+			get	
+			{	
+				if (SpecialDesignStyle1_SKey == null)
+					return UFSoft.UBF.Business.Entity.EmptyObjectValue ;
+				else
+					return SpecialDesignStyle1_SKey.ID ;
+			}
+			set	
+			{	
+				if (value == 0 || value == UFSoft.UBF.Business.Entity.EmptyObjectValue )
+					SpecialDesignStyle1_SKey = null ;
+				else
+				{
+					if (SpecialDesignStyle1_SKey == null )
+						SpecialDesignStyle1_SKey = new UFSoft.UBF.Business.BusinessEntity.EntityKey(value,"UFIDA.U9.Base.FlexField.ValueSet.DefineValue") ;
+					else
+						SpecialDesignStyle1_SKey.ID = value ;
+				}
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																			
+																				
 		#endregion 		
 	}	
 
