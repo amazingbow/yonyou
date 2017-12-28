@@ -33,7 +33,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// <returns>Instance</returns>
 		public  static AdvApplyBE Create() {
 			AdvApplyBE entity = (AdvApplyBE)UFSoft.UBF.Business.Entity.Create(CurrentClassKey, null);
-																																																																																																															 
+																																																																																																																		 
 			return entity;
 		}
 
@@ -1146,6 +1146,25 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 
 
+				
+			/// <summary>
+			///  OrginalData属性。只可读。
+			/// 备注 (该属性可为空,且无默认值)
+			/// 广告申请单.Misc.备注
+			/// </summary>
+			/// <value></value>
+			public  System.String MemoMemo
+			{
+				get
+				{
+					System.String value  = (System.String)base.GetValue("MemoMemo");
+					return value;
+						}
+			}
+		
+
+
+
 		
 
 			#endregion
@@ -2197,6 +2216,30 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 
 
 
+		
+			/// <summary>
+		/// 备注 (该属性可为空,且无默认值)
+		/// 广告申请单.Misc.备注
+		/// </summary>
+		/// <value></value>
+			public  System.String MemoMemo
+		{
+			get
+			{
+				System.String value  = (System.String)base.GetValue("MemoMemo");
+				return value;
+				}
+				set
+			{
+				
+								base.SetValue("MemoMemo", value);
+						 
+			}
+		}
+	
+
+
+
 	
 
 		#endregion
@@ -2425,6 +2468,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		/// </summary>
 		[Obsolete("")]
 		public string Res_ClosedExplanation　{ get { return EntityRes.GetResource("ClosedExplanation");　}　}
+		/// <summary>
+		/// 这种已经被取消，请使用这块代码的人自己调整程序，改为引用EntityRes.GetResource("MemoMemo")的方式取资源
+		/// </summary>
+		[Obsolete("")]
+		public string Res_MemoMemo　{ get { return EntityRes.GetResource("MemoMemo");　}　}
 		#endregion 
 
 
@@ -2626,6 +2674,11 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			/// 属性: 关闭原因说明 的名称
 			/// </summary>
 			public static string ClosedExplanation　{ get { return "ClosedExplanation";　}　}
+				
+			/// <summary>
+			/// 属性: 备注 的名称
+			/// </summary>
+			public static string MemoMemo　{ get { return "MemoMemo";　}　}
 		
 			/// <summary>
 			/// 获取显示名称资源方法
@@ -2633,7 +2686,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			public static string GetResource(String attrName){
 				if (attrName == BE_Name || attrName== BE_FullName)
 					return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetEntityResource(BE_FullName);
-																																																																										
+																																																																												
 				return UFSoft.UBF.Business.Tool.ExtendHelpAPI.GetAttrResource(BE_FullName, attrName);
 			}
 
@@ -2816,6 +2869,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			this.exdMultiLangAttrs.Add("BMWidthMemo","BMWidthMemo");
 			this.exdMultiLangAttrs.Add("CustAccountRatio","CustAccountRatio");
 			this.exdMultiLangAttrs.Add("ClosedExplanation","ClosedExplanation");
+			this.exdMultiLangAttrs.Add("MemoMemo","MemoMemo");
         }
 	#endregion 
 
@@ -2832,7 +2886,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			switch(propstr)
 			{
 			
-																																																																																																												
+																																																																																																															
 
 				default:
 					//调用基类的实现，最终Entity基类为SetValue()
@@ -2916,6 +2970,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			if (data.AdvApplyDocType == -1 && data.AdvApplyDocType_SKey!=null)
 				data.AdvApplyDocType = data.AdvApplyDocType_SKey.GetEntity().ID ;
 	
+
+			
 
 			
 
@@ -3027,6 +3083,8 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 								this.SetTypeValue("CustAccountRatio",data.CustAccountRatio);
 		
 								this.SetTypeValue("ClosedExplanation",data.ClosedExplanation);
+		
+								this.SetTypeValue("MemoMemo",data.MemoMemo);
 		
 			#endregion 
 
@@ -3325,6 +3383,13 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 					data.ClosedExplanation=(System.String)obj;
 			}
 	     
+	    
+			{
+				object obj =this.GetValue("MemoMemo");
+				if (obj != null)
+					data.MemoMemo=(System.String)obj;
+			}
+	     
 			#endregion 
 
 			#region 组件内属性 -Entity,"复杂值对象",枚举,实体集合.
@@ -3383,6 +3448,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 		//L类档案的组织相关检查.
 		UFIDA.U9.Base.Util.LTypeOrgAttributeValidator.Validate(this);
         
+
 
 
 

@@ -1048,6 +1048,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 		{
 			get { return this.Fields["ClosedExplanation"]; }
 		}
+		public IUIField FieldMemoMemo
+		{
+			get { return this.Fields["MemoMemo"]; }
+		}
 
 
 		[Obsolete("请使用CurrentFilter属性，这个方法有可能会导致强弱类型转换出错")]
@@ -1217,6 +1221,7 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			UIModelRuntimeFactory.AddNewUIField(this,"BMWidthMemo", typeof(String), true,"","System.String", "BMWidthMemo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","ae119a06-2038-41cd-a266-693a53088a46");
 			UIModelRuntimeFactory.AddNewUIField(this,"CustAccountRatio", typeof(String), true,"","System.String", "CustAccountRatio", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","4d6a35b3-4ec0-4d12-b34a-4ef492486ae0");
 			UIModelRuntimeFactory.AddNewUIField(this,"ClosedExplanation", typeof(String), true,"","System.String", "ClosedExplanation", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","8b58300d-4b8e-4e4b-8d1f-7613598617cb");
+			UIModelRuntimeFactory.AddNewUIField(this,"MemoMemo", typeof(String), true,"","System.String", "MemoMemo", true,true, false, "",false,(UIFieldType)1,"3d174255-fd12-47f7-8844-3b5e4fae9e8c","a90215e9-2599-4bd0-b88c-6654ec5afca8");
 
 
 			this.CurrentFilter = new AdvApplyBEDefaultFilterFilter(this);
@@ -3305,6 +3310,19 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
 			}
 			set{
 				this[this.uiviewAdvApplyBE.FieldClosedExplanation] = value;
+			}
+		}
+		
+		
+		public  String MemoMemo
+		{
+			get{
+				//object value = this[this.uiviewAdvApplyBE.FieldMemoMemo] ;
+				//return (String)value;
+				return GetValue<String>(this.uiviewAdvApplyBE.FieldMemoMemo);
+			}
+			set{
+				this[this.uiviewAdvApplyBE.FieldMemoMemo] = value;
 			}
 		}
 		#endregion

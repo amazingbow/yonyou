@@ -56,6 +56,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
                         
                         
                         
+                        
             
                 knownTypes.Add(typeof(UFSoft.UBF.Util.Data.MultiLangDataDict));
             return knownTypes;
@@ -97,6 +98,7 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 	     			
 	     							IsClose=false; 
 	     							Flow4Bit= 0; 			     							WFCurrentState= -1; 			     							WFOriginalState= -1; 			     							DocStatus= 0; 			     			
+	     			
 	     			
 	     			
 	     			
@@ -918,10 +920,29 @@ namespace UFIDA.U9.Cust.SeeBestAdvertisementBE.AdvertisementApplyBE
 			}
 		}
 		
+
+				/// <summary>
+		/// 备注
+		/// 广告申请单.Misc.备注
+		/// </summary>
+		[DataMember(IsRequired=false)]
+		private System.String m_memoMemo ;
+		public System.String MemoMemo
+		{
+			get	
+			{	
+				return m_memoMemo  ;
+			}
+			set	
+			{	
+				m_memoMemo = value ;	
+			}
+		}
+		
 		#endregion	
 
 		#region Multi_Fields
-																																					
+																																						
 		#endregion 		
 	}	
 

@@ -703,6 +703,10 @@ namespace UFIDA.U9.Cust.AdvApplyUI.AdvApplyUIModel
         public void BeforeUIModelBinding()
         {
             this.BtnPrint.Visible = false;
+            UFLabel label0 = this.Label2223280 as UFLabel;
+            label0.Font.Bold = true;
+            //label0.ForeColor = Color.Red;
+            label0.Style.Add("color", "#FF0000");
         }
 
         public void AfterUIModelBinding()
